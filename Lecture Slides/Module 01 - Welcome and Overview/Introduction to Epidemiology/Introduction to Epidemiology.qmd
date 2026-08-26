@@ -92,6 +92,10 @@ Causal and preventive factors can be studied through systematic investigation of
 :::
 :::
 
+::: {.notes}
+Talk about distribution and determinants, and why that's harder than it sounds at first. Use my own research in EM and Parkinson's as examples.
+:::
+
 
 <!-- Add a Poll everywhere quiz question about descriptive and analytic epidemiolgy. -->
 
@@ -117,6 +121,10 @@ Causal and preventive factors can be studied through systematic investigation of
 - How was the population affected?
 - Why was the population affected?
 :::
+:::
+
+::: {.notes}
+Talk about confounding
 :::
 
 
@@ -150,7 +158,8 @@ Causal and preventive factors can be studied through systematic investigation of
 | Eradication of Smallpox | 1980 | WHO declared smallpox eradicated, marking the success of global vaccination efforts. |
 
 ::: {.notes}
-You do not need to memorize these, but let's talk about why they are important.
+- You do not need to memorize these, but let's talk about why they are important.
+- Talk about the demographic transition and epidemiologic transition when you discuss the history of epidemiology.
 :::
 
 <!-- Find the graph of mortality graphed against public health and medical developments. -->
