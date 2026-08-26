@@ -30,8 +30,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-11bdc954538009861bfb13f5e6041b66.css">
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-241158b7a9b626c608cce9a7f1958e49.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -163,18 +182,42 @@
 </section>
 <section id="lecture-learning-objectives" class="slide level2">
 <h2>Lecture Learning objectives</h2>
-<!-- Improve -->
+<p>By the end of this lesson, you’ll be able to:</p>
 <ol type="1">
-<li>Unpack the definition and assumptions of epidemiology</li>
-<li>Identify key events in the history of epidemiology</li>
-<li>Distinguish between disease distribution patterns: epidemics, endemics, and pandemics</li>
-<li>Describe at least three uses of epidemiology</li>
+<li>Define epidemiology and explain its core assumptions.</li>
+<li>Describe key events in the history and development of epidemiology.</li>
+<li>Differentiate epidemic, endemic, and pandemic patterns of disease occurrence.</li>
+<li>Describe at least three applications of epidemiology in public health practice.</li>
 </ol>
+</section>
+<section id="quiz-epidemiology-01" class="slide level2 quiz">
+<h2>Opening Question</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Lecture Slides/Module 01 - Welcome and Overview/Introduction to Epidemiology/quiz/quiz.yml
+     Rebuild: python3 _ai/tools/python/build_quiz_slides.py Lecture Slides/Module 01 - Welcome and Overview/Introduction to Epidemiology/quiz/quiz.yml -->
+<div class="quiz-prompt">
+<p>What is Epidemiology?</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/free_text_polls/BxG1Ef5eUvvxfwILaxZs3/respond?q=epidemiology-01">Respond here</a></p>
+</div>
+<p><img data-src="qr/epidemiology-01.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>The study of the distribution and determinants of health-related states or events (e.g.&nbsp;infectious disease) in specified (human) populations and the application of this study to control health problems Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="what-is-epidemiology" class="slide level2 compact">
 <h2>What is Epidemiology?</h2>
-<!-- Replace the graphic on this slide. Replace with a Poll Everywhere questions. What is Epidemiology? -->
-<div class="grid-2 align-center">
 <div class="definition-copy">
 <p><strong>EPIDEMIOLOGY</strong></p>
 <ul>
@@ -182,33 +225,22 @@
 <li>demo – “people”</li>
 <li>ology – “study of”</li>
 </ul>
-<p><strong>Definition:</strong> the study of the distribution and determinants of health-related states or events (e.g.&nbsp;infectious disease) in specified (human) populations and the application of this study to control health problems</p>
-<p>-– James Last, 1995, <em>A Dictionary of Epidemiology</em></p>
-</div>
-<div class="figure-frame">
-<p><img data-src="assets/slide-05-epidemiologic-triad.png" alt="Venn diagram showing SARS-CoV-2 as the agent, humans as the host, and the environment overlapping around COVID-19 as the disease."></p>
-</div>
+<p><strong>Definition:</strong> Epidemiology is concerned with the distribution and determinants of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations <span class="citation" data-cites="quinlan2025">(<a href="#/references" role="doc-biblioref" onclick="">Quinlan 2025</a>)</span>.</p>
 </div>
 </section>
-<section id="the-epidemiologic-triangle" class="slide level2 figure-only">
-<h2>The Epidemiologic Triangle</h2>
-<!-- REVIEW COMMENT — Source slide 6: Update the graphic -->
-
-<img data-src="assets/slide-06-epidemiologic-triangle.jpeg" alt="A triangle built from toy blocks labels who as the host, what as the agent, and where as the environment in which disease occurs." class="r-stretch"></section>
 <section id="scenario-exercise" class="slide level2 compact">
 <h2>Scenario Exercise</h2>
 <!-- Add a Poll Everywhere quiz or replace with a Poll Everywhere quiz. -->
 <!-- I'm also not sure what answer she was looking for here. -->
 <ol type="1">
-<li><strong>Scenario:</strong> A city health department notices that one neighborhood has twice the rate of asthma ER visits compared to another neighborhood in the same city. This difference has been observed every year for the past three years.</li>
-<li><strong>Questions:</strong> Do you think this difference is mostly due to random chance—yes or no? If it’s not random, what is one thing that might explain the difference?</li>
+<li><strong>Scenario:</strong> A city health department notices that one neighborhood has twice the rate of asthma ER visits in another neighborhood in the same city. This difference has been observed every year for the past three years.</li>
+<li><strong>Questions:</strong> Do you think this difference is mostly due to random chance—yes or no? If it’s not random, what might explain the difference?</li>
 <li><strong>What are we assuming if we believe those factors matter?</strong></li>
 </ol>
 </section>
 <section id="assumptions-of-epidemiology" class="slide level2">
 <h2>Assumptions of Epidemiology</h2>
-<!-- Is this in the book? -->
-<div class="grid-2 assumption-grid">
+<div class="grid-2 panel-grid-spaced">
 <div class="panel">
 <p><strong>ASSUMPTION 1</strong></p>
 <h3 id="human-disease-does-not-occur-at-random">Human disease does not occur at random</h3>
@@ -220,11 +252,11 @@
 <p>Causal and preventive factors can be studied through systematic investigation of populations.</p>
 </div>
 </div>
+<!-- Add a Poll everywhere quiz question about descriptive and analytic epidemiolgy. -->
 </section>
 <section id="descriptive-and-analytic-epidemiology" class="slide level2">
 <h2>Descriptive and Analytic Epidemiology</h2>
-<p><strong>Descriptive Epidemiology Is A Necessary Antecedent Of Analytic Epidemiology</strong> <!-- I'm not sure this is accurate --></p>
-<div class="grid-2">
+<div class="grid-2 panel-grid-spaced">
 <div class="panel">
 <p><strong>DISTRIBUTION</strong></p>
 <h3 id="descriptive-epidemiology">Descriptive epidemiology</h3>
@@ -244,20 +276,6 @@
 </div>
 </div>
 </section>
-<section id="cholera-outbreak-in-london" class="slide level2 compact">
-<h2>Cholera Outbreak In London</h2>
-<!-- Replace with a Poll Everywhere question. -->
-<div class="grid-2 book-grid">
-<div>
-<p><strong>Cholera Symptoms</strong></p>
-<p>Cholera is an extremely virulent disease that can cause severe acute watery diarrhea. Cholera affects both children and adults and can kill within hours if untreated.</p>
-<p>It takes between 12 hours and 5 days for a person to show symptoms after ingesting contaminated food or water.</p>
-</div>
-<div class="figure-frame book-cover">
-<p><img data-src="assets/slide-10-lambeth-cholera-book.png" alt="Book cover for The Lambeth Cholera Outbreak of 1848–1849 by Amanda J. Thomas."></p>
-</div>
-</div>
-</section>
 <section id="micro-activity-thinking-like-an-epidemiologist" class="slide level2 compact">
 <h2>Micro-Activity: Thinking Like an Epidemiologist</h2>
 <ol type="1">
@@ -265,7 +283,7 @@
 <li>As you watch, focus on these questions:<br>
 What patterns did Snow observe? <em>(Who, where, when — descriptive epidemiology)</em></li>
 <li>What explanation was he testing? <em>(How, why — analytic epidemiology)</em><br>
-<strong>Descriptive epidemiology comes first, analytic epidemiology builds on it.</strong></li>
+<strong>Descriptive epidemiology often comes first; analytic epidemiology builds on it.</strong></li>
 </ol>
 <aside class="notes">
 <p>[Sources] - PBS LearningMedia, John Snow: Pioneer of Epidemiology, https://kera.pbslearningmedia.org/resource/envh10.sci.life.nathis.johnsnow/john-snow-pioneer-of-epidemiology/ (inherited link). [/Sources]</p>
@@ -284,9 +302,6 @@ What patterns did Snow observe? <em>(Who, where, when — descriptive epidemiolo
 <section id="history-of-epidemiology-key-events" class="slide level2 history-table">
 <h2>History of Epidemiology: Key Events</h2>
 <!-- Replace with a Poll Everywhere question. Is matching an option? -->
-<!-- REVIEW COMMENT — Source slide 12:
-Discussion: No need to memorize these. But, let's talk about why they are important.
--->
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -338,106 +353,27 @@ Discussion: No need to memorize these. But, let's talk about why they are import
 </tr>
 </tbody>
 </table>
-</section>
-<section id="renowned-epidemiology-scholars" class="slide level2 compact">
-<h2>Renowned Epidemiology Scholars</h2>
-<!-- REVIEW COMMENT — Source slide 13: We can probably drop this slide. -->
-<p><strong>How Epidemiologists Learned to Think:</strong></p>
-<p>Hippocrates → Environment and behavior influence health<br>
-John Graunt → Counting populations reveals disease patterns<br>
-William Farr → Vital statistics and surveillance systems<br>
-John Snow → Using population data to identify causes<br>
-Alexander Louis → Quantitative reasoning in medicine<br>
-Bradford Hill → Systematic thinking about causality</p>
-</section>
-<section id="the-contemporary-era-1940-to-present" class="slide level2 compact">
-<h2>The Contemporary Era: 1940 to Present</h2>
-<!-- REVIEW COMMENT — Source slide 14: Drop? -->
-<div class="grid-3">
-<div class="panel">
-<p><strong>01</strong></p>
-<h3 id="long-term-population-studies">Long-term population studies</h3>
-<p>Framingham Heart Study → identification of risk factors</p>
-</div>
-<div class="panel">
-<p><strong>02</strong></p>
-<h3 id="expanded-causal-thinking">Expanded causal thinking</h3>
-<p>Chronic disease linked to behaviors, infections, and genetics</p>
-</div>
-<div class="panel">
-<p><strong>03</strong></p>
-<h3 id="ethics-and-equity-in-research">Ethics and equity in research</h3>
-<p>William Carter Jenkins → accountability in public health studies</p>
-</div>
-</div>
-</section>
-<section id="from-history-to-practice" class="slide level2">
-<h2>From History to Practice</h2>
-<!-- Is this in the book? -->
-<p><strong>Epidemiology began by asking:</strong></p>
-<p><strong>Who</strong> is affected?<br>
-<strong>Where</strong> does disease occur?<br>
-<strong>When</strong> does it change over time?</p>
-<p><strong>Next:</strong> Applying these questions to real data<br>
-<em>(Person, Place, and Time)</em></p>
-</section>
-<section id="who-personal-characteristics-e.g.-age-or-gender" class="slide level2 data-slide">
-<h2>Who: personal characteristics e.g.&nbsp;age or gender</h2>
-<!-- REVIEW COMMENT — Source slide 16: Use my own graphics? -->
-<div class="grid-2 chart-grid">
-<p><img data-src="assets/slide-16-breast-cancer-death-rate.png" alt="Line chart of breast cancer death rates by age group for all persons in the United States in 1996 and 2006."></p>
-<p><img data-src="assets/slide-16-breast-cancer-death-percent.png" alt="Bar chart showing the percent of female breast cancer deaths by age group."></p>
-</div>
-<div class="source-line">
-<p>Age-Specific Death Rates Associated With Breast Cancer Among All Persons by Age Group, United States, 1996 and 2006</p>
-<p>Note: The death rates refer to the number of deaths due to breast cancer per 100,000 persons in the particular age group (including both females and males). Source: National Center for Health Statistics. Available at http://www.prb.org/Articles/2009/breastcancer.aspx?p=1</p>
-</div>
-</section>
-<section id="where-geographically-restricted-or-widespread-pandemic" class="slide level2 data-slide">
-<h2>Where: Geographically restricted or widespread (pandemic)?</h2>
-<!-- Should we look this up on a live website? -->
-
-<img data-src="assets/slide-17-breast-cancer-incidence-map.jpeg" alt="Map of female breast cancer incidence rates by state in 2009." class="r-stretch"><div class="source-line">
-<p>*Rates are per 100,000 and are age-adjusted to the 2000 U.S. standard population. ‡Data are suppressed at the state’s request. †Source: U.S. Cancer Statistics Working Group. United States Cancer Statistics: 1999–2009 Incidence and Mortality Web-based Report. Atlanta (GA): Department of Health and Human Services, Centers for Disease Control and Prevention, and National Cancer Institute; 2013. Available at: http://www.cdc.gov/cancer/breast/statistics/state.htm</p>
-<p><strong>Female Breast Cancer Incidence Rates* by State, 2009†</strong></p>
-</div>
-</section>
-<section id="when-change-over-time" class="slide level2 data-slide">
-<h2>When: change over time</h2>
-<!-- REVIEW COMMENT — Source slide 18: Use my own graphic? -->
-
-<img data-src="assets/slide-18-breast-cancer-death-rates-race.png" alt="Line chart of breast cancer death rates among Black and White women aged 45–64 years in the United States from 1990 through 2007." class="r-stretch"><div class="source-line">
-<ul>
-<li>Rates per 100,000 women aged 45–64 years for whom breast cancer was the underlying cause of death (based on International Classification of Diseases, Ninth Revision [ICD-9] codes 174–175 for 1990–1998 and ICD-10 code C50 for 1999–2007). Sources: CDC Morbidity and Mortality Weekly Report (MMWR), July 30, 2010 / 59(29);915. Available at http://www.cdc.gov/mmwr/preview/mmwrhtml/mm5929a5.htm</li>
-</ul>
-<p><strong>Breast Cancer Death Rates Among Women Aged 45–64 Years,* by Race — United States, 1990–2007</strong></p>
-</div>
-</section>
-<section id="from-patterns-to-classification" class="slide level2">
-<h2>From Patterns to Classification</h2>
-<!-- REVIEW COMMENT — Source slide 19: Create a Poll Everywhere question -->
-<div class="grid-3 classification-grid">
-<div class="panel">
-<p><strong>01</strong></p>
-<h3 id="endemic">Endemic</h3>
-</div>
-<div class="panel">
-<p><strong>02</strong></p>
-<h3 id="epidemic">Epidemic</h3>
-</div>
-<div class="panel">
-<p><strong>03</strong></p>
-<h3 id="pandemic">Pandemic</h3>
-</div>
-</div>
-<p>We use person, place, and time to describe disease patterns. These patterns are commonly classified as endemic, epidemic, and pandemic. These terms describe patterns over time and place, not disease severity.</p>
+<aside class="notes">
+<p>You do not need to memorize these, but let’s talk about why they are important.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- Find the graph of mortality graphed against public health and medical developments. -->
 </section>
 <section id="disease-distribution-patterns" class="slide level2 compact">
 <h2>Disease Distribution Patterns</h2>
 <div class="grid-3 definition-grid">
 <div class="panel">
 <p><strong>01</strong></p>
-<h3 id="endemic-1">Endemic</h3>
+<h3 id="endemic">Endemic</h3>
 <p>Disease or condition consistently present in a population</p>
 <ul>
 <li>Relatively stable over time</li>
@@ -455,7 +391,7 @@ Bradford Hill → Systematic thinking about causality</p>
 </div>
 <div class="panel">
 <p><strong>03</strong></p>
-<h3 id="pandemic-1">Pandemic</h3>
+<h3 id="pandemic">Pandemic</h3>
 <p>An epidemic that spreads across multiple countries or continents</p>
 <ul>
 <li>Global distribution</li>
@@ -464,66 +400,87 @@ Bradford Hill → Systematic thinking about causality</p>
 </div>
 </div>
 </section>
-<section id="epidemic-visual-illustration" class="slide level2 figure-only">
-<h2>Epidemic: Visual Illustration</h2>
-
-<img data-src="assets/slide-21-epidemic-frequency.jpeg" alt="Bar chart illustrating annual occurrence, normal expectancy, and epidemic frequency for a hypothetical disease from 2016 through 2027." class="r-stretch"></section>
-<section id="global-context-epidemics-and-pandemics" class="slide level2 figure-only">
-<h2>Global Context: Epidemics and Pandemics</h2>
-<!-- REVIEW COMMENT — Source slide 22: I'm not sure what the value of this slide is. -->
-
-<img data-src="assets/slide-22-global-epidemics-pandemics.png" alt="Timeline of selected epidemics and pandemics, with events arranged chronologically above and below a horizontal timeline." class="r-stretch"></section>
-<section id="exercise-apply-the-concepts" class="slide level2 compact">
-<h2>Exercise: Apply the Concepts</h2>
-<!-- REVIEW COMMENT — Source slide 23: Poll Everywhere -->
-<p><strong>Match each term with the correct example.</strong></p>
-<p>A. endemic  B. pandemic  C. epidemic</p>
-<ol type="1">
-<li>Malaria is always present in Africa due to the presence of infected mosquitoes. Malaria is _____ in Africa.</li>
-<li>Ebola virus cases in parts of Africa exceed what is normally expected for that region. This virus represents an________.</li>
-<li>COVID-19 spread across countries and continents worldwide. COVID-19 is a_________.</li>
-</ol>
-</section>
-<section id="exercise-apply-the-concepts-1" class="slide level2 compact">
-<h2>Exercise: Apply the Concepts</h2>
-<p><strong>Match each term with the correct example.</strong></p>
-<p>A. endemic  B. pandemic  C. epidemic</p>
-<ol type="1">
-<li>Malaria is always present in Africa due to the presence of infected mosquitoes. Malaria is <strong>endemic</strong> in Africa.</li>
-<li>Ebola virus cases in parts of Africa exceed what is normally expected for that region. This virus represents an <strong>epidemic</strong>.</li>
-<li>COVID-19 spread across countries and continents worldwide.COVID-19 is a <strong>pandemic</strong>.</li>
-</ol>
-</section>
-<section id="exercise-check-your-understanding" class="slide level2">
-<h2>Exercise: Check Your Understanding</h2>
-<!-- REVIEW COMMENT — Source slide 25: Poll Everywhere -->
-<p><strong>TRUE OR FALSE</strong></p>
-<ol type="1">
-<li>A pandemic is always a form of epidemic.</li>
-<li>An endemic disease always represents an epidemic.</li>
-</ol>
-<p><strong>Pause &amp; think</strong></p>
-</section>
-<section id="exercise-check-your-understanding-1" class="slide level2 compact">
-<h2>Exercise: Check Your Understanding</h2>
-<ol type="1">
-<li><strong>A pandemic is always a form of epidemic.</strong>
-<ul>
-<li>Answer: True</li>
-<li>Explanation: A pandemic is an epidemic that has spread across multiple countries or continents. It still meets the definition of an epidemic—occurrence in excess of what is normally expected—but on a global scale.</li>
-</ul></li>
-<li><strong>An endemic disease always represents an epidemic.</strong>
-<ul>
-<li>Answer: False</li>
-<li>Explanation: An endemic disease is consistently present at an expected level within a population or region. Because it does not exceed normal expectations, it is not considered an epidemic, even though cases may occur continuously.</li>
-</ul></li>
-</ol>
+<section id="quiz-epidemic-01" class="slide level2 quiz">
+<h2>Exercise: Disease Distribution Patterns</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Lecture Slides/Module 01 - Welcome and Overview/Introduction to Epidemiology/quiz/quiz.yml
+     Rebuild: python3 _ai/tools/python/build_quiz_slides.py Lecture Slides/Module 01 - Welcome and Overview/Introduction to Epidemiology/quiz/quiz.yml -->
+<div class="quiz-prompt">
+<p>Ebola virus cases in parts of Africa exceed what is normally expected for that region. In this situation, the Ebola virus was [a/an] ________.</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> endemic</p>
+<p><strong>B.</strong> epidemic</p>
+<p><strong>C.</strong> pandemic</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/IbKVVt4vgCRC64HyxiSYr/respond?q=epidemic-01">Respond here</a></p>
+</div>
+<p><img data-src="qr/epidemic-01.png" class="qr" width="200"></p>
 <aside class="notes">
-<p>[Sources]</p>
-<ul>
-<li>Yan Zhang, APHS 20203 W1-Overview and Epi Intro.pptx, source slide 36.</li>
-</ul>
-<p>[/Sources]</p>
+<p>Answer: B. An epidemic is the occurrence of disease cases above what is normally expected in a population or region. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quiz-endemic-01" class="slide level2 quiz">
+<h2>Exercise: Disease Distribution Patterns</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Lecture Slides/Module 01 - Welcome and Overview/Introduction to Epidemiology/quiz/quiz.yml
+     Rebuild: python3 _ai/tools/python/build_quiz_slides.py Lecture Slides/Module 01 - Welcome and Overview/Introduction to Epidemiology/quiz/quiz.yml -->
+<div class="quiz-prompt">
+<p>Malaria is always present in Africa due to the presence of infected mosquitoes. In this situation, malaria is [a/an] ________.</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> endemic</p>
+<p><strong>B.</strong> epidemic</p>
+<p><strong>C.</strong> pandemic</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/BeylIlOHiqqCwIu67t3vK/respond?q=endemic-01">Respond here</a></p>
+</div>
+<p><img data-src="qr/endemic-01.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: A. An endemic disease is consistently present at an expected baseline level in a population or region. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quiz-pandemic-01" class="slide level2 quiz">
+<h2>Exercise: Disease Distribution Patterns</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Lecture Slides/Module 01 - Welcome and Overview/Introduction to Epidemiology/quiz/quiz.yml
+     Rebuild: python3 _ai/tools/python/build_quiz_slides.py Lecture Slides/Module 01 - Welcome and Overview/Introduction to Epidemiology/quiz/quiz.yml -->
+<div class="quiz-prompt">
+<p>Between 2019 and 2023, the SARS-CoV-2 virus infected more than 600 million people worldwide. In this situation, the SARS-CoV-2 virus was [a/an] ________.</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> endemic</p>
+<p><strong>B.</strong> epidemic</p>
+<p><strong>C.</strong> pandemic</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/xs8SYX3DRMgTGChyPmjEE/respond?q=pandemic-01">Respond here</a></p>
+</div>
+<p><img data-src="qr/pandemic-01.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: C. A pandemic is an epidemic that spreads across countries or continents and affects a large number of people. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -538,7 +495,7 @@ Bradford Hill → Systematic thinking about causality</p>
 </section>
 <section id="use-of-epidemiology" class="slide level2">
 <h2>Use of Epidemiology</h2>
-<p><strong>In this course Epi Group Presentation, you will:</strong></p>
+<p>In the first group presentation for this course, you will:</p>
 <p><strong>Describe</strong> a health problem<br>
 <em>(Who is affected? Where? When?)</em></p>
 <p><strong>Explain</strong> possible reasons<br>
@@ -546,15 +503,27 @@ Bradford Hill → Systematic thinking about causality</p>
 <p><strong>Interpret</strong> evidence<br>
 <em>(Patterns and associations)</em></p>
 <p><strong>Propose</strong> prevention or control strategies</p>
+<aside class="notes">
+<p>Students may leave or work on group projects.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="revisit-learning-objectives" class="slide level2">
-<h2>Revisit Learning objectives</h2>
-<p><strong>1. Unpack the definition and assumptions of epidemiology</strong></p>
-<ol type="1">
-<li>Identify epidemiology key events</li>
-<li>Distinguish between disease distribution patterns: epidemics, endemics, and pandemics</li>
-<li>Describe at least three uses of epidemiology</li>
-</ol>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-quinlan2025" class="csl-entry" role="listitem">
+Quinlan, Scott. 2025. <em>Friis’ Epidemiology 101</em>. 3rd ed. Jones &amp; Bartlett Learning.
+</div>
+</div>
 
 
 </section>
@@ -845,7 +814,7 @@ Bradford Hill → Systematic thinking about causality</p>
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/brad-cannell\.github\.io\/aphs20203\/");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

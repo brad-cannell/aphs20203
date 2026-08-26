@@ -11,112 +11,56 @@
     "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#lecture-learning-objectives",
     "title": "Introduction to Epidemiology",
     "section": "Lecture Learning objectives",
-    "text": "Lecture Learning objectives\n\n\nUnpack the definition and assumptions of epidemiology\nIdentify key events in the history of epidemiology\nDistinguish between disease distribution patterns: epidemics, endemics, and pandemics\nDescribe at least three uses of epidemiology"
+    "text": "Lecture Learning objectives\nBy the end of this lesson, you’ll be able to:\n\nDefine epidemiology and explain its core assumptions.\nDescribe key events in the history and development of epidemiology.\nDifferentiate epidemic, endemic, and pandemic patterns of disease occurrence.\nDescribe at least three applications of epidemiology in public health practice."
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-epidemiology-01",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-epidemiology-01",
+    "title": "Introduction to Epidemiology",
+    "section": "Opening Question",
+    "text": "Opening Question\n\n\nWhat is Epidemiology?\n\n\nRespond here\n\n\n\nThe study of the distribution and determinants of health-related states or events (e.g. infectious disease) in specified (human) populations and the application of this study to control health problems Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard."
   },
   {
     "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#what-is-epidemiology",
     "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#what-is-epidemiology",
     "title": "Introduction to Epidemiology",
     "section": "What is Epidemiology?",
-    "text": "What is Epidemiology?\n\n\n\nEPIDEMIOLOGY\n\nepi – “on, upon”\ndemo – “people”\nology – “study of”\n\nDefinition: the study of the distribution and determinants of health-related states or events (e.g. infectious disease) in specified (human) populations and the application of this study to control health problems\n-– James Last, 1995, A Dictionary of Epidemiology"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#the-epidemiologic-triangle",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#the-epidemiologic-triangle",
-    "title": "Introduction to Epidemiology",
-    "section": "The Epidemiologic Triangle",
-    "text": "The Epidemiologic Triangle"
+    "text": "What is Epidemiology?\n\nEPIDEMIOLOGY\n\nepi – “on, upon”\ndemo – “people”\nology – “study of”\n\nDefinition: Epidemiology is concerned with the distribution and determinants of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations (Quinlan 2025)."
   },
   {
     "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#scenario-exercise",
     "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#scenario-exercise",
     "title": "Introduction to Epidemiology",
     "section": "Scenario Exercise",
-    "text": "Scenario Exercise\n\n\n\nScenario: A city health department notices that one neighborhood has twice the rate of asthma ER visits compared to another neighborhood in the same city. This difference has been observed every year for the past three years.\nQuestions: Do you think this difference is mostly due to random chance—yes or no? If it’s not random, what is one thing that might explain the difference?\nWhat are we assuming if we believe those factors matter?"
+    "text": "Scenario Exercise\n\n\n\nScenario: A city health department notices that one neighborhood has twice the rate of asthma ER visits in another neighborhood in the same city. This difference has been observed every year for the past three years.\nQuestions: Do you think this difference is mostly due to random chance—yes or no? If it’s not random, what might explain the difference?\nWhat are we assuming if we believe those factors matter?"
   },
   {
     "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#assumptions-of-epidemiology",
     "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#assumptions-of-epidemiology",
     "title": "Introduction to Epidemiology",
     "section": "Assumptions of Epidemiology",
-    "text": "Assumptions of Epidemiology\n\n\n\nASSUMPTION 1\nHuman disease does not occur at random\nDisease frequency and distribution vary because of identifiable factors that increase or decrease risk.\n\n\nASSUMPTION 2\nDeterminants of disease can be identified\nCausal and preventive factors can be studied through systematic investigation of populations."
+    "text": "Assumptions of Epidemiology\n\n\nASSUMPTION 1\nHuman disease does not occur at random\nDisease frequency and distribution vary because of identifiable factors that increase or decrease risk.\n\n\nASSUMPTION 2\nDeterminants of disease can be identified\nCausal and preventive factors can be studied through systematic investigation of populations."
   },
   {
     "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#descriptive-and-analytic-epidemiology",
     "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#descriptive-and-analytic-epidemiology",
     "title": "Introduction to Epidemiology",
     "section": "Descriptive and Analytic Epidemiology",
-    "text": "Descriptive and Analytic Epidemiology\nDescriptive Epidemiology Is A Necessary Antecedent Of Analytic Epidemiology \n\n\nDISTRIBUTION\nDescriptive epidemiology\n\nWhen was the population affected?\nWhere was the population affected?\nWho was affected?\n\n\n\nDETERMINANTS\nAnalytic epidemiology\n\nHow was the population affected?\nWhy was the population affected?"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#cholera-outbreak-in-london",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#cholera-outbreak-in-london",
-    "title": "Introduction to Epidemiology",
-    "section": "Cholera Outbreak In London",
-    "text": "Cholera Outbreak In London\n\n\n\nCholera Symptoms\nCholera is an extremely virulent disease that can cause severe acute watery diarrhea. Cholera affects both children and adults and can kill within hours if untreated.\nIt takes between 12 hours and 5 days for a person to show symptoms after ingesting contaminated food or water."
+    "text": "Descriptive and Analytic Epidemiology\n\n\nDISTRIBUTION\nDescriptive epidemiology\n\nWhen was the population affected?\nWhere was the population affected?\nWho was affected?\n\n\n\nDETERMINANTS\nAnalytic epidemiology\n\nHow was the population affected?\nWhy was the population affected?"
   },
   {
     "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#micro-activity-thinking-like-an-epidemiologist",
     "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#micro-activity-thinking-like-an-epidemiologist",
     "title": "Introduction to Epidemiology",
     "section": "Micro-Activity: Thinking Like an Epidemiologist",
-    "text": "Micro-Activity: Thinking Like an Epidemiologist\n\nWatch the short video on John Snow and cholera. John Snow: Pioneer of Epidemiology\nAs you watch, focus on these questions:\nWhat patterns did Snow observe? (Who, where, when — descriptive epidemiology)\nWhat explanation was he testing? (How, why — analytic epidemiology)\nDescriptive epidemiology comes first, analytic epidemiology builds on it.\n\n\n[Sources] - PBS LearningMedia, John Snow: Pioneer of Epidemiology, https://kera.pbslearningmedia.org/resource/envh10.sci.life.nathis.johnsnow/john-snow-pioneer-of-epidemiology/ (inherited link). [/Sources]"
+    "text": "Micro-Activity: Thinking Like an Epidemiologist\n\nWatch the short video on John Snow and cholera. John Snow: Pioneer of Epidemiology\nAs you watch, focus on these questions:\nWhat patterns did Snow observe? (Who, where, when — descriptive epidemiology)\nWhat explanation was he testing? (How, why — analytic epidemiology)\nDescriptive epidemiology often comes first; analytic epidemiology builds on it.\n\n\n[Sources] - PBS LearningMedia, John Snow: Pioneer of Epidemiology, https://kera.pbslearningmedia.org/resource/envh10.sci.life.nathis.johnsnow/john-snow-pioneer-of-epidemiology/ (inherited link). [/Sources]"
   },
   {
     "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#history-of-epidemiology-key-events",
     "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#history-of-epidemiology-key-events",
     "title": "Introduction to Epidemiology",
     "section": "History of Epidemiology: Key Events",
-    "text": "History of Epidemiology: Key Events\n\n\n\n\n\n\n\n\n\n\nEvent\nTime Period\nDescription\n\n\n\n\nBubonic Plague Epidemics (Black Death)\n1347 - 1351\nOne of the deadliest pandemics, causing 75–200 million deaths in Eurasia.\n\n\nDevelopment of Toxicology\n16th Century\nParacelsus, “Father of Toxicology,” introduced the principle: “The dose makes the poison.”\n\n\nDevelopment of Biostatistics\n18th Century\nJohn Graunt pioneered statistical analysis, using Bills of Mortality to study disease patterns in London.\n\n\nDevelopment of Smallpox Vaccine\n1796\nEdward Jenner created the first vaccine by using cowpox to confer immunity to smallpox.\n\n\n1918 Influenza Pandemic\n1918-19\nThe “Spanish flu” infected a third of the global population, killing 50–100 million.\n\n\nIdentification of Smoking as a Cause of Cancer\n1950\nLandmark studies linked smoking to lung cancer, driving public health campaigns against tobacco use.\n\n\nEradication of Smallpox\n1980\nWHO declared smallpox eradicated, marking the success of global vaccination efforts."
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#renowned-epidemiology-scholars",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#renowned-epidemiology-scholars",
-    "title": "Introduction to Epidemiology",
-    "section": "Renowned Epidemiology Scholars",
-    "text": "Renowned Epidemiology Scholars\n\nHow Epidemiologists Learned to Think:\nHippocrates → Environment and behavior influence health\nJohn Graunt → Counting populations reveals disease patterns\nWilliam Farr → Vital statistics and surveillance systems\nJohn Snow → Using population data to identify causes\nAlexander Louis → Quantitative reasoning in medicine\nBradford Hill → Systematic thinking about causality"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#the-contemporary-era-1940-to-present",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#the-contemporary-era-1940-to-present",
-    "title": "Introduction to Epidemiology",
-    "section": "The Contemporary Era: 1940 to Present",
-    "text": "The Contemporary Era: 1940 to Present\n\n\n\n01\nLong-term population studies\nFramingham Heart Study → identification of risk factors\n\n\n02\nExpanded causal thinking\nChronic disease linked to behaviors, infections, and genetics\n\n\n03\nEthics and equity in research\nWilliam Carter Jenkins → accountability in public health studies"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#from-history-to-practice",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#from-history-to-practice",
-    "title": "Introduction to Epidemiology",
-    "section": "From History to Practice",
-    "text": "From History to Practice\n\nEpidemiology began by asking:\nWho is affected?\nWhere does disease occur?\nWhen does it change over time?\nNext: Applying these questions to real data\n(Person, Place, and Time)"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#who-personal-characteristics-e.g.-age-or-gender",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#who-personal-characteristics-e.g.-age-or-gender",
-    "title": "Introduction to Epidemiology",
-    "section": "Who: personal characteristics e.g. age or gender",
-    "text": "Who: personal characteristics e.g. age or gender\n\n\n\n\n\n\nAge-Specific Death Rates Associated With Breast Cancer Among All Persons by Age Group, United States, 1996 and 2006\nNote: The death rates refer to the number of deaths due to breast cancer per 100,000 persons in the particular age group (including both females and males). Source: National Center for Health Statistics. Available at http://www.prb.org/Articles/2009/breastcancer.aspx?p=1"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#where-geographically-restricted-or-widespread-pandemic",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#where-geographically-restricted-or-widespread-pandemic",
-    "title": "Introduction to Epidemiology",
-    "section": "Where: Geographically restricted or widespread (pandemic)?",
-    "text": "Where: Geographically restricted or widespread (pandemic)?\n\n\n\n*Rates are per 100,000 and are age-adjusted to the 2000 U.S. standard population. ‡Data are suppressed at the state’s request. †Source: U.S. Cancer Statistics Working Group. United States Cancer Statistics: 1999–2009 Incidence and Mortality Web-based Report. Atlanta (GA): Department of Health and Human Services, Centers for Disease Control and Prevention, and National Cancer Institute; 2013. Available at: http://www.cdc.gov/cancer/breast/statistics/state.htm\nFemale Breast Cancer Incidence Rates* by State, 2009†"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#when-change-over-time",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#when-change-over-time",
-    "title": "Introduction to Epidemiology",
-    "section": "When: change over time",
-    "text": "When: change over time\n\n\n\n\nRates per 100,000 women aged 45–64 years for whom breast cancer was the underlying cause of death (based on International Classification of Diseases, Ninth Revision [ICD-9] codes 174–175 for 1990–1998 and ICD-10 code C50 for 1999–2007). Sources: CDC Morbidity and Mortality Weekly Report (MMWR), July 30, 2010 / 59(29);915. Available at http://www.cdc.gov/mmwr/preview/mmwrhtml/mm5929a5.htm\n\nBreast Cancer Death Rates Among Women Aged 45–64 Years,* by Race — United States, 1990–2007"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#from-patterns-to-classification",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#from-patterns-to-classification",
-    "title": "Introduction to Epidemiology",
-    "section": "From Patterns to Classification",
-    "text": "From Patterns to Classification\n\n\n\n01\nEndemic\n\n\n02\nEpidemic\n\n\n03\nPandemic\n\n\nWe use person, place, and time to describe disease patterns. These patterns are commonly classified as endemic, epidemic, and pandemic. These terms describe patterns over time and place, not disease severity."
+    "text": "History of Epidemiology: Key Events\n\n\n\n\n\n\n\n\n\nEvent\nTime Period\nDescription\n\n\n\n\nBubonic Plague Epidemics (Black Death)\n1347 - 1351\nOne of the deadliest pandemics, causing 75–200 million deaths in Eurasia.\n\n\nDevelopment of Toxicology\n16th Century\nParacelsus, “Father of Toxicology,” introduced the principle: “The dose makes the poison.”\n\n\nDevelopment of Biostatistics\n18th Century\nJohn Graunt pioneered statistical analysis, using Bills of Mortality to study disease patterns in London.\n\n\nDevelopment of Smallpox Vaccine\n1796\nEdward Jenner created the first vaccine by using cowpox to confer immunity to smallpox.\n\n\n1918 Influenza Pandemic\n1918-19\nThe “Spanish flu” infected a third of the global population, killing 50–100 million.\n\n\nIdentification of Smoking as a Cause of Cancer\n1950\nLandmark studies linked smoking to lung cancer, driving public health campaigns against tobacco use.\n\n\nEradication of Smallpox\n1980\nWHO declared smallpox eradicated, marking the success of global vaccination efforts.\n\n\n\n\nYou do not need to memorize these, but let’s talk about why they are important."
   },
   {
     "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#disease-distribution-patterns",
@@ -126,73 +70,52 @@
     "text": "Disease Distribution Patterns\n\n\n01\nEndemic\nDisease or condition consistently present in a population\n\nRelatively stable over time\nExpected level of occurrence in a given place\n\n\n\n02\nEpidemic (Outbreak)\nDisease occurrence in excess of what is normally expected\n\nSudden increase over a short period\nOften limited to a specific region\n\n\n\n03\nPandemic\nAn epidemic that spreads across multiple countries or continents\n\nGlobal distribution\nAffects a large proportion of the population"
   },
   {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#epidemic-visual-illustration",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#epidemic-visual-illustration",
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-epidemic-01",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-epidemic-01",
     "title": "Introduction to Epidemiology",
-    "section": "Epidemic: Visual Illustration",
-    "text": "Epidemic: Visual Illustration"
+    "section": "Exercise: Disease Distribution Patterns",
+    "text": "Exercise: Disease Distribution Patterns\n\n\nEbola virus cases in parts of Africa exceed what is normally expected for that region. In this situation, the Ebola virus was [a/an] ________.\n\n\nA. endemic\nB. epidemic\nC. pandemic\n\n\nRespond here\n\n\n\nAnswer: B. An epidemic is the occurrence of disease cases above what is normally expected in a population or region. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard."
   },
   {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#global-context-epidemics-and-pandemics",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#global-context-epidemics-and-pandemics",
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-endemic-01",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-endemic-01",
     "title": "Introduction to Epidemiology",
-    "section": "Global Context: Epidemics and Pandemics",
-    "text": "Global Context: Epidemics and Pandemics"
+    "section": "Exercise: Disease Distribution Patterns",
+    "text": "Exercise: Disease Distribution Patterns\n\n\nMalaria is always present in Africa due to the presence of infected mosquitoes. In this situation, malaria is [a/an] ________.\n\n\nA. endemic\nB. epidemic\nC. pandemic\n\n\nRespond here\n\n\n\nAnswer: A. An endemic disease is consistently present at an expected baseline level in a population or region. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard."
   },
   {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#exercise-apply-the-concepts",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#exercise-apply-the-concepts",
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-pandemic-01",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-pandemic-01",
     "title": "Introduction to Epidemiology",
-    "section": "Exercise: Apply the Concepts",
-    "text": "Exercise: Apply the Concepts\n\nMatch each term with the correct example.\nA. endemic  B. pandemic  C. epidemic\n\nMalaria is always present in Africa due to the presence of infected mosquitoes. Malaria is _____ in Africa.\nEbola virus cases in parts of Africa exceed what is normally expected for that region. This virus represents an________.\nCOVID-19 spread across countries and continents worldwide. COVID-19 is a_________."
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#exercise-apply-the-concepts-1",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#exercise-apply-the-concepts-1",
-    "title": "Introduction to Epidemiology",
-    "section": "Exercise: Apply the Concepts",
-    "text": "Exercise: Apply the Concepts\nMatch each term with the correct example.\nA. endemic  B. pandemic  C. epidemic\n\nMalaria is always present in Africa due to the presence of infected mosquitoes. Malaria is endemic in Africa.\nEbola virus cases in parts of Africa exceed what is normally expected for that region. This virus represents an epidemic.\nCOVID-19 spread across countries and continents worldwide.COVID-19 is a pandemic."
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#exercise-check-your-understanding",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#exercise-check-your-understanding",
-    "title": "Introduction to Epidemiology",
-    "section": "Exercise: Check Your Understanding",
-    "text": "Exercise: Check Your Understanding\n\nTRUE OR FALSE\n\nA pandemic is always a form of epidemic.\nAn endemic disease always represents an epidemic.\n\nPause & think"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#exercise-check-your-understanding-1",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#exercise-check-your-understanding-1",
-    "title": "Introduction to Epidemiology",
-    "section": "Exercise: Check Your Understanding",
-    "text": "Exercise: Check Your Understanding\n\nA pandemic is always a form of epidemic.\n\nAnswer: True\nExplanation: A pandemic is an epidemic that has spread across multiple countries or continents. It still meets the definition of an epidemic—occurrence in excess of what is normally expected—but on a global scale.\n\nAn endemic disease always represents an epidemic.\n\nAnswer: False\nExplanation: An endemic disease is consistently present at an expected level within a population or region. Because it does not exceed normal expectations, it is not considered an epidemic, even though cases may occur continuously.\n\n\n\n[Sources]\n\nYan Zhang, APHS 20203 W1-Overview and Epi Intro.pptx, source slide 36.\n\n[/Sources]"
+    "section": "Exercise: Disease Distribution Patterns",
+    "text": "Exercise: Disease Distribution Patterns\n\n\nBetween 2019 and 2023, the SARS-CoV-2 virus infected more than 600 million people worldwide. In this situation, the SARS-CoV-2 virus was [a/an] ________.\n\n\nA. endemic\nB. epidemic\nC. pandemic\n\n\nRespond here\n\n\n\nAnswer: C. A pandemic is an epidemic that spreads across countries or continents and affects a large number of people. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard."
   },
   {
     "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#use-of-epidemiology",
     "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#use-of-epidemiology",
     "title": "Introduction to Epidemiology",
     "section": "Use of Epidemiology",
-    "text": "Use of Epidemiology\nIn this course Epi Group Presentation, you will:\nDescribe a health problem\n(Who is affected? Where? When?)\nExplain possible reasons\n(Risk factors or exposures)\nInterpret evidence\n(Patterns and associations)\nPropose prevention or control strategies"
+    "text": "Use of Epidemiology\nIn the first group presentation for this course, you will:\nDescribe a health problem\n(Who is affected? Where? When?)\nExplain possible reasons\n(Risk factors or exposures)\nInterpret evidence\n(Patterns and associations)\nPropose prevention or control strategies\n\nStudents may leave or work on group projects."
   },
   {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#revisit-learning-objectives",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#revisit-learning-objectives",
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#references",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#references",
     "title": "Introduction to Epidemiology",
-    "section": "Revisit Learning objectives",
-    "text": "Revisit Learning objectives\n1. Unpack the definition and assumptions of epidemiology\n\nIdentify epidemiology key events\nDistinguish between disease distribution patterns: epidemics, endemics, and pandemics\nDescribe at least three uses of epidemiology"
+    "section": "References",
+    "text": "References\n\n\nQuinlan, Scott. 2025. Friis’ Epidemiology 101. 3rd ed. Jones & Bartlett Learning."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "APHS 20203: Epidemiology & Biostatistics",
     "section": "",
-    "text": "Interactive slide decks for APHS 20203.\n\n\n\nIntroduction to Epidemiology"
+    "text": "Interactive slide decks for APHS 20203.\n\n\n\nView interactive slides\nDownload PDF"
   },
   {
     "objectID": "index.html#module-1-welcome-and-overview",
     "href": "index.html#module-1-welcome-and-overview",
     "title": "APHS 20203: Epidemiology & Biostatistics",
     "section": "",
-    "text": "Introduction to Epidemiology"
+    "text": "View interactive slides\nDownload PDF"
   }
 ]
