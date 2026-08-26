@@ -1,0 +1,9 @@
+# OS files
+.DS_Store
+
+# Quarto files
+.quarto/
+
+# Presentation files
+Introduction to Epidemiology.html
+Introduction to Epidemiology_files/

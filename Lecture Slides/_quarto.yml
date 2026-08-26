@@ -1,0 +1,15 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.qmd"
+
+website:
+  title: "APHS 20203 Lecture Slides"
+  search: false
+
+format:
+  html:
+    theme: cosmo
+    toc: false
