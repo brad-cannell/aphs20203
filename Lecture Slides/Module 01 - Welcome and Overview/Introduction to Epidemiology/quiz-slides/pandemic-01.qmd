@@ -1,0 +1,28 @@
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Lecture Slides/Module 01 - Welcome and Overview/Introduction to Epidemiology/quiz/quiz.yml
+     Rebuild: python3 _ai/tools/python/build_quiz_slides.py Lecture Slides/Module 01 - Welcome and Overview/Introduction to Epidemiology/quiz/quiz.yml -->
+
+::: {.quiz-prompt}
+Between 2019 and 2023, the SARS-CoV-2 virus infected more than 600 million people worldwide. In this situation, the SARS-CoV-2 virus was [a/an] ________.
+:::
+
+::: {.quiz-options}
+**A.** endemic
+
+**B.** epidemic
+
+**C.** pandemic
+:::
+
+::: {.participation}
+[Respond here](https://PollEv.com/multiple_choice_polls/xs8SYX3DRMgTGChyPmjEE/respond?q=pandemic-01)
+:::
+
+![](qr/pandemic-01.png){.qr .nostretch width=200}
+
+::: {.notes}
+Answer: C.
+A pandemic is an epidemic that spreads across countries or continents and affects a large number of people.
+Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous.
+If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard.
+:::

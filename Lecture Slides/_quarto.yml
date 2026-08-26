@@ -4,6 +4,8 @@ project:
   render:
     - index.qmd
     - "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.qmd"
+  resources:
+    - "Module 01 - Welcome and Overview/Introduction to Epidemiology/assets/tcu-logo.svg"
 
 website:
   title: "APHS 20203 Lecture Slides"

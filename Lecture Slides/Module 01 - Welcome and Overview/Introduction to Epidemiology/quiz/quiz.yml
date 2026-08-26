@@ -38,46 +38,53 @@ session:
     and record the counts on the whiteboard.
 
 questions:
-  - id: resilience-01
-    type: multiple_choice
-    prompt: Which statement best describes resilience in this context?
-    options:
-      - Absence of exposure to adversity
-      - Positive adaptation despite adversity
-      - Recovery of physical function only
-    correct: 2
-    explanation: Resilience is positive adaptation despite meaningful adversity.
-    presentation_mode: anonymous
-    reveal_distribution: true
-    reveal_correct_answer: after_discussion
-    participation_url: https://PollEv.com/multiple_choice_polls/HuAw5Q7pD1nyDg6Ws4KfV/respond
-
-  - id: incidence-prevalence-01
-    type: multiple_select
-    prompt: Which of the following would increase the prevalence of a disease?
-    options:
-      - An increase in incidence
-      - Improved survival without cure
-      - A new cure that returns people to full health
-      - In-migration of cases
-    correct: [1, 2, 4]
-    explanation: >-
-      Prevalence rises with new cases, longer duration of disease, and
-      in-migration of cases; a cure removes people from the prevalent pool.
-    presentation_mode: anonymous
-    reveal_distribution: true
-    reveal_correct_answer: after_discussion
-    participation_url: https://PollEv.com/multiple_choice_polls/mtUrYXSZnWazDv28sfZND/respond
-
-  - id: study-design-confidence-01
+  - id: epidemiology-01
     type: short_answer
-    prompt: >-
-      In one sentence, what is the biggest threat to validity in the study we
-      just reviewed?
+    prompt: What is Epidemiology?
+    explanation: The study of the distribution and determinants of health-related states or events (e.g. infectious disease) in specified (human) populations and the application of this study to control health problems
     presentation_mode: anonymous
-    reveal_distribution: false
-    reveal_correct_answer: never
-    fallback: >-
-      Ask two or three volunteers to answer aloud and write the themes on the
-      whiteboard.
-    participation_url: https://PollEv.com/free_text_polls/DFgzeDUYHnu6xmgRfM3DK/respond
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/free_text_polls/BxG1Ef5eUvvxfwILaxZs3/respond
+
+  - id: epidemic-01
+    type: multiple_choice
+    prompt: Ebola virus cases in parts of Africa exceed what is normally expected for that region. In this situation, the Ebola virus was [a/an] ________.
+    options:
+      - endemic
+      - epidemic
+      - pandemic
+    correct: 2
+    explanation: An epidemic is the occurrence of disease cases above what is normally expected in a population or region.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/IbKVVt4vgCRC64HyxiSYr/respond
+
+  - id: endemic-01
+    type: multiple_choice
+    prompt: Malaria is always present in Africa due to the presence of infected mosquitoes. In this situation, malaria is [a/an] ________.
+    options:
+      - endemic
+      - epidemic
+      - pandemic
+    correct: 1
+    explanation: An endemic disease is consistently present at an expected baseline level in a population or region.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/BeylIlOHiqqCwIu67t3vK/respond
+
+  - id: pandemic-01
+    type: multiple_choice
+    prompt: Between 2019 and 2023, the SARS-CoV-2 virus infected more than 600 million people worldwide. In this situation, the SARS-CoV-2 virus was [a/an] ________.
+    options:
+      - endemic
+      - epidemic
+      - pandemic
+    correct: 3
+    explanation: A pandemic is an epidemic that spreads across countries or continents and affects a large number of people.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/xs8SYX3DRMgTGChyPmjEE/respond

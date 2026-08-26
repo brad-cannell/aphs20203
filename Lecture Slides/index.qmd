@@ -8,4 +8,5 @@ Interactive slide decks for APHS 20203.
 
 ## Module 1: Welcome and Overview
 
-- [Introduction to Epidemiology](Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.qmd)
+- [View interactive slides](Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.qmd)
+- [Download PDF](Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.pdf)

@@ -1,0 +1,28 @@
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Lecture Slides/Module 01 - Welcome and Overview/Introduction to Epidemiology/quiz/quiz.yml
+     Rebuild: python3 _ai/tools/python/build_quiz_slides.py Lecture Slides/Module 01 - Welcome and Overview/Introduction to Epidemiology/quiz/quiz.yml -->
+
+::: {.quiz-prompt}
+Ebola virus cases in parts of Africa exceed what is normally expected for that region. In this situation, the Ebola virus was [a/an] ________.
+:::
+
+::: {.quiz-options}
+**A.** endemic
+
+**B.** epidemic
+
+**C.** pandemic
+:::
+
+::: {.participation}
+[Respond here](https://PollEv.com/multiple_choice_polls/IbKVVt4vgCRC64HyxiSYr/respond?q=epidemic-01)
+:::
+
+![](qr/epidemic-01.png){.qr .nostretch width=200}
+
+::: {.notes}
+Answer: B.
+An epidemic is the occurrence of disease cases above what is normally expected in a population or region.
+Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous.
+If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard.
+:::
