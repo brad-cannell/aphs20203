@@ -117,5 +117,845 @@
     "title": "APHS 20203: Epidemiology & Biostatistics",
     "section": "",
     "text": "View interactive slides\nDownload PDF"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#objectives",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#objectives",
+    "title": "Measures of Disease Occurrence",
+    "section": "Objectives",
+    "text": "Objectives\nBy the end of this week, students will be able to:\n\nDefine counts versus rates.\nDistinguish crude, specific, and adjusted rates.\nCompute and interpret prevalence and incidence, including cumulative incidence (CI) and incidence rate (IR).\nInterpret key mortality measures: crude death rate (CDR), cause-specific mortality rate (CSMR), case-fatality rate (CFR), and proportional mortality ratio (PMR)."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#measures-for-comparison",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#measures-for-comparison",
+    "title": "Measures of Disease Occurrence",
+    "section": "Measures for Comparison",
+    "text": "Measures for Comparison\nCounts and Rates"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#what-does-epidemiology-ask",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#what-does-epidemiology-ask",
+    "title": "Measures of Disease Occurrence",
+    "section": "What Does Epidemiology Ask?",
+    "text": "What Does Epidemiology Ask?\nAre exposure and outcome linked?\n\nExposure \\(\\longleftrightarrow\\) Outcome\n\nOpen-ended question: Describe a health issue you have heard about recently. What might be the exposure? What is the outcome?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#exposure",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#exposure",
+    "title": "Measures of Disease Occurrence",
+    "section": "Exposure",
+    "text": "Exposure\n\nWhat is the exposure?\nWho are the exposed?\nWhat are the exposure’s potential health effects?\n\nBeneficial or harmful?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#outcome",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#outcome",
+    "title": "Measures of Disease Occurrence",
+    "section": "Outcome",
+    "text": "Outcome\n\nWho is getting disease?\nWhere is disease occurring?\nWhen is disease occurring?\nHow do we measure disease frequency?\n\nWhat are the potential contributing factors?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#example-count-vs.-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#example-count-vs.-rate",
+    "title": "Measures of Disease Occurrence",
+    "section": "Example: Count vs. Rate",
+    "text": "Example: Count vs. Rate\n\n\n\n\n\n\n\n\n\n\n\nPassenger group\nNumber of passengers\nNumber of survivors\nSurvival rate\n\n\n\n\nFirst-class men\n\n57\n\n\n\nFirst-class women\n\n140\n\n\n\nFirst-class children\n\n5\n\n\n\nFirst-class total\n\n202\n\n\n\nSecond-class men\n\n14\n\n\n\nSecond-class women\n\n80\n\n\n\nSecond-class children\n\n24\n\n\n\nSecond-class total\n\n118\n\n\n\nThird-class men\n\n75\n\n\n\nThird-class women\n\n76\n\n\n\nThird-class children\n\n27\n\n\n\nThird-class total\n\n178\n\n\n\nTotal\n\n498\n\n\n\n\n\nIn terms of the physical space occupied by each class of passengers, first- and second-class cabins were much closer to the boat deck, where the lifeboats were located, than third-class cabins were.\n\n\nTable 1. Likelihood of survival based on class and gender. Raw data from Tokis (1999)."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#use-of-epidemiologic-measures",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#use-of-epidemiologic-measures",
+    "title": "Measures of Disease Occurrence",
+    "section": "Use of Epidemiologic Measures",
+    "text": "Use of Epidemiologic Measures\n\n\n\nCounts\nRates\n\n\n\n\nMagnitude: how much\nRisk: how likely\n\n\nSimple tally\nPopulation-based\n\n\nPlanning\nComparison"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#discussion-counts-vs.-rates",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#discussion-counts-vs.-rates",
+    "title": "Measures of Disease Occurrence",
+    "section": "Discussion: Counts vs. Rates",
+    "text": "Discussion: Counts vs. Rates\nThink of a real-world public health or health-related example.\n\nIn what situation would using a count be more appropriate?\nIn what situation would using a rate be more appropriate?\nDoes a bigger number always mean higher risk? Why or why not?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#crude-specific-and-adjusted-rates",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#crude-specific-and-adjusted-rates",
+    "title": "Measures of Disease Occurrence",
+    "section": "Crude, Specific, and Adjusted Rates",
+    "text": "Crude, Specific, and Adjusted Rates\n\nCrude rates: The big picture\nSpecific rates: Zooming in\nAdjusted rates: Fair comparisons"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#crude-rates-initial-comparison",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#crude-rates-initial-comparison",
+    "title": "Measures of Disease Occurrence",
+    "section": "Crude Rates: Initial Comparison",
+    "text": "Crude Rates: Initial Comparison\nWhat are they?\n\nTotal cases divided by the total population in a given time period\n\nWhat are they good for?\n\nQuick, overall comparisons between populations\n\nKey limitation\n\nCrude rates do not account for population differences such as age."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#crude-rates-example",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#crude-rates-example",
+    "title": "Measures of Disease Occurrence",
+    "section": "Crude Rates Example",
+    "text": "Crude Rates Example\n\n\n\n\n\n\n\n\n\n\nAge group\nYoungtown population\nOldtown population\nYoungtown deaths\nOldtown deaths\n\n\n\n\n10-20\n20,000\n5,000\n200\n30\n\n\n20-30\n40,000\n5,000\n150\n20\n\n\n30-40\n15,000\n10,000\n50\n40\n\n\n40-50\n10,000\n10,000\n20\n20\n\n\n50-60\n5,000\n15,000\n15\n90\n\n\n60-70\n5,000\n25,000\n10\n150\n\n\n70-80\n3,500\n20,000\n20\n250\n\n\n80-90\n1,500\n10,000\n35\n200\n\n\nTotal\n100,000\n100,000\n500\n800\n\n\n\n\\[\\text{Crude rate (Youngtown)}=\\frac{500}{100{,}000}\\times 100{,}000=500\\]\nWhat stands out about the age distribution in each town?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#discussion",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#discussion",
+    "title": "Measures of Disease Occurrence",
+    "section": "Discussion",
+    "text": "Discussion\nScenario: Consider two towns with the same population but different death rates in 2022:\n\nYoungtown: 500 deaths per 100,000 people\nOldtown: 800 deaths per 100,000 people\n\nQuestions:\n\nDoes Oldtown’s higher crude death rate mean it is less healthy than Youngtown?\nWhat population characteristic might explain this difference?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#specific-rates-zooming-into-subgroups",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#specific-rates-zooming-into-subgroups",
+    "title": "Measures of Disease Occurrence",
+    "section": "Specific Rates: Zooming into Subgroups",
+    "text": "Specific Rates: Zooming into Subgroups\nWhat are they?\n\nRates calculated for a specific subgroup, such as age, sex, or occupation\n\nWhy use them?\n\nTo understand who is most affected\nTo identify differences hidden in crude rates\n\nCommon examples\n\nAge-specific death rate (ASDR)\nSex-specific disease rate"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#age-specific-death-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#age-specific-death-rate",
+    "title": "Measures of Disease Occurrence",
+    "section": "Age-Specific Death Rate",
+    "text": "Age-Specific Death Rate\n\n\n\n\n\n\n\n\n\n\n\n\nAge group\nYT population\nOT population\nYT deaths\nOT deaths\nYT ASDR\nOT ASDR\n\n\n\n\n10-20\n20,000\n5,000\n200\n30\n1,000\n600\n\n\n20-30\n40,000\n5,000\n150\n20\n375\n400\n\n\n30-40\n15,000\n10,000\n50\n40\n333\n400\n\n\n40-50\n10,000\n10,000\n20\n20\n200\n200\n\n\n50-60\n5,000\n15,000\n15\n90\n300\n600\n\n\n60-70\n5,000\n25,000\n10\n150\n200\n600\n\n\n70-80\n3,500\n20,000\n20\n250\n571\n1,250\n\n\n80-90\n1,500\n10,000\n35\n200\n2,333\n2,000\n\n\nCrude total\n100,000\n100,000\n500\n800\n500\n800\n\n\n\n\\[\\text{ASDR}_{\\text{YT, ages 10-20}}=\\frac{200}{20{,}000}\\times 100{,}000=1{,}000\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#why-cant-we-stop-at-age-specific-rates",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#why-cant-we-stop-at-age-specific-rates",
+    "title": "Measures of Disease Occurrence",
+    "section": "Why Can’t We Stop at Age-Specific Rates?",
+    "text": "Why Can’t We Stop at Age-Specific Rates?\n\nAge-specific rates show where differences occur.\nComparing many age groups across large populations is messy.\nWe still want one number to compare populations.\nStandardized or adjusted rates answer: What would the rate be if populations were structured the same way?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#standardized-rates-make-fair-comparisons",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#standardized-rates-make-fair-comparisons",
+    "title": "Measures of Disease Occurrence",
+    "section": "Standardized Rates Make Fair Comparisons",
+    "text": "Standardized Rates Make Fair Comparisons\nWhat are they?\n\nRates adjusted to account for differences in population structure, such as age\n\nWhy use them?\n\nTo compare populations fairly\nTo remove the effect of different age distributions\n\nHow are they created?\n\nApply each population’s specific rates to a common standard population."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#standardize-population-structure",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#standardize-population-structure",
+    "title": "Measures of Disease Occurrence",
+    "section": "Standardize Population Structure",
+    "text": "Standardize Population Structure\n\nChoose a standard population age distribution.\nUse the standard proportions as weights.\nApply the weights to each population’s age-specific rates.\nThe result is an adjusted rate, as if the populations had the same age structure."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#age-adjusted-death-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#age-adjusted-death-rate",
+    "title": "Measures of Disease Occurrence",
+    "section": "Age-Adjusted Death Rate",
+    "text": "Age-Adjusted Death Rate\n\\[\\text{Age-adjusted death rate}=\\sum\\left(\\text{ASDR}\\times\\text{standard proportion}\\right)\\]\n\n\n\nAge\n1940 proportion\n1970 proportion\n2000 proportion\n\n\n\n\nUnder 1 year\n0.015343\n0.017151\n0.013818\n\n\n1-4 years\n0.064718\n0.067265\n0.055317\n\n\n5-14 years\n0.170355\n0.200506\n0.145565\n\n\n15-24 years\n0.181677\n0.174406\n0.138646\n\n\n25-34 years\n0.162066\n0.122569\n0.135573\n\n\n35-44 years\n0.139237\n0.113614\n0.162613"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#disease-occurrence",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#disease-occurrence",
+    "title": "Measures of Disease Occurrence",
+    "section": "Disease Occurrence",
+    "text": "Disease Occurrence\nPrevalence and Incidence"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#measuring-disease-occurrence",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#measuring-disease-occurrence",
+    "title": "Measures of Disease Occurrence",
+    "section": "Measuring Disease Occurrence",
+    "text": "Measuring Disease Occurrence\nTwo core measures answer different epidemiologic questions:\n\nPrevalence: How widespread are existing cases?\nIncidence: How often do new cases occur?\n\nBoth can be crude or specific rates."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-the-snapshot",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-the-snapshot",
+    "title": "Measures of Disease Occurrence",
+    "section": "Prevalence: The Snapshot",
+    "text": "Prevalence: The Snapshot\n\\[P=\\frac{C}{N}\\]\nWhat is prevalence?\n\nThe proportion with a condition at a point or during a period in time\nIncludes existing cases\nRanges from 0% to 100%\n\nTypes of prevalence\n\nPoint prevalence: Existing cases at a point in time\nPeriod prevalence: Anyone who was a case at any time during the period"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-examples",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-examples",
+    "title": "Measures of Disease Occurrence",
+    "section": "Prevalence Examples",
+    "text": "Prevalence Examples\n\n\nPoint prevalence\nPrevalence of colds in this class as of today:\n\nNumber of cases: 3\nClass population: 100\nPrevalence: \\(3/100\\)\nPercentage: \\(3/100\\times100\\%=3\\%\\)\n\n\nPeriod prevalence\nEye examination survey, 1979-1981:\n\n310 people had cataracts.\n2,477 people were surveyed.\nPrevalence: \\(310/2{,}477=0.125\\)\nPercentage: \\(12.5\\%\\)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#use-of-prevalence-data",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#use-of-prevalence-data",
+    "title": "Measures of Disease Occurrence",
+    "section": "Use of Prevalence Data",
+    "text": "Use of Prevalence Data\nWhat is prevalence useful for?\n\nDescribing current burden\nPlanning healthcare services\nMonitoring chronic conditions\n\nLimitation\n\nPrevalence does not measure the risk of developing disease."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#epi-group-presentation-prep-1",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#epi-group-presentation-prep-1",
+    "title": "Measures of Disease Occurrence",
+    "section": "Epi Group Presentation Prep 1",
+    "text": "Epi Group Presentation Prep 1"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-new-cases-over-time",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-new-cases-over-time",
+    "title": "Measures of Disease Occurrence",
+    "section": "Incidence: New Cases Over Time",
+    "text": "Incidence: New Cases Over Time\nWhat is incidence?\n\nMeasures new cases only\nFocuses on people at risk\nCaptures disease onset\n\nTwo forms of incidence\n\nCumulative incidence (CI): Risk, expressed as a proportion, over a time period\nIncidence rate (IR): Rate of occurrence that accounts for person-time"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#cumulative-incidence",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#cumulative-incidence",
+    "title": "Measures of Disease Occurrence",
+    "section": "Cumulative Incidence",
+    "text": "Cumulative Incidence\nWhat it measures: The risk, or proportion, of developing a disease over a specified time period\n\nNumerator: Number of new cases during the time period\nDenominator: Population at risk at the start of the period\n\nKey distinction from prevalence\n\nCumulative incidence includes new cases only and measures risk.\nPrevalence includes existing cases and measures burden.\n\nLimitation: Cumulative incidence does not adjust for people who enter late or leave early."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#example-cumulative-incidence",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#example-cumulative-incidence",
+    "title": "Measures of Disease Occurrence",
+    "section": "Example: Cumulative Incidence",
+    "text": "Example: Cumulative Incidence\nScenario\n\nFlu season: Jan-Apr\n100 elementary students healthy on Jan 1 and at risk\nSame setting: crowded classrooms\nAll followed for 4 months\n10 students get flu\n\n\\[CI=\\frac{\\text{new cases}}{\\text{at risk at start}}=\\frac{10}{100}=10\\%\\]\nInterpretation: 10% developed flu during Jan-Apr."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#when-follow-up-time-matters",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#when-follow-up-time-matters",
+    "title": "Measures of Disease Occurrence",
+    "section": "When Follow-Up Time Matters",
+    "text": "When Follow-Up Time Matters\nWhen CI is not appropriate\n\nSome people enroll late, some leave early, and absences vary.\n\nWhy CI fails here\n\nDifferent follow-up time means different time exposed, or time at risk.\nPeople do not share the same starting point or exposure window.\n\nUse instead\n\nUse the incidence rate based on person-time when follow-up varies."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-rate-tracks-new-cases-over-time",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-rate-tracks-new-cases-over-time",
+    "title": "Measures of Disease Occurrence",
+    "section": "Incidence Rate Tracks New Cases Over Time",
+    "text": "Incidence Rate Tracks New Cases Over Time\n\\[IR=\\frac{N}{PT}\\]\n\nMeasures the speed of new cases\nUses person-time (PT): the total time each person is at risk and observed\nExample: Person A contributes 1 year, Person B contributes 2 years, and Person C contributes 2 years, for a total of 5 person-years.\nStop counting person-time when disease occurs, a person is lost to follow-up, or the study ends."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-rate-example",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-rate-example",
+    "title": "Measures of Disease Occurrence",
+    "section": "Incidence Rate Example",
+    "text": "Incidence Rate Example\n\n\n\nNew cases: 3\nTotal person-time: 102 person-years\n\\(IR=3/102=0.029\\) per person-year\n\\(IR=2.9\\) per 100 person-years\n\nInterpretation: Over the study period, the disease occurred at a rate of 2.9 new cases per 100 person-years.\nIn plain language: For every 100 person-years of follow-up, about 3 new cases were observed."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#pain-relief-study-follow-up-data",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#pain-relief-study-follow-up-data",
+    "title": "Measures of Disease Occurrence",
+    "section": "Pain Relief Study: Follow-Up Data",
+    "text": "Pain Relief Study: Follow-Up Data\nStudy setup\n\n10 patients receive the new drug and 10 receive the old drug.\nPatients are observed for 10 hours.\nX indicates pain relief; O indicates no relief by hour 10.\n\n\n\n\n\n\n\n\n\n\nDrug\nRelief times, hours\nNo relief by hour 10\nTotal person-hours\n\n\n\n\nNew\n1, 1, 1, 1, 2, 3\n4\n\\(4(1)+2+3+4(10)=49\\)\n\n\nOld\n7, 7, 7, 7, 8, 9\n4\n\\(4(7)+8+9+4(10)=85\\)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#pain-relief-study-questions",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#pain-relief-study-questions",
+    "title": "Measures of Disease Occurrence",
+    "section": "Pain Relief Study: Questions",
+    "text": "Pain Relief Study: Questions\n\nWhich drug provides faster relief? Answer in one sentence.\nWhat is the cumulative incidence of relief by 10 hours for each drug?\nWhat is the incidence rate of relief per 100 person-hours for each drug?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#pain-relief-study-answer",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#pain-relief-study-answer",
+    "title": "Measures of Disease Occurrence",
+    "section": "Pain Relief Study: Answer",
+    "text": "Pain Relief Study: Answer\nCumulative incidence by 10 hours\n\nNew drug: \\(6/10=60\\%\\)\nOld drug: \\(6/10=60\\%\\)\n\nIncidence rate\n\nNew drug: \\(6/49=12.2\\) per 100 person-hours\nOld drug: \\(6/85=7.0\\) per 100 person-hours\n\nConclusion: The new drug is faster because it has a higher incidence rate and less waiting time, even though cumulative incidence is the same. The outcome is beneficial."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#use-of-incidence-data",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#use-of-incidence-data",
+    "title": "Measures of Disease Occurrence",
+    "section": "Use of Incidence Data",
+    "text": "Use of Incidence Data\nWhy incidence matters\n\nMeasures risk\nTracks outbreaks\nEvaluates interventions\nComplements prevalence"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#how-are-prevalence-and-incidence-related",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#how-are-prevalence-and-incidence-related",
+    "title": "Measures of Disease Occurrence",
+    "section": "How Are Prevalence and Incidence Related?",
+    "text": "How Are Prevalence and Incidence Related?\nPrevalence depends on:\n\nIncidence: How many new cases occur\nDuration: How long people remain cases\n\nIn a stable population, the rough rule is:\n\\[P\\approx I\\times D\\]\n\nHigher incidence leads to higher prevalence.\nLonger duration, such as better survival, leads to higher prevalence."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#factors-affecting-prevalence",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#factors-affecting-prevalence",
+    "title": "Measures of Disease Occurrence",
+    "section": "Factors Affecting Prevalence",
+    "text": "Factors Affecting Prevalence\n\n\nSource: Beaglehole and Kjellstrom (1993), p. 17."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#mortality",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#mortality",
+    "title": "Measures of Disease Occurrence",
+    "section": "Mortality",
+    "text": "Mortality\nDeath Rates"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#mortality-overview",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#mortality-overview",
+    "title": "Measures of Disease Occurrence",
+    "section": "Mortality: Overview",
+    "text": "Mortality: Overview\nMortality rate: The frequency of death in a population over time\nMortality rates are used to:\n\nCompare populations\nTrack trends\nIdentify leading causes of death"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#crude-death-rate-the-simplest-measure",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#crude-death-rate-the-simplest-measure",
+    "title": "Measures of Disease Occurrence",
+    "section": "Crude Death Rate: The Simplest Measure",
+    "text": "Crude Death Rate: The Simplest Measure\nDefinition\n\nCrude death rate (CDR) equals all deaths in a time period divided by the total population.\nExpress CDR per 1,000 or 100,000 people.\nUse the mid-year population as the reference population denominator.\n\n\\[CDR=\\frac{\\text{number of deaths in a given year}}{\\text{reference population at mid-year}}\\times100{,}000\\]\nKey point: CDR is a quick summary, but it is affected by age and sex structure.\nSample calculation for the United States in 2020:\n\\[\\frac{3{,}383{,}729}{331{,}449{,}520}\\times100{,}000=1{,}020\\text{ per }100{,}000\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#specific-or-adjusted-death-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#specific-or-adjusted-death-rate",
+    "title": "Measures of Disease Occurrence",
+    "section": "Specific or Adjusted Death Rate",
+    "text": "Specific or Adjusted Death Rate\nSpecific death rate, such as age- or sex-specific\n\nCompare within the same subgroup.\nExample: deaths per 100,000 among people age 65 and older\n\nAdjusted or standardized death rate\n\nCombines age-specific rates using a standard population.\nCompares populations as if they had the same age structure.\n\nQuick discussion: Two cities have the same crude death rate, but one city is older. What measure would you use next - specific or adjusted - and why?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#cause-specific-mortality-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#cause-specific-mortality-rate",
+    "title": "Measures of Disease Occurrence",
+    "section": "Cause-Specific Mortality Rate",
+    "text": "Cause-Specific Mortality Rate\nDefinition\n\nDeaths from a specific cause divided by the population\nUsed to rank or compare leading causes of death\n\n\\[CSMR=\\frac{\\text{deaths from cause X}}{\\text{mid-year population}}\\times100{,}000\\]\nSample calculation: Disease X in City A, 2023\n\nDeaths from Disease X: 150\nMid-year population: 500,000\n\\(CSMR=150/500{,}000\\times100{,}000=30\\) deaths per 100,000"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#case-fatality-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#case-fatality-rate",
+    "title": "Measures of Disease Occurrence",
+    "section": "Case-Fatality Rate",
+    "text": "Case-Fatality Rate\nDefinition\n\nDeaths among diagnosed cases divided by total cases during a period\nUsed to measure severity: the probability of death among cases\n\n\\[CFR=\\frac{\\text{deaths among cases}}{\\text{total cases}}\\times100\\%\\]\nSample calculation: Disease X in City A, 2023\n\nDiagnosed cases: 1,500\nDeaths among cases: 150\n\\(CFR=150/1{,}500\\times100\\%=10\\%\\)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#proportional-mortality-ratio",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#proportional-mortality-ratio",
+    "title": "Measures of Disease Occurrence",
+    "section": "Proportional Mortality Ratio",
+    "text": "Proportional Mortality Ratio\nDefinition\n\nDeaths from cause X divided by all deaths in the same period\nAnswers: How important is this cause among all deaths?\nPMR is not a risk rate because it has no population denominator.\n\n\\[PMR=\\frac{\\text{deaths from cause X}}{\\text{all deaths}}\\times100\\%\\]\nSample calculation for the United States:\n\nHeart disease deaths in 2013: 611,105\nAll-cause deaths in 2013: 2,596,993\n\\(PMR=611{,}105/2{,}596{,}993\\times100\\%=23.5\\%\\)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#mortality-comparison-table",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#mortality-comparison-table",
+    "title": "Measures of Disease Occurrence",
+    "section": "Mortality Comparison Table",
+    "text": "Mortality Comparison Table\n\n\n\n\n\n\n\n\n\n\nMeasure\nNumerator\nDenominator\nBest for\nCommon mistake\n\n\n\n\nCDR\nAll deaths\nTotal population\nOverall comparison\nIgnoring age structure\n\n\nCSMR\nDeaths from cause X\nTotal population\nLeading causes\nConfusing with PMR\n\n\nCFR\nDeaths among cases\nTotal cases\nSeverity\nUsing a population denominator\n\n\nPMR%\nDeaths from cause X\nAll deaths\nCause contribution\nTreating as risk"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#browse-of-mortality-measures",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#browse-of-mortality-measures",
+    "title": "Measures of Disease Occurrence",
+    "section": "Browse of Mortality Measures",
+    "text": "Browse of Mortality Measures\n\n\nGeneral population\n\nAnnual death rate\nCrude death rates\nCause-specific death rates\nAdjusted death rates\nCase-fatality rate\nStandardized mortality ratio\nProportional mortality ratio (PMR%)\nMortality crossover and mortality time trends\n\n\nMaternal and infant population\n\nMaternal mortality rate\nInfant mortality rate\nFetal mortality\n\nFetal death rate\nLate fetal death rate\n\nPerinatal mortality rate\nBirth rate, such as crude birth rate\nGeneral fertility rate"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#key-takeaways-counts-and-rates",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#key-takeaways-counts-and-rates",
+    "title": "Measures of Disease Occurrence",
+    "section": "Key Takeaways: Counts and Rates",
+    "text": "Key Takeaways: Counts and Rates\n\nCounts tell us how many events occurred.\nRates describe events relative to a population and often time.\nA crude rate is an overall snapshot.\nA specific rate describes a subgroup, such as an age or sex group.\nAn adjusted rate supports fair comparisons across different population structures."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#key-takeaways-prevalence-and-incidence",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#key-takeaways-prevalence-and-incidence",
+    "title": "Measures of Disease Occurrence",
+    "section": "Key Takeaways: Prevalence and Incidence",
+    "text": "Key Takeaways: Prevalence and Incidence\n\nPrevalence measures existing cases and burden.\nIncidence measures new cases and risk.\nCumulative incidence: What proportion became cases?\nIncidence rate: How fast are new cases occurring? It uses person-time.\nIn a stable setting, prevalence depends on incidence and duration: \\(P\\approx I\\times D\\)."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#key-takeaways-mortality",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#key-takeaways-mortality",
+    "title": "Measures of Disease Occurrence",
+    "section": "Key Takeaways: Mortality",
+    "text": "Key Takeaways: Mortality\n\nCDR: Overall deaths in a population; affected by age and sex structure\nCSMR: Deaths from a specific cause in the population\nCFR: Deaths among cases; a measure of severity\nPMR%: Share of deaths due to a cause; not a measure of risk\nUse specific or adjusted death rates when populations differ in structure."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#epi-group-presentation-prep-1-1",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#epi-group-presentation-prep-1-1",
+    "title": "Measures of Disease Occurrence",
+    "section": "Epi Group Presentation Prep 1",
+    "text": "Epi Group Presentation Prep 1"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#references",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#references",
+    "title": "Measures of Disease Occurrence",
+    "section": "References",
+    "text": "References\n\n\nBeaglehole, Robert, and Tord Kjellstrom. 1993. Basic Epidemiology. World Health Organization.\n\n\nTokis, Sandra L. 1999. Titanic: A Statistical Exploration."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#overview-of-mortality-measures",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence.html#overview-of-mortality-measures",
+    "title": "Measures of Disease Occurrence",
+    "section": "Overview of Mortality Measures",
+    "text": "Overview of Mortality Measures\n\n\nGeneral population\n\nAnnual death rate\nCrude death rates\nCause-specific death rates\nAdjusted death rates\nCase-fatality rate\nStandardized mortality ratio\nProportional mortality ratio (PMR%)\nMortality crossover and mortality time trends\n\n\nMaternal and infant population\n\nMaternal mortality rate\nInfant mortality rate\nFetal mortality\n\nFetal death rate\nLate fetal death rate\n\nPerinatal mortality rate\nBirth rate, such as crude birth rate\nGeneral fertility rate"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#three-parts-of-epidemiologic-work",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#three-parts-of-epidemiologic-work",
+    "title": "Measures of Disease Occurrence",
+    "section": "Three Parts of Epidemiologic Work",
+    "text": "Three Parts of Epidemiologic Work\n\n\n\nMEASUREMENT\nObserve and assign values.\n\n\nUNCERTAINTY\nAsk what remains unknown.\n\n\nSTUDY DESIGN\nChoose how evidence will be generated."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#epidemiology-begins-with-occurrence-and-distribution",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#epidemiology-begins-with-occurrence-and-distribution",
+    "title": "Measures of Disease Occurrence",
+    "section": "Epidemiology Begins With Occurrence and Distribution",
+    "text": "Epidemiology Begins With Occurrence and Distribution\n\n\n“The study of the occurrence and distribution of health-related states or events in specified populations, including the study of the determinants influencing such states, and the application of this knowledge to control the health problems.”\n\n\nSource: (Porta 2008)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#measurement-makes-characteristics-observable",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#measurement-makes-characteristics-observable",
+    "title": "Measures of Disease Occurrence",
+    "section": "Measurement Makes Characteristics Observable",
+    "text": "Measurement Makes Characteristics Observable\n\n\n\nMEASUREMENT\n\nObserve and assign values to relevant characteristics.\nLook for patterns among those values.\n\n\n\n\n“The study of the occurrence and distribution of health-related states or events in specified populations, including the study of the determinants influencing such states, and the application of this knowledge to control the health problems.”\n\n\n\n\nSource: (Porta 2008)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#what-does-it-mean-to-observe",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#what-does-it-mean-to-observe",
+    "title": "Measures of Disease Occurrence",
+    "section": "What Does It Mean to Observe?",
+    "text": "What Does It Mean to Observe?\n\n\n\nMEASUREMENT\nObserve and assign values to relevant characteristics.\n\n\nOBSERVE\n“To be aware of” or “have knowledge about.”"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#measurement-produces-data-statistics-finds-patterns",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#measurement-produces-data-statistics-finds-patterns",
+    "title": "Measures of Disease Occurrence",
+    "section": "Measurement Produces Data; Statistics Finds Patterns",
+    "text": "Measurement Produces Data; Statistics Finds Patterns\n\n\n\nMEASUREMENT\nObserve characteristics.\n\n\nDATA\n\n\n\nX\nY\nZ\n\n\n\n\n1\nA\n1\n\n\n2\nB\n0\n\n\n3\nC\n1\n\n\n\n\n\nSTATISTICS\nLook for patterns among the values."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#description-prediction-and-causation",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#description-prediction-and-causation",
+    "title": "Measures of Disease Occurrence",
+    "section": "Description, Prediction, and Causation",
+    "text": "Description, Prediction, and Causation\n\n\n\nDESCRIPTION\n\n\nPREDICTION\n\n\nCAUSATION"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#description-does-not-necessarily-seek-associations",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#description-does-not-necessarily-seek-associations",
+    "title": "Measures of Disease Occurrence",
+    "section": "Description Does Not Necessarily Seek Associations",
+    "text": "Description Does Not Necessarily Seek Associations\n\n\nDescription examines distributions of single variables: middle, spread, shape, count, and proportion.\nIt supports resource management and planning.\nExamples:\n\nHow many ventilators are available in Texas?\nWhat is the average age of people living in Florida?\nHow much time elapses, on average, between exposure to a pathogen and the occurrence of disease symptoms?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#description-can-also-compare-distributions",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#description-can-also-compare-distributions",
+    "title": "Measures of Disease Occurrence",
+    "section": "Description Can Also Compare Distributions",
+    "text": "Description Can Also Compare Distributions\n\n\nSometimes description does look for associations.\nIt may compare distributions of single variables within levels of another variable.\nExamples:\n\nAre more ventilators available in Texas or New York?\nAre people older, on average, in Florida or Pennsylvania?\nIs symptom onset quicker, on average, for cholera or E. coli?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#measures-of-occurrence-support-description",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#measures-of-occurrence-support-description",
+    "title": "Measures of Disease Occurrence",
+    "section": "Measures of Occurrence Support Description",
+    "text": "Measures of Occurrence Support Description\n\n\nCounts\nIncidence\nPrevalence\nOdds\n\nThese measures can be useful on their own and for hypothesis generation."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#sources-of-uncertainty-few-checklists",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#sources-of-uncertainty-few-checklists",
+    "title": "Measures of Disease Occurrence",
+    "section": "Sources of Uncertainty: Few Checklists",
+    "text": "Sources of Uncertainty: Few Checklists\n\n\nFew checklists"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#sources-of-uncertainty-add-statistical-uncertainty",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#sources-of-uncertainty-add-statistical-uncertainty",
+    "title": "Measures of Disease Occurrence",
+    "section": "Sources of Uncertainty: Add Statistical Uncertainty",
+    "text": "Sources of Uncertainty: Add Statistical Uncertainty\n\n\nFew checklists\nStatistical uncertainty"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#sources-of-uncertainty-add-causal-uncertainty",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#sources-of-uncertainty-add-causal-uncertainty",
+    "title": "Measures of Disease Occurrence",
+    "section": "Sources of Uncertainty: Add Causal Uncertainty",
+    "text": "Sources of Uncertainty: Add Causal Uncertainty\n\n\nFew checklists\nStatistical uncertainty\nCausal uncertainty"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#occurrence-is-defined-within-populations",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#occurrence-is-defined-within-populations",
+    "title": "Measures of Disease Occurrence",
+    "section": "Occurrence Is Defined Within Populations",
+    "text": "Occurrence Is Defined Within Populations\n\n\n“The study of the occurrence and distribution of health-related states or events in specified populations, including the study of the determinants influencing such states, and the application of this knowledge to control the health problems.”\n\n\nSource: (Porta 2008)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#population",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#population",
+    "title": "Measures of Disease Occurrence",
+    "section": "Population",
+    "text": "Population\n\n\n\n“The simplest definition of a population is a group of people who share characteristics or meet criteria that define membership in the population.”\n\n\n\nSource: (Lash et al. 2021)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#a-population-also-has-a-time-period",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#a-population-also-has-a-time-period",
+    "title": "Measures of Disease Occurrence",
+    "section": "A Population Also Has a Time Period",
+    "text": "A Population Also Has a Time Period\n\n\n\n“The simplest definition of a population is a group of people during a defined time period who share characteristics or meet criteria that define membership in the population.”\n\n\n\nSource: (Lash et al. 2021)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#closed-and-open-populations",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#closed-and-open-populations",
+    "title": "Measures of Disease Occurrence",
+    "section": "Closed and Open Populations",
+    "text": "Closed and Open Populations\n\n\n\nCLOSED POPULATION\n\nAfter the population is defined, it does not add new members over time.\nIt loses members only to death.\n\n\n\nOPEN POPULATION\n\nIt may gain members through birth or as people meet the membership definition.\nIt loses members as people stop meeting the criteria or die.\n\n\n\n\nSource: (Lash et al. 2021)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#closed-vs.-open-populations-calendar-time",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#closed-vs.-open-populations-calendar-time",
+    "title": "Measures of Disease Occurrence",
+    "section": "Closed vs. Open Populations: Calendar Time",
+    "text": "Closed vs. Open Populations: Calendar Time\n\n\n\n\nPerson\nEnters\nObserved through\nCalendar-time experience\n\n\n\n\n1\n9/1\n9/28\nFour weeks\n\n\n2\n9/7\n9/28\nThree weeks\n\n\n3\n9/14\n9/28\nTwo weeks\n\n\n4\n9/21\n9/28\nOne week"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#closed-vs.-open-populations-event-time",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#closed-vs.-open-populations-event-time",
+    "title": "Measures of Disease Occurrence",
+    "section": "Closed vs. Open Populations: Event Time",
+    "text": "Closed vs. Open Populations: Event Time\n\nAligning each person at entry changes the time scale from calendar time to event time.\n\n\n\nPerson\nEvent-time start\nObserved through\n\n\n\n\n1\n0\n4\n\n\n2\n0\n3\n\n\n3\n0\n2\n\n\n4\n0\n1"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#what-happens-beyond-the-observed-event-time",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#what-happens-beyond-the-observed-event-time",
+    "title": "Measures of Disease Occurrence",
+    "section": "What Happens Beyond the Observed Event Time?",
+    "text": "What Happens Beyond the Observed Event Time?\n\n\n\n\n\nPerson\nObserved event time\nAfter observation ends\n\n\n\n\n1\n0–4\n—\n\n\n2\n0–2\n?\n\n\n3\n0–2\n—\n\n\n4\n0–1\n—"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#examples-of-closed-and-open-populations",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#examples-of-closed-and-open-populations",
+    "title": "Measures of Disease Occurrence",
+    "section": "Examples of Closed and Open Populations",
+    "text": "Examples of Closed and Open Populations\n\n\nCurrently enrolled in Epidemiology III: open population\nEver enrolled in Epidemiology III as of today: closed population\nResident of Texas: open population\nPeople aged 65 or older as of today: closed population\nPeople aged 20 to 30 as of today: open population"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#source-and-target-populations",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#source-and-target-populations",
+    "title": "Measures of Disease Occurrence",
+    "section": "Source and Target Populations",
+    "text": "Source and Target Populations\n\nSource population: The population from which persons will be sampled and included in a measurement of disease frequency.\n\nThe source population of the original Framingham Heart Study included men and women aged 30 to 62 who were residents of Framingham, Massachusetts, in 1948.\n\nTarget population: The group of people about which the scientific or public-health question asks and for whom the disease-frequency information will be relevant, we hope.\n\nInformation about cardiac-disease risk factors from the Framingham Heart Study contributed to a nearly 75% decline in cardiovascular-disease mortality in most industrialized societies.\n\n\nSources: (Lash et al. 2021; Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#study-population-and-sample",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#study-population-and-sample",
+    "title": "Measures of Disease Occurrence",
+    "section": "Study Population and Sample",
+    "text": "Study Population and Sample\n\nStudy population: The subset, up to a complete census, of the source population whose experience is included in a measurement of disease frequency.\n\nIn the Framingham Heart Study, not everyone eligible was invited and not everyone invited agreed. Those who were invited, agreed, and were free of prevalent cardiovascular disease constituted the study population.\n\nSample: A selected subset of a population. A sample may be random or nonrandom and representative or nonrepresentative.\n\nSources: (Lash et al. 2021; Porta 2008)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#cohorts",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#cohorts",
+    "title": "Measures of Disease Occurrence",
+    "section": "Cohorts",
+    "text": "Cohorts\n\n\nA cohort is a group of persons whose membership is defined permanently, or a population in which satisfying a set of defining events makes membership permanent.\nThe term is often used as a synonym for “sample” in a cohort study.\nEvery cohort member is enumerated: known or listed. This is not necessarily true of a closed population.\n\n\nSource: (Lash et al. 2021)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#measures-arise-from-observations-and-experiments",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#measures-arise-from-observations-and-experiments",
+    "title": "Measures of Disease Occurrence",
+    "section": "Measures Arise From Observations and Experiments",
+    "text": "Measures Arise From Observations and Experiments\n\n\n\n\n\n\n\n\n\nMeasures\nDesign types\nTypical evidential position\n\n\n\n\nObservations\nCase descriptions; ecological; cross-sectional; case-control; cohort\nTypically less convincing\n\n\nExperiments\nNon-randomized; randomized\nTypically more convincing"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#terminology-recap-population-types",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#terminology-recap-population-types",
+    "title": "Measures of Disease Occurrence",
+    "section": "Terminology Recap: Population Types",
+    "text": "Terminology Recap: Population Types\n\n\n\n\n\n\n\n\n\nTerm\nDefinition\nExample\n\n\n\n\nPopulation\nA group of people during a defined time period who share characteristics or meet membership criteria.\nThe population of the United States.\n\n\nClosed population\nAfter the population is defined, it adds no new members and loses members only to death.\nPeople who had a flu vaccine in 2022.\n\n\nOpen population\nDuring a defined time frame, it gains members through birth or newly met criteria and/or loses members when criteria are no longer met or through loss to follow-up.\nPeople who have the flu."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#terminology-recap-source-and-target-populations",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#terminology-recap-source-and-target-populations",
+    "title": "Measures of Disease Occurrence",
+    "section": "Terminology Recap: Source and Target Populations",
+    "text": "Terminology Recap: Source and Target Populations\n\n\n\n\n\n\n\n\n\nTerm\nDefinition\nExample\n\n\n\n\nSource population\nThe population from which persons will be sampled and included in a measurement of disease frequency.\nMen and women aged 30 to 62 who lived in Framingham, Massachusetts, in 1948.\n\n\nTarget population\nThe group addressed by the scientific or public-health question and for whom the disease-frequency information will be relevant, we hope.\nIndustrialized societies to which Framingham findings about cardiac-disease risk factors were applied."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#terminology-recap-study-population-and-sample",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#terminology-recap-study-population-and-sample",
+    "title": "Measures of Disease Occurrence",
+    "section": "Terminology Recap: Study Population and Sample",
+    "text": "Terminology Recap: Study Population and Sample\n\n\n\n\n\n\n\n\n\nTerm\nDefinition\nExample\n\n\n\n\nStudy population\nThe subset, up to a census, of the source population whose experience is included in the measurement.\nFramingham invitees who agreed to participate and were free of prevalent cardiovascular disease.\n\n\nSample\nA selected subset of a population; it may be random or nonrandom and representative or nonrepresentative.\nAnother, probably more common, term for study population."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#terminology-recap-cohort",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#terminology-recap-cohort",
+    "title": "Measures of Disease Occurrence",
+    "section": "Terminology Recap: Cohort",
+    "text": "Terminology Recap: Cohort\n\n\n\n\n\n\n\n\n\nTerm\nDefinition\nExample\n\n\n\n\nCohort\nA group whose membership is permanent once a defining set of events is satisfied. A cohort may be open or closed and is often used as a synonym for “sample” in a cohort study.\nSimilar to a population, except every cohort member is enumerated: known or listed."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#counts-n-events-in-a-population",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#counts-n-events-in-a-population",
+    "title": "Measures of Disease Occurrence",
+    "section": "Counts (n): Events in a Population",
+    "text": "Counts (n): Events in a Population\n\n\n\n\nThe population contains people with the event and people without the event."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#counts-n-group-the-event-categories",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#counts-n-group-the-event-categories",
+    "title": "Measures of Disease Occurrence",
+    "section": "Counts (n): Group the Event Categories",
+    "text": "Counts (n): Group the Event Categories\n\n\n\n\nGrouping categories makes counting easier."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#counts-n-reveal-the-totals",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#counts-n-reveal-the-totals",
+    "title": "Measures of Disease Occurrence",
+    "section": "Counts (n): Reveal the Totals",
+    "text": "Counts (n): Reveal the Totals\n\n\n\nEVENT: YES\n53\n\n\nEVENT: NO\n47"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-describes-existing-conditions",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-describes-existing-conditions",
+    "title": "Measures of Disease Occurrence",
+    "section": "Prevalence Describes Existing Conditions",
+    "text": "Prevalence Describes Existing Conditions\n\n\nPrevalence provides information about the presence or absence of a condition of interest, such as a disease, exposure, or characteristic, in a population.\nIt describes the extent to which the condition is present in a population during a given time frame.\nAsking about the prevalence of diabetes means asking how many, or more likely what proportion, of people currently living in the population have diabetes.\n\n\nSource: (Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-count",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-count",
+    "title": "Measures of Disease Occurrence",
+    "section": "Prevalence Count",
+    "text": "Prevalence Count\n\n\nA count of people in a population with the condition of interest during a given time frame.\nAs few as 0 people and as many as all people can be living with the condition.\nRange: 0 to infinity.\n\n\nSource: (Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-proportion",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-proportion",
+    "title": "Measures of Disease Occurrence",
+    "section": "Prevalence Proportion",
+    "text": "Prevalence Proportion\n\n\nThe proportion or percentage of the population that presently has the condition of interest or presently has a history of the condition during a specified period, such as a history of cancer in the past 10 years.\nSince none, some, or all population members can have the condition or a history of it, prevalence proportion ranges from 0 to 1, much like a probability.\n\n\nSource: (Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-proportion-formula",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-proportion-formula",
+    "title": "Measures of Disease Occurrence",
+    "section": "Prevalence Proportion: Formula",
+    "text": "Prevalence Proportion: Formula\n\n\\[\n\\text{Prevalence proportion} = \\frac{\\text{Count with the condition}}{\\text{Living members of the population}}\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#follow-up-experience-for-10-people",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#follow-up-experience-for-10-people",
+    "title": "Measures of Disease Occurrence",
+    "section": "Follow-Up Experience for 10 People",
+    "text": "Follow-Up Experience for 10 People\n\n\n\n\nPerson\nAt risk\nDiseased\nDeceased\n\n\n\n\n1\n0 months\nBefore follow-up–12\n—\n\n\n2\n0–2\n2–5\n5–12\n\n\n3\n0–4\n4–12\n—\n\n\n4\n0–5\n5–12\n—\n\n\n5\n0–7\n7–12\n—\n\n\n6\n0–8\n8–11\n11–12\n\n\n7\n0–9\n—\n9–12\n\n\n8\n0–5\n—\n5–12\n\n\n9\n0–12\n—\n—\n\n\n10\n0–12\n—\n—\n\n\n\n\nMonth of follow-up. Source: (Lash et al. 2021)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-proportion-at-month-2",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-proportion-at-month-2",
+    "title": "Measures of Disease Occurrence",
+    "section": "Prevalence Proportion at Month 2",
+    "text": "Prevalence Proportion at Month 2\n\n\n\n\n\n\nPerson\nStatus at month 2\n\n\n\n\n1\nDiseased\n\n\n2\nDiseased\n\n\n3–10\nLiving without disease\n\n\n\n\n\n\\[\n\\frac{2}{10} = 0.20 = 20\\%\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#interpreting-prevalence-proportion",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#interpreting-prevalence-proportion",
+    "title": "Measures of Disease Occurrence",
+    "section": "Interpreting Prevalence Proportion",
+    "text": "Interpreting Prevalence Proportion\n\n\n\n\n\n\nPerson\nStatus at month 2\n\n\n\n\n1\nDiseased\n\n\n2\nDiseased\n\n\n3–10\nLiving without disease\n\n\n\n\n\nAmong the members of the population, the prevalence of disease in month 2 was 0.20.\nSaid another way, 20% of the population had disease in month 2."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#r-exercise",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#r-exercise",
+    "title": "Measures of Disease Occurrence",
+    "section": "R Exercise",
+    "text": "R Exercise\n\n\nR\n\nSource: R project logo"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#point-prevalence-and-period-prevalence",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#point-prevalence-and-period-prevalence",
+    "title": "Measures of Disease Occurrence",
+    "section": "Point Prevalence and Period Prevalence",
+    "text": "Point Prevalence and Period Prevalence\n\n\nPoint prevalence: prevalence of a condition of interest at a single point in time.\nPeriod prevalence: prevalence of a condition of interest over a period of time.\nAs the duration of the period shrinks, period prevalence converges to point prevalence.\nThere is no hard-and-fast rule for what window is sufficiently short to count as point prevalence.\n\n\nSource: (Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-odds",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-odds",
+    "title": "Measures of Disease Occurrence",
+    "section": "Prevalence Odds",
+    "text": "Prevalence Odds\n\n\nPrevalence odds is a simple function of prevalence proportion, just as odds in general is a simple function of probability.\nIt is typically reported for convenience or desirable statistical properties.\nPrevalence odds is prevalence proportion divided by 1 minus prevalence proportion.\nRange: 0 to infinity.\n\n\nSource: (Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-odds-formula",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-odds-formula",
+    "title": "Measures of Disease Occurrence",
+    "section": "Prevalence Odds: Formula",
+    "text": "Prevalence Odds: Formula\n\n\\[\n\\text{Prevalence odds} = \\frac{\\text{Prevalence proportion}}{1 - \\text{Prevalence proportion}}\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-odds-at-month-2",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#prevalence-odds-at-month-2",
+    "title": "Measures of Disease Occurrence",
+    "section": "Prevalence Odds at Month 2",
+    "text": "Prevalence Odds at Month 2\n\n\\[\n\\text{Prevalence odds} = \\frac{0.20}{1 - 0.20} = 0.25\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#interpreting-prevalence-odds",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#interpreting-prevalence-odds",
+    "title": "Measures of Disease Occurrence",
+    "section": "Interpreting Prevalence Odds",
+    "text": "Interpreting Prevalence Odds\n\nAmong the members of the population, the odds of disease in month 2 were 0.25.\nFor every person who had disease at month 2, there were four people who did not."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#r-exercise-1",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#r-exercise-1",
+    "title": "Measures of Disease Occurrence",
+    "section": "R Exercise",
+    "text": "R Exercise\n\n\nR\n\nSource: R project logo"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-describes-new-occurrences",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-describes-new-occurrences",
+    "title": "Measures of Disease Occurrence",
+    "section": "Incidence Describes New Occurrences",
+    "text": "Incidence Describes New Occurrences\n\n\nPrevalence measures how many cases are present at a moment or over a period; incidence measures how many new cases arise over a specified period.\nUnlike prevalence, incidence measures occurrences or events: transitions from a condition being absent in an individual to the condition being present over a specified period.\n\n\nSource: (Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-proportion-and-risk",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-proportion-and-risk",
+    "title": "Measures of Disease Occurrence",
+    "section": "Incidence Proportion and Risk",
+    "text": "Incidence Proportion and Risk\n\n\nIncidence proportion and “risk” are sometimes used interchangeably in epidemiology.\nRisk can be ambiguous. Incidence proportion is less so.\n\n\nSource: (Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-count",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-count",
+    "title": "Measures of Disease Occurrence",
+    "section": "Incidence Count",
+    "text": "Incidence Count\n\n\nA count of new occurrences of a condition in a population at risk for the occurrence during a given time frame.\nRange: 0 to infinity.\n\n\nSource: (Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-proportion",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-proportion",
+    "title": "Measures of Disease Occurrence",
+    "section": "Incidence Proportion",
+    "text": "Incidence Proportion\n\n\nThe proportion of the population that experiences a new occurrence of the condition among those at risk of experiencing a new occurrence during a given time frame.\nLike all proportions, it falls between 0 and 1.\n\n\nSource: (Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-proportion-formula",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-proportion-formula",
+    "title": "Measures of Disease Occurrence",
+    "section": "Incidence Proportion: Formula",
+    "text": "Incidence Proportion: Formula\n\n\\[\n\\text{Incidence proportion} = \\frac{\\text{Count of new occurrences}}{\\text{Population at risk}}\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#follow-up-experience-and-new-occurrences",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#follow-up-experience-and-new-occurrences",
+    "title": "Measures of Disease Occurrence",
+    "section": "Follow-Up Experience and New Occurrences",
+    "text": "Follow-Up Experience and New Occurrences\n\n\n\n\nPerson\nAt risk\nNew disease\nDeceased\n\n\n\n\n1\n0 months\nPrevalent before follow-up\n—\n\n\n2\n0–2\nMonth 2\n5–12\n\n\n3\n0–4\nMonth 4\n—\n\n\n4\n0–5\nMonth 5\n—\n\n\n5\n0–7\nMonth 7\n—\n\n\n6\n0–8\nMonth 8\n11–12\n\n\n7\n0–9\n—\n9–12\n\n\n8\n0–5\n—\n5–12\n\n\n9\n0–12\n—\n—\n\n\n10\n0–12\n—\n—\n\n\n\n\nMonth of follow-up. Source: (Lash et al. 2021)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-proportion-over-12-months",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-proportion-over-12-months",
+    "title": "Measures of Disease Occurrence",
+    "section": "Incidence Proportion Over 12 Months",
+    "text": "Incidence Proportion Over 12 Months\n\n\n\n\n5 people developed disease.\n9 people were at risk at baseline.\nPerson 1 was already diseased and therefore not at risk for a new occurrence.\n\n\n\n\\[\n\\frac{5}{9} = 0.56 = 56\\%\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#interpreting-incidence-proportion",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#interpreting-incidence-proportion",
+    "title": "Measures of Disease Occurrence",
+    "section": "Interpreting Incidence Proportion",
+    "text": "Interpreting Incidence Proportion\n\nAmong the members of the population, the incidence of disease over 12 months of follow-up was 0.56.\nFifty-six percent of the population developed disease over 12 months of follow-up."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-odds-formula",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-odds-formula",
+    "title": "Measures of Disease Occurrence",
+    "section": "Incidence Odds: Formula",
+    "text": "Incidence Odds: Formula\n\n\\[\n\\text{Incidence odds} = \\frac{\\text{Incidence proportion}}{1 - \\text{Incidence proportion}}\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-odds-over-12-months",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-odds-over-12-months",
+    "title": "Measures of Disease Occurrence",
+    "section": "Incidence Odds Over 12 Months",
+    "text": "Incidence Odds Over 12 Months\n\n\\[\n\\text{Incidence odds} = \\frac{0.56}{1 - 0.56} = 1.27\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#interpreting-incidence-odds",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#interpreting-incidence-odds",
+    "title": "Measures of Disease Occurrence",
+    "section": "Interpreting Incidence Odds",
+    "text": "Interpreting Incidence Odds\n\nAmong the members of the population, the odds of incident disease over 12 months of follow-up were 1.27.\nFor every 127 people who developed incident disease over 12 months of follow-up, 100 people did not."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-rate",
+    "title": "Measures of Disease Occurrence",
+    "section": "Incidence Rate",
+    "text": "Incidence Rate\n\n\nA measure of the average intensity at which an event occurs in people’s experience over time.\nFor a population followed from baseline, it is the number of cases divided by the person-time at risk accumulated by the population.\nRange: 0 to infinity.\nNot a proportion.\nThe denominator is reciprocal time, usually person-time.\nThe numeric value depends on the selected time unit and therefore has no interpretation by itself.\n\n\nSource: (Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#person-time",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#person-time",
+    "title": "Measures of Disease Occurrence",
+    "section": "Person-Time",
+    "text": "Person-Time\n\nPerson-time is the amount of time observed for all people under study while they are at risk of experiencing an incident outcome.\n\nSource: (Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#follow-up-experience-and-time-at-risk",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#follow-up-experience-and-time-at-risk",
+    "title": "Measures of Disease Occurrence",
+    "section": "Follow-Up Experience and Time at Risk",
+    "text": "Follow-Up Experience and Time at Risk\n\n\n\n\nPerson\nTime at risk\nOutcome after risk time\n\n\n\n\n1\n0 months\nPrevalent disease\n\n\n2\n2 months\nDisease, then death\n\n\n3\n4 months\nDisease\n\n\n4\n5 months\nDisease\n\n\n5\n7 months\nDisease\n\n\n6\n8 months\nDisease, then death\n\n\n7\n9 months\nDeath\n\n\n8\n5 months\nDeath\n\n\n9\n12 months\nNone observed\n\n\n10\n12 months\nNone observed\n\n\n\n\nSource: (Lash et al. 2021)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#calculating-person-time",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#calculating-person-time",
+    "title": "Measures of Disease Occurrence",
+    "section": "Calculating Person-Time",
+    "text": "Calculating Person-Time\n\n\\[\n\\sum_{\\text{people}} \\text{Time at risk}\n\\]\n\\[\n0 + 2 + 4 + 5 + 7 + 8 + 9 + 5 + 12 + 12 = 64\\text{ person-months}\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#interpreting-person-time",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#interpreting-person-time",
+    "title": "Measures of Disease Occurrence",
+    "section": "Interpreting Person-Time",
+    "text": "Interpreting Person-Time\n\nThe population accumulated 64 person-months at risk during 12 months of follow-up.\nThe same amount is 5.33 person-years at risk during 12 months of follow-up."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#follow-up-experience-for-the-incidence-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#follow-up-experience-for-the-incidence-rate",
+    "title": "Measures of Disease Occurrence",
+    "section": "Follow-Up Experience for the Incidence Rate",
+    "text": "Follow-Up Experience for the Incidence Rate\n\n\n\n\nPerson\nTime at risk\nNew occurrence?\n\n\n\n\n1\n0 months\nNo; prevalent\n\n\n2\n2 months\nYes\n\n\n3\n4 months\nYes\n\n\n4\n5 months\nYes\n\n\n5\n7 months\nYes\n\n\n6\n8 months\nYes\n\n\n7\n9 months\nNo\n\n\n8\n5 months\nNo\n\n\n9\n12 months\nNo\n\n\n10\n12 months\nNo\n\n\n\n\nSource: (Lash et al. 2021)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-rate-calculation",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#incidence-rate-calculation",
+    "title": "Measures of Disease Occurrence",
+    "section": "Incidence Rate: Calculation",
+    "text": "Incidence Rate: Calculation\n\n\\[\n\\text{Incidence rate} = \\frac{\\text{Count of new occurrences}}{\\text{Person-time at risk}}\n\\]\n\\[\n= \\frac{5}{64\\text{ person-months}} \\approx 7.8\\text{ per 100 person-months}\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#interpreting-the-incidence-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#interpreting-the-incidence-rate",
+    "title": "Measures of Disease Occurrence",
+    "section": "Interpreting the Incidence Rate",
+    "text": "Interpreting the Incidence Rate\n\nThe incidence rate of disease among the members of the population was 5 cases per 64 person-months during 12 months of follow-up.\nEquivalently, the incidence rate was 7.8 cases per 100 person-months during 12 months of follow-up."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#odds-and-proportions",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#odds-and-proportions",
+    "title": "Measures of Disease Occurrence",
+    "section": "Odds and Proportions",
+    "text": "Odds and Proportions\n\n\\[\n\\text{Odds} = \\frac{p}{1-p}\n\\]\n\n\n\n\\(p\\)\nOdds\n\n\n\n\n0.01\n0.010\n\n\n0.10\n0.111\n\n\n0.20\n0.250\n\n\n0.50\n1.000\n\n\n0.80\n4.000\n\n\n0.90\n9.000\n\n\n0.99\n99.000\n\n\n\n\nSource: (Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#references",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#references",
+    "title": "Measures of Disease Occurrence",
+    "section": "References",
+    "text": "References\n\n\nLash, Timothy L., Tyler J. VanderWeele, Sebastien Haneuse, and Kenneth J. Rothman. 2021. Modern Epidemiology. 4th ed. Wolters Kluwer.\n\n\nPorta, Miquel, ed. 2008. A Dictionary of Epidemiology. Oxford University Press.\n\n\nWestreich, Daniel. 2019. Epidemiology by Design: A Causal Approach to the Health Sciences. Oxford University Press."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#measurement-uncertainty-and-study-design",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#measurement-uncertainty-and-study-design",
+    "title": "Measures of Disease Occurrence",
+    "section": "Measurement, Uncertainty, and Study Design",
+    "text": "Measurement, Uncertainty, and Study Design\n\n\n\nMEASUREMENT\n\n\nUNCERTAINTY\n\n\nSTUDY DESIGN"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#r",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#r",
+    "title": "Measures of Disease Occurrence",
+    "section": "R",
+    "text": "R\n\n\nR\n\nSource: R project logo"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#r-1",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.html#r-1",
+    "title": "Measures of Disease Occurrence",
+    "section": "R",
+    "text": "R\n\n\nR\n\nSource: R project logo"
   }
 ]
