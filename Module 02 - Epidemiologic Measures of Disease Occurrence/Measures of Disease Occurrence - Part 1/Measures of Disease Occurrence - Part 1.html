@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.36">
+
+  <title>APHS 20203 Lecture Slides – Measures of Disease Occurrence - Part 1</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-29634940d11382a2be922cc98af8af7c.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Measures of Disease Occurrence - Part 1</h1>
+  <p class="subtitle">APHS 20203 • Epidemiology &amp; Biostatistics</p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="course-learning-objectives" class="slide level2">
+<h2>Course Learning objectives</h2>
+<ol type="1">
+<li>Define epidemiology and key associated terminology, especially confounding.</li>
+<li>Distinguish among association, prediction, and causation.</li>
+<li>Explain the Rothman model of sufficient-component causes (RMSCC) and the concept of multifactorial causation.</li>
+<li>Explain the limitations of anecdotal evidence in drawing epidemiologic conclusions.</li>
+<li>Explain why disseminating risk information is sometimes necessary but rarely sufficient to improve population health.</li>
+</ol>
+<aside class="notes">
+<p>By the end of this course, my goal is for you to be able to:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="lecture-learning-objectives" class="slide level2">
+<h2>Lecture Learning objectives</h2>
+<!-- Revise these objectives. -->
+<p>By the end of this lesson, you’ll be able to:</p>
+<ol type="1">
+<li>Define counts and rates.</li>
+<li>Distinguish crude, specific, adjusted rates.</li>
+<li>Compute and interpret prevalence and incidence.</li>
+</ol>
+</section>
+<section id="measurement-uncertainty-and-study-design" class="slide level2 three-step">
+<h2>Measurement, Uncertainty, and Study Design</h2>
+
+<img src="assets/measures_uncertainty_study_design.png" class="r-stretch" style="display: block; width: 94%; margin-right: auto; margin-left: auto;" alt="Three-part epidemiologic framework. Measurement is represented by a measuring tape, uncertainty by a question mark, and study design by a study plan with a pencil."><aside class="notes">
+<ul>
+<li>We have already had some exposure to the basics of what epidemiology <em>is</em>.</li>
+<li>This week, we will begin to learn how to <em>do</em> epidemiology.</li>
+<li>However, before getting into specific calcualtions, I want to briefly discuss the concepts of measurement, uncertainty, and study design.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-epidemiology" class="slide level2 compact">
+<h2>What is Epidemiology?</h2>
+<div class="fragment">
+<blockquote>
+<p>Epidemiology is concerned with the distribution and determinants of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations <span class="citation" data-cites="quinlan2025">(<a href="#/references" role="doc-biblioref" onclick="">Quinlan 2025</a>)</span>.</p>
+</blockquote>
+</div>
+<aside class="notes">
+<ul>
+<li>We spent some time disecting this definition last week. I don’t plan to do that again today.</li>
+<li>However, it may be worth taking a step back and thinking about <em>how</em> we study the occurrence and distribution of these things.</li>
+<li>Do we consult powerful oracles or deities? Not typically.</li>
+<li>Do we go into a deep meditative state until the answers just occur to us? Not typically. At least doing that alone would not typically be very convincing evidence to most people.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="measurement-makes-characteristics-observable" class="slide level2 compact measurement-feature">
+<h2>Measurement Makes Characteristics Observable</h2>
+<div class="measurement-layout">
+<div class="measurement-visual">
+<p><img src="assets/measurement.png" alt="Measurement represented by a measuring tape."></p>
+</div>
+<div class="measurement-copy">
+<blockquote>
+<p>Epidemiology is concerned with the <strong>distribution</strong> and determinants of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations <span class="citation" data-cites="quinlan2025">(<a href="#/references" role="doc-biblioref" onclick="">Quinlan 2025</a>)</span>.</p>
+</blockquote>
+<ul>
+<li>Observe and assign values to relevant characteristics.</li>
+<li>Look for patterns among those values.</li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Instead, we almost always study health-related states and populations by <strong>measuring</strong> characteristics of those states or populations.</li>
+<li>And what do we mean by measure?</li>
+<li>Typically, that means that we observe some people, places, or events that are thought to be relevant to the population we are interested in. - As we are observing, we assign and record values about the things we are observing that are thought to be relevant.</li>
+<li>For example, we might ask someone to step on a scale. We could observe their weight and record it somewhere. Or, we might ask someone to fill out a questionnaire about their thoughts and feelings. We could then record those responses somewhere as well.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-does-it-mean-to-observe" class="slide level2 compact">
+<h2>What Does It Mean to Observe?</h2>
+<div class="measurement-layout">
+<div class="measurement-visual">
+<p><img src="assets/measurement.png" alt="Measurement represented by a measuring tape."></p>
+</div>
+<div class="measurement-copy">
+<blockquote>
+<p>Epidemiology is concerned with the distribution and <strong>determinants</strong> of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations <span class="citation" data-cites="quinlan2025">(<a href="#/references" role="doc-biblioref" onclick="">Quinlan 2025</a>)</span>.</p>
+</blockquote>
+<ul>
+<li>Observe and assign values to relevant characteristics.</li>
+<li>Look for patterns among those values.</li>
+</ul>
+<div class="panel">
+<p><strong>OBSERVE</strong></p>
+<p>“To be aware of” or “have knowledge about.”</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Notice how we frequently use the word “observe” in epidemiology.</li>
+<li>In everyday speech, we tend to think of observe as meaning seeing something take place in front of our eyes.</li>
+<li>In epidemiology, it is common to use the word observe more broadly. Something closer to simply meaning ”to be aware of” or ”have knowledge about”.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="measurement-produces-data-statistics-finds-patterns" class="slide level2 three-step compact">
+<h2>Measurement Produces Data; Statistics Finds Patterns</h2>
+
+<img src="assets/measurement_data_statistics.png" class="r-stretch" style="display: block; width: 96%; margin-right: auto; margin-left: auto;" alt="Measurement leads to data, then statistics. A measuring tape points to a data table with columns X, Y, and Z, which points to a distribution curve."><aside class="notes">
+<ul>
+<li>Then we look for useful patterns in those measurements. Recording those measurements typically results in data and looking for useful patterns typically occurs by applying statistical procedures to the data — hence,&nbsp;data and statistics are probably the two most commonly used tools in an epidemiologist’s toolbox.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="description-prediction-and-causation" class="slide level2">
+<h2>Description, Prediction, and Causation</h2>
+<div class="grid-3 panel-grid-spaced">
+<div class="panel">
+<p><strong>DESCRIPTION</strong></p>
+</div>
+<div class="panel">
+<p><strong>PREDICTION</strong></p>
+</div>
+<div class="panel">
+<p><strong>CAUSATION</strong></p>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>If that all sounds a little too “deep” to be meaningful, I think the relevant take-away for our purposes is that a typical day in the life of most epidemiologists includes attempting to <strong>describe</strong>, <strong>predict</strong>, and/or <strong>causally explain</strong> health-related phenomena in populations of people, and we typically rely heavily on data, statistics, and assumptions to help us do that.</li>
+<li>There may be some technical definitions somewhere that clearly distinguish each of these measurement and analysis goals, but in my experience, there is often some overlap between them in applied epidemiology. Further, the same study may attempt to do all three to varying degrees. Having said that, I think there is some value in taking a moment to discuss each individually.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="description-does-not-necessarily-seek-associations" class="slide level2 compact">
+<h2>Description Does Not Necessarily Seek Associations</h2>
+<ul>
+<li>Description examines distributions of single variables: middle, spread, shape, count, and proportion.</li>
+<li>It supports resource management and planning.</li>
+<li>Examples:
+<ul>
+<li>How many ventilators are available in Texas?</li>
+<li>What is the average age of people living in Florida?</li>
+<li>How much time elapses, on average, between exposure to a pathogen and the occurrence of disease symptoms?</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>When we say describe in this context, we are not necessarily looking for associations in the data between two or more variables. Sometimes, we are simply looking at the distribution of a single variable/measure. Typically, this is done in the context of resource management and planning, or while conducting exploratory analysis.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="description-can-also-compare-distributions" class="slide level2 compact">
+<h2>Description Can Also Compare Distributions</h2>
+<ul>
+<li>Sometimes description does look for associations.</li>
+<li>It may compare distributions of single variables within levels of another variable.</li>
+<li>Examples:
+<ul>
+<li>Are more ventilators available in Texas or New York?</li>
+<li>Are people older, on average, in Florida or Pennsylvania?</li>
+<li>Is symptom onset quicker, on average, for cholera or <em>E. coli</em>?</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>However, there are also times when we want to compare the distribution of one variable within levels of another variable. Most people would consider these comparisons to be equivalent to measuring associations. You could also make the case that this starts to overlap with prediction. It sort of just depends on how the information is being used.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="measures-of-occurrence-support-description" class="slide level2">
+<h2>Measures of Occurrence Support Description</h2>
+<ul>
+<li>Counts</li>
+<li>Incidence</li>
+<li>Prevalence</li>
+<li>Odds</li>
+</ul>
+<p>These measures can be useful on their own and for hypothesis generation.</p>
+<aside class="notes">
+<ul>
+<li>You can generally think of measures like incidence, prevalence, and odds as descriptive, and we will discuss them in greater detail shortly. Often, these descriptive measures can be very useful in their own right, but they are also used as a foundation for hypothesis generation, prediction, and causal explanation as well.</li>
+<li>Prediction and causal explanation will be the topic of future modules.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sources-of-uncertainty-few-checklists" class="slide level2 uncertainty-list">
+<h2>Sources of Uncertainty: Few Checklists</h2>
+<ol type="1">
+<li>Few checklists</li>
+</ol>
+<aside class="notes">
+<ul>
+<li>In epidemiology generally, and parts of this course specifically, it will behoove us to become comfortable with uncertainty. When I say “uncertainty” here, I mean it in both a philosophical sense and in a very practical sense.</li>
+<li>First, in a very practical sense, all students of epidemiology (including me) must get comfortable with the lack of reliable check-list procedures in epidemiology. What I mean is that students (including me) often wish that there was a simple checklist or algorithm that we could follow that will always lead us to the correct answer. Unfortunately, there are just very few such checklists in epidemiology – and in life for that matter. In reality, we will often have to rely on diligent research and experimentation to inform critical thinking and many (often untestable) assumptions. Clear-cut procedures that provide valid and reliable black and white answers are the exception rather than the rule. On the bright side, this should also provide us with some measure of job security for the foreseeable future. If epidemiology could simply be reduced to a checklist or algorithm, then our jobs would almost certainly be outsourced to computers in no time.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sources-of-uncertainty-add-statistical-uncertainty" class="slide level2 uncertainty-list">
+<h2>Sources of Uncertainty: Add Statistical Uncertainty</h2>
+<ol type="1">
+<li>Few checklists</li>
+<li>Statistical uncertainty</li>
+</ol>
+<aside class="notes">
+<ul>
+<li>Second, we should also get comfortable with uncertainty in the statistical sense, which is something we will try to measure and quantify. Indeed, it may be an oversimplification, but not entirely inaccurate, to define statistics as the science of quantifying uncertainty. At least a certain type of uncertainty. It’s important to understand this type of uncertainty and become comfortable with it because, like we discussed earlier, data and statistics are probably the two most commonly used tools in the modern epidemiologist’s toolbox.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sources-of-uncertainty-add-causal-uncertainty" class="slide level2 uncertainty-list">
+<h2>Sources of Uncertainty: Add Causal Uncertainty</h2>
+<ol type="1">
+<li>Few checklists</li>
+<li>Statistical uncertainty</li>
+<li>Causal uncertainty</li>
+</ol>
+<aside class="notes">
+<ul>
+<li>And finally, we should get comfortable with uncertainty on the level of our conclusions. In epidemiology, the questions we are called to answer are often causal questions. Did this cause that? If we stop this, can we stop that? On one hand, these questions are usually incredibly exciting and have the potential to lead to real, tangible changes in population health. On the other hand, our two primary tools – data and statistics – are not typically not sufficient to answer such questions in and of themselves.</li>
+<li>The conclusions that we are able to make are almost always loaded with caveats and assumptions. This is true even for many non-causal questions. However, the questions being asked are often so important that we don’t have the luxury of completely deferring our conclusions until some imaginary later date when the stars align, and the inner workings of the world are magically revealed to us with complete clarity. No, we must often do our best with the information and resources that are available to us now. Therefore, when we make conclusions, we will have to be comfortable with the fact that they may be wholly or partially incorrect, there may be important exceptions, and/or we may have to revisit them again in the future when circumstances, or the information available to us, changes. Even when they are entirely correct, we will often not be able to prove as much with complete certainty. Said another way, our conclusions will rarely, if ever, be exactly correct or provable; however, sometimes they will still be useful for a given purpose.</li>
+<li>That is an unsettling thought for many people. But it is true nevertheless and we must accept it and become comfortable with it if we want to practice epidemiology. If it makes you feel any better, the history of public health, including epidemiology, is littered with notable examples of useful conclusions that were not entirely correct or not entirely proven, yet still extremely useful. For example, citrus fruit to prevent and cure scurvy, drinking tainted drinking water as a cause of cholera, and tobacco smoke as a cause of lung cancer (and many other diseases).&nbsp;</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="occurrence-is-defined-within-populations" class="slide level2 compact">
+<h2>Occurrence Is Defined Within Populations</h2>
+<blockquote>
+<p>Epidemiology is concerned with the distribution and determinants of health and diseases, morbidity, injuries, disability, and mortality in <strong>populations</strong>. Epidemiologic studies are applied to the control of health problems in populations <span class="citation" data-cites="quinlan2025">(<a href="#/references" role="doc-biblioref" onclick="">Quinlan 2025</a>)</span>.</p>
+</blockquote>
+<aside class="notes">
+<ul>
+<li>Another important concept in epidemiology is that of populations. In fact, our concern with populations is embedded in our very definition. In epidemiology, we generally want to describe a population, predict the occurrence of something in a population, or explain the causes of something in a population.</li>
+<li>But, what is a population?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="population" class="slide level2">
+<h2>Population</h2>
+<div class="grid-2 align-center">
+<div class="definition-copy">
+<blockquote>
+<p>The simplest definition of a <strong>population</strong> is a group of people who share characteristics or meet criteria that define membership in the population <span class="citation" data-cites="lash2021">(<a href="#/references" role="doc-biblioref" onclick="">Lash et al. 2021</a>)</span>.</p>
+</blockquote>
+</div>
+<div class="population-visual">
+<p><img src="assets/population_1.png" style="display: block; width: auto; max-width: 100%; max-height: 450px; margin: 0 auto;" alt="A grid of uniform brown dots representing the members of a population."></p>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Well, The simplest definition of a population is a group of people who share characteristics or meet criteria that define membership in the population.</li>
+<li>In other words, we set some criteria of interest and then anyone who meets that criteria is a member of the population. In everyday language, we most often think about the criteria that defines population membership as being geographic. For example, all of the people who live in the United States make up the population of the United States. The criteria that defines them is the fact that they live in the United States.</li>
+<li>But we certainly do not have to limit our criteria of interest to be geographic. We can use pretty much any criteria that is useful for our purposes. For example, people of a particular age, gender, or race or ethnicity; people who work in a particular occupation; people who participate in a particular behavior or activity; or people who have a particular disease. All the people who meet whatever the criteria are de facto members of the population.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-population-also-has-a-time-period" class="slide level2">
+<h2>A Population Also Has a Time Period</h2>
+<div class="grid-2 align-center">
+<div class="definition-copy">
+<blockquote>
+<p>The simplest definition of a <strong>population</strong> is a group of people who share characteristics or meet criteria that define membership in the population [<strong>during a defined time period</strong>] <span class="citation" data-cites="lash2021">(<a href="#/references" role="doc-biblioref" onclick="">Lash et al. 2021</a>)</span>.</p>
+</blockquote>
+</div>
+<div class="population-visual">
+<p><img src="assets/population_1.png" style="display: block; width: auto; max-width: 100%; max-height: 450px; margin: 0 auto;" alt="A grid of uniform brown dots representing the members of a population."></p>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>I would add the qualifier “during a defined time period” to this definition. As I hope to show you, the inclusion of the time period of interest is is a critical component of making almost every measure we will use in epidemiology meaningful.</li>
+<li>Later in the course, we will discuss populations, samples, and cohorts in greater depth, and we will see more examples of why the definition of time is so important.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="counts-n-events-in-a-population" class="slide level2 count-slide">
+<h2>Counts (n): Events in a Population</h2>
+
+<img src="assets/counts_01.png" class="r-stretch" style="display: block; width: 92%; margin-right: auto; margin-left: auto;" alt="A grid of 100 people shows 53 with the event in brown and 47 without the event in blue, with a legend identifying the colors."><aside class="notes">
+<ul>
+<li>This is perhaps the most foundational measure of occurrence we can use.</li>
+<li>How many people have the characteristic or have experienced the event we are interested in?</li>
+<li>That is, we simply count the number of people in our sample who experience the event of interest.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="counts-n-group-the-event-categories" class="slide level2 count-slide">
+<h2>Counts (n): Group the Event Categories</h2>
+
+<img src="assets/counts_02.png" class="r-stretch" style="display: block; width: 92%; margin-right: auto; margin-left: auto;" alt="A grid of 100 people shows 53 with the event in brown and 47 without the event in blue, grouped by event status, with a legend identifying the colors."><aside class="notes">
+<ul>
+<li>To make this a little easier, we will visually stratify our sample by event.</li>
+<li>That means we will gather together all of the people who experienced the event into one group and all of the people who did not experience the event into a second group.</li>
+<li>Each group can be called a stratum.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="counts-n-reveal-the-totals" class="slide level2 count-slide">
+<h2>Counts (n): Reveal the Totals</h2>
+
+<img src="assets/counts_03.png" class="r-stretch" style="display: block; width: 92%; margin-right: auto; margin-left: auto;" alt="A grid of 100 people shows 53 with the event in brown and 47 without the event in blue, grouped by event status, with a legend identifying the colors. The legend is annotated with the number of events and non-events."><aside class="notes">
+<ul>
+<li>After doing so, we can simply count the number of people in our event strata. In this case, the count of people who experienced the event is 53.</li>
+<li>Is that enough information? It depends. What is our question?
+<ul>
+<li>Do we have enough ventilators?</li>
+<li>Did a lot of people have the event?</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- 
+Poll Everywhere:
+The basic issue is that counts don't take into account the size of the population.
+Introduce ratios, rates, proportions, and percentages at a high level.
+-->
+<!-- 
+Poll Everywhere:
+Introduce ratios, rates, proportions, and percentages generally. 
+-->
+</section>
+<section id="prevalence-describes-existing-conditions" class="slide level2 compact">
+<h2>Prevalence Describes Existing Conditions</h2>
+<!-- Make this slide less wordy. -->
+<ul>
+<li>Prevalence provides information about the presence or absence of a condition of interest, such as a disease, exposure, or characteristic, in a population.</li>
+<li>It describes the extent to which the condition is present in a population during a given time frame.</li>
+<li>Asking about the prevalence of diabetes means asking how many, or more likely what proportion, of people currently living in the population have diabetes.</li>
+</ul>
+<p class="source-line">
+Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
+</p>
+<aside class="notes">
+<ul>
+<li>Placeholder</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="prevalence-count" class="slide level2 compact">
+<h2>Prevalence Count</h2>
+<ul>
+<li>A count of people in a population with the condition of interest during a given time frame.</li>
+<li>As few as 0 people and as many as all people can be living with the condition.</li>
+<li>Range: 0 to infinity.</li>
+</ul>
+<p class="source-line">
+Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
+</p>
+<aside class="notes">
+<!-- Convert this to bullets. -->
+<ul>
+<li>Prevalence counts are sometimes useful in communicating the public health importance of a disease condition or in contexts where incidence is difficult to define and so you want to have a sense of numbers of events for surveillance purposes. Unfortunately, prevalence counts are just as often used to overhype that importance by reporting large-sounding numbers without appropriate context. Prevalence counts are therefore of most use when their context is well-understood by the audience: for example, since most residents of the United States have a general sense of the total population of that country, a report to a US audience of the prevalence count of US residents living with COPD (at this writing, about 13 million) might be adequately contextualized. As with all counts, the prevalence count is an integer between 0 however many possible cases exist in the population being examined. For a recurrent event measured over a sufficiently long period of time (e.g., upper respiratory infections), the prevalence count might exceed the number of individuals in the population: however, in such a case, calculating an incidence might be more straightforward.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="prevalence-proportion" class="slide level2 compact">
+<h2>Prevalence Proportion</h2>
+<ul>
+<li>The proportion or percentage of the population that presently has the condition of interest or presently has a history of the condition during a specified period, such as a history of cancer in the past 10 years.</li>
+<li>Since none, some, or all population members can have the condition or a history of it, prevalence proportion ranges from 0 to 1, much like a probability.</li>
+</ul>
+<p class="source-line">
+Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
+</p>
+<aside class="notes">
+<ul>
+<li>The count of prevalent cases is sometimes of interest all by itself. However, it is more common to report the prevalence as a proportion or percentage.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="prevalence-proportion-formula" class="slide level2 big-formula">
+<h2>Prevalence Proportion: Formula</h2>
+<p><span class="math display">\[
+\text{Prevalence proportion} = \frac{\text{Count with the condition}}{\text{Living members of the population}}
+\]</span></p>
+<aside class="notes">
+<ul>
+<li>We can write the information from the previous slide in a slightly more mathy way like this.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="follow-up-experience-for-10-people" class="slide level2 status-table">
+<h2>Follow-Up Experience for 10 People</h2>
+
+<img src="assets/example_study_01.png" class="r-stretch" style="display: block; width: 96%; margin-right: auto; margin-left: auto;" alt="Timeline of follow-up for 10 people from before follow-up through month 12. Colored bars show time before follow-up, diseased, at risk, and deceased for each person."><aside class="notes">
+<ul>
+<li>So, if we came along and did a study of this group of people in month 2, the prevalence of disease would equal the number of people with disease divided by the number of people in the sample. In this case, that would be 2 people (p1 and p2) divided by 10.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="prevalence-proportion-at-month-2" class="slide level2 metric-grid">
+<h2>Prevalence Proportion at Month 2</h2>
+<!-- Hide the answer so that learners have to interpret. -->
+<div class="grid-2 align-center">
+<div class="example-study-visual">
+<p><img src="assets/example_study_02.png" style="display: block; width: 100%; max-height: 480px; margin: 0 auto; object-fit: contain;" alt="Follow-up timeline for 10 people, with a blue vertical line at month 2. Colored bars show periods before follow-up, at risk, diseased, and deceased."></p>
+</div>
+<div class="prevalence-example-formula">
+<p><span class="math display">\[
+\frac{\text{Count with the condition}}{\text{Living members of the population}}
+\]</span></p>
+<p><span class="math display">\[
+= \frac{2}{10} = 0.20 = 20\%
+\]</span></p>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>So, if we came along and did a study of this group of people in month 2, the prevalence of the condition of interest – in this case disease – would equal the number of people with disease divided by the number of people in the population. In this case, that would be 2 people (p1 and p2) divided by 10.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="interpreting-prevalence-proportion" class="slide level2 metric-grid">
+<h2>Interpreting Prevalence Proportion</h2>
+<!-- Hide the answer so that learners have to interpret. -->
+<div class="grid-2 align-center">
+<div class="example-study-visual">
+<p><img src="assets/example_study_02.png" style="display: block; width: 100%; max-height: 480px; margin: 0 auto; object-fit: contain;" alt="Follow-up timeline for 10 people, with a blue vertical line at month 2. Colored bars show periods before follow-up, at risk, diseased, and deceased."></p>
+</div>
+<div class="interpretation">
+<p>Among the members of the population, the prevalence of disease in month 2 was <strong>0.20</strong>.</p>
+<p>Said another way, <strong>20%</strong> of the population had disease in month 2.</p>
+</div>
+</div>
+</section>
+<section id="point-prevalence-and-period-prevalence" class="slide level2 compact">
+<h2>Point Prevalence and Period Prevalence</h2>
+<!-- Add a Poll Everywhere question about point vs period prevalence. -->
+<ul>
+<li><strong>Point prevalence:</strong> prevalence of a condition of interest at a single point in time.</li>
+</ul>
+<div class="fragment">
+<ul>
+<li><strong>Period prevalence:</strong> prevalence of a condition of interest over a period of time.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>As the duration of the period shrinks, period prevalence converges to point prevalence.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>There is no hard-and-fast rule for what window is sufficiently short to count as point prevalence.</li>
+</ul>
+</div>
+<p class="source-line">
+Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
+</p>
+<aside class="notes">
+<ul>
+<li>On the other hand, point prevalence is often operationalized (put into practice) as “period prevalence over a reasonably short time window.” - For example, if you want to know the prevalence of HIV infection in a cohort of 1,000 people, it is difficult to imagine getting blood samples to test from all those people simultaneously (e.g., if all 1,000 participants give blood at exactly 1:00 pm this Friday). In practice, you would obtain blood samples over as short a time period as possible and test them thereafter.</li>
+<li>Alternatively, you could also define such a prevalence as “point prevalence at time of testing” while acknowledging that the testing occurred at a different calendar time for each participant <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>.</li>
+<li>Some textbooks and authors spend a fair amount of time trying to draw a distinction between the two. Because the concept is pretty nebulous, I tend to not worry about it too much. Instead, I prefer to just be clear about the time frame used for the calculation.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="prevalence-odds" class="slide level2 compact">
+<h2>Prevalence Odds</h2>
+<ul>
+<li>Prevalence odds is a simple function of prevalence proportion, just as odds in general is a simple function of probability.</li>
+<li>It is typically reported for convenience or desirable statistical properties.</li>
+<li>Prevalence odds is prevalence proportion divided by 1 minus prevalence proportion.</li>
+<li>Range: 0 to infinity.</li>
+</ul>
+<p class="source-line">
+Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
+</p>
+<aside class="notes">
+<ul>
+<li>Why do we calculate this? Sometimes it is mathematically convenient.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="prevalence-odds-formula" class="slide level2 big-formula">
+<h2>Prevalence Odds: Formula</h2>
+<p><span class="math display">\[
+\text{Prevalence odds} = \frac{\text{Prevalence proportion}}{1 - \text{Prevalence proportion}}
+\]</span></p>
+<aside class="notes">
+<ul>
+<li>We can write the information from the previous slide in a slightly more mathy way like this.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="prevalence-odds-at-month-2" class="slide level2 metric-grid">
+<h2>Prevalence Odds at Month 2</h2>
+<!-- Hide the answer so that learners have to interpret. -->
+<div class="grid-2 align-center">
+<div class="example-study-visual">
+<p><img src="assets/example_study_02.png" style="display: block; width: 100%; max-height: 480px; margin: 0 auto; object-fit: contain;" alt="Follow-up timeline for 10 people, with a blue vertical line at month 2. Colored bars show periods before follow-up, at risk, diseased, and deceased."></p>
+</div>
+<div class="prevalence-example-formula">
+<p><span class="math display">\[
+\frac{\text{Prevalence proportion}}{1 - \text{Prevalence proportion}}
+\]</span></p>
+<p><span class="math display">\[
+\text{Prevalence odds} = \frac{0.20}{1 - 0.20} = 0.25
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="interpreting-prevalence-odds" class="slide level2 metric-grid">
+<h2>Interpreting Prevalence Odds</h2>
+<!-- Hide the answer so that learners have to interpret. -->
+<div class="grid-2 align-center">
+<div class="example-study-visual">
+<p><img src="assets/example_study_02.png" style="display: block; width: 100%; max-height: 480px; margin: 0 auto; object-fit: contain;" alt="Follow-up timeline for 10 people, with a blue vertical line at month 2. Colored bars show periods before follow-up, at risk, diseased, and deceased."></p>
+</div>
+<div class="interpretation">
+<p>Among the members of the population, the odds of disease in month 2 were <strong>0.25</strong>.</p>
+<p>For every person who had disease at month 2, there were four people who did not.</p>
+</div>
+</div>
+<!-- 
+This is were we will stop on day one.
+Add a section break slide here.
+-->
+</section>
+<section id="questions" class="slide level2">
+<h2>Questions?</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>What questions do you have?</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/free_text_polls/3lHepUui77dAHrGfbs2sQ/respond?q=other-questions">Respond here</a></p>
+</div>
+<p><img data-src="qr/other-questions.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Reveal the answer: never. Show the distribution: no. Responses are anonymous. If polling fails: Ask students to share remaining questions aloud and record unresolved topics for follow-up.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="references" class="slide level2 references-slide smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-lash2021" class="csl-entry" role="listitem">
+Lash, Timothy L., Tyler J. VanderWeele, Sebastien Haneuse, and Kenneth J. Rothman. 2021. <em>Modern Epidemiology</em>. 4th ed. Wolters Kluwer.
+</div>
+<div id="ref-quinlan2025" class="csl-entry" role="listitem">
+Quinlan, Scott. 2025. <em>Friis’ Epidemiology 101</em>. 3rd ed. Jones &amp; Bartlett Learning.
+</div>
+<div id="ref-westreich2019" class="csl-entry" role="listitem">
+Westreich, Daniel. 2019. <em>Epidemiology by Design: A Causal Approach to the Health Sciences</em>. Oxford University Press.
+</div>
+</div>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/brad-cannell\.github\.io\/aphs20203\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

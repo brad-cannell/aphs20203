@@ -1,5 +1,257 @@
 [
   {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#course-learning-objectives",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#course-learning-objectives",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Course Learning objectives",
+    "text": "Course Learning objectives\n\nDefine epidemiology and key associated terminology, especially confounding.\nDistinguish among association, prediction, and causation.\nExplain the Rothman model of sufficient-component causes (RMSCC) and the concept of multifactorial causation.\nExplain the limitations of anecdotal evidence in drawing epidemiologic conclusions.\nExplain why disseminating risk information is sometimes necessary but rarely sufficient to improve population health.\n\n\nBy the end of this course, my goal is for you to be able to:"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#lecture-learning-objectives",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#lecture-learning-objectives",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Lecture Learning objectives",
+    "text": "Lecture Learning objectives\n\nBy the end of this lesson, you’ll be able to:\n\nDefine counts and rates.\nDistinguish crude, specific, adjusted rates.\nCompute and interpret prevalence and incidence."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#measurement-uncertainty-and-study-design",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#measurement-uncertainty-and-study-design",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Measurement, Uncertainty, and Study Design",
+    "text": "Measurement, Uncertainty, and Study Design\n\n\n\nWe have already had some exposure to the basics of what epidemiology is.\nThis week, we will begin to learn how to do epidemiology.\nHowever, before getting into specific calcualtions, I want to briefly discuss the concepts of measurement, uncertainty, and study design."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#what-is-epidemiology",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#what-is-epidemiology",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "What is Epidemiology?",
+    "text": "What is Epidemiology?\n\n\nEpidemiology is concerned with the distribution and determinants of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations (Quinlan 2025).\n\n\n\n\nWe spent some time disecting this definition last week. I don’t plan to do that again today.\nHowever, it may be worth taking a step back and thinking about how we study the occurrence and distribution of these things.\nDo we consult powerful oracles or deities? Not typically.\nDo we go into a deep meditative state until the answers just occur to us? Not typically. At least doing that alone would not typically be very convincing evidence to most people."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#measurement-makes-characteristics-observable",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#measurement-makes-characteristics-observable",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Measurement Makes Characteristics Observable",
+    "text": "Measurement Makes Characteristics Observable\n\n\n\n\n\n\nEpidemiology is concerned with the distribution and determinants of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations (Quinlan 2025).\n\n\nObserve and assign values to relevant characteristics.\nLook for patterns among those values.\n\n\n\n\n\nInstead, we almost always study health-related states and populations by measuring characteristics of those states or populations.\nAnd what do we mean by measure?\nTypically, that means that we observe some people, places, or events that are thought to be relevant to the population we are interested in. - As we are observing, we assign and record values about the things we are observing that are thought to be relevant.\nFor example, we might ask someone to step on a scale. We could observe their weight and record it somewhere. Or, we might ask someone to fill out a questionnaire about their thoughts and feelings. We could then record those responses somewhere as well."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#what-does-it-mean-to-observe",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#what-does-it-mean-to-observe",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "What Does It Mean to Observe?",
+    "text": "What Does It Mean to Observe?\n\n\n\n\n\n\nEpidemiology is concerned with the distribution and determinants of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations (Quinlan 2025).\n\n\nObserve and assign values to relevant characteristics.\nLook for patterns among those values.\n\n\nOBSERVE\n“To be aware of” or “have knowledge about.”\n\n\n\n\n\nNotice how we frequently use the word “observe” in epidemiology.\nIn everyday speech, we tend to think of observe as meaning seeing something take place in front of our eyes.\nIn epidemiology, it is common to use the word observe more broadly. Something closer to simply meaning ”to be aware of” or ”have knowledge about”."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#measurement-produces-data-statistics-finds-patterns",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#measurement-produces-data-statistics-finds-patterns",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Measurement Produces Data; Statistics Finds Patterns",
+    "text": "Measurement Produces Data; Statistics Finds Patterns\n\n\n\nThen we look for useful patterns in those measurements. Recording those measurements typically results in data and looking for useful patterns typically occurs by applying statistical procedures to the data — hence, data and statistics are probably the two most commonly used tools in an epidemiologist’s toolbox."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#description-prediction-and-causation",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#description-prediction-and-causation",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Description, Prediction, and Causation",
+    "text": "Description, Prediction, and Causation\n\n\nDESCRIPTION\n\n\nPREDICTION\n\n\nCAUSATION\n\n\n\n\nIf that all sounds a little too “deep” to be meaningful, I think the relevant take-away for our purposes is that a typical day in the life of most epidemiologists includes attempting to describe, predict, and/or causally explain health-related phenomena in populations of people, and we typically rely heavily on data, statistics, and assumptions to help us do that.\nThere may be some technical definitions somewhere that clearly distinguish each of these measurement and analysis goals, but in my experience, there is often some overlap between them in applied epidemiology. Further, the same study may attempt to do all three to varying degrees. Having said that, I think there is some value in taking a moment to discuss each individually."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#description-does-not-necessarily-seek-associations",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#description-does-not-necessarily-seek-associations",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Description Does Not Necessarily Seek Associations",
+    "text": "Description Does Not Necessarily Seek Associations\n\nDescription examines distributions of single variables: middle, spread, shape, count, and proportion.\nIt supports resource management and planning.\nExamples:\n\nHow many ventilators are available in Texas?\nWhat is the average age of people living in Florida?\nHow much time elapses, on average, between exposure to a pathogen and the occurrence of disease symptoms?\n\n\n\n\nWhen we say describe in this context, we are not necessarily looking for associations in the data between two or more variables. Sometimes, we are simply looking at the distribution of a single variable/measure. Typically, this is done in the context of resource management and planning, or while conducting exploratory analysis."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#description-can-also-compare-distributions",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#description-can-also-compare-distributions",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Description Can Also Compare Distributions",
+    "text": "Description Can Also Compare Distributions\n\nSometimes description does look for associations.\nIt may compare distributions of single variables within levels of another variable.\nExamples:\n\nAre more ventilators available in Texas or New York?\nAre people older, on average, in Florida or Pennsylvania?\nIs symptom onset quicker, on average, for cholera or E. coli?\n\n\n\n\nHowever, there are also times when we want to compare the distribution of one variable within levels of another variable. Most people would consider these comparisons to be equivalent to measuring associations. You could also make the case that this starts to overlap with prediction. It sort of just depends on how the information is being used."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#measures-of-occurrence-support-description",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#measures-of-occurrence-support-description",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Measures of Occurrence Support Description",
+    "text": "Measures of Occurrence Support Description\n\nCounts\nIncidence\nPrevalence\nOdds\n\nThese measures can be useful on their own and for hypothesis generation.\n\n\nYou can generally think of measures like incidence, prevalence, and odds as descriptive, and we will discuss them in greater detail shortly. Often, these descriptive measures can be very useful in their own right, but they are also used as a foundation for hypothesis generation, prediction, and causal explanation as well.\nPrediction and causal explanation will be the topic of future modules."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#sources-of-uncertainty-few-checklists",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#sources-of-uncertainty-few-checklists",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Sources of Uncertainty: Few Checklists",
+    "text": "Sources of Uncertainty: Few Checklists\n\nFew checklists\n\n\n\nIn epidemiology generally, and parts of this course specifically, it will behoove us to become comfortable with uncertainty. When I say “uncertainty” here, I mean it in both a philosophical sense and in a very practical sense.\nFirst, in a very practical sense, all students of epidemiology (including me) must get comfortable with the lack of reliable check-list procedures in epidemiology. What I mean is that students (including me) often wish that there was a simple checklist or algorithm that we could follow that will always lead us to the correct answer. Unfortunately, there are just very few such checklists in epidemiology – and in life for that matter. In reality, we will often have to rely on diligent research and experimentation to inform critical thinking and many (often untestable) assumptions. Clear-cut procedures that provide valid and reliable black and white answers are the exception rather than the rule. On the bright side, this should also provide us with some measure of job security for the foreseeable future. If epidemiology could simply be reduced to a checklist or algorithm, then our jobs would almost certainly be outsourced to computers in no time."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#sources-of-uncertainty-add-statistical-uncertainty",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#sources-of-uncertainty-add-statistical-uncertainty",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Sources of Uncertainty: Add Statistical Uncertainty",
+    "text": "Sources of Uncertainty: Add Statistical Uncertainty\n\nFew checklists\nStatistical uncertainty\n\n\n\nSecond, we should also get comfortable with uncertainty in the statistical sense, which is something we will try to measure and quantify. Indeed, it may be an oversimplification, but not entirely inaccurate, to define statistics as the science of quantifying uncertainty. At least a certain type of uncertainty. It’s important to understand this type of uncertainty and become comfortable with it because, like we discussed earlier, data and statistics are probably the two most commonly used tools in the modern epidemiologist’s toolbox."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#sources-of-uncertainty-add-causal-uncertainty",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#sources-of-uncertainty-add-causal-uncertainty",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Sources of Uncertainty: Add Causal Uncertainty",
+    "text": "Sources of Uncertainty: Add Causal Uncertainty\n\nFew checklists\nStatistical uncertainty\nCausal uncertainty\n\n\n\nAnd finally, we should get comfortable with uncertainty on the level of our conclusions. In epidemiology, the questions we are called to answer are often causal questions. Did this cause that? If we stop this, can we stop that? On one hand, these questions are usually incredibly exciting and have the potential to lead to real, tangible changes in population health. On the other hand, our two primary tools – data and statistics – are not typically not sufficient to answer such questions in and of themselves.\nThe conclusions that we are able to make are almost always loaded with caveats and assumptions. This is true even for many non-causal questions. However, the questions being asked are often so important that we don’t have the luxury of completely deferring our conclusions until some imaginary later date when the stars align, and the inner workings of the world are magically revealed to us with complete clarity. No, we must often do our best with the information and resources that are available to us now. Therefore, when we make conclusions, we will have to be comfortable with the fact that they may be wholly or partially incorrect, there may be important exceptions, and/or we may have to revisit them again in the future when circumstances, or the information available to us, changes. Even when they are entirely correct, we will often not be able to prove as much with complete certainty. Said another way, our conclusions will rarely, if ever, be exactly correct or provable; however, sometimes they will still be useful for a given purpose.\nThat is an unsettling thought for many people. But it is true nevertheless and we must accept it and become comfortable with it if we want to practice epidemiology. If it makes you feel any better, the history of public health, including epidemiology, is littered with notable examples of useful conclusions that were not entirely correct or not entirely proven, yet still extremely useful. For example, citrus fruit to prevent and cure scurvy, drinking tainted drinking water as a cause of cholera, and tobacco smoke as a cause of lung cancer (and many other diseases)."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#occurrence-is-defined-within-populations",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#occurrence-is-defined-within-populations",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Occurrence Is Defined Within Populations",
+    "text": "Occurrence Is Defined Within Populations\n\nEpidemiology is concerned with the distribution and determinants of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations (Quinlan 2025).\n\n\n\nAnother important concept in epidemiology is that of populations. In fact, our concern with populations is embedded in our very definition. In epidemiology, we generally want to describe a population, predict the occurrence of something in a population, or explain the causes of something in a population.\nBut, what is a population?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#population",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#population",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Population",
+    "text": "Population\n\n\n\nThe simplest definition of a population is a group of people who share characteristics or meet criteria that define membership in the population (Lash et al. 2021).\n\n\n\n\n\n\n\n\nWell, The simplest definition of a population is a group of people who share characteristics or meet criteria that define membership in the population.\nIn other words, we set some criteria of interest and then anyone who meets that criteria is a member of the population. In everyday language, we most often think about the criteria that defines population membership as being geographic. For example, all of the people who live in the United States make up the population of the United States. The criteria that defines them is the fact that they live in the United States.\nBut we certainly do not have to limit our criteria of interest to be geographic. We can use pretty much any criteria that is useful for our purposes. For example, people of a particular age, gender, or race or ethnicity; people who work in a particular occupation; people who participate in a particular behavior or activity; or people who have a particular disease. All the people who meet whatever the criteria are de facto members of the population."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#a-population-also-has-a-time-period",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#a-population-also-has-a-time-period",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "A Population Also Has a Time Period",
+    "text": "A Population Also Has a Time Period\n\n\n\nThe simplest definition of a population is a group of people who share characteristics or meet criteria that define membership in the population [during a defined time period] (Lash et al. 2021).\n\n\n\n\n\n\n\n\nI would add the qualifier “during a defined time period” to this definition. As I hope to show you, the inclusion of the time period of interest is is a critical component of making almost every measure we will use in epidemiology meaningful.\nLater in the course, we will discuss populations, samples, and cohorts in greater depth, and we will see more examples of why the definition of time is so important."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#counts-n-events-in-a-population",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#counts-n-events-in-a-population",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Counts (n): Events in a Population",
+    "text": "Counts (n): Events in a Population\n\n\n\nThis is perhaps the most foundational measure of occurrence we can use.\nHow many people have the characteristic or have experienced the event we are interested in?\nThat is, we simply count the number of people in our sample who experience the event of interest."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#counts-n-group-the-event-categories",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#counts-n-group-the-event-categories",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Counts (n): Group the Event Categories",
+    "text": "Counts (n): Group the Event Categories\n\n\n\nTo make this a little easier, we will visually stratify our sample by event.\nThat means we will gather together all of the people who experienced the event into one group and all of the people who did not experience the event into a second group.\nEach group can be called a stratum."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#counts-n-reveal-the-totals",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#counts-n-reveal-the-totals",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Counts (n): Reveal the Totals",
+    "text": "Counts (n): Reveal the Totals\n\n\n\nAfter doing so, we can simply count the number of people in our event strata. In this case, the count of people who experienced the event is 53.\nIs that enough information? It depends. What is our question?\n\nDo we have enough ventilators?\nDid a lot of people have the event?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-describes-existing-conditions",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-describes-existing-conditions",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Prevalence Describes Existing Conditions",
+    "text": "Prevalence Describes Existing Conditions\n\n\nPrevalence provides information about the presence or absence of a condition of interest, such as a disease, exposure, or characteristic, in a population.\nIt describes the extent to which the condition is present in a population during a given time frame.\nAsking about the prevalence of diabetes means asking how many, or more likely what proportion, of people currently living in the population have diabetes.\n\n\nSource: (Westreich 2019)\n\n\n\nPlaceholder"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-count",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-count",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Prevalence Count",
+    "text": "Prevalence Count\n\nA count of people in a population with the condition of interest during a given time frame.\nAs few as 0 people and as many as all people can be living with the condition.\nRange: 0 to infinity.\n\n\nSource: (Westreich 2019)\n\n\n\n\nPrevalence counts are sometimes useful in communicating the public health importance of a disease condition or in contexts where incidence is difficult to define and so you want to have a sense of numbers of events for surveillance purposes. Unfortunately, prevalence counts are just as often used to overhype that importance by reporting large-sounding numbers without appropriate context. Prevalence counts are therefore of most use when their context is well-understood by the audience: for example, since most residents of the United States have a general sense of the total population of that country, a report to a US audience of the prevalence count of US residents living with COPD (at this writing, about 13 million) might be adequately contextualized. As with all counts, the prevalence count is an integer between 0 however many possible cases exist in the population being examined. For a recurrent event measured over a sufficiently long period of time (e.g., upper respiratory infections), the prevalence count might exceed the number of individuals in the population: however, in such a case, calculating an incidence might be more straightforward."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-proportion",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-proportion",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Prevalence Proportion",
+    "text": "Prevalence Proportion\n\nThe proportion or percentage of the population that presently has the condition of interest or presently has a history of the condition during a specified period, such as a history of cancer in the past 10 years.\nSince none, some, or all population members can have the condition or a history of it, prevalence proportion ranges from 0 to 1, much like a probability.\n\n\nSource: (Westreich 2019)\n\n\n\nThe count of prevalent cases is sometimes of interest all by itself. However, it is more common to report the prevalence as a proportion or percentage."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-proportion-formula",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-proportion-formula",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Prevalence Proportion: Formula",
+    "text": "Prevalence Proportion: Formula\n\\[\n\\text{Prevalence proportion} = \\frac{\\text{Count with the condition}}{\\text{Living members of the population}}\n\\]\n\n\nWe can write the information from the previous slide in a slightly more mathy way like this."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#follow-up-experience-for-10-people",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#follow-up-experience-for-10-people",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Follow-Up Experience for 10 People",
+    "text": "Follow-Up Experience for 10 People\n\n\n\nSo, if we came along and did a study of this group of people in month 2, the prevalence of disease would equal the number of people with disease divided by the number of people in the sample. In this case, that would be 2 people (p1 and p2) divided by 10."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-proportion-at-month-2",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-proportion-at-month-2",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Prevalence Proportion at Month 2",
+    "text": "Prevalence Proportion at Month 2\n\n\n\n\n\n\n\\[\n\\frac{\\text{Count with the condition}}{\\text{Living members of the population}}\n\\]\n\\[\n= \\frac{2}{10} = 0.20 = 20\\%\n\\]\n\n\n\n\nSo, if we came along and did a study of this group of people in month 2, the prevalence of the condition of interest – in this case disease – would equal the number of people with disease divided by the number of people in the population. In this case, that would be 2 people (p1 and p2) divided by 10."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#interpreting-prevalence-proportion",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#interpreting-prevalence-proportion",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Interpreting Prevalence Proportion",
+    "text": "Interpreting Prevalence Proportion\n\n\n\n\n\n\nAmong the members of the population, the prevalence of disease in month 2 was 0.20.\nSaid another way, 20% of the population had disease in month 2."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#point-prevalence-and-period-prevalence",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#point-prevalence-and-period-prevalence",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Point Prevalence and Period Prevalence",
+    "text": "Point Prevalence and Period Prevalence\n\n\nPoint prevalence: prevalence of a condition of interest at a single point in time.\n\n\n\nPeriod prevalence: prevalence of a condition of interest over a period of time.\n\n\n\n\nAs the duration of the period shrinks, period prevalence converges to point prevalence.\n\n\n\n\nThere is no hard-and-fast rule for what window is sufficiently short to count as point prevalence.\n\n\n\nSource: (Westreich 2019)\n\n\n\nOn the other hand, point prevalence is often operationalized (put into practice) as “period prevalence over a reasonably short time window.” - For example, if you want to know the prevalence of HIV infection in a cohort of 1,000 people, it is difficult to imagine getting blood samples to test from all those people simultaneously (e.g., if all 1,000 participants give blood at exactly 1:00 pm this Friday). In practice, you would obtain blood samples over as short a time period as possible and test them thereafter.\nAlternatively, you could also define such a prevalence as “point prevalence at time of testing” while acknowledging that the testing occurred at a different calendar time for each participant (Westreich 2019).\nSome textbooks and authors spend a fair amount of time trying to draw a distinction between the two. Because the concept is pretty nebulous, I tend to not worry about it too much. Instead, I prefer to just be clear about the time frame used for the calculation."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-odds",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-odds",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Prevalence Odds",
+    "text": "Prevalence Odds\n\nPrevalence odds is a simple function of prevalence proportion, just as odds in general is a simple function of probability.\nIt is typically reported for convenience or desirable statistical properties.\nPrevalence odds is prevalence proportion divided by 1 minus prevalence proportion.\nRange: 0 to infinity.\n\n\nSource: (Westreich 2019)\n\n\n\nWhy do we calculate this? Sometimes it is mathematically convenient."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-odds-formula",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-odds-formula",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Prevalence Odds: Formula",
+    "text": "Prevalence Odds: Formula\n\\[\n\\text{Prevalence odds} = \\frac{\\text{Prevalence proportion}}{1 - \\text{Prevalence proportion}}\n\\]\n\n\nWe can write the information from the previous slide in a slightly more mathy way like this."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-odds-at-month-2",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#prevalence-odds-at-month-2",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Prevalence Odds at Month 2",
+    "text": "Prevalence Odds at Month 2\n\n\n\n\n\n\n\\[\n\\frac{\\text{Prevalence proportion}}{1 - \\text{Prevalence proportion}}\n\\]\n\\[\n\\text{Prevalence odds} = \\frac{0.20}{1 - 0.20} = 0.25\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#interpreting-prevalence-odds",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#interpreting-prevalence-odds",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Interpreting Prevalence Odds",
+    "text": "Interpreting Prevalence Odds\n\n\n\n\n\n\nAmong the members of the population, the odds of disease in month 2 were 0.25.\nFor every person who had disease at month 2, there were four people who did not."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#questions",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#questions",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "Questions?",
+    "text": "Questions?\n\n\nWhat questions do you have?\n\n\nRespond here\n\n\n\nReveal the answer: never. Show the distribution: no. Responses are anonymous. If polling fails: Ask students to share remaining questions aloud and record unresolved topics for follow-up."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#references",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#references",
+    "title": "Measures of Disease Occurrence - Part 1",
+    "section": "References",
+    "text": "References\n\n\nLash, Timothy L., Tyler J. VanderWeele, Sebastien Haneuse, and Kenneth J. Rothman. 2021. Modern Epidemiology. 4th ed. Wolters Kluwer.\n\n\nQuinlan, Scott. 2025. Friis’ Epidemiology 101. 3rd ed. Jones & Bartlett Learning.\n\n\nWestreich, Daniel. 2019. Epidemiology by Design: A Causal Approach to the Health Sciences. Oxford University Press."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "APHS 20203: Epidemiology & Biostatistics",
+    "section": "",
+    "text": "Interactive slide decks for APHS 20203.\n\n\n\nView interactive slides\nDownload PDF"
+  },
+  {
+    "objectID": "index.html#module-1-welcome-and-overview",
+    "href": "index.html#module-1-welcome-and-overview",
+    "title": "APHS 20203: Epidemiology & Biostatistics",
+    "section": "",
+    "text": "View interactive slides\nDownload PDF"
+  },
+  {
     "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#course-learning-objectives",
     "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#course-learning-objectives",
     "title": "Introduction to Epidemiology",
@@ -103,19 +355,5 @@
     "title": "Introduction to Epidemiology",
     "section": "References",
     "text": "References\n\n\nQuinlan, Scott. 2025. Friis’ Epidemiology 101. 3rd ed. Jones & Bartlett Learning."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "APHS 20203: Epidemiology & Biostatistics",
-    "section": "",
-    "text": "Interactive slide decks for APHS 20203.\n\n\n\nView interactive slides\nDownload PDF"
-  },
-  {
-    "objectID": "index.html#module-1-welcome-and-overview",
-    "href": "index.html#module-1-welcome-and-overview",
-    "title": "APHS 20203: Epidemiology & Biostatistics",
-    "section": "",
-    "text": "View interactive slides\nDownload PDF"
   }
 ]
