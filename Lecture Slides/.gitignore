@@ -1,2 +1,10 @@
 /.quarto/
 **/*.quarto_ipynb
+/_site/
+
+# Generated automatically by the Quarto pre-render hook.
+**/quiz-slides.qmd
+**/quiz-slides/
+**/quiz-handout.md
+**/qr/
+**/*_files/
