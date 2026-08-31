@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.36">
 
-  <title>APHS 20203 Lecture Slides – Measures of Disease Occurrence</title>
+  <title>APHS 20203 Lecture Slides – Measures of Disease Occurrence - Part 1</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -50,7 +50,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-149ffbafd5db7873a3804771c7d7b8be.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-29634940d11382a2be922cc98af8af7c.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -150,119 +150,187 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Measures of Disease Occurrence</h1>
+  <h1 class="title">Measures of Disease Occurrence - Part 1</h1>
   <p class="subtitle">APHS 20203 • Epidemiology &amp; Biostatistics</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
+<section id="course-learning-objectives" class="slide level2">
+<h2>Course Learning objectives</h2>
+<ol type="1">
+<li>Define epidemiology and key associated terminology, especially confounding.</li>
+<li>Distinguish among association, prediction, and causation.</li>
+<li>Explain the Rothman model of sufficient-component causes (RMSCC) and the concept of multifactorial causation.</li>
+<li>Explain the limitations of anecdotal evidence in drawing epidemiologic conclusions.</li>
+<li>Explain why disseminating risk information is sometimes necessary but rarely sufficient to improve population health.</li>
+</ol>
+<aside class="notes">
+<p>By the end of this course, my goal is for you to be able to:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="lecture-learning-objectives" class="slide level2">
+<h2>Lecture Learning objectives</h2>
+<!-- Revise these objectives. -->
+<p>By the end of this lesson, you’ll be able to:</p>
+<ol type="1">
+<li>Define counts and rates.</li>
+<li>Distinguish crude, specific, adjusted rates.</li>
+<li>Compute and interpret prevalence and incidence.</li>
+</ol>
+</section>
 <section id="measurement-uncertainty-and-study-design" class="slide level2 three-step">
 <h2>Measurement, Uncertainty, and Study Design</h2>
-<!-- Source PDF page 2 -->
-<div class="grid-3 panel-grid-spaced">
-<div class="panel">
-<p><strong>MEASUREMENT</strong></p>
-</div>
-<div class="panel">
-<p><strong>UNCERTAINTY</strong></p>
-</div>
-<div class="panel">
-<p><strong>STUDY DESIGN</strong></p>
-</div>
-</div>
+
+<img src="assets/measures_uncertainty_study_design.png" class="r-stretch" style="display: block; width: 94%; margin-right: auto; margin-left: auto;" alt="Three-part epidemiologic framework. Measurement is represented by a measuring tape, uncertainty by a question mark, and study design by a study plan with a pencil."><aside class="notes">
+<ul>
+<li>We have already had some exposure to the basics of what epidemiology <em>is</em>.</li>
+<li>This week, we will begin to learn how to <em>do</em> epidemiology.</li>
+<li>However, before getting into specific calcualtions, I want to briefly discuss the concepts of measurement, uncertainty, and study design.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="epidemiology-begins-with-occurrence-and-distribution" class="slide level2 compact">
-<h2>Epidemiology Begins With Occurrence and Distribution</h2>
-<!-- Source PDF page 3 -->
+<section id="what-is-epidemiology" class="slide level2 compact">
+<h2>What is Epidemiology?</h2>
+<div class="fragment">
 <blockquote>
-<p>“The study of the occurrence and distribution of health-related states or events in specified populations, including the study of the determinants influencing such states, and the application of this knowledge to control the health problems.”</p>
+<p>Epidemiology is concerned with the distribution and determinants of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations <span class="citation" data-cites="quinlan2025">(<a href="#/references" role="doc-biblioref" onclick="">Quinlan 2025</a>)</span>.</p>
 </blockquote>
-<p class="source-line">
-Source: <span class="citation" data-cites="porta2008">(<a href="#/references" role="doc-biblioref" onclick="">Porta 2008</a>)</span>
-</p>
+</div>
+<aside class="notes">
+<ul>
+<li>We spent some time disecting this definition last week. I don’t plan to do that again today.</li>
+<li>However, it may be worth taking a step back and thinking about <em>how</em> we study the occurrence and distribution of these things.</li>
+<li>Do we consult powerful oracles or deities? Not typically.</li>
+<li>Do we go into a deep meditative state until the answers just occur to us? Not typically. At least doing that alone would not typically be very convincing evidence to most people.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="measurement-makes-characteristics-observable" class="slide level2 compact">
+<section id="measurement-makes-characteristics-observable" class="slide level2 compact measurement-feature">
 <h2>Measurement Makes Characteristics Observable</h2>
-<!-- Source PDF page 4 -->
-<div class="grid-2 align-center">
-<div class="panel">
-<p><strong>MEASUREMENT</strong></p>
+<div class="measurement-layout">
+<div class="measurement-visual">
+<p><img src="assets/measurement.png" alt="Measurement represented by a measuring tape."></p>
+</div>
+<div class="measurement-copy">
+<blockquote>
+<p>Epidemiology is concerned with the <strong>distribution</strong> and determinants of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations <span class="citation" data-cites="quinlan2025">(<a href="#/references" role="doc-biblioref" onclick="">Quinlan 2025</a>)</span>.</p>
+</blockquote>
 <ul>
 <li>Observe and assign values to relevant characteristics.</li>
 <li>Look for patterns among those values.</li>
 </ul>
 </div>
-<div class="definition-copy">
-<blockquote>
-<p>“The study of the occurrence and distribution of health-related states or events in specified populations, including the study of the determinants influencing such states, and the application of this knowledge to control the health problems.”</p>
-</blockquote>
 </div>
-</div>
-<p class="source-line">
-Source: <span class="citation" data-cites="porta2008">(<a href="#/references" role="doc-biblioref" onclick="">Porta 2008</a>)</span>
-</p>
+<aside class="notes">
+<ul>
+<li>Instead, we almost always study health-related states and populations by <strong>measuring</strong> characteristics of those states or populations.</li>
+<li>And what do we mean by measure?</li>
+<li>Typically, that means that we observe some people, places, or events that are thought to be relevant to the population we are interested in. - As we are observing, we assign and record values about the things we are observing that are thought to be relevant.</li>
+<li>For example, we might ask someone to step on a scale. We could observe their weight and record it somewhere. Or, we might ask someone to fill out a questionnaire about their thoughts and feelings. We could then record those responses somewhere as well.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="what-does-it-mean-to-observe" class="slide level2 compact">
 <h2>What Does It Mean to Observe?</h2>
-<!-- Source PDF page 5 -->
-<div class="grid-2 align-center">
-<div class="panel">
-<p><strong>MEASUREMENT</strong></p>
-<p>Observe and assign values to relevant characteristics.</p>
+<div class="measurement-layout">
+<div class="measurement-visual">
+<p><img src="assets/measurement.png" alt="Measurement represented by a measuring tape."></p>
 </div>
+<div class="measurement-copy">
+<blockquote>
+<p>Epidemiology is concerned with the distribution and <strong>determinants</strong> of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations <span class="citation" data-cites="quinlan2025">(<a href="#/references" role="doc-biblioref" onclick="">Quinlan 2025</a>)</span>.</p>
+</blockquote>
+<ul>
+<li>Observe and assign values to relevant characteristics.</li>
+<li>Look for patterns among those values.</li>
+</ul>
 <div class="panel">
 <p><strong>OBSERVE</strong></p>
 <p>“To be aware of” or “have knowledge about.”</p>
 </div>
 </div>
+</div>
+<aside class="notes">
+<ul>
+<li>Notice how we frequently use the word “observe” in epidemiology.</li>
+<li>In everyday speech, we tend to think of observe as meaning seeing something take place in front of our eyes.</li>
+<li>In epidemiology, it is common to use the word observe more broadly. Something closer to simply meaning ”to be aware of” or ”have knowledge about”.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="measurement-produces-data-statistics-finds-patterns" class="slide level2 three-step">
+<section id="measurement-produces-data-statistics-finds-patterns" class="slide level2 three-step compact">
 <h2>Measurement Produces Data; Statistics Finds Patterns</h2>
-<!-- Source PDF page 6 -->
-<div class="grid-3 align-center panel-grid-spaced">
-<div class="panel">
-<p><strong>MEASUREMENT</strong></p>
-<p>Observe characteristics.</p>
-</div>
-<div class="panel">
-<p><strong>DATA</strong></p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: right;">X</th>
-<th style="text-align: center;">Y</th>
-<th style="text-align: right;">Z</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: center;">A</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: center;">B</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: center;">C</td>
-<td style="text-align: right;">1</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="panel">
-<p><strong>STATISTICS</strong></p>
-<p>Look for patterns among the values.</p>
-</div>
-</div>
+
+<img src="assets/measurement_data_statistics.png" class="r-stretch" style="display: block; width: 96%; margin-right: auto; margin-left: auto;" alt="Measurement leads to data, then statistics. A measuring tape points to a data table with columns X, Y, and Z, which points to a distribution curve."><aside class="notes">
+<ul>
+<li>Then we look for useful patterns in those measurements. Recording those measurements typically results in data and looking for useful patterns typically occurs by applying statistical procedures to the data — hence,&nbsp;data and statistics are probably the two most commonly used tools in an epidemiologist’s toolbox.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="description-prediction-and-causation" class="slide level2">
 <h2>Description, Prediction, and Causation</h2>
-<!-- Source PDF page 7 -->
 <div class="grid-3 panel-grid-spaced">
 <div class="panel">
 <p><strong>DESCRIPTION</strong></p>
@@ -274,10 +342,25 @@ Source: <span class="citation" data-cites="porta2008">(<a href="#/references" ro
 <p><strong>CAUSATION</strong></p>
 </div>
 </div>
+<aside class="notes">
+<ul>
+<li>If that all sounds a little too “deep” to be meaningful, I think the relevant take-away for our purposes is that a typical day in the life of most epidemiologists includes attempting to <strong>describe</strong>, <strong>predict</strong>, and/or <strong>causally explain</strong> health-related phenomena in populations of people, and we typically rely heavily on data, statistics, and assumptions to help us do that.</li>
+<li>There may be some technical definitions somewhere that clearly distinguish each of these measurement and analysis goals, but in my experience, there is often some overlap between them in applied epidemiology. Further, the same study may attempt to do all three to varying degrees. Having said that, I think there is some value in taking a moment to discuss each individually.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="description-does-not-necessarily-seek-associations" class="slide level2 compact">
 <h2>Description Does Not Necessarily Seek Associations</h2>
-<!-- Source PDF page 8 -->
 <ul>
 <li>Description examines distributions of single variables: middle, spread, shape, count, and proportion.</li>
 <li>It supports resource management and planning.</li>
@@ -288,10 +371,24 @@ Source: <span class="citation" data-cites="porta2008">(<a href="#/references" ro
 <li>How much time elapses, on average, between exposure to a pathogen and the occurrence of disease symptoms?</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<ul>
+<li>When we say describe in this context, we are not necessarily looking for associations in the data between two or more variables. Sometimes, we are simply looking at the distribution of a single variable/measure. Typically, this is done in the context of resource management and planning, or while conducting exploratory analysis.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="description-can-also-compare-distributions" class="slide level2 compact">
 <h2>Description Can Also Compare Distributions</h2>
-<!-- Source PDF page 9 -->
 <ul>
 <li>Sometimes description does look for associations.</li>
 <li>It may compare distributions of single variables within levels of another variable.</li>
@@ -302,10 +399,24 @@ Source: <span class="citation" data-cites="porta2008">(<a href="#/references" ro
 <li>Is symptom onset quicker, on average, for cholera or <em>E. coli</em>?</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<ul>
+<li>However, there are also times when we want to compare the distribution of one variable within levels of another variable. Most people would consider these comparisons to be equivalent to measuring associations. You could also make the case that this starts to overlap with prediction. It sort of just depends on how the information is being used.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="measures-of-occurrence-support-description" class="slide level2">
 <h2>Measures of Occurrence Support Description</h2>
-<!-- Source PDF page 10 -->
 <ul>
 <li>Counts</li>
 <li>Incidence</li>
@@ -313,433 +424,251 @@ Source: <span class="citation" data-cites="porta2008">(<a href="#/references" ro
 <li>Odds</li>
 </ul>
 <p>These measures can be useful on their own and for hypothesis generation.</p>
+<aside class="notes">
+<ul>
+<li>You can generally think of measures like incidence, prevalence, and odds as descriptive, and we will discuss them in greater detail shortly. Often, these descriptive measures can be very useful in their own right, but they are also used as a foundation for hypothesis generation, prediction, and causal explanation as well.</li>
+<li>Prediction and causal explanation will be the topic of future modules.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="sources-of-uncertainty-few-checklists" class="slide level2 uncertainty-list">
 <h2>Sources of Uncertainty: Few Checklists</h2>
-<!-- Source PDF page 11 -->
 <ol type="1">
 <li>Few checklists</li>
 </ol>
+<aside class="notes">
+<ul>
+<li>In epidemiology generally, and parts of this course specifically, it will behoove us to become comfortable with uncertainty. When I say “uncertainty” here, I mean it in both a philosophical sense and in a very practical sense.</li>
+<li>First, in a very practical sense, all students of epidemiology (including me) must get comfortable with the lack of reliable check-list procedures in epidemiology. What I mean is that students (including me) often wish that there was a simple checklist or algorithm that we could follow that will always lead us to the correct answer. Unfortunately, there are just very few such checklists in epidemiology – and in life for that matter. In reality, we will often have to rely on diligent research and experimentation to inform critical thinking and many (often untestable) assumptions. Clear-cut procedures that provide valid and reliable black and white answers are the exception rather than the rule. On the bright side, this should also provide us with some measure of job security for the foreseeable future. If epidemiology could simply be reduced to a checklist or algorithm, then our jobs would almost certainly be outsourced to computers in no time.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="sources-of-uncertainty-add-statistical-uncertainty" class="slide level2 uncertainty-list">
 <h2>Sources of Uncertainty: Add Statistical Uncertainty</h2>
-<!-- Source PDF page 12 -->
 <ol type="1">
 <li>Few checklists</li>
 <li>Statistical uncertainty</li>
 </ol>
+<aside class="notes">
+<ul>
+<li>Second, we should also get comfortable with uncertainty in the statistical sense, which is something we will try to measure and quantify. Indeed, it may be an oversimplification, but not entirely inaccurate, to define statistics as the science of quantifying uncertainty. At least a certain type of uncertainty. It’s important to understand this type of uncertainty and become comfortable with it because, like we discussed earlier, data and statistics are probably the two most commonly used tools in the modern epidemiologist’s toolbox.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="sources-of-uncertainty-add-causal-uncertainty" class="slide level2 uncertainty-list">
 <h2>Sources of Uncertainty: Add Causal Uncertainty</h2>
-<!-- Source PDF page 13 -->
 <ol type="1">
 <li>Few checklists</li>
 <li>Statistical uncertainty</li>
 <li>Causal uncertainty</li>
 </ol>
+<aside class="notes">
+<ul>
+<li>And finally, we should get comfortable with uncertainty on the level of our conclusions. In epidemiology, the questions we are called to answer are often causal questions. Did this cause that? If we stop this, can we stop that? On one hand, these questions are usually incredibly exciting and have the potential to lead to real, tangible changes in population health. On the other hand, our two primary tools – data and statistics – are not typically not sufficient to answer such questions in and of themselves.</li>
+<li>The conclusions that we are able to make are almost always loaded with caveats and assumptions. This is true even for many non-causal questions. However, the questions being asked are often so important that we don’t have the luxury of completely deferring our conclusions until some imaginary later date when the stars align, and the inner workings of the world are magically revealed to us with complete clarity. No, we must often do our best with the information and resources that are available to us now. Therefore, when we make conclusions, we will have to be comfortable with the fact that they may be wholly or partially incorrect, there may be important exceptions, and/or we may have to revisit them again in the future when circumstances, or the information available to us, changes. Even when they are entirely correct, we will often not be able to prove as much with complete certainty. Said another way, our conclusions will rarely, if ever, be exactly correct or provable; however, sometimes they will still be useful for a given purpose.</li>
+<li>That is an unsettling thought for many people. But it is true nevertheless and we must accept it and become comfortable with it if we want to practice epidemiology. If it makes you feel any better, the history of public health, including epidemiology, is littered with notable examples of useful conclusions that were not entirely correct or not entirely proven, yet still extremely useful. For example, citrus fruit to prevent and cure scurvy, drinking tainted drinking water as a cause of cholera, and tobacco smoke as a cause of lung cancer (and many other diseases).&nbsp;</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="occurrence-is-defined-within-populations" class="slide level2 compact">
 <h2>Occurrence Is Defined Within Populations</h2>
-<!-- Source PDF page 14 -->
 <blockquote>
-<p>“The study of the occurrence and distribution of health-related states or events in specified <strong>populations</strong>, including the study of the determinants influencing such states, and the application of this knowledge to control the health problems.”</p>
+<p>Epidemiology is concerned with the distribution and determinants of health and diseases, morbidity, injuries, disability, and mortality in <strong>populations</strong>. Epidemiologic studies are applied to the control of health problems in populations <span class="citation" data-cites="quinlan2025">(<a href="#/references" role="doc-biblioref" onclick="">Quinlan 2025</a>)</span>.</p>
 </blockquote>
-<p class="source-line">
-Source: <span class="citation" data-cites="porta2008">(<a href="#/references" role="doc-biblioref" onclick="">Porta 2008</a>)</span>
-</p>
+<aside class="notes">
+<ul>
+<li>Another important concept in epidemiology is that of populations. In fact, our concern with populations is embedded in our very definition. In epidemiology, we generally want to describe a population, predict the occurrence of something in a population, or explain the causes of something in a population.</li>
+<li>But, what is a population?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="population" class="slide level2">
 <h2>Population</h2>
-<!-- Source PDF page 15 -->
+<div class="grid-2 align-center">
 <div class="definition-copy">
 <blockquote>
-<p>“The simplest definition of a <strong>population</strong> is a group of people who share characteristics or meet criteria that define membership in the population.”</p>
+<p>The simplest definition of a <strong>population</strong> is a group of people who share characteristics or meet criteria that define membership in the population <span class="citation" data-cites="lash2021">(<a href="#/references" role="doc-biblioref" onclick="">Lash et al. 2021</a>)</span>.</p>
 </blockquote>
 </div>
-<p class="source-line">
-Source: <span class="citation" data-cites="lash2021">(<a href="#/references" role="doc-biblioref" onclick="">Lash et al. 2021</a>)</span>
-</p>
+<div class="population-visual">
+<p><img src="assets/population_1.png" style="display: block; width: auto; max-width: 100%; max-height: 450px; margin: 0 auto;" alt="A grid of uniform brown dots representing the members of a population."></p>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Well, The simplest definition of a population is a group of people who share characteristics or meet criteria that define membership in the population.</li>
+<li>In other words, we set some criteria of interest and then anyone who meets that criteria is a member of the population. In everyday language, we most often think about the criteria that defines population membership as being geographic. For example, all of the people who live in the United States make up the population of the United States. The criteria that defines them is the fact that they live in the United States.</li>
+<li>But we certainly do not have to limit our criteria of interest to be geographic. We can use pretty much any criteria that is useful for our purposes. For example, people of a particular age, gender, or race or ethnicity; people who work in a particular occupation; people who participate in a particular behavior or activity; or people who have a particular disease. All the people who meet whatever the criteria are de facto members of the population.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="a-population-also-has-a-time-period" class="slide level2">
 <h2>A Population Also Has a Time Period</h2>
-<!-- Source PDF page 16 -->
+<div class="grid-2 align-center">
 <div class="definition-copy">
 <blockquote>
-<p>“The simplest definition of a <strong>population</strong> is a group of people <strong>during a defined time period</strong> who share characteristics or meet criteria that define membership in the population.”</p>
+<p>The simplest definition of a <strong>population</strong> is a group of people who share characteristics or meet criteria that define membership in the population [<strong>during a defined time period</strong>] <span class="citation" data-cites="lash2021">(<a href="#/references" role="doc-biblioref" onclick="">Lash et al. 2021</a>)</span>.</p>
 </blockquote>
 </div>
-<p class="source-line">
-Source: <span class="citation" data-cites="lash2021">(<a href="#/references" role="doc-biblioref" onclick="">Lash et al. 2021</a>)</span>
-</p>
-</section>
-<section id="closed-and-open-populations" class="slide level2 compact">
-<h2>Closed and Open Populations</h2>
-<!-- Source PDF page 17 -->
-<div class="grid-2">
-<div class="panel">
-<p><strong>CLOSED POPULATION</strong></p>
-<ul>
-<li>After the population is defined, it does not add new members over time.</li>
-<li>It loses members only to death.</li>
-</ul>
-</div>
-<div class="panel">
-<p><strong>OPEN POPULATION</strong></p>
-<ul>
-<li>It may gain members through birth or as people meet the membership definition.</li>
-<li>It loses members as people stop meeting the criteria or die.</li>
-</ul>
+<div class="population-visual">
+<p><img src="assets/population_1.png" style="display: block; width: auto; max-width: 100%; max-height: 450px; margin: 0 auto;" alt="A grid of uniform brown dots representing the members of a population."></p>
 </div>
 </div>
-<p class="source-line">
-Source: <span class="citation" data-cites="lash2021">(<a href="#/references" role="doc-biblioref" onclick="">Lash et al. 2021</a>)</span>
-</p>
-</section>
-<section id="closed-vs.-open-populations-calendar-time" class="slide level2 compact">
-<h2>Closed vs.&nbsp;Open Populations: Calendar Time</h2>
-<!-- Source PDF page 18 -->
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: right;">Person</th>
-<th style="text-align: center;">Enters</th>
-<th style="text-align: center;">Observed through</th>
-<th style="text-align: left;">Calendar-time experience</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: center;">9/1</td>
-<td style="text-align: center;">9/28</td>
-<td style="text-align: left;">Four weeks</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: center;">9/7</td>
-<td style="text-align: center;">9/28</td>
-<td style="text-align: left;">Three weeks</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: center;">9/14</td>
-<td style="text-align: center;">9/28</td>
-<td style="text-align: left;">Two weeks</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">4</td>
-<td style="text-align: center;">9/21</td>
-<td style="text-align: center;">9/28</td>
-<td style="text-align: left;">One week</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="closed-vs.-open-populations-event-time" class="slide level2 compact">
-<h2>Closed vs.&nbsp;Open Populations: Event Time</h2>
-<!-- Source PDF page 19 -->
-<p>Aligning each person at entry changes the time scale from calendar time to event time.</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: right;">Person</th>
-<th style="text-align: right;">Event-time start</th>
-<th style="text-align: right;">Observed through</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="what-happens-beyond-the-observed-event-time" class="slide level2 compact">
-<h2>What Happens Beyond the Observed Event Time?</h2>
-<!-- Source PDF page 20 -->
-<!-- REVIEW: The source depicts Person 2's experience after event time 2 as unknown with a question mark, but it does not state the intended prompt or answer. -->
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: right;">Person</th>
-<th style="text-align: right;">Observed event time</th>
-<th style="text-align: left;">After observation ends</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0–4</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">0–2</td>
-<td style="text-align: left;">?</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">0–2</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">0–1</td>
-<td style="text-align: left;">—</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="examples-of-closed-and-open-populations" class="slide level2 compact">
-<h2>Examples of Closed and Open Populations</h2>
-<!-- Source PDF page 21 -->
+<aside class="notes">
 <ul>
-<li>Currently enrolled in Epidemiology III: <strong>open population</strong></li>
-<li>Ever enrolled in Epidemiology III as of today: <strong>closed population</strong></li>
-<li>Resident of Texas: <strong>open population</strong></li>
-<li>People aged 65 or older as of today: <strong>closed population</strong></li>
-<li>People aged 20 to 30 as of today: <strong>open population</strong></li>
+<li>I would add the qualifier “during a defined time period” to this definition. As I hope to show you, the inclusion of the time period of interest is is a critical component of making almost every measure we will use in epidemiology meaningful.</li>
+<li>Later in the course, we will discuss populations, samples, and cohorts in greater depth, and we will see more examples of why the definition of time is so important.</li>
 </ul>
-</section>
-<section id="source-and-target-populations" class="slide level2 compact">
-<h2>Source and Target Populations</h2>
-<!-- Source PDF page 22 -->
-<p><strong>Source population:</strong> The population from which persons will be sampled and included in a measurement of disease frequency.</p>
-<ul>
-<li>The source population of the original Framingham Heart Study included men and women aged 30 to 62 who were residents of Framingham, Massachusetts, in 1948.</li>
-</ul>
-<p><strong>Target population:</strong> The group of people about which the scientific or public-health question asks and for whom the disease-frequency information will be relevant, we hope.</p>
-<ul>
-<li>Information about cardiac-disease risk factors from the Framingham Heart Study contributed to a nearly 75% decline in cardiovascular-disease mortality in most industrialized societies.</li>
-</ul>
-<p class="source-line">
-Sources: <span class="citation" data-cites="lash2021 westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Lash et al. 2021</a>; <a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
-</p>
-</section>
-<section id="study-population-and-sample" class="slide level2 compact">
-<h2>Study Population and Sample</h2>
-<!-- Source PDF page 23 -->
-<p><strong>Study population:</strong> The subset, up to a complete census, of the source population whose experience is included in a measurement of disease frequency.</p>
-<ul>
-<li>In the Framingham Heart Study, not everyone eligible was invited and not everyone invited agreed. Those who were invited, agreed, and were free of prevalent cardiovascular disease constituted the study population.</li>
-</ul>
-<p><strong>Sample:</strong> A selected subset of a population. A sample may be random or nonrandom and representative or nonrepresentative.</p>
-<p class="source-line">
-Sources: <span class="citation" data-cites="lash2021 porta2008">(<a href="#/references" role="doc-biblioref" onclick="">Lash et al. 2021</a>; <a href="#/references" role="doc-biblioref" onclick="">Porta 2008</a>)</span>
-</p>
-</section>
-<section id="cohorts" class="slide level2 compact">
-<h2>Cohorts</h2>
-<!-- Source PDF page 24 -->
-<ul>
-<li>A <strong>cohort</strong> is a group of persons whose membership is defined permanently, or a population in which satisfying a set of defining events makes membership permanent.</li>
-<li>The term is often used as a synonym for “sample” in a cohort study.</li>
-<li>Every cohort member is enumerated: known or listed. This is not necessarily true of a closed population.</li>
-</ul>
-<p class="source-line">
-Source: <span class="citation" data-cites="lash2021">(<a href="#/references" role="doc-biblioref" onclick="">Lash et al. 2021</a>)</span>
-</p>
-</section>
-<section id="measures-arise-from-observations-and-experiments" class="slide level2 study-design compact">
-<h2>Measures Arise From Observations and Experiments</h2>
-<!-- Source PDF page 25 -->
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Measures</th>
-<th style="text-align: left;">Design types</th>
-<th style="text-align: left;">Typical evidential position</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>Observations</strong></td>
-<td style="text-align: left;">Case descriptions; ecological; cross-sectional; case-control; cohort</td>
-<td style="text-align: left;">Typically less convincing</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Experiments</strong></td>
-<td style="text-align: left;">Non-randomized; randomized</td>
-<td style="text-align: left;">Typically more convincing</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="terminology-recap-population-types" class="slide level2 recap-table">
-<h2>Terminology Recap: Population Types</h2>
-<!-- Source PDF page 26 -->
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Term</th>
-<th style="text-align: left;">Definition</th>
-<th style="text-align: left;">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Population</td>
-<td style="text-align: left;">A group of people during a defined time period who share characteristics or meet membership criteria.</td>
-<td style="text-align: left;">The population of the United States.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Closed population</td>
-<td style="text-align: left;">After the population is defined, it adds no new members and loses members only to death.</td>
-<td style="text-align: left;">People who had a flu vaccine in 2022.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Open population</td>
-<td style="text-align: left;">During a defined time frame, it gains members through birth or newly met criteria and/or loses members when criteria are no longer met or through loss to follow-up.</td>
-<td style="text-align: left;">People who have the flu.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="terminology-recap-source-and-target-populations" class="slide level2 recap-table">
-<h2>Terminology Recap: Source and Target Populations</h2>
-<!-- Source PDF page 27 -->
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Term</th>
-<th style="text-align: left;">Definition</th>
-<th style="text-align: left;">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Source population</td>
-<td style="text-align: left;">The population from which persons will be sampled and included in a measurement of disease frequency.</td>
-<td style="text-align: left;">Men and women aged 30 to 62 who lived in Framingham, Massachusetts, in 1948.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Target population</td>
-<td style="text-align: left;">The group addressed by the scientific or public-health question and for whom the disease-frequency information will be relevant, we hope.</td>
-<td style="text-align: left;">Industrialized societies to which Framingham findings about cardiac-disease risk factors were applied.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="terminology-recap-study-population-and-sample" class="slide level2 recap-table">
-<h2>Terminology Recap: Study Population and Sample</h2>
-<!-- Source PDF page 28 -->
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Term</th>
-<th style="text-align: left;">Definition</th>
-<th style="text-align: left;">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Study population</td>
-<td style="text-align: left;">The subset, up to a census, of the source population whose experience is included in the measurement.</td>
-<td style="text-align: left;">Framingham invitees who agreed to participate and were free of prevalent cardiovascular disease.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Sample</td>
-<td style="text-align: left;">A selected subset of a population; it may be random or nonrandom and representative or nonrepresentative.</td>
-<td style="text-align: left;">Another, probably more common, term for study population.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="terminology-recap-cohort" class="slide level2 recap-table">
-<h2>Terminology Recap: Cohort</h2>
-<!-- Source PDF page 29 -->
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Term</th>
-<th style="text-align: left;">Definition</th>
-<th style="text-align: left;">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Cohort</td>
-<td style="text-align: left;">A group whose membership is permanent once a defining set of events is satisfied. A cohort may be open or closed and is often used as a synonym for “sample” in a cohort study.</td>
-<td style="text-align: left;">Similar to a population, except every cohort member is enumerated: known or listed.</td>
-</tr>
-</tbody>
-</table>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="counts-n-events-in-a-population" class="slide level2 count-slide">
 <h2>Counts (n): Events in a Population</h2>
-<!-- Source PDF page 30 -->
-<div class="count-bar" aria-label="A population contains both people with the event and people without the event.">
-<p><span class="yes" style="width: 53%"></span><span class="no" style="width: 47%"></span></p>
-</div>
-<p>The population contains people with the event and people without the event.</p>
+
+<img src="assets/counts_01.png" class="r-stretch" style="display: block; width: 92%; margin-right: auto; margin-left: auto;" alt="A grid of 100 people shows 53 with the event in brown and 47 without the event in blue, with a legend identifying the colors."><aside class="notes">
+<ul>
+<li>This is perhaps the most foundational measure of occurrence we can use.</li>
+<li>How many people have the characteristic or have experienced the event we are interested in?</li>
+<li>That is, we simply count the number of people in our sample who experience the event of interest.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="counts-n-group-the-event-categories" class="slide level2 count-slide">
 <h2>Counts (n): Group the Event Categories</h2>
-<!-- Source PDF page 31 -->
-<div class="count-bar" aria-label="People with and without the event are grouped into two categories.">
-<p><span class="yes" style="width: 53%"></span><span class="no" style="width: 47%"></span></p>
-</div>
-<p>Grouping categories makes counting easier.</p>
+
+<img src="assets/counts_02.png" class="r-stretch" style="display: block; width: 92%; margin-right: auto; margin-left: auto;" alt="A grid of 100 people shows 53 with the event in brown and 47 without the event in blue, grouped by event status, with a legend identifying the colors."><aside class="notes">
+<ul>
+<li>To make this a little easier, we will visually stratify our sample by event.</li>
+<li>That means we will gather together all of the people who experienced the event into one group and all of the people who did not experience the event into a second group.</li>
+<li>Each group can be called a stratum.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="counts-n-reveal-the-totals" class="slide level2 count-slide">
 <h2>Counts (n): Reveal the Totals</h2>
-<!-- Source PDF page 32 -->
-<div class="grid-2 panel-grid-spaced">
-<div class="panel">
-<p><strong>EVENT: YES</strong></p>
-<p><strong>53</strong></p>
-</div>
-<div class="panel">
-<p><strong>EVENT: NO</strong></p>
-<p><strong>47</strong></p>
-</div>
-</div>
+
+<img src="assets/counts_03.png" class="r-stretch" style="display: block; width: 92%; margin-right: auto; margin-left: auto;" alt="A grid of 100 people shows 53 with the event in brown and 47 without the event in blue, grouped by event status, with a legend identifying the colors. The legend is annotated with the number of events and non-events."><aside class="notes">
+<ul>
+<li>After doing so, we can simply count the number of people in our event strata. In this case, the count of people who experienced the event is 53.</li>
+<li>Is that enough information? It depends. What is our question?
+<ul>
+<li>Do we have enough ventilators?</li>
+<li>Did a lot of people have the event?</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- 
+Poll Everywhere:
+The basic issue is that counts don't take into account the size of the population.
+Introduce ratios, rates, proportions, and percentages at a high level.
+-->
+<!-- 
+Poll Everywhere:
+Introduce ratios, rates, proportions, and percentages generally. 
+-->
 </section>
 <section id="prevalence-describes-existing-conditions" class="slide level2 compact">
 <h2>Prevalence Describes Existing Conditions</h2>
-<!-- Source PDF page 33 -->
+<!-- Make this slide less wordy. -->
 <ul>
 <li>Prevalence provides information about the presence or absence of a condition of interest, such as a disease, exposure, or characteristic, in a population.</li>
 <li>It describes the extent to which the condition is present in a population during a given time frame.</li>
@@ -748,10 +677,24 @@ Source: <span class="citation" data-cites="lash2021">(<a href="#/references" rol
 <p class="source-line">
 Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
 </p>
+<aside class="notes">
+<ul>
+<li>Placeholder</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="prevalence-count" class="slide level2 compact">
 <h2>Prevalence Count</h2>
-<!-- Source PDF page 34 -->
 <ul>
 <li>A count of people in a population with the condition of interest during a given time frame.</li>
 <li>As few as 0 people and as many as all people can be living with the condition.</li>
@@ -760,10 +703,25 @@ Source: <span class="citation" data-cites="westreich2019">(<a href="#/references
 <p class="source-line">
 Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
 </p>
+<aside class="notes">
+<!-- Convert this to bullets. -->
+<ul>
+<li>Prevalence counts are sometimes useful in communicating the public health importance of a disease condition or in contexts where incidence is difficult to define and so you want to have a sense of numbers of events for surveillance purposes. Unfortunately, prevalence counts are just as often used to overhype that importance by reporting large-sounding numbers without appropriate context. Prevalence counts are therefore of most use when their context is well-understood by the audience: for example, since most residents of the United States have a general sense of the total population of that country, a report to a US audience of the prevalence count of US residents living with COPD (at this writing, about 13 million) might be adequately contextualized. As with all counts, the prevalence count is an integer between 0 however many possible cases exist in the population being examined. For a recurrent event measured over a sufficiently long period of time (e.g., upper respiratory infections), the prevalence count might exceed the number of individuals in the population: however, in such a case, calculating an incidence might be more straightforward.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="prevalence-proportion" class="slide level2 compact">
 <h2>Prevalence Proportion</h2>
-<!-- Source PDF page 35 -->
 <ul>
 <li>The proportion or percentage of the population that presently has the condition of interest or presently has a history of the condition during a specified period, such as a history of cancer in the past 10 years.</li>
 <li>Since none, some, or all population members can have the condition or a history of it, prevalence proportion ranges from 0 to 1, much like a probability.</li>
@@ -771,155 +729,100 @@ Source: <span class="citation" data-cites="westreich2019">(<a href="#/references
 <p class="source-line">
 Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
 </p>
+<aside class="notes">
+<ul>
+<li>The count of prevalent cases is sometimes of interest all by itself. However, it is more common to report the prevalence as a proportion or percentage.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="prevalence-proportion-formula" class="slide level2 big-formula">
 <h2>Prevalence Proportion: Formula</h2>
-<!-- Source PDF page 36 -->
 <p><span class="math display">\[
 \text{Prevalence proportion} = \frac{\text{Count with the condition}}{\text{Living members of the population}}
 \]</span></p>
+<aside class="notes">
+<ul>
+<li>We can write the information from the previous slide in a slightly more mathy way like this.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="follow-up-experience-for-10-people" class="slide level2 status-table">
 <h2>Follow-Up Experience for 10 People</h2>
-<!-- Source PDF page 37 -->
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: right;">Person</th>
-<th style="text-align: left;">At risk</th>
-<th style="text-align: left;">Diseased</th>
-<th style="text-align: left;">Deceased</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">0 months</td>
-<td style="text-align: left;">Before follow-up–12</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: left;">0–2</td>
-<td style="text-align: left;">2–5</td>
-<td style="text-align: left;">5–12</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">0–4</td>
-<td style="text-align: left;">4–12</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">0–5</td>
-<td style="text-align: left;">5–12</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5</td>
-<td style="text-align: left;">0–7</td>
-<td style="text-align: left;">7–12</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">6</td>
-<td style="text-align: left;">0–8</td>
-<td style="text-align: left;">8–11</td>
-<td style="text-align: left;">11–12</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">7</td>
-<td style="text-align: left;">0–9</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">9–12</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">8</td>
-<td style="text-align: left;">0–5</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">5–12</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">9</td>
-<td style="text-align: left;">0–12</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">10</td>
-<td style="text-align: left;">0–12</td>
-<td style="text-align: left;">—</td>
-<td style="text-align: left;">—</td>
-</tr>
-</tbody>
-</table>
-<p class="source-line">
-Month of follow-up. Source: <span class="citation" data-cites="lash2021">(<a href="#/references" role="doc-biblioref" onclick="">Lash et al. 2021</a>)</span>
-</p>
+
+<img src="assets/example_study_01.png" class="r-stretch" style="display: block; width: 96%; margin-right: auto; margin-left: auto;" alt="Timeline of follow-up for 10 people from before follow-up through month 12. Colored bars show time before follow-up, diseased, at risk, and deceased for each person."><aside class="notes">
+<ul>
+<li>So, if we came along and did a study of this group of people in month 2, the prevalence of disease would equal the number of people with disease divided by the number of people in the sample. In this case, that would be 2 people (p1 and p2) divided by 10.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="prevalence-proportion-at-month-2" class="slide level2 metric-grid">
 <h2>Prevalence Proportion at Month 2</h2>
-<!-- Source PDF page 38 -->
+<!-- Hide the answer so that learners have to interpret. -->
 <div class="grid-2 align-center">
-<div class="status-summary">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: right;">Person</th>
-<th style="text-align: left;">Status at month 2</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">Diseased</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: left;">Diseased</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3–10</td>
-<td style="text-align: left;">Living without disease</td>
-</tr>
-</tbody>
-</table>
+<div class="example-study-visual">
+<p><img src="assets/example_study_02.png" style="display: block; width: 100%; max-height: 480px; margin: 0 auto; object-fit: contain;" alt="Follow-up timeline for 10 people, with a blue vertical line at month 2. Colored bars show periods before follow-up, at risk, diseased, and deceased."></p>
 </div>
-<div class="big-formula">
+<div class="prevalence-example-formula">
 <p><span class="math display">\[
-\frac{2}{10} = 0.20 = 20\%
+\frac{\text{Count with the condition}}{\text{Living members of the population}}
+\]</span></p>
+<p><span class="math display">\[
+= \frac{2}{10} = 0.20 = 20\%
 \]</span></p>
 </div>
 </div>
+<aside class="notes">
+<ul>
+<li>So, if we came along and did a study of this group of people in month 2, the prevalence of the condition of interest – in this case disease – would equal the number of people with disease divided by the number of people in the population. In this case, that would be 2 people (p1 and p2) divided by 10.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="interpreting-prevalence-proportion" class="slide level2 metric-grid">
 <h2>Interpreting Prevalence Proportion</h2>
-<!-- Source PDF page 39 -->
+<!-- Hide the answer so that learners have to interpret. -->
 <div class="grid-2 align-center">
-<div class="status-summary">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: right;">Person</th>
-<th style="text-align: left;">Status at month 2</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">Diseased</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: left;">Diseased</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3–10</td>
-<td style="text-align: left;">Living without disease</td>
-</tr>
-</tbody>
-</table>
+<div class="example-study-visual">
+<p><img src="assets/example_study_02.png" style="display: block; width: 100%; max-height: 480px; margin: 0 auto; object-fit: contain;" alt="Follow-up timeline for 10 people, with a blue vertical line at month 2. Colored bars show periods before follow-up, at risk, diseased, and deceased."></p>
 </div>
 <div class="interpretation">
 <p>Among the members of the population, the prevalence of disease in month 2 was <strong>0.20</strong>.</p>
@@ -927,31 +830,50 @@ Month of follow-up. Source: <span class="citation" data-cites="lash2021">(<a hre
 </div>
 </div>
 </section>
-<section id="r" class="slide level2 r-divider">
-<h2>R</h2>
-<!-- Source PDF page 40 -->
-<!-- REVIEW: The source PDF page contains only the R logo and its source URL; the intended exercise or demonstration content is not specified. -->
-<p><a href="https://www.r-project.org/"><strong>R</strong></a></p>
-<p class="source-line">
-Source: <a href="https://www.r-project.org/logo/">R project logo</a>
-</p>
-</section>
 <section id="point-prevalence-and-period-prevalence" class="slide level2 compact">
 <h2>Point Prevalence and Period Prevalence</h2>
-<!-- Source PDF page 41 -->
+<!-- Add a Poll Everywhere question about point vs period prevalence. -->
 <ul>
 <li><strong>Point prevalence:</strong> prevalence of a condition of interest at a single point in time.</li>
+</ul>
+<div class="fragment">
+<ul>
 <li><strong>Period prevalence:</strong> prevalence of a condition of interest over a period of time.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
 <li>As the duration of the period shrinks, period prevalence converges to point prevalence.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
 <li>There is no hard-and-fast rule for what window is sufficiently short to count as point prevalence.</li>
 </ul>
+</div>
 <p class="source-line">
 Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
 </p>
+<aside class="notes">
+<ul>
+<li>On the other hand, point prevalence is often operationalized (put into practice) as “period prevalence over a reasonably short time window.” - For example, if you want to know the prevalence of HIV infection in a cohort of 1,000 people, it is difficult to imagine getting blood samples to test from all those people simultaneously (e.g., if all 1,000 participants give blood at exactly 1:00 pm this Friday). In practice, you would obtain blood samples over as short a time period as possible and test them thereafter.</li>
+<li>Alternatively, you could also define such a prevalence as “point prevalence at time of testing” while acknowledging that the testing occurred at a different calendar time for each participant <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>.</li>
+<li>Some textbooks and authors spend a fair amount of time trying to draw a distinction between the two. Because the concept is pretty nebulous, I tend to not worry about it too much. Instead, I prefer to just be clear about the time frame used for the calculation.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="prevalence-odds" class="slide level2 compact">
 <h2>Prevalence Odds</h2>
-<!-- Source PDF page 42 -->
 <ul>
 <li>Prevalence odds is a simple function of prevalence proportion, just as odds in general is a simple function of probability.</li>
 <li>It is typically reported for convenience or desirable statistical properties.</li>
@@ -961,39 +883,79 @@ Source: <span class="citation" data-cites="westreich2019">(<a href="#/references
 <p class="source-line">
 Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
 </p>
+<aside class="notes">
+<ul>
+<li>Why do we calculate this? Sometimes it is mathematically convenient.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="prevalence-odds-formula" class="slide level2 big-formula">
 <h2>Prevalence Odds: Formula</h2>
-<!-- Source PDF page 43 -->
 <p><span class="math display">\[
 \text{Prevalence odds} = \frac{\text{Prevalence proportion}}{1 - \text{Prevalence proportion}}
 \]</span></p>
+<aside class="notes">
+<ul>
+<li>We can write the information from the previous slide in a slightly more mathy way like this.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="prevalence-odds-at-month-2" class="slide level2 big-formula">
+<section id="prevalence-odds-at-month-2" class="slide level2 metric-grid">
 <h2>Prevalence Odds at Month 2</h2>
-<!-- Source PDF page 44 -->
+<!-- Hide the answer so that learners have to interpret. -->
+<div class="grid-2 align-center">
+<div class="example-study-visual">
+<p><img src="assets/example_study_02.png" style="display: block; width: 100%; max-height: 480px; margin: 0 auto; object-fit: contain;" alt="Follow-up timeline for 10 people, with a blue vertical line at month 2. Colored bars show periods before follow-up, at risk, diseased, and deceased."></p>
+</div>
+<div class="prevalence-example-formula">
+<p><span class="math display">\[
+\frac{\text{Prevalence proportion}}{1 - \text{Prevalence proportion}}
+\]</span></p>
 <p><span class="math display">\[
 \text{Prevalence odds} = \frac{0.20}{1 - 0.20} = 0.25
 \]</span></p>
+</div>
+</div>
 </section>
-<section id="interpreting-prevalence-odds" class="slide level2">
+<section id="interpreting-prevalence-odds" class="slide level2 metric-grid">
 <h2>Interpreting Prevalence Odds</h2>
-<!-- Source PDF page 45 -->
+<!-- Hide the answer so that learners have to interpret. -->
+<div class="grid-2 align-center">
+<div class="example-study-visual">
+<p><img src="assets/example_study_02.png" style="display: block; width: 100%; max-height: 480px; margin: 0 auto; object-fit: contain;" alt="Follow-up timeline for 10 people, with a blue vertical line at month 2. Colored bars show periods before follow-up, at risk, diseased, and deceased."></p>
+</div>
+<div class="interpretation">
 <p>Among the members of the population, the odds of disease in month 2 were <strong>0.25</strong>.</p>
 <p>For every person who had disease at month 2, there were four people who did not.</p>
-</section>
-<section id="r-1" class="slide level2 r-divider">
-<h2>R</h2>
-<!-- Source PDF page 46 -->
-<!-- REVIEW: The source PDF page contains only the R logo and its source URL; the intended exercise or demonstration content is not specified. -->
-<p><a href="https://www.r-project.org/"><strong>R</strong></a></p>
-<p class="source-line">
-Source: <a href="https://www.r-project.org/logo/">R project logo</a>
-</p>
+</div>
+</div>
+<!-- 
+This is were we will stop on day one.
+Add a section break slide here.
+-->
 </section>
 <section id="incidence-describes-new-occurrences" class="slide level2 compact">
 <h2>Incidence Describes New Occurrences</h2>
-<!-- Source PDF page 47 -->
 <ul>
 <li>Prevalence measures how many cases are present at a moment or over a period; incidence measures how many <strong>new cases</strong> arise over a specified period.</li>
 <li>Unlike prevalence, incidence measures occurrences or events: transitions from a condition being absent in an individual to the condition being present over a specified period.</li>
@@ -1001,10 +963,24 @@ Source: <a href="https://www.r-project.org/logo/">R project logo</a>
 <p class="source-line">
 Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
 </p>
+<aside class="notes">
+<ul>
+<li>We can measure the incidence of both one-time events (incidence of Parkinson’s disease or incidence of first cancer diagnosis) and recurrent events (number of respiratory infections in a calendar year). Thus, to measure incidence, we must start from a population at risk of the disease outcome: for example, to measure the incidence of Parkinson’s disease in our cohort, we must not include people who already have Parkinson’s disease at cohort inception. It is important to note that we can turn a recurrent event into a one-time event by restricting our study to the first occurrence of that event: for example, first respiratory infection for each individual in the calendar year. We measure incidence in many of the same ways as we measure prevalence: as incidence proportions, incidence odds, and incidence counts (i.e., counts of new cases of disease in a population). In addition, we use incidence rates and measures of elapsed time to an event. All of these measures, however, can be productively viewed as derivations, or simplifications, of a survival curve or cumulative incidence curve. Thus, we discuss the survival curve.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="incidence-proportion-and-risk" class="slide level2">
 <h2>Incidence Proportion and Risk</h2>
-<!-- Source PDF page 48 -->
 <ul>
 <li>Incidence proportion and “risk” are sometimes used interchangeably in epidemiology.</li>
 <li>Risk can be ambiguous. Incidence proportion is less so.</li>
@@ -1012,10 +988,24 @@ Source: <span class="citation" data-cites="westreich2019">(<a href="#/references
 <p class="source-line">
 Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
 </p>
+<aside class="notes">
+<ul>
+<li>Placeholder</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="incidence-count" class="slide level2 compact">
 <h2>Incidence Count</h2>
-<!-- Source PDF page 49 -->
 <ul>
 <li>A count of new occurrences of a condition in a population at risk for the occurrence during a given time frame.</li>
 <li>Range: 0 to infinity.</li>
@@ -1023,10 +1013,24 @@ Source: <span class="citation" data-cites="westreich2019">(<a href="#/references
 <p class="source-line">
 Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
 </p>
+<aside class="notes">
+<ul>
+<li>Placeholder</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="incidence-proportion" class="slide level2 compact">
 <h2>Incidence Proportion</h2>
-<!-- Source PDF page 50 -->
 <ul>
 <li>The proportion of the population that experiences a new occurrence of the condition among those at risk of experiencing a new occurrence during a given time frame.</li>
 <li>Like all proportions, it falls between 0 and 1.</li>
@@ -1034,17 +1038,46 @@ Source: <span class="citation" data-cites="westreich2019">(<a href="#/references
 <p class="source-line">
 Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
 </p>
+<aside class="notes">
+<ul>
+<li>The incidence proportion can be estimated without reference to the survival curve: you could obtain the same estimate of risk as from Figure 1.2 (or the data in Table 1.1) directly, simply by observing that 930 individuals were alive at age 40, noting that this means 70 had died, and dividing 70 by the original number in the study (1,000) to get 7%.</li>
+<li>It is critical to reiterate that incidence proportions are only meaningful when paired with a fixed period of time. This may be illustrated most clearly with the outcome of death: the “risk of death” in humans is universally 1, in that all humans will eventually die. Thus, telling someone that, in your study, the “risk of death was 10%” is unhelpful; more helpful would be to tell them that, for example, the “1-year risk of death was 10%.”</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="incidence-proportion-formula" class="slide level2 big-formula">
 <h2>Incidence Proportion: Formula</h2>
-<!-- Source PDF page 51 -->
 <p><span class="math display">\[
 \text{Incidence proportion} = \frac{\text{Count of new occurrences}}{\text{Population at risk}}
 \]</span></p>
+<aside class="notes">
+<ul>
+<li>We can write the information from the previous slide in a slightly more mathy way like this.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="follow-up-experience-and-new-occurrences" class="slide level2 status-table">
 <h2>Follow-Up Experience and New Occurrences</h2>
-<!-- Source PDF page 52 -->
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1120,10 +1153,26 @@ Source: <span class="citation" data-cites="westreich2019">(<a href="#/references
 <p class="source-line">
 Month of follow-up. Source: <span class="citation" data-cites="lash2021">(<a href="#/references" role="doc-biblioref" onclick="">Lash et al. 2021</a>)</span>
 </p>
+<aside class="notes">
+<ul>
+<li>So, let’s take another look at our example population.</li>
+<li>How many were at risk of experiencing a new occurrence of disease during the period of observation? 9 (person 1 was not at risk).</li>
+<li>How many of the people at risk developed a new occurrence of disease? 5 (p2, p3, p4, p5, p6).</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="incidence-proportion-over-12-months" class="slide level2 metric-grid">
 <h2>Incidence Proportion Over 12 Months</h2>
-<!-- Source PDF page 53 -->
 <div class="grid-2 align-center">
 <div class="status-summary">
 <ul>
@@ -1138,36 +1187,106 @@ Month of follow-up. Source: <span class="citation" data-cites="lash2021">(<a hre
 \]</span></p>
 </div>
 </div>
+<aside class="notes">
+<ul>
+<li>Placeholder</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="interpreting-incidence-proportion" class="slide level2">
 <h2>Interpreting Incidence Proportion</h2>
-<!-- Source PDF page 54 -->
 <p>Among the members of the population, the incidence of disease over 12 months of follow-up was <strong>0.56</strong>.</p>
 <p>Fifty-six percent of the population developed disease over 12 months of follow-up.</p>
+<aside class="notes">
+<ul>
+<li>Placeholder</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="incidence-odds-formula" class="slide level2 big-formula">
 <h2>Incidence Odds: Formula</h2>
-<!-- Source PDF page 55 -->
 <p><span class="math display">\[
 \text{Incidence odds} = \frac{\text{Incidence proportion}}{1 - \text{Incidence proportion}}
 \]</span></p>
+<aside class="notes">
+<ul>
+<li>We can write the information from the previous slide in a slightly more mathy way like this.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="incidence-odds-over-12-months" class="slide level2 big-formula">
 <h2>Incidence Odds Over 12 Months</h2>
-<!-- Source PDF page 56 -->
 <p><span class="math display">\[
 \text{Incidence odds} = \frac{0.56}{1 - 0.56} = 1.27
 \]</span></p>
+<aside class="notes">
+<ul>
+<li>Placeholder</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="interpreting-incidence-odds" class="slide level2 compact">
 <h2>Interpreting Incidence Odds</h2>
-<!-- Source PDF page 57 -->
 <p>Among the members of the population, the odds of incident disease over 12 months of follow-up were <strong>1.27</strong>.</p>
 <p>For every 127 people who developed incident disease over 12 months of follow-up, 100 people did not.</p>
+<aside class="notes">
+<ul>
+<li>Placeholder</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="incidence-rate" class="slide level2 compact">
 <h2>Incidence Rate</h2>
-<!-- Source PDF page 58 -->
 <ul>
 <li>A measure of the average intensity at which an event occurs in people’s experience over time.</li>
 <li>For a population followed from baseline, it is the number of cases divided by the person-time at risk accumulated by the population.</li>
@@ -1179,18 +1298,47 @@ Month of follow-up. Source: <span class="citation" data-cites="lash2021">(<a hre
 <p class="source-line">
 Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
 </p>
+<aside class="notes">
+<ul>
+<li>Accurately calculating the incidence proportion requires complete follow-up of a closed population. In other words, no new members once enrollment is complete, and no members leave the population except through death. Unfortunately, these conditions are pretty rare in the real world.</li>
+<li>One way to deal with this complication is to develop measures that take into account the length of time each individual was in the population at risk for the event. This length or span of time is called the person-time contribution of the individual.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="person-time" class="slide level2">
 <h2>Person-Time</h2>
-<!-- Source PDF page 59 -->
 <p><strong>Person-time</strong> is the amount of time observed for all people under study while they are at risk of experiencing an incident outcome.</p>
 <p class="source-line">
 Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
 </p>
+<aside class="notes">
+<ul>
+<li>If a woman is followed for 1 month, then she experiences (and contributes to analysis) 1 person-month of time. If 10 women are followed for 1 year, they contribute 10 × 1 = 10 person-years; if 1 woman is followed for 10 years, she also contributes 1 × 10 = 10 person-years. This calls attention to a basic assumption of person-time: that any unit of person-time is exchangeable with any other unit of person-time under study.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="follow-up-experience-and-time-at-risk" class="slide level2 status-table">
 <h2>Follow-Up Experience and Time at Risk</h2>
-<!-- Source PDF page 60 -->
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1255,26 +1403,70 @@ Source: <span class="citation" data-cites="westreich2019">(<a href="#/references
 <p class="source-line">
 Source: <span class="citation" data-cites="lash2021">(<a href="#/references" role="doc-biblioref" onclick="">Lash et al. 2021</a>)</span>
 </p>
+<aside class="notes">
+<ul>
+<li>So, let’s take another look at our example population.</li>
+<li>How many were at risk of experiencing a new occurrence of disease during the period of observation? 9 (person 1 was not at risk).</li>
+<li>For how many months were these 9 people under observation and at risk of developing a new occurrence of disease?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="calculating-person-time" class="slide level2 metric-grid">
 <h2>Calculating Person-Time</h2>
-<!-- Source PDF page 61 -->
 <p><span class="math display">\[
 \sum_{\text{people}} \text{Time at risk}
 \]</span></p>
 <p><span class="math display">\[
 0 + 2 + 4 + 5 + 7 + 8 + 9 + 5 + 12 + 12 = 64\text{ person-months}
 \]</span></p>
+<aside class="notes">
+<ul>
+<li>Placeholder</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="interpreting-person-time" class="slide level2">
 <h2>Interpreting Person-Time</h2>
-<!-- Source PDF page 62 -->
 <p>The population accumulated <strong>64 person-months at risk</strong> during 12 months of follow-up.</p>
 <p>The same amount is <strong>5.33 person-years at risk</strong> during 12 months of follow-up.</p>
+<aside class="notes">
+<ul>
+<li>Placeholder</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="follow-up-experience-for-the-incidence-rate" class="slide level2 status-table">
 <h2>Follow-Up Experience for the Incidence Rate</h2>
-<!-- Source PDF page 63 -->
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1339,70 +1531,65 @@ Source: <span class="citation" data-cites="lash2021">(<a href="#/references" rol
 <p class="source-line">
 Source: <span class="citation" data-cites="lash2021">(<a href="#/references" role="doc-biblioref" onclick="">Lash et al. 2021</a>)</span>
 </p>
+<aside class="notes">
+<ul>
+<li>How many of the people at risk developed a new occurrence of disease? 5 (p2, p3, p4, p5, p6).</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="incidence-rate-calculation" class="slide level2 big-formula">
 <h2>Incidence Rate: Calculation</h2>
-<!-- Source PDF page 64 -->
 <p><span class="math display">\[
 \text{Incidence rate} = \frac{\text{Count of new occurrences}}{\text{Person-time at risk}}
 \]</span></p>
 <p><span class="math display">\[
 = \frac{5}{64\text{ person-months}} \approx 7.8\text{ per 100 person-months}
 \]</span></p>
+<aside class="notes">
+<ul>
+<li>Placeholder</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="interpreting-the-incidence-rate" class="slide level2 compact">
 <h2>Interpreting the Incidence Rate</h2>
-<!-- Source PDF page 65 -->
 <p>The incidence rate of disease among the members of the population was <strong>5 cases per 64 person-months</strong> during 12 months of follow-up.</p>
 <p>Equivalently, the incidence rate was <strong>7.8 cases per 100 person-months</strong> during 12 months of follow-up.</p>
-</section>
-<section id="odds-and-proportions" class="slide level2 odds-table">
-<h2>Odds and Proportions</h2>
-<!-- Source PDF page 66 -->
-<p><span class="math display">\[
-\text{Odds} = \frac{p}{1-p}
-\]</span></p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: right;"><span class="math inline">\(p\)</span></th>
-<th style="text-align: right;">Odds</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">0.01</td>
-<td style="text-align: right;">0.010</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">0.10</td>
-<td style="text-align: right;">0.111</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">0.20</td>
-<td style="text-align: right;">0.250</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">0.50</td>
-<td style="text-align: right;">1.000</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">0.80</td>
-<td style="text-align: right;">4.000</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">0.90</td>
-<td style="text-align: right;">9.000</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">0.99</td>
-<td style="text-align: right;">99.000</td>
-</tr>
-</tbody>
-</table>
-<p class="source-line">
-Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span>
-</p>
+<aside class="notes">
+<ul>
+<li>Placeholder</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="references" class="slide level2 references-slide smaller scrollable">
 <h2>References</h2>
@@ -1410,8 +1597,8 @@ Source: <span class="citation" data-cites="westreich2019">(<a href="#/references
 <div id="ref-lash2021" class="csl-entry" role="listitem">
 Lash, Timothy L., Tyler J. VanderWeele, Sebastien Haneuse, and Kenneth J. Rothman. 2021. <em>Modern Epidemiology</em>. 4th ed. Wolters Kluwer.
 </div>
-<div id="ref-porta2008" class="csl-entry" role="listitem">
-Porta, Miquel, ed. 2008. <em>A Dictionary of Epidemiology</em>. Oxford University Press.
+<div id="ref-quinlan2025" class="csl-entry" role="listitem">
+Quinlan, Scott. 2025. <em>Friis’ Epidemiology 101</em>. 3rd ed. Jones &amp; Bartlett Learning.
 </div>
 <div id="ref-westreich2019" class="csl-entry" role="listitem">
 Westreich, Daniel. 2019. <em>Epidemiology by Design: A Causal Approach to the Health Sciences</em>. Oxford University Press.
@@ -1707,7 +1894,7 @@ Westreich, Daniel. 2019. <em>Epidemiology by Design: A Causal Approach to the He
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/brad-cannell\.github\.io\/aphs20203\/");
+            var filterRegex = new RegExp('/' + window.location.host + '/');
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
