@@ -1,0 +1,135 @@
+# Canonical, platform-independent quiz source.
+#
+# This file is the single source of truth for interactive questions. It drives
+# the Reveal.js slides, the QR-code participation prompts, and the printed
+# low-tech fallback handout. Create matching Poll Everywhere activities from
+# this source; make future changes here first, synchronize the activities, and
+# rebuild with _ai/tools/python/build_quiz_slides.py.
+#
+# Schema
+# ------
+# session:
+#   code                  short human-typable session code shown on every slide
+#   participation_url     optional default URL encoded into each QR code; set
+#                         this only after creating a real survey or poll
+#   fallback              default low-tech fallback instruction (required)
+#
+# questions[]:
+#   id                    required, unique, kebab-case; also becomes the
+#                         quiz-slides/<id>.qmd partial filename
+#   type                  multiple_choice | multiple_select | short_answer | word_cloud
+#   prompt                required, the question text shown to participants
+#   options               list of choices (required for choice types)
+#   correct               1-based index (multiple_choice) or list of indices
+#                         (multiple_select); omit for opinion/ungraded items
+#   explanation           shown in speaker notes and after discussion
+#   presentation_mode     anonymous | identified | pseudonymous
+#   reveal_distribution   true | false — show the response distribution live
+#   reveal_correct_answer immediately | after_discussion | never
+#   participation_url     per-question override of session.participation_url
+#   fallback              per-question override of session.fallback
+
+session:
+  code: 
+  # Add a real Poll Everywhere participant-response URL before presenting.
+  # Leaving it blank suppresses the QR code and "Respond here" link rather
+  # than sending participants to a fake survey.
+  fallback: >-
+    Read the question aloud. For choice questions, take a show of hands for
+    each option. For open-response questions, ask two or three volunteers to
+    answer and record the key ideas on the whiteboard.
+
+questions:
+  # - id: counts
+  #   type: multiple_choice
+  #   prompt: >-
+  #     Why not stop at counts?
+
+
+  - id: describe
+    type: multiple_choice
+    prompt: >-
+      The research question is, "Is breast cancer currently more common in
+      Texas or Ohio?" Therefore, the goal of our analysis is...
+    options:
+      - to describe
+      - to predict
+      - to draw causal conclusions
+    correct: 1
+    explanation: >-
+      At face value, without additional context or information, most
+      epidemiologists would consider this a descriptive question. However, a
+      case could also be made for prediction or causation.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/tfzkZ1yt8g1LXFmmzxkQs/respond
+
+  - id: incidence
+    type: short_answer
+    prompt: >-
+      What do measures of incidence tell us about a disease or another outcome
+      of interest?
+    explanation: Risk of the outcome over a specified period of time.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/free_text_polls/y3co0x28tEMFMJeLhEYYb/respond
+
+  - id: prevalence
+    type: short_answer
+    prompt: >-
+      What do measures of prevalence tell us about a disease or another outcome
+      of interest?
+    explanation: >-
+      The frequency of existing cases of a disease or other condition in a
+      given population at a particular point or during a specified period.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/free_text_polls/CoUOHufRgcKn5MsYBf7Sm/respond
+
+  - id: incidence-prevalence
+    type: multiple_choice
+    prompt: Which measure of event occurrence is better - incidence or prevalence?
+    options:
+      - Incidence
+      - Prevalence
+      - It depends
+    correct: 3
+    explanation: >-
+      Incidence and prevalence are equally useful measures of event occurrence,
+      but they answer different questions. Incidence answers questions about
+      risk. Prevalence answers questions about disease burden and public health
+      response.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/nDVPt2R6BMylOmfAdA1rN/respond
+
+  - id: incidence-rates
+    type: short_answer
+    prompt: >-
+      Why do we sometimes calculate incidence rates instead of incidence
+      proportions, which are arguably more intuitive for most people?
+    explanation: >-
+      To calculate an accurate incidence proportion, the population must be
+      closed and all members must have complete follow-up. New people cannot
+      enter during the study period, nobody can leave except through death, and
+      data must be collected from everyone throughout the study. These
+      conditions are rare in epidemiology.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/free_text_polls/K0589tMCLsNQv2EBucx6I/respond
+
+  - id: other-questions
+    type: short_answer
+    prompt: What questions do you have?
+    presentation_mode: anonymous
+    reveal_distribution: false
+    reveal_correct_answer: never
+    fallback: >-
+      Ask students to share remaining questions aloud and record unresolved
+      topics for follow-up.
+    participation_url: https://PollEv.com/free_text_polls/3lHepUui77dAHrGfbs2sQ/respond

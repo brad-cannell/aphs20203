@@ -1,0 +1,140 @@
+/*-- scss:defaults --*/
+
+// TCU's published primary palette. A secondary palette is intentionally not
+// selected here: Brand Central directs projects to choose one rather than mix
+// them, and this reusable starter does not have a project-specific need.
+$tcu-purple: #4d1979;
+$tcu-white: #ffffff;
+$tcu-grey: #a3a9ac;
+$tcu-black: #000000;
+
+$body-bg: $tcu-white;
+$body-color: #1f2328;
+$link-color: $tcu-purple;
+$presentation-heading-color: $tcu-purple;
+$presentation-font-size-root: 34px;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+$presentation-heading-font: $font-family-sans-serif;
+$presentation-list-bullet-color: $tcu-purple;
+$code-block-bg: $tcu-purple;
+$code-block-color: $tcu-white;
+
+/*-- scss:rules --*/
+
+// Brand Central confirms Eurostile only for administration combination marks,
+// not general presentation typography. This system stack is an accessibility
+// fallback, not a claim about TCU's institutional type system.
+
+// The title slide uses the official arched wordmark without modification. Its
+// width exceeds the 1/2-inch minimum when shown at the template's base size;
+// the surrounding margin preserves clear space.
+.reveal .slides #title-slide::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1.1em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3.2em;
+  height: 1.7em;
+  margin: 0;
+  // The compiled theme lives under site_libs/revealjs/dist/theme. The logo is
+  // published as a project resource beside this deck's other assets.
+  background: url("../../../../Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/assets/tcu-logo.svg") center / contain no-repeat;
+}
+
+.reveal .slides #title-slide {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: 1.1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $tcu-purple;
+  color: $tcu-white;
+}
+
+.reveal .slides #title-slide .title,
+.reveal .slides #title-slide .subtitle {
+  color: $tcu-white;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.reveal .slides #title-slide .title {
+  top: 270px;
+  font-size: 1.62em;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.reveal .slides #title-slide .subtitle {
+  top: 390px;
+}
+
+// Purple is the visual anchor on instructional slides while white preserves
+// a readable canvas for dense teaching content.
+.reveal .slides > section.slide:not(.section) {
+  box-sizing: border-box;
+  border-top: 0.18em solid $tcu-purple;
+  padding: 0.24em 0.22em 0;
+}
+
+.reveal .slides section.section {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: 1.1em;
+  background: $tcu-purple;
+  color: $tcu-white;
+}
+
+.reveal .slides section.section h1 {
+  color: $tcu-white;
+  border-bottom-color: $tcu-white;
+}
+
+.reveal .slides section.section a {
+  color: $tcu-white;
+  text-decoration: underline;
+}
+
+// Code examples form a high-contrast purple teaching field instead of relying
+// on syntax color alone to distinguish the code from its explanation.
+.reveal pre {
+  width: 95%;
+  box-shadow: none;
+}
+
+.reveal pre code {
+  padding: 0.7em 0.85em;
+  background: $tcu-purple;
+  color: $tcu-white;
+  border-radius: 0;
+}
+
+// The default syntax palette includes dark tokens. Use one light code color so
+// code remains legible on the TCU-purple field and in grayscale.
+.reveal pre code span {
+  color: $tcu-white !important;
+}
+
+.reveal .code-copy-button {
+  color: $tcu-white;
+  background: $tcu-purple;
+}
+
+.reveal blockquote {
+  width: auto;
+  padding: 0.35em 0.7em;
+  border-left: 0.2em solid $tcu-purple;
+  background: transparent;
+  box-shadow: none;
+}
+
+.reveal table th,
+.reveal table td {
+  border-bottom-color: $tcu-grey;
+}
