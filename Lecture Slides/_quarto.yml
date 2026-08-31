@@ -8,10 +8,10 @@ project:
   render:
     - index.qmd
     - "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.qmd"
-    - "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/Measures of Disease Occurrence.qmd"
+    - "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.qmd"
   resources:
     - "Module 01 - Welcome and Overview/Introduction to Epidemiology/assets/tcu-logo.svg"
-    - "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence/assets/tcu-logo.svg"
+    - "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/assets/tcu-logo.svg"
 
 website:
   title: "APHS 20203 Lecture Slides"

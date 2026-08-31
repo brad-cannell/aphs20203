@@ -10,3 +10,10 @@ Interactive slide decks for APHS 20203.
 
 - [View interactive slides](Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.qmd)
 - [Download PDF](Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.pdf)
+
+## Module 2: Epidemiologic Measures of Disease Occurrence
+
+### Measures of Disease Occurrence — Part 1
+
+- [View interactive slides](Module%2002%20-%20Epidemiologic%20Measures%20of%20Disease%20Occurrence/Measures%20of%20Disease%20Occurrence%20-%20Part%201/Measures%20of%20Disease%20Occurrence%20-%20Part%201.html)
+- [Download PDF](Module%2002%20-%20Epidemiologic%20Measures%20of%20Disease%20Occurrence/Measures%20of%20Disease%20Occurrence%20-%20Part%201/Measures%20of%20Disease%20Occurrence%20-%20Part%201.pdf)
