@@ -18,6 +18,10 @@ execute:
   freeze: auto
 ---
 
+<!-- 
+There are some slides in the presentation about populations, samples, and cohorts that should be appropriate for this week. There were not appropriate for week 2. 
+ -->
+
 ## Course Learning objectives
 
 1. Define epidemiology and key associated terminology, especially confounding.
@@ -66,20 +70,18 @@ By the end of this lesson, you'll be able to:
 - Do we go into a deep meditative state until the answers just occur to us? Not typically. At least doing that alone would not typically be very convincing evidence to most people.
 :::
 
-## Measurement Makes Characteristics Observable {.compact}
+## Measurement Makes Characteristics Observable {.compact .measurement-feature}
 
-<!-- Replace box with image. -->
+::: {.measurement-layout}
+::: {.measurement-visual}
+<img src="assets/measurement.png" alt="Measurement represented by a measuring tape.">
+:::
 
-::: {.grid-2 .align-center}
-::: {.panel}
-**MEASUREMENT**
+::: {.measurement-copy}
+> Epidemiology is concerned with the distribution and determinants of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations [@quinlan2025].
 
 - Observe and assign values to relevant characteristics.
 - Look for patterns among those values.
-:::
-
-::: {.definition-copy}
-> Epidemiology is concerned with the distribution and determinants of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations [@quinlan2025].
 :::
 :::
 
@@ -149,8 +151,6 @@ Look for patterns among the values.
 
 ## Description, Prediction, and Causation
 
-<!-- Source PDF page 7 -->
-
 ::: {.grid-3 .panel-grid-spaced}
 ::: {.panel}
 **DESCRIPTION**
@@ -174,8 +174,6 @@ Look for patterns among the values.
 
 ## Description Does Not Necessarily Seek Associations {.compact}
 
-<!-- Source PDF page 8 -->
-
 - Description examines distributions of single variables: middle, spread, shape, count, and proportion.
 - It supports resource management and planning.
 - Examples:
@@ -189,8 +187,6 @@ Look for patterns among the values.
 
 
 ## Description Can Also Compare Distributions {.compact}
-
-<!-- Source PDF page 9 -->
 
 - Sometimes description does look for associations.
 - It may compare distributions of single variables within levels of another variable.
@@ -206,8 +202,6 @@ Look for patterns among the values.
 
 ## Measures of Occurrence Support Description
 
-<!-- Source PDF page 10 -->
-
 - Counts
 - Incidence
 - Prevalence
@@ -222,8 +216,6 @@ These measures can be useful on their own and for hypothesis generation.
 
 ## Sources of Uncertainty: Few Checklists {.uncertainty-list}
 
-<!-- Source PDF page 11 -->
-
 1. Few checklists
 
 ::: {.notes}
@@ -234,8 +226,6 @@ These measures can be useful on their own and for hypothesis generation.
 
 ## Sources of Uncertainty: Add Statistical Uncertainty {.uncertainty-list}
 
-<!-- Source PDF page 12 -->
-
 1. Few checklists
 2. Statistical uncertainty
 
@@ -245,8 +235,6 @@ These measures can be useful on their own and for hypothesis generation.
 
 
 ## Sources of Uncertainty: Add Causal Uncertainty {.uncertainty-list}
-
-<!-- Source PDF page 13 -->
 
 1. Few checklists
 2. Statistical uncertainty
@@ -288,8 +276,6 @@ These measures can be useful on their own and for hypothesis generation.
 
 ## A Population Also Has a Time Period
 
-<!-- Source PDF page 16 -->
-
 ::: {.definition-copy}
 > “The simplest definition of a **population** is a group of people **during a defined time period** who share characteristics or meet criteria that define membership in the population.”
 :::
@@ -303,8 +289,6 @@ These measures can be useful on their own and for hypothesis generation.
 
 
 ## Closed and Open Populations {.compact}
-
-<!-- Source PDF page 17 -->
 
 ::: {.grid-2}
 ::: {.panel}
@@ -375,7 +359,6 @@ Aligning each person at entry changes the time scale from calendar time to event
 
 ## What Happens Beyond the Observed Event Time? {.compact}
 
-<!-- Source PDF page 20 -->
 <!-- REVIEW: The source depicts Person 2's experience after event time 2 as unknown with a question mark, but it does not state the intended prompt or answer. -->
 
 | Person | Observed event time | After observation ends |
@@ -395,8 +378,6 @@ Aligning each person at entry changes the time scale from calendar time to event
 
 ## Examples of Closed and Open Populations {.compact}
 
-<!-- Source PDF page 21 -->
-
 - Currently enrolled in Introduction to Epidemiology: **open population**
 - Ever enrolled in Introduction to Epidemiology as of today: **closed population**
 - Resident of Texas: **open population**
@@ -405,8 +386,6 @@ Aligning each person at entry changes the time scale from calendar time to event
 
 
 ## Source and Target Populations {.compact}
-
-<!-- Source PDF page 22 -->
 
 **Source population:** The population from which persons will be sampled and included in a measurement of disease frequency.
 
@@ -424,8 +403,6 @@ Aligning each person at entry changes the time scale from calendar time to event
 
 
 ## Study Population and Sample {.compact}
-
-<!-- Source PDF page 23 -->
 
 **Study population:** The subset, up to a complete census, of the source population whose experience is included in a measurement of disease frequency.
 
@@ -445,8 +422,6 @@ Aligning each person at entry changes the time scale from calendar time to event
 
 ## Cohorts {.compact}
 
-<!-- Source PDF page 24 -->
-
 - A **cohort** is a group of persons whose membership is defined permanently, or a population in which satisfying a set of defining events makes membership permanent.
 - The term is often used as a synonym for “sample” in a cohort study.
 - Every cohort member is enumerated: known or listed. This is not necessarily true of a closed population.
@@ -462,8 +437,6 @@ An example of a cohort would be the members of the graduating class of a school 
 
 
 ## Measures Arise From Observations and Experiments {.study-design .compact}
-
-<!-- Source PDF page 25 -->
 
 | Measures | Design types | Typical evidential position |
 |:---|:---|:---|
@@ -481,8 +454,6 @@ An example of a cohort would be the members of the graduating class of a school 
 
 ## Terminology Recap: Population Types {.recap-table}
 
-<!-- Source PDF page 26 -->
-
 | Term | Definition | Example |
 |:---|:---|:---|
 | Population | A group of people during a defined time period who share characteristics or meet membership criteria. | The population of the United States. |
@@ -496,8 +467,6 @@ An example of a cohort would be the members of the graduating class of a school 
 
 ## Terminology Recap: Source and Target Populations {.recap-table}
 
-<!-- Source PDF page 27 -->
-
 | Term | Definition | Example |
 |:---|:---|:---|
 | Source population | The population from which persons will be sampled and included in a measurement of disease frequency. | Men and women aged 30 to 62 who lived in Framingham, Massachusetts, in 1948. |
@@ -510,8 +479,6 @@ An example of a cohort would be the members of the graduating class of a school 
 
 ## Terminology Recap: Study Population and Sample {.recap-table}
 
-<!-- Source PDF page 28 -->
-
 | Term | Definition | Example |
 |:---|:---|:---|
 | Study population | The subset, up to a census, of the source population whose experience is included in the measurement. | Framingham invitees who agreed to participate and were free of prevalent cardiovascular disease. |
@@ -523,8 +490,6 @@ An example of a cohort would be the members of the graduating class of a school 
 
 
 ## Terminology Recap: Cohort {.recap-table}
-
-<!-- Source PDF page 29 -->
 
 | Term | Definition | Example |
 |:---|:---|:---|
@@ -594,8 +559,6 @@ Grouping categories makes counting easier.
 
 ## Prevalence Describes Existing Conditions {.compact}
 
-<!-- Source PDF page 33 -->
-
 - Prevalence provides information about the presence or absence of a condition of interest, such as a disease, exposure, or characteristic, in a population.
 - It describes the extent to which the condition is present in a population during a given time frame.
 - Asking about the prevalence of diabetes means asking how many, or more likely what proportion, of people currently living in the population have diabetes.
@@ -612,8 +575,6 @@ Grouping categories makes counting easier.
 
 ## Prevalence Count {.compact}
 
-<!-- Source PDF page 34 -->
-
 - A count of people in a population with the condition of interest during a given time frame.
 - As few as 0 people and as many as all people can be living with the condition.
 - Range: 0 to infinity.
@@ -627,8 +588,6 @@ Grouping categories makes counting easier.
 
 ## Prevalence Proportion {.compact}
 
-<!-- Source PDF page 35 -->
-
 - The proportion or percentage of the population that presently has the condition of interest or presently has a history of the condition during a specified period, such as a history of cancer in the past 10 years.
 - Since none, some, or all population members can have the condition or a history of it, prevalence proportion ranges from 0 to 1, much like a probability.
 
@@ -640,8 +599,6 @@ Grouping categories makes counting easier.
 
 
 ## Prevalence Proportion: Formula {.big-formula}
-
-<!-- Source PDF page 36 -->
 
 $$
 \text{Prevalence proportion} = \frac{\text{Count with the condition}}{\text{Living members of the population}}
@@ -728,8 +685,6 @@ Said another way, **20%** of the population had disease in month 2.
 
 ## Point Prevalence and Period Prevalence {.compact}
 
-<!-- Source PDF page 41 -->
-
 - **Point prevalence:** prevalence of a condition of interest at a single point in time.
 - **Period prevalence:** prevalence of a condition of interest over a period of time.
 - As the duration of the period shrinks, period prevalence converges to point prevalence.
@@ -745,8 +700,6 @@ Said another way, **20%** of the population had disease in month 2.
 
 ## Prevalence Odds {.compact}
 
-<!-- Source PDF page 42 -->
-
 - Prevalence odds is a simple function of prevalence proportion, just as odds in general is a simple function of probability.
 - It is typically reported for convenience or desirable statistical properties.
 - Prevalence odds is prevalence proportion divided by 1 minus prevalence proportion.
@@ -761,8 +714,6 @@ Said another way, **20%** of the population had disease in month 2.
 
 ## Prevalence Odds: Formula {.big-formula}
 
-<!-- Source PDF page 43 -->
-
 $$
 \text{Prevalence odds} = \frac{\text{Prevalence proportion}}{1 - \text{Prevalence proportion}}
 $$
@@ -773,8 +724,6 @@ $$
 
 
 ## Prevalence Odds at Month 2 {.big-formula}
-
-<!-- Source PDF page 44 -->
 
 $$
 \text{Prevalence odds} = \frac{0.20}{1 - 0.20} = 0.25
@@ -787,8 +736,6 @@ $$
 
 ## Interpreting Prevalence Odds
 
-<!-- Source PDF page 45 -->
-
 Among the members of the population, the odds of disease in month 2 were **0.25**.
 
 For every person who had disease at month 2, there were four people who did not.
@@ -799,8 +746,6 @@ For every person who had disease at month 2, there were four people who did not.
 
 
 ## Incidence Describes New Occurrences {.compact}
-
-<!-- Source PDF page 47 -->
 
 - Prevalence measures how many cases are present at a moment or over a period; incidence measures how many **new cases** arise over a specified period.
 - Unlike prevalence, incidence measures occurrences or events: transitions from a condition being absent in an individual to the condition being present over a specified period.
@@ -814,8 +759,6 @@ For every person who had disease at month 2, there were four people who did not.
 
 ## Incidence Proportion and Risk
 
-<!-- Source PDF page 48 -->
-
 - Incidence proportion and “risk” are sometimes used interchangeably in epidemiology.
 - Risk can be ambiguous. Incidence proportion is less so.
 
@@ -828,8 +771,6 @@ For every person who had disease at month 2, there were four people who did not.
 
 ## Incidence Count {.compact}
 
-<!-- Source PDF page 49 -->
-
 - A count of new occurrences of a condition in a population at risk for the occurrence during a given time frame.
 - Range: 0 to infinity.
 
@@ -841,8 +782,6 @@ For every person who had disease at month 2, there were four people who did not.
 
 
 ## Incidence Proportion {.compact}
-
-<!-- Source PDF page 50 -->
 
 - The proportion of the population that experiences a new occurrence of the condition among those at risk of experiencing a new occurrence during a given time frame.
 - Like all proportions, it falls between 0 and 1.
@@ -857,8 +796,6 @@ For every person who had disease at month 2, there were four people who did not.
 
 ## Incidence Proportion: Formula {.big-formula}
 
-<!-- Source PDF page 51 -->
-
 $$
 \text{Incidence proportion} = \frac{\text{Count of new occurrences}}{\text{Population at risk}}
 $$
@@ -869,8 +806,6 @@ $$
 
 
 ## Follow-Up Experience and New Occurrences {.status-table}
-
-<!-- Source PDF page 52 -->
 
 | Person | At risk | New disease | Deceased |
 |---:|:---|:---|:---|
@@ -896,8 +831,6 @@ $$
 
 ## Incidence Proportion Over 12 Months {.metric-grid}
 
-<!-- Source PDF page 53 -->
-
 ::: {.grid-2 .align-center}
 ::: {.status-summary}
 - 5 people developed disease.
@@ -919,8 +852,6 @@ $$
 
 ## Interpreting Incidence Proportion
 
-<!-- Source PDF page 54 -->
-
 Among the members of the population, the incidence of disease over 12 months of follow-up was **0.56**.
 
 Fifty-six percent of the population developed disease over 12 months of follow-up.
@@ -931,8 +862,6 @@ Fifty-six percent of the population developed disease over 12 months of follow-u
 
 
 ## Incidence Odds: Formula {.big-formula}
-
-<!-- Source PDF page 55 -->
 
 $$
 \text{Incidence odds} = \frac{\text{Incidence proportion}}{1 - \text{Incidence proportion}}
@@ -945,8 +874,6 @@ $$
 
 ## Incidence Odds Over 12 Months {.big-formula}
 
-<!-- Source PDF page 56 -->
-
 $$
 \text{Incidence odds} = \frac{0.56}{1 - 0.56} = 1.27
 $$
@@ -958,8 +885,6 @@ $$
 
 ## Interpreting Incidence Odds {.compact}
 
-<!-- Source PDF page 57 -->
-
 Among the members of the population, the odds of incident disease over 12 months of follow-up were **1.27**.
 
 For every 127 people who developed incident disease over 12 months of follow-up, 100 people did not.
@@ -970,8 +895,6 @@ For every 127 people who developed incident disease over 12 months of follow-up,
 
 
 ## Incidence Rate {.compact}
-
-<!-- Source PDF page 58 -->
 
 - A measure of the average intensity at which an event occurs in people's experience over time.
 - For a population followed from baseline, it is the number of cases divided by the person-time at risk accumulated by the population.
@@ -990,8 +913,6 @@ For every 127 people who developed incident disease over 12 months of follow-up,
 
 ## Person-Time
 
-<!-- Source PDF page 59 -->
-
 **Person-time** is the amount of time observed for all people under study while they are at risk of experiencing an incident outcome.
 
 <p class="source-line">Source: [@westreich2019]</p>
@@ -1002,8 +923,6 @@ For every 127 people who developed incident disease over 12 months of follow-up,
 
 
 ## Follow-Up Experience and Time at Risk {.status-table}
-
-<!-- Source PDF page 60 -->
 
 | Person | Time at risk | Outcome after risk time |
 |---:|---:|:---|
@@ -1029,8 +948,6 @@ For every 127 people who developed incident disease over 12 months of follow-up,
 
 ## Calculating Person-Time {.metric-grid}
 
-<!-- Source PDF page 61 -->
-
 $$
 \sum_{\text{people}} \text{Time at risk}
 $$
@@ -1046,8 +963,6 @@ $$
 
 ## Interpreting Person-Time
 
-<!-- Source PDF page 62 -->
-
 The population accumulated **64 person-months at risk** during 12 months of follow-up.
 
 The same amount is **5.33 person-years at risk** during 12 months of follow-up.
@@ -1058,8 +973,6 @@ The same amount is **5.33 person-years at risk** during 12 months of follow-up.
 
 
 ## Follow-Up Experience for the Incidence Rate {.status-table}
-
-<!-- Source PDF page 63 -->
 
 | Person | Time at risk | New occurrence? |
 |---:|---:|:---:|
@@ -1083,8 +996,6 @@ The same amount is **5.33 person-years at risk** during 12 months of follow-up.
 
 ## Incidence Rate: Calculation {.big-formula}
 
-<!-- Source PDF page 64 -->
-
 $$
 \text{Incidence rate} = \frac{\text{Count of new occurrences}}{\text{Person-time at risk}}
 $$
@@ -1099,8 +1010,6 @@ $$
 
 
 ## Interpreting the Incidence Rate {.compact}
-
-<!-- Source PDF page 65 -->
 
 The incidence rate of disease among the members of the population was **5 cases per 64 person-months** during 12 months of follow-up.
 
