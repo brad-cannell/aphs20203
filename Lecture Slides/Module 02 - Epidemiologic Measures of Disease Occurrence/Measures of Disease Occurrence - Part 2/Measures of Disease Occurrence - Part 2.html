@@ -50,7 +50,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="Measures of Disease Occurrence - Part 2_files/libs/revealjs/dist/theme/quarto-770da8385d9599453755bc377edd848b.css">
+  <link rel="stylesheet" href="Measures of Disease Occurrence - Part 2_files/libs/revealjs/dist/theme/quarto-3c6003e8ff213c7d7d2c3149e2bc6126.css">
   <link href="Measures of Disease Occurrence - Part 2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="Measures of Disease Occurrence - Part 2_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="Measures of Disease Occurrence - Part 2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -193,8 +193,9 @@ Do this last, after the slides are ready.
 <li>Compute and interpret prevalence and incidence.</li>
 </ol>
 </section>
-<section id="review-choose-the-snapshot" class="slide level2 compact">
+<section id="review-choose-the-snapshot" class="slide level2">
 <h2>Review: Choose the Snapshot</h2>
+<!-- Calculate the correct answers and have them ready. -->
 <div class="columns align-center">
 <div class="column" style="width:58%;">
 <p><img src="assets/example_study_03.png" style="display: block; width: 100%; max-height: 475px; margin: 0 auto; object-fit: contain;" alt="Follow-up timeline for 10 people. Colored bars show periods before follow-up, at risk, diseased, and deceased."></p>
@@ -226,22 +227,109 @@ Do this last, after the slides are ready.
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!--  
-Add a discussion of odds.
--->
 </section>
-<section id="incidence-describes-new-occurrences" class="slide level2">
-<h2>Incidence Describes New Occurrences</h2>
-<!-- Make this slide more visual and less wordy. -->
-<!-- Summarize the notes into easily scannable bullets. -->
+<section id="prevalence-describes-a-state" class="slide level2" data-auto-animate="true" data-auto-animate-id="occurrence-transition" data-auto-animate-duration="0.7" data-auto-animate-easing="ease-in-out">
+<h2 data-id="quarto-animate-title">Prevalence Describes a State</h2>
+<div class="occurrence-transition">
+<div class="transition-row prevalence-row">
+<div class="state-node disease-present" data-id="disease-present">
+<p>Disease present</p>
+</div>
+</div>
+<div class="measure-question" data-id="measure-question">
+<p>Who has disease?</p>
+</div>
+<div class="measure-type" data-id="measure-type">
+<p>A <strong>state</strong> observed at a moment or over a period</p>
+</div>
+</div>
+<aside class="notes">
 <ul>
-<li>Prevalence measures how many cases are present at a moment or over a period; incidence measures how many <strong>new cases</strong> arise over a specified period.</li>
-<li>Unlike prevalence, incidence measures occurrences or events: transitions from a condition being absent in an individual to the condition being present over a specified period.</li>
+<li>Briefly reconnect this state-based question to the prevalence snapshots students just calculated.</li>
+<li>Prevalence measures how many cases are present at a moment or over a period.</li>
+<li>It answers the question, “who has disease?” (outcome of interest)</li>
+<li>Advance to the next slide to shift from observing disease status to observing a change in disease status.</li>
 </ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="incidence-describes-a-transition" class="slide level2" data-auto-animate="true" data-auto-animate-id="occurrence-transition" data-auto-animate-duration="0.7" data-auto-animate-easing="ease-in-out">
+<h2 data-id="quarto-animate-title">Incidence Describes a Transition</h2>
+<div class="occurrence-transition">
+<div class="transition-row">
+<div class="state-node disease-absent" data-id="disease-absent" data-auto-animate-delay="0.55">
+<p>Disease absent</p>
+</div>
+<div class="transition-arrow" data-id="transition-arrow" data-auto-animate-delay="0.55">
+<p>→</p>
+</div>
+<div class="state-node disease-present" data-id="disease-present">
+<p>Disease present</p>
+</div>
+<div class="state-label at-risk-label" data-auto-animate-delay="0.55">
+<p>At risk</p>
+</div>
+<div class="transition-label follow-up-label" data-auto-animate-delay="0.55">
+<p>during follow-up</p>
+</div>
+</div>
+<div class="measure-question" data-id="measure-question">
+<p>Who developed disease?</p>
+</div>
+<div class="measure-type" data-id="measure-type">
+<p>Incidence counts <strong>new transitions</strong> during a specified period.</p>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Incidence begins with people who are at risk: the condition is absent at the start of follow-up.</li>
+<li>The event of interest is the transition into the condition. That transition creates a new case.</li>
+<li>People who already have the condition at the start are not at risk of becoming a new case of that condition.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="define-the-event-before-you-measure-it" class="slide level2">
+<h2>Define the Event Before You Measure It</h2>
+<div class="columns align-center">
+<div class="column" style="width:52%;">
+<h3 id="what-counts-as-a-new-event">What counts as a new event?</h3>
+<ul>
+<li><strong>One-time event:</strong> Parkinson’s disease or a first cancer diagnosis</li>
+<li><strong>Recurrent event:</strong> respiratory infections during a calendar year</li>
+<li><strong>First occurrence only:</strong> each person’s first respiratory infection during the year</li>
+</ul>
+</div><div class="column" style="width:48%;">
+<h3 id="who-can-experience-it">Who can experience it?</h3>
+<p>Begin with people <strong>at risk</strong> of the event. For Parkinson’s disease incidence, exclude people who already have Parkinson’s disease when follow-up begins.</p>
+<h3 id="how-can-we-summarize-it">How can we summarize it?</h3>
+<p>Use new-event <strong>counts, proportions, odds, rates</strong>, or <strong>time to the event</strong>.</p>
+</div></div>
 
 <aside class="notes">
 <ul>
-<li>We can measure the incidence of both one-time events (incidence of Parkinson’s disease or incidence of first cancer diagnosis) and recurrent events (number of respiratory infections in a calendar year). Thus, to measure incidence, we must start from a population at risk of the disease outcome: for example, to measure the incidence of Parkinson’s disease in our cohort, we must not include people who already have Parkinson’s disease at cohort inception. It is important to note that we can turn a recurrent event into a one-time event by restricting our study to the first occurrence of that event: for example, first respiratory infection for each individual in the calendar year. We measure incidence in many of the same ways as we measure prevalence: as incidence proportions, incidence odds, and incidence counts (i.e., counts of new cases of disease in a population). In addition, we use incidence rates and measures of elapsed time to an event. All of these measures, however, can be productively viewed as derivations, or simplifications, of a survival curve or cumulative incidence curve. Thus, we discuss the survival curve.</li>
+<li>Before calculating incidence, define exactly what counts as the event and who is capable of experiencing it.</li>
+<li>Some outcomes ordinarily occur once, while others may recur. We can make a recurrent outcome behave like a one-time event analytically by studying only its first occurrence.</li>
+<li>The population at risk depends on the event definition. People who already have the condition at cohort inception cannot contribute a new first diagnosis.</li>
+<li>Counts, proportions, odds, rates, and elapsed-time measures are different ways to summarize the same underlying event experience over time.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -255,7 +343,7 @@ Add a discussion of odds.
           display:block!important;
       }</style></aside>
 <aside><div>
-<p>Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span></p>
+<p>Each measure summarizes part of the event experience represented by a survival or cumulative incidence curve.</p>
 </div></aside></section>
 <section id="incidence-proportion-and-risk" class="slide level2">
 <h2>Incidence Proportion and Risk</h2>

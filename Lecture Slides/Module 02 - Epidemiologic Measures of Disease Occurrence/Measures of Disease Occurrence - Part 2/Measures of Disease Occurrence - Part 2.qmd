@@ -45,7 +45,9 @@ By the end of this lesson, you'll be able to:
 3. Compute and interpret prevalence and incidence.
 
 
-## Review: Choose the Snapshot {.compact}
+## Review: Choose the Snapshot
+
+<!-- Calculate the correct answers and have them ready. -->
 
 :::: {.columns .align-center}
 ::: {.column width="58%"}
@@ -72,21 +74,79 @@ Be ready to explain your numerator and denominator.
 :::
 
 
-## Incidence Describes New Occurrences
+## Prevalence Describes a State {auto-animate=true auto-animate-id="occurrence-transition" auto-animate-duration="0.7" auto-animate-easing="ease-in-out"}
 
-<!-- Make this slide more visual and less wordy. -->
+::: {.occurrence-transition}
+::: {.transition-row .prevalence-row}
+::: {.state-node .disease-present data-id="disease-present"}
+Disease present
+:::
+:::
 
-<!-- Summarize the notes into easily scannable bullets. -->
+::: {.measure-question data-id="measure-question"}
+Who has disease?
+:::
 
-- Prevalence measures how many cases are present at a moment or over a period; incidence measures how many **new cases** arise over a specified period.
-- Unlike prevalence, incidence measures occurrences or events: transitions from a condition being absent in an individual to the condition being present over a specified period.
-
-::: aside
-Source: [@westreich2019]
+::: {.measure-type data-id="measure-type"}
+A **state** observed at a moment or over a period
+:::
 :::
 
 ::: {.notes}
-- We can measure the incidence of both one-time events (incidence of Parkinson’s disease or incidence of first cancer diagnosis) and recurrent events (number of respiratory infections in a calendar year). Thus, to measure incidence, we must start from a population at risk of the disease outcome: for example, to measure the incidence of Parkinson’s disease in our cohort, we must not include people who already have Parkinson’s disease at cohort inception. It is important to note that we can turn a recurrent event into a one-time event by restricting our study to the first occurrence of that event: for example, first respiratory infection for each individual in the calendar year. We measure incidence in many of the same ways as we measure prevalence: as incidence proportions, incidence odds, and incidence counts (i.e., counts of new cases of disease in a population). In addition, we use incidence rates and measures of elapsed time to an event. All of these measures, however, can be productively viewed as derivations, or simplifications, of a survival curve or cumulative incidence curve. Thus, we discuss the survival curve.
+- Briefly reconnect this state-based question to the prevalence snapshots students just calculated.
+- Prevalence measures how many cases are present at a moment or over a period.
+- It answers the question, "who has disease?" (outcome of interest)
+- Advance to the next slide to shift from observing disease status to observing a change in disease status.
+:::
+
+
+## Incidence Describes a Transition {auto-animate=true auto-animate-id="occurrence-transition" auto-animate-duration="0.7" auto-animate-easing="ease-in-out"}
+
+::: {.occurrence-transition}
+::: {.transition-row}
+::: {.state-node .disease-absent data-id="disease-absent" auto-animate-delay="0.55"}
+Disease absent
+:::
+
+::: {.transition-arrow data-id="transition-arrow" auto-animate-delay="0.55"}
+→
+:::
+
+::: {.state-node .disease-present data-id="disease-present"}
+Disease present
+:::
+
+::: {.state-label .at-risk-label auto-animate-delay="0.55"}
+At risk
+:::
+
+::: {.transition-label .follow-up-label auto-animate-delay="0.55"}
+during follow-up
+:::
+:::
+
+::: {.measure-question data-id="measure-question"}
+Who developed disease?
+:::
+
+::: {.measure-type data-id="measure-type"}
+Incidence counts **new transitions** during a specified period.
+:::
+:::
+
+::: {.notes}
+- Incidence begins with people who are at risk: the condition is absent at the start of follow-up.
+- The event of interest is the transition into the condition. That transition creates a new case.
+- People who already have the condition at the start are not at risk of becoming a new case of that condition.
+<!-- We may want to create another slide with this information. -->
+- We can measure the incidence of:
+  - **One-time events**, such as Parkinson’s disease or a first cancer diagnosis
+  - **Recurrent events**, such as respiratory infections during a calendar year
+- To measure incidence, we must begin with a population **at risk** of the outcome. For example, a cohort used to measure Parkinson’s disease incidence must exclude people who already have the disease at cohort inception.
+- We can turn a recurrent event into a one-time event by studying only its first occurrence—for example, each person’s first respiratory infection during the calendar year.
+- As with prevalence, we can measure incidence using proportions, odds, and counts of new cases in a population.
+- We can also use incidence rates and measures of elapsed time to an event.
+- All of these measures can be viewed as derivations, or simplifications, of a survival curve or cumulative incidence curve. Thus, we turn next to the survival curve.
 :::
 
 

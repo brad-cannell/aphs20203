@@ -198,6 +198,110 @@
   font-size: 1.05em;
 }
 
+// Auto-animated bridge from prevalence (a state) to incidence (a transition).
+.reveal .occurrence-transition {
+  min-height: 410px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em;
+  text-align: center;
+}
+
+.reveal .occurrence-transition .transition-row {
+  width: 92%;
+  height: 150px;
+  position: relative;
+}
+
+.reveal .occurrence-transition .transition-row > .state-node,
+.reveal .occurrence-transition .transition-row > .transition-arrow {
+  height: 100px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.reveal .occurrence-transition .transition-row > .disease-absent {
+  left: 0;
+  width: 36%;
+}
+
+.reveal .occurrence-transition .transition-row > .disease-present {
+  left: 64%;
+  width: 36%;
+}
+
+.reveal .occurrence-transition .transition-row > .transition-arrow {
+  left: 41%;
+  width: 18%;
+}
+
+.reveal .occurrence-transition .prevalence-row > .disease-present {
+  left: 32%;
+}
+
+.reveal .occurrence-transition .state-node {
+  font-size: 1.7em;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.reveal .occurrence-transition .disease-absent {
+  color: #9a4d00;
+}
+
+.reveal .occurrence-transition .disease-present {
+  color: #b42318;
+}
+
+.reveal .occurrence-transition .state-label,
+.reveal .occurrence-transition .transition-label {
+  position: absolute;
+  top: 108px;
+  margin: 0;
+  color: #4b5258;
+  font-size: 0.68em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.reveal .occurrence-transition .at-risk-label {
+  left: 0;
+  width: 36%;
+}
+
+.reveal .occurrence-transition .follow-up-label {
+  left: 41%;
+  width: 18%;
+}
+
+.reveal .occurrence-transition .transition-arrow {
+  color: $tcu-purple;
+  font-size: 3.2em;
+  font-weight: 600;
+  line-height: 0.9;
+}
+
+.reveal .occurrence-transition .measure-question {
+  margin-top: 0.35em;
+  color: $tcu-purple;
+  font-size: 1.2em;
+  font-weight: 650;
+}
+
+.reveal .occurrence-transition .measure-type {
+  max-width: 84%;
+  color: #30363b;
+  font-size: 0.78em;
+  line-height: 1.25;
+}
+
 .reveal .count-bar {
   display: flex;
   width: 82%;

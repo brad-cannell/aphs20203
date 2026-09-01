@@ -6,6 +6,12 @@
 
 <!-- Summarize the slide notes into easily-scannable bullets. -->
 
+## AI Prompts
+
+Please give me suggestions for making this slide less wordy and/or more visual. Don't make any changes yet. Just give me suggestions.
+
+Please break this long paragraph into bullet points that are easier to skim while presenting, without losing the overall meaning or important examples. 
+
 ## Course Learning objectives
 
 1. Define epidemiology and key associated terminology, especially confounding.
