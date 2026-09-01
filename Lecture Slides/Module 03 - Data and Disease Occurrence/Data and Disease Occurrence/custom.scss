@@ -1,0 +1,127 @@
+/*-- scss:rules --*/
+
+// Shared interactive question styles retained from the canonical template.
+.reveal .quiz h2 {
+  font-size: 1.4em;
+  line-height: 1.2;
+}
+
+.reveal .quiz-prompt {
+  margin: 0.35em auto 0.55em;
+  max-width: 90%;
+  font-size: 0.78em;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.reveal .quiz-options {
+  margin: 0 auto;
+  max-width: 72%;
+  font-size: 0.82em;
+  line-height: 1.25;
+}
+
+.reveal .quiz-options p {
+  margin: 0.22em 0;
+}
+
+.reveal .participation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4em;
+  margin-top: 0.8em;
+  font-size: 0.8em;
+}
+
+.reveal img.qr {
+  display: block;
+  margin: 0.8em auto 0;
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 4px;
+  image-rendering: pixelated;
+  border: 0;
+  box-shadow: none;
+}
+
+@media print {
+  aside.notes,
+  .reveal .speaker-notes,
+  .reveal .slide-menu-wrapper,
+  .reveal .print-pdf-hidden {
+    display: none !important;
+  }
+}
+
+.reveal .section h1 {
+  border-bottom: 2px solid $presentation-heading-color;
+  padding-bottom: 0.2em;
+}
+
+// Deck-specific utilities preserve the source content at a readable 16:9 size.
+.reveal .slides section.compact {
+  font-size: 0.78em;
+}
+
+.reveal .grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 0.75em;
+}
+
+.reveal .grid-2 > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.reveal .panel {
+  padding: 0.7em 0.8em;
+  border-top: 0.16em solid $tcu-purple;
+  background: #f5f3f7;
+}
+
+.reveal .panel > p:first-child strong {
+  display: block;
+  margin-bottom: 0.35em;
+  color: $tcu-purple;
+  font-size: 0.72em;
+  letter-spacing: 0.04em;
+}
+
+.reveal .source-line {
+  margin-top: 0.45em;
+  font-size: 0.42em;
+  line-height: 1.2;
+}
+
+.reveal .table-slide {
+  font-size: 0.55em;
+}
+
+.reveal .table-slide table {
+  width: 100%;
+}
+
+.reveal .table-slide th,
+.reveal .table-slide td {
+  padding: 0.23em 0.3em;
+  vertical-align: top;
+}
+
+.reveal .notifiable-list {
+  font-size: 0.7em;
+}
+
+.reveal .slides section.visual-only > h2 {
+  display: none;
+}
+
+.reveal .slides section.visual-only {
+  padding-top: 0;
+}
+
+.reveal li + li {
+  margin-top: 0.25em;
+}
