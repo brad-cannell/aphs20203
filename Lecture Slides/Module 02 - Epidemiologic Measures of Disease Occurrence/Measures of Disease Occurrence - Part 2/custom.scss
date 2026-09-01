@@ -98,6 +98,11 @@
   align-items: center;
 }
 
+.reveal .columns.align-center {
+  display: flex;
+  align-items: center;
+}
+
 .reveal .panel-grid-spaced {
   margin-top: 1.5em;
 }

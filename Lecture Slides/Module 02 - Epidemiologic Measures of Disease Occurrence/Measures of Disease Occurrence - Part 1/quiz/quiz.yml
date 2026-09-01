@@ -65,6 +65,112 @@ questions:
     reveal_correct_answer: after_discussion
     participation_url: https://PollEv.com/multiple_choice_polls/tfzkZ1yt8g1LXFmmzxkQs/respond
 
+  - id: define-population
+    type: multiple_choice
+    prompt: Which description most completely defines an epidemiologic population?
+    options:
+      - People who live in the same place
+      - People who share specified characteristics
+      - People who share specified characteristics during a defined time period
+      - People who have the disease being studied
+    correct: 3
+    explanation: >-
+      An epidemiologic population is defined by shared characteristics or
+      membership criteria during a defined time period. The criteria do not
+      have to be geographic or based on disease status.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+
+  - id: compare-prevalence-counts
+    type: multiple_choice
+    prompt: >-
+      Town A has 500 people living with asthma, while Town B has 300. Can we
+      conclude that asthma is more common in Town A?
+    options:
+      - Yes, because 500 is greater than 300
+      - No, because we also need the population sizes
+      - No, because prevalence cannot be used for asthma
+      - Yes, but only if the counts were measured on the same day
+    correct: 2
+    explanation: >-
+      Counts can describe disease burden, but comparing how common asthma is
+      requires an appropriate denominator, including the size of each
+      population.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+
+  - id: identify-prevalence
+    type: multiple_choice
+    prompt: Which question asks about prevalence?
+    options:
+      - How many students developed influenza during October?
+      - How many students currently have influenza?
+      - How long does influenza usually last?
+      - Which students were exposed to influenza?
+    correct: 2
+    explanation: >-
+      Prevalence describes existing cases of a condition in a population at a
+      point in time or during a specified period.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+
+  - id: choose-prevalence-denominator
+    type: multiple_choice
+    prompt: >-
+      At a particular point in time, 12 people in a population of 200 are
+      living with a disease. Ten other members of the population previously
+      had the disease but recovered. What is the point prevalence?
+    options:
+      - 12 / 200
+      - 22 / 200
+      - 12 / 188
+      - 22 / 188
+    correct: 1
+    explanation: >-
+      Point prevalence is the count currently living with the disease divided
+      by the living members of the population: 12 / 200 = 0.06, or 6%.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+
+  - id: identify-period-prevalence
+    type: multiple_choice
+    prompt: Which example is a measure of period prevalence?
+    options:
+      - The proportion of students with anxiety at noon today
+      - The proportion of students who experienced anxiety at any time during the semester
+      - The number of new anxiety diagnoses this semester
+      - The average duration of anxiety symptoms
+    correct: 2
+    explanation: >-
+      Period prevalence describes the proportion of a population that had the
+      condition at any time during a specified period. Point prevalence refers
+      to a single point in time.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+
+  - id: calculate-prevalence-odds
+    type: multiple_choice
+    prompt: >-
+      If the prevalence proportion of a condition is 20%, what are the
+      prevalence odds?
+    options:
+      - "0.20"
+      - "0.25"
+      - "0.80"
+      - "4.00"
+    correct: 2
+    explanation: >-
+      Prevalence odds = 0.20 / (1 - 0.20) = 0.25. This means there is one
+      person with the condition for every four people without it.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+
   - id: incidence
     type: short_answer
     prompt: >-
