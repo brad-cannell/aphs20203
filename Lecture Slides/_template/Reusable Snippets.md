@@ -1,5 +1,11 @@
 # Reusable Snippets
 
+## Frequently Used Comments
+
+<!-- Make this slide more visual and less wordy. -->
+
+<!-- Summarize the slide notes into easily-scannable bullets. -->
+
 ## Course Learning objectives
 
 1. Define epidemiology and key associated terminology, especially confounding.
