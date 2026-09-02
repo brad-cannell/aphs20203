@@ -1,0 +1,35 @@
+{
+  "counts_01.png": {
+    "circles": 100,
+    "purple": 53,
+    "gray": 47,
+    "same_category_at_every_position": true
+  },
+  "counts_02.png": {
+    "circles": 100,
+    "purple": 53,
+    "gray": 47,
+    "same_category_at_every_position": true
+  },
+  "counts_03.png": {
+    "circles": 100,
+    "purple": 53,
+    "gray": 47,
+    "same_category_at_every_position": true
+  },
+  "population_1.png": {
+    "circles": 225,
+    "purple": 225,
+    "gray": 0,
+    "same_category_at_every_position": true
+  },
+  "example_study_01.png": {
+    "all_solid_timeline_segments_preserved_at_identical_pixels": true
+  },
+  "example_study_02.png": {
+    "all_solid_timeline_segments_preserved_at_identical_pixels": true
+  },
+  "example_study_03.png": {
+    "all_solid_timeline_segments_preserved_at_identical_pixels": true
+  }
+}

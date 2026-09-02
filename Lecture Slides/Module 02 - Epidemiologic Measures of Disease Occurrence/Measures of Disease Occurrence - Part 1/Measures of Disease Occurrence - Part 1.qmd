@@ -316,6 +316,139 @@ Introduce ratios, rates, proportions, and percentages generally.
 -->
 
 
+<!-- BEGIN AI-CREATED SLIDES: Ratios, proportions, percentages, and rates. Needs Brad's review. -->
+
+## The Same Count Can Tell Different Stories {.compact}
+
+**AI-created draft — needs review**
+
+Imagine that **10 students have mono today** in each of two dorms.
+
+| | Dorm A | Dorm B |
+|---|---:|---:|
+| Students with mono | 10 | 10 |
+| Total residents | 20 | 500 |
+| Percentage with mono | 50% | 2% |
+
+The count helps us plan care. The **denominator** shows how common mono is.
+
+::: {.notes}
+- Ask students which dorm has the larger share of residents with mono. Both need care for 10 students, but mono is much more common among residents of Dorm A.
+- The numerator is the quantity on top of a fraction; the denominator is the quantity on the bottom. Choosing the denominator determines the question we answer.
+- These are hypothetical classroom examples adapted from the reading, not observed campus data.
+
+[Sources]
+- Epidemiology 101, third edition, Chapter 3, “Mathematical Terms Used in Epidemiology,” dormitory example; supplied `Page 52-54.pdf`, PDF pages 5–6.
+[/Sources]
+:::
+
+
+## A Ratio Compares Two Quantities {.compact}
+
+**AI-created draft — needs review**
+
+A **ratio** divides one quantity by another.
+
+In a hypothetical clinic survey, **15 patients use e-cigarettes and 5 do not**.
+
+$$
+\frac{\text{Users}}{\text{Nonusers}} = \frac{15}{5} = 3
+$$
+
+There are **3 users for every 1 nonuser**: a ratio of **3:1**.
+
+The denominator does not have to include the numerator.
+
+::: {.notes}
+- Read the numerator and denominator aloud before calculating. Here we compare one group with another group, not with all patients.
+- Reversing the order changes the answer: nonusers to users is 5/15, or 1:3. Always name the order.
+- Ratios are the broad family. Proportions, rates, and odds are particular kinds of ratios with particular choices of denominator.
+
+[Sources]
+- Epidemiology 101, third edition, Chapter 3, Table 3.2 and “Ratio”; supplied `Page 52-54.pdf`, PDF page 2.
+[/Sources]
+:::
+
+
+## A Proportion Compares a Part With the Whole {.compact}
+
+**AI-created draft — needs review**
+
+For the same **15 users and 5 nonusers**, there are **20 patients in all**.
+
+$$
+\text{Proportion who use} = \frac{\text{Users}}{\text{All patients}} = \frac{15}{20} = 0.75
+$$
+
+- Everyone counted in the numerator is also in the denominator.
+- A proportion ranges from **0 to 1**.
+- Here, **three-fourths of the patients** use e-cigarettes.
+
+::: {.notes}
+- Contrast 15/5 with 15/20. The numerator is unchanged, but the denominator changes the question and the interpretation.
+- If A is the number with a characteristic and B is the number without it, the proportion with the characteristic is A/(A+B), provided the total is greater than zero.
+- A proportion of zero means none; a proportion of one means everyone. This part-to-whole structure will be used for prevalence and incidence proportions.
+
+[Sources]
+- Epidemiology 101, third edition, Chapter 3, “Proportion”; supplied `Page 52-54.pdf`, PDF pages 3–4.
+[/Sources]
+:::
+
+
+## A Percentage Expresses a Proportion per 100 {.compact}
+
+**AI-created draft — needs review**
+
+$$
+\text{Percentage who use} = \frac{15}{20} \times 100\% = 75\%
+$$
+
+**0.75 and 75% describe the same share of patients.**
+
+- Multiply a proportion by 100 to express it as a percentage.
+- Divide a percentage by 100 to recover the proportion: $75/100 = 0.75$.
+- “75%” means **75 out of every 100**, even when the actual group has 20 people.
+
+::: {.notes}
+- Ask students to convert 0.20 to 20%, then 2% to 0.02.
+- Multiplying changes the reporting scale, not the underlying information or the observed number of patients. We did not survey 100 patients.
+- A percentage representing a share of a whole ranges from 0% to 100%. Percent change is a different calculation and can exceed 100%; it is not the measure being introduced here.
+
+[Sources]
+- Epidemiology 101, third edition, Chapter 3, “Percentage”; supplied `Page 52-54.pdf`, PDF page 4.
+[/Sources]
+:::
+
+
+## A Rate Describes How Quickly Events Occur {.compact}
+
+**AI-created draft — needs review**
+
+A **rate** includes time in its denominator.
+
+For an incidence rate, we divide new cases by **person-time at risk**.
+
+$$
+\frac{6\text{ new cases}}{120\text{ person-years}} = 5\text{ cases per 100 person-years}
+$$
+
+This describes the pace of new cases. It does **not** mean that 5% became ill.
+
+::: {.notes}
+- This is a hypothetical example. Person-time adds together the time each person is observed while at risk; Part 2 will show how to calculate it.
+- Keep the units when interpreting a rate. Five cases per 100 person-years and five cases per 100 person-months describe different rates.
+- A proportion can refer to a specified year without being a rate. The key distinction is whether time is part of the denominator, not whether the question mentions a date.
+- The reading warns that epidemiologic names do not always follow strict mathematical definitions. In this course, use the calculation and denominator to distinguish proportions from rates.
+
+[Sources]
+- Epidemiology 101, third edition, Chapter 3, Figure 3.1 and “Rate”; supplied `Page 52-54.pdf`, PDF pages 1 and 6.
+- Existing Part 2 slides, “Incidence Rate” and “Person-Time,” for the course's person-time definition.
+[/Sources]
+:::
+
+<!-- END AI-CREATED SLIDES: Ratios, proportions, percentages, and rates. -->
+
+
 ## Prevalence Describes Existing Conditions {.compact}
 
 <!-- Make this slide less wordy. -->
@@ -446,6 +579,109 @@ Said another way, **20%** of the population had disease in month 2.
 :::
 
 
+<!-- AI-created draft slides; needs Brad's review. Sources: /Users/bradcannell/Library/CloudStorage/Dropbox/R4Epi Textbook/r4epi/chapters/Chapters in Development/10_part_epi_foundations/_03_measures_of_occurrence.Rmd (Prevalence Odds, Interpretation of odds less than one); /Users/bradcannell/Library/CloudStorage/Dropbox/R4Epi Textbook/r4epi/chapters/Chapters in Development/10_part_epi_foundations/_06_measures_of_association.Rmd (Probabilities, Incidence odds ratio). -->
+
+## Odds Compare People With and Without a Condition {.compact}
+
+**AI-created draft — needs review**
+
+In a hypothetical survey today, **20 students have a headache** and **80 do not**.
+
+$$
+\text{Odds of a headache} = \frac{\text{Students with a headache}}{\text{Students without a headache}} = \frac{20}{80} = 0.25
+$$
+
+The odds are **1:4**: for every **1 student with a headache**, there are **4 without one**.
+
+::: {.notes}
+- Start with the two groups of people, before asking students to memorize a formula. Both groups come from the same population measured at the same time. Here, we are describing prevalence odds because we asked who has a headache today.
+- Read 1:4 as “one to four.” We divided both counts by 20 to simplify 20:80. The ratio preserves the balance between students with and without a headache.
+
+[Sources]
+- R4Epi textbook draft, “Measures of Occurrence,” “Prevalence Odds” and “Interpretation of odds less than one.” The headache survey is a hypothetical teaching example.
+[/Sources]
+:::
+
+
+## Probability and Odds Use Different Denominators {.compact}
+
+**AI-created draft — needs review**
+
+The same survey has **20 students with a headache** and **80 without one**.
+
+| Measure | Calculation | Interpretation |
+|---|---|---|
+| Probability | $20/(20+80) = 0.20$ | 20 out of every 100 students have a headache. |
+| Odds | $20/80 = 0.25$ | 1 student has a headache for every 4 without one. |
+
+**Probability compares the part to the whole. Odds compare the part to the rest.**
+
+::: {.notes}
+- If we select one student at random, with each of these 100 students equally likely to be selected, the probability that the student has a headache is the prevalence proportion: 20/100 = 0.20. The denominator includes everyone, including the 20 students with a headache.
+- For the odds, the denominator includes only the 80 students without a headache. An odds of 0.25 therefore corresponds to a probability of 20%, not 25%. They describe the same data on different numerical scales.
+- We do not need a different dataset to move from one measure to the other. We need to change the denominator.
+
+[Sources]
+- R4Epi textbook draft, “Measures of Occurrence,” “Prevalence proportion” and “Prevalence Odds”; “Measures of Association,” “Frequency probabilities.”
+[/Sources]
+:::
+
+
+## Reading Odds Below, Equal to, and Above 1 {.compact}
+
+**AI-created draft — needs review**
+
+Three hypothetical groups surveyed on the same day:
+
+| With a headache | Without a headache | Odds | What the odds tell us |
+|---:|---:|---:|---|
+| 20 | 80 | $0.25 = 1:4$ | Fewer have a headache than do not. |
+| 50 | 50 | $1 = 1:1$ | Equal numbers have and do not have a headache. |
+| 80 | 20 | $4 = 4:1$ | More have a headache than do not. |
+
+Odds can be **greater than 1**. A probability cannot.
+
+::: {.notes}
+- An odds of 1 means the event and its absence are equally common; the probability is 0.50. An odds below 1 means the event is less common than its absence. An odds above 1 means it is more common.
+- For 4:1 odds, say “four students with a headache for every one without a headache.” That is a ratio of groups, not a probability of 400%.
+- If no one has the condition, the odds are 0. If everyone has the condition, the count without it is zero, so there is no finite odds value; the usual division is undefined. As the probability approaches 1, the odds increase without bound.
+
+[Sources]
+- R4Epi textbook draft, “Measures of Occurrence,” “Prevalence Odds,” including interpretations above and below 1. The 50:50 and 80:20 examples extend the same formula.
+[/Sources]
+:::
+
+
+## Move Between Probability and Odds {.compact}
+
+**AI-created draft — needs review**
+
+Let $p$ be the probability, written as a proportion between 0 and 1.
+
+$$
+\text{Odds} = \frac{p}{1-p}
+\qquad
+p = \frac{\text{Odds}}{1 + \text{Odds}}
+$$
+
+- Probability **0.20** gives odds $0.20/0.80 = \mathbf{0.25}$.
+- Odds **4:1** give probability $4/(4+1) = \mathbf{0.80}$, or **80%**.
+
+For odds written as **a:b**, the probability is **a/(a+b)**.
+
+::: {.notes}
+- Emphasize the count intuition behind the inverse formula. Four with a headache for every one without means four with a headache out of five students total.
+- The expression 1-p represents the probability of the condition being absent. Use 0.20 in the formula for a probability of 20%; entering 20 would give a meaningless result.
+- For one more connection to the first example, odds of 0.25 give probability 0.25/1.25 = 0.20. Equivalently, 1:4 odds give 1/(1+4) = 1/5 = 0.20.
+
+[Sources]
+- R4Epi textbook draft, “Measures of Occurrence,” “Prevalence Odds.” The inverse formula is an algebraic rearrangement of odds = p/(1-p).
+[/Sources]
+:::
+
+
+
+
 ## Prevalence Odds {.compact}
 
 - Prevalence odds is a simple function of prevalence proportion, just as odds in general is a simple function of probability.
@@ -506,6 +742,56 @@ Among the members of the population, the odds of disease in month 2 were **0.25*
 
 For every person who had disease at month 2, there were four people who did not.
 :::
+:::
+
+
+## Why Learn to Calculate Odds? {.compact}
+
+**AI-created draft — needs review**
+
+- **Describe a condition:** compare how many people have it with how many do not.
+- **Compare groups:** an *odds ratio* compares the odds in one group with the odds in another.
+- **Understand statistical results:** some models use odds to describe how outcomes vary with other characteristics.
+
+Understanding odds helps us translate those results into statements about people.
+
+::: {.notes}
+- Odds contain the same information about a binary condition as the corresponding proportion. Calculating them does not add new observations; it expresses the same information in a form that is useful for some statistical methods.
+- Brad's R4Epi draft explains that odds may arise from regression models used later in the book. Students do not need to learn those models today. The immediate goal is to recognize and correctly interpret the scale.
+- Keep the terms separate: the odds describe one group, while an odds ratio compares two groups. The next slide is a short preview of that comparison, which later lessons will develop more fully.
+
+[Sources]
+- R4Epi textbook draft, “Measures of Occurrence,” introduction to “Prevalence Odds”; “Measures of Association,” “Incidence odds ratio.”
+[/Sources]
+:::
+
+
+## An Odds Ratio Compares Two Groups {.compact}
+
+**AI-created draft — needs review**
+
+In two hypothetical groups surveyed today:
+
+| Group | With a headache | Without a headache | Odds |
+|---|---:|---:|---:|
+| A | 60 | 40 | $60/40 = 1.5$ |
+| B | 50 | 50 | $50/50 = 1.0$ |
+
+$$
+\text{Odds ratio} = \frac{\text{Odds in A}}{\text{Odds in B}} = \frac{1.5}{1.0} = 1.5
+$$
+
+Group A has **1.5 times the odds** of a headache compared with Group B today.
+
+::: {.notes}
+- Each group's odds first compare people with and without a headache within that group. The odds ratio then compares those two odds. Here it is a prevalence odds ratio because we are describing headaches present today.
+- Be precise about “1.5 times the odds.” The probabilities are 60% in A and 50% in B, so the probability ratio is 0.60/0.50 = 1.2. We cannot replace the word “odds” with “probability” and retain the same interpretation.
+- This is a descriptive comparison. The numbers alone do not explain why the groups differ or establish a cause.
+- The hypothetical counts preserve the odds of 1.5 and 1.0 used in the R4Epi association example, while using equally sized groups and a single-day survey so that the arithmetic and time frame stay simple.
+
+[Sources]
+- R4Epi textbook draft, “Measures of Association,” “Incidence odds ratio” and “Interpretation of the incidence odds ratio.” The comparison is adapted to prevalence odds for consistency with Part 1.
+[/Sources]
 :::
 
 

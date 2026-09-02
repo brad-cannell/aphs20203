@@ -1,0 +1,454 @@
+[
+  {
+    "filename": "closed_vs_open_populations_01.png",
+    "dimensions": [
+      1470,
+      650
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 99272,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#ED7D31",
+        "#4D1979"
+      ],
+      [
+        "#4472C4",
+        "#A3A9AC"
+      ],
+      [
+        "#2F528F",
+        "#4D1979"
+      ]
+    ],
+    "source_sha256": "9a770e73b26e613e3d5e80bb9fc97d07e4b1f10d1da6f62b81843cabd46ae5fe",
+    "copy_sha256": "ec9137af9190c1cc5856a8d548e336cd05cc6a463e9fbb1b2a7cad7713225b66"
+  },
+  {
+    "filename": "closed_vs_open_populations_02.png",
+    "dimensions": [
+      1470,
+      634
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 99149,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#ED7D31",
+        "#4D1979"
+      ],
+      [
+        "#4472C4",
+        "#A3A9AC"
+      ],
+      [
+        "#2F528F",
+        "#4D1979"
+      ]
+    ],
+    "source_sha256": "5366a93354c022225c4c51b64a0d3a5625f2573285b96642fa4661206571a9c6",
+    "copy_sha256": "d8a512f05f238552802579441c00edd8ac8fd06d3878de9ea3e13857dd8aebac"
+  },
+  {
+    "filename": "closed_vs_open_populations_03.png",
+    "dimensions": [
+      1468,
+      638
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 95398,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#ED7D31",
+        "#4D1979"
+      ],
+      [
+        "#4472C4",
+        "#A3A9AC"
+      ],
+      [
+        "#2F528F",
+        "#4D1979"
+      ]
+    ],
+    "source_sha256": "0177ce96e056590f47262dcd5c3a8f939657d800ec454311023cede668f967d1",
+    "copy_sha256": "cbaa93bd1fb2ec3c6ba58b2ef0164cae271b93eed31dbdbab38222351e890722"
+  },
+  {
+    "filename": "counts_01.png",
+    "dimensions": [
+      1224,
+      758
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 238482,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#AE6042",
+        "#4D1979"
+      ],
+      [
+        "#4E738A",
+        "#A3A9AC"
+      ]
+    ],
+    "source_sha256": "53cd7800d78f521a3fb4cd37da361cf335791f6022322c585232dc4475b90b6d",
+    "copy_sha256": "1c0ccf1bd87dac77cb4dff7d389d5a5794ba10ea9d34b8424b9c6cb43edb3f41"
+  },
+  {
+    "filename": "counts_02.png",
+    "dimensions": [
+      1224,
+      760
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 231409,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#AE6042",
+        "#4D1979"
+      ],
+      [
+        "#4E738A",
+        "#A3A9AC"
+      ]
+    ],
+    "source_sha256": "a72b24b04ecce18aef79cbcc8de0327ac690b53144cd61a21354446285faf8ed",
+    "copy_sha256": "97c9640d0e5547df71c41f776f6457c1f8d1e9631ef1befac3b13fb8fec1a243"
+  },
+  {
+    "filename": "counts_03.png",
+    "dimensions": [
+      3125,
+      1741
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 1214439,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#AE6042",
+        "#4D1979"
+      ],
+      [
+        "#4E738A",
+        "#A3A9AC"
+      ]
+    ],
+    "source_sha256": "95e3d12751d32fb98b170894c6899cd223f18c94ec89ba09006e95560990224a",
+    "copy_sha256": "e1fa062a0c6d4e4fe3fb2e1e65a800b202cd751584170e9ee81abb1c2b6c6365"
+  },
+  {
+    "filename": "data.png",
+    "dimensions": [
+      474,
+      650
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 75426,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#002756",
+        "#4D1979"
+      ]
+    ],
+    "source_sha256": "4f32f0cca93d71d1896ca3b1bc5ec4358ac90a883f7d3a95793ebe9bf009b338",
+    "copy_sha256": "a71ddcb6d6edf178231bc217fcf444f905e29a13c8da9d3cc8576229bf7cacc0"
+  },
+  {
+    "filename": "description_prediction_causation.png",
+    "dimensions": [
+      932,
+      826
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 26376,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "grayscale ink",
+        "#4D1979"
+      ]
+    ],
+    "source_sha256": "503865495286136b81ad4ebbecf9774576b44af4ccb5b348af6dc4a31968acd1",
+    "copy_sha256": "0b1cf44f2f4fe01899f3260657bfab7fd01a68a2a3484deafcc31b23ed6af476"
+  },
+  {
+    "filename": "example_study_01.png",
+    "dimensions": [
+      1200,
+      675
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 220147,
+    "disease_legend_black_text_bounds": [
+      189,
+      618,
+      342,
+      645
+    ],
+    "palette": [
+      [
+        "#ED7D31",
+        "#4D1979"
+      ],
+      [
+        "#FF0000",
+        "#F47D20"
+      ],
+      [
+        "#4472C4",
+        "#A3A9AC"
+      ]
+    ],
+    "source_sha256": "d93b20073871accb70dc3a785ff47126bcaf32afd3aa264429607e2f68873ed4",
+    "copy_sha256": "92709a8abfeaaee71e5797779d1c5c81b8dbe79a7805222ffa7ca5bb6356eb43"
+  },
+  {
+    "filename": "example_study_02.png",
+    "dimensions": [
+      2438,
+      2543
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 1673912,
+    "disease_legend_black_text_bounds": [
+      431,
+      2365,
+      739,
+      2464
+    ],
+    "palette": [
+      [
+        "#ED7D31",
+        "#4D1979"
+      ],
+      [
+        "#FF0000",
+        "#F47D20"
+      ],
+      [
+        "#4472C4",
+        "#A3A9AC"
+      ]
+    ],
+    "source_sha256": "141b2b0705a744c8783389539d4ca48abfb0a3afa57e565aebf7bf6e48fb0612",
+    "copy_sha256": "9fe585cfe10932b3f4f2884386ce4f83569c4d59e1788518c987c9a4f0d50e5c"
+  },
+  {
+    "filename": "example_study_03.png",
+    "dimensions": [
+      2438,
+      2543
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 1754918,
+    "disease_legend_black_text_bounds": [
+      431,
+      2365,
+      739,
+      2464
+    ],
+    "palette": [
+      [
+        "#ED7D31",
+        "#4D1979"
+      ],
+      [
+        "#FF0000",
+        "#F47D20"
+      ],
+      [
+        "#4472C4",
+        "#A3A9AC"
+      ]
+    ],
+    "source_sha256": "61f0385d78f7e2b9c291b83dcd5b45f8b37226a7f63041e20d3f19327394c8e4",
+    "copy_sha256": "0b1bfdd740b96ad3e67e6ab3bd68db0768cb6f41b32c9be9a5f9c77ab8a65fce"
+  },
+  {
+    "filename": "measurement.png",
+    "dimensions": [
+      1315,
+      1879
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 674807,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#AE6041",
+        "#4D1979"
+      ]
+    ],
+    "source_sha256": "a59402d08c7f9f78b5da2deed968cdc5b1a91b58590306e986db3402555ed13c",
+    "copy_sha256": "a73804a61a7ac9cbfb1ca09c8356c4485dc67dd05c4ac72969914acda13c72ad"
+  },
+  {
+    "filename": "measurement_data_statistics.png",
+    "dimensions": [
+      1394,
+      582
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 211013,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#AD6040",
+        "#4D1979"
+      ],
+      [
+        "#002756",
+        "#4D1979"
+      ],
+      [
+        "#4D738A",
+        "#4D1979"
+      ],
+      [
+        "#F2B825",
+        "#F9D44B"
+      ]
+    ],
+    "source_sha256": "b4ccdad466c5bb5c3670b2eb5ff17d4f63b8bc4b310248d57aa2cf98e3f0e620",
+    "copy_sha256": "3fbf9995737352de6f095c1e0c6ae0a7b32d9c03e71e529352203036564d2727"
+  },
+  {
+    "filename": "measures_uncertainty_study_design.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 100332,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#46136D",
+        "#4D1979"
+      ]
+    ],
+    "source_sha256": "3c4d3c1b955404d96425ec5402f91221551d0185efc2d29e2c239f1de3faa42b",
+    "copy_sha256": "bd7126c1139dde1898d7dc50eaf5de609e0f3c8ea4c18243ba8fb1929b234821"
+  },
+  {
+    "filename": "population_1.png",
+    "dimensions": [
+      1475,
+      1699
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 613451,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#AE6042",
+        "#4D1979"
+      ]
+    ],
+    "source_sha256": "da49c4d4fd0721131afcb59356be561ecbe3c55c6d29bf88e4dd3eb1301911bc",
+    "copy_sha256": "d04afa08a0e33923d801f2206f269870f7f5aae11f534745ccae02e109e22fd1"
+  },
+  {
+    "filename": "statistics.png",
+    "dimensions": [
+      1177,
+      1677
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 552069,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#4D738A",
+        "#4D1979"
+      ]
+    ],
+    "source_sha256": "55be1ce2816923c37499d0e774e8f0b3756e9d2d2abc8efbf9633b695197e0ed",
+    "copy_sha256": "896692a7a3454bb5a6382bac16a6d561ca3c4b11a83ddc5e47bc2f3990e5c996"
+  },
+  {
+    "filename": "study_design.png",
+    "dimensions": [
+      1315,
+      1879
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 674659,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#817290",
+        "#4D1979"
+      ]
+    ],
+    "source_sha256": "852595c8cfc4f124d72034d043ee0d75b613726d925923a17301fb8600025dc8",
+    "copy_sha256": "9bc4367c0b84d741bd1bf900efdd868e6bebc4d9e5dadef39e6af30e278768db"
+  },
+  {
+    "filename": "types_of_studies.png",
+    "dimensions": [
+      1200,
+      675
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 18726,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#ED7D31",
+        "#4D1979"
+      ],
+      [
+        "#5B9BD5",
+        "#A3A9AC"
+      ]
+    ],
+    "source_sha256": "986ebb8c2ef6b439e38dfcf7d30b39c57d5ca100ea11108206668f5c8a10d437",
+    "copy_sha256": "6b95e909dc3b9cce2896b2f344b3b2bf02fd10a1ef36e622708177b315d19815"
+  },
+  {
+    "filename": "uncertainty.png",
+    "dimensions": [
+      1320,
+      1879
+    ],
+    "alpha_identical": true,
+    "unchanged_regions_identical": true,
+    "changed_pixels": 679815,
+    "disease_legend_black_text_bounds": null,
+    "palette": [
+      [
+        "#4D738A",
+        "#4D1979"
+      ]
+    ],
+    "source_sha256": "b2710934ebc94a7fbba7ea231523e02bb5019346024ba0eda938119bacd69a0b",
+    "copy_sha256": "baa8517af0482b30d26148f36c6f1e8cb53e8b97ca02c409ef4b0cf11e5a86ea"
+  }
+]

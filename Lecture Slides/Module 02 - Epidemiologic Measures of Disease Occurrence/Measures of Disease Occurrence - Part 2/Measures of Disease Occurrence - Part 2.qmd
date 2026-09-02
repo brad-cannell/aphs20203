@@ -276,6 +276,8 @@ $$
 
 ## Incidence Odds Over 12 Months
 
+<!-- AI correction — needs review: calculate from exact counts instead of the rounded incidence proportion. -->
+
 :::: {.columns .align-center}
 ::: {.column width="60%"}
 <img src="assets/example_study_02.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up.">
@@ -287,12 +289,12 @@ $$
 $$
 <br>
 $$
-\frac{0.56}{1 - 0.56}
+\frac{5/9}{1 - 5/9} = \frac{5}{4}
 $$
 
 <br>
 $$
-= 1.27
+= 1.25
 $$
 :::
 ::::
@@ -300,17 +302,19 @@ $$
 
 ## Interpreting Incidence Odds
 
+<!-- AI correction — needs review: exact odds are 5/4 = 1.25. -->
+
 :::: {.columns .align-center}
 ::: {.column width="60%"}
 <img src="assets/example_study_02.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up.">
 :::
 
 ::: {.column width="40%" style="text-align: center;"}
-Among the members of the population, the odds of incident disease over 12 months of follow-up were **1.27**.
+Among the members of the population, the odds of incident disease over 12 months of follow-up were **1.25**.
 <br>
 <br>
 
-For every 127 people who developed incident disease over 12 months of follow-up, 100 people did not.
+For every 5 people who developed incident disease over 12 months of follow-up, 4 people did not.
 :::
 ::::
 
@@ -324,7 +328,8 @@ For every 127 people who developed incident disease over 12 months of follow-up,
 - For a population followed from baseline, it is the number of cases divided by the person-time at risk accumulated by the population.
 - Range: 0 to infinity.
 - **Not a proportion.**
-- The denominator is reciprocal time, usually person-time.
+<!-- AI correction — needs review: person-time is the denominator; reciprocal time describes the resulting rate units. -->
+- The denominator is person-time at risk; the resulting rate has units of inverse time.
 - The numeric value depends on the selected time unit and therefore has no interpretation by itself.
 :::
 
@@ -465,6 +470,235 @@ Add content about the relationship between odds and proportions.
 <!--  
 Add review questions or an exercise.
 -->
+
+<!-- BEGIN AI-CREATED DRAFT SLIDES: mortality, natality, and adjusted rates. Brad review required before teaching. -->
+
+## Mortality Rates: Incidence of Death {.compact}
+
+**AI-created draft — needs review**
+
+Death is another **new event** we can count over time.
+
+$$
+\text{Crude mortality rate} = \frac{\text{Deaths during the year}}{\text{Midyear population}} \times 1{,}000
+$$
+
+**Hypothetical town:** 80 deaths during one year; 10,000 residents at midyear.
+
+$$
+\frac{80}{10{,}000} \times 1{,}000 = 8\text{ deaths per 1,000 residents that year}
+$$
+
+- **Crude:** all causes of death, across the whole population.
+- **Specific:** narrow the cause or population, such as cancer deaths or deaths among adults ages 65+.
+
+::: {.notes}
+- Connect this measure to the incidence rate students just learned: the event is death rather than a new disease diagnosis.
+- Midyear population multiplied by one year approximates the population's person-time during that year. This works best when population size changes reasonably smoothly; the denominator is not a count of a closed cohort followed from baseline.
+- For an age-specific mortality rate, both numerator and denominator must use the same age group: deaths among adults ages 65+ divided by the midyear population ages 65+. A sex-specific mortality rate uses the same principle.
+- A cause-specific mortality rate restricts the numerator to deaths from the selected cause and uses the relevant population as the denominator. For example, cancer deaths divided by the midyear population describes population mortality from cancer; it does not describe the proportion of cancer patients who die.
+- The multiplier changes how the rate is displayed. Eight deaths per 1,000 is equivalent to 800 deaths per 100,000 over the same year.
+
+[Sources]
+- Friis, *Epidemiology 101*, 3rd ed., Chapter 3: supplied `Pages 61-62.pdf` and `Pages 64-65.pdf`.
+- [CDC/NCHS, Rate: Death and related rates](https://www.cdc.gov/nchs/hus/sources-definitions/rate.htm).
+- All town data on this slide are hypothetical teaching examples.
+[/Sources]
+:::
+
+
+## Natality Rates: Counting Births {.compact}
+
+**AI-created draft — needs review**
+
+**Natality** refers to births. We again relate new events to a population over time.
+
+$$
+\text{Crude birth rate} = \frac{\text{Live births during the year}}{\text{Midyear population}} \times 1{,}000
+$$
+
+**Hypothetical town:** 120 live births; 10,000 residents at midyear.
+
+$$
+\frac{120}{10{,}000} \times 1{,}000 = 12\text{ live births per 1,000 residents that year}
+$$
+
+- This describes births in relation to the **whole population**.
+- The **general fertility rate** uses women ages 15–44 as its denominator, by U.S. statistical convention.
+
+::: {.notes}
+- The familiar structure remains: define the event, choose the population denominator, specify the time period, and choose a multiplier.
+- As with the annual crude death rate, midyear population multiplied by one year approximates population person-time. The crude birth rate describes the population's production of births; it is not an individual's probability of giving birth because the denominator includes all residents.
+- For the U.S. general fertility rate, divide all live births during the year, regardless of maternal age, by the midyear number of women ages 15–44 and multiply by 1,000. This is a conventional population measure, not a perfect count of everyone capable of giving birth.
+- Birth counts count babies, so a delivery of live-born twins contributes two live births. Birth counts help plan services, and birth rates help compare populations of different sizes.
+
+[Sources]
+- Friis, *Epidemiology 101*, 3rd ed., Chapter 3: supplied `Pages 66-67.pdf`.
+- [CDC/NCHS, Rate: Birth and related rates](https://www.cdc.gov/nchs/hus/sources-definitions/rate.htm), used to verify the birth-rate formula and general fertility-rate definition because the supplied extract does not include the full formulas.
+- All town data on this slide are hypothetical teaching examples.
+[/Sources]
+:::
+
+
+## A Familiar Name Can Hide a Different Denominator {.compact}
+
+**AI-created draft — needs review**
+
+Always check **what is being divided by what**.
+
+| Measure | Numerator | Denominator |
+|---|---|---|
+| Case-fatality proportion | Deaths from the disease among a defined group of cases | All cases in that group |
+| Infant mortality rate | Deaths before age 1 during a year | Live births during that year |
+
+**Hypothetical examples:**
+
+- **Case fatality:** 3 deaths among 100 cases followed through illness → **3%** of those cases died from the disease.
+- **Infant mortality:** 6 infant deaths and 1,200 live births → **5 deaths before age 1 per 1,000 live births** that year.
+
+::: {.notes}
+- Ask students to connect case fatality to a familiar proportion: the numerator is part of the denominator. Although often called the “case-fatality rate,” it is a proportion, not a person-time rate. Define the cases and follow-up period; the example assumes outcomes are known for all 100 cases.
+- Infant mortality uses a conventional ratio of two event counts, rather than a person-time denominator. Some infants who die this year were born last year, so the numerator is not necessarily a subset of this year's births. Avoid interpreting the annual period measure as an exact observed risk for the babies born that year.
+- The infant mortality calculation is 6 divided by 1,200, multiplied by 1,000. Describe the result as deaths per 1,000 live births and name the year and population.
+- These examples extend the earlier distinction between ratios, proportions, and rates. The name alone does not identify the mathematical structure.
+
+[Sources]
+- Friis, *Epidemiology 101*, 3rd ed., Chapter 3: supplied `Pages 61-62.pdf` for case fatality and `Pages 66-67.pdf` for infant mortality.
+- All numerical examples on this slide are hypothetical.
+[/Sources]
+:::
+
+
+## Why Adjust a Rate? {.compact}
+
+**AI-created draft — needs review**
+
+A town with more older adults can have a higher crude death rate **even when its age-specific rates are the same**.
+
+**Hypothetical example: one year, 10,000 residents in each town.**
+
+| Age group | Town A population | Town B population | Deaths per 1,000 in both towns |
+|---|---:|---:|---:|
+| Under 65 | 9,000 | 5,000 | 2 |
+| 65+ | 1,000 | 5,000 | 20 |
+
+- **Town A:** 18 + 20 = 38 deaths → **3.8 per 1,000**.
+- **Town B:** 10 + 100 = 110 deaths → **11 per 1,000**.
+
+What would the comparison look like if both towns had the **same age mix**?
+
+::: {.notes}
+- Walk through the death counts: Town A has 9,000 × 2/1,000 = 18 deaths below age 65 and 1,000 × 20/1,000 = 20 deaths at ages 65+. Town B has 10 and 100 deaths, respectively.
+- These are midyear population counts used to approximate person-time during the year. The crude rate combines the age-specific rates using each town's own age distribution.
+- Neither town has a higher death rate within either age group in this deliberately simple example. The difference in crude rates comes entirely from the different age distributions.
+- An adjusted rate summarizes the comparison after applying a common population composition. Adjustment can also be used for other factors, but age is especially useful for illustrating mortality comparisons.
+
+[Sources]
+- Friis, *Epidemiology 101*, 3rd ed., Chapter 3: supplied `Page 65.pdf` and `Pages 64-65.pdf`.
+- [CDC/NCHS, Age adjustment](https://www.cdc.gov/nchs/hus/sources-definitions/age-adjustment.htm).
+- All town data on this slide are hypothetical teaching examples, created to isolate the effect of age composition.
+[/Sources]
+:::
+
+
+## Age Adjustment: Use the Same Age Mix {.compact}
+
+**AI-created draft — needs review**
+
+**Direct age adjustment** takes a weighted average of age-specific rates using the **same age weights** for every population.
+
+For our example, choose a standard population that is **80% under 65** and **20% ages 65+**.
+
+$$
+\text{Adjusted rate} = (0.80 \times 2) + (0.20 \times 20) = 5.6
+$$
+
+Both towns have an adjusted rate of **5.6 deaths per 1,000 standard population per year**.
+
+- This is the rate expected if each town had the standard age mix.
+- Age adjustment supports comparisons; it does **not** remove every difference or bias between populations.
+
+::: {.notes}
+- Keep each town's own age-specific death rates, replace its age weights with the common standard weights, and add the weighted rates. The weights must sum to 1.
+- In this example, both towns have age-specific rates of 2 and 20 per 1,000 per year, so applying the same 0.80 and 0.20 weights produces 5.6 for each. The crude rates remain 3.8 and 11; the adjusted calculation is a comparison under the chosen common age distribution, not a change in the actual deaths observed.
+- Explain the hypothetical standard in counts if helpful: among 1,000 people with this age mix, 800 are under age 65 and 200 are ages 65+. Applying the age-specific rates gives 1.6 + 4 = 5.6 expected deaths per year. Expected counts need not be whole numbers.
+- The 80%/20% standard and two broad age groups are teaching simplifications. U.S. published mortality statistics commonly use the projected 2000 U.S. standard population with more detailed age groups. Compare adjusted rates that use compatible age groups and the same standard.
+- Adjustment addresses differences in the included factor. It does not automatically correct measurement error, differences in other characteristics, or confounding within broad age groups, and it does not establish causation.
+- The supplied reading also introduces indirect adjustment, which applies standard age-specific rates to the population being studied and compares observed with expected deaths. Keep that method as optional context; these slides teach the intuition behind direct adjustment.
+
+[Sources]
+- Friis, *Epidemiology 101*, 3rd ed., Chapter 3: supplied `Page 65.pdf`.
+- [CDC/NCHS, Age adjustment](https://www.cdc.gov/nchs/hus/sources-definitions/age-adjustment.htm).
+- The standard age mix and numerical example are hypothetical teaching examples.
+[/Sources]
+:::
+
+<!-- END AI-CREATED DRAFT SLIDES: mortality, natality, and adjusted rates. -->
+
+
+<!-- BEGIN AI-CREATED REVIEW SLIDES: questions are authored in quiz/quiz.yml; needs review. -->
+
+## Review: Ratios, Proportions, and Percentages {#review-ratio-proportion-percentage .quiz}
+
+**AI-created draft — needs review**
+
+{{< include quiz-slides/review-ratio-proportion-percentage.qmd >}}
+
+## Review: Prevalence and Incidence {#review-prevalence-and-incidence .quiz}
+
+**AI-created draft — needs review**
+
+{{< include quiz-slides/review-prevalence-and-incidence.qmd >}}
+
+## Review: Person-Time and Rates {#review-person-time-rate .quiz}
+
+**AI-created draft — needs review**
+
+{{< include quiz-slides/review-person-time-rate.qmd >}}
+
+## Review: Interpret the Odds {#review-odds-interpretation .quiz}
+
+**AI-created draft — needs review**
+
+{{< include quiz-slides/review-odds-interpretation.qmd >}}
+
+## Review: Convert Odds to Probability {#review-odds-to-probability .quiz}
+
+**AI-created draft — needs review**
+
+{{< include quiz-slides/review-odds-to-probability.qmd >}}
+
+## Review: Compare Two Odds {#review-odds-ratio .quiz}
+
+**AI-created draft — needs review**
+
+{{< include quiz-slides/review-odds-ratio.qmd >}}
+
+## Review: Why Adjust Rates? {#review-why-adjust-rates .quiz}
+
+**AI-created draft — needs review**
+
+{{< include quiz-slides/review-why-adjust-rates.qmd >}}
+
+## Review: Calculate an Adjusted Rate {#review-adjusted-rate-calculation .quiz}
+
+**AI-created draft — needs review**
+
+{{< include quiz-slides/review-adjusted-rate-calculation.qmd >}}
+
+## Review: Mortality Rates {#review-mortality-rate .quiz}
+
+**AI-created draft — needs review**
+
+{{< include quiz-slides/review-mortality-rate.qmd >}}
+
+## Review: Birth and Fertility Rates {#review-birth-and-fertility-rates .quiz}
+
+**AI-created draft — needs review**
+
+{{< include quiz-slides/review-birth-and-fertility-rates.qmd >}}
+
+<!-- END AI-CREATED REVIEW SLIDES. -->
 
 ## References {.references-slide}
 
