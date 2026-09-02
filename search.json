@@ -1,5 +1,446 @@
 [
   {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#course-learning-objectives",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#course-learning-objectives",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Course Learning Objectives",
+    "text": "Course Learning Objectives\n\nDefine epidemiology and key associated terminology, especially confounding.\nDistinguish among association, prediction, and causation.\nExplain the Rothman model of sufficient-component causes (RMSCC) and the concept of multifactorial causation.\nExplain the limitations of anecdotal evidence in drawing epidemiologic conclusions.\nExplain why disseminating risk information is sometimes necessary but rarely sufficient to improve population health.\n\n\nBy the end of this course, my goal is for you to be able to:"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#lecture-learning-objectives",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#lecture-learning-objectives",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Lecture Learning Objectives",
+    "text": "Lecture Learning Objectives\n\nBy the end of this lesson, you’ll be able to:\n\nDefine counts and rates.\nDistinguish crude, specific, adjusted rates.\nCompute and interpret prevalence and incidence."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-choose-the-snapshot",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-choose-the-snapshot",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Review: Choose the Snapshot",
+    "text": "Review: Choose the Snapshot\n\n\n\n\n\nWith your group:\n\nChoose month 2, 6, or 10.\nCount the people living with disease.\nCount the living members of the population.\nCalculate and interpret the prevalence proportion.\n\nBe ready to explain your numerator and denominator.\n\n\n\nAllow groups about 3 minutes to work, then ask one group assigned to each month to report its numerator, denominator, prevalence proportion, and interpretation.\nAsk why groups obtained different prevalence estimates even though they examined the same population. Emphasize that a measure of occurrence requires both a defined population and a defined time frame.\nReinforce that counts describe burden, while proportions place that burden in the context of the population size.\nTransition to incidence by asking: “These snapshots tell us who had the disease at each point, but how could we describe who developed it during follow-up?”"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#prevalence-describes-a-state",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#prevalence-describes-a-state",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Prevalence Describes a State",
+    "text": "Prevalence Describes a State\n\n\n\nDisease present\n\n\n\nWho has disease?\n\n\nA state observed at a moment or over a period\n\n\n\n\nPrevalence measures how many cases are present at a moment or over a period.\nIt answers the question, “who has disease?” (outcome of interest)\nAdvance to the next slide to shift from observing disease status to observing a change in disease status."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-describes-a-transition",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-describes-a-transition",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Incidence Describes a Transition",
+    "text": "Incidence Describes a Transition\n\n\n\nDisease absent\n\n\n→\n\n\nDisease present\n\n\nAt risk\n\n\nduring follow-up\n\n\n\nWho developed disease?\n\n\nIncidence counts new transitions during a specified period.\n\n\n\n\nIncidence begins with people who are at risk: the outcome is absent at the start of follow-up.\nThe event of interest is the transition into the outcome. That transition creates a new case.\nPeople who already have the outcome at the start are not at risk of becoming a new case of that outcome."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#one-time-vs.-recurrent-events",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#one-time-vs.-recurrent-events",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "One-Time vs. Recurrent Events",
+    "text": "One-Time vs. Recurrent Events\n\nWe can measure the incidence of:\n\nOne-time events, such as Parkinson’s disease or a first cancer diagnosis\nRecurrent events, such as respiratory infections during a calendar year\n\n\n\nWe can measure the incidence of:\n\nOne-time events, such as Parkinson’s disease or a first cancer diagnosis\nRecurrent events, such as respiratory infections during a calendar year\n\nTo measure incidence, we must begin with a population at risk of the outcome. For example, a cohort used to measure Parkinson’s disease incidence must exclude people who already have the disease at cohort inception.\nWe can turn a recurrent event into a one-time event by studying only its first occurrence—for example, each person’s first respiratory infection during the calendar year."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-proportion-and-risk",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-proportion-and-risk",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Incidence Proportion and Risk",
+    "text": "Incidence Proportion and Risk\n\n\nIncidence proportion and “risk” are sometimes used interchangeably in epidemiology.\nRisk can be ambiguous. Incidence proportion is less so.\n\n\n\nWe will use the more precise terminology in this course."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-measures",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-measures",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Incidence Measures",
+    "text": "Incidence Measures\n\n\n\n\nAs with prevalence, we can measure incidence using proportions, odds, and counts of new cases in a population.\nWe can also use incidence rates and measures of elapsed time to an event."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-count",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-count",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Incidence Count",
+    "text": "Incidence Count\n\n\nA count of new occurrences of a condition in a population at risk for the occurrence during a given time frame.\nRange: 0 to infinity.\n\n\n\nA count of new occurrences of a condition in a population at risk for the occurrence during a given time frame.\nRange: 0 to infinity."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-proportion",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-proportion",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Incidence Proportion",
+    "text": "Incidence Proportion\n\n\nThe proportion of the population that experiences a new occurrence of the condition among those at risk of experiencing a new occurrence during a given time frame.\nLike all proportions, it falls between 0 and 1.\n\n\n\nIt is critical to reiterate that incidence proportions are only meaningful when paired with a fixed period of time.\nThis may be illustrated most clearly with the outcome of death: the “risk of death” in humans is universally 1, in that all humans will eventually die.\nThus, telling someone that, in your study, the “risk of death was 10%” is unhelpful; more helpful would be to tell them that, for example, the “1-year risk of death was 10%.”"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-proportion-formula",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-proportion-formula",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Incidence Proportion: Formula",
+    "text": "Incidence Proportion: Formula\n\\[\n\\text{Incidence proportion} = \\frac{\\text{Count of new occurrences}}{\\text{Population at risk}}\n\\]\n\n\nWe can write the information from the previous slide in a slightly more mathy way like this."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#follow-up-experience-and-new-occurrences",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#follow-up-experience-and-new-occurrences",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Follow-Up Experience and New Occurrences",
+    "text": "Follow-Up Experience and New Occurrences\n\n\n\nSo, let’s take another look at our example population.\nHow many were at risk of experiencing a new occurrence of disease during the period of observation? 9 (person 1 was not at risk).\nHow many of the people at risk developed a new occurrence of disease? 5 (p2, p3, p4, p5, p6)."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-proportion-over-12-months",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-proportion-over-12-months",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Incidence Proportion Over 12 Months",
+    "text": "Incidence Proportion Over 12 Months\n\n\n\n\n\\[\n\\frac{\\text{Count of new occurrences}}{\\text{Population at risk}}\n\\]  \\[\n\\frac{5}{9}\n\\]  \\[\n\\approx 0.56 \\text{ or } 56\\%\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#interpreting-incidence-proportion",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#interpreting-incidence-proportion",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Interpreting Incidence Proportion",
+    "text": "Interpreting Incidence Proportion\n\n\n\n\nAmong the members of the population, the incidence of disease over 12 months of follow-up was 0.56.  \nFifty-six percent of the population developed disease over 12 months of follow-up."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-odds-formula",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-odds-formula",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Incidence Odds: Formula",
+    "text": "Incidence Odds: Formula\n\\[\n\\text{Incidence odds} = \\frac{\\text{Incidence proportion}}{1 - \\text{Incidence proportion}}\n\\]\n\n\nWe can write the information from the previous slide in a slightly more mathy way like this."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-odds-over-12-months",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-odds-over-12-months",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Incidence Odds Over 12 Months",
+    "text": "Incidence Odds Over 12 Months\n\n\n\n\n\\[\n\\frac{\\text{Incidence proportion}}{1 - \\text{Incidence proportion}}\n\\]  \\[\n\\frac{0.56}{1 - 0.56}\n\\]\n \\[\n\\approx 1.27\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#exact-incidence-odds-over-12-months",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#exact-incidence-odds-over-12-months",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Exact Incidence Odds Over 12 Months",
+    "text": "Exact Incidence Odds Over 12 Months\n\n\n\n\n\\[\n\\frac{\\text{Incident cases}}{\\text{Non-incident cases}}\n\\] \n\n\\[\n\\text{5:4} \\text{ or } \\frac{5}{4}\n\\]\n \\[\n= 1.25\n\\]\n\n\n\n\nWe can also calculate the incidence odds more precisely as…"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#interpreting-incidence-odds",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#interpreting-incidence-odds",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Interpreting Incidence Odds",
+    "text": "Interpreting Incidence Odds\n\n\n\n\nAmong the members of the population, the odds of incident disease over 12 months of follow-up were 1.25.  \nFor every 5 people who developed incident disease over 12 months of follow-up, 4 people did not.\n\n\n\nNotice that we don’t say had disease.\nAnd how do we get from 1.25 back to 5:4?\nExpress the decimal as a fraction: 1.25 = 125/100\nThen simplify by dividing numerator and denominator by 25: 125/100 = 5/4 or 5:4."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-rate",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Incidence Rate",
+    "text": "Incidence Rate\n\n\nA measure of the average intensity at which an event occurs in people’s experience over time.\nFor a population followed from baseline, it is the number of cases divided by the person-time at risk accumulated by the population.\nRange: 0 to infinity.\nNot a proportion. \nThe denominator is person-time at risk\nThe resulting rate has units of inverse/reciprocal time (\\(\\text{time}^{-1}\\)).\nThe numeric value depends on the selected time unit and therefore has no interpretation by itself.\n\n\n\n\nAccurately calculating the incidence proportion requires complete follow-up of a closed population. In other words, no new members once enrollment is complete, and no members leave the population except through death. Unfortunately, these conditions are pretty rare in the real world.\nOne way to deal with this complication is to develop measures that take into account the length of time each individual was in the population at risk for the event. This length or span of time is called the person-time contribution of the individual.\n\n\n\nSource: (Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#person-time",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#person-time",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Person-Time",
+    "text": "Person-Time\n\n\nPerson-time is the amount of time observed for all people under study while they are at risk of experiencing an incident outcome.\nIf a woman is followed for 1 month, then she experiences (and contributes to analysis) 1 person-month of time.\nIf 10 women are followed for 1 year, they contribute 10 × 1 = 10 person-years.\nIf 1 woman is followed for 10 years, she also contributes 1 × 10 = 10 person-years.\n\n\n\n\nThis calls attention to a basic assumption of person-time: that any unit of person-time is exchangeable with any other unit of person-time under study.\n\n\n\nSource: (Westreich 2019)"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#follow-up-experience-and-time-at-risk",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#follow-up-experience-and-time-at-risk",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Follow-Up Experience and Time at Risk",
+    "text": "Follow-Up Experience and Time at Risk\n\n\n\nSo, let’s take another look at our example population.\nHow many were at risk of experiencing a new occurrence of disease during the period of observation? 9 (person 1 was not at risk).\nFor how many months were these 9 people under observation and at risk of developing a new occurrence of disease?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#calculating-person-time",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#calculating-person-time",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Calculating Person-Time",
+    "text": "Calculating Person-Time\n\n\n\n\n\\[\n\\sum_{\\text{people}} \\text{Time at risk}\n\\]  \\[\n\\begin{aligned}\n&= 0 + 2 + 4 + 5 + 7 \\\\\n&+ 8 + 9 + 5 + 12 + 12\n\\end{aligned}\n\\]\n \\[\n= 64\\text{ person-months}\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#interpreting-person-time",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#interpreting-person-time",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Interpreting Person-Time",
+    "text": "Interpreting Person-Time\n\n\n\n\nThe population accumulated 64 person-months at risk during 12 months of follow-up.  \nThe same amount is 5.33 person-years at risk during 12 months of follow-up."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#follow-up-experience-for-the-incidence-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#follow-up-experience-for-the-incidence-rate",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Follow-Up Experience for the Incidence Rate",
+    "text": "Follow-Up Experience for the Incidence Rate\n\n\n\nHow many of the people at risk developed a new occurrence of disease? 5 (p2, p3, p4, p5, p6)."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-rate-calculation",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-rate-calculation",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Incidence Rate: Calculation",
+    "text": "Incidence Rate: Calculation\n\n\n\n\n\\[\n\\frac{\\text{Count of new occurrences}}{\\text{Person-time at risk}}\n\\]  \\[\n= \\frac{5}{64\\text{ person-months}}\n\\]\n \\[\n\\approx 7.8\\text{ per 100 person-months}\n\\]"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#interpreting-the-incidence-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#interpreting-the-incidence-rate",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Interpreting the Incidence Rate",
+    "text": "Interpreting the Incidence Rate\n\n\n\n\nThe incidence rate of disease among the members of the population was 5 cases per 64 person-months during 12 months of follow-up.  \nEquivalently, the incidence rate was 7.8 cases per 100 person-months during 12 months of follow-up."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#inversereciprocal-time-texttime-1",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#inversereciprocal-time-texttime-1",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Inverse/Reciprocal Time (\\(\\text{time}^{-1}\\))",
+    "text": "Inverse/Reciprocal Time (\\(\\text{time}^{-1}\\))\n\nIf a study follows 100 people for 5 years, what is the total person-time?\n\nThe total person-time is 500 person-years.\n\nIf 10 people experience the event of interest, what is the incidence rate?\n\nThe incidence rate is: \\(\\frac{10 \\text{ cases}}{500 \\text{ person-years}} = \\text{0.02 cases per person-year}\\)\nThe unit is \\(\\text{0.02} \\text{ time}^{-1}\\). This reciprocal time unit means that, on average, 2% of the population at risk will experience the event each year.\n\nBut why is it called “reciprocal time” and why is it written as \\(\\text{time}^{-1}\\)?\n\n\n\nDid you notice the funny unit of time two slides ago?\nIt’s called inverse or reciprocal time, and it can seem very confusing, but really it’s just basic algebra."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#why-is-it-called-inversereciprocal-time",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#why-is-it-called-inversereciprocal-time",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Why Is It Called Inverse/Reciprocal Time?",
+    "text": "Why Is It Called Inverse/Reciprocal Time?\n\nIt is called reciprocal time and written as \\(\\text{time}^{-1}\\) because of basic algebra and the rules of mathematical exponents.\nIn mathematics, the reciprocal of any number or variable is just 1 divided by that variable.\n\nThe reciprocal of 5 is \\(\\frac{1}{5}\\)\nThe reciprocal of Time is \\(\\frac{1}{\\text{Time}}\\).\nWhen we calculate an incidence rate, the formula is: \\(\\frac{\\text{Count of new occurrences}}{\\text{Person-time at risk}}\\)\n\nBecause the unit of time sits in the denominator (the bottom of the fraction), we are multiplying the number of cases by the reciprocal of time.\n\n\n\nWhy is it called inverse/reciprocal time?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#why-the-negative-exponent-texttime-1",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#why-the-negative-exponent-texttime-1",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Why the Negative Exponent (\\(\\text{time}^{-1}\\))?",
+    "text": "Why the Negative Exponent (\\(\\text{time}^{-1}\\))?\n\nIn algebra, a negative exponent is a shorthand way of writing a fraction where the variable is on the bottom. The standard rule is: \\(\\frac{1}{x} = x^{-1}\\)\nIf our unit of time is years, then: \\(\\frac{1}{\\text{year}} = \\text{year}^{-1}\\)\nSo, when we see a rate written as \\(\\text{0.02} \\text{ time}^{-1}\\), it literally means 0.02 per year or \\(\\frac{0.02}{\\text{year}}\\).\nUsing the negative exponent is simply the standard scientific way to write “per year” on a single line without needing to draw a fraction bar.\n\n\n\nWhy the negative exponent?"
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#mortality-rates-incidence-of-death",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#mortality-rates-incidence-of-death",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Mortality Rates: Incidence of Death",
+    "text": "Mortality Rates: Incidence of Death\nDeath is another new event we can count over time.\n\\[\n\\text{Crude mortality rate} = \\frac{\\text{Deaths during the year}}{\\text{Midyear population}} \\times 1{,}000\n\\]\nHypothetical town: 80 deaths during one year; 10,000 residents at midyear.\n\\[\n\\frac{80}{10{,}000} \\times 1{,}000 = 8\\text{ deaths per 1,000 residents that year}\n\\]\n\nCrude: all causes of death, across the whole population.\nSpecific: narrow the cause or population, such as cancer deaths or deaths among adults ages 65+.\n\n\n\nConnect this measure to the incidence rate students just learned: the event is death rather than a new disease diagnosis.\nMidyear population multiplied by one year approximates the population’s person-time during that year. This works best when population size changes reasonably smoothly; the denominator is not a count of a closed cohort followed from baseline.\nFor an age-specific mortality rate, both numerator and denominator must use the same age group: deaths among adults ages 65+ divided by the midyear population ages 65+. A sex-specific mortality rate uses the same principle.\nA cause-specific mortality rate restricts the numerator to deaths from the selected cause and uses the relevant population as the denominator. For example, cancer deaths divided by the midyear population describes population mortality from cancer; it does not describe the proportion of cancer patients who die.\nThe multiplier changes how the rate is displayed. Eight deaths per 1,000 is equivalent to 800 deaths per 100,000 over the same year."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#natality-rates-counting-births",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#natality-rates-counting-births",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Natality Rates: Counting Births",
+    "text": "Natality Rates: Counting Births\nNatality refers to births. We again relate new events to a population over time.\n\\[\n\\text{Crude birth rate} = \\frac{\\text{Live births during the year}}{\\text{Midyear population}} \\times 1{,}000\n\\]\nHypothetical town: 120 live births; 10,000 residents at midyear.\n\\[\n\\frac{120}{10{,}000} \\times 1{,}000 = 12\\text{ live births per 1,000 residents that year}\n\\]\n\nThis describes births in relation to the whole population.\nThe general fertility rate uses women ages 15–44 as its denominator, by U.S. statistical convention.\n\n\n\nThe familiar structure remains: define the event, choose the population denominator, specify the time period, and choose a multiplier.\nAs with the annual crude death rate, midyear population multiplied by one year approximates population person-time. The crude birth rate describes the population’s production of births; it is not an individual’s probability of giving birth because the denominator includes all residents.\nFor the U.S. general fertility rate, divide all live births during the year, regardless of maternal age, by the midyear number of women ages 15–44 and multiply by 1,000. This is a conventional population measure, not a perfect count of everyone capable of giving birth.\nBirth counts count babies, so a delivery of live-born twins contributes two live births. Birth counts help plan services, and birth rates help compare populations of different sizes."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#a-familiar-name-can-hide-a-different-denominator",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#a-familiar-name-can-hide-a-different-denominator",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "A Familiar Name Can Hide a Different Denominator",
+    "text": "A Familiar Name Can Hide a Different Denominator\nAlways check what is being divided by what.\n\n\n\n\n\n\n\n\nMeasure\nNumerator\nDenominator\n\n\n\n\nCase-fatality proportion\nDeaths from the disease among a defined group of cases\nAll cases in that group\n\n\nInfant mortality rate\nDeaths before age 1 during a year\nLive births during that year\n\n\n\nHypothetical examples:\n\nCase fatality: 3 deaths among 100 cases followed through illness → 3% of those cases died from the disease.\nInfant mortality: 6 infant deaths and 1,200 live births → 5 deaths before age 1 per 1,000 live births that year.\n\n\n\nAsk students to connect case fatality to a familiar proportion: the numerator is part of the denominator. Although often called the “case-fatality rate,” it is a proportion, not a person-time rate. Define the cases and follow-up period; the example assumes outcomes are known for all 100 cases.\nInfant mortality uses a conventional ratio of two event counts, rather than a person-time denominator. Some infants who die this year were born last year, so the numerator is not necessarily a subset of this year’s births. Avoid interpreting the annual period measure as an exact observed risk for the babies born that year.\nThe infant mortality calculation is 6 divided by 1,200, multiplied by 1,000. Describe the result as deaths per 1,000 live births and name the year and population.\nThese examples extend the earlier distinction between ratios, proportions, and rates. The name alone does not identify the mathematical structure."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#why-adjust-a-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#why-adjust-a-rate",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Why Adjust a Rate?",
+    "text": "Why Adjust a Rate?\nA town with more older adults can have a higher crude death rate even when its age-specific rates are the same.\nHypothetical example: one year, 10,000 residents in each town.\n\n\n\n\n\n\n\n\n\nAge group\nTown A population\nTown B population\nDeaths per 1,000 in both towns\n\n\n\n\nUnder 65\n9,000\n5,000\n2\n\n\n65+\n1,000\n5,000\n20\n\n\n\n\nTown A: 18 + 20 = 38 deaths → 3.8 per 1,000.\nTown B: 10 + 100 = 110 deaths → 11 per 1,000.\n\nWhat would the comparison look like if both towns had the same age mix?\n\n\nWalk through the death counts: Town A has 9,000 × 2/1,000 = 18 deaths below age 65 and 1,000 × 20/1,000 = 20 deaths at ages 65+. Town B has 10 and 100 deaths, respectively.\nThese are midyear population counts used to approximate person-time during the year. The crude rate combines the age-specific rates using each town’s own age distribution.\nNeither town has a higher death rate within either age group in this deliberately simple example. The difference in crude rates comes entirely from the different age distributions.\nAn adjusted rate summarizes the comparison after applying a common population composition. Adjustment can also be used for other factors, but age is especially useful for illustrating mortality comparisons."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#age-adjustment-use-the-same-age-mix",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#age-adjustment-use-the-same-age-mix",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Age Adjustment: Use the Same Age Mix",
+    "text": "Age Adjustment: Use the Same Age Mix\nAI-created draft — needs review\nDirect age adjustment takes a weighted average of age-specific rates using the same age weights for every population.\nFor our example, choose a standard population that is 80% under 65 and 20% ages 65+.\n\\[\n\\text{Adjusted rate} = (0.80 \\times 2) + (0.20 \\times 20) = 5.6\n\\]\nBoth towns have an adjusted rate of 5.6 deaths per 1,000 standard population per year.\n\nThis is the rate expected if each town had the standard age mix.\nAge adjustment supports comparisons; it does not remove every difference or bias between populations.\n\n\n\nKeep each town’s own age-specific death rates, replace its age weights with the common standard weights, and add the weighted rates. The weights must sum to 1.\nIn this example, both towns have age-specific rates of 2 and 20 per 1,000 per year, so applying the same 0.80 and 0.20 weights produces 5.6 for each. The crude rates remain 3.8 and 11; the adjusted calculation is a comparison under the chosen common age distribution, not a change in the actual deaths observed.\nExplain the hypothetical standard in counts if helpful: among 1,000 people with this age mix, 800 are under age 65 and 200 are ages 65+. Applying the age-specific rates gives 1.6 + 4 = 5.6 expected deaths per year. Expected counts need not be whole numbers.\nThe 80%/20% standard and two broad age groups are teaching simplifications. U.S. published mortality statistics commonly use the projected 2000 U.S. standard population with more detailed age groups. Compare adjusted rates that use compatible age groups and the same standard.\nAdjustment addresses differences in the included factor. It does not automatically correct measurement error, differences in other characteristics, or confounding within broad age groups, and it does not establish causation.\nThe supplied reading also introduces indirect adjustment, which applies standard age-specific rates to the population being studied and compares observed with expected deaths. Keep that method as optional context; these slides teach the intuition behind direct adjustment."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-rates",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#incidence-rates",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Incidence Rates",
+    "text": "Incidence Rates\n\n\nWhy do we sometimes calculate incidence rates instead of incidence proportions, which are arguably more intuitive for most people?\n\n\nRespond here\n\n\n\nTo calculate an accurate incidence proportion, the population must be closed and all members must have complete follow-up. New people cannot enter during the study period, nobody can leave except through death, and data must be collected from everyone throughout the study. These conditions are rare in epidemiology. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-ratio-proportion-percentage",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-ratio-proportion-percentage",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Review: Ratios, Proportions, and Percentages",
+    "text": "Review: Ratios, Proportions, and Percentages\n\n\nIn a survey conducted today, 12 of 40 students report riding a bicycle to campus; 28 do not. Calculate the ratio of bicycle riders to nonriders, the proportion who ride, and the percentage who ride.\n\n\nRiders to nonriders = 12/28 = 3/7, or 3:7: three riders for every seven nonriders. The proportion who ride is 12/(12+28) = 12/40 = 0.30. The percentage is 0.30 × 100 = 30%. The ratio compares riders with nonriders; the proportion and percentage compare riders with all surveyed students. All three descriptions refer to this survey today. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard.\n\n\n\nRiders to nonriders = 12/28 = 3/7, or 3:7: three riders for every seven nonriders.\nThe proportion who ride is 12/(12+28) = 12/40 = 0.30.\nThe percentage is 0.30 × 100 = 30%.\nThe ratio compares riders with nonriders; the proportion and percentage compare riders with all surveyed students.\nAll three descriptions refer to this survey today."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-prevalence-and-incidence",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-prevalence-and-incidence",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Review: Prevalence and Incidence",
+    "text": "Review: Prevalence and Incidence\n\n\nOn January 1, 2026, 20 of 200 adults had hypertension. During 2026, 36 of the remaining 180 develop it. Everyone is followed for the full year. What are the January 1 prevalence proportion and the 2026 incidence proportion, respectively?\n\n\nA. 10% and 18%\nB. 10% and 20%\nC. 28% and 20%\nD. 20% and 10%\n\n\nRespond here\n\n\n\nAnswer: B. January 1 prevalence = 20/200 = 0.10, or 10%, because it describes existing cases among all adults at that time. The 2026 incidence proportion = 36/180 = 0.20, or 20%, because it describes new cases among adults initially at risk. The 20 adults who already had hypertension cannot become new cases of hypertension during follow-up. Dividing 36 by 200 incorrectly includes those existing cases in the incidence denominator. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-person-time-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-person-time-rate",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Review: Person-Time and Rates",
+    "text": "Review: Person-Time and Rates\n\n\nIn a 6-month study, four athletes contribute 2, 4, 6, and 6 months at risk of a first ankle injury. The first two are injured at months 2 and 4; the others remain injury-free. Calculate person-time and the incidence rate per 100 person-months.\n\n\nRespond here\n\n\n\nTotal person-time = 2 + 4 + 6 + 6 = 18 person-months. There are two first injuries, so the incidence rate = (2/18) × 100 = approximately 11.1 first ankle injuries per 100 person-months at risk during the 6-month study. Time after a first injury does not contribute to the denominator for that first injury. Eighteen person-months is accumulated time across four athletes, not an 18-month study. The rate is not a statement that 11.1% of athletes were injured. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-odds-interpretation",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-odds-interpretation",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Review: Interpret the Odds",
+    "text": "Review: Interpret the Odds\n\n\nIn a survey conducted today, 30 residents have asthma and 90 do not. Which statement correctly interprets the prevalence odds of asthma?\n\n\nA. There is 1 resident with asthma for every 3 without asthma.\nB. There is 1 resident with asthma for every 4 without asthma.\nC. There are 3 residents with asthma for every 1 without asthma.\nD. There is 1 resident with asthma for every 3 residents in total.\n\n\nRespond here\n\n\n\nAnswer: A. The prevalence odds = 30/90 = 1/3, or 1:3. The denominator contains residents without asthma, so there is one resident with asthma for every three without it. The corresponding prevalence proportion is 30/(30+90) = 30/120 = 0.25, or 25%. One with asthma out of every four residents in total is a probability or proportion statement; it is different from one with asthma for every four without it. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-odds-to-probability",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-odds-to-probability",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Review: Convert Odds to Probability",
+    "text": "Review: Convert Odds to Probability\n\n\nAmong people tested at a clinic today, the odds of a positive test are 3:2. What probability of a positive test corresponds to these odds? Show the calculation and express the answer as a percentage.\n\n\nRespond here\n\n\n\nOdds of 3:2 mean three positive tests for every two negative tests. Therefore, the probability of a positive test = 3/(3+2) = 3/5 = 0.60, or 60%. Equivalently, the numeric odds are 3/2 = 1.5, and probability = odds/(1+odds) = 1.5/2.5 = 0.60. Odds can exceed 1; a probability of 150% would be impossible. This describes test results among the people tested today, not disease frequency in the entire community. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-odds-ratio",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-odds-ratio",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Review: Compare Two Odds",
+    "text": "Review: Compare Two Odds\n\n\nTwo groups are surveyed for insomnia today. The prevalence odds are 2.0 in Group A and 0.5 in Group B. Which statement correctly compares the groups?\n\n\nA. Group A has twice Group B’s odds of insomnia.\nB. Group A has four times Group B’s probability of insomnia.\nC. Group A has four times Group B’s odds of insomnia.\nD. Group A has one-fourth of Group B’s odds of insomnia.\n\n\nRespond here\n\n\n\nAnswer: C. The odds ratio comparing A with B = 2.0/0.5 = 4. Group A has four times the odds of insomnia compared with Group B today. The corresponding probabilities are 2/(1+2) = 2/3 in A and 0.5/(1+0.5) = 1/3 in B, so the probability ratio is 2, not 4. Comparing odds is one reason we calculate them, but an odds ratio must be interpreted using the word odds. This comparison alone does not establish a cause of insomnia. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-why-adjust-rates",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-why-adjust-rates",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Review: Why Adjust Rates?",
+    "text": "Review: Why Adjust Rates?\n\n\nTwo counties have the same death rates within each age group in 2026, but County A has a larger share of older residents and a higher crude death rate. What does applying the same standard age distribution to both counties accomplish?\n\n\nA. It changes the actual number of deaths recorded in each county.\nB. It removes every possible source of bias from the comparison.\nC. It makes each county’s age-specific death rates equal to its crude rate.\nD. It compares summary death rates using the same age mix.\n\n\nRespond here\n\n\n\nAnswer: D. Direct age adjustment applies the same age weights to each county’s age-specific rates. With identical age-specific rates and identical weights, the adjusted rates will be equal. The crude rates differ here because the counties have different age distributions. Adjustment changes the summary used for comparison, not the observed deaths, and it does not automatically remove other differences, measurement problems, or bias. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-mortality-rate",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-mortality-rate",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Review: Mortality Rates",
+    "text": "Review: Mortality Rates\n\n\nDuring 2026, a county records 360 deaths from all causes and has a midyear population of 90,000. Which statement correctly reports its crude mortality rate per 1,000 residents?\n\n\nA. 0.4 deaths per 1,000 residents during 2026.\nB. 4 deaths per 1,000 residents during 2026.\nC. 4 deaths per 1,000 people who died during 2026.\nD. 40 deaths per 1,000 residents during 2026.\n\n\nRespond here\n\n\n\nAnswer: B. Crude mortality rate = (360/90,000) × 1,000 = 4 deaths per 1,000 residents during 2026. The numerator counts new death events during the year, and the denominator is the midyear population. Midyear population multiplied by one year approximates the population’s person-time. The measure is crude because it includes all causes across the whole population, without adjustment. A proportion of cases who die from a particular disease would require a different denominator. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-birth-and-fertility-rates",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#review-birth-and-fertility-rates",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "Review: Birth and Fertility Rates",
+    "text": "Review: Birth and Fertility Rates\n\n\nDuring 2026, a town records 210 live births. Its midyear population is 14,000, including 3,000 women ages 15–44. Calculate the crude birth rate and the U.S. general fertility rate, each per 1,000. Explain why the answers differ.\n\n\nRespond here\n\n\n\nCrude birth rate = (210/14,000) × 1,000 = 15 live births per 1,000 residents during 2026. General fertility rate = (210/3,000) × 1,000 = 70 live births per 1,000 women ages 15–44 during 2026. Both use all live births during the year as the numerator under the U.S. convention taught here; the denominators differ. The crude birth rate relates births to the whole population, while the general fertility rate uses women ages 15–44. Neither result is simply the percentage of all residents who gave birth. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard."
+  },
+  {
+    "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#references",
+    "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#references",
+    "title": "Measures of Disease Occurrence - Part 2",
+    "section": "References",
+    "text": "References\n\n\nWestreich, Daniel. 2019. Epidemiology by Design: A Causal Approach to the Health Sciences. Oxford University Press."
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#course-learning-objectives",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#course-learning-objectives",
+    "title": "Introduction to Epidemiology",
+    "section": "Course Learning objectives",
+    "text": "Course Learning objectives\n\nDefine epidemiology and key associated terminology, especially confounding.\nDistinguish among association, prediction, and causation.\nExplain the Rothman model of sufficient-component causes (RMSCC) and the concept of multifactorial causation.\nExplain the limitations of anecdotal evidence in drawing epidemiologic conclusions.\nExplain why disseminating risk information is sometimes necessary but rarely sufficient to improve population health.\n\n\nBy the end of this course, my goal is for you to be able to:"
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#lecture-learning-objectives",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#lecture-learning-objectives",
+    "title": "Introduction to Epidemiology",
+    "section": "Lecture Learning objectives",
+    "text": "Lecture Learning objectives\nBy the end of this lesson, you’ll be able to:\n\nDefine epidemiology and explain its core assumptions.\nDescribe key events in the history and development of epidemiology.\nDifferentiate epidemic, endemic, and pandemic patterns of disease occurrence.\nDescribe at least three applications of epidemiology in public health practice."
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-epidemiology-01",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-epidemiology-01",
+    "title": "Introduction to Epidemiology",
+    "section": "Opening Question",
+    "text": "Opening Question\n\n\nWhat is Epidemiology?\n\n\nRespond here\n\n\n\nThe study of the distribution and determinants of health-related states or events (e.g. infectious disease) in specified (human) populations and the application of this study to control health problems Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard."
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#what-is-epidemiology",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#what-is-epidemiology",
+    "title": "Introduction to Epidemiology",
+    "section": "What is Epidemiology?",
+    "text": "What is Epidemiology?\n\nEPIDEMIOLOGY\n\nepi – “on, upon”\ndemo – “people”\nology – “study of”\n\nDefinition: Epidemiology is concerned with the distribution and determinants of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations (Quinlan 2025)."
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#scenario-exercise",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#scenario-exercise",
+    "title": "Introduction to Epidemiology",
+    "section": "Scenario Exercise",
+    "text": "Scenario Exercise\n\n\n\nScenario: A city health department notices that one neighborhood has twice the rate of asthma ER visits in another neighborhood in the same city. This difference has been observed every year for the past three years.\nQuestions: Do you think this difference is mostly due to random chance—yes or no? If it’s not random, what might explain the difference?\nWhat are we assuming if we believe those factors matter?"
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#assumptions-of-epidemiology",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#assumptions-of-epidemiology",
+    "title": "Introduction to Epidemiology",
+    "section": "Assumptions of Epidemiology",
+    "text": "Assumptions of Epidemiology\n\n\nASSUMPTION 1\nHuman disease does not occur at random\nDisease frequency and distribution vary because of identifiable factors that increase or decrease risk.\n\n\nASSUMPTION 2\nDeterminants of disease can be identified\nCausal and preventive factors can be studied through systematic investigation of populations.\n\n\n\nTalk about distribution and determinants, and why that’s harder than it sounds at first. Use my own research in EM and Parkinson’s as examples."
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#descriptive-and-analytic-epidemiology",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#descriptive-and-analytic-epidemiology",
+    "title": "Introduction to Epidemiology",
+    "section": "Descriptive and Analytic Epidemiology",
+    "text": "Descriptive and Analytic Epidemiology\n\n\nDISTRIBUTION\nDescriptive epidemiology\n\nWhen was the population affected?\nWhere was the population affected?\nWho was affected?\n\n\n\nDETERMINANTS\nAnalytic epidemiology\n\nHow was the population affected?\nWhy was the population affected?\n\n\n\n\nTalk about confounding"
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#micro-activity-thinking-like-an-epidemiologist",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#micro-activity-thinking-like-an-epidemiologist",
+    "title": "Introduction to Epidemiology",
+    "section": "Micro-Activity: Thinking Like an Epidemiologist",
+    "text": "Micro-Activity: Thinking Like an Epidemiologist\n\nWatch the short video on John Snow and cholera. John Snow: Pioneer of Epidemiology\nAs you watch, focus on these questions:\nWhat patterns did Snow observe? (Who, where, when — descriptive epidemiology)\nWhat explanation was he testing? (How, why — analytic epidemiology)\nDescriptive epidemiology often comes first; analytic epidemiology builds on it.\n\n\n[Sources] - PBS LearningMedia, John Snow: Pioneer of Epidemiology, https://kera.pbslearningmedia.org/resource/envh10.sci.life.nathis.johnsnow/john-snow-pioneer-of-epidemiology/ (inherited link). [/Sources]"
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#history-of-epidemiology-key-events",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#history-of-epidemiology-key-events",
+    "title": "Introduction to Epidemiology",
+    "section": "History of Epidemiology: Key Events",
+    "text": "History of Epidemiology: Key Events\n\n\n\n\n\n\n\n\n\nEvent\nTime Period\nDescription\n\n\n\n\nBubonic Plague Epidemics (Black Death)\n1347 - 1351\nOne of the deadliest pandemics, causing 75–200 million deaths in Eurasia.\n\n\nDevelopment of Toxicology\n16th Century\nParacelsus, “Father of Toxicology,” introduced the principle: “The dose makes the poison.”\n\n\nDevelopment of Biostatistics\n18th Century\nJohn Graunt pioneered statistical analysis, using Bills of Mortality to study disease patterns in London.\n\n\nDevelopment of Smallpox Vaccine\n1796\nEdward Jenner created the first vaccine by using cowpox to confer immunity to smallpox.\n\n\n1918 Influenza Pandemic\n1918-19\nThe “Spanish flu” infected a third of the global population, killing 50–100 million.\n\n\nIdentification of Smoking as a Cause of Cancer\n1950\nLandmark studies linked smoking to lung cancer, driving public health campaigns against tobacco use.\n\n\nEradication of Smallpox\n1980\nWHO declared smallpox eradicated, marking the success of global vaccination efforts.\n\n\n\n\n\nYou do not need to memorize these, but let’s talk about why they are important.\nTalk about the demographic transition and epidemiologic transition when you discuss the history of epidemiology."
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#disease-distribution-patterns",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#disease-distribution-patterns",
+    "title": "Introduction to Epidemiology",
+    "section": "Disease Distribution Patterns",
+    "text": "Disease Distribution Patterns\n\n\n01\nEndemic\nDisease or condition consistently present in a population\n\nRelatively stable over time\nExpected level of occurrence in a given place\n\n\n\n02\nEpidemic (Outbreak)\nDisease occurrence in excess of what is normally expected\n\nSudden increase over a short period\nOften limited to a specific region\n\n\n\n03\nPandemic\nAn epidemic that spreads across multiple countries or continents\n\nGlobal distribution\nAffects a large proportion of the population"
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-epidemic-01",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-epidemic-01",
+    "title": "Introduction to Epidemiology",
+    "section": "Exercise: Disease Distribution Patterns",
+    "text": "Exercise: Disease Distribution Patterns\n\n\nEbola virus cases in parts of Africa exceed what is normally expected for that region. In this situation, the Ebola virus was [a/an] ________.\n\n\nA. endemic\nB. epidemic\nC. pandemic\n\n\nRespond here\n\n\n\nAnswer: B. An epidemic is the occurrence of disease cases above what is normally expected in a population or region. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard."
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-endemic-01",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-endemic-01",
+    "title": "Introduction to Epidemiology",
+    "section": "Exercise: Disease Distribution Patterns",
+    "text": "Exercise: Disease Distribution Patterns\n\n\nMalaria is always present in Africa due to the presence of infected mosquitoes. In this situation, malaria is [a/an] ________.\n\n\nA. endemic\nB. epidemic\nC. pandemic\n\n\nRespond here\n\n\n\nAnswer: A. An endemic disease is consistently present at an expected baseline level in a population or region. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard."
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-pandemic-01",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-pandemic-01",
+    "title": "Introduction to Epidemiology",
+    "section": "Exercise: Disease Distribution Patterns",
+    "text": "Exercise: Disease Distribution Patterns\n\n\nBetween 2019 and 2023, the SARS-CoV-2 virus infected more than 600 million people worldwide. In this situation, the SARS-CoV-2 virus was [a/an] ________.\n\n\nA. endemic\nB. epidemic\nC. pandemic\n\n\nRespond here\n\n\n\nAnswer: C. A pandemic is an epidemic that spreads across countries or continents and affects a large number of people. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard."
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#use-of-epidemiology",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#use-of-epidemiology",
+    "title": "Introduction to Epidemiology",
+    "section": "Use of Epidemiology",
+    "text": "Use of Epidemiology\nIn the first group presentation for this course, you will:\nDescribe a health problem\n(Who is affected? Where? When?)\nExplain possible reasons\n(Risk factors or exposures)\nInterpret evidence\n(Patterns and associations)\nPropose prevention or control strategies\n\nStudents may leave or work on group projects."
+  },
+  {
+    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#references",
+    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#references",
+    "title": "Introduction to Epidemiology",
+    "section": "References",
+    "text": "References\n\n\nQuinlan, Scott. 2025. Friis’ Epidemiology 101. 3rd ed. Jones & Bartlett Learning."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "APHS 20203: Epidemiology & Biostatistics",
+    "section": "",
+    "text": "Interactive slide decks for APHS 20203.\n\n\n\nView interactive slides\nDownload PDF\n\n\n\n\n\n\n\nView interactive slides\nDownload PDF"
+  },
+  {
+    "objectID": "index.html#module-1-welcome-and-overview",
+    "href": "index.html#module-1-welcome-and-overview",
+    "title": "APHS 20203: Epidemiology & Biostatistics",
+    "section": "",
+    "text": "View interactive slides\nDownload PDF"
+  },
+  {
+    "objectID": "index.html#module-2-epidemiologic-measures-of-disease-occurrence",
+    "href": "index.html#module-2-epidemiologic-measures-of-disease-occurrence",
+    "title": "APHS 20203: Epidemiology & Biostatistics",
+    "section": "",
+    "text": "View interactive slides\nDownload PDF"
+  },
+  {
     "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#course-learning-objectives",
     "href": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#course-learning-objectives",
     "title": "Measures of Disease Occurrence - Part 1",
@@ -327,131 +768,5 @@
     "title": "Measures of Disease Occurrence - Part 1",
     "section": "References",
     "text": "References\n\n\nLash, Timothy L., Tyler J. VanderWeele, Sebastien Haneuse, and Kenneth J. Rothman. 2021. Modern Epidemiology. 4th ed. Wolters Kluwer.\n\n\nQuinlan, Scott. 2025. Friis’ Epidemiology 101. 3rd ed. Jones & Bartlett Learning.\n\n\nWestreich, Daniel. 2019. Epidemiology by Design: A Causal Approach to the Health Sciences. Oxford University Press."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "APHS 20203: Epidemiology & Biostatistics",
-    "section": "",
-    "text": "Interactive slide decks for APHS 20203.\n\n\n\nView interactive slides\nDownload PDF\n\n\n\n\n\n\n\nView interactive slides\nDownload PDF"
-  },
-  {
-    "objectID": "index.html#module-1-welcome-and-overview",
-    "href": "index.html#module-1-welcome-and-overview",
-    "title": "APHS 20203: Epidemiology & Biostatistics",
-    "section": "",
-    "text": "View interactive slides\nDownload PDF"
-  },
-  {
-    "objectID": "index.html#module-2-epidemiologic-measures-of-disease-occurrence",
-    "href": "index.html#module-2-epidemiologic-measures-of-disease-occurrence",
-    "title": "APHS 20203: Epidemiology & Biostatistics",
-    "section": "",
-    "text": "View interactive slides\nDownload PDF"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#course-learning-objectives",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#course-learning-objectives",
-    "title": "Introduction to Epidemiology",
-    "section": "Course Learning objectives",
-    "text": "Course Learning objectives\n\nDefine epidemiology and key associated terminology, especially confounding.\nDistinguish among association, prediction, and causation.\nExplain the Rothman model of sufficient-component causes (RMSCC) and the concept of multifactorial causation.\nExplain the limitations of anecdotal evidence in drawing epidemiologic conclusions.\nExplain why disseminating risk information is sometimes necessary but rarely sufficient to improve population health.\n\n\nBy the end of this course, my goal is for you to be able to:"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#lecture-learning-objectives",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#lecture-learning-objectives",
-    "title": "Introduction to Epidemiology",
-    "section": "Lecture Learning objectives",
-    "text": "Lecture Learning objectives\nBy the end of this lesson, you’ll be able to:\n\nDefine epidemiology and explain its core assumptions.\nDescribe key events in the history and development of epidemiology.\nDifferentiate epidemic, endemic, and pandemic patterns of disease occurrence.\nDescribe at least three applications of epidemiology in public health practice."
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-epidemiology-01",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-epidemiology-01",
-    "title": "Introduction to Epidemiology",
-    "section": "Opening Question",
-    "text": "Opening Question\n\n\nWhat is Epidemiology?\n\n\nRespond here\n\n\n\nThe study of the distribution and determinants of health-related states or events (e.g. infectious disease) in specified (human) populations and the application of this study to control health problems Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard."
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#what-is-epidemiology",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#what-is-epidemiology",
-    "title": "Introduction to Epidemiology",
-    "section": "What is Epidemiology?",
-    "text": "What is Epidemiology?\n\nEPIDEMIOLOGY\n\nepi – “on, upon”\ndemo – “people”\nology – “study of”\n\nDefinition: Epidemiology is concerned with the distribution and determinants of health and diseases, morbidity, injuries, disability, and mortality in populations. Epidemiologic studies are applied to the control of health problems in populations (Quinlan 2025)."
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#scenario-exercise",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#scenario-exercise",
-    "title": "Introduction to Epidemiology",
-    "section": "Scenario Exercise",
-    "text": "Scenario Exercise\n\n\n\nScenario: A city health department notices that one neighborhood has twice the rate of asthma ER visits in another neighborhood in the same city. This difference has been observed every year for the past three years.\nQuestions: Do you think this difference is mostly due to random chance—yes or no? If it’s not random, what might explain the difference?\nWhat are we assuming if we believe those factors matter?"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#assumptions-of-epidemiology",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#assumptions-of-epidemiology",
-    "title": "Introduction to Epidemiology",
-    "section": "Assumptions of Epidemiology",
-    "text": "Assumptions of Epidemiology\n\n\nASSUMPTION 1\nHuman disease does not occur at random\nDisease frequency and distribution vary because of identifiable factors that increase or decrease risk.\n\n\nASSUMPTION 2\nDeterminants of disease can be identified\nCausal and preventive factors can be studied through systematic investigation of populations.\n\n\n\nTalk about distribution and determinants, and why that’s harder than it sounds at first. Use my own research in EM and Parkinson’s as examples."
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#descriptive-and-analytic-epidemiology",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#descriptive-and-analytic-epidemiology",
-    "title": "Introduction to Epidemiology",
-    "section": "Descriptive and Analytic Epidemiology",
-    "text": "Descriptive and Analytic Epidemiology\n\n\nDISTRIBUTION\nDescriptive epidemiology\n\nWhen was the population affected?\nWhere was the population affected?\nWho was affected?\n\n\n\nDETERMINANTS\nAnalytic epidemiology\n\nHow was the population affected?\nWhy was the population affected?\n\n\n\n\nTalk about confounding"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#micro-activity-thinking-like-an-epidemiologist",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#micro-activity-thinking-like-an-epidemiologist",
-    "title": "Introduction to Epidemiology",
-    "section": "Micro-Activity: Thinking Like an Epidemiologist",
-    "text": "Micro-Activity: Thinking Like an Epidemiologist\n\nWatch the short video on John Snow and cholera. John Snow: Pioneer of Epidemiology\nAs you watch, focus on these questions:\nWhat patterns did Snow observe? (Who, where, when — descriptive epidemiology)\nWhat explanation was he testing? (How, why — analytic epidemiology)\nDescriptive epidemiology often comes first; analytic epidemiology builds on it.\n\n\n[Sources] - PBS LearningMedia, John Snow: Pioneer of Epidemiology, https://kera.pbslearningmedia.org/resource/envh10.sci.life.nathis.johnsnow/john-snow-pioneer-of-epidemiology/ (inherited link). [/Sources]"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#history-of-epidemiology-key-events",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#history-of-epidemiology-key-events",
-    "title": "Introduction to Epidemiology",
-    "section": "History of Epidemiology: Key Events",
-    "text": "History of Epidemiology: Key Events\n\n\n\n\n\n\n\n\n\nEvent\nTime Period\nDescription\n\n\n\n\nBubonic Plague Epidemics (Black Death)\n1347 - 1351\nOne of the deadliest pandemics, causing 75–200 million deaths in Eurasia.\n\n\nDevelopment of Toxicology\n16th Century\nParacelsus, “Father of Toxicology,” introduced the principle: “The dose makes the poison.”\n\n\nDevelopment of Biostatistics\n18th Century\nJohn Graunt pioneered statistical analysis, using Bills of Mortality to study disease patterns in London.\n\n\nDevelopment of Smallpox Vaccine\n1796\nEdward Jenner created the first vaccine by using cowpox to confer immunity to smallpox.\n\n\n1918 Influenza Pandemic\n1918-19\nThe “Spanish flu” infected a third of the global population, killing 50–100 million.\n\n\nIdentification of Smoking as a Cause of Cancer\n1950\nLandmark studies linked smoking to lung cancer, driving public health campaigns against tobacco use.\n\n\nEradication of Smallpox\n1980\nWHO declared smallpox eradicated, marking the success of global vaccination efforts.\n\n\n\n\n\nYou do not need to memorize these, but let’s talk about why they are important.\nTalk about the demographic transition and epidemiologic transition when you discuss the history of epidemiology."
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#disease-distribution-patterns",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#disease-distribution-patterns",
-    "title": "Introduction to Epidemiology",
-    "section": "Disease Distribution Patterns",
-    "text": "Disease Distribution Patterns\n\n\n01\nEndemic\nDisease or condition consistently present in a population\n\nRelatively stable over time\nExpected level of occurrence in a given place\n\n\n\n02\nEpidemic (Outbreak)\nDisease occurrence in excess of what is normally expected\n\nSudden increase over a short period\nOften limited to a specific region\n\n\n\n03\nPandemic\nAn epidemic that spreads across multiple countries or continents\n\nGlobal distribution\nAffects a large proportion of the population"
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-epidemic-01",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-epidemic-01",
-    "title": "Introduction to Epidemiology",
-    "section": "Exercise: Disease Distribution Patterns",
-    "text": "Exercise: Disease Distribution Patterns\n\n\nEbola virus cases in parts of Africa exceed what is normally expected for that region. In this situation, the Ebola virus was [a/an] ________.\n\n\nA. endemic\nB. epidemic\nC. pandemic\n\n\nRespond here\n\n\n\nAnswer: B. An epidemic is the occurrence of disease cases above what is normally expected in a population or region. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard."
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-endemic-01",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-endemic-01",
-    "title": "Introduction to Epidemiology",
-    "section": "Exercise: Disease Distribution Patterns",
-    "text": "Exercise: Disease Distribution Patterns\n\n\nMalaria is always present in Africa due to the presence of infected mosquitoes. In this situation, malaria is [a/an] ________.\n\n\nA. endemic\nB. epidemic\nC. pandemic\n\n\nRespond here\n\n\n\nAnswer: A. An endemic disease is consistently present at an expected baseline level in a population or region. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard."
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-pandemic-01",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#quiz-pandemic-01",
-    "title": "Introduction to Epidemiology",
-    "section": "Exercise: Disease Distribution Patterns",
-    "text": "Exercise: Disease Distribution Patterns\n\n\nBetween 2019 and 2023, the SARS-CoV-2 virus infected more than 600 million people worldwide. In this situation, the SARS-CoV-2 virus was [a/an] ________.\n\n\nA. endemic\nB. epidemic\nC. pandemic\n\n\nRespond here\n\n\n\nAnswer: C. A pandemic is an epidemic that spreads across countries or continents and affects a large number of people. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, then take a show of hands for each option in turn and record the counts on the whiteboard."
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#use-of-epidemiology",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#use-of-epidemiology",
-    "title": "Introduction to Epidemiology",
-    "section": "Use of Epidemiology",
-    "text": "Use of Epidemiology\nIn the first group presentation for this course, you will:\nDescribe a health problem\n(Who is affected? Where? When?)\nExplain possible reasons\n(Risk factors or exposures)\nInterpret evidence\n(Patterns and associations)\nPropose prevention or control strategies\n\nStudents may leave or work on group projects."
-  },
-  {
-    "objectID": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#references",
-    "href": "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.html#references",
-    "title": "Introduction to Epidemiology",
-    "section": "References",
-    "text": "References\n\n\nQuinlan, Scott. 2025. Friis’ Epidemiology 101. 3rd ed. Jones & Bartlett Learning."
   }
 ]

@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.36">
+
+  <title>APHS 20203 Lecture Slides – Measures of Disease Occurrence - Part 2</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-3c6003e8ff213c7d7d2c3149e2bc6126.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Measures of Disease Occurrence - Part 2</h1>
+  <p class="subtitle">APHS 20203 • Epidemiology &amp; Biostatistics</p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="course-learning-objectives" class="slide level2">
+<h2>Course Learning Objectives</h2>
+<ol type="1">
+<li>Define epidemiology and key associated terminology, especially confounding.</li>
+<li>Distinguish among association, prediction, and causation.</li>
+<li>Explain the Rothman model of sufficient-component causes (RMSCC) and the concept of multifactorial causation.</li>
+<li>Explain the limitations of anecdotal evidence in drawing epidemiologic conclusions.</li>
+<li>Explain why disseminating risk information is sometimes necessary but rarely sufficient to improve population health.</li>
+</ol>
+<aside class="notes">
+<p>By the end of this course, my goal is for you to be able to:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="lecture-learning-objectives" class="slide level2">
+<h2>Lecture Learning Objectives</h2>
+<!-- 
+Revise these objectives. 
+Do this last, after the slides are ready.
+-->
+<p>By the end of this lesson, you’ll be able to:</p>
+<ol type="1">
+<li>Define counts and rates.</li>
+<li>Distinguish crude, specific, adjusted rates.</li>
+<li>Compute and interpret prevalence and incidence.</li>
+</ol>
+</section>
+<section id="review-choose-the-snapshot" class="slide level2">
+<h2>Review: Choose the Snapshot</h2>
+<!-- Calculate the correct answers and have them ready. -->
+<div class="columns align-center">
+<div class="column" style="width:58%;">
+<p><img src="assets/example_study_03.png" style="display: block; width: 100%; max-height: 475px; margin: 0 auto; object-fit: contain;" alt="Follow-up timeline for 10 people. Colored bars show periods before follow-up, at risk, diseased, and deceased."></p>
+</div><div class="column" style="width:42%;">
+<p>With your group:</p>
+<ol type="1">
+<li>Choose <strong>month 2, 6, or 10</strong>.</li>
+<li>Count the people living with disease.</li>
+<li>Count the living members of the population.</li>
+<li>Calculate and interpret the prevalence proportion.</li>
+</ol>
+<p>Be ready to explain your numerator and denominator.</p>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Allow groups about 3 minutes to work, then ask one group assigned to each month to report its numerator, denominator, prevalence proportion, and interpretation.</li>
+<li><strong>Ask</strong> why groups obtained different prevalence estimates even though they examined the same population. Emphasize that a measure of occurrence requires both a defined population and a defined time frame.</li>
+<li>Reinforce that counts describe burden, while proportions place that burden in the context of the population size.</li>
+<li>Transition to incidence by asking: “These snapshots tell us who had the disease at each point, but how could we describe who developed it during follow-up?”</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="prevalence-describes-a-state" class="slide level2" data-auto-animate="true" data-auto-animate-id="occurrence-transition" data-auto-animate-duration="0.7" data-auto-animate-easing="ease-in-out">
+<h2 data-id="quarto-animate-title">Prevalence Describes a State</h2>
+<div class="occurrence-transition">
+<div class="transition-row prevalence-row">
+<div class="state-node disease-present" data-id="disease-present">
+<p>Disease present</p>
+</div>
+</div>
+<div class="measure-question" data-id="measure-question">
+<p>Who has disease?</p>
+</div>
+<div class="measure-type" data-id="measure-type">
+<p>A <strong>state</strong> observed at a moment or over a period</p>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Prevalence measures how many cases are present at a moment or over a period.</li>
+<li>It answers the question, “who has disease?” (outcome of interest)</li>
+<li>Advance to the next slide to shift from observing disease status to observing a change in disease status.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="incidence-describes-a-transition" class="slide level2" data-auto-animate="true" data-auto-animate-id="occurrence-transition" data-auto-animate-duration="0.7" data-auto-animate-easing="ease-in-out">
+<h2 data-id="quarto-animate-title">Incidence Describes a Transition</h2>
+<div class="occurrence-transition">
+<div class="transition-row">
+<div class="state-node disease-absent" data-id="disease-absent" data-auto-animate-delay="0.55">
+<p>Disease absent</p>
+</div>
+<div class="transition-arrow" data-id="transition-arrow" data-auto-animate-delay="0.55">
+<p>→</p>
+</div>
+<div class="state-node disease-present" data-id="disease-present">
+<p>Disease present</p>
+</div>
+<div class="state-label at-risk-label" data-auto-animate-delay="0.55">
+<p>At risk</p>
+</div>
+<div class="transition-label follow-up-label" data-auto-animate-delay="0.55">
+<p>during follow-up</p>
+</div>
+</div>
+<div class="measure-question" data-id="measure-question">
+<p>Who developed disease?</p>
+</div>
+<div class="measure-type" data-id="measure-type">
+<p>Incidence counts <strong>new transitions</strong> during a specified period.</p>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Incidence begins with people who are at risk: the outcome is absent at the start of follow-up.</li>
+<li>The event of interest is the transition into the outcome. That transition creates a new case.</li>
+<li>People who already have the outcome at the start are not at risk of becoming a new case of that outcome.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="one-time-vs.-recurrent-events" class="slide level2">
+<h2>One-Time vs.&nbsp;Recurrent Events</h2>
+<!-- Make this slide more visual and less wordy. -->
+<p>We can measure the incidence of:</p>
+<ul>
+<li><strong>One-time events</strong>, such as Parkinson’s disease or a first cancer diagnosis</li>
+<li><strong>Recurrent events</strong>, such as respiratory infections during a calendar year</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>We can measure the incidence of:
+<ul>
+<li><strong>One-time events</strong>, such as Parkinson’s disease or a first cancer diagnosis</li>
+<li><strong>Recurrent events</strong>, such as respiratory infections during a calendar year</li>
+</ul></li>
+<li>To measure incidence, we must begin with a population <strong>at risk</strong> of the outcome. For example, a cohort used to measure Parkinson’s disease incidence must exclude people who already have the disease at cohort inception.</li>
+<li>We can turn a recurrent event into a one-time event by studying only its first occurrence—for example, each person’s first respiratory infection during the calendar year.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="incidence-proportion-and-risk" class="slide level2">
+<h2>Incidence Proportion and Risk</h2>
+<!-- Make this slide more visual and less wordy. -->
+<ul>
+<li>Incidence proportion and “risk” are sometimes used interchangeably in epidemiology.</li>
+<li>Risk can be ambiguous. Incidence proportion is less so.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>We will use the more precise terminology in this course.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="incidence-measures" class="slide level2">
+<h2>Incidence Measures</h2>
+<!-- Make this slide more visual and less wordy. -->
+<!-- Create a table with the measure in the left column and the formula in the right column. -->
+<aside class="notes">
+<ul>
+<li>As with prevalence, we can measure incidence using proportions, odds, and counts of new cases in a population.</li>
+<li>We can also use incidence rates and measures of elapsed time to an event.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="incidence-count" class="slide level2">
+<h2>Incidence Count</h2>
+<!-- Make this slide more visual and less wordy. For example, use a double-headed arrow to represent time and the range of possible values. -->
+<ul>
+<li>A count of new occurrences of a condition in a population at risk for the occurrence during a given time frame.</li>
+<li>Range: 0 to infinity.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>A count of new occurrences of a condition in a population at risk for the occurrence during a given time frame.</li>
+<li>Range: 0 to infinity.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="incidence-proportion" class="slide level2">
+<h2>Incidence Proportion</h2>
+<!-- Make this slide more visual and less wordy. For example, use a double-headed arrow to represent time and the range of possible values. -->
+<ul>
+<li>The proportion of the population that experiences a new occurrence of the condition among those at risk of experiencing a new occurrence during a given time frame.</li>
+<li>Like all proportions, it falls between 0 and 1.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>It is critical to reiterate that incidence proportions are only meaningful when paired with a fixed period of time.</li>
+<li>This may be illustrated most clearly with the outcome of death: the <strong>“risk of death”</strong> in humans is universally 1, in that all humans will eventually die.</li>
+<li>Thus, telling someone that, in your study, the “risk of death was 10%” is unhelpful; more helpful would be to tell them that, for example, the “1-year risk of death was 10%.”</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="incidence-proportion-formula" class="slide level2 big-formula">
+<h2>Incidence Proportion: Formula</h2>
+<p><span class="math display">\[
+\text{Incidence proportion} = \frac{\text{Count of new occurrences}}{\text{Population at risk}}
+\]</span></p>
+<aside class="notes">
+<ul>
+<li>We can write the information from the previous slide in a slightly more mathy way like this.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="follow-up-experience-and-new-occurrences" class="slide level2 status-table">
+<h2>Follow-Up Experience and New Occurrences</h2>
+
+<img src="assets/example_study_01.png" alt="Table of 10 study participants showing months at risk, timing of new disease occurrence, and death. Person 1 was prevalent before follow-up. Among the 9 at risk, 5 developed new disease during the 12-month follow-up period." class="r-stretch"><aside class="notes">
+<ul>
+<li>So, let’s take another look at our example population.</li>
+<li>How many were at risk of experiencing a new occurrence of disease during the period of observation? 9 (person 1 was not at risk).</li>
+<li>How many of the people at risk developed a new occurrence of disease? 5 (p2, p3, p4, p5, p6).</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="incidence-proportion-over-12-months" class="slide level2">
+<h2>Incidence Proportion Over 12 Months</h2>
+<div class="columns align-center">
+<div class="column" style="width:60%;">
+<p><img src="assets/example_study_02.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up."></p>
+</div><div class="column" style="width:40%;">
+<p><span class="math display">\[
+\frac{\text{Count of new occurrences}}{\text{Population at risk}}
+\]</span> <br> <span class="math display">\[
+\frac{5}{9}
+\]</span> <br> <span class="math display">\[
+\approx 0.56 \text{ or } 56\%
+\]</span></p>
+</div></div>
+</section>
+<section id="interpreting-incidence-proportion" class="slide level2">
+<h2>Interpreting Incidence Proportion</h2>
+<div class="columns align-center">
+<div class="column" style="width:60%;">
+<p><img src="assets/example_study_02.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up."></p>
+</div><div class="column" style="text-align: center;">
+<p>Among the members of the population, the incidence of disease over 12 months of follow-up was <strong>0.56</strong>. <br> <br></p>
+<p>Fifty-six percent of the population developed disease over 12 months of follow-up.</p>
+</div></div>
+</section>
+<section id="incidence-odds-formula" class="slide level2 big-formula">
+<h2>Incidence Odds: Formula</h2>
+<p><span class="math display">\[
+\text{Incidence odds} = \frac{\text{Incidence proportion}}{1 - \text{Incidence proportion}}
+\]</span></p>
+<aside class="notes">
+<ul>
+<li>We can write the information from the previous slide in a slightly more mathy way like this.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="incidence-odds-over-12-months" class="slide level2">
+<h2>Incidence Odds Over 12 Months</h2>
+<div class="columns align-center">
+<div class="column" style="width:60%;">
+<p><img src="assets/example_study_02.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up."></p>
+</div><div class="column" style="width:40%;">
+<p><span class="math display">\[
+\frac{\text{Incidence proportion}}{1 - \text{Incidence proportion}}
+\]</span> <br> <span class="math display">\[
+\frac{0.56}{1 - 0.56}
+\]</span></p>
+<p><br> <span class="math display">\[
+\approx 1.27
+\]</span></p>
+</div></div>
+</section>
+<section id="exact-incidence-odds-over-12-months" class="slide level2">
+<h2>Exact Incidence Odds Over 12 Months</h2>
+<div class="columns align-center">
+<div class="column" style="width:60%;">
+<p><img src="assets/example_study_02.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up."></p>
+</div><div class="column" style="width:40%;">
+<p><span class="math display">\[
+\frac{\text{Incident cases}}{\text{Non-incident cases}}
+\]</span> <br></p>
+<div class="fragment">
+<p><span class="math display">\[
+\text{5:4} \text{ or } \frac{5}{4}
+\]</span></p>
+<p><br> <span class="math display">\[
+= 1.25
+\]</span></p>
+</div>
+</div></div>
+<aside class="notes">
+<ul>
+<li>We can also calculate the incidence odds more precisely as…</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="interpreting-incidence-odds" class="slide level2">
+<h2>Interpreting Incidence Odds</h2>
+<div class="columns align-center">
+<div class="column" style="width:60%;">
+<p><img src="assets/example_study_02.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up."></p>
+</div><div class="column" style="text-align: center;">
+<p>Among the members of the population, the odds of incident disease over 12 months of follow-up were <strong>1.25</strong>. <br> <br></p>
+<p>For every 5 people who developed incident disease over 12 months of follow-up, 4 people did not.</p>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Notice that we don’t say <strong>had</strong> disease.</li>
+<li>And how do we get from 1.25 back to 5:4?</li>
+<li>Express the decimal as a fraction: 1.25 = 125/100</li>
+<li>Then simplify by dividing numerator and denominator by 25: 125/100 = 5/4 or 5:4.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="incidence-rate" class="slide level2">
+<h2>Incidence Rate</h2>
+<!-- Make this less wordy and/or make it interactive. -->
+<ul>
+<li class="fragment">A measure of the average intensity at which an event occurs in people’s experience over time.</li>
+<li class="fragment">For a population followed from baseline, it is the number of cases divided by the person-time at risk accumulated by the population.</li>
+<li class="fragment">Range: 0 to infinity.</li>
+<li class="fragment"><strong>Not a proportion.</strong> <!-- AI correction — needs review: person-time is the denominator; reciprocal time describes the resulting rate units. --></li>
+<li class="fragment">The denominator is person-time at risk</li>
+<li class="fragment">The resulting rate has units of inverse/reciprocal time (<span class="math inline">\(\text{time}^{-1}\)</span>).</li>
+<li class="fragment">The numeric value depends on the selected time unit and therefore has no interpretation by itself.</li>
+</ul>
+
+<aside class="notes">
+<ul>
+<li>Accurately calculating the incidence proportion requires complete follow-up of a closed population. In other words, no new members once enrollment is complete, and no members leave the population except through death. Unfortunately, these conditions are pretty rare in the real world.</li>
+<li>One way to deal with this complication is to develop measures that take into account the length of time each individual was in the population at risk for the event. This length or span of time is called the person-time contribution of the individual.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p>Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span></p>
+</div></aside></section>
+<section id="person-time" class="slide level2">
+<h2>Person-Time</h2>
+<!-- Add Poll Everywhere or exercise. -->
+<ul>
+<li class="fragment"><strong>Person-time</strong> is the amount of time observed for all people under study while they are at risk of experiencing an incident outcome.</li>
+<li class="fragment">If a woman is followed for 1 month, then she experiences (and contributes to analysis) 1 person-month of time.</li>
+<li class="fragment">If 10 women are followed for 1 year, they contribute 10 × 1 = 10 person-years.</li>
+<li class="fragment">If 1 woman is followed for 10 years, she also contributes 1 × 10 = 10 person-years.</li>
+</ul>
+
+<aside class="notes">
+<ul>
+<li>This calls attention to a basic assumption of person-time: that any unit of person-time is <strong>exchangeable</strong> with any other unit of person-time under study.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p>Source: <span class="citation" data-cites="westreich2019">(<a href="#/references" role="doc-biblioref" onclick="">Westreich 2019</a>)</span></p>
+</div></aside></section>
+<section id="follow-up-experience-and-time-at-risk" class="slide level2 status-table">
+<h2>Follow-Up Experience and Time at Risk</h2>
+
+<img src="assets/example_study_01.png" alt="Table of 10 study participants showing months at risk, timing of new disease occurrence, and death. Person 1 was prevalent before follow-up. Among the 9 at risk, 5 developed new disease during the 12-month follow-up period." class="r-stretch"><aside class="notes">
+<ul>
+<li>So, let’s take another look at our example population.</li>
+<li>How many were at risk of experiencing a new occurrence of disease during the period of observation? 9 (person 1 was not at risk).</li>
+<li>For how many months were these 9 people under observation and at risk of developing a new occurrence of disease?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="calculating-person-time" class="slide level2">
+<h2>Calculating Person-Time</h2>
+<div class="columns align-center">
+<div class="column" style="width:60%;">
+<p><img src="assets/example_study_03.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up."></p>
+</div><div class="column" style="width:40%;">
+<p><span class="math display">\[
+\sum_{\text{people}} \text{Time at risk}
+\]</span> <br> <span class="math display">\[
+\begin{aligned}
+&amp;= 0 + 2 + 4 + 5 + 7 \\
+&amp;+ 8 + 9 + 5 + 12 + 12
+\end{aligned}
+\]</span></p>
+<p><br> <span class="math display">\[
+= 64\text{ person-months}
+\]</span></p>
+</div></div>
+</section>
+<section id="interpreting-person-time" class="slide level2">
+<h2>Interpreting Person-Time</h2>
+<div class="columns align-center">
+<div class="column" style="width:60%;">
+<p><img src="assets/example_study_03.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up."></p>
+</div><div class="column" style="text-align: center;">
+<p>The population accumulated <strong>64 person-months at risk</strong> during 12 months of follow-up. <br> <br></p>
+<p>The same amount is <strong>5.33 person-years at risk</strong> during 12 months of follow-up.</p>
+</div></div>
+</section>
+<section id="follow-up-experience-for-the-incidence-rate" class="slide level2 status-table">
+<h2>Follow-Up Experience for the Incidence Rate</h2>
+
+<img src="assets/example_study_01.png" alt="Table of 10 study participants showing months at risk, timing of new disease occurrence, and death. Person 1 was prevalent before follow-up. Among the 9 at risk, 5 developed new disease during the 12-month follow-up period." class="r-stretch"><aside class="notes">
+<ul>
+<li>How many of the people at risk developed a new occurrence of disease? 5 (p2, p3, p4, p5, p6).</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="incidence-rate-calculation" class="slide level2">
+<h2>Incidence Rate: Calculation</h2>
+<div class="columns align-center">
+<div class="column" style="width:60%;">
+<p><img src="assets/example_study_03.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up."></p>
+</div><div class="column" style="width:40%;">
+<p><span class="math display">\[
+\frac{\text{Count of new occurrences}}{\text{Person-time at risk}}
+\]</span> <br> <span class="math display">\[
+= \frac{5}{64\text{ person-months}}
+\]</span></p>
+<p><br> <span class="math display">\[
+\approx 7.8\text{ per 100 person-months}
+\]</span></p>
+</div></div>
+</section>
+<section id="interpreting-the-incidence-rate" class="slide level2">
+<h2>Interpreting the Incidence Rate</h2>
+<div class="columns align-center">
+<div class="column" style="width:60%;">
+<p><img src="assets/example_study_03.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up."></p>
+</div><div class="column" style="text-align: center;">
+<p>The incidence rate of disease among the members of the population was <strong>5 cases per 64 person-months</strong> during 12 months of follow-up. <br> <br></p>
+<p>Equivalently, the incidence rate was <strong>7.8 cases per 100 person-months</strong> during 12 months of follow-up.</p>
+</div></div>
+</section>
+<section id="inversereciprocal-time-texttime-1" class="slide level2">
+<h2>Inverse/Reciprocal Time (<span class="math inline">\(\text{time}^{-1}\)</span>)</h2>
+<ul>
+<li class="fragment">If a study follows 100 people for 5 years, what is the total person-time?
+<ul>
+<li class="fragment">The total person-time is 500 person-years.</li>
+</ul></li>
+<li class="fragment">If 10 people experience the event of interest, what is the incidence rate?
+<ul>
+<li class="fragment">The incidence rate is: <span class="math inline">\(\frac{10 \text{ cases}}{500 \text{ person-years}} = \text{0.02 cases per person-year}\)</span></li>
+<li class="fragment">The unit is <span class="math inline">\(\text{0.02} \text{ time}^{-1}\)</span>. This reciprocal time unit means that, on average, 2% of the population at risk will experience the event each year.</li>
+</ul></li>
+<li class="fragment">But why is it called “reciprocal time” and why is it written as <span class="math inline">\(\text{time}^{-1}\)</span>?</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Did you notice the funny unit of time two slides ago?</li>
+<li>It’s called inverse or reciprocal time, and it can seem very confusing, but really it’s just basic algebra.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="why-is-it-called-inversereciprocal-time" class="slide level2">
+<h2>Why Is It Called Inverse/Reciprocal Time?</h2>
+<ul>
+<li class="fragment">It is called reciprocal time and written as <span class="math inline">\(\text{time}^{-1}\)</span> because of basic algebra and the rules of mathematical exponents.</li>
+<li class="fragment">In mathematics, the reciprocal of any number or variable is just 1 divided by that variable.
+<ul>
+<li class="fragment">The reciprocal of 5 is <span class="math inline">\(\frac{1}{5}\)</span></li>
+<li class="fragment">The reciprocal of Time is <span class="math inline">\(\frac{1}{\text{Time}}\)</span>.</li>
+<li class="fragment">When we calculate an incidence rate, the formula is: <span class="math inline">\(\frac{\text{Count of new occurrences}}{\text{Person-time at risk}}\)</span></li>
+</ul></li>
+<li class="fragment">Because the unit of time sits in the <strong>denominator</strong> (the bottom of the fraction), we are multiplying the number of cases by the reciprocal of time.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Why is it called inverse/reciprocal time?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="why-the-negative-exponent-texttime-1" class="slide level2">
+<h2>Why the Negative Exponent (<span class="math inline">\(\text{time}^{-1}\)</span>)?</h2>
+<ul>
+<li class="fragment">In algebra, a negative exponent is a shorthand way of writing a fraction where the variable is on the bottom. The standard rule is: <span class="math inline">\(\frac{1}{x} = x^{-1}\)</span></li>
+<li class="fragment">If our unit of time is years, then: <span class="math inline">\(\frac{1}{\text{year}} = \text{year}^{-1}\)</span></li>
+<li class="fragment">So, when we see a rate written as <span class="math inline">\(\text{0.02} \text{ time}^{-1}\)</span>, it literally means 0.02 per year or <span class="math inline">\(\frac{0.02}{\text{year}}\)</span>.</li>
+<li class="fragment">Using the negative exponent is simply the standard scientific way to write “per year” on a single line without needing to draw a fraction bar.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Why the negative exponent?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!--  
+Add content about the relationship between incidence and prevalence.
+Add content about the relationship between odds and proportions.
+-->
+</section>
+<section id="mortality-rates-incidence-of-death" class="slide level2 compact">
+<h2>Mortality Rates: Incidence of Death</h2>
+<p>Death is another <strong>new event</strong> we can count over time.</p>
+<p><span class="math display">\[
+\text{Crude mortality rate} = \frac{\text{Deaths during the year}}{\text{Midyear population}} \times 1{,}000
+\]</span></p>
+<p><strong>Hypothetical town:</strong> 80 deaths during one year; 10,000 residents at midyear.</p>
+<p><span class="math display">\[
+\frac{80}{10{,}000} \times 1{,}000 = 8\text{ deaths per 1,000 residents that year}
+\]</span></p>
+<ul>
+<li><strong>Crude:</strong> all causes of death, across the whole population.</li>
+<li><strong>Specific:</strong> narrow the cause or population, such as cancer deaths or deaths among adults ages 65+.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Connect this measure to the incidence rate students just learned: the event is death rather than a new disease diagnosis.</li>
+<li>Midyear population multiplied by one year approximates the population’s person-time during that year. This works best when population size changes reasonably smoothly; the denominator is not a count of a closed cohort followed from baseline.</li>
+<li>For an age-specific mortality rate, both numerator and denominator must use the same age group: deaths among adults ages 65+ divided by the midyear population ages 65+. A sex-specific mortality rate uses the same principle.</li>
+<li>A cause-specific mortality rate restricts the numerator to deaths from the selected cause and uses the relevant population as the denominator. For example, cancer deaths divided by the midyear population describes population mortality from cancer; it does not describe the proportion of cancer patients who die.</li>
+<li>The multiplier changes how the rate is displayed. Eight deaths per 1,000 is equivalent to 800 deaths per 100,000 over the same year.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="natality-rates-counting-births" class="slide level2 compact">
+<h2>Natality Rates: Counting Births</h2>
+<p><strong>Natality</strong> refers to births. We again relate new events to a population over time.</p>
+<p><span class="math display">\[
+\text{Crude birth rate} = \frac{\text{Live births during the year}}{\text{Midyear population}} \times 1{,}000
+\]</span></p>
+<p><strong>Hypothetical town:</strong> 120 live births; 10,000 residents at midyear.</p>
+<p><span class="math display">\[
+\frac{120}{10{,}000} \times 1{,}000 = 12\text{ live births per 1,000 residents that year}
+\]</span></p>
+<ul>
+<li>This describes births in relation to the <strong>whole population</strong>.</li>
+<li>The <strong>general fertility rate</strong> uses women ages 15–44 as its denominator, by U.S. statistical convention.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>The familiar structure remains: define the event, choose the population denominator, specify the time period, and choose a multiplier.</li>
+<li>As with the annual crude death rate, midyear population multiplied by one year approximates population person-time. The crude birth rate describes the population’s production of births; it is not an individual’s probability of giving birth because the denominator includes all residents.</li>
+<li>For the U.S. general fertility rate, divide all live births during the year, regardless of maternal age, by the midyear number of women ages 15–44 and multiply by 1,000. This is a conventional population measure, not a perfect count of everyone capable of giving birth.</li>
+<li>Birth counts count babies, so a delivery of live-born twins contributes two live births. Birth counts help plan services, and birth rates help compare populations of different sizes.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-familiar-name-can-hide-a-different-denominator" class="slide level2 compact">
+<h2>A Familiar Name Can Hide a Different Denominator</h2>
+<p>Always check <strong>what is being divided by what</strong>.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Measure</th>
+<th>Numerator</th>
+<th>Denominator</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Case-fatality proportion</td>
+<td>Deaths from the disease among a defined group of cases</td>
+<td>All cases in that group</td>
+</tr>
+<tr class="even">
+<td>Infant mortality rate</td>
+<td>Deaths before age 1 during a year</td>
+<td>Live births during that year</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hypothetical examples:</strong></p>
+<ul>
+<li><strong>Case fatality:</strong> 3 deaths among 100 cases followed through illness → <strong>3%</strong> of those cases died from the disease.</li>
+<li><strong>Infant mortality:</strong> 6 infant deaths and 1,200 live births → <strong>5 deaths before age 1 per 1,000 live births</strong> that year.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Ask students to connect case fatality to a familiar proportion: the numerator is part of the denominator. Although often called the “case-fatality rate,” it is a proportion, not a person-time rate. Define the cases and follow-up period; the example assumes outcomes are known for all 100 cases.</li>
+<li>Infant mortality uses a conventional ratio of two event counts, rather than a person-time denominator. Some infants who die this year were born last year, so the numerator is not necessarily a subset of this year’s births. Avoid interpreting the annual period measure as an exact observed risk for the babies born that year.</li>
+<li>The infant mortality calculation is 6 divided by 1,200, multiplied by 1,000. Describe the result as deaths per 1,000 live births and name the year and population.</li>
+<li>These examples extend the earlier distinction between ratios, proportions, and rates. The name alone does not identify the mathematical structure.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="why-adjust-a-rate" class="slide level2 compact">
+<h2>Why Adjust a Rate?</h2>
+<p>A town with more older adults can have a higher crude death rate <strong>even when its age-specific rates are the same</strong>.</p>
+<p><strong>Hypothetical example: one year, 10,000 residents in each town.</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Age group</th>
+<th style="text-align: right;">Town A population</th>
+<th style="text-align: right;">Town B population</th>
+<th style="text-align: right;">Deaths per 1,000 in both towns</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Under 65</td>
+<td style="text-align: right;">9,000</td>
+<td style="text-align: right;">5,000</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td>65+</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">5,000</td>
+<td style="text-align: right;">20</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Town A:</strong> 18 + 20 = 38 deaths → <strong>3.8 per 1,000</strong>.</li>
+<li><strong>Town B:</strong> 10 + 100 = 110 deaths → <strong>11 per 1,000</strong>.</li>
+</ul>
+<p>What would the comparison look like if both towns had the <strong>same age mix</strong>?</p>
+<aside class="notes">
+<ul>
+<li>Walk through the death counts: Town A has 9,000 × 2/1,000 = 18 deaths below age 65 and 1,000 × 20/1,000 = 20 deaths at ages 65+. Town B has 10 and 100 deaths, respectively.</li>
+<li>These are midyear population counts used to approximate person-time during the year. The crude rate combines the age-specific rates using each town’s own age distribution.</li>
+<li>Neither town has a higher death rate within either age group in this deliberately simple example. The difference in crude rates comes entirely from the different age distributions.</li>
+<li>An adjusted rate summarizes the comparison after applying a common population composition. Adjustment can also be used for other factors, but age is especially useful for illustrating mortality comparisons.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="age-adjustment-use-the-same-age-mix" class="slide level2 compact">
+<h2>Age Adjustment: Use the Same Age Mix</h2>
+<p><strong>AI-created draft — needs review</strong></p>
+<p><strong>Direct age adjustment</strong> takes a weighted average of age-specific rates using the <strong>same age weights</strong> for every population.</p>
+<p>For our example, choose a standard population that is <strong>80% under 65</strong> and <strong>20% ages 65+</strong>.</p>
+<p><span class="math display">\[
+\text{Adjusted rate} = (0.80 \times 2) + (0.20 \times 20) = 5.6
+\]</span></p>
+<p>Both towns have an adjusted rate of <strong>5.6 deaths per 1,000 standard population per year</strong>.</p>
+<ul>
+<li>This is the rate expected if each town had the standard age mix.</li>
+<li>Age adjustment supports comparisons; it does <strong>not</strong> remove every difference or bias between populations.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Keep each town’s own age-specific death rates, replace its age weights with the common standard weights, and add the weighted rates. The weights must sum to 1.</li>
+<li>In this example, both towns have age-specific rates of 2 and 20 per 1,000 per year, so applying the same 0.80 and 0.20 weights produces 5.6 for each. The crude rates remain 3.8 and 11; the adjusted calculation is a comparison under the chosen common age distribution, not a change in the actual deaths observed.</li>
+<li>Explain the hypothetical standard in counts if helpful: among 1,000 people with this age mix, 800 are under age 65 and 200 are ages 65+. Applying the age-specific rates gives 1.6 + 4 = 5.6 expected deaths per year. Expected counts need not be whole numbers.</li>
+<li>The 80%/20% standard and two broad age groups are teaching simplifications. U.S. published mortality statistics commonly use the projected 2000 U.S. standard population with more detailed age groups. Compare adjusted rates that use compatible age groups and the same standard.</li>
+<li>Adjustment addresses differences in the included factor. It does not automatically correct measurement error, differences in other characteristics, or confounding within broad age groups, and it does not establish causation.</li>
+<li>The supplied reading also introduces indirect adjustment, which applies standard age-specific rates to the population being studied and compares observed with expected deaths. Keep that method as optional context; these slides teach the intuition behind direct adjustment.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="incidence-rates" class="slide level2 quiz">
+<h2>Incidence Rates</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>Why do we sometimes calculate incidence rates instead of incidence proportions, which are arguably more intuitive for most people?</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/free_text_polls/K0589tMCLsNQv2EBucx6I/respond?q=incidence-rates">Respond here</a></p>
+</div>
+<p><img data-src="qr/incidence-rates.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>To calculate an accurate incidence proportion, the population must be closed and all members must have complete follow-up. New people cannot enter during the study period, nobody can leave except through death, and data must be collected from everyone throughout the study. These conditions are rare in epidemiology. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="review-ratio-proportion-percentage" class="slide level2 quiz">
+<h2>Review: Ratios, Proportions, and Percentages</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>In a survey conducted today, <strong>12 of 40</strong> students report riding a bicycle to campus; 28 do not. Calculate the ratio of bicycle riders to nonriders, the proportion who ride, and the percentage who ride.</p>
+</div>
+<aside class="notes">
+<p>Riders to nonriders = 12/28 = 3/7, or 3:7: three riders for every seven nonriders. The proportion who ride is 12/(12+28) = 12/40 = 0.30. The percentage is 0.30 × 100 = 30%. The ratio compares riders with nonriders; the proportion and percentage compare riders with all surveyed students. All three descriptions refer to this survey today. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="fragment">
+<ul>
+<li>Riders to nonriders = 12/28 = 3/7, or 3:7: three riders for every seven nonriders.</li>
+<li>The proportion who ride is 12/(12+28) = 12/40 = 0.30.</li>
+<li>The percentage is 0.30 × 100 = 30%.</li>
+<li>The ratio compares riders with nonriders; the proportion and percentage compare riders with all surveyed students.</li>
+<li>All three descriptions refer to this survey today.</li>
+</ul>
+</div>
+</section>
+<section id="review-prevalence-and-incidence" class="slide level2 quiz">
+<h2>Review: Prevalence and Incidence</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>On January 1, 2026, 20 of 200 adults had hypertension. During 2026, 36 of the remaining 180 develop it. Everyone is followed for the full year. What are the January 1 prevalence proportion and the 2026 incidence proportion, respectively?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> 10% and 18%</p>
+<p><strong>B.</strong> 10% and 20%</p>
+<p><strong>C.</strong> 28% and 20%</p>
+<p><strong>D.</strong> 20% and 10%</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/MmAIfznlB2xUJCDk4xYLB/respond?q=review-prevalence-and-incidence">Respond here</a></p>
+</div>
+<p><img data-src="qr/review-prevalence-and-incidence.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: B. January 1 prevalence = 20/200 = 0.10, or 10%, because it describes existing cases among all adults at that time. The 2026 incidence proportion = 36/180 = 0.20, or 20%, because it describes new cases among adults initially at risk. The 20 adults who already had hypertension cannot become new cases of hypertension during follow-up. Dividing 36 by 200 incorrectly includes those existing cases in the incidence denominator. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="review-person-time-rate" class="slide level2 quiz">
+<h2>Review: Person-Time and Rates</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>In a 6-month study, four athletes contribute 2, 4, 6, and 6 months at risk of a first ankle injury. The first two are injured at months 2 and 4; the others remain injury-free. Calculate person-time and the incidence rate per 100 person-months.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/free_text_polls/i8pkD0RR1gfxfnco2G653/respond?q=review-person-time-rate">Respond here</a></p>
+</div>
+<p><img data-src="qr/review-person-time-rate.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Total person-time = 2 + 4 + 6 + 6 = 18 person-months. There are two first injuries, so the incidence rate = (2/18) × 100 = approximately 11.1 first ankle injuries per 100 person-months at risk during the 6-month study. Time after a first injury does not contribute to the denominator for that first injury. Eighteen person-months is accumulated time across four athletes, not an 18-month study. The rate is not a statement that 11.1% of athletes were injured. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="review-odds-interpretation" class="slide level2 quiz">
+<h2>Review: Interpret the Odds</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>In a survey conducted today, 30 residents have asthma and 90 do not. Which statement correctly interprets the prevalence odds of asthma?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> There is 1 resident with asthma for every 3 without asthma.</p>
+<p><strong>B.</strong> There is 1 resident with asthma for every 4 without asthma.</p>
+<p><strong>C.</strong> There are 3 residents with asthma for every 1 without asthma.</p>
+<p><strong>D.</strong> There is 1 resident with asthma for every 3 residents in total.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/vqwkdqd76TmL2V5CKjMk1/respond?q=review-odds-interpretation">Respond here</a></p>
+</div>
+<p><img data-src="qr/review-odds-interpretation.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: A. The prevalence odds = 30/90 = 1/3, or 1:3. The denominator contains residents without asthma, so there is one resident with asthma for every three without it. The corresponding prevalence proportion is 30/(30+90) = 30/120 = 0.25, or 25%. One with asthma out of every four residents in total is a probability or proportion statement; it is different from one with asthma for every four without it. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="review-odds-to-probability" class="slide level2 quiz">
+<h2>Review: Convert Odds to Probability</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>Among people tested at a clinic today, the odds of a positive test are 3:2. What probability of a positive test corresponds to these odds? Show the calculation and express the answer as a percentage.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/free_text_polls/vuwpcw5Gh6P9Mi1n9VvkY/respond?q=review-odds-to-probability">Respond here</a></p>
+</div>
+<p><img data-src="qr/review-odds-to-probability.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Odds of 3:2 mean three positive tests for every two negative tests. Therefore, the probability of a positive test = 3/(3+2) = 3/5 = 0.60, or 60%. Equivalently, the numeric odds are 3/2 = 1.5, and probability = odds/(1+odds) = 1.5/2.5 = 0.60. Odds can exceed 1; a probability of 150% would be impossible. This describes test results among the people tested today, not disease frequency in the entire community. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="review-odds-ratio" class="slide level2 quiz">
+<h2>Review: Compare Two Odds</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>Two groups are surveyed for insomnia today. The prevalence odds are 2.0 in Group A and 0.5 in Group B. Which statement correctly compares the groups?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> Group A has twice Group B’s odds of insomnia.</p>
+<p><strong>B.</strong> Group A has four times Group B’s probability of insomnia.</p>
+<p><strong>C.</strong> Group A has four times Group B’s odds of insomnia.</p>
+<p><strong>D.</strong> Group A has one-fourth of Group B’s odds of insomnia.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/feAaxl78uhrHnqOgH5KET/respond?q=review-odds-ratio">Respond here</a></p>
+</div>
+<p><img data-src="qr/review-odds-ratio.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: C. The odds ratio comparing A with B = 2.0/0.5 = 4. Group A has four times the odds of insomnia compared with Group B today. The corresponding probabilities are 2/(1+2) = 2/3 in A and 0.5/(1+0.5) = 1/3 in B, so the probability ratio is 2, not 4. Comparing odds is one reason we calculate them, but an odds ratio must be interpreted using the word odds. This comparison alone does not establish a cause of insomnia. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="review-why-adjust-rates" class="slide level2 quiz">
+<h2>Review: Why Adjust Rates?</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>Two counties have the same death rates within each age group in 2026, but County A has a larger share of older residents and a higher crude death rate. What does applying the same standard age distribution to both counties accomplish?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> It changes the actual number of deaths recorded in each county.</p>
+<p><strong>B.</strong> It removes every possible source of bias from the comparison.</p>
+<p><strong>C.</strong> It makes each county’s age-specific death rates equal to its crude rate.</p>
+<p><strong>D.</strong> It compares summary death rates using the same age mix.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/abrMOFOdpCnwEGa0XNBK1/respond?q=review-why-adjust-rates">Respond here</a></p>
+</div>
+<p><img data-src="qr/review-why-adjust-rates.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: D. Direct age adjustment applies the same age weights to each county’s age-specific rates. With identical age-specific rates and identical weights, the adjusted rates will be equal. The crude rates differ here because the counties have different age distributions. Adjustment changes the summary used for comparison, not the observed deaths, and it does not automatically remove other differences, measurement problems, or bias. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="review-mortality-rate" class="slide level2 quiz">
+<h2>Review: Mortality Rates</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>During 2026, a county records 360 deaths from all causes and has a midyear population of 90,000. Which statement correctly reports its crude mortality rate per 1,000 residents?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> 0.4 deaths per 1,000 residents during 2026.</p>
+<p><strong>B.</strong> 4 deaths per 1,000 residents during 2026.</p>
+<p><strong>C.</strong> 4 deaths per 1,000 people who died during 2026.</p>
+<p><strong>D.</strong> 40 deaths per 1,000 residents during 2026.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/reIr1J4d6NcwVZglBTbTx/respond?q=review-mortality-rate">Respond here</a></p>
+</div>
+<p><img data-src="qr/review-mortality-rate.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: B. Crude mortality rate = (360/90,000) × 1,000 = 4 deaths per 1,000 residents during 2026. The numerator counts new death events during the year, and the denominator is the midyear population. Midyear population multiplied by one year approximates the population’s person-time. The measure is crude because it includes all causes across the whole population, without adjustment. A proportion of cases who die from a particular disease would require a different denominator. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="review-birth-and-fertility-rates" class="slide level2 quiz">
+<h2>Review: Birth and Fertility Rates</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>During 2026, a town records 210 live births. Its midyear population is 14,000, including 3,000 women ages 15–44. Calculate the crude birth rate and the U.S. general fertility rate, each per 1,000. Explain why the answers differ.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/free_text_polls/s3m9X2ix78P2RsWQpqEwK/respond?q=review-birth-and-fertility-rates">Respond here</a></p>
+</div>
+<p><img data-src="qr/review-birth-and-fertility-rates.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Crude birth rate = (210/14,000) × 1,000 = 15 live births per 1,000 residents during 2026. General fertility rate = (210/3,000) × 1,000 = 70 live births per 1,000 women ages 15–44 during 2026. Both use all live births during the year as the numerator under the U.S. convention taught here; the denominators differ. The crude birth rate relates births to the whole population, while the general fertility rate uses women ages 15–44. Neither result is simply the percentage of all residents who gave birth. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud. For choice questions, take a show of hands for each option. For open-response questions, ask two or three volunteers to answer and record the key ideas on the whiteboard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="references" class="slide level2 references-slide smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-westreich2019" class="csl-entry" role="listitem">
+Westreich, Daniel. 2019. <em>Epidemiology by Design: A Causal Approach to the Health Sciences</em>. Oxford University Press.
+</div>
+</div>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/brad-cannell\.github\.io\/aphs20203\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
