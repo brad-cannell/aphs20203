@@ -18,7 +18,7 @@ execute:
   freeze: auto
 ---
 
-## Course Learning objectives
+## Course Learning Objectives
 
 1. Define epidemiology and key associated terminology, especially confounding.
 2. Distinguish among association, prediction, and causation.
@@ -31,7 +31,7 @@ By the end of this course, my goal is for you to be able to:
 :::
 
 
-## Lecture Learning objectives
+## Lecture Learning Objectives
 
 <!-- 
 Revise these objectives. 
@@ -68,7 +68,7 @@ Be ready to explain your numerator and denominator.
 
 ::: {.notes}
 - Allow groups about 3 minutes to work, then ask one group assigned to each month to report its numerator, denominator, prevalence proportion, and interpretation.
-- Ask why groups obtained different prevalence estimates even though they examined the same population. Emphasize that a measure of occurrence requires both a defined population and a defined time frame.
+- **Ask** why groups obtained different prevalence estimates even though they examined the same population. Emphasize that a measure of occurrence requires both a defined population and a defined time frame.
 - Reinforce that counts describe burden, while proportions place that burden in the context of the population size.
 - Transition to incidence by asking: “These snapshots tell us who had the disease at each point, but how could we describe who developed it during follow-up?”
 :::
@@ -93,7 +93,6 @@ A **state** observed at a moment or over a period
 :::
 
 ::: {.notes}
-- Briefly reconnect this state-based question to the prevalence snapshots students just calculated.
 - Prevalence measures how many cases are present at a moment or over a period.
 - It answers the question, "who has disease?" (outcome of interest)
 - Advance to the next slide to shift from observing disease status to observing a change in disease status.
@@ -135,18 +134,27 @@ Incidence counts **new transitions** during a specified period.
 :::
 
 ::: {.notes}
-- Incidence begins with people who are at risk: the condition is absent at the start of follow-up.
-- The event of interest is the transition into the condition. That transition creates a new case.
-- People who already have the condition at the start are not at risk of becoming a new case of that condition.
-<!-- We may want to create another slide with this information. -->
+- Incidence begins with people who are at risk: the outcome is absent at the start of follow-up.
+- The event of interest is the transition into the outcome. That transition creates a new case.
+- People who already have the outcome at the start are not at risk of becoming a new case of that outcome.
+:::
+
+
+## One-Time vs. Recurrent Events
+
+<!-- Make this slide more visual and less wordy. -->
+
+We can measure the incidence of:
+
+- **One-time events**, such as Parkinson’s disease or a first cancer diagnosis
+- **Recurrent events**, such as respiratory infections during a calendar year
+
+::: {.notes}
 - We can measure the incidence of:
   - **One-time events**, such as Parkinson’s disease or a first cancer diagnosis
   - **Recurrent events**, such as respiratory infections during a calendar year
 - To measure incidence, we must begin with a population **at risk** of the outcome. For example, a cohort used to measure Parkinson’s disease incidence must exclude people who already have the disease at cohort inception.
 - We can turn a recurrent event into a one-time event by studying only its first occurrence—for example, each person’s first respiratory infection during the calendar year.
-- As with prevalence, we can measure incidence using proportions, odds, and counts of new cases in a population.
-- We can also use incidence rates and measures of elapsed time to an event.
-- All of these measures can be viewed as derivations, or simplifications, of a survival curve or cumulative incidence curve. Thus, we turn next to the survival curve.
 :::
 
 
@@ -157,47 +165,47 @@ Incidence counts **new transitions** during a specified period.
 - Incidence proportion and “risk” are sometimes used interchangeably in epidemiology.
 - Risk can be ambiguous. Incidence proportion is less so.
 
-::: aside
-Source: [@westreich2019]
+::: {.notes}
+- We will use the more precise terminology in this course.
 :::
 
+
+## Incidence Measures
+
+<!-- Make this slide more visual and less wordy. -->
+
+<!-- Create a table with the measure in the left column and the formula in the right column. -->
+
 ::: {.notes}
-- Placeholder
+- As with prevalence, we can measure incidence using proportions, odds, and counts of new cases in a population.
+- We can also use incidence rates and measures of elapsed time to an event.
 :::
 
 
 ## Incidence Count
 
-<!-- Make this slide more visual and less wordy. -->
+<!-- Make this slide more visual and less wordy. For example, use a double-headed arrow to represent time and the range of possible values. -->
 
 - A count of new occurrences of a condition in a population at risk for the occurrence during a given time frame.
 - Range: 0 to infinity.
 
-::: aside
-Source: [@westreich2019]
-:::
-
 ::: {.notes}
-- Placeholder
+- A count of new occurrences of a condition in a population at risk for the occurrence during a given time frame.
+- Range: 0 to infinity.
 :::
 
 
 ## Incidence Proportion
 
-<!-- Make this slide more visual and less wordy. -->
-
-<!-- Summarize the slide notes into easily-scannable bullets. -->
+<!-- Make this slide more visual and less wordy. For example, use a double-headed arrow to represent time and the range of possible values. -->
 
 - The proportion of the population that experiences a new occurrence of the condition among those at risk of experiencing a new occurrence during a given time frame.
 - Like all proportions, it falls between 0 and 1.
 
-::: aside
-Source: [@westreich2019]
-:::
-
 ::: {.notes}
-- The incidence proportion can be estimated without reference to the survival curve: you could obtain the same estimate of risk as from Figure 1.2 (or the data in Table 1.1) directly, simply by observing that 930 individuals were alive at age 40, noting that this means 70 had died, and dividing 70 by the original number in the study (1,000) to get 7%.
-- It is critical to reiterate that incidence proportions are only meaningful when paired with a fixed period of time. This may be illustrated most clearly with the outcome of death: the “risk of death” in humans is universally 1, in that all humans will eventually die. Thus, telling someone that, in your study, the “risk of death was 10%” is unhelpful; more helpful would be to tell them that, for example, the “1-year risk of death was 10%.”
+- It is critical to reiterate that incidence proportions are only meaningful when paired with a fixed period of time. 
+- This may be illustrated most clearly with the outcome of death: the **“risk of death”** in humans is universally 1, in that all humans will eventually die. 
+- Thus, telling someone that, in your study, the “risk of death was 10%” is unhelpful; more helpful would be to tell them that, for example, the “1-year risk of death was 10%.”
 :::
 
 
@@ -240,7 +248,7 @@ $$
 $$
 <br>
 $$
-= 0.56 \text{ or } 56\%
+\approx 0.56 \text{ or } 56\%
 $$
 :::
 ::::
@@ -276,8 +284,6 @@ $$
 
 ## Incidence Odds Over 12 Months
 
-<!-- AI correction — needs review: calculate from exact counts instead of the rounded incidence proportion. -->
-
 :::: {.columns .align-center}
 ::: {.column width="60%"}
 <img src="assets/example_study_02.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up.">
@@ -289,7 +295,33 @@ $$
 $$
 <br>
 $$
-\frac{5/9}{1 - 5/9} = \frac{5}{4}
+\frac{0.56}{1 - 0.56}
+$$
+
+<br>
+$$
+\approx 1.27
+$$
+:::
+::::
+
+
+## Exact Incidence Odds Over 12 Months
+
+:::: {.columns .align-center}
+::: {.column width="60%"}
+<img src="assets/example_study_02.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up.">
+:::
+
+::: {.column width="40%"}
+$$
+\frac{\text{Incident cases}}{\text{Non-incident cases}}
+$$
+<br>
+
+::: {.fragment}
+$$
+\text{5:4} \text{ or } \frac{5}{4}
 $$
 
 <br>
@@ -297,12 +329,15 @@ $$
 = 1.25
 $$
 :::
+:::
 ::::
+
+::: {.notes}
+- We can also calculate the incidence odds more precisely as...
+:::
 
 
 ## Interpreting Incidence Odds
-
-<!-- AI correction — needs review: exact odds are 5/4 = 1.25. -->
 
 :::: {.columns .align-center}
 ::: {.column width="60%"}
@@ -318,6 +353,13 @@ For every 5 people who developed incident disease over 12 months of follow-up, 4
 :::
 ::::
 
+::: {.notes}
+- Notice that we don't say **had** disease.
+- And how do we get from 1.25 back to 5:4?
+- Express the decimal as a fraction: 1.25 = 125/100
+- Then simplify by dividing numerator and denominator by 25: 125/100 = 5/4 or 5:4.
+:::
+
 
 ## Incidence Rate
 
@@ -329,7 +371,8 @@ For every 5 people who developed incident disease over 12 months of follow-up, 4
 - Range: 0 to infinity.
 - **Not a proportion.**
 <!-- AI correction — needs review: person-time is the denominator; reciprocal time describes the resulting rate units. -->
-- The denominator is person-time at risk; the resulting rate has units of inverse time.
+- The denominator is person-time at risk
+- The resulting rate has units of inverse/reciprocal time ($\text{time}^{-1}$).
 - The numeric value depends on the selected time unit and therefore has no interpretation by itself.
 :::
 
@@ -347,14 +390,19 @@ Source: [@westreich2019]
 
 <!-- Add Poll Everywhere or exercise. -->
 
-**Person-time** is the amount of time observed for all people under study while they are at risk of experiencing an incident outcome.
+::: {.incremental}
+- **Person-time** is the amount of time observed for all people under study while they are at risk of experiencing an incident outcome.
+- If a woman is followed for 1 month, then she experiences (and contributes to analysis) 1 person-month of time.
+- If 10 women are followed for 1 year, they contribute 10 × 1 = 10 person-years.
+- If 1 woman is followed for 10 years, she also contributes 1 × 10 = 10 person-years. 
+:::
 
 ::: aside
 Source: [@westreich2019]
 :::
 
 ::: {.notes}
-- If a woman is followed for 1 month, then she experiences (and contributes to analysis) 1 person-month of time. If 10 women are followed for 1 year, they contribute 10 × 1 = 10 person-years; if 1 woman is followed for 10 years, she also contributes 1 × 10 = 10 person-years. This calls attention to a basic assumption of person-time: that any unit of person-time is exchangeable with any other unit of person-time under study.
+- This calls attention to a basic assumption of person-time: that any unit of person-time is **exchangeable** with any other unit of person-time under study.
 :::
 
 
@@ -462,20 +510,59 @@ Equivalently, the incidence rate was **7.8 cases per 100 person-months** during 
 :::
 ::::
 
+## Inverse/Reciprocal Time ($\text{time}^{-1}$)
+
+::: {.incremental}
+- If a study follows 100 people for 5 years, what is the total person-time?
+  - The total person-time is 500 person-years.
+- If 10 people experience the event of interest, what is the incidence rate?
+  - The incidence rate is: $\frac{10 \text{ cases}}{500 \text{ person-years}} = \text{0.02 cases per person-year}$
+  - The unit is $\text{0.02} \text{ time}^{-1}$. This reciprocal time unit means that, on average, 2% of the population at risk will experience the event each year.
+- But why is it called "reciprocal time" and why is it written as $\text{time}^{-1}$?
+:::
+
+::: {.notes}
+- Did you notice the funny unit of time two slides ago?
+- It's called inverse or reciprocal time, and it can seem very confusing, but really it's just basic algebra.
+:::
+
+
+## Why Is It Called Inverse/Reciprocal Time?
+
+::: {.incremental}
+- It is called reciprocal time and written as $\text{time}^{-1}$ because of basic algebra and the rules of mathematical exponents.
+- In mathematics, the reciprocal of any number or variable is just 1 divided by that variable.
+  - The reciprocal of 5 is $\frac{1}{5}$
+  - The reciprocal of Time is $\frac{1}{\text{Time}}$.
+  - When we calculate an incidence rate, the formula is: $\frac{\text{Count of new occurrences}}{\text{Person-time at risk}}$
+- Because the unit of time sits in the **denominator** (the bottom of the fraction), we are multiplying the number of cases by the reciprocal of time.
+:::
+
+::: {.notes}
+- Why is it called inverse/reciprocal time?
+:::
+
+
+## Why the Negative Exponent ($\text{time}^{-1}$)?
+
+::: {.incremental}
+- In algebra, a negative exponent is a shorthand way of writing a fraction where the variable is on the bottom. The standard rule is: $\frac{1}{x} = x^{-1}$
+- If our unit of time is years, then: $\frac{1}{\text{year}} = \text{year}^{-1}$
+- So, when we see a rate written as $\text{0.02} \text{ time}^{-1}$, it literally means 0.02 per year or $\frac{0.02}{\text{year}}$.
+- Using the negative exponent is simply the standard scientific way to write "per year" on a single line without needing to draw a fraction bar.
+:::
+
+::: {.notes}
+- Why the negative exponent?
+:::
+
 <!--  
 Add content about the relationship between incidence and prevalence.
 Add content about the relationship between odds and proportions.
 -->
 
-<!--  
-Add review questions or an exercise.
--->
-
-<!-- BEGIN AI-CREATED DRAFT SLIDES: mortality, natality, and adjusted rates. Brad review required before teaching. -->
 
 ## Mortality Rates: Incidence of Death {.compact}
-
-**AI-created draft — needs review**
 
 Death is another **new event** we can count over time.
 
@@ -498,18 +585,10 @@ $$
 - For an age-specific mortality rate, both numerator and denominator must use the same age group: deaths among adults ages 65+ divided by the midyear population ages 65+. A sex-specific mortality rate uses the same principle.
 - A cause-specific mortality rate restricts the numerator to deaths from the selected cause and uses the relevant population as the denominator. For example, cancer deaths divided by the midyear population describes population mortality from cancer; it does not describe the proportion of cancer patients who die.
 - The multiplier changes how the rate is displayed. Eight deaths per 1,000 is equivalent to 800 deaths per 100,000 over the same year.
-
-[Sources]
-- Friis, *Epidemiology 101*, 3rd ed., Chapter 3: supplied `Pages 61-62.pdf` and `Pages 64-65.pdf`.
-- [CDC/NCHS, Rate: Death and related rates](https://www.cdc.gov/nchs/hus/sources-definitions/rate.htm).
-- All town data on this slide are hypothetical teaching examples.
-[/Sources]
 :::
 
 
 ## Natality Rates: Counting Births {.compact}
-
-**AI-created draft — needs review**
 
 **Natality** refers to births. We again relate new events to a population over time.
 
@@ -531,18 +610,10 @@ $$
 - As with the annual crude death rate, midyear population multiplied by one year approximates population person-time. The crude birth rate describes the population's production of births; it is not an individual's probability of giving birth because the denominator includes all residents.
 - For the U.S. general fertility rate, divide all live births during the year, regardless of maternal age, by the midyear number of women ages 15–44 and multiply by 1,000. This is a conventional population measure, not a perfect count of everyone capable of giving birth.
 - Birth counts count babies, so a delivery of live-born twins contributes two live births. Birth counts help plan services, and birth rates help compare populations of different sizes.
-
-[Sources]
-- Friis, *Epidemiology 101*, 3rd ed., Chapter 3: supplied `Pages 66-67.pdf`.
-- [CDC/NCHS, Rate: Birth and related rates](https://www.cdc.gov/nchs/hus/sources-definitions/rate.htm), used to verify the birth-rate formula and general fertility-rate definition because the supplied extract does not include the full formulas.
-- All town data on this slide are hypothetical teaching examples.
-[/Sources]
 :::
 
 
 ## A Familiar Name Can Hide a Different Denominator {.compact}
-
-**AI-created draft — needs review**
 
 Always check **what is being divided by what**.
 
@@ -561,17 +632,10 @@ Always check **what is being divided by what**.
 - Infant mortality uses a conventional ratio of two event counts, rather than a person-time denominator. Some infants who die this year were born last year, so the numerator is not necessarily a subset of this year's births. Avoid interpreting the annual period measure as an exact observed risk for the babies born that year.
 - The infant mortality calculation is 6 divided by 1,200, multiplied by 1,000. Describe the result as deaths per 1,000 live births and name the year and population.
 - These examples extend the earlier distinction between ratios, proportions, and rates. The name alone does not identify the mathematical structure.
-
-[Sources]
-- Friis, *Epidemiology 101*, 3rd ed., Chapter 3: supplied `Pages 61-62.pdf` for case fatality and `Pages 66-67.pdf` for infant mortality.
-- All numerical examples on this slide are hypothetical.
-[/Sources]
 :::
 
 
 ## Why Adjust a Rate? {.compact}
-
-**AI-created draft — needs review**
 
 A town with more older adults can have a higher crude death rate **even when its age-specific rates are the same**.
 
@@ -592,12 +656,6 @@ What would the comparison look like if both towns had the **same age mix**?
 - These are midyear population counts used to approximate person-time during the year. The crude rate combines the age-specific rates using each town's own age distribution.
 - Neither town has a higher death rate within either age group in this deliberately simple example. The difference in crude rates comes entirely from the different age distributions.
 - An adjusted rate summarizes the comparison after applying a common population composition. Adjustment can also be used for other factors, but age is especially useful for illustrating mortality comparisons.
-
-[Sources]
-- Friis, *Epidemiology 101*, 3rd ed., Chapter 3: supplied `Page 65.pdf` and `Pages 64-65.pdf`.
-- [CDC/NCHS, Age adjustment](https://www.cdc.gov/nchs/hus/sources-definitions/age-adjustment.htm).
-- All town data on this slide are hypothetical teaching examples, created to isolate the effect of age composition.
-[/Sources]
 :::
 
 
@@ -625,80 +683,56 @@ Both towns have an adjusted rate of **5.6 deaths per 1,000 standard population p
 - The 80%/20% standard and two broad age groups are teaching simplifications. U.S. published mortality statistics commonly use the projected 2000 U.S. standard population with more detailed age groups. Compare adjusted rates that use compatible age groups and the same standard.
 - Adjustment addresses differences in the included factor. It does not automatically correct measurement error, differences in other characteristics, or confounding within broad age groups, and it does not establish causation.
 - The supplied reading also introduces indirect adjustment, which applies standard age-specific rates to the population being studied and compares observed with expected deaths. Keep that method as optional context; these slides teach the intuition behind direct adjustment.
-
-[Sources]
-- Friis, *Epidemiology 101*, 3rd ed., Chapter 3: supplied `Page 65.pdf`.
-- [CDC/NCHS, Age adjustment](https://www.cdc.gov/nchs/hus/sources-definitions/age-adjustment.htm).
-- The standard age mix and numerical example are hypothetical teaching examples.
-[/Sources]
 :::
 
-<!-- END AI-CREATED DRAFT SLIDES: mortality, natality, and adjusted rates. -->
 
+## Incidence Rates {#incidence-rates .quiz}
 
-<!-- BEGIN AI-CREATED REVIEW SLIDES: questions are authored in quiz/quiz.yml; needs review. -->
+{{< include quiz-slides/incidence-rates.qmd >}}
 
 ## Review: Ratios, Proportions, and Percentages {#review-ratio-proportion-percentage .quiz}
 
-**AI-created draft — needs review**
-
 {{< include quiz-slides/review-ratio-proportion-percentage.qmd >}}
 
-## Review: Prevalence and Incidence {#review-prevalence-and-incidence .quiz}
+::: {.fragment}
+- Riders to nonriders = 12/28 = 3/7, or 3:7: three riders for every seven nonriders. 
+- The proportion who ride is 12/(12+28) = 12/40 = 0.30. 
+- The percentage is 0.30 × 100 = 30%. 
+- The ratio compares riders with nonriders; the proportion and percentage compare riders with all surveyed students. 
+- All three descriptions refer to this survey today.
+:::
 
-**AI-created draft — needs review**
+## Review: Prevalence and Incidence {#review-prevalence-and-incidence .quiz}
 
 {{< include quiz-slides/review-prevalence-and-incidence.qmd >}}
 
 ## Review: Person-Time and Rates {#review-person-time-rate .quiz}
 
-**AI-created draft — needs review**
-
 {{< include quiz-slides/review-person-time-rate.qmd >}}
 
 ## Review: Interpret the Odds {#review-odds-interpretation .quiz}
-
-**AI-created draft — needs review**
 
 {{< include quiz-slides/review-odds-interpretation.qmd >}}
 
 ## Review: Convert Odds to Probability {#review-odds-to-probability .quiz}
 
-**AI-created draft — needs review**
-
 {{< include quiz-slides/review-odds-to-probability.qmd >}}
 
 ## Review: Compare Two Odds {#review-odds-ratio .quiz}
-
-**AI-created draft — needs review**
 
 {{< include quiz-slides/review-odds-ratio.qmd >}}
 
 ## Review: Why Adjust Rates? {#review-why-adjust-rates .quiz}
 
-**AI-created draft — needs review**
-
 {{< include quiz-slides/review-why-adjust-rates.qmd >}}
 
-## Review: Calculate an Adjusted Rate {#review-adjusted-rate-calculation .quiz}
-
-**AI-created draft — needs review**
-
-{{< include quiz-slides/review-adjusted-rate-calculation.qmd >}}
-
 ## Review: Mortality Rates {#review-mortality-rate .quiz}
-
-**AI-created draft — needs review**
 
 {{< include quiz-slides/review-mortality-rate.qmd >}}
 
 ## Review: Birth and Fertility Rates {#review-birth-and-fertility-rates .quiz}
 
-**AI-created draft — needs review**
-
 {{< include quiz-slides/review-birth-and-fertility-rates.qmd >}}
-
-<!-- END AI-CREATED REVIEW SLIDES. -->
 
 ## References {.references-slide}
 

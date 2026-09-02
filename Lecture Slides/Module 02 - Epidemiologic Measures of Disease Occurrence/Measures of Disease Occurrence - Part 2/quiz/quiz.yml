@@ -40,72 +40,6 @@ session:
     answer and record the key ideas on the whiteboard.
 
 questions:
-  # - id: counts
-  #   type: multiple_choice
-  #   prompt: >-
-  #     Why not stop at counts?
-
-
-  - id: describe
-    type: multiple_choice
-    prompt: >-
-      The research question is, "Is breast cancer currently more common in
-      Texas or Ohio?" Therefore, the goal of our analysis is...
-    options:
-      - to describe
-      - to predict
-      - to draw causal conclusions
-    correct: 1
-    explanation: >-
-      At face value, without additional context or information, most
-      epidemiologists would consider this a descriptive question. However, a
-      case could also be made for prediction or causation.
-    presentation_mode: anonymous
-    reveal_distribution: true
-    reveal_correct_answer: after_discussion
-    participation_url: https://PollEv.com/multiple_choice_polls/tfzkZ1yt8g1LXFmmzxkQs/respond
-
-  - id: incidence
-    type: short_answer
-    prompt: >-
-      What do measures of incidence tell us about a disease or another outcome
-      of interest?
-    explanation: Risk of the outcome over a specified period of time.
-    presentation_mode: anonymous
-    reveal_distribution: true
-    reveal_correct_answer: after_discussion
-    participation_url: https://PollEv.com/free_text_polls/y3co0x28tEMFMJeLhEYYb/respond
-
-  - id: prevalence
-    type: short_answer
-    prompt: >-
-      What do measures of prevalence tell us about a disease or another outcome
-      of interest?
-    explanation: >-
-      The frequency of existing cases of a disease or other condition in a
-      given population at a particular point or during a specified period.
-    presentation_mode: anonymous
-    reveal_distribution: true
-    reveal_correct_answer: after_discussion
-    participation_url: https://PollEv.com/free_text_polls/CoUOHufRgcKn5MsYBf7Sm/respond
-
-  - id: incidence-prevalence
-    type: multiple_choice
-    prompt: Which measure of event occurrence is better - incidence or prevalence?
-    options:
-      - Incidence
-      - Prevalence
-      - It depends
-    correct: 3
-    explanation: >-
-      Incidence and prevalence are equally useful measures of event occurrence,
-      but they answer different questions. Incidence answers questions about
-      risk. Prevalence answers questions about disease burden and public health
-      response.
-    presentation_mode: anonymous
-    reveal_distribution: true
-    reveal_correct_answer: after_discussion
-    participation_url: https://PollEv.com/multiple_choice_polls/nDVPt2R6BMylOmfAdA1rN/respond
 
   - id: incidence-rates
     type: short_answer
@@ -123,15 +57,10 @@ questions:
     reveal_correct_answer: after_discussion
     participation_url: https://PollEv.com/free_text_polls/K0589tMCLsNQv2EBucx6I/respond
 
-  # BEGIN AI-CREATED DRAFT REVIEW QUESTIONS — needs Brad's review.
-  # Based on the updated Measures of Disease Occurrence Parts 1 and 2.
-  # All numerical scenarios below are hypothetical teaching examples.
-  # Add real Poll Everywhere response URLs only after creating matching activities.
-
   - id: review-ratio-proportion-percentage
     type: short_answer
     prompt: >-
-      In a survey today, 12 of 40 students report riding a bicycle to campus; 28 do not. Calculate the ratio of bicycle riders to nonriders, the proportion who ride, and the percentage who ride.
+      In a survey conducted today, **12 of 40** students report riding a bicycle to campus; 28 do not. Calculate the ratio of bicycle riders to nonriders, the proportion who ride, and the percentage who ride.
     explanation: >-
       Riders to nonriders = 12/28 = 3/7, or 3:7: three riders for every seven nonriders. The proportion who ride is 12/(12+28) = 12/40 = 0.30. The percentage is 0.30 × 100 = 30%. The ratio compares riders with nonriders; the proportion and percentage compare riders with all surveyed students. All three descriptions refer to this survey today.
     presentation_mode: anonymous
@@ -141,7 +70,7 @@ questions:
   - id: review-prevalence-and-incidence
     type: multiple_choice
     prompt: >-
-      On January 1, 2026, 20 of 200 adults have hypertension. During 2026, 36 of the remaining 180 develop it. Everyone is followed for the full year. What are the January 1 prevalence proportion and the 2026 incidence proportion, respectively?
+      On January 1, 2026, 20 of 200 adults had hypertension. During 2026, 36 of the remaining 180 develop it. Everyone is followed for the full year. What are the January 1 prevalence proportion and the 2026 incidence proportion, respectively?
     options:
       - "10% and 18%"
       - "10% and 20%"
@@ -153,6 +82,7 @@ questions:
     presentation_mode: anonymous
     reveal_distribution: true
     reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/MmAIfznlB2xUJCDk4xYLB/respond
 
   - id: review-person-time-rate
     type: short_answer
@@ -163,11 +93,12 @@ questions:
     presentation_mode: anonymous
     reveal_distribution: true
     reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/free_text_polls/i8pkD0RR1gfxfnco2G653/respond
 
   - id: review-odds-interpretation
     type: multiple_choice
     prompt: >-
-      In a survey today, 30 residents have asthma and 90 do not. Which statement correctly interprets the prevalence odds of asthma?
+      In a survey conducted today, 30 residents have asthma and 90 do not. Which statement correctly interprets the prevalence odds of asthma?
     options:
       - "There is 1 resident with asthma for every 3 without asthma."
       - "There is 1 resident with asthma for every 4 without asthma."
@@ -179,6 +110,7 @@ questions:
     presentation_mode: anonymous
     reveal_distribution: true
     reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/vqwkdqd76TmL2V5CKjMk1/respond
 
   - id: review-odds-to-probability
     type: short_answer
@@ -189,6 +121,7 @@ questions:
     presentation_mode: anonymous
     reveal_distribution: true
     reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/free_text_polls/vuwpcw5Gh6P9Mi1n9VvkY/respond
 
   - id: review-odds-ratio
     type: multiple_choice
@@ -205,6 +138,7 @@ questions:
     presentation_mode: anonymous
     reveal_distribution: true
     reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/feAaxl78uhrHnqOgH5KET/respond
 
   - id: review-why-adjust-rates
     type: multiple_choice
@@ -221,16 +155,7 @@ questions:
     presentation_mode: anonymous
     reveal_distribution: true
     reveal_correct_answer: after_discussion
-
-  - id: review-adjusted-rate-calculation
-    type: short_answer
-    prompt: >-
-      A county's 2026 death rates are 4 per 1,000 residents under age 65 and 24 per 1,000 residents ages 65+. Use a standard population that is 75% under 65 and 25% ages 65+. Calculate and interpret the directly age-adjusted death rate.
-    explanation: >-
-      Adjusted rate = (0.75 × 4) + (0.25 × 24) = 3 + 6 = 9 deaths per 1,000 standard population per year. This is the summary death rate expected if the county retained its 2026 age-specific rates but had the standard population's age mix. The weights sum to 1. The result is a weighted comparison measure; it does not claim that exactly nine deaths were observed in a particular group of 1,000 residents.
-    presentation_mode: anonymous
-    reveal_distribution: true
-    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/abrMOFOdpCnwEGa0XNBK1/respond
 
   - id: review-mortality-rate
     type: multiple_choice
@@ -247,6 +172,7 @@ questions:
     presentation_mode: anonymous
     reveal_distribution: true
     reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/reIr1J4d6NcwVZglBTbTx/respond
 
   - id: review-birth-and-fertility-rates
     type: short_answer
@@ -257,9 +183,7 @@ questions:
     presentation_mode: anonymous
     reveal_distribution: true
     reveal_correct_answer: after_discussion
-
-  # END AI-CREATED DRAFT REVIEW QUESTIONS.
-
+    participation_url: https://PollEv.com/free_text_polls/s3m9X2ix78P2RsWQpqEwK/respond
 
   - id: other-questions
     type: short_answer
@@ -271,3 +195,16 @@ questions:
       Ask students to share remaining questions aloud and record unresolved
       topics for follow-up.
     participation_url: https://PollEv.com/free_text_polls/3lHepUui77dAHrGfbs2sQ/respond
+
+
+# Note used
+  - id: review-adjusted-rate-calculation
+    type: short_answer
+    prompt: >-
+      A county's 2026 death rates are 4 per 1,000 residents under age 65 and 24 per 1,000 residents ages 65+. Use a standard population that is 75% under 65 and 25% ages 65+. Calculate and interpret the directly age-adjusted death rate.
+    explanation: >-
+      Adjusted rate = (0.75 × 4) + (0.25 × 24) = 3 + 6 = 9 deaths per 1,000 standard population per year. This is the summary death rate expected if the county retained its 2026 age-specific rates but had the standard population's age mix. The weights sum to 1. The result is a weighted comparison measure; it does not claim that exactly nine deaths were observed in a particular group of 1,000 residents.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/free_text_polls/3Jrf55yw1DxRgLmwadS61/respond
