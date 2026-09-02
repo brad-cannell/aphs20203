@@ -157,7 +157,7 @@ questions:
   - id: review-person-time-rate
     type: short_answer
     prompt: >-
-      In a 6-month study of first ankle injuries, four athletes contribute 2, 4, 6, and 6 months at risk. The first two develop an injury when their time at risk ends; the other two remain injury-free. Calculate total person-time and the incidence rate per 100 person-months.
+      In a 6-month study, four athletes contribute 2, 4, 6, and 6 months at risk of a first ankle injury. The first two are injured at months 2 and 4; the others remain injury-free. Calculate person-time and the incidence rate per 100 person-months.
     explanation: >-
       Total person-time = 2 + 4 + 6 + 6 = 18 person-months. There are two first injuries, so the incidence rate = (2/18) × 100 = approximately 11.1 first ankle injuries per 100 person-months at risk during the 6-month study. Time after a first injury does not contribute to the denominator for that first injury. Eighteen person-months is accumulated time across four athletes, not an 18-month study. The rate is not a statement that 11.1% of athletes were injured.
     presentation_mode: anonymous
