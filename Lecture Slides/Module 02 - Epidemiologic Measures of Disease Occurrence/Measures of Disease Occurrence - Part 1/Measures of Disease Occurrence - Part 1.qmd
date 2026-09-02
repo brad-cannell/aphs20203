@@ -38,7 +38,7 @@ By the end of this course, my goal is for you to be able to:
 By the end of this lesson, you'll be able to:
 
 1. Define counts and rates.
-2. Distinguish crude, specific, adjusted rates.
+2. Distinguish among crude, specific, and adjusted rates.
 3. Compute and interpret prevalence and incidence.
 
 
@@ -49,7 +49,7 @@ By the end of this lesson, you'll be able to:
 ::: {.notes}
 - We have already had some exposure to the basics of what epidemiology _is_. 
 - This week, we will begin to learn how to _do_ epidemiology. 
-- However, before getting into specific calcualtions, I want to briefly discuss the concepts of measurement, uncertainty, and study design.
+- However, before getting into specific calculations, I want to briefly discuss the concepts of measurement, uncertainty, and study design.
 :::
 
 
@@ -60,7 +60,7 @@ By the end of this lesson, you'll be able to:
 :::
 
 ::: {.notes}
-- We spent some time disecting this definition last week. I don't plan to do that again today.
+- We spent some time dissecting this definition last week. I don't plan to do that again today.
 - However, it may be worth taking a step back and thinking about _how_ we study the occurrence and distribution of these things. 
 - Do we consult powerful oracles or deities? Not typically. 
 - Do we go into a deep meditative state until the answers just occur to us? Not typically. At least doing that alone would not typically be very convincing evidence to most people.
@@ -85,7 +85,8 @@ By the end of this lesson, you'll be able to:
 ::: {.notes}
 - Instead, we almost always study health-related states and populations by **measuring** characteristics of those states or populations. 
 - And what do we mean by measure? 
-- Typically, that means that we observe some people, places, or events that are thought to be relevant to the population we are interested in. - As we are observing, we assign and record values about the things we are observing that are thought to be relevant. 
+- Typically, that means that we observe some people, places, or events that are thought to be relevant to the population we are interested in.
+- As we are observing, we assign and record values about the things we are observing that are thought to be relevant.
 - For example, we might ask someone to step on a scale. We could observe their weight and record it somewhere. Or, we might ask someone to fill out a questionnaire about their thoughts and feelings. We could then record those responses somewhere as well.
 :::
 
@@ -219,7 +220,7 @@ These measures can be useful on their own and for hypothesis generation.
 3. Causal uncertainty
 
 ::: {.notes}
-- And finally, we should get comfortable with uncertainty on the level of our conclusions. In epidemiology, the questions we are called to answer are often causal questions. Did this cause that? If we stop this, can we stop that? On one hand, these questions are usually incredibly exciting and have the potential to lead to real, tangible changes in population health. On the other hand, our two primary tools -- data and statistics -- are not typically not sufficient to answer such questions in and of themselves. 
+- And finally, we should get comfortable with uncertainty on the level of our conclusions. In epidemiology, the questions we are called to answer are often causal questions. Did this cause that? If we stop this, can we stop that? On one hand, these questions are usually incredibly exciting and have the potential to lead to real, tangible changes in population health. On the other hand, our two primary tools -- data and statistics -- are typically not sufficient to answer such questions in and of themselves.
 - The conclusions that we are able to make are almost always loaded with caveats and assumptions. This is true even for many non-causal questions. However, the questions being asked are often so important that we don’t have the luxury of completely deferring our conclusions until some imaginary later date when the stars align, and the inner workings of the world are magically revealed to us with complete clarity. No, we must often do our best with the information and resources that are available to us now. Therefore, when we make conclusions, we will have to be comfortable with the fact that they may be wholly or partially incorrect, there may be important exceptions, and/or we may have to revisit them again in the future when circumstances, or the information available to us, changes. Even when they are entirely correct, we will often not be able to prove as much with complete certainty. Said another way, our conclusions will rarely, if ever, be exactly correct or provable; however, sometimes they will still be useful for a given purpose. 
 - That is an unsettling thought for many people. But it is true nevertheless and we must accept it and become comfortable with it if we want to practice epidemiology. If it makes you feel any better, the history of public health, including epidemiology, is littered with notable examples of useful conclusions that were not entirely correct or not entirely proven, yet still extremely useful. For example, citrus fruit to prevent and cure scurvy, drinking tainted drinking water as a cause of cholera, and tobacco smoke as a cause of lung cancer (and many other diseases). 
 :::
@@ -247,9 +248,9 @@ These measures can be useful on their own and for hypothesis generation.
 :::
 
 ::: {.notes}
-- Well, The simplest definition of a population is a group of people who share characteristics or meet criteria that define membership in the population.
-- In other words, we set some criteria of interest and then anyone who meets that criteria is a member of the population. In everyday language, we most often think about the criteria that defines population membership as being geographic. For example, all of the people who live in the United States make up the population of the United States. The criteria that defines them is the fact that they live in the United States.
-- But we certainly do not have to limit our criteria of interest to be geographic. We can use pretty much any criteria that is useful for our purposes. For example, people of a particular age, gender, or race or ethnicity; people who work in a particular occupation; people who participate in a particular behavior or activity; or people who have a particular disease. All the people who meet whatever the criteria are de facto members of the population. 
+- Well, the simplest definition of a population is a group of people who share characteristics or meet criteria that define membership in the population.
+- In other words, we set one or more criteria of interest, and anyone who meets those criteria is a member of the population. In everyday language, we most often think of the criteria that define population membership as geographic. For example, all the people who live in the United States make up the population of the United States. The defining criterion is that they live in the United States.
+- But we certainly do not have to limit our criteria of interest to geography. We can use pretty much any criteria that are useful for our purposes. For example, people of a particular age, gender, race, or ethnicity; people who work in a particular occupation; people who participate in a particular behavior or activity; or people who have a particular disease. All the people who meet the criteria are de facto members of the population.
 :::
 
 
@@ -265,7 +266,7 @@ These measures can be useful on their own and for hypothesis generation.
 :::
 
 ::: {.notes}
-- I would add the qualifier “during a defined time period” to this definition. As I hope to show you, the inclusion of the time period of interest is is a critical component of making almost every measure we will use in epidemiology meaningful.
+- I would add the qualifier “during a defined time period” to this definition. As I hope to show you, the inclusion of the time period of interest is a critical component of making almost every measure we will use in epidemiology meaningful.
 - Later in the course, we will discuss populations, samples, and cohorts in greater depth, and we will see more examples of why the definition of time is so important.
 :::
 
@@ -303,7 +304,6 @@ These measures can be useful on their own and for hypothesis generation.
   - Did a lot of people have the event?
 :::
 
-
 <!-- 
 Poll Everywhere:
 The basic issue is that counts don't take into account the size of the population.
@@ -316,11 +316,9 @@ Introduce ratios, rates, proportions, and percentages generally.
 -->
 
 
-<!-- BEGIN AI-CREATED SLIDES: Ratios, proportions, percentages, and rates. Needs Brad's review. -->
-
 ## The Same Count Can Tell Different Stories {.compact}
 
-**AI-created draft — needs review**
+<!-- AI-CREATED SLIDEs: Ratios, proportions, percentages, and rates. Needs Brad's review. -->
 
 Imagine that **10 students have mono today** in each of two dorms.
 
@@ -345,7 +343,7 @@ The count helps us plan care. The **denominator** shows how common mono is.
 
 ## A Ratio Compares Two Quantities {.compact}
 
-**AI-created draft — needs review**
+<!-- AI-CREATED SLIDEs: Ratios, proportions, percentages, and rates. Needs Brad's review. -->
 
 A **ratio** divides one quantity by another.
 
@@ -372,7 +370,7 @@ The denominator does not have to include the numerator.
 
 ## A Proportion Compares a Part With the Whole {.compact}
 
-**AI-created draft — needs review**
+<!-- AI-CREATED SLIDEs: Ratios, proportions, percentages, and rates. Needs Brad's review. -->
 
 For the same **15 users and 5 nonusers**, there are **20 patients in all**.
 
@@ -397,7 +395,7 @@ $$
 
 ## A Percentage Expresses a Proportion per 100 {.compact}
 
-**AI-created draft — needs review**
+<!-- AI-CREATED SLIDEs: Ratios, proportions, percentages, and rates. Needs Brad's review. -->
 
 $$
 \text{Percentage who use} = \frac{15}{20} \times 100\% = 75\%
@@ -422,7 +420,7 @@ $$
 
 ## A Rate Describes How Quickly Events Occur {.compact}
 
-**AI-created draft — needs review**
+<!-- AI-CREATED SLIDEs: Ratios, proportions, percentages, and rates. Needs Brad's review. -->
 
 A **rate** includes time in its denominator.
 
@@ -445,8 +443,6 @@ This describes the pace of new cases. It does **not** mean that 5% became ill.
 - Existing Part 2 slides, “Incidence Rate” and “Person-Time,” for the course's person-time definition.
 [/Sources]
 :::
-
-<!-- END AI-CREATED SLIDES: Ratios, proportions, percentages, and rates. -->
 
 
 ## Prevalence Describes Existing Conditions {.compact}
@@ -474,7 +470,7 @@ This describes the pace of new cases. It does **not** mean that 5% became ill.
 
 ::: {.notes}
 <!-- Convert this to bullets. -->
-- Prevalence counts are sometimes useful in communicating the public health importance of a disease condition or in contexts where incidence is difficult to define and so you want to have a sense of numbers of events for surveillance purposes. Unfortunately, prevalence counts are just as often used to overhype that importance by reporting large-sounding numbers without appropriate context. Prevalence counts are therefore of most use when their context is well-understood by the audience: for example, since most residents of the United States have a general sense of the total population of that country, a report to a US audience of the prevalence count of US residents living with COPD (at this writing, about 13 million) might be adequately contextualized. As with all counts, the prevalence count is an integer between 0 however many possible cases exist in the population being examined. For a recurrent event measured over a sufficiently long period of time (e.g., upper respiratory infections), the prevalence count might exceed the number of individuals in the population: however, in such a case, calculating an incidence might be more straightforward.
+- Prevalence counts are sometimes useful in communicating the public health importance of a disease condition or in contexts where incidence is difficult to define and so you want to have a sense of numbers of events for surveillance purposes. Unfortunately, prevalence counts are just as often used to overhype that importance by reporting large-sounding numbers without appropriate context. Prevalence counts are therefore of most use when their context is well-understood by the audience: for example, since most residents of the United States have a general sense of the total population of that country, a report to a US audience of the prevalence count of US residents living with COPD (at this writing, about 13 million) might be adequately contextualized. As with all counts, the prevalence count is an integer between 0 and however many possible cases exist in the population being examined. For a recurrent event measured over a sufficiently long period of time (e.g., upper respiratory infections), the prevalence count might exceed the number of individuals in the population: however, in such a case, calculating an incidence might be more straightforward.
 :::
 
 
@@ -573,39 +569,121 @@ Said another way, **20%** of the population had disease in month 2.
 <p class="source-line">Source: [@westreich2019]</p>
 
 ::: {.notes}
-- On the other hand, point prevalence is often operationalized (put into practice) as “period prevalence over a reasonably short time window.” - For example, if you want to know the prevalence of HIV infection in a cohort of 1,000 people, it is difficult to imagine getting blood samples to test from all those people simultaneously (e.g., if all 1,000 participants give blood at exactly 1:00 pm this Friday). In practice, you would obtain blood samples over as short a time period as possible and test them thereafter. 
-- Alternatively, you could also define such a prevalence as “point prevalence at time of testing” while acknowledging that the testing occurred at a different calendar time for each participant [@westreich2019].
- - Some textbooks and authors spend a fair amount of time trying to draw a distinction between the two. Because the concept is pretty nebulous, I tend to not worry about it too much. Instead, I prefer to just be clear about the time frame used for the calculation.
+- On the other hand, point prevalence is often operationalized (put into practice) as “period prevalence over a reasonably short time window.”
+- For example, if you want to know the prevalence of HIV infection in a cohort of 1,000 people, it is difficult to imagine getting blood samples to test from all those people simultaneously (e.g., if all 1,000 participants give blood at exactly 1:00 pm this Friday). In practice, you would obtain blood samples over as short a time period as possible and test them thereafter.
+- Alternatively, you could also define such a prevalence as “point prevalence at the time of testing” while acknowledging that the testing occurred at a different calendar time for each participant [@westreich2019].
+- Some textbooks and authors spend a fair amount of time trying to draw a distinction between the two. Because the concept is pretty nebulous, I tend to not worry about it too much. Instead, I prefer to just be clear about the time frame used for the calculation.
 :::
 
 
-<!-- AI-created draft slides; needs Brad's review. Sources: /Users/bradcannell/Library/CloudStorage/Dropbox/R4Epi Textbook/r4epi/chapters/Chapters in Development/10_part_epi_foundations/_03_measures_of_occurrence.Rmd (Prevalence Odds, Interpretation of odds less than one); /Users/bradcannell/Library/CloudStorage/Dropbox/R4Epi Textbook/r4epi/chapters/Chapters in Development/10_part_epi_foundations/_06_measures_of_association.Rmd (Probabilities, Incidence odds ratio). -->
-
 ## Odds Compare People With and Without a Condition {.compact}
 
-**AI-created draft — needs review**
+In a hypothetical survey conducted today, **20 students have a headache** and **80 do not**.
 
-In a hypothetical survey today, **20 students have a headache** and **80 do not**.
-
+::: {.fragment}
 $$
-\text{Odds of a headache} = \frac{\text{Students with a headache}}{\text{Students without a headache}} = \frac{20}{80} = 0.25
+\text{Odds of a headache} = \frac{\text{Students with a headache}}{\text{Students without a headache}} = \frac{20}{80} = \frac{1}{4} = 0.25
 $$
+:::
 
+::: {.fragment}
 The odds are **1:4**: for every **1 student with a headache**, there are **4 without one**.
+:::
 
 ::: {.notes}
-- Start with the two groups of people, before asking students to memorize a formula. Both groups come from the same population measured at the same time. Here, we are describing prevalence odds because we asked who has a headache today.
-- Read 1:4 as “one to four.” We divided both counts by 20 to simplify 20:80. The ratio preserves the balance between students with and without a headache.
+- Start with scenario 
+  - We want to compare two groups. What are they? 
+  - Students with headache to students without headache.
+- The odds are one way we can do that systematically and numerically.
+- **Show formula**
+- Equivalently, we can describe the odds as 1:4.
+- Read 1:4 as “one to four.” 
+- We divided both counts by 20 to simplify 20:80. The ratio preserves the balance between students with and without a headache.
+:::
 
-[Sources]
-- R4Epi textbook draft, “Measures of Occurrence,” “Prevalence Odds” and “Interpretation of odds less than one.” The headache survey is a hypothetical teaching example.
-[/Sources]
+
+## The Outcome You Name Goes on Top {.compact}
+
+To calculate the **odds of an event**:
+
+$$
+\text{Odds of event} = \frac{\text{Number with the event}}{\text{Number without the event}}
+$$
+
+::: {.fragment}
+To calculate the **odds of a non-event**, reverse the comparison:
+
+$$
+\text{Odds of non-event} = \frac{\text{Number without the event}}{\text{Number with the event}}
+$$
+:::
+
+::: {.fragment}
+For the headache example:
+
+$$
+\text{Odds of headache} = \frac{20}{80} = 0.25
+\qquad
+\text{Odds of no headache} = \frac{80}{20} = 4
+$$
+:::
+
+::: {.fragment}
+The two odds are **reciprocals**: $0.25 = 1/4$ and $4 = 4/1$.
+:::
+
+::: {.notes}
+- More generally, here is formula for calculating the odds of an event.
+- First decide which outcome you are calculating the odds of. Put the count for that outcome in the numerator. Put the count for the opposite outcome in the denominator.
+- Reversing the outcome reverses the ratio. Thus, the odds of headache are 1:4, whereas the odds of no headache are 4:1.
+- The two odds multiply to 1 because they are reciprocals.
+:::
+
+
+## Rewrite 0.25 as Equivalent Odds {.compact}
+
+A decimal odds is a ratio with **1** in the denominator:
+
+$$
+0.25 = \frac{0.25}{1} = 0.25:1
+$$
+
+::: {.fragment}
+First find the number that turns 0.25 into 1:
+
+$$
+1 \div 0.25 = 4
+$$
+:::
+
+::: {.fragment}
+Then multiply both parts by 4:
+
+$$
+(0.25 \times 4):(1 \times 4) = \mathbf{1:4}
+$$
+:::
+
+::: {.fragment}
+Multiplying both parts by the same number gives equivalent odds:
+
+$$
+0.25:1 = 1:4 = 2:8 = 5:20 = 20:80 = 25:100
+$$
+
+Each expression says the number **with** a headache is one-fourth the number **without** one.
+:::
+
+::: {.notes}
+- We may want to report or interpret the odds as an equivalent ratio with whole numbers. How do we do that?
+- We first divide 1/0.25
+- To obtain an equivalent ratio with whole numbers, we multiply both parts by 4. This gives “1 to 4.”
+- We can multiply both parts of a ratio by any positive number without changing the relationship. For example, 1:4, 5:20, and the observed counts 20:80 all describe the same odds.
+- Emphasize that 25:100 is an odds expression for one group; it does not mean a 25% probability. The next slide makes that distinction explicit.
 :::
 
 
 ## Probability and Odds Use Different Denominators {.compact}
-
-**AI-created draft — needs review**
 
 The same survey has **20 students with a headache** and **80 without one**.
 
@@ -614,22 +692,16 @@ The same survey has **20 students with a headache** and **80 without one**.
 | Probability | $20/(20+80) = 0.20$ | 20 out of every 100 students have a headache. |
 | Odds | $20/80 = 0.25$ | 1 student has a headache for every 4 without one. |
 
-**Probability compares the part to the whole. Odds compare the part to the rest.**
+**Probability compares the part to the whole. Odds compare one part to a different part.**
 
 ::: {.notes}
 - If we select one student at random, with each of these 100 students equally likely to be selected, the probability that the student has a headache is the prevalence proportion: 20/100 = 0.20. The denominator includes everyone, including the 20 students with a headache.
 - For the odds, the denominator includes only the 80 students without a headache. An odds of 0.25 therefore corresponds to a probability of 20%, not 25%. They describe the same data on different numerical scales.
 - We do not need a different dataset to move from one measure to the other. We need to change the denominator.
-
-[Sources]
-- R4Epi textbook draft, “Measures of Occurrence,” “Prevalence proportion” and “Prevalence Odds”; “Measures of Association,” “Frequency probabilities.”
-[/Sources]
 :::
 
 
 ## Reading Odds Below, Equal to, and Above 1 {.compact}
-
-**AI-created draft — needs review**
 
 Three hypothetical groups surveyed on the same day:
 
@@ -645,16 +717,12 @@ Odds can be **greater than 1**. A probability cannot.
 - An odds of 1 means the event and its absence are equally common; the probability is 0.50. An odds below 1 means the event is less common than its absence. An odds above 1 means it is more common.
 - For 4:1 odds, say “four students with a headache for every one without a headache.” That is a ratio of groups, not a probability of 400%.
 - If no one has the condition, the odds are 0. If everyone has the condition, the count without it is zero, so there is no finite odds value; the usual division is undefined. As the probability approaches 1, the odds increase without bound.
-
-[Sources]
-- R4Epi textbook draft, “Measures of Occurrence,” “Prevalence Odds,” including interpretations above and below 1. The 50:50 and 80:20 examples extend the same formula.
-[/Sources]
 :::
 
 
 ## Move Between Probability and Odds {.compact}
 
-**AI-created draft — needs review**
+<!-- AI-CREATED SLIDEs: Ratios, proportions, percentages, and rates. Needs Brad's review. -->
 
 Let $p$ be the probability, written as a proportion between 0 and 1.
 
@@ -671,15 +739,9 @@ For odds written as **a:b**, the probability is **a/(a+b)**.
 
 ::: {.notes}
 - Emphasize the count intuition behind the inverse formula. Four with a headache for every one without means four with a headache out of five students total.
-- The expression 1-p represents the probability of the condition being absent. Use 0.20 in the formula for a probability of 20%; entering 20 would give a meaningless result.
+- The expression 1-p represents the probability of the condition being absent. Use 0.20 in the formula for a probability of 20%.
 - For one more connection to the first example, odds of 0.25 give probability 0.25/1.25 = 0.20. Equivalently, 1:4 odds give 1/(1+4) = 1/5 = 0.20.
-
-[Sources]
-- R4Epi textbook draft, “Measures of Occurrence,” “Prevalence Odds.” The inverse formula is an algebraic rearrangement of odds = p/(1-p).
-[/Sources]
 :::
-
-
 
 
 ## Prevalence Odds {.compact}
@@ -747,7 +809,7 @@ For every person who had disease at month 2, there were four people who did not.
 
 ## Why Learn to Calculate Odds? {.compact}
 
-**AI-created draft — needs review**
+<!-- AI-CREATED SLIDEs: Ratios, proportions, percentages, and rates. Needs Brad's review. -->
 
 - **Describe a condition:** compare how many people have it with how many do not.
 - **Compare groups:** an *odds ratio* compares the odds in one group with the odds in another.
@@ -768,7 +830,7 @@ Understanding odds helps us translate those results into statements about people
 
 ## An Odds Ratio Compares Two Groups {.compact}
 
-**AI-created draft — needs review**
+<!-- AI-CREATED SLIDEs: Ratios, proportions, percentages, and rates. Needs Brad's review. -->
 
 In two hypothetical groups surveyed today:
 
@@ -796,7 +858,7 @@ Group A has **1.5 times the odds** of a headache compared with Group B today.
 
 
 <!-- 
-This is were we will stop on day one.
+This is where we will stop on day one.
 Add a section break slide here.
 -->
 
