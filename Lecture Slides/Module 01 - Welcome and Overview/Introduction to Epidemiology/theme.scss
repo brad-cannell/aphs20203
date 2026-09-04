@@ -39,8 +39,8 @@ $code-block-color: $tcu-white;
   height: 1.7em;
   margin: 0;
   // The compiled theme lives under site_libs/revealjs/dist/theme. The logo is
-  // published as a project resource beside this deck's other assets.
-  background: url("../../../../Module 01 - Welcome and Overview/Introduction to Epidemiology/assets/tcu-logo.svg") center / contain no-repeat;
+  // published as a shared project resource for all decks.
+  background: url("../../../../assets/tcu-logo.svg") center / contain no-repeat;
 }
 
 .reveal .slides #title-slide {

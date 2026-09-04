@@ -15,10 +15,15 @@ Interactive slide decks for APHS 20203.
 
 ### Measures of Disease Occurrence — Part 1
 
-- [View interactive slides](Module%2002%20-%20Epidemiologic%20Measures%20of%20Disease%20Occurrence/Measures%20of%20Disease%20Occurrence%20-%20Part%201/Measures%20of%20Disease%20Occurrence%20-%20Part%201.html)
-- [Download PDF](Module%2002%20-%20Epidemiologic%20Measures%20of%20Disease%20Occurrence/Measures%20of%20Disease%20Occurrence%20-%20Part%201/Measures%20of%20Disease%20Occurrence%20-%20Part%201.pdf)
+- [View interactive slides](Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.qmd)
+- [Download PDF](Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.pdf)
 
 ### Measures of Disease Occurrence — Part 2
 
-- [View interactive slides](Module%2002%20-%20Epidemiologic%20Measures%20of%20Disease%20Occurrence/Measures%20of%20Disease%20Occurrence%20-%20Part%202/Measures%20of%20Disease%20Occurrence%20-%20Part%202.html)
-- [Download PDF](Module%2002%20-%20Epidemiologic%20Measures%20of%20Disease%20Occurrence/Measures%20of%20Disease%20Occurrence%20-%20Part%202/Measures%20of%20Disease%20Occurrence%20-%20Part%202.pdf)
+- [View interactive slides](Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.qmd)
+- [Download PDF](Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.pdf)
+
+## Module 2: Disease Occurrence Data
+
+- [View interactive slides](Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.qmd)
+- [Download PDF](Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.pdf)
