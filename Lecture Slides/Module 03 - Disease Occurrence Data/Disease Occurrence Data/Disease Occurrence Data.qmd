@@ -4,7 +4,7 @@ subtitle: "APHS 20203 • Epidemiology & Biostatistics"
 bibliography: references.bib
 format:
   revealjs:
-    theme: [default, custom.scss, theme.scss]
+    theme: [default, ../../_theme/tcu.scss, custom.scss]
     slide-number: c/t
     chalkboard: true
     preview-links: auto
@@ -12,13 +12,22 @@ format:
     embed-resources: false
     width: 1280
     height: 720
+    logo: ../../assets/tcu-logo-purple.svg
 execute:
   echo: false
   warning: false
   freeze: auto
 ---
 
+<!--  
+Add something about big data.
+-->
+
 ## Learning Objectives {.compact}
+
+<!--  
+Revise and update the learning objectives last.
+-->
 
 By the end of this week, you should be able to:
 
@@ -29,9 +38,18 @@ By the end of this week, you should be able to:
 5. Explain the role of **international organizations** in collecting and disseminating epidemiologic data.
 
 ::: {.notes}
+- We learned a little bit about what to do with data last time.
+- But where do we get the data? That's today's topic.
 :::
 
+
 ## Review of Mortality: Real Data (CDC NVSS, 2023) {.compact}
+
+<!--  
+Update to: https://www.cdc.gov/nchs/products/databriefs/db548.htm
+- What does the death rate tell us?
+- What does the age-adjusted death rate tell us?
+-->
 
 - Source: [CDC NCHS Data Brief 521](https://www.cdc.gov/nchs/products/databriefs/db521.htm#Key_finding)
 - Selected findings:
@@ -44,7 +62,13 @@ By the end of this week, you should be able to:
 ::: {.notes}
 :::
 
+
 ## Leading Cause ≠ Highest Risk {.compact}
+
+<!--  
+This is an important concept.
+Let's make this more interactive somehow.
+-->
 
 - **Leading causes of death** are ranked by **proportion of total deaths (PMR)**.
 - Ranking answers “**how many deaths?**” → **Burden**.
@@ -57,7 +81,12 @@ By the end of this week, you should be able to:
 ::: {.notes}
 :::
 
+
 ## Example: Suicide {.compact}
+
+<!--  
+I think it's also a leading cause of death in older white men.
+-->
 
 - Suicide is **not a top-ranked cause of death overall**.
 - But it is a **leading cause of death among young adults**.
@@ -69,7 +98,14 @@ By the end of this week, you should be able to:
 ::: {.notes}
 :::
 
+
 ## Conceptual Transition {.compact}
+
+<!--  
+I need to figure out what she was trying to get them to think about.
+If I figure it out, I should make this slide a little more direct. If the current wording was too vague for me, it's going to be too vague for students.
+If I'm not able to figure it out, then delete this slide.
+-->
 
 - You just interpreted multiple mortality measures using one short summary.
 - **Question:** What assumptions are we making about the data behind these numbers?
@@ -78,7 +114,15 @@ By the end of this week, you should be able to:
 ::: {.notes}
 :::
 
+
 ## Epidemiologic Data {.compact}
+
+<!--  
+This is too wordy. Either:
+- Break it up into multiple separate slides
+- Make it more visual
+- Turn it into an interactive exercise
+-->
 
 - Epidemiologic data are **population-based data** used to:
   - Describe disease occurrence
@@ -95,7 +139,13 @@ By the end of this week, you should be able to:
 ::: {.notes}
 :::
 
+
 ## Factors Affecting Epidemiologic Data Quality {.compact}
+
+<!--  
+These are good concepts for students to consider.
+We may want to give each concept its own slide and visual.
+-->
 
 - Data quality reflects whether the assumptions behind our measures hold.
 - Key dimensions:
@@ -107,6 +157,7 @@ By the end of this week, you should be able to:
 
 ::: {.notes}
 :::
+
 
 ## Two Types of Epidemiologic Data Systems {.compact}
 
@@ -135,15 +186,25 @@ Epidemiologic data systems serve **different public health purposes**.
 ::: {.notes}
 :::
 
-<!-- REVIEW: The source credit for this complex vital-statistics/reportable-disease data-flow diagram was not visible in the PDF. The complete slide image is retained because its illustrated process cannot be reconstructed reliably from the PDF alone. -->
+
 ## How Epidemiologic Data Are Generated and Used {.visual-only}
+
+<!-- REVIEW: The source credit for this complex vital-statistics/reportable-disease data-flow diagram was not visible in the PDF. The complete slide image is retained because its illustrated process cannot be reconstructed reliably from the PDF alone. -->
+
+<!-- 
+Consider remaking these graphics and using a TCU theme. 
+- Additionally, they are kind of busy. How can we make the key takeaway(s) jump out?
+-->
 
 <img src="assets/epidemiologic-data-flow.png" class="r-stretch" style="display: block; width: 100%; margin: 0 auto;" alt="Flow diagram comparing vital statistics with reportable and notifiable disease data. Vital events progress from certificates to state vital records offices and the National Vital Statistics System, producing population health statistics. Disease cases progress from providers and laboratories to local and state health departments and CDC or national surveillance systems, supporting public health response.">
 
 ::: {.notes}
 :::
 
+
 ## Vital Registration System {.compact}
+
+<!-- This slide is bland. Consider turning it into an interactive activity. -->
 
 - **Vital events:** births, deaths, fetal deaths, marriages, divorces
 - In the United States, these events are compiled through the **National Vital Statistics System (NVSS)**.
@@ -152,8 +213,10 @@ Epidemiologic data systems serve **different public health purposes**.
 ::: {.notes}
 :::
 
-<!-- REVIEW: The PDF did not identify the source of Table 4.3 or the certificate image. The visible table content has been transcribed, but its bibliographic source is unresolved. -->
+
 ## Information Collected by Birth and Fetal Death Certificates {.table-slide}
+
+<!-- REVIEW: The PDF did not identify the source of Table 4.3 or the certificate image. The visible table content has been transcribed, but its bibliographic source is unresolved. -->
 
 | Variable | U.S. Certificate of Live Birth | U.S. Report of Fetal Death |
 |---|---|---|
@@ -170,23 +233,34 @@ Epidemiologic data systems serve **different public health purposes**.
 ::: {.notes}
 :::
 
-<!-- REVIEW: The dashboard chart’s underlying plotted values were not provided in the PDF text and cannot be reconstructed faithfully. The full source slide is retained as a local asset. -->
+
 ## Vital Statistics Example: Texas Birth Data {.visual-only}
+
+<!-- REVIEW: The dashboard chart’s underlying plotted values were not provided in the PDF text and cannot be reconstructed faithfully. The full source slide is retained as a local asset. -->
+
+<!-- Consider turning this slide into an interactive activity. -->
 
 <img src="assets/texas-birth-data.png" class="r-stretch" style="display: block; width: 100%; margin: 0 auto;" alt="Texas live births by year from 2005 through 2020. Births fluctuate near 370,000 to 410,000, with a slight decline by 2020. Discussion asks what students notice and what features of vital registration enable trend analysis.">
 
 ::: {.notes}
 :::
 
-<!-- REVIEW: The dashboard chart’s underlying plotted values were not provided in the PDF text and cannot be reconstructed faithfully. The full source slide is retained as a local asset. -->
+
 ## Vital Statistics Example: Texas Death Data {.visual-only}
+
+<!-- REVIEW: The dashboard chart’s underlying plotted values were not provided in the PDF text and cannot be reconstructed faithfully. The full source slide is retained as a local asset. -->
+
+<!-- Consider turning this slide into an interactive activity. -->
 
 <img src="assets/texas-death-data.png" class="r-stretch" style="display: block; width: 100%; margin: 0 auto;" alt="Texas crude death rates by age group from 2011 through 2020. Rates are highest for adults aged 75 years and older, followed by ages 65 to 74. Discussion asks students to interpret age-group patterns, the use of crude death rates, and links to earlier mortality measures.">
 
 ::: {.notes}
 :::
 
+
 ## Why Do Some Diseases Have to Be Reported? {.compact}
+
+<!-- This slide is bland. -->
 
 - Some diseases require **immediate public health action**.
 - Waiting for routine statistics is too slow.
@@ -197,7 +271,10 @@ Epidemiologic data systems serve **different public health purposes**.
 ::: {.notes}
 :::
 
+
 ## Reportable/Notifiable Disease Data {.compact}
+
+<!-- This slide is bland. -->
 
 - **Case-based surveillance**
 - Focus on **specific diseases** of public health importance
@@ -212,6 +289,7 @@ Epidemiologic data systems serve **different public health purposes**.
 
 ::: {.notes}
 :::
+
 
 ## Reportable vs. Notifiable — What’s the Difference? {.compact}
 
@@ -240,8 +318,13 @@ Epidemiologic data systems serve **different public health purposes**.
 ::: {.notes}
 :::
 
+
+<!-- Add a slide with examples of reportable diseases as well. -->
+
+
+## Examples of Nationally Notifiable Diseases {.text-small}
+
 <!-- Source PDF page 18; split for slide readability. -->
-## Examples of Nationally Notifiable Diseases {.compact .notifiable-list}
 
 **National Notifiable Diseases Surveillance System (NNDSS):** the endpoint of the data-report flow
 
@@ -270,8 +353,12 @@ Epidemiologic data systems serve **different public health purposes**.
 ::: {.notes}
 :::
 
-<!-- Source PDF page 18; split for slide readability. -->
+
 ## Discussion: Nationally Notifiable Diseases {.compact}
+
+<!-- Source PDF page 18; split for slide readability. -->
+
+<!-- I kind of like an interactive exercise, but I'm not sure that I like this one. -->
 
 1. Pick one disease on the list. At what level would it first be reported?
 2. Why would CDC want to track this nationally?
@@ -280,7 +367,10 @@ Epidemiologic data systems serve **different public health purposes**.
 ::: {.notes}
 :::
 
+
 ## Surveillance: From Reporting to Monitoring {.compact}
+
+<!-- Good information. Presentation is kind of bland. -->
 
 - Reporting captures **individual cases**.
 - Surveillance looks for **patterns over time**.
@@ -290,6 +380,7 @@ Epidemiologic data systems serve **different public health purposes**.
 
 ::: {.notes}
 :::
+
 
 ## Two Approaches to Public Health Surveillance {.table-slide}
 
@@ -304,8 +395,12 @@ Epidemiologic data systems serve **different public health purposes**.
 ::: {.notes}
 :::
 
-<!-- Source PDF page 21; split for slide readability. -->
+
 ## Exercise: Types of Surveillance {.compact}
+
+<!-- Source PDF page 21; split for slide readability. -->
+
+<!-- The scenarios to match are on the next slide. Figure out a better way to format this. -->
 
 Match each scenario with the correct type:
 
@@ -326,8 +421,10 @@ Real-time, early warning, symptom and pattern focus
 ::: {.notes}
 :::
 
-<!-- Source PDF page 21; split for slide readability. -->
+
 ## Exercise: Types of Surveillance — Scenarios {.compact}
+
+<!-- Source PDF page 21; split for slide readability. -->
 
 1. Health officials analyze flu vaccination rates every year to guide next season’s immunization campaign.
 2. A sudden rise in ER visits for fever and cough signals a possible flu outbreak.
@@ -339,7 +436,10 @@ Focus on *why* one approach fits better than the other.
 ::: {.notes}
 :::
 
+
 ## Public Health Surveillance Programs {.compact}
+
+<!-- Break this up into multiple slides -->
 
 - **Communicable and infectious diseases**
   - Track cases, hospitalizations, and spread
@@ -356,7 +456,10 @@ Focus on *why* one approach fits better than the other.
 ::: {.notes}
 :::
 
+
 ## National Center for Health Statistics (NCHS) {.compact}
+
+<!-- Add BRFSS -->
 
 **NCHS is a major source of U.S. population-based health data.**
 
@@ -370,7 +473,10 @@ Focus on *why* one approach fits better than the other.
 ::: {.notes}
 :::
 
+
 ## Why International Organizations Matter {.compact}
+
+<!-- Make this slide more visual. -->
 
 - Diseases cross national borders.
 - Data must be **comparable across countries**.
@@ -378,6 +484,7 @@ Focus on *why* one approach fits better than the other.
 
 ::: {.notes}
 :::
+
 
 ## What International Organizations Do {.compact}
 
@@ -391,6 +498,7 @@ Focus on *why* one approach fits better than the other.
 ::: {.notes}
 :::
 
+
 ## Key Takeaways: Epidemiologic Data {.compact}
 
 - Epidemiology depends on **population-based data** to describe health patterns.
@@ -403,3 +511,5 @@ Focus on *why* one approach fits better than the other.
 
 ::: {.notes}
 :::
+
+<!-- Add a check on learning quiz. -->
