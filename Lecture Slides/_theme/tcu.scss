@@ -1,5 +1,7 @@
 /*-- scss:defaults --*/
 
+// Shared Reveal.js theme for every rendered APHS 20203 lecture deck.
+
 // TCU's published primary palette. A secondary palette is intentionally not
 // selected here: Brand Central directs projects to choose one rather than mix
 // them, and this reusable starter does not have a project-specific need.
@@ -133,4 +135,111 @@ $code-block-color: $tcu-white;
 .reveal table th,
 .reveal table td {
   border-bottom-color: $tcu-grey;
+}
+
+// Shared interactive-question styles. Generated quiz partials emit
+// .quiz-prompt, .quiz-options, .participation, and .qr.
+.reveal .quiz h2 {
+  font-size: 1.4em;
+  line-height: 1.2;
+}
+
+.reveal .quiz-prompt {
+  margin: 0.35em auto 0.55em;
+  max-width: 90%;
+  font-size: 0.78em;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.reveal .quiz-options {
+  margin: 0 auto;
+  max-width: 72%;
+  font-size: 0.82em;
+  line-height: 1.25;
+}
+
+.reveal .quiz-options p {
+  margin: 0.22em 0;
+}
+
+.reveal .participation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4em;
+  margin-top: 0.8em;
+  font-size: 0.8em;
+}
+
+// The QR image sits outside .participation because Pandoc's PowerPoint writer
+// drops images nested in a Div.
+.reveal img.qr {
+  display: block;
+  margin: 0.8em auto 0;
+  background: $tcu-white;
+  padding: 8px;
+  border-radius: 4px;
+  image-rendering: pixelated;
+  border: 0;
+  box-shadow: none;
+}
+
+// Printing with ?print-pdf otherwise emits a trailing page containing speaker
+// notes and toolbar elements.
+@media print {
+  aside.notes,
+  .reveal .speaker-notes,
+  .reveal .slide-menu-wrapper,
+  .reveal .print-pdf-hidden {
+    display: none !important;
+  }
+}
+
+.reveal .section h1 {
+  border-bottom: 2px solid $presentation-heading-color;
+  padding-bottom: 0.2em;
+}
+
+// Reusable layout utilities.
+.reveal .grid-2,
+.reveal .grid-3 {
+  display: grid;
+  align-items: start;
+  gap: 0.75em;
+}
+
+.reveal .grid-2 > *,
+.reveal .grid-3 > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.reveal .grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.reveal .grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.reveal .align-center {
+  align-items: center;
+}
+
+.reveal .columns.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.reveal .panel {
+  padding: 0.7em 0.8em;
+  border-top: 0.16em solid $tcu-purple;
+  background: #f5f3f7;
+}
+
+// Generic text-size utility for dense slides whose content does not justify a
+// content-specific selector.
+.reveal .slides section.text-small {
+  font-size: 0.7em;
 }

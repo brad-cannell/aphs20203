@@ -13,6 +13,7 @@ project:
     - "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.qmd"
   resources:
     - "assets/tcu-logo.svg"
+    - "assets/tcu-logo-purple.svg"
 
 website:
   title: "APHS 20203 Lecture Slides"

@@ -4,7 +4,7 @@ subtitle: "APHS 20203 • Epidemiology & Biostatistics"
 bibliography: references.bib
 format:
   revealjs:
-    theme: [default, custom.scss, theme.scss]
+    theme: [default, ../_theme/tcu.scss]
     slide-number: c/t
     chalkboard: true
     preview-links: auto

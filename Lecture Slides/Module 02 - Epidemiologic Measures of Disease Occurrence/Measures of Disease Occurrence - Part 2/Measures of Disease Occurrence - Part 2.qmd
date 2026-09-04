@@ -4,7 +4,7 @@ subtitle: "APHS 20203 • Epidemiology & Biostatistics"
 bibliography: references.bib
 format:
   revealjs:
-    theme: [default, custom.scss, theme.scss]
+    theme: [default, ../../_theme/tcu.scss, custom.scss]
     slide-number: c/t
     chalkboard: true
     preview-links: auto
@@ -261,7 +261,7 @@ $$
 <img src="assets/example_study_02.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up.">
 :::
 
-::: {.column width="40%" style="text-align: center;"}
+::: {.column style="width: 40%; text-align: center;"}
 Among the members of the population, the incidence of disease over 12 months of follow-up was **0.56**.
 <br>
 <br>
@@ -344,7 +344,7 @@ $$
 <img src="assets/example_study_02.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up.">
 :::
 
-::: {.column width="40%" style="text-align: center;"}
+::: {.column style="width: 40%; text-align: center;"}
 Among the members of the population, the odds of incident disease over 12 months of follow-up were **1.25**.
 <br>
 <br>
@@ -451,7 +451,7 @@ $$
 <img src="assets/example_study_03.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up.">
 :::
 
-::: {.column width="40%" style="text-align: center;"}
+::: {.column style="width: 40%; text-align: center;"}
 The population accumulated **64 person-months at risk** during 12 months of follow-up.
 <br>
 <br>
@@ -501,7 +501,7 @@ $$
 <img src="assets/example_study_03.png" alt="Timeline visualization showing follow-up periods for 10 study participants. Orange segments represent time at risk, red represents diseased status, and black represents deceased. Person 1 was prevalent before follow-up.">
 :::
 
-::: {.column width="40%" style="text-align: center;"}
+::: {.column style="width: 40%; text-align: center;"}
 The incidence rate of disease among the members of the population was **5 cases per 64 person-months** during 12 months of follow-up.
 <br>
 <br>
