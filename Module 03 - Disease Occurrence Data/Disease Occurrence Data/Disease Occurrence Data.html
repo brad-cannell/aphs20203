@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.36">
+
+  <title>APHS 20203 Lecture Slides – Disease Occurrence Data</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-054b8e85d1a43ad6937576242354c347.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Disease Occurrence Data</h1>
+  <p class="subtitle">APHS 20203 • Epidemiology &amp; Biostatistics</p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="learning-objectives" class="slide level2 compact">
+<h2>Learning Objectives</h2>
+<p>By the end of this week, you should be able to:</p>
+<ol type="1">
+<li>Identify key factors that influence <strong>epidemiologic data quality</strong>.</li>
+<li>Distinguish between <strong>vital statistics</strong> and <strong>reportable/notifiable disease data</strong>.</li>
+<li>Identify major <strong>surveillance programs in the United States</strong>.</li>
+<li>Describe major <strong>sources of epidemiologic data</strong> used in public health.</li>
+<li>Explain the role of <strong>international organizations</strong> in collecting and disseminating epidemiologic data.</li>
+</ol>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="review-of-mortality-real-data-cdc-nvss-2023" class="slide level2 compact">
+<h2>Review of Mortality: Real Data (CDC NVSS, 2023)</h2>
+<ul>
+<li>Source: <a href="https://www.cdc.gov/nchs/products/databriefs/db521.htm#Key_finding">CDC NCHS Data Brief 521</a></li>
+<li>Selected findings:
+<ul>
+<li>Life expectancy: <strong>78.4 years</strong> (↑ 0.9 from 2022)</li>
+<li>Age-adjusted death rate: ↓ <strong>6.0%</strong> (798.8 → 750.5 per 100,000)</li>
+<li>Age-specific death rates decreased for all age groups ≥5 years.</li>
+<li>Leading causes unchanged: heart disease, cancer, injuries.</li>
+<li>Infant mortality: <strong>560.2 per 100,000 live births</strong> (no change).</li>
+</ul></li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="leading-cause-highest-risk" class="slide level2 compact">
+<h2>Leading Cause ≠ Highest Risk</h2>
+<ul>
+<li><strong>Leading causes of death</strong> are ranked by <strong>proportion of total deaths (PMR)</strong>.</li>
+<li>Ranking answers “<strong>how many deaths?</strong>” → <strong>Burden</strong>.</li>
+<li><strong>Risk</strong> answers “<strong>how likely is death?</strong>” → measured by rates (e.g., <strong>CSMR</strong>).</li>
+<li>A cause with a lower rank can still pose <strong>high risk</strong> to specific populations.</li>
+<li>Public health concern depends on <strong>context</strong>, not rank alone.</li>
+</ul>
+<blockquote>
+<p><strong>Burden ≠ Risk</strong></p>
+</blockquote>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="example-suicide" class="slide level2 compact">
+<h2>Example: Suicide</h2>
+<ul>
+<li>Suicide is <strong>not a top-ranked cause of death overall</strong>.</li>
+<li>But it is a <strong>leading cause of death among young adults</strong>.</li>
+<li>This reflects <strong>high cause-specific mortality rates</strong> in certain groups.</li>
+<li>Key contrast:
+<ul>
+<li>PMR (overall): low</li>
+<li>CSMR (subgroups): high</li>
+</ul></li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="conceptual-transition" class="slide level2 compact">
+<h2>Conceptual Transition</h2>
+<ul>
+<li>You just interpreted multiple mortality measures using one short summary.</li>
+<li><strong>Question:</strong> What assumptions are we making about the data behind these numbers?</li>
+<li><em>(Write down your responses; we will revisit soon.)</em></li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="epidemiologic-data" class="slide level2 compact">
+<h2>Epidemiologic Data</h2>
+<ul>
+<li>Epidemiologic data are <strong>population-based data</strong> used to:
+<ul>
+<li>Describe disease occurrence</li>
+<li>Monitor health trends</li>
+<li>Identify disparities</li>
+</ul></li>
+<li>Epidemiologic data capture:
+<ul>
+<li><strong>Morbidity</strong> (disease, illness)</li>
+<li><strong>Mortality</strong> (death)</li>
+</ul></li>
+<li>Major sources of epidemiologic data:
+<ul>
+<li>Vital statistics</li>
+<li>Reportable/notifiable disease data</li>
+<li>Survey and surveillance data</li>
+</ul></li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="factors-affecting-epidemiologic-data-quality" class="slide level2 compact">
+<h2>Factors Affecting Epidemiologic Data Quality</h2>
+<ul>
+<li>Data quality reflects whether the assumptions behind our measures hold.</li>
+<li>Key dimensions:
+<ul>
+<li><strong>Coverage:</strong> Who is included?</li>
+<li><strong>Accuracy:</strong> Are events classified correctly?</li>
+<li><strong>Consistency:</strong> Are the same definitions used over time and place?</li>
+<li><strong>Timeliness:</strong> How current are the data?</li>
+<li><strong>Processing and quality control:</strong> Errors and checks</li>
+</ul></li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="two-types-of-epidemiologic-data-systems" class="slide level2 compact">
+<h2>Two Types of Epidemiologic Data Systems</h2>
+<p>Epidemiologic data systems serve <strong>different public health purposes</strong>.</p>
+<div class="grid-2">
+<div class="panel">
+<p><strong>VITAL STATISTICS</strong></p>
+<ul>
+<li>Track <em>life events</em> (births, deaths)</li>
+<li>Population-wide and complete</li>
+<li>Designed for <strong>long-term patterns</strong></li>
+</ul>
+</div>
+<div class="panel">
+<p><strong>REPORTABLE/NOTIFIABLE DISEASE DATA</strong></p>
+<ul>
+<li>Track <em>specific diseases</em></li>
+<li>Focus on timeliness and rapid detection</li>
+<li>Designed for <strong>public health action</strong></li>
+</ul>
+</div>
+</div>
+<blockquote>
+<p>Same population → different questions → different systems</p>
+</blockquote>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- REVIEW: The source credit for this complex vital-statistics/reportable-disease data-flow diagram was not visible in the PDF. The complete slide image is retained because its illustrated process cannot be reconstructed reliably from the PDF alone. -->
+</section>
+<section id="how-epidemiologic-data-are-generated-and-used" class="slide level2 visual-only">
+<h2>How Epidemiologic Data Are Generated and Used</h2>
+
+<img src="assets/epidemiologic-data-flow.png" class="r-stretch" style="display: block; width: 100%; margin: 0 auto;" alt="Flow diagram comparing vital statistics with reportable and notifiable disease data. Vital events progress from certificates to state vital records offices and the National Vital Statistics System, producing population health statistics. Disease cases progress from providers and laboratories to local and state health departments and CDC or national surveillance systems, supporting public health response."><aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="vital-registration-system" class="slide level2 compact">
+<h2>Vital Registration System</h2>
+<ul>
+<li><strong>Vital events:</strong> births, deaths, fetal deaths, marriages, divorces</li>
+<li>In the United States, these events are compiled through the <strong>National Vital Statistics System (NVSS)</strong>.</li>
+<li><a href="https://www.cdc.gov/nchs/nvss/index.htm" class="uri">https://www.cdc.gov/nchs/nvss/index.htm</a></li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- REVIEW: The PDF did not identify the source of Table 4.3 or the certificate image. The visible table content has been transcribed, but its bibliographic source is unresolved. -->
+</section>
+<section id="information-collected-by-birth-and-fetal-death-certificates" class="slide level2 table-slide">
+<h2>Information Collected by Birth and Fetal Death Certificates</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>U.S. Certificate of Live Birth</th>
+<th>U.S. Report of Fetal Death</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Name</td>
+<td>Child’s name</td>
+<td>Name of fetus (optional)</td>
+</tr>
+<tr class="even">
+<td>Disposition (e.g., burial)</td>
+<td>Not applicable</td>
+<td>Disposition of fetus</td>
+</tr>
+<tr class="odd">
+<td>Location</td>
+<td>Facility name</td>
+<td>Where delivered</td>
+</tr>
+<tr class="even">
+<td>Mother identifying information</td>
+<td>Name, age, and place of residence</td>
+<td>Name, age, and place of residence</td>
+</tr>
+<tr class="odd">
+<td>Mother</td>
+<td>Height, weight, number of previous live births</td>
+<td>Height, weight, number of previous live births</td>
+</tr>
+<tr class="even">
+<td>Conditions contributing to fetal death</td>
+<td>Not applicable</td>
+<td>Initiating cause and other causes (e.g., pregnancy complications, fetal anomalies)</td>
+</tr>
+<tr class="odd">
+<td>Risk factors in pregnancy</td>
+<td>Diabetes, hypertension, infections</td>
+<td>Diabetes, hypertension, infections</td>
+</tr>
+<tr class="even">
+<td>Congenital anomalies</td>
+<td>Anencephaly, cleft palate, Down syndrome</td>
+<td>Anencephaly, cleft palate, Down syndrome</td>
+</tr>
+<tr class="odd">
+<td>Father</td>
+<td>Name and age</td>
+<td>Name and age</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- REVIEW: The dashboard chart’s underlying plotted values were not provided in the PDF text and cannot be reconstructed faithfully. The full source slide is retained as a local asset. -->
+</section>
+<section id="vital-statistics-example-texas-birth-data" class="slide level2 visual-only">
+<h2>Vital Statistics Example: Texas Birth Data</h2>
+
+<img src="assets/texas-birth-data.png" class="r-stretch" style="display: block; width: 100%; margin: 0 auto;" alt="Texas live births by year from 2005 through 2020. Births fluctuate near 370,000 to 410,000, with a slight decline by 2020. Discussion asks what students notice and what features of vital registration enable trend analysis."><aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- REVIEW: The dashboard chart’s underlying plotted values were not provided in the PDF text and cannot be reconstructed faithfully. The full source slide is retained as a local asset. -->
+</section>
+<section id="vital-statistics-example-texas-death-data" class="slide level2 visual-only">
+<h2>Vital Statistics Example: Texas Death Data</h2>
+
+<img src="assets/texas-death-data.png" class="r-stretch" style="display: block; width: 100%; margin: 0 auto;" alt="Texas crude death rates by age group from 2011 through 2020. Rates are highest for adults aged 75 years and older, followed by ages 65 to 74. Discussion asks students to interpret age-group patterns, the use of crude death rates, and links to earlier mortality measures."><aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="why-do-some-diseases-have-to-be-reported" class="slide level2 compact">
+<h2>Why Do Some Diseases Have to Be Reported?</h2>
+<ul>
+<li>Some diseases require <strong>immediate public health action</strong>.</li>
+<li>Waiting for routine statistics is too slow.</li>
+<li>These data support <strong>detection, response, and control</strong>.</li>
+</ul>
+<blockquote>
+<p>Different purpose → different data system</p>
+</blockquote>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reportablenotifiable-disease-data" class="slide level2 compact">
+<h2>Reportable/Notifiable Disease Data</h2>
+<ul>
+<li><strong>Case-based surveillance</strong></li>
+<li>Focus on <strong>specific diseases</strong> of public health importance</li>
+<li>Information typically includes:
+<ul>
+<li>Case counts (incidence)</li>
+<li>Basic person, place, and time</li>
+<li>Key clinical outcomes</li>
+</ul></li>
+<li>Key tradeoff:
+<ul>
+<li>Strength: <strong>Timeliness</strong></li>
+<li>Limitation: <strong>Incomplete population coverage</strong></li>
+</ul></li>
+<li>Designed for action, not completeness.</li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reportable-vs.-notifiable-whats-the-difference" class="slide level2 compact">
+<h2>Reportable vs.&nbsp;Notifiable — What’s the Difference?</h2>
+<div class="grid-2">
+<div class="panel">
+<p><strong>REPORTABLE DISEASES</strong></p>
+<ul>
+<li>Reported to <strong>local or state</strong> health departments</li>
+<li>Used for <strong>local public health action</strong></li>
+<li>Lists vary by jurisdiction</li>
+</ul>
+</div>
+<div class="panel">
+<p><strong>NOTIFIABLE DISEASES</strong></p>
+<ul>
+<li>Reported to <strong>national authorities</strong> (e.g., CDC)</li>
+<li>Aggregated for <strong>national monitoring</strong></li>
+<li>De-identified (age, sex, location)</li>
+</ul>
+</div>
+</div>
+<ul>
+<li>Every notifiable disease is first reported locally.</li>
+</ul>
+<blockquote>
+<p>Same case → different reporting level → different purpose</p>
+</blockquote>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- Source PDF page 18; split for slide readability. -->
+</section>
+<section id="examples-of-nationally-notifiable-diseases" class="slide level2 compact notifiable-list">
+<h2>Examples of Nationally Notifiable Diseases</h2>
+<p><strong>National Notifiable Diseases Surveillance System (NNDSS):</strong> the endpoint of the data-report flow</p>
+<div class="grid-2">
+<div>
+<ul>
+<li>Anthrax</li>
+<li>COVID-19</li>
+<li>Botulism</li>
+<li>Gonorrhea</li>
+<li>Hepatitis A, hepatitis B, hepatitis C</li>
+<li>Human immunodeficiency virus (HIV) infection</li>
+<li>Meningococcal disease</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Mumps</li>
+<li>Syphilis</li>
+<li>Tuberculosis</li>
+<li>Viral hemorrhagic fever (includes Ebola virus)</li>
+<li>Zika virus disease</li>
+</ul>
+</div>
+</div>
+<p class="source-line">
+Source: Centers for Disease Control and Prevention. National Notifiable Diseases Surveillance System (NNDSS). 2022 Nationally Notifiable Conditions. Available at: <a href="https://ndc.services.cdc.gov/event-code-list-other-surveillance-resources/" class="uri">https://ndc.services.cdc.gov/event-code-list-other-surveillance-resources/</a>. Accessed February 20, 2025.
+</p>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- Source PDF page 18; split for slide readability. -->
+</section>
+<section id="discussion-nationally-notifiable-diseases" class="slide level2 compact">
+<h2>Discussion: Nationally Notifiable Diseases</h2>
+<ol type="1">
+<li>Pick one disease on the list. At what level would it first be reported?</li>
+<li>Why would CDC want to track this nationally?</li>
+<li>Would birth or death data ever appear on this list? Why not?</li>
+</ol>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="surveillance-from-reporting-to-monitoring" class="slide level2 compact">
+<h2>Surveillance: From Reporting to Monitoring</h2>
+<ul>
+<li>Reporting captures <strong>individual cases</strong>.</li>
+<li>Surveillance looks for <strong>patterns over time</strong>.</li>
+<li>Goal: inform <strong>ongoing public health action</strong>.</li>
+</ul>
+<blockquote>
+<p>Reporting → Surveillance → Action</p>
+</blockquote>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="two-approaches-to-public-health-surveillance" class="slide level2 table-slide">
+<h2>Two Approaches to Public Health Surveillance</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Public Health Surveillance</th>
+<th>Syndromic Surveillance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Routine, ongoing monitoring</td>
+<td>Real-time, early warning</td>
+</tr>
+<tr class="even">
+<td>Uses confirmed diagnoses</td>
+<td>Uses symptoms and signals</td>
+</tr>
+<tr class="odd">
+<td>Tracks incidence and trends</td>
+<td>Detects unusual patterns</td>
+</tr>
+<tr class="even">
+<td><strong>Usually takes place in:</strong> Public health departments, registries, national systems</td>
+<td><strong>Usually takes place in:</strong> Emergency departments, urgent care, pharmacies</td>
+</tr>
+<tr class="odd">
+<td>Example: flu incidence over years</td>
+<td>Example: spikes in fever-related ER visits</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- Source PDF page 21; split for slide readability. -->
+</section>
+<section id="exercise-types-of-surveillance" class="slide level2 compact">
+<h2>Exercise: Types of Surveillance</h2>
+<p>Match each scenario with the correct type:</p>
+<div class="grid-2">
+<div class="panel">
+<p><strong>PUBLIC HEALTH SURVEILLANCE</strong></p>
+<p>Long-term, systematic, incidence and policy focus</p>
+</div>
+<div class="panel">
+<p><strong>SYNDROMIC SURVEILLANCE</strong></p>
+<p>Real-time, early warning, symptom and pattern focus</p>
+</div>
+</div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- Source PDF page 21; split for slide readability. -->
+</section>
+<section id="exercise-types-of-surveillance-scenarios" class="slide level2 compact">
+<h2>Exercise: Types of Surveillance — Scenarios</h2>
+<ol type="1">
+<li>Health officials analyze flu vaccination rates every year to guide next season’s immunization campaign.</li>
+<li>A sudden rise in ER visits for fever and cough signals a possible flu outbreak.</li>
+<li>Monitoring long-term cancer incidence to plan screening programs.</li>
+<li>Tracking over-the-counter cold medicine sales during winter to catch early spikes.</li>
+</ol>
+<p>Focus on <em>why</em> one approach fits better than the other.</p>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="public-health-surveillance-programs" class="slide level2 compact">
+<h2>Public Health Surveillance Programs</h2>
+<ul>
+<li><strong>Communicable and infectious diseases</strong>
+<ul>
+<li>Track cases, hospitalizations, and spread</li>
+<li><em>Example:</em> COVID-19 surveillance (cases, hospitalizations)</li>
+<li><em>Example:</em> National Wastewater Surveillance System (NWSS)</li>
+</ul></li>
+<li><strong>Chronic diseases</strong>
+<ul>
+<li>Monitor long-term incidence and outcomes</li>
+<li><em>Example:</em> Cancer registries (incidence, types, outcomes)</li>
+<li><em>Example:</em> CDC Chronic Disease Indicators (CDI; state-level indicators for chronic disease patterns)</li>
+</ul></li>
+<li><strong>Risk factors for chronic disease</strong>
+<ul>
+<li>Track behaviors and exposures</li>
+<li><em>Example:</em> BRFSS (obesity, smoking, physical activity)</li>
+</ul></li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="national-center-for-health-statistics-nchs" class="slide level2 compact">
+<h2>National Center for Health Statistics (NCHS)</h2>
+<p><strong>NCHS is a major source of U.S. population-based health data.</strong></p>
+<ul>
+<li>NCHS data complement surveillance by describing population health beyond reported cases.</li>
+<li><strong>Survey-based systems</strong>
+<ul>
+<li><strong>NHIS:</strong> health status, access to care, prevention</li>
+<li><strong>NHANES:</strong> exams and interviews (diet, activity, disease prevalence)</li>
+</ul></li>
+<li><strong>Vital statistics</strong>
+<ul>
+<li><strong>NVSS:</strong> births, deaths, life expectancy, leading causes of death</li>
+</ul></li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="why-international-organizations-matter" class="slide level2 compact">
+<h2>Why International Organizations Matter</h2>
+<ul>
+<li>Diseases cross national borders.</li>
+<li>Data must be <strong>comparable across countries</strong>.</li>
+<li>Surveillance and response require <strong>coordination</strong>.</li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-international-organizations-do" class="slide level2 compact">
+<h2>What International Organizations Do</h2>
+<ul>
+<li><strong>Surveillance and reporting</strong> — global monitoring
+<ul>
+<li><em>Example:</em> WHO Global Influenza Surveillance and Response System (GISRS)</li>
+</ul></li>
+<li><strong>Policy guidance</strong> — shared recommendations
+<ul>
+<li><em>Example:</em> UNAIDS guidance for HIV/AIDS programs</li>
+</ul></li>
+<li><strong>Resource support</strong> — capacity and access
+<ul>
+<li><em>Example:</em> Gavi, the Vaccine Alliance</li>
+</ul></li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="key-takeaways-epidemiologic-data" class="slide level2 compact">
+<h2>Key Takeaways: Epidemiologic Data</h2>
+<ul>
+<li>Epidemiology depends on <strong>population-based data</strong> to describe health patterns.</li>
+<li><strong>Different public health questions require different data systems.</strong></li>
+<li><strong>Vital statistics</strong> describe long-term population patterns (births, deaths).</li>
+<li><strong>Reportable disease data</strong> support rapid detection and public health response.</li>
+<li><strong>Surveillance</strong> turns reported data into ongoing monitoring and action.</li>
+<li><strong>Data quality</strong> determines what conclusions can (and cannot) be drawn.</li>
+<li>Selecting an appropriate data source is a <strong>critical epidemiologic decision</strong>.</li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/brad-cannell\.github\.io\/aphs20203\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
