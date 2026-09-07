@@ -1,0 +1,88 @@
+---
+title: "Creating Lecture Slides"
+---
+
+# Overview
+
+- A guide for creating lecture slides for APHS 20203, Epidemiology and Biostatisics.
+- Clean this up later. For now, just get it operational.
+
+```{python}
+from pathlib import Path
+import subprocess
+import sys
+```
+
+# Create a Presentation Directory
+
+- Copy and past the template for now. I'm working on a more systematic approach, though.
+
+# Create In-Class Learning Activities
+
+- Don't reteach topics from the book. Instead, use in-class review questions and exercises.
+- Use this prompt for ideas: `/Users/bradcannell/Desktop/Git/knowledge-workbench/Tasks/Teaching/APHS 2023 Epidemiology and Biostatistics/Week 3 Preparations - Fall 2026.md`
+- You can also teach new topics that aren't covered in the book.
+
+# Copy the Textbook
+
+- Open: https://www.jblearning.com/
+- Print chapter in 3-pages chunks. Naming them `Pages xx-yy.pdf`.
+- Combine into a single chapter PDF.
+
+# Create Reading Comprehension Quiz Questions
+
+- Start each class session with a reading comprehension quiz.
+- Create a `quiz` subfolder`.
+- Use this prompt: `/Users/bradcannell/Desktop/Git/knowledge-workbench/_ai/prompts/teaching/create-basic-reading-comprehension-questions.md`
+
+# Add Reading Comprehension Quiz to Poll Everywhere
+
+- Add the questions in `quiz.yml` to a CSV file that can be imported in Poll Everywhere.
+
+```{python}
+#| eval: false
+
+script = Path("/Users/bradcannell/Desktop/Git/knowledge-workbench/_ai/tools/python/build_poll_everywhere_import.py")
+quiz = Path("/Users/bradcannell/Desktop/Git/Academia/Teaching/aphs20203/Lecture Slides/Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml")
+
+subprocess.run([sys.executable, script, quiz], check=True)
+```
+
+- Open Poll Everywhere: https://www.polleverywhere.com/
+- Create a new folder for the questions. The folder name should match the presentation name.
+- Import the CSV file you created above.
+- Add the response links to the `participation_url`in `quiz.yml`.
+
+# Add Reading Comprehension Quiz Questions to the Presentation
+
+- Add them immediately after the learning objectives.
+
+```{python}
+#| eval: false
+
+python_executable = sys.executable
+include_script = Path("/Users/bradcannell/Desktop/Git/knowledge-workbench/_ai/tools/python/generate_quiz_includes.py")
+quiz = Path("/Users/bradcannell/Desktop/Git/Academia/Teaching/aphs20203/Lecture Slides/Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml")
+
+generated = subprocess.run(
+    [
+        python_executable,
+        include_script,
+        quiz,
+        "--questions",
+        "disease-data-linkage - disease-data-health-surveys",
+        "--title-prefix",
+        "Reading Comprehension Quiz",
+        "--start-number",
+        "1",
+        "--include-feedback-notes"
+    ],
+    check=True,
+    capture_output=True,
+    text=True,
+)
+
+subprocess.run(["pbcopy"], input=generated.stdout, check=True, text=True)
+print("Copied the generated quiz includes to the clipboard.")
+```
+

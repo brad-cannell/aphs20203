@@ -1,0 +1,255 @@
+# Canonical, platform-independent quiz source.
+#
+# This file is the single source of truth for interactive questions. It drives
+# the Reveal.js slides, the QR-code participation prompts, and the printed
+# low-tech fallback handout. Create matching Poll Everywhere activities from
+# this source; make future changes here first, synchronize the activities, and
+# rebuild with _ai/tools/python/build_quiz_slides.py.
+#
+# Schema
+# ------
+# session:
+#   code                  short human-typable session code shown on every slide
+#   participation_url     optional default URL encoded into each QR code; set
+#                         this only after creating a real survey or poll
+#   fallback              default low-tech fallback instruction (required)
+#
+# questions[]:
+#   id                    required, unique, kebab-case; also becomes the
+#                         quiz-slides/<id>.qmd partial filename
+#   type                  multiple_choice | multiple_select | short_answer | word_cloud
+#   prompt                required, the question text shown to participants
+#   options               list of choices (required for choice types)
+#   correct               1-based index (multiple_choice) or list of indices
+#                         (multiple_select); omit for opinion/ungraded items
+#   explanation           shown in speaker notes and after discussion
+#   presentation_mode     anonymous | identified | pseudonymous
+#   reveal_distribution   true | false — show the response distribution live
+#   reveal_correct_answer immediately | after_discussion | never
+#   participation_url     per-question override of session.participation_url
+#   fallback              per-question override of session.fallback
+
+session:
+  code:
+  participation_url:
+  fallback: >-
+    Read the question aloud, allow time for us to think, then take a show of hands for each option and discuss the answers together.
+
+questions:
+  # Source: Chapter 4, PDF page 3, Epidemiology in the Era of Big Data.
+  - id: disease-data-linkage
+    type: multiple_choice
+    prompt: What does data linkage mean?
+    options:
+      - Removing identifying information from a database.
+      - Summarizing records within a single database.
+      - Joining information from databases using a common identifier.
+      - Collecting new information through a health interview.
+    correct: 3
+    explanation: |-
+      A: Good effort. Removing identifying information serves a different purpose. Data linkage connects information using a shared identifier.
+
+      B: Keep going. Summarizing records describes information already in a database. Linkage joins information across databases.
+
+      C: That's right. A common identifier lets us connect related information stored in different databases.
+
+      D: Good effort. An interview collects information. Data linkage connects information already stored in databases.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/E3eO6nnYvJxzGlKhQ71sa/respond
+
+  # Source: Chapter 4, PDF pages 4-5, Epidemiology in the Era of Big Data.
+  - id: disease-data-mining
+    type: multiple_choice
+    prompt: What is the main purpose of data mining?
+    options:
+      - Finding previously unrecognized patterns in large amounts of data.
+      - Proving that every observed relationship is a cause of disease.
+      - Replacing electronic records with printed copies of the same information.
+      - Removing every error from a collection of health records.
+    correct: 1
+    explanation: |-
+      A: That's right. Data mining explores large amounts of data to help us discover patterns and associations.
+
+      B: Good effort. A pattern can show an association, but data mining alone does not establish that one factor causes another.
+
+      C: Keep going. Changing how records are stored is different from exploring their contents for patterns.
+
+      D: Good effort. Data mining looks for patterns; it does not guarantee that the data are free of errors.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/0y3MJzS2r7cgHVwXdqpiy/respond
+
+  # Source: Chapter 4, PDF pages 8-9, U.S. Census Bureau.
+  - id: disease-data-census
+    type: multiple_choice
+    prompt: How do census data help us calculate population-based disease rates?
+    options:
+      - They identify the immediate cause of each recorded death.
+      - They confirm the diagnosis of each reported disease case.
+      - They describe the treatment received by each hospital patient.
+      - They provide population counts for the denominator of a rate.
+    correct: 4
+    explanation: |-
+      A: Good effort. Causes of death come from death records. Census data help us describe the population used in the denominator.
+
+      B: Keep going. Census data describe populations; they do not confirm individual disease diagnoses.
+
+      C: Good effort. Treatment information comes from healthcare records. Census data provide population counts and characteristics.
+
+      D: That's right. Census population counts help us define the denominator when calculating a population-based rate.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/iIFRTTKThz00YyBdvyT98/respond
+
+  # Source: Chapter 4, PDF page 11, The Vital Registration System and Vital Events.
+  - id: disease-data-vital-events
+    type: short_answer
+    prompt: What are two examples of vital events recorded by the vital registration system?
+    explanation: |-
+      Model answer: Births and deaths.
+
+      Acceptable equivalent wording: Any two of births, deaths, marriages, divorces, and fetal deaths are acceptable. Brief terms are enough; we do not need a formal definition.
+
+      Supportive guidance: Good effort. If our examples are medical visits or diagnoses, let's distinguish healthcare encounters from vital events. Vital events include births, deaths, and changes in marital status.
+    presentation_mode: anonymous
+    reveal_distribution: false
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/free_text_polls/LkmmLsYDAGmiUE1HAmFKb/respond
+    fallback: >-
+      Give us a moment to write two examples on paper, then invite volunteers to share and compare our answers with the accepted examples.
+
+  # Source: Chapter 4, PDF pages 11 and 13-14, The Vital Registration System and Vital Events.
+  - id: disease-data-death-certificates
+    type: multiple_choice
+    prompt: What limitation of death certificate data does the chapter describe?
+    options:
+      - Most deaths in the United States go unrecorded.
+      - The recorded cause of death may be inaccurate.
+      - Death certificates do not include demographic information.
+      - Death certificates cannot be used to study mortality.
+    correct: 2
+    explanation: |-
+      A: Good effort. The chapter describes death registration as nearly complete. The cause assigned to a recorded death can still be inaccurate.
+
+      B: That's right. A death can be recorded even when its cause is unclear or classified inaccurately.
+
+      C: Keep going. Death certificates include demographic information such as age and sex. The chapter highlights possible errors in the cause of death.
+
+      D: Good effort. Death certificates are widely used to study mortality. We still need to consider their limitations.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/jxabcfZcH1GABWn0Vqvpa/respond
+
+  # Source: Chapter 4, PDF pages 16-18, Data from Public Health Surveillance Programs.
+  - id: disease-data-surveillance
+    type: multiple_choice
+    prompt: What is the main purpose of public health surveillance?
+    options:
+      - Continuously collecting, analyzing, and sharing health information to guide public health action.
+      - Providing individual treatment plans during routine appointments with healthcare providers.
+      - Collecting health information once and storing it without analysis or interpretation.
+      - Assigning participants to treatments to compare the effects of different medicines.
+    correct: 1
+    explanation: |-
+      A: That's right. Surveillance helps us monitor health problems over time and share findings that support public health action.
+
+      B: Good effort. Individual treatment is part of clinical care. Surveillance gathers and uses information about health in populations.
+
+      C: Keep going. Surveillance is ongoing and includes analyzing, interpreting, and sharing information, not just storing it.
+
+      D: Good effort. Assigning treatments is part of an experimental study. Surveillance monitors the occurrence of health problems and risk factors.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/6r4SGAjs9OFKXfvmqdEJm/respond
+
+  # Source: Chapter 4, PDF page 21, Data from Public Health Surveillance Programs.
+  - id: disease-data-reportable-diseases
+    type: multiple_choice
+    prompt: What makes a disease a reportable disease?
+    options:
+      - Its cases are described in a published research article.
+      - Its cases are counted in the population census.
+      - Its cases are discussed in a television news report.
+      - Its cases must be reported to health authorities under law.
+    correct: 4
+    explanation: |-
+      A: Good effort. Publication in a research article does not make a disease reportable. The term refers to a required report to health authorities.
+
+      B: Keep going. A census counts and describes a population. Disease reporting is a separate process required for specified diseases.
+
+      C: Good effort. News coverage is different from the required reporting of disease cases to health authorities.
+
+      D: That's right. Reportable diseases are diseases whose cases healthcare providers must report to health authorities under legal requirements.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/5SpjxDjsjkTbMzc1VsG6P/respond
+
+  # Source: Chapter 4, PDF pages 22-23, Data from Public Health Surveillance Programs.
+  - id: disease-data-incomplete-reporting
+    type: short_answer
+    prompt: What is one reason reportable disease statistics may miss some cases of disease?
+    explanation: |-
+      Model answer: Some people with a disease do not seek medical care, so their cases may never be reported.
+
+      Acceptable equivalent wording: We can mention an illness without noticeable symptoms, a healthcare provider failing to submit a report, lack of awareness of reporting requirements, or reluctance to report because of confidentiality concerns. Any one reason is enough.
+
+      Supportive guidance: Good effort. A reporting requirement does not guarantee that every case is recognized and reported. If our answer assumes complete coverage, let's remember that some illnesses never come to medical attention.
+    presentation_mode: anonymous
+    reveal_distribution: false
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/free_text_polls/cap9i3ocW0nfu0THmipdp/respond
+    fallback: >-
+      Give us a moment to write one reason on paper, then invite volunteers to share and discuss why some cases may be missing.
+
+  # Source: Chapter 4, PDF page 29, Case Registries.
+  - id: disease-data-case-registry
+    type: multiple_choice
+    prompt: What is a case registry?
+    options:
+      - A list of citations to published health research articles.
+      - A centralized database of information about a disease and its cases.
+      - A count of all residents in a geographic area.
+      - A schedule of appointments available at a healthcare clinic.
+    correct: 2
+    explanation: |-
+      A: Good effort. A list of research citations helps us find literature. A case registry collects information about a disease and its cases.
+
+      B: That's right. A case registry brings disease information together so we can track cases and study disease patterns.
+
+      C: Keep going. A population count describes how many people live in an area. A case registry focuses on a disease and its cases.
+
+      D: Good effort. An appointment schedule organizes clinic visits. A registry collects disease information for purposes such as tracking cases and supporting research.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/xA4mTfKz14vqaAd8Bytzm/respond
+
+  # Source: Chapter 4, PDF pages 33 and 39, Data from the National Center for Health Statistics.
+  - id: disease-data-health-surveys
+    type: multiple_choice
+    prompt: How does the National Health and Nutrition Examination Survey (NHANES) differ from the National Health Interview Survey (NHIS)?
+    options:
+      - NHANES gathers death certificates instead of conducting interviews.
+      - NHANES uses only interviews, while NHIS adds physical examinations.
+      - NHANES adds physical examinations to interviews, while NHIS uses interviews only.
+      - NHANES gathers published research articles instead of information from participants.
+    correct: 3
+    explanation: |-
+      A: Good effort. NHANES collects information through interviews and examinations. Death certificates are a separate source of health data.
+
+      B: Keep going. The distinction is reversed: NHANES includes physical examinations, while NHIS collects information through interviews only.
+
+      C: That's right. Both surveys use interviews, and NHANES also uses physical examinations, which can reveal previously undiagnosed conditions.
+
+      D: Good effort. NHANES collects information from participants through interviews and examinations; it is not a literature search.
+    presentation_mode: anonymous
+    reveal_distribution: true
+    reveal_correct_answer: after_discussion
+    participation_url: https://PollEv.com/multiple_choice_polls/TPiYmghiWduuApqmxPdKq/respond

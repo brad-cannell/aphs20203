@@ -23,7 +23,7 @@ Interactive slide decks for APHS 20203.
 - [View interactive slides](Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.qmd)
 - [Download PDF](Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.pdf)
 
-## Module 2: Disease Occurrence Data
+## Module 3: Disease Occurrence Data
 
 - [View interactive slides](Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.qmd)
 - [Download PDF](Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.pdf)

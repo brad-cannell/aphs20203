@@ -19,9 +19,6 @@ execute:
   freeze: auto
 ---
 
-<!--  
-Add something about big data.
--->
 
 ## Learning Objectives {.compact}
 
@@ -41,6 +38,66 @@ By the end of this week, you should be able to:
 - We learned a little bit about what to do with data last time.
 - But where do we get the data? That's today's topic.
 :::
+
+
+## Reading Comprehension Quiz 01 {#disease-data-linkage .quiz}
+
+{{< include quiz-slides/disease-data-linkage.qmd >}}
+
+::: {.notes}
+A: Good effort. Removing identifying information serves a different purpose. Data linkage connects information using a shared identifier.
+
+B: Keep going. Summarizing records describes information already in a database. Linkage joins information across databases.
+
+C: That's right. A common identifier lets us connect related information stored in different databases.
+
+D: Good effort. An interview collects information. Data linkage connects information already stored in databases.
+:::
+
+
+## Reading Comprehension Quiz 02 {#disease-data-mining .quiz}
+
+{{< include quiz-slides/disease-data-mining.qmd >}}
+
+
+## Reading Comprehension Quiz 03 {#disease-data-census .quiz}
+
+{{< include quiz-slides/disease-data-census.qmd >}}
+
+
+## Reading Comprehension Quiz 04 {#disease-data-vital-events .quiz}
+
+{{< include quiz-slides/disease-data-vital-events.qmd >}}
+
+
+## Reading Comprehension Quiz 05 {#disease-data-death-certificates .quiz}
+
+{{< include quiz-slides/disease-data-death-certificates.qmd >}}
+
+
+## Reading Comprehension Quiz 06 {#disease-data-surveillance .quiz}
+
+{{< include quiz-slides/disease-data-surveillance.qmd >}}
+
+
+## Reading Comprehension Quiz 07 {#disease-data-reportable-diseases .quiz}
+
+{{< include quiz-slides/disease-data-reportable-diseases.qmd >}}
+
+
+## Reading Comprehension Quiz 08 {#disease-data-incomplete-reporting .quiz}
+
+{{< include quiz-slides/disease-data-incomplete-reporting.qmd >}}
+
+
+## Reading Comprehension Quiz 09 {#disease-data-case-registry .quiz}
+
+{{< include quiz-slides/disease-data-case-registry.qmd >}}
+
+
+## Reading Comprehension Quiz 10 {#disease-data-health-surveys .quiz}
+
+{{< include quiz-slides/disease-data-health-surveys.qmd >}}
 
 
 ## Review of Mortality: Real Data (CDC NVSS, 2023) {.compact}
