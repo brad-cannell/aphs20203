@@ -59,48 +59,132 @@ D: Good effort. An interview collects information. Data linkage connects informa
 
 {{< include quiz-slides/disease-data-mining.qmd >}}
 
+::: {.notes}
+A: That's right. Data mining explores large amounts of data to help us discover patterns and associations.
+
+B: Good effort. A pattern can show an association, but data mining alone does not establish that one factor causes another.
+
+C: Keep going. Changing how records are stored is different from exploring their contents for patterns.
+
+D: Good effort. Data mining looks for patterns; it does not guarantee that the data are free of errors.
+:::
+
 
 ## Reading Comprehension Quiz 03 {#disease-data-census .quiz}
 
 {{< include quiz-slides/disease-data-census.qmd >}}
+
+::: {.notes}
+A: Good effort. Causes of death come from death records. Census data help us describe the population used in the denominator.
+
+B: Keep going. Census data describe populations; they do not confirm individual disease diagnoses.
+
+C: Good effort. Treatment information comes from healthcare records. Census data provide population counts and characteristics.
+
+D: That's right. Census population counts help us define the denominator when calculating a population-based rate.
+:::
 
 
 ## Reading Comprehension Quiz 04 {#disease-data-vital-events .quiz}
 
 {{< include quiz-slides/disease-data-vital-events.qmd >}}
 
+::: {.notes}
+Model answer: Births and deaths.
+
+Acceptable equivalent wording: Any two of births, deaths, marriages, divorces, and fetal deaths are acceptable. Brief terms are enough; we do not need a formal definition.
+
+Supportive guidance: Good effort. If our examples are medical visits or diagnoses, let's distinguish healthcare encounters from vital events. Vital events include births, deaths, and changes in marital status.
+:::
+
 
 ## Reading Comprehension Quiz 05 {#disease-data-death-certificates .quiz}
 
 {{< include quiz-slides/disease-data-death-certificates.qmd >}}
+
+::: {.notes}
+A: Good effort. The chapter describes death registration as nearly complete. The cause assigned to a recorded death can still be inaccurate.
+
+B: That's right. A death can be recorded even when its cause is unclear or classified inaccurately.
+
+C: Keep going. Death certificates include demographic information such as age and sex. The chapter highlights possible errors in the cause of death.
+
+D: Good effort. Death certificates are widely used to study mortality. We still need to consider their limitations.
+:::
 
 
 ## Reading Comprehension Quiz 06 {#disease-data-surveillance .quiz}
 
 {{< include quiz-slides/disease-data-surveillance.qmd >}}
 
+::: {.notes}
+A: That's right. Surveillance helps us monitor health problems over time and share findings that support public health action.
+
+B: Good effort. Individual treatment is part of clinical care. Surveillance gathers and uses information about health in populations.
+
+C: Keep going. Surveillance is ongoing and includes analyzing, interpreting, and sharing information, not just storing it.
+
+D: Good effort. Assigning treatments is part of an experimental study. Surveillance monitors the occurrence of health problems and risk factors.
+:::
+
 
 ## Reading Comprehension Quiz 07 {#disease-data-reportable-diseases .quiz}
 
 {{< include quiz-slides/disease-data-reportable-diseases.qmd >}}
+
+::: {.notes}
+A: Good effort. Publication in a research article does not make a disease reportable. The term refers to a required report to health authorities.
+
+B: Keep going. A census counts and describes a population. Disease reporting is a separate process required for specified diseases.
+
+C: Good effort. News coverage is different from the required reporting of disease cases to health authorities.
+
+D: That's right. Reportable diseases are diseases whose cases healthcare providers must report to health authorities under legal requirements.
+:::
 
 
 ## Reading Comprehension Quiz 08 {#disease-data-incomplete-reporting .quiz}
 
 {{< include quiz-slides/disease-data-incomplete-reporting.qmd >}}
 
+::: {.notes}
+Model answer: Some people with a disease do not seek medical care, so their cases may never be reported.
+
+Acceptable equivalent wording: We can mention an illness without noticeable symptoms, a healthcare provider failing to submit a report, lack of awareness of reporting requirements, or reluctance to report because of confidentiality concerns. Any one reason is enough.
+
+Supportive guidance: Good effort. A reporting requirement does not guarantee that every case is recognized and reported. If our answer assumes complete coverage, let's remember that some illnesses never come to medical attention.
+:::
+
 
 ## Reading Comprehension Quiz 09 {#disease-data-case-registry .quiz}
 
 {{< include quiz-slides/disease-data-case-registry.qmd >}}
+
+::: {.notes}
+A: Good effort. A list of research citations helps us find literature. A case registry collects information about a disease and its cases.
+
+B: That's right. A case registry brings disease information together so we can track cases and study disease patterns.
+
+C: Keep going. A population count describes how many people live in an area. A case registry focuses on a disease and its cases.
+
+D: Good effort. An appointment schedule organizes clinic visits. A registry collects disease information for purposes such as tracking cases and supporting research.
+:::
 
 
 ## Reading Comprehension Quiz 10 {#disease-data-health-surveys .quiz}
 
 {{< include quiz-slides/disease-data-health-surveys.qmd >}}
 
+::: {.notes}
+A: Good effort. NHANES collects information through interviews and examinations. Death certificates are a separate source of health data.
 
-## Review of Mortality: Real Data (CDC NVSS, 2023) {.compact}
+B: Keep going. The distinction is reversed: NHANES includes physical examinations, while NHIS collects information through interviews only.
+
+C: That's right. Both surveys use interviews, and NHANES also uses physical examinations, which can reveal previously undiagnosed conditions.
+
+D: Good effort. NHANES collects information from participants through interviews and examinations; it is not a literature search.
+:::
+
 
 <!--  
 Update to: https://www.cdc.gov/nchs/products/databriefs/db548.htm
