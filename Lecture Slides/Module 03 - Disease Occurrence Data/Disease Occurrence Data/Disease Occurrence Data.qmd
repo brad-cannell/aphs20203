@@ -35,8 +35,10 @@ By the end of this week, you should be able to:
 5. Explain the role of **international organizations** in collecting and disseminating epidemiologic data.
 
 ::: {.notes}
-- We learned a little bit about what to do with data last time.
+- In our last module we learned about calculating some foundational epidemiologic measures.
+- Ask the class to recall some examples of measures.
 - But where do we get the data? That's today's topic.
+- Before diving in, let's complete a reading comprehension exercise to refresh your memory and solidify what you read for this week.
 :::
 
 
@@ -184,6 +186,130 @@ C: That's right. Both surveys use interviews, and NHANES also uses physical exam
 
 D: Good effort. NHANES collects information from participants through interviews and examinations; it is not a literature search.
 :::
+
+
+<!-- 
+- Sources of data
+  - Primary vs secondary data collection.
+  - Health data vs data for understanding health.
+  - Using administrative data. I could use DETECT as an example.
+  - Census and vital statistics data.
+  - Federal health surveys - NHANES (https://www.cdc.gov/nchs/nhanes/index.html), NHIS (https://www.cdc.gov/nchs/nhis/index.html), BRFSS (https://www.cdc.gov/brfss/index.html), All Of Us (https://www.nih.gov/allofus).
+  - Case registries. For example, we are creating a Parkinson's registry at TCU.
+  - Data that wasn't collected for health monitoring. For example, Google Trends (https://trends.google.com/trends/).
+- As I was reading Chapter 4, here are some other topics I thought we may want to touch on:
+  - Briefly introduce HIPAA and PHI/PII at a conceptual level.
+  - Some of the challenges of using administrative data. I could use DETECT as an example (https://www.tandfonline.com/doi/full/10.1080/08946566.2018.1564104). 
+  - Big data and some of the issues I discovered when completing the big data certificates. For example, prediction isn't causation.
+  - Google Flu. I could either talk about this in class or make reading about it an assignment. 
+-->
+
+<!-- AI Exercises 
+1. Primary vs. secondary data. (7 min)
+2. Using administrative records. (8 min)
+3. HIPAA/PHI/PII (7 min)
+4. Census data - denominator (9 min)
+5. Vital statistics in the US. (8 min)
+6. Death certificates (8 min)
+7. Which federal survey should we use? (10 min)
+8. Parkinson's registry (7 min)
+9. Google Trends (9 min)
+10. Google Flu (don't use)
+
+7 + 8 + 7 + 9 + 8 + 8 + 10 + 7 + 9 = 73.
+-->
+
+
+## Data Sources
+
+- Primary vs. secondary data
+
+::: {.notes}
+- Primary data: Data we collect ourselves for a specific purpose. 
+ - For example, a survey, interview, direct observation, or laboratory measurement we design and conduct.
+- Secondary data: Data that already exists because it was collected by someone else. Often for a different purpose than ours.
+  - For example, electronic health records, surveillance data, census data, hospital discharge records, or a previously conducted survey.
+
+- The practical tradeoff: 
+  - Primary data give us more control over what and how we measure, but take more time and resources. 
+  - Secondary data are faster and often less expensive to use, but their variables, measurement quality, population, and timing may not fully fit our question.
+
+- This is a topic we will explore today.
+:::
+
+
+## Primary Vs. Secondary Data
+
+Our county wants to understand barriers to staying safe during extreme heat. We can fund one initial approach:
+
+**A.** Interview residents about cooling access and transportation. We can ask exactly what we need, but recruitment takes time and some residents may not respond.
+
+**B.** Analyze existing emergency-department records. They show serious health events, but miss people who never reach an emergency department.
+
+**C.** Combine existing housing, tree-cover, and population data. They describe neighborhood conditions, but do not tell us who became ill.
+
+Which would we start with and why?
+
+::: {.notes}
+- Take 2 minuts to answer these questions with your group.
+- A fits questions about residents’ experiences; 
+- B fits serious illness and healthcare use; 
+- C fits environmental conditions and geographic targeting. 
+- Each becomes more or less useful as the question changes. 
+- Ask: “What would your chosen source leave unanswered?”
+- Neither primary nor secondary data guarantees quality. 
+- Neighborhood data can be relevant to health without containing diagnoses. 
+- Takeaway: Choose the source after clarifying the question.
+:::
+
+
+## Data Sources
+
+- Primary vs. secondary data
+- Health data by design vs. health insights from repurposed data
+
+::: {.notes}
+- In epidemiology, we frequently use data that was collected explicitly to understand health (e.g., Vital Statistics, NHANES).
+- However, it's becoming increasingly common to use data that was created for a different purpose (e.g., Google Trends).
+- We will see examples of both.
+:::
+
+
+## Vital Events
+
+::: {.incremental}
+- Deaths, births, marriages, divorce, and fetal deaths.
+- Legally mandated.
+- Births: Local -> State
+:::
+
+::: {.notes}
+- Perhaps the most basic health data is births and deaths.
+- In the United States, birth certificates managed, stored, and issued by individual state and local governments.
+- Death certificates are also managed and stored by individual state, county, or local vital statistics offices.
+- However, the NCHS, a division of the CDC, tracks every single death occurring within the US.
+:::
+
+
+## Vital Events - Deaths
+
+- Deaths, births, marriages, divorce, and fetal deaths.
+- Legally mandated.
+- Births: Local -> State
+- Deaths: Local -> State -> Federal (NCHS)
+
+https://www.cdc.gov/nchs/nvss/index.htm 
+
+::: {.notes}
+- Death certificates are also managed and stored by individual state, county, or local vital statistics offices.
+- However, the NCHS, a division of the CDC, tracks every single death occurring within the US.
+:::
+
+
+
+
+
+
 
 
 <!--  
