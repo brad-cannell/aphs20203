@@ -205,12 +205,12 @@ D: Good effort. NHANES collects information from participants through interviews
 -->
 
 <!-- AI Exercises 
-1. Primary vs. secondary data. (7 min)
+1. Primary vs. secondary data. (7 min) - Added.
 2. Using administrative records. (8 min)
 3. HIPAA/PHI/PII (7 min)
-4. Census data - denominator (9 min)
-5. Vital statistics in the US. (8 min)
-6. Death certificates (8 min)
+4. Census data - denominator (9 min) - Added.
+5. Vital statistics in the US. (8 min) - Added.
+6. Death certificates (8 min) - Added.
 7. Which federal survey should we use? (10 min)
 8. Parkinson's registry (7 min)
 9. Google Trends (9 min)
@@ -238,7 +238,9 @@ D: Good effort. NHANES collects information from participants through interviews
 :::
 
 
-## Primary Vs. Secondary Data
+## Exercise: Primary Vs. Secondary Data
+
+<!-- Space these bullets out. They looked to squished on the slide. -->
 
 Our county wants to understand barriers to staying safe during extreme heat. We can fund one initial approach:
 
@@ -291,7 +293,7 @@ Which would we start with and why?
 :::
 
 
-## Vital Events - Deaths
+## Vital Events - Mortality
 
 - Deaths, births, marriages, divorce, and fetal deaths.
 - Legally mandated.
@@ -306,11 +308,130 @@ https://www.cdc.gov/nchs/nvss/index.htm
 :::
 
 
+## Exercise: Vital-Statistics Retrieval
+
+<!-- Brad: Double-check answers. -->
+
+Open [CDC’s *Mortality in the United States, 2024*](https://www.cdc.gov/nchs/products/databriefs/db548.htm). Each pair takes one task:
+
+- **A. Life expectancy:** Find life expectancy at birth. Explain why it is not a promise about how long a particular newborn will live.
+
+- **B. Death rates:** Find the age-adjusted death rates for 2023 and 2024. Explain what age adjustment contributes to the comparison.
+
+- **C. Leading causes:** Find which cause entered the top ten in 2024. Did its age-adjusted death rate increase?
+
+Produce two sentences: one accurate finding with year and units, and one interpretation or limitation.
+
+::: {.notes}
+- **How to run it and timing:** **8 minutes:** 1 minute to assign tasks, 3 for retrieval, 1 to write, and 3 for up to three voluntary reports and synthesis. Preparation: link directly to the brief and have its tables available on paper.
+- **Instructor notes and debrief:**  Verified answers are **79.0 years**; **750.5 versus 722.1 deaths per 100,000 standard population**; and **suicide**, whose age-adjusted rate declined from **14.1 to 13.7** even as it became the tenth leading cause. [CDC brief](https://www.cdc.gov/nchs/products/databriefs/db548.htm).
+- Life expectancy summarizes mortality conditions; age adjustment facilitates comparisons accounting for age composition. Ranking is relative to other causes, so a rank can rise while a rate falls. Ask: “Which finding would we use to compare mortality across populations with different age structures?”
+- **Takeaway:** Report the measure and its meaning together.
+:::
+
+
+## Leading Cause ≠ Highest Risk {.compact}
+
+<!--  
+This is an important concept.
+Let's make this more interactive somehow.
+-->
+
+- **Leading causes of death** are ranked by **proportion of total deaths (PMR)**.
+- Ranking answers “**how many deaths?**” → **Burden**.
+- **Risk** answers “**how likely is death?**” → measured by rates (e.g., **CSMR**).
+- A cause with a lower rank can still pose **high risk** to specific populations.
+- Public health concern depends on **context**, not rank alone.
+
+> **Burden ≠ Risk**
+
+::: {.notes}
+:::
+
+
+## Example: Suicide {.compact}
+
+<!--  
+I think it's also a leading cause of death in older white men.
+-->
+
+- Suicide is **not a top-ranked cause of death overall**.
+- But it is a **leading cause of death among young adults**.
+- This reflects **high cause-specific mortality rates** in certain groups.
+- Key contrast:
+  - PMR (overall): low
+  - CSMR (subgroups): high
+
+::: {.notes}
+:::
+
+
+## Exercise: One Death, Several Conditions — Death-Certificate Interpretation
+
+<!-- Brad: Review this exercise. -->
+
+The certifying clinician documents this sequence:
+
+COVID-19 → pneumonia → acute respiratory distress syndrome → death.
+
+The clinician also documents diabetes as contributing to the death.
+
+A reader says: “The person died of respiratory distress, so this should not count as a COVID-19 death.”
+
+In two sentences, explain what the reader has misunderstood. Then identify one uncertainty that could still affect the accuracy of the death certificate.
+
+::: {.notes}
+**How to run it and timing:** **8 minutes:** 1 minute to explain the documented sequence, 2 for individual writing, 2 for pairs, and 3 for debrief. Introduce “underlying” as the condition initiating the sequence; students need not diagnose the case.
+
+**Instructor notes and debrief:** In this supplied sequence, COVID-19 is the underlying cause, respiratory distress syndrome the immediate cause, and diabetes an additional contributing condition. Multiple listed conditions do not negate the underlying cause. CDC’s certification guidance explicitly illustrates reporting COVID-19 together with pneumonia and respiratory distress. [CDC guidance](https://stacks.cdc.gov/view/cdc/86558)
+
+Legitimate uncertainties include incomplete clinical information and errors in documenting the sequence. The factual correction is not an invitation to assume every certificate is accurate.
+
+Ask: “How would ‘deaths with COVID-19 listed anywhere’ differ from ‘deaths with COVID-19 as the underlying cause’?”
+
+**Takeaway:** Complete death registration and accurate cause classification are different qualities.
+:::
+
+
+## Exercise: Find the Denominator That Belongs to Our Numerator
+
+<!-- Brad double-check this exercise. -->
+
+**Simulated numerator:** During 2025, 2,248 Tarrant County residents died from a fictional condition.
+
+Open [Census QuickFacts: Tarrant County](https://www.census.gov/quickfacts/tarrantcountytexas).
+
+1. Find the population estimate most appropriate for this numerator. Record its value and date.
+
+2. Calculate deaths per 100,000 residents.
+
+3. Explain why the 2020 Census count is less suitable.
+
+**Extension:** If the deaths were only among residents aged 65 or older, what would need to change?
+
+::: {.notes}
+**How to run it and timing:** **9 minutes:** 1 minute of instructions, 3 for retrieval, 2 for calculation, and 3 for comparison and the extension. Pairs need a browser and calculator. Preparation: bookmark the page and retain the two population figures below as a fallback.
+
+**Instructor notes and debrief:** QuickFacts currently reports **2,248,466 residents on July 1, 2025**, and a **2020 Census count of 2,110,640**. [Census source](https://www.census.gov/quickfacts/tarrantcountytexas)
+
+The intended calculation is:
+
+$$
+\frac{2,248}{2,248,466} \times 100,000 \approx 100.0
+$$
+
+Using the 2020 count gives **106.5 per 100,000**. The difference arises entirely from denominator selection. For deaths among older residents, use the corresponding older population, with compatible geography and year.
+
+Ask: “Would the same denominator work for deaths occurring in Tarrant County hospitals, including nonresidents?”
+
+**Takeaway:** A plausible population number is not necessarily the correct denominator.
+:::
 
 
 
 
 
+## Review of Mortality: Real Data (CDC NVSS, 2023)
 
 <!--  
 Update to: https://www.cdc.gov/nchs/products/databriefs/db548.htm
