@@ -517,7 +517,7 @@ Equivalently, the incidence rate was **7.8 cases per 100 person-months** during 
   - The total person-time is 500 person-years.
 - If 10 people experience the event of interest, what is the incidence rate?
   - The incidence rate is: $\frac{10 \text{ cases}}{500 \text{ person-years}} = \text{0.02 cases per person-year}$
-  - The unit is $\text{0.02} \text{ time}^{-1}$. This reciprocal time unit means that, on average, 2% of the population at risk will experience the event each year.
+  - The unit is $\text{0.02} \text{ years}^{-1}$. This reciprocal time unit means that, on average, 2% of the population at risk will experience the event each year.
 - But why is it called "reciprocal time" and why is it written as $\text{time}^{-1}$?
 :::
 
@@ -548,7 +548,7 @@ Equivalently, the incidence rate was **7.8 cases per 100 person-months** during 
 ::: {.incremental}
 - In algebra, a negative exponent is a shorthand way of writing a fraction where the variable is on the bottom. The standard rule is: $\frac{1}{x} = x^{-1}$
 - If our unit of time is years, then: $\frac{1}{\text{year}} = \text{year}^{-1}$
-- So, when we see a rate written as $\text{0.02} \text{ time}^{-1}$, it literally means 0.02 per year or $\frac{0.02}{\text{year}}$.
+- So, when we see a rate written as $\text{0.02} \text{ years}^{-1}$, it literally means 0.02 per year or $\frac{0.02}{\text{year}}$.
 - Using the negative exponent is simply the standard scientific way to write "per year" on a single line without needing to draw a fraction bar.
 :::
 
