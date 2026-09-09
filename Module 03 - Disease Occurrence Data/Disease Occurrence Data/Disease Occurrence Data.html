@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-054b8e85d1a43ad6937576242354c347.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-d631824f7a5e324791814b33b89cbc14.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -140,6 +140,9 @@
 </section>
 <section id="learning-objectives" class="slide level2 compact">
 <h2>Learning Objectives</h2>
+<!--  
+Revise and update the learning objectives last.
+-->
 <p>By the end of this week, you should be able to:</p>
 <ol type="1">
 <li>Identify key factors that influence <strong>epidemiologic data quality</strong>.</li>
@@ -149,7 +152,12 @@
 <li>Explain the role of <strong>international organizations</strong> in collecting and disseminating epidemiologic data.</li>
 </ol>
 <aside class="notes">
-
+<ul>
+<li>In our last module we learned about calculating some foundational epidemiologic measures.</li>
+<li>Ask the class to recall some examples of measures.</li>
+<li>But where do we get the data? That’s today’s topic.</li>
+<li>Before diving in, let’s complete a reading comprehension exercise to refresh your memory and solidify what you read for this week.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -162,21 +170,686 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="review-of-mortality-real-data-cdc-nvss-2023" class="slide level2 compact">
-<h2>Review of Mortality: Real Data (CDC NVSS, 2023)</h2>
+<section id="disease-data-linkage" class="slide level2 quiz">
+<h2>Reading Comprehension Quiz 01</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>What does data linkage mean?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> Removing identifying information from a database.</p>
+<p><strong>B.</strong> Summarizing records within a single database.</p>
+<p><strong>C.</strong> Joining information from databases using a common identifier.</p>
+<p><strong>D.</strong> Collecting new information through a health interview.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/E3eO6nnYvJxzGlKhQ71sa/respond?q=disease-data-linkage">Respond here</a></p>
+</div>
+<p><img data-src="qr/disease-data-linkage.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: C. A: Good effort. Removing identifying information serves a different purpose. Data linkage connects information using a shared identifier.</p>
+<p>B: Keep going. Summarizing records describes information already in a database. Linkage joins information across databases.</p>
+<p>C: That’s right. A common identifier lets us connect related information stored in different databases.</p>
+<p>D: Good effort. An interview collects information. Data linkage connects information already stored in databases. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, allow time for us to think, then take a show of hands for each option and discuss the answers together.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside class="notes">
+<p>A: Good effort. Removing identifying information serves a different purpose. Data linkage connects information using a shared identifier.</p>
+<p>B: Keep going. Summarizing records describes information already in a database. Linkage joins information across databases.</p>
+<p>C: That’s right. A common identifier lets us connect related information stored in different databases.</p>
+<p>D: Good effort. An interview collects information. Data linkage connects information already stored in databases.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="disease-data-mining" class="slide level2 quiz">
+<h2>Reading Comprehension Quiz 02</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>What is the main purpose of data mining?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> Finding previously unrecognized patterns in large amounts of data.</p>
+<p><strong>B.</strong> Proving that every observed relationship is a cause of disease.</p>
+<p><strong>C.</strong> Replacing electronic records with printed copies of the same information.</p>
+<p><strong>D.</strong> Removing every error from a collection of health records.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/0y3MJzS2r7cgHVwXdqpiy/respond?q=disease-data-mining">Respond here</a></p>
+</div>
+<p><img data-src="qr/disease-data-mining.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: A. A: That’s right. Data mining explores large amounts of data to help us discover patterns and associations.</p>
+<p>B: Good effort. A pattern can show an association, but data mining alone does not establish that one factor causes another.</p>
+<p>C: Keep going. Changing how records are stored is different from exploring their contents for patterns.</p>
+<p>D: Good effort. Data mining looks for patterns; it does not guarantee that the data are free of errors. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, allow time for us to think, then take a show of hands for each option and discuss the answers together.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside class="notes">
+<p>A: That’s right. Data mining explores large amounts of data to help us discover patterns and associations.</p>
+<p>B: Good effort. A pattern can show an association, but data mining alone does not establish that one factor causes another.</p>
+<p>C: Keep going. Changing how records are stored is different from exploring their contents for patterns.</p>
+<p>D: Good effort. Data mining looks for patterns; it does not guarantee that the data are free of errors.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="disease-data-census" class="slide level2 quiz">
+<h2>Reading Comprehension Quiz 03</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>How do census data help us calculate population-based disease rates?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> They identify the immediate cause of each recorded death.</p>
+<p><strong>B.</strong> They confirm the diagnosis of each reported disease case.</p>
+<p><strong>C.</strong> They describe the treatment received by each hospital patient.</p>
+<p><strong>D.</strong> They provide population counts for the denominator of a rate.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/iIFRTTKThz00YyBdvyT98/respond?q=disease-data-census">Respond here</a></p>
+</div>
+<p><img data-src="qr/disease-data-census.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: D. A: Good effort. Causes of death come from death records. Census data help us describe the population used in the denominator.</p>
+<p>B: Keep going. Census data describe populations; they do not confirm individual disease diagnoses.</p>
+<p>C: Good effort. Treatment information comes from healthcare records. Census data provide population counts and characteristics.</p>
+<p>D: That’s right. Census population counts help us define the denominator when calculating a population-based rate. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, allow time for us to think, then take a show of hands for each option and discuss the answers together.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside class="notes">
+<p>A: Good effort. Causes of death come from death records. Census data help us describe the population used in the denominator.</p>
+<p>B: Keep going. Census data describe populations; they do not confirm individual disease diagnoses.</p>
+<p>C: Good effort. Treatment information comes from healthcare records. Census data provide population counts and characteristics.</p>
+<p>D: That’s right. Census population counts help us define the denominator when calculating a population-based rate.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="disease-data-vital-events" class="slide level2 quiz">
+<h2>Reading Comprehension Quiz 04</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>What are two examples of vital events recorded by the vital registration system?</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/free_text_polls/LkmmLsYDAGmiUE1HAmFKb/respond?q=disease-data-vital-events">Respond here</a></p>
+</div>
+<p><img data-src="qr/disease-data-vital-events.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Model answer: Births and deaths.</p>
+<p>Acceptable equivalent wording: Any two of births, deaths, marriages, divorces, and fetal deaths are acceptable. Brief terms are enough; we do not need a formal definition.</p>
+<p>Supportive guidance: Good effort. If our examples are medical visits or diagnoses, let’s distinguish healthcare encounters from vital events. Vital events include births, deaths, and changes in marital status. Reveal the answer: after_discussion. Show the distribution: no. Responses are anonymous. If polling fails: Give us a moment to write two examples on paper, then invite volunteers to share and compare our answers with the accepted examples.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside class="notes">
+<p>Model answer: Births and deaths.</p>
+<p>Acceptable equivalent wording: Any two of births, deaths, marriages, divorces, and fetal deaths are acceptable. Brief terms are enough; we do not need a formal definition.</p>
+<p>Supportive guidance: Good effort. If our examples are medical visits or diagnoses, let’s distinguish healthcare encounters from vital events. Vital events include births, deaths, and changes in marital status.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="disease-data-death-certificates" class="slide level2 quiz">
+<h2>Reading Comprehension Quiz 05</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>What limitation of death certificate data does the chapter describe?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> Most deaths in the United States go unrecorded.</p>
+<p><strong>B.</strong> The recorded cause of death may be inaccurate.</p>
+<p><strong>C.</strong> Death certificates do not include demographic information.</p>
+<p><strong>D.</strong> Death certificates cannot be used to study mortality.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/jxabcfZcH1GABWn0Vqvpa/respond?q=disease-data-death-certificates">Respond here</a></p>
+</div>
+<p><img data-src="qr/disease-data-death-certificates.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: B. A: Good effort. The chapter describes death registration as nearly complete. The cause assigned to a recorded death can still be inaccurate.</p>
+<p>B: That’s right. A death can be recorded even when its cause is unclear or classified inaccurately.</p>
+<p>C: Keep going. Death certificates include demographic information such as age and sex. The chapter highlights possible errors in the cause of death.</p>
+<p>D: Good effort. Death certificates are widely used to study mortality. We still need to consider their limitations. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, allow time for us to think, then take a show of hands for each option and discuss the answers together.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside class="notes">
+<p>A: Good effort. The chapter describes death registration as nearly complete. The cause assigned to a recorded death can still be inaccurate.</p>
+<p>B: That’s right. A death can be recorded even when its cause is unclear or classified inaccurately.</p>
+<p>C: Keep going. Death certificates include demographic information such as age and sex. The chapter highlights possible errors in the cause of death.</p>
+<p>D: Good effort. Death certificates are widely used to study mortality. We still need to consider their limitations.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="disease-data-surveillance" class="slide level2 quiz">
+<h2>Reading Comprehension Quiz 06</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>What is the main purpose of public health surveillance?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> Continuously collecting, analyzing, and sharing health information to guide public health action.</p>
+<p><strong>B.</strong> Providing individual treatment plans during routine appointments with healthcare providers.</p>
+<p><strong>C.</strong> Collecting health information once and storing it without analysis or interpretation.</p>
+<p><strong>D.</strong> Assigning participants to treatments to compare the effects of different medicines.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/6r4SGAjs9OFKXfvmqdEJm/respond?q=disease-data-surveillance">Respond here</a></p>
+</div>
+<p><img data-src="qr/disease-data-surveillance.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: A. A: That’s right. Surveillance helps us monitor health problems over time and share findings that support public health action.</p>
+<p>B: Good effort. Individual treatment is part of clinical care. Surveillance gathers and uses information about health in populations.</p>
+<p>C: Keep going. Surveillance is ongoing and includes analyzing, interpreting, and sharing information, not just storing it.</p>
+<p>D: Good effort. Assigning treatments is part of an experimental study. Surveillance monitors the occurrence of health problems and risk factors. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, allow time for us to think, then take a show of hands for each option and discuss the answers together.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside class="notes">
+<p>A: That’s right. Surveillance helps us monitor health problems over time and share findings that support public health action.</p>
+<p>B: Good effort. Individual treatment is part of clinical care. Surveillance gathers and uses information about health in populations.</p>
+<p>C: Keep going. Surveillance is ongoing and includes analyzing, interpreting, and sharing information, not just storing it.</p>
+<p>D: Good effort. Assigning treatments is part of an experimental study. Surveillance monitors the occurrence of health problems and risk factors.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="disease-data-reportable-diseases" class="slide level2 quiz">
+<h2>Reading Comprehension Quiz 07</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>What makes a disease a reportable disease?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> Its cases are described in a published research article.</p>
+<p><strong>B.</strong> Its cases are counted in the population census.</p>
+<p><strong>C.</strong> Its cases are discussed in a television news report.</p>
+<p><strong>D.</strong> Its cases must be reported to health authorities under law.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/5SpjxDjsjkTbMzc1VsG6P/respond?q=disease-data-reportable-diseases">Respond here</a></p>
+</div>
+<p><img data-src="qr/disease-data-reportable-diseases.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: D. A: Good effort. Publication in a research article does not make a disease reportable. The term refers to a required report to health authorities.</p>
+<p>B: Keep going. A census counts and describes a population. Disease reporting is a separate process required for specified diseases.</p>
+<p>C: Good effort. News coverage is different from the required reporting of disease cases to health authorities.</p>
+<p>D: That’s right. Reportable diseases are diseases whose cases healthcare providers must report to health authorities under legal requirements. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, allow time for us to think, then take a show of hands for each option and discuss the answers together.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside class="notes">
+<p>A: Good effort. Publication in a research article does not make a disease reportable. The term refers to a required report to health authorities.</p>
+<p>B: Keep going. A census counts and describes a population. Disease reporting is a separate process required for specified diseases.</p>
+<p>C: Good effort. News coverage is different from the required reporting of disease cases to health authorities.</p>
+<p>D: That’s right. Reportable diseases are diseases whose cases healthcare providers must report to health authorities under legal requirements.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="disease-data-incomplete-reporting" class="slide level2 quiz">
+<h2>Reading Comprehension Quiz 08</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>What is one reason reportable disease statistics may miss some cases of disease?</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/free_text_polls/cap9i3ocW0nfu0THmipdp/respond?q=disease-data-incomplete-reporting">Respond here</a></p>
+</div>
+<p><img data-src="qr/disease-data-incomplete-reporting.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Model answer: Some people with a disease do not seek medical care, so their cases may never be reported.</p>
+<p>Acceptable equivalent wording: We can mention an illness without noticeable symptoms, a healthcare provider failing to submit a report, lack of awareness of reporting requirements, or reluctance to report because of confidentiality concerns. Any one reason is enough.</p>
+<p>Supportive guidance: Good effort. A reporting requirement does not guarantee that every case is recognized and reported. If our answer assumes complete coverage, let’s remember that some illnesses never come to medical attention. Reveal the answer: after_discussion. Show the distribution: no. Responses are anonymous. If polling fails: Give us a moment to write one reason on paper, then invite volunteers to share and discuss why some cases may be missing.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside class="notes">
+<p>Model answer: Some people with a disease do not seek medical care, so their cases may never be reported.</p>
+<p>Acceptable equivalent wording: We can mention an illness without noticeable symptoms, a healthcare provider failing to submit a report, lack of awareness of reporting requirements, or reluctance to report because of confidentiality concerns. Any one reason is enough.</p>
+<p>Supportive guidance: Good effort. A reporting requirement does not guarantee that every case is recognized and reported. If our answer assumes complete coverage, let’s remember that some illnesses never come to medical attention.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="disease-data-case-registry" class="slide level2 quiz">
+<h2>Reading Comprehension Quiz 09</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>What is a case registry?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> A list of citations to published health research articles.</p>
+<p><strong>B.</strong> A centralized database of information about a disease and its cases.</p>
+<p><strong>C.</strong> A count of all residents in a geographic area.</p>
+<p><strong>D.</strong> A schedule of appointments available at a healthcare clinic.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/xA4mTfKz14vqaAd8Bytzm/respond?q=disease-data-case-registry">Respond here</a></p>
+</div>
+<p><img data-src="qr/disease-data-case-registry.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: B. A: Good effort. A list of research citations helps us find literature. A case registry collects information about a disease and its cases.</p>
+<p>B: That’s right. A case registry brings disease information together so we can track cases and study disease patterns.</p>
+<p>C: Keep going. A population count describes how many people live in an area. A case registry focuses on a disease and its cases.</p>
+<p>D: Good effort. An appointment schedule organizes clinic visits. A registry collects disease information for purposes such as tracking cases and supporting research. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, allow time for us to think, then take a show of hands for each option and discuss the answers together.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside class="notes">
+<p>A: Good effort. A list of research citations helps us find literature. A case registry collects information about a disease and its cases.</p>
+<p>B: That’s right. A case registry brings disease information together so we can track cases and study disease patterns.</p>
+<p>C: Keep going. A population count describes how many people live in an area. A case registry focuses on a disease and its cases.</p>
+<p>D: Good effort. An appointment schedule organizes clinic visits. A registry collects disease information for purposes such as tracking cases and supporting research.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="disease-data-health-surveys" class="slide level2 quiz">
+<h2>Reading Comprehension Quiz 10</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>How does the National Health and Nutrition Examination Survey (NHANES) differ from the National Health Interview Survey (NHIS)?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> NHANES gathers death certificates instead of conducting interviews.</p>
+<p><strong>B.</strong> NHANES uses only interviews, while NHIS adds physical examinations.</p>
+<p><strong>C.</strong> NHANES adds physical examinations to interviews, while NHIS uses interviews only.</p>
+<p><strong>D.</strong> NHANES gathers published research articles instead of information from participants.</p>
+</div>
+<div class="participation">
+<p><a href="https://PollEv.com/multiple_choice_polls/TPiYmghiWduuApqmxPdKq/respond?q=disease-data-health-surveys">Respond here</a></p>
+</div>
+<p><img data-src="qr/disease-data-health-surveys.png" class="qr" width="200"></p>
+<aside class="notes">
+<p>Answer: C. A: Good effort. NHANES collects information through interviews and examinations. Death certificates are a separate source of health data.</p>
+<p>B: Keep going. The distinction is reversed: NHANES includes physical examinations, while NHIS collects information through interviews only.</p>
+<p>C: That’s right. Both surveys use interviews, and NHANES also uses physical examinations, which can reveal previously undiagnosed conditions.</p>
+<p>D: Good effort. NHANES collects information from participants through interviews and examinations; it is not a literature search. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, allow time for us to think, then take a show of hands for each option and discuss the answers together.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside class="notes">
+<p>A: Good effort. NHANES collects information through interviews and examinations. Death certificates are a separate source of health data.</p>
+<p>B: Keep going. The distinction is reversed: NHANES includes physical examinations, while NHIS collects information through interviews only.</p>
+<p>C: That’s right. Both surveys use interviews, and NHANES also uses physical examinations, which can reveal previously undiagnosed conditions.</p>
+<p>D: Good effort. NHANES collects information from participants through interviews and examinations; it is not a literature search.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- 
+- Sources of data
+  - Primary vs secondary data collection.
+  - Health data vs data for understanding health.
+  - Using administrative data. I could use DETECT as an example.
+  - Census and vital statistics data.
+  - Federal health surveys - NHANES (https://www.cdc.gov/nchs/nhanes/index.html), NHIS (https://www.cdc.gov/nchs/nhis/index.html), BRFSS (https://www.cdc.gov/brfss/index.html), All Of Us (https://www.nih.gov/allofus).
+  - Case registries. For example, we are creating a Parkinson's registry at TCU.
+  - Data that wasn't collected for health monitoring. For example, Google Trends (https://trends.google.com/trends/).
+- As I was reading Chapter 4, here are some other topics I thought we may want to touch on:
+  - Briefly introduce HIPAA and PHI/PII at a conceptual level.
+  - Some of the challenges of using administrative data. I could use DETECT as an example (https://www.tandfonline.com/doi/full/10.1080/08946566.2018.1564104). 
+  - Big data and some of the issues I discovered when completing the big data certificates. For example, prediction isn't causation.
+  - Google Flu. I could either talk about this in class or make reading about it an assignment. 
+-->
+<!-- AI Exercises 
+1. Primary vs. secondary data. (7 min) - Added.
+2. Using administrative records. (8 min)
+3. HIPAA/PHI/PII (7 min)
+4. Census data - denominator (9 min) - Added.
+5. Vital statistics in the US. (8 min) - Added.
+6. Death certificates (8 min) - Added.
+7. Which federal survey should we use? (10 min)
+8. Parkinson's registry (7 min)
+9. Google Trends (9 min)
+10. Google Flu (don't use)
+
+7 + 8 + 7 + 9 + 8 + 8 + 10 + 7 + 9 = 73.
+-->
+</section>
+<section id="data-sources" class="slide level2">
+<h2>Data Sources</h2>
 <ul>
-<li>Source: <a href="https://www.cdc.gov/nchs/products/databriefs/db521.htm#Key_finding">CDC NCHS Data Brief 521</a></li>
-<li>Selected findings:
-<ul>
-<li>Life expectancy: <strong>78.4 years</strong> (↑ 0.9 from 2022)</li>
-<li>Age-adjusted death rate: ↓ <strong>6.0%</strong> (798.8 → 750.5 per 100,000)</li>
-<li>Age-specific death rates decreased for all age groups ≥5 years.</li>
-<li>Leading causes unchanged: heart disease, cancer, injuries.</li>
-<li>Infant mortality: <strong>560.2 per 100,000 live births</strong> (no change).</li>
-</ul></li>
+<li>Primary vs.&nbsp;secondary data</li>
 </ul>
 <aside class="notes">
-
+<ul>
+<li>Primary data: Data we collect ourselves for a specific purpose.</li>
+<li>For example, a survey, interview, direct observation, or laboratory measurement we design and conduct.</li>
+<li>Secondary data: Data that already exists because it was collected by someone else. Often for a different purpose than ours.
+<ul>
+<li>For example, electronic health records, surveillance data, census data, hospital discharge records, or a previously conducted survey.</li>
+</ul></li>
+<li>The practical tradeoff:
+<ul>
+<li>Primary data give us more control over what and how we measure, but take more time and resources.</li>
+<li>Secondary data are faster and often less expensive to use, but their variables, measurement quality, population, and timing may not fully fit our question.</li>
+</ul></li>
+<li>This is a topic we will explore today.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercise-primary-vs.-secondary-data" class="slide level2">
+<h2>Exercise: Primary Vs. Secondary Data</h2>
+<!-- Space these bullets out. They looked to squished on the slide. -->
+<p>Our county wants to understand barriers to staying safe during extreme heat. We can fund one initial approach:</p>
+<p><strong>A.</strong> Interview residents about cooling access and transportation. We can ask exactly what we need, but recruitment takes time and some residents may not respond.</p>
+<p><strong>B.</strong> Analyze existing emergency-department records. They show serious health events, but miss people who never reach an emergency department.</p>
+<p><strong>C.</strong> Combine existing housing, tree-cover, and population data. They describe neighborhood conditions, but do not tell us who became ill.</p>
+<p>Which would we start with and why?</p>
+<aside class="notes">
+<ul>
+<li>Take 2 minuts to answer these questions with your group.</li>
+<li>A fits questions about residents’ experiences;</li>
+<li>B fits serious illness and healthcare use;</li>
+<li>C fits environmental conditions and geographic targeting.</li>
+<li>Each becomes more or less useful as the question changes.</li>
+<li>Ask: “What would your chosen source leave unanswered?”</li>
+<li>Neither primary nor secondary data guarantees quality.</li>
+<li>Neighborhood data can be relevant to health without containing diagnoses.</li>
+<li>Takeaway: Choose the source after clarifying the question.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-sources-1" class="slide level2">
+<h2>Data Sources</h2>
+<ul>
+<li>Primary vs.&nbsp;secondary data</li>
+<li>Health data by design vs.&nbsp;health insights from repurposed data</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>In epidemiology, we frequently use data that was collected explicitly to understand health (e.g., Vital Statistics, NHANES).</li>
+<li>However, it’s becoming increasingly common to use data that was created for a different purpose (e.g., Google Trends).</li>
+<li>We will see examples of both.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="vital-events" class="slide level2">
+<h2>Vital Events</h2>
+<ul>
+<li class="fragment">Deaths, births, marriages, divorce, and fetal deaths.</li>
+<li class="fragment">Legally mandated.</li>
+<li class="fragment">Births: Local -&gt; State</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Perhaps the most basic health data is births and deaths.</li>
+<li>In the United States, birth certificates managed, stored, and issued by individual state and local governments.</li>
+<li>Death certificates are also managed and stored by individual state, county, or local vital statistics offices.</li>
+<li>However, the NCHS, a division of the CDC, tracks every single death occurring within the US.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="vital-events---mortality" class="slide level2">
+<h2>Vital Events - Mortality</h2>
+<ul>
+<li>Deaths, births, marriages, divorce, and fetal deaths.</li>
+<li>Legally mandated.</li>
+<li>Births: Local -&gt; State</li>
+<li>Deaths: Local -&gt; State -&gt; Federal (NCHS)</li>
+</ul>
+<p>https://www.cdc.gov/nchs/nvss/index.htm</p>
+<aside class="notes">
+<ul>
+<li>Death certificates are also managed and stored by individual state, county, or local vital statistics offices.</li>
+<li>However, the NCHS, a division of the CDC, tracks every single death occurring within the US.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercise-vital-statistics-retrieval" class="slide level2">
+<h2>Exercise: Vital-Statistics Retrieval</h2>
+<!-- Brad: Double-check answers. -->
+<p>Open <a href="https://www.cdc.gov/nchs/products/databriefs/db548.htm">CDC’s <em>Mortality in the United States, 2024</em></a>. Each pair takes one task:</p>
+<ul>
+<li><p><strong>A. Life expectancy:</strong> Find life expectancy at birth. Explain why it is not a promise about how long a particular newborn will live.</p></li>
+<li><p><strong>B. Death rates:</strong> Find the age-adjusted death rates for 2023 and 2024. Explain what age adjustment contributes to the comparison.</p></li>
+<li><p><strong>C. Leading causes:</strong> Find which cause entered the top ten in 2024. Did its age-adjusted death rate increase?</p></li>
+</ul>
+<p>Produce two sentences: one accurate finding with year and units, and one interpretation or limitation.</p>
+<aside class="notes">
+<ul>
+<li><strong>How to run it and timing:</strong> <strong>8 minutes:</strong> 1 minute to assign tasks, 3 for retrieval, 1 to write, and 3 for up to three voluntary reports and synthesis. Preparation: link directly to the brief and have its tables available on paper.</li>
+<li><strong>Instructor notes and debrief:</strong> Verified answers are <strong>79.0 years</strong>; <strong>750.5 versus 722.1 deaths per 100,000 standard population</strong>; and <strong>suicide</strong>, whose age-adjusted rate declined from <strong>14.1 to 13.7</strong> even as it became the tenth leading cause. <a href="https://www.cdc.gov/nchs/products/databriefs/db548.htm">CDC brief</a>.</li>
+<li>Life expectancy summarizes mortality conditions; age adjustment facilitates comparisons accounting for age composition. Ranking is relative to other causes, so a rank can rise while a rate falls. Ask: “Which finding would we use to compare mortality across populations with different age structures?”</li>
+<li><strong>Takeaway:</strong> Report the measure and its meaning together.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -191,6 +864,10 @@
 </section>
 <section id="leading-cause-highest-risk" class="slide level2 compact">
 <h2>Leading Cause ≠ Highest Risk</h2>
+<!--  
+This is an important concept.
+Let's make this more interactive somehow.
+-->
 <ul>
 <li><strong>Leading causes of death</strong> are ranked by <strong>proportion of total deaths (PMR)</strong>.</li>
 <li>Ranking answers “<strong>how many deaths?</strong>” → <strong>Burden</strong>.</li>
@@ -217,6 +894,159 @@
 </section>
 <section id="example-suicide" class="slide level2 compact">
 <h2>Example: Suicide</h2>
+<!--  
+I think it's also a leading cause of death in older white men.
+-->
+<ul>
+<li>Suicide is <strong>not a top-ranked cause of death overall</strong>.</li>
+<li>But it is a <strong>leading cause of death among young adults</strong>.</li>
+<li>This reflects <strong>high cause-specific mortality rates</strong> in certain groups.</li>
+<li>Key contrast:
+<ul>
+<li>PMR (overall): low</li>
+<li>CSMR (subgroups): high</li>
+</ul></li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercise-one-death-several-conditions-death-certificate-interpretation" class="slide level2">
+<h2>Exercise: One Death, Several Conditions — Death-Certificate Interpretation</h2>
+<!-- Brad: Review this exercise. -->
+<p>The certifying clinician documents this sequence:</p>
+<p>COVID-19 → pneumonia → acute respiratory distress syndrome → death.</p>
+<p>The clinician also documents diabetes as contributing to the death.</p>
+<p>A reader says: “The person died of respiratory distress, so this should not count as a COVID-19 death.”</p>
+<p>In two sentences, explain what the reader has misunderstood. Then identify one uncertainty that could still affect the accuracy of the death certificate.</p>
+<aside class="notes">
+<p><strong>How to run it and timing:</strong> <strong>8 minutes:</strong> 1 minute to explain the documented sequence, 2 for individual writing, 2 for pairs, and 3 for debrief. Introduce “underlying” as the condition initiating the sequence; students need not diagnose the case.</p>
+<p><strong>Instructor notes and debrief:</strong> In this supplied sequence, COVID-19 is the underlying cause, respiratory distress syndrome the immediate cause, and diabetes an additional contributing condition. Multiple listed conditions do not negate the underlying cause. CDC’s certification guidance explicitly illustrates reporting COVID-19 together with pneumonia and respiratory distress. <a href="https://stacks.cdc.gov/view/cdc/86558">CDC guidance</a></p>
+<p>Legitimate uncertainties include incomplete clinical information and errors in documenting the sequence. The factual correction is not an invitation to assume every certificate is accurate.</p>
+<p>Ask: “How would ‘deaths with COVID-19 listed anywhere’ differ from ‘deaths with COVID-19 as the underlying cause’?”</p>
+<p><strong>Takeaway:</strong> Complete death registration and accurate cause classification are different qualities.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercise-find-the-denominator-that-belongs-to-our-numerator" class="slide level2">
+<h2>Exercise: Find the Denominator That Belongs to Our Numerator</h2>
+<!-- Brad double-check this exercise. -->
+<p><strong>Simulated numerator:</strong> During 2025, 2,248 Tarrant County residents died from a fictional condition.</p>
+<p>Open <a href="https://www.census.gov/quickfacts/tarrantcountytexas">Census QuickFacts: Tarrant County</a>.</p>
+<ol type="1">
+<li><p>Find the population estimate most appropriate for this numerator. Record its value and date.</p></li>
+<li><p>Calculate deaths per 100,000 residents.</p></li>
+<li><p>Explain why the 2020 Census count is less suitable.</p></li>
+</ol>
+<p><strong>Extension:</strong> If the deaths were only among residents aged 65 or older, what would need to change?</p>
+<aside class="notes">
+<p><strong>How to run it and timing:</strong> <strong>9 minutes:</strong> 1 minute of instructions, 3 for retrieval, 2 for calculation, and 3 for comparison and the extension. Pairs need a browser and calculator. Preparation: bookmark the page and retain the two population figures below as a fallback.</p>
+<p><strong>Instructor notes and debrief:</strong> QuickFacts currently reports <strong>2,248,466 residents on July 1, 2025</strong>, and a <strong>2020 Census count of 2,110,640</strong>. <a href="https://www.census.gov/quickfacts/tarrantcountytexas">Census source</a></p>
+<p>The intended calculation is:</p>
+<p><span class="math display">\[
+\frac{2,248}{2,248,466} \times 100,000 \approx 100.0
+\]</span></p>
+<p>Using the 2020 count gives <strong>106.5 per 100,000</strong>. The difference arises entirely from denominator selection. For deaths among older residents, use the corresponding older population, with compatible geography and year.</p>
+<p>Ask: “Would the same denominator work for deaths occurring in Tarrant County hospitals, including nonresidents?”</p>
+<p><strong>Takeaway:</strong> A plausible population number is not necessarily the correct denominator.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="review-of-mortality-real-data-cdc-nvss-2023" class="slide level2">
+<h2>Review of Mortality: Real Data (CDC NVSS, 2023)</h2>
+<!--  
+Update to: https://www.cdc.gov/nchs/products/databriefs/db548.htm
+- What does the death rate tell us?
+- What does the age-adjusted death rate tell us?
+-->
+<ul>
+<li>Source: <a href="https://www.cdc.gov/nchs/products/databriefs/db521.htm#Key_finding">CDC NCHS Data Brief 521</a></li>
+<li>Selected findings:
+<ul>
+<li>Life expectancy: <strong>78.4 years</strong> (↑ 0.9 from 2022)</li>
+<li>Age-adjusted death rate: ↓ <strong>6.0%</strong> (798.8 → 750.5 per 100,000)</li>
+<li>Age-specific death rates decreased for all age groups ≥5 years.</li>
+<li>Leading causes unchanged: heart disease, cancer, injuries.</li>
+<li>Infant mortality: <strong>560.2 per 100,000 live births</strong> (no change).</li>
+</ul></li>
+</ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="leading-cause-highest-risk-1" class="slide level2 compact">
+<h2>Leading Cause ≠ Highest Risk</h2>
+<!--  
+This is an important concept.
+Let's make this more interactive somehow.
+-->
+<ul>
+<li><strong>Leading causes of death</strong> are ranked by <strong>proportion of total deaths (PMR)</strong>.</li>
+<li>Ranking answers “<strong>how many deaths?</strong>” → <strong>Burden</strong>.</li>
+<li><strong>Risk</strong> answers “<strong>how likely is death?</strong>” → measured by rates (e.g., <strong>CSMR</strong>).</li>
+<li>A cause with a lower rank can still pose <strong>high risk</strong> to specific populations.</li>
+<li>Public health concern depends on <strong>context</strong>, not rank alone.</li>
+</ul>
+<blockquote>
+<p><strong>Burden ≠ Risk</strong></p>
+</blockquote>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="example-suicide-1" class="slide level2 compact">
+<h2>Example: Suicide</h2>
+<!--  
+I think it's also a leading cause of death in older white men.
+-->
 <ul>
 <li>Suicide is <strong>not a top-ranked cause of death overall</strong>.</li>
 <li>But it is a <strong>leading cause of death among young adults</strong>.</li>
@@ -243,6 +1073,11 @@
 </section>
 <section id="conceptual-transition" class="slide level2 compact">
 <h2>Conceptual Transition</h2>
+<!--  
+I need to figure out what she was trying to get them to think about.
+If I figure it out, I should make this slide a little more direct. If the current wording was too vague for me, it's going to be too vague for students.
+If I'm not able to figure it out, then delete this slide.
+-->
 <ul>
 <li>You just interpreted multiple mortality measures using one short summary.</li>
 <li><strong>Question:</strong> What assumptions are we making about the data behind these numbers?</li>
@@ -264,6 +1099,12 @@
 </section>
 <section id="epidemiologic-data" class="slide level2 compact">
 <h2>Epidemiologic Data</h2>
+<!--  
+This is too wordy. Either:
+- Break it up into multiple separate slides
+- Make it more visual
+- Turn it into an interactive exercise
+-->
 <ul>
 <li>Epidemiologic data are <strong>population-based data</strong> used to:
 <ul>
@@ -299,6 +1140,10 @@
 </section>
 <section id="factors-affecting-epidemiologic-data-quality" class="slide level2 compact">
 <h2>Factors Affecting Epidemiologic Data Quality</h2>
+<!--  
+These are good concepts for students to consider.
+We may want to give each concept its own slide and visual.
+-->
 <ul>
 <li>Data quality reflects whether the assumptions behind our measures hold.</li>
 <li>Key dimensions:
@@ -361,10 +1206,14 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- REVIEW: The source credit for this complex vital-statistics/reportable-disease data-flow diagram was not visible in the PDF. The complete slide image is retained because its illustrated process cannot be reconstructed reliably from the PDF alone. -->
 </section>
 <section id="how-epidemiologic-data-are-generated-and-used" class="slide level2 visual-only">
 <h2>How Epidemiologic Data Are Generated and Used</h2>
+<!-- REVIEW: The source credit for this complex vital-statistics/reportable-disease data-flow diagram was not visible in the PDF. The complete slide image is retained because its illustrated process cannot be reconstructed reliably from the PDF alone. -->
+<!-- 
+Consider remaking these graphics and using a TCU theme. 
+- Additionally, they are kind of busy. How can we make the key takeaway(s) jump out?
+-->
 
 <img src="assets/epidemiologic-data-flow.png" class="r-stretch" style="display: block; width: 100%; margin: 0 auto;" alt="Flow diagram comparing vital statistics with reportable and notifiable disease data. Vital events progress from certificates to state vital records offices and the National Vital Statistics System, producing population health statistics. Disease cases progress from providers and laboratories to local and state health departments and CDC or national surveillance systems, supporting public health response."><aside class="notes">
 
@@ -382,6 +1231,7 @@
 </section>
 <section id="vital-registration-system" class="slide level2 compact">
 <h2>Vital Registration System</h2>
+<!-- This slide is bland. Consider turning it into an interactive activity. -->
 <ul>
 <li><strong>Vital events:</strong> births, deaths, fetal deaths, marriages, divorces</li>
 <li>In the United States, these events are compiled through the <strong>National Vital Statistics System (NVSS)</strong>.</li>
@@ -400,10 +1250,10 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- REVIEW: The PDF did not identify the source of Table 4.3 or the certificate image. The visible table content has been transcribed, but its bibliographic source is unresolved. -->
 </section>
 <section id="information-collected-by-birth-and-fetal-death-certificates" class="slide level2 table-slide">
 <h2>Information Collected by Birth and Fetal Death Certificates</h2>
+<!-- REVIEW: The PDF did not identify the source of Table 4.3 or the certificate image. The visible table content has been transcribed, but its bibliographic source is unresolved. -->
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -478,10 +1328,11 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- REVIEW: The dashboard chart’s underlying plotted values were not provided in the PDF text and cannot be reconstructed faithfully. The full source slide is retained as a local asset. -->
 </section>
 <section id="vital-statistics-example-texas-birth-data" class="slide level2 visual-only">
 <h2>Vital Statistics Example: Texas Birth Data</h2>
+<!-- REVIEW: The dashboard chart’s underlying plotted values were not provided in the PDF text and cannot be reconstructed faithfully. The full source slide is retained as a local asset. -->
+<!-- Consider turning this slide into an interactive activity. -->
 
 <img src="assets/texas-birth-data.png" class="r-stretch" style="display: block; width: 100%; margin: 0 auto;" alt="Texas live births by year from 2005 through 2020. Births fluctuate near 370,000 to 410,000, with a slight decline by 2020. Discussion asks what students notice and what features of vital registration enable trend analysis."><aside class="notes">
 
@@ -496,10 +1347,11 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- REVIEW: The dashboard chart’s underlying plotted values were not provided in the PDF text and cannot be reconstructed faithfully. The full source slide is retained as a local asset. -->
 </section>
 <section id="vital-statistics-example-texas-death-data" class="slide level2 visual-only">
 <h2>Vital Statistics Example: Texas Death Data</h2>
+<!-- REVIEW: The dashboard chart’s underlying plotted values were not provided in the PDF text and cannot be reconstructed faithfully. The full source slide is retained as a local asset. -->
+<!-- Consider turning this slide into an interactive activity. -->
 
 <img src="assets/texas-death-data.png" class="r-stretch" style="display: block; width: 100%; margin: 0 auto;" alt="Texas crude death rates by age group from 2011 through 2020. Rates are highest for adults aged 75 years and older, followed by ages 65 to 74. Discussion asks students to interpret age-group patterns, the use of crude death rates, and links to earlier mortality measures."><aside class="notes">
 
@@ -517,6 +1369,7 @@
 </section>
 <section id="why-do-some-diseases-have-to-be-reported" class="slide level2 compact">
 <h2>Why Do Some Diseases Have to Be Reported?</h2>
+<!-- This slide is bland. -->
 <ul>
 <li>Some diseases require <strong>immediate public health action</strong>.</li>
 <li>Waiting for routine statistics is too slow.</li>
@@ -541,6 +1394,7 @@
 </section>
 <section id="reportablenotifiable-disease-data" class="slide level2 compact">
 <h2>Reportable/Notifiable Disease Data</h2>
+<!-- This slide is bland. -->
 <ul>
 <li><strong>Case-based surveillance</strong></li>
 <li>Focus on <strong>specific diseases</strong> of public health importance</li>
@@ -610,10 +1464,11 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- Source PDF page 18; split for slide readability. -->
+<!-- Add a slide with examples of reportable diseases as well. -->
 </section>
-<section id="examples-of-nationally-notifiable-diseases" class="slide level2 compact notifiable-list">
+<section id="examples-of-nationally-notifiable-diseases" class="slide level2 text-small">
 <h2>Examples of Nationally Notifiable Diseases</h2>
+<!-- Source PDF page 18; split for slide readability. -->
 <p><strong>National Notifiable Diseases Surveillance System (NNDSS):</strong> the endpoint of the data-report flow</p>
 <div class="grid-2">
 <div>
@@ -653,10 +1508,11 @@ Source: Centers for Disease Control and Prevention. National Notifiable Diseases
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- Source PDF page 18; split for slide readability. -->
 </section>
 <section id="discussion-nationally-notifiable-diseases" class="slide level2 compact">
 <h2>Discussion: Nationally Notifiable Diseases</h2>
+<!-- Source PDF page 18; split for slide readability. -->
+<!-- I kind of like an interactive exercise, but I'm not sure that I like this one. -->
 <ol type="1">
 <li>Pick one disease on the list. At what level would it first be reported?</li>
 <li>Why would CDC want to track this nationally?</li>
@@ -678,6 +1534,7 @@ Source: Centers for Disease Control and Prevention. National Notifiable Diseases
 </section>
 <section id="surveillance-from-reporting-to-monitoring" class="slide level2 compact">
 <h2>Surveillance: From Reporting to Monitoring</h2>
+<!-- Good information. Presentation is kind of bland. -->
 <ul>
 <li>Reporting captures <strong>individual cases</strong>.</li>
 <li>Surveillance looks for <strong>patterns over time</strong>.</li>
@@ -749,10 +1606,11 @@ Source: Centers for Disease Control and Prevention. National Notifiable Diseases
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- Source PDF page 21; split for slide readability. -->
 </section>
 <section id="exercise-types-of-surveillance" class="slide level2 compact">
 <h2>Exercise: Types of Surveillance</h2>
+<!-- Source PDF page 21; split for slide readability. -->
+<!-- The scenarios to match are on the next slide. Figure out a better way to format this. -->
 <p>Match each scenario with the correct type:</p>
 <div class="grid-2">
 <div class="panel">
@@ -777,10 +1635,10 @@ Source: Centers for Disease Control and Prevention. National Notifiable Diseases
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- Source PDF page 21; split for slide readability. -->
 </section>
 <section id="exercise-types-of-surveillance-scenarios" class="slide level2 compact">
 <h2>Exercise: Types of Surveillance — Scenarios</h2>
+<!-- Source PDF page 21; split for slide readability. -->
 <ol type="1">
 <li>Health officials analyze flu vaccination rates every year to guide next season’s immunization campaign.</li>
 <li>A sudden rise in ER visits for fever and cough signals a possible flu outbreak.</li>
@@ -804,6 +1662,7 @@ Source: Centers for Disease Control and Prevention. National Notifiable Diseases
 </section>
 <section id="public-health-surveillance-programs" class="slide level2 compact">
 <h2>Public Health Surveillance Programs</h2>
+<!-- Break this up into multiple slides -->
 <ul>
 <li><strong>Communicable and infectious diseases</strong>
 <ul>
@@ -839,6 +1698,7 @@ Source: Centers for Disease Control and Prevention. National Notifiable Diseases
 </section>
 <section id="national-center-for-health-statistics-nchs" class="slide level2 compact">
 <h2>National Center for Health Statistics (NCHS)</h2>
+<!-- Add BRFSS -->
 <p><strong>NCHS is a major source of U.S. population-based health data.</strong></p>
 <ul>
 <li>NCHS data complement surveillance by describing population health beyond reported cases.</li>
@@ -868,6 +1728,7 @@ Source: Centers for Disease Control and Prevention. National Notifiable Diseases
 </section>
 <section id="why-international-organizations-matter" class="slide level2 compact">
 <h2>Why International Organizations Matter</h2>
+<!-- Make this slide more visual. -->
 <ul>
 <li>Diseases cross national borders.</li>
 <li>Data must be <strong>comparable across countries</strong>.</li>
@@ -941,11 +1802,13 @@ Source: Centers for Disease Control and Prevention. National Notifiable Diseases
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+<!-- Add a check on learning quiz. -->
 
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../assets/tcu-logo-purple.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
