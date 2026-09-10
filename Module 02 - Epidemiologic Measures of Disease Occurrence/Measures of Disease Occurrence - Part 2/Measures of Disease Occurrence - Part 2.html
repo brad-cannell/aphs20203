@@ -957,100 +957,11 @@ Add content about the relationship between odds and proportions.
           display:block!important;
       }</style></aside>
 </section>
-<section id="why-adjust-a-rate" class="slide level2 compact">
-<h2>Why Adjust a Rate?</h2>
-<p>A town with more older adults can have a higher crude death rate <strong>even when its age-specific rates are the same</strong>.</p>
-<p><strong>Hypothetical example: one year, 10,000 residents in each town.</strong></p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 26%">
-<col style="width: 26%">
-<col style="width: 26%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Age group</th>
-<th style="text-align: right;">Town A population</th>
-<th style="text-align: right;">Town B population</th>
-<th style="text-align: right;">Deaths per 1,000 in both towns</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Under 65</td>
-<td style="text-align: right;">9,000</td>
-<td style="text-align: right;">5,000</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td>65+</td>
-<td style="text-align: right;">1,000</td>
-<td style="text-align: right;">5,000</td>
-<td style="text-align: right;">20</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>Town A:</strong> 18 + 20 = 38 deaths → <strong>3.8 per 1,000</strong>.</li>
-<li><strong>Town B:</strong> 10 + 100 = 110 deaths → <strong>11 per 1,000</strong>.</li>
-</ul>
-<p>What would the comparison look like if both towns had the <strong>same age mix</strong>?</p>
-<aside class="notes">
-<ul>
-<li>Walk through the death counts: Town A has 9,000 × 2/1,000 = 18 deaths below age 65 and 1,000 × 20/1,000 = 20 deaths at ages 65+. Town B has 10 and 100 deaths, respectively.</li>
-<li>These are midyear population counts used to approximate person-time during the year. The crude rate combines the age-specific rates using each town’s own age distribution.</li>
-<li>Neither town has a higher death rate within either age group in this deliberately simple example. The difference in crude rates comes entirely from the different age distributions.</li>
-<li>An adjusted rate summarizes the comparison after applying a common population composition. Adjustment can also be used for other factors, but age is especially useful for illustrating mortality comparisons.</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="age-adjustment-use-the-same-age-mix" class="slide level2 compact">
-<h2>Age Adjustment: Use the Same Age Mix</h2>
-<p><strong>AI-created draft — needs review</strong></p>
-<p><strong>Direct age adjustment</strong> takes a weighted average of age-specific rates using the <strong>same age weights</strong> for every population.</p>
-<p>For our example, choose a standard population that is <strong>80% under 65</strong> and <strong>20% ages 65+</strong>.</p>
-<p><span class="math display">\[
-\text{Adjusted rate} = (0.80 \times 2) + (0.20 \times 20) = 5.6
-\]</span></p>
-<p>Both towns have an adjusted rate of <strong>5.6 deaths per 1,000 standard population per year</strong>.</p>
-<ul>
-<li>This is the rate expected if each town had the standard age mix.</li>
-<li>Age adjustment supports comparisons; it does <strong>not</strong> remove every difference or bias between populations.</li>
-</ul>
-<aside class="notes">
-<ul>
-<li>Keep each town’s own age-specific death rates, replace its age weights with the common standard weights, and add the weighted rates. The weights must sum to 1.</li>
-<li>In this example, both towns have age-specific rates of 2 and 20 per 1,000 per year, so applying the same 0.80 and 0.20 weights produces 5.6 for each. The crude rates remain 3.8 and 11; the adjusted calculation is a comparison under the chosen common age distribution, not a change in the actual deaths observed.</li>
-<li>Explain the hypothetical standard in counts if helpful: among 1,000 people with this age mix, 800 are under age 65 and 200 are ages 65+. Applying the age-specific rates gives 1.6 + 4 = 5.6 expected deaths per year. Expected counts need not be whole numbers.</li>
-<li>The 80%/20% standard and two broad age groups are teaching simplifications. U.S. published mortality statistics commonly use the projected 2000 U.S. standard population with more detailed age groups. Compare adjusted rates that use compatible age groups and the same standard.</li>
-<li>Adjustment addresses differences in the included factor. It does not automatically correct measurement error, differences in other characteristics, or confounding within broad age groups, and it does not establish causation.</li>
-<li>The supplied reading also introduces indirect adjustment, which applies standard age-specific rates to the population being studied and compares observed with expected deaths. Keep that method as optional context; these slides teach the intuition behind direct adjustment.</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
+
+
 <section id="incidence-rates" class="slide level2 quiz">
-<h2>Incidence Rates</h2>
+<h2>Review: Incidence Rates</h2>
+<!-- Students seemed to like having quiz questions at the end. They don't love switching back and forth between slides and Poll Everywhere. -->
 <!-- GENERATED FILE - DO NOT EDIT.
      Source: Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/quiz/quiz.yml
      Rebuilt automatically during presentation rendering. -->
