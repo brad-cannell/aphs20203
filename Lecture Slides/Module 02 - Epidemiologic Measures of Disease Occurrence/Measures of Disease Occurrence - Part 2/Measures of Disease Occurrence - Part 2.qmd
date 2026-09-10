@@ -635,7 +635,9 @@ Always check **what is being divided by what**.
 :::
 
 
-## Why Adjust a Rate? {.compact}
+## Why Adjust a Rate? {.compact visibility="hidden"}
+
+<!-- This example needs work. It was really hard for me to explain and for students to understand. -->
 
 A town with more older adults can have a higher crude death rate **even when its age-specific rates are the same**.
 
@@ -659,9 +661,9 @@ What would the comparison look like if both towns had the **same age mix**?
 :::
 
 
-## Age Adjustment: Use the Same Age Mix {.compact}
+## Age Adjustment: Use the Same Age Mix {.compact visibility="hidden"}
 
-**AI-created draft — needs review**
+<!-- I didn't really try to explain this slide because we didn't make it through the previous slide. -->
 
 **Direct age adjustment** takes a weighted average of age-specific rates using the **same age weights** for every population.
 
@@ -686,7 +688,9 @@ Both towns have an adjusted rate of **5.6 deaths per 1,000 standard population p
 :::
 
 
-## Incidence Rates {#incidence-rates .quiz}
+## Review: Incidence Rates {#incidence-rates .quiz}
+
+<!-- Students seemed to like having quiz questions at the end. They don't love switching back and forth between slides and Poll Everywhere. -->
 
 {{< include quiz-slides/incidence-rates.qmd >}}
 
