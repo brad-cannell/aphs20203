@@ -253,3 +253,38 @@ questions:
     reveal_distribution: true
     reveal_correct_answer: after_discussion
     participation_url: https://PollEv.com/multiple_choice_polls/TPiYmghiWduuApqmxPdKq/respond
+
+  # End-of-module applications. Paper responses; no online poll has been created.
+  - id: disease-data-application-source
+    type: multiple_choice
+    prompt: Which source would we examine first to study diabetes that has not yet been diagnosed, using measured health information?
+    options:
+      - Death certificates alone.
+      - NHANES interviews, examinations, and laboratory data.
+      - Google Trends search interest in diabetes.
+      - A clinic appointment calendar.
+    correct: 2
+    explanation: >-
+      B is the best starting point because NHANES includes measured health information. Check the survey cycle, eligible population, available tests, and definitions before estimating prevalence. Death certificates measure mortality, searches measure interest, and appointment records measure scheduled care. Source: https://www.cdc.gov/nchs/nhanes/about/index.html
+    presentation_mode: anonymous
+    reveal_distribution: false
+    reveal_correct_answer: after_discussion
+    fallback: >-
+      Write A, B, C, or D on paper, compare reasons with a partner, then discuss the answer. Allow about 90 seconds.
+
+  - id: disease-data-application-reporting
+    type: multiple_choice
+    prompt: A registry enrolls more people after adding clinics. Which conclusion is supported by that fact alone?
+    options:
+      - Population incidence increased.
+      - Population prevalence doubled.
+      - The registry enrolled more people.
+      - Treatment became less effective.
+    correct: 3
+    explanation: >-
+      C describes the observation. Broader recruitment can increase enrollment without a change in disease occurrence. Incidence needs new diagnoses during a defined period and an appropriate population at risk; enrollment counts alone do not establish that. Nothing in the scenario measures treatment effects.
+    presentation_mode: anonymous
+    reveal_distribution: false
+    reveal_correct_answer: after_discussion
+    fallback: >-
+      Write A, B, C, or D on paper, compare reasons with a partner, then discuss the answer. Allow about 90 seconds.

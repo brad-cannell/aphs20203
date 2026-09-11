@@ -44,3 +44,20 @@
 .reveal li + li {
   margin-top: 0.25em;
 }
+
+// Keep long quiz options and full-size QR codes within the slide canvas.
+.reveal .quiz .quiz-options {
+  max-width: 90%;
+}
+
+.reveal .quiz .participation {
+  margin-top: 0.4em;
+}
+
+.reveal .quiz .participation p {
+  margin: 0;
+}
+
+.reveal .quiz img.qr {
+  margin-top: 0.35em;
+}

@@ -22,295 +22,127 @@ execute:
 
 ## Learning Objectives {.compact}
 
-<!--  
-Revise and update the learning objectives last.
--->
-
 By the end of this week, you should be able to:
 
-1. Identify key factors that influence **epidemiologic data quality**.
-2. Distinguish between **vital statistics** and **reportable/notifiable disease data**.
-3. Identify major **surveillance programs in the United States**.
-4. Describe major **sources of epidemiologic data** used in public health.
-5. Explain the role of **international organizations** in collecting and disseminating epidemiologic data.
+1. Choose an epidemiologic data source that fits a research question.
+2. Match a mortality numerator to an appropriate population denominator.
+3. Explain how coverage, classification, and reporting affect our conclusions.
+4. Distinguish vital statistics, case reporting, surveys, and syndromic surveillance.
+5. Explain how international coordination improves disease monitoring.
 
 ::: {.notes}
-- In our last module we learned about calculating some foundational epidemiologic measures.
-- Ask the class to recall some examples of measures.
-- But where do we get the data? That's today's topic.
-- Before diving in, let's complete a reading comprehension exercise to refresh your memory and solidify what you read for this week.
-:::
+Recall a measure from the previous module. Today we ask where its numerator and denominator come from, and what they allow us to conclude.
 
+Allow about 90 minutes across class meetings for the core deck, including 12–15 minutes for the opening quiz and transitions. A natural stopping point is after the Census exercise. Allow a further 9 minutes for the optional Google Trends extension. Shorten voluntary reports if discussion runs long; preserve the final checks on learning.
+
+Students work in pairs or existing project groups with one browser and calculator per group. Written scenarios work on paper; the retrieval exercises include displayable data fallbacks. Invite volunteers to share without asking students to disclose personal health experiences.
+:::
 
 ## Reading Comprehension Quiz 01 {#disease-data-linkage .quiz}
 
 {{< include quiz-slides/disease-data-linkage.qmd >}}
 
-::: {.notes}
-A: Good effort. Removing identifying information serves a different purpose. Data linkage connects information using a shared identifier.
-
-B: Keep going. Summarizing records describes information already in a database. Linkage joins information across databases.
-
-C: That's right. A common identifier lets us connect related information stored in different databases.
-
-D: Good effort. An interview collects information. Data linkage connects information already stored in databases.
-:::
 
 
 ## Reading Comprehension Quiz 02 {#disease-data-mining .quiz}
 
 {{< include quiz-slides/disease-data-mining.qmd >}}
 
-::: {.notes}
-A: That's right. Data mining explores large amounts of data to help us discover patterns and associations.
-
-B: Good effort. A pattern can show an association, but data mining alone does not establish that one factor causes another.
-
-C: Keep going. Changing how records are stored is different from exploring their contents for patterns.
-
-D: Good effort. Data mining looks for patterns; it does not guarantee that the data are free of errors.
-:::
 
 
 ## Reading Comprehension Quiz 03 {#disease-data-census .quiz}
 
 {{< include quiz-slides/disease-data-census.qmd >}}
 
-::: {.notes}
-A: Good effort. Causes of death come from death records. Census data help us describe the population used in the denominator.
-
-B: Keep going. Census data describe populations; they do not confirm individual disease diagnoses.
-
-C: Good effort. Treatment information comes from healthcare records. Census data provide population counts and characteristics.
-
-D: That's right. Census population counts help us define the denominator when calculating a population-based rate.
-:::
 
 
 ## Reading Comprehension Quiz 04 {#disease-data-vital-events .quiz}
 
 {{< include quiz-slides/disease-data-vital-events.qmd >}}
 
-::: {.notes}
-Model answer: Births and deaths.
-
-Acceptable equivalent wording: Any two of births, deaths, marriages, divorces, and fetal deaths are acceptable. Brief terms are enough; we do not need a formal definition.
-
-Supportive guidance: Good effort. If our examples are medical visits or diagnoses, let's distinguish healthcare encounters from vital events. Vital events include births, deaths, and changes in marital status.
-:::
 
 
 ## Reading Comprehension Quiz 05 {#disease-data-death-certificates .quiz}
 
 {{< include quiz-slides/disease-data-death-certificates.qmd >}}
 
-::: {.notes}
-A: Good effort. The chapter describes death registration as nearly complete. The cause assigned to a recorded death can still be inaccurate.
-
-B: That's right. A death can be recorded even when its cause is unclear or classified inaccurately.
-
-C: Keep going. Death certificates include demographic information such as age and sex. The chapter highlights possible errors in the cause of death.
-
-D: Good effort. Death certificates are widely used to study mortality. We still need to consider their limitations.
-:::
 
 
 ## Reading Comprehension Quiz 06 {#disease-data-surveillance .quiz}
 
 {{< include quiz-slides/disease-data-surveillance.qmd >}}
 
-::: {.notes}
-A: That's right. Surveillance helps us monitor health problems over time and share findings that support public health action.
-
-B: Good effort. Individual treatment is part of clinical care. Surveillance gathers and uses information about health in populations.
-
-C: Keep going. Surveillance is ongoing and includes analyzing, interpreting, and sharing information, not just storing it.
-
-D: Good effort. Assigning treatments is part of an experimental study. Surveillance monitors the occurrence of health problems and risk factors.
-:::
 
 
 ## Reading Comprehension Quiz 07 {#disease-data-reportable-diseases .quiz}
 
 {{< include quiz-slides/disease-data-reportable-diseases.qmd >}}
 
-::: {.notes}
-A: Good effort. Publication in a research article does not make a disease reportable. The term refers to a required report to health authorities.
-
-B: Keep going. A census counts and describes a population. Disease reporting is a separate process required for specified diseases.
-
-C: Good effort. News coverage is different from the required reporting of disease cases to health authorities.
-
-D: That's right. Reportable diseases are diseases whose cases healthcare providers must report to health authorities under legal requirements.
-:::
 
 
 ## Reading Comprehension Quiz 08 {#disease-data-incomplete-reporting .quiz}
 
 {{< include quiz-slides/disease-data-incomplete-reporting.qmd >}}
 
-::: {.notes}
-Model answer: Some people with a disease do not seek medical care, so their cases may never be reported.
-
-Acceptable equivalent wording: We can mention an illness without noticeable symptoms, a healthcare provider failing to submit a report, lack of awareness of reporting requirements, or reluctance to report because of confidentiality concerns. Any one reason is enough.
-
-Supportive guidance: Good effort. A reporting requirement does not guarantee that every case is recognized and reported. If our answer assumes complete coverage, let's remember that some illnesses never come to medical attention.
-:::
 
 
 ## Reading Comprehension Quiz 09 {#disease-data-case-registry .quiz}
 
 {{< include quiz-slides/disease-data-case-registry.qmd >}}
 
-::: {.notes}
-A: Good effort. A list of research citations helps us find literature. A case registry collects information about a disease and its cases.
-
-B: That's right. A case registry brings disease information together so we can track cases and study disease patterns.
-
-C: Keep going. A population count describes how many people live in an area. A case registry focuses on a disease and its cases.
-
-D: Good effort. An appointment schedule organizes clinic visits. A registry collects disease information for purposes such as tracking cases and supporting research.
-:::
 
 
 ## Reading Comprehension Quiz 10 {#disease-data-health-surveys .quiz}
 
 {{< include quiz-slides/disease-data-health-surveys.qmd >}}
 
-::: {.notes}
-A: Good effort. NHANES collects information through interviews and examinations. Death certificates are a separate source of health data.
-
-B: Keep going. The distinction is reversed: NHANES includes physical examinations, while NHIS collects information through interviews only.
-
-C: That's right. Both surveys use interviews, and NHANES also uses physical examinations, which can reveal previously undiagnosed conditions.
-
-D: Good effort. NHANES collects information from participants through interviews and examinations; it is not a literature search.
-:::
 
 
-<!-- 
-- Sources of data
-  - Primary vs secondary data collection.
-  - Health data vs data for understanding health.
-  - Using administrative data. I could use DETECT as an example.
-  - Census and vital statistics data.
-  - Federal health surveys - NHANES (https://www.cdc.gov/nchs/nhanes/index.html), NHIS (https://www.cdc.gov/nchs/nhis/index.html), BRFSS (https://www.cdc.gov/brfss/index.html), All Of Us (https://www.nih.gov/allofus).
-  - Case registries. For example, we are creating a Parkinson's registry at TCU.
-  - Data that wasn't collected for health monitoring. For example, Google Trends (https://trends.google.com/trends/).
-- As I was reading Chapter 4, here are some other topics I thought we may want to touch on:
-  - Briefly introduce HIPAA and PHI/PII at a conceptual level.
-  - Some of the challenges of using administrative data. I could use DETECT as an example (https://www.tandfonline.com/doi/full/10.1080/08946566.2018.1564104). 
-  - Big data and some of the issues I discovered when completing the big data certificates. For example, prediction isn't causation.
-  - Google Flu. I could either talk about this in class or make reading about it an assignment. 
--->
+## Primary and Secondary Data
 
-<!-- AI Exercises 
-1. Primary vs. secondary data. (7 min) - Added.
-2. Using administrative records. (8 min)
-3. HIPAA/PHI/PII (7 min)
-4. Census data - denominator (9 min) - Added.
-5. Vital statistics in the US. (8 min) - Added.
-6. Death certificates (8 min) - Added.
-7. Which federal survey should we use? (10 min)
-8. Parkinson's registry (7 min)
-9. Google Trends (9 min)
-10. Google Flu (don't use)
+**Primary collection:** Gather new observations for our question.
 
-7 + 8 + 7 + 9 + 8 + 8 + 10 + 7 + 9 = 73.
--->
+**Secondary use:** Analyze data that already exist.
 
-
-## Data Sources
-
-- Primary vs. secondary data
+Either can help us understand health—even when the records contain no diagnoses.
 
 ::: {.notes}
-- Primary data: Data we collect ourselves for a specific purpose. 
- - For example, a survey, interview, direct observation, or laboratory measurement we design and conduct.
-- Secondary data: Data that already exists because it was collected by someone else. Often for a different purpose than ours.
-  - For example, electronic health records, surveillance data, census data, hospital discharge records, or a previously conducted survey.
-
-- The practical tradeoff: 
-  - Primary data give us more control over what and how we measure, but take more time and resources. 
-  - Secondary data are faster and often less expensive to use, but their variables, measurement quality, population, and timing may not fully fit our question.
-
-- This is a topic we will explore today.
+Allow 1 minute. A survey we design is primary collection; reusing an existing survey, medical records, or Census estimates is secondary use. The same dataset can be primary for its original investigators and secondary for another analysis. Neither label guarantees quality.
 :::
 
+## Exercise: Primary vs. Secondary Data
 
-## Exercise: Primary Vs. Secondary Data
-
-<!-- Space these bullets out. They looked to squished on the slide. -->
+**Fictional scenario · Pairs · 5 minutes**
 
 Our county wants to understand barriers to staying safe during extreme heat. We can fund one initial approach:
 
-**A.** Interview residents about cooling access and transportation. We can ask exactly what we need, but recruitment takes time and some residents may not respond.
+**A.** Interview residents about cooling access and transportation.
 
-**B.** Analyze existing emergency-department records. They show serious health events, but miss people who never reach an emergency department.
+**B.** Analyze existing emergency-department records of heat illness.
 
-**C.** Combine existing housing, tree-cover, and population data. They describe neighborhood conditions, but do not tell us who became ill.
+**C.** Combine existing housing, tree-cover, and population data.
 
-Which would we start with and why?
-
-::: {.notes}
-- Take 2 minuts to answer these questions with your group.
-- A fits questions about residents’ experiences; 
-- B fits serious illness and healthcare use; 
-- C fits environmental conditions and geographic targeting. 
-- Each becomes more or less useful as the question changes. 
-- Ask: “What would your chosen source leave unanswered?”
-- Neither primary nor secondary data guarantees quality. 
-- Neighborhood data can be relevant to health without containing diagnoses. 
-- Takeaway: Choose the source after clarifying the question.
-:::
-
-
-## Data Sources
-
-- Primary vs. secondary data
-- Health data by design vs. health insights from repurposed data
+Which would we start with? Give one reason and one question it would leave unanswered.
 
 ::: {.notes}
-- In epidemiology, we frequently use data that was collected explicitly to understand health (e.g., Vital Statistics, NHANES).
-- However, it's becoming increasingly common to use data that was created for a different purpose (e.g., Google Trends).
-- We will see examples of both.
+Allow 1 minute to choose, 2 to discuss, and 2 to compare reasoning. A directly measures experiences but requires recruitment. B captures serious illness and healthcare use, missing people who do not reach an ED. C helps identify environmental conditions but cannot identify who became ill. Clarify that B and C are secondary uses; A collects new data. No single correct choice without a more precise question. Fallback: write a letter and reason on paper, then invite voluntary reports.
 :::
 
+## Vital Statistics
 
-## Vital Events
+Birth and death records describe events in a population.
 
-::: {.incremental}
-- Deaths, births, marriages, divorce, and fetal deaths.
-- Legally mandated.
-- Births: Local -> State
-:::
+State and local registration systems supply data to the **National Vital Statistics System (NVSS)** at CDC’s National Center for Health Statistics.
+
+A death can be registered even when its cause is classified incorrectly.
 
 ::: {.notes}
-- Perhaps the most basic health data is births and deaths.
-- In the United States, birth certificates managed, stored, and issued by individual state and local governments.
-- Death certificates are also managed and stored by individual state, county, or local vital statistics offices.
-- However, the NCHS, a division of the CDC, tracks every single death occurring within the US.
+Allow 1 minute. Vital events also include fetal deaths, marriages, and divorces; today's examples focus on mortality. NVSS provides national birth, death, and fetal-death statistics. Avoid equating broad registration coverage with error-free or instantly available records. Source: [CDC NVSS](https://www.cdc.gov/nchs/nvss/index.htm).
 :::
-
-
-## Vital Events - Mortality
-
-- Deaths, births, marriages, divorce, and fetal deaths.
-- Legally mandated.
-- Births: Local -> State
-- Deaths: Local -> State -> Federal (NCHS)
-
-https://www.cdc.gov/nchs/nvss/index.htm 
-
-::: {.notes}
-- Death certificates are also managed and stored by individual state, county, or local vital statistics offices.
-- However, the NCHS, a division of the CDC, tracks every single death occurring within the US.
-:::
-
 
 ## Exercise: Vital-Statistics Retrieval
 
-<!-- Brad: Double-check answers. -->
+**Pairs · 8 minutes**
 
 Open [CDC’s *Mortality in the United States, 2024*](https://www.cdc.gov/nchs/products/databriefs/db548.htm). Each pair takes one task:
 
@@ -323,52 +155,50 @@ Open [CDC’s *Mortality in the United States, 2024*](https://www.cdc.gov/nchs/p
 Produce two sentences: one accurate finding with year and units, and one interpretation or limitation.
 
 ::: {.notes}
-- **How to run it and timing:** **8 minutes:** 1 minute to assign tasks, 3 for retrieval, 1 to write, and 3 for up to three voluntary reports and synthesis. Preparation: link directly to the brief and have its tables available on paper.
+- **How to run it and timing:** **8 minutes:** 1 minute to assign tasks, 3 for retrieval, 1 to write, and 3 for up to three voluntary reports and synthesis. If the website is unavailable, use the data on the next slide; ask students to interpret the supplied values.
 - **Instructor notes and debrief:**  Verified answers are **79.0 years**; **750.5 versus 722.1 deaths per 100,000 standard population**; and **suicide**, whose age-adjusted rate declined from **14.1 to 13.7** even as it became the tenth leading cause. [CDC brief](https://www.cdc.gov/nchs/products/databriefs/db548.htm).
 - Life expectancy summarizes mortality conditions; age adjustment facilitates comparisons accounting for age composition. Ranking is relative to other causes, so a rank can rise while a rate falls. Ask: “Which finding would we use to compare mortality across populations with different age structures?”
 - **Takeaway:** Report the measure and its meaning together.
 :::
 
 
-## Leading Cause ≠ Highest Risk {.compact}
+## Mortality Data for the Exercise {.compact}
 
-<!--  
-This is an important concept.
-Let's make this more interactive somehow.
--->
+[CDC: Mortality in the United States, 2024](https://www.cdc.gov/nchs/products/databriefs/db548.htm)
 
-- **Leading causes of death** are ranked by **proportion of total deaths (PMR)**.
-- Ranking answers “**how many deaths?**” → **Burden**.
-- **Risk** answers “**how likely is death?**” → measured by rates (e.g., **CSMR**).
-- A cause with a lower rank can still pose **high risk** to specific populations.
-- Public health concern depends on **context**, not rank alone.
+| Measure | 2023 | 2024 |
+|---|---:|---:|
+| Life expectancy at birth | 78.4 years | 79.0 years |
+| All-cause age-adjusted death rate | 750.5 | 722.1 |
+| Suicide age-adjusted death rate | 14.1 | 13.7 |
 
-> **Burden ≠ Risk**
+Rates are deaths per 100,000 U.S. standard population.
 
-::: {.notes}
-:::
-
-
-## Example: Suicide {.compact}
-
-<!--  
-I think it's also a leading cause of death in older white men.
--->
-
-- Suicide is **not a top-ranked cause of death overall**.
-- But it is a **leading cause of death among young adults**.
-- This reflects **high cause-specific mortality rates** in certain groups.
-- Key contrast:
-  - PMR (overall): low
-  - CSMR (subgroups): high
+Suicide entered the ten leading causes in 2024; COVID-19 dropped out.
 
 ::: {.notes}
+Use as a debrief after retrieval, or display throughout if internet access fails. Values come from CDC Data Brief 548, January 2026, tables 1, 2, and 4. Life expectancy applies the period's age-specific mortality conditions; it does not predict one child's lifespan. Age adjustment supports comparisons with a common age distribution. Keep this debrief within the preceding exercise's 8 minutes.
 :::
 
+## Exercise: Rank and Rate
 
-## Exercise: One Death, Several Conditions — Death-Certificate Interpretation
+**Pairs · 3 minutes**
 
-<!-- Brad: Review this exercise. -->
+Suicide entered the ten leading causes of death in 2024, while its age-adjusted death rate fell from **14.1 to 13.7 per 100,000**.
+
+A headline says: “Suicide became a leading cause because the death rate increased.”
+
+How would we correct the headline?
+
+What does rank tell us that a population death rate does not?
+
+::: {.notes}
+Allow 1 minute to write and 2 to debrief. Ranking compares causes by their numbers of deaths. A cause's rank can rise when deaths from another cause decline more. A population death rate uses a population denominator; proportionate mortality uses all deaths as its denominator. Neither rank nor proportionate mortality is an individual's risk. Age-adjusted rates are comparative summary measures, not individual probabilities. Fallback: write the correction on paper. Source: [CDC Data Brief 548](https://www.cdc.gov/nchs/products/databriefs/db548.htm), tables 2 and 4.
+:::
+
+## Exercise: One Death, Several Conditions
+
+**Fictional teaching case · Pairs · 8 minutes**
 
 The certifying clinician documents this sequence:
 
@@ -385,7 +215,7 @@ In two sentences, explain what the reader has misunderstood. Then identify one u
 
 **Instructor notes and debrief:** In this supplied sequence, COVID-19 is the underlying cause, respiratory distress syndrome the immediate cause, and diabetes an additional contributing condition. Multiple listed conditions do not negate the underlying cause. CDC’s certification guidance explicitly illustrates reporting COVID-19 together with pneumonia and respiratory distress. [CDC guidance](https://stacks.cdc.gov/view/cdc/86558)
 
-Legitimate uncertainties include incomplete clinical information and errors in documenting the sequence. The factual correction is not an invitation to assume every certificate is accurate.
+Legitimate uncertainties include incomplete clinical information and errors in documenting the sequence. A listed sequence can still be wrong. Fallback: use the written case and collect responses on paper.
 
 Ask: “How would ‘deaths with COVID-19 listed anywhere’ differ from ‘deaths with COVID-19 as the underlying cause’?”
 
@@ -393,9 +223,9 @@ Ask: “How would ‘deaths with COVID-19 listed anywhere’ differ from ‘deat
 :::
 
 
-## Exercise: Find the Denominator That Belongs to Our Numerator
+## Exercise: The Population Denominator
 
-<!-- Brad double-check this exercise. -->
+**Pairs · 9 minutes**
 
 **Simulated numerator:** During 2025, 2,248 Tarrant County residents died from a fictional condition.
 
@@ -410,9 +240,9 @@ Open [Census QuickFacts: Tarrant County](https://www.census.gov/quickfacts/tarra
 **Extension:** If the deaths were only among residents aged 65 or older, what would need to change?
 
 ::: {.notes}
-**How to run it and timing:** **9 minutes:** 1 minute of instructions, 3 for retrieval, 2 for calculation, and 3 for comparison and the extension. Pairs need a browser and calculator. Preparation: bookmark the page and retain the two population figures below as a fallback.
+**How to run it and timing:** **9 minutes:** 1 minute of instructions, 3 for retrieval, 2 for calculation, and 3 for comparison and the extension. Pairs need a browser and calculator. If the website is unavailable, use the two population figures on the next slide.
 
-**Instructor notes and debrief:** QuickFacts currently reports **2,248,466 residents on July 1, 2025**, and a **2020 Census count of 2,110,640**. [Census source](https://www.census.gov/quickfacts/tarrantcountytexas)
+**Instructor notes and debrief:** QuickFacts, checked September 11, 2026, reports **2,248,466 residents on July 1, 2025**, and a **2020 Census count of 2,110,640**. [Census source](https://www.census.gov/quickfacts/tarrantcountytexas)
 
 The intended calculation is:
 
@@ -431,473 +261,260 @@ Ask: “Would the same denominator work for deaths occurring in Tarrant County h
 
 
 
-## Review of Mortality: Real Data (CDC NVSS, 2023)
+## Population Data for the Exercise
 
-<!--  
-Update to: https://www.cdc.gov/nchs/products/databriefs/db548.htm
-- What does the death rate tell us?
-- What does the age-adjusted death rate tell us?
--->
+[Census QuickFacts: Tarrant County, Texas](https://www.census.gov/quickfacts/tarrantcountytexas)
 
-- Source: [CDC NCHS Data Brief 521](https://www.cdc.gov/nchs/products/databriefs/db521.htm#Key_finding)
-- Selected findings:
-  - Life expectancy: **78.4 years** (↑ 0.9 from 2022)
-  - Age-adjusted death rate: ↓ **6.0%** (798.8 → 750.5 per 100,000)
-  - Age-specific death rates decreased for all age groups ≥5 years.
-  - Leading causes unchanged: heart disease, cancer, injuries.
-  - Infant mortality: **560.2 per 100,000 live births** (no change).
+| Population measure | Residents |
+|---|---:|
+| July 1, 2025 population estimate | 2,248,466 |
+| April 1, 2020 Census count | 2,110,640 |
+
+Our simulated numerator is **2,248 resident deaths in 2025**.
+
+Which denominator fits? Calculate deaths per 100,000 residents.
 
 ::: {.notes}
+Display after retrieval, or use during the exercise if offline. These are Census values checked September 11, 2026; the deaths are fictional. The 2025 midyear estimate approximates the population exposed over that calendar year. Do not confuse the 2020 Census count with the separate estimates-base row. Expected results: 99.98 (about 100.0), versus 106.51 (about 106.5) using the older count. Pause here if splitting the module across meetings.
 :::
 
+## The DETECT Story
 
-## Leading Cause ≠ Highest Risk {.compact}
+Medics can observe older adults in their homes during emergency calls.
 
-<!--  
-This is an important concept.
-Let's make this more interactive somehow.
--->
+DETECT introduced structured screening into that work. In the pilot, medic reports of suspected elder abuse to Adult Protective Services increased.
 
-- **Leading causes of death** are ranked by **proportion of total deaths (PMR)**.
-- Ranking answers “**how many deaths?**” → **Burden**.
-- **Risk** answers “**how likely is death?**” → measured by rates (e.g., **CSMR**).
-- A cause with a lower rank can still pose **high risk** to specific populations.
-- Public health concern depends on **context**, not rank alone.
-
-> **Burden ≠ Risk**
+Does an increase in reports mean an increase in mistreatment?
 
 ::: {.notes}
+Use 1 minute of the next exercise's 8-minute allocation for the story. Explain that routine EMS and APS records were created to deliver services and document responses. They can also help answer research questions. The pilot involved MedStar medics and community-dwelling patients aged 65 or older. Its finding concerns reports, not proof that underlying occurrence increased. [Cannell et al., DETECT pilot](https://pubmed.ncbi.nlm.nih.gov/30614399/). The following numbers are a separate simulation, not results from this paper.
 :::
 
+## Exercise: Reports Doubled
 
-## Example: Suicide {.compact}
+**Simulated data—not DETECT results · Pairs · 8 minutes with story**
 
-<!--  
-I think it's also a leading cause of death in older white men.
--->
+| Equal-length period | Eligible EMS encounters | Encounters generating a report |
+|---|---:|---:|
+| Before structured screening | 1,000 | 20 |
+| After structured screening | 1,000 | 40 |
 
-- Suicide is **not a top-ranked cause of death overall**.
-- But it is a **leading cause of death among young adults**.
-- This reflects **high cause-specific mortality rates** in certain groups.
-- Key contrast:
-  - PMR (overall): low
-  - CSMR (subgroups): high
+A draft headline says: “Elder mistreatment doubled.”
+
+Write a more defensible headline. Name one additional piece of evidence that would help distinguish increased detection from increased occurrence.
 
 ::: {.notes}
+After the story: 3 minutes to calculate and rewrite, 1 to submit, and 3 to discuss. Reporting rose from 2% to 4% of eligible encounters: a 2-percentage-point increase and a doubling. A defensible headline: “The percentage of eligible EMS encounters generating a report doubled after screening began.”
+
+Better recognition, different reporting practices, changed patient mix, and changed occurrence could all contribute. Useful evidence includes comparable measures collected independently of screening, patient characteristics, and screening completion. A report records suspicion; it does not confirm mistreatment. Encounters need not represent unique people. Fallback: use the displayed table and unsigned paper responses.
 :::
 
+## Data Quality Questions
 
-## Conceptual Transition {.compact}
+**Coverage:** Who never entered the records?
 
-<!--  
-I need to figure out what she was trying to get them to think about.
-If I figure it out, I should make this slide a little more direct. If the current wording was too vague for me, it's going to be too vague for students.
-If I'm not able to figure it out, then delete this slide.
--->
+**Accuracy:** Was the event classified correctly?
 
-- You just interpreted multiple mortality measures using one short summary.
-- **Question:** What assumptions are we making about the data behind these numbers?
-- *(Write down your responses; we will revisit soon.)*
+**Consistency:** Did definitions or collection practices change?
+
+**Timeliness:** Are records recent enough for the decision?
+
+**Processing:** Were records duplicated, lost, or miscoded?
 
 ::: {.notes}
+Allow 2 minutes. Ask pairs to connect one question to an earlier example: EMS access, death-certificate classification, DETECT screening, delayed reports, or duplicate encounters. A large database does not automatically solve these problems. Fallback: give a spoken example or write one sentence.
 :::
 
+## Exercise: A Case Reaches Public Health
 
-## Epidemiologic Data {.compact}
+**Fictional scenario · Pairs · 5 minutes**
 
-<!--  
-This is too wordy. Either:
-- Break it up into multiple separate slides
-- Make it more visual
-- Turn it into an interactive exercise
--->
+A laboratory identifies a condition that must be reported under its state’s rules.
 
-- Epidemiologic data are **population-based data** used to:
-  - Describe disease occurrence
-  - Monitor health trends
-  - Identify disparities
-- Epidemiologic data capture:
-  - **Morbidity** (disease, illness)
-  - **Mortality** (death)
-- Major sources of epidemiologic data:
-  - Vital statistics
-  - Reportable/notifiable disease data
-  - Survey and surveillance data
+Put these steps in order:
+
+- CDC combines case notifications for national monitoring.
+- The laboratory reports to the appropriate health department.
+- The health department investigates and applies the surveillance case definition.
+
+Where could a person with the same disease be missed entirely?
 
 ::: {.notes}
+Allow 2 minutes to order and identify a gap, then 3 to discuss with the next slide. Correct sequence: laboratory report, health-department investigation/classification, national notification. Some people do not seek care, are not tested, or are missed by reporting processes. Investigation and notification can proceed iteratively; this is a simplified sequence, not a universal operational timetable. Fallback: number the steps on paper. [CDC case surveillance](https://www.cdc.gov/nndss/what-is-case-surveillance/index.html).
 :::
 
+## Reportable and Notifiable Conditions
 
-## Factors Affecting Epidemiologic Data Quality {.compact}
+**Reportable:** Jurisdictional rules require reports to public health authorities. Lists and requirements vary.
 
-<!--  
-These are good concepts for students to consider.
-We may want to give each concept its own slide and visual.
--->
+**Nationally notifiable:** States voluntarily send qualifying case information to CDC for national monitoring.
 
-- Data quality reflects whether the assumptions behind our measures hold.
-- Key dimensions:
-  - **Coverage:** Who is included?
-  - **Accuracy:** Are events classified correctly?
-  - **Consistency:** Are the same definitions used over time and place?
-  - **Timeliness:** How current are the data?
-  - **Processing and quality control:** Errors and checks
+The **National Notifiable Diseases Surveillance System (NNDSS)** brings these notifications together.
 
 ::: {.notes}
+Use during the preceding debrief. National notification is different from mandatory reporting within a jurisdiction. Standard case definitions support comparisons. Do not assume every national condition is reportable everywhere, or that every reported case meets criteria for national statistics. [CDC case surveillance](https://www.cdc.gov/nndss/what-is-case-surveillance/index.html).
+
+A current example of change: general COVID-19 case notification ended in 2025; COVID-19-associated pediatric mortality became nationally notifiable in 2026. This does not mean that COVID-19 monitoring stopped. [CDC notice to data users](https://www.cdc.gov/nndss/infectious-disease/notice-to-data-users.html).
 :::
 
+## Exercise: An Early Warning
 
-## Two Types of Epidemiologic Data Systems {.compact}
+**Fictional scenario · Pairs · 5 minutes**
 
-Epidemiologic data systems serve **different public health purposes**.
+Emergency departments record an unusual increase in fever-and-cough visits this week. Laboratory results are still arriving.
 
-::: {.grid-2}
-::: {.panel}
-**VITAL STATISTICS**
+1. What can we reasonably conclude now?
+2. What information would help us interpret the signal?
+3. What could explain the increase besides more infections?
 
-- Track *life events* (births, deaths)
-- Population-wide and complete
-- Designed for **long-term patterns**
-:::
-
-::: {.panel}
-**REPORTABLE/NOTIFIABLE DISEASE DATA**
-
-- Track *specific diseases*
-- Focus on timeliness and rapid detection
-- Designed for **public health action**
-:::
-:::
-
-> Same population → different questions → different systems
+Would waiting for death certificates answer the same question soon enough?
 
 ::: {.notes}
+Allow 2 minutes to discuss and 3 to debrief using the next slide. We know recorded symptom-related visits increased, not that confirmed influenza incidence rose. Examine total visits, participating facilities, coding changes, laboratory results, and timing. Healthcare-seeking behavior or another respiratory infection could explain the signal. Timely investigation can begin before certainty. Death records describe a different outcome and are not a substitute for this early signal. Fallback: discuss the written scenario without a browser.
 :::
 
+## Syndromic Surveillance
 
-## How Epidemiologic Data Are Generated and Used {.visual-only}
+Syndromic surveillance is **one form of public health surveillance**.
 
-<!-- REVIEW: The source credit for this complex vital-statistics/reportable-disease data-flow diagram was not visible in the PDF. The complete slide image is retained because its illustrated process cannot be reconstructed reliably from the PDF alone. -->
+It uses timely information, such as symptoms recorded during emergency visits, to detect and monitor health threats.
 
-<!-- 
-Consider remaking these graphics and using a TCU theme. 
-- Additionally, they are kind of busy. How can we make the key takeaway(s) jump out?
--->
+CDC’s **National Syndromic Surveillance Program (NSSP)** helps combine and use these data.
 
-<img src="assets/epidemiologic-data-flow.png" class="r-stretch" style="display: block; width: 100%; margin: 0 auto;" alt="Flow diagram comparing vital statistics with reportable and notifiable disease data. Vital events progress from certificates to state vital records offices and the National Vital Statistics System, producing population health statistics. Disease cases progress from providers and laboratories to local and state health departments and CDC or national surveillance systems, supporting public health response.">
+An early signal can prompt investigation without establishing a diagnosis.
 
 ::: {.notes}
+Use within the preceding debrief. Surveillance includes ongoing collection, analysis, interpretation, and sharing information for action. Syndromic surveillance can use information before and after diagnoses and monitor longer-term trends too. Its defining feature is not that it is the only timely form of surveillance. [CDC NSSP](https://www.cdc.gov/nssp/php/about/index.html).
 :::
 
+## Sources for Our Project Questions {.compact}
 
-## Vital Registration System {.compact}
-
-<!-- This slide is bland. Consider turning it into an interactive activity. -->
-
-- **Vital events:** births, deaths, fetal deaths, marriages, divorces
-- In the United States, these events are compiled through the **National Vital Statistics System (NVSS)**.
-- <https://www.cdc.gov/nchs/nvss/index.htm>
-
-::: {.notes}
-:::
-
-
-## Information Collected by Birth and Fetal Death Certificates {.table-slide}
-
-<!-- REVIEW: The PDF did not identify the source of Table 4.3 or the certificate image. The visible table content has been transcribed, but its bibliographic source is unresolved. -->
-
-| Variable | U.S. Certificate of Live Birth | U.S. Report of Fetal Death |
-|---|---|---|
-| Name | Child’s name | Name of fetus (optional) |
-| Disposition (e.g., burial) | Not applicable | Disposition of fetus |
-| Location | Facility name | Where delivered |
-| Mother identifying information | Name, age, and place of residence | Name, age, and place of residence |
-| Mother | Height, weight, number of previous live births | Height, weight, number of previous live births |
-| Conditions contributing to fetal death | Not applicable | Initiating cause and other causes (e.g., pregnancy complications, fetal anomalies) |
-| Risk factors in pregnancy | Diabetes, hypertension, infections | Diabetes, hypertension, infections |
-| Congenital anomalies | Anencephaly, cleft palate, Down syndrome | Anencephaly, cleft palate, Down syndrome |
-| Father | Name and age | Name and age |
-
-::: {.notes}
-:::
-
-
-## Vital Statistics Example: Texas Birth Data {.visual-only}
-
-<!-- REVIEW: The dashboard chart’s underlying plotted values were not provided in the PDF text and cannot be reconstructed faithfully. The full source slide is retained as a local asset. -->
-
-<!-- Consider turning this slide into an interactive activity. -->
-
-<img src="assets/texas-birth-data.png" class="r-stretch" style="display: block; width: 100%; margin: 0 auto;" alt="Texas live births by year from 2005 through 2020. Births fluctuate near 370,000 to 410,000, with a slight decline by 2020. Discussion asks what students notice and what features of vital registration enable trend analysis.">
-
-::: {.notes}
-:::
-
-
-## Vital Statistics Example: Texas Death Data {.visual-only}
-
-<!-- REVIEW: The dashboard chart’s underlying plotted values were not provided in the PDF text and cannot be reconstructed faithfully. The full source slide is retained as a local asset. -->
-
-<!-- Consider turning this slide into an interactive activity. -->
-
-<img src="assets/texas-death-data.png" class="r-stretch" style="display: block; width: 100%; margin: 0 auto;" alt="Texas crude death rates by age group from 2011 through 2020. Rates are highest for adults aged 75 years and older, followed by ages 65 to 74. Discussion asks students to interpret age-group patterns, the use of crude death rates, and links to earlier mortality measures.">
-
-::: {.notes}
-:::
-
-
-## Why Do Some Diseases Have to Be Reported? {.compact}
-
-<!-- This slide is bland. -->
-
-- Some diseases require **immediate public health action**.
-- Waiting for routine statistics is too slow.
-- These data support **detection, response, and control**.
-
-> Different purpose → different data system
-
-::: {.notes}
-:::
-
-
-## Reportable/Notifiable Disease Data {.compact}
-
-<!-- This slide is bland. -->
-
-- **Case-based surveillance**
-- Focus on **specific diseases** of public health importance
-- Information typically includes:
-  - Case counts (incidence)
-  - Basic person, place, and time
-  - Key clinical outcomes
-- Key tradeoff:
-  - Strength: **Timeliness**
-  - Limitation: **Incomplete population coverage**
-- Designed for action, not completeness.
-
-::: {.notes}
-:::
-
-
-## Reportable vs. Notifiable — What’s the Difference? {.compact}
-
-::: {.grid-2}
-::: {.panel}
-**REPORTABLE DISEASES**
-
-- Reported to **local or state** health departments
-- Used for **local public health action**
-- Lists vary by jurisdiction
-:::
-
-::: {.panel}
-**NOTIFIABLE DISEASES**
-
-- Reported to **national authorities** (e.g., CDC)
-- Aggregated for **national monitoring**
-- De-identified (age, sex, location)
-:::
-:::
-
-- Every notifiable disease is first reported locally.
-
-> Same case → different reporting level → different purpose
-
-::: {.notes}
-:::
-
-
-<!-- Add a slide with examples of reportable diseases as well. -->
-
-
-## Examples of Nationally Notifiable Diseases {.text-small}
-
-<!-- Source PDF page 18; split for slide readability. -->
-
-**National Notifiable Diseases Surveillance System (NNDSS):** the endpoint of the data-report flow
-
-::: {.grid-2}
-::: {}
-- Anthrax
-- COVID-19
-- Botulism
-- Gonorrhea
-- Hepatitis A, hepatitis B, hepatitis C
-- Human immunodeficiency virus (HIV) infection
-- Meningococcal disease
-:::
-
-::: {}
-- Mumps
-- Syphilis
-- Tuberculosis
-- Viral hemorrhagic fever (includes Ebola virus)
-- Zika virus disease
-:::
-:::
-
-<p class="source-line">Source: Centers for Disease Control and Prevention. National Notifiable Diseases Surveillance System (NNDSS). 2022 Nationally Notifiable Conditions. Available at: <https://ndc.services.cdc.gov/event-code-list-other-surveillance-resources/>. Accessed February 20, 2025.</p>
-
-::: {.notes}
-:::
-
-
-## Discussion: Nationally Notifiable Diseases {.compact}
-
-<!-- Source PDF page 18; split for slide readability. -->
-
-<!-- I kind of like an interactive exercise, but I'm not sure that I like this one. -->
-
-1. Pick one disease on the list. At what level would it first be reported?
-2. Why would CDC want to track this nationally?
-3. Would birth or death data ever appear on this list? Why not?
-
-::: {.notes}
-:::
-
-
-## Surveillance: From Reporting to Monitoring {.compact}
-
-<!-- Good information. Presentation is kind of bland. -->
-
-- Reporting captures **individual cases**.
-- Surveillance looks for **patterns over time**.
-- Goal: inform **ongoing public health action**.
-
-> Reporting → Surveillance → Action
-
-::: {.notes}
-:::
-
-
-## Two Approaches to Public Health Surveillance {.table-slide}
-
-| Public Health Surveillance | Syndromic Surveillance |
+| Source | What it can offer |
 |---|---|
-| Routine, ongoing monitoring | Real-time, early warning |
-| Uses confirmed diagnoses | Uses symptoms and signals |
-| Tracks incidence and trends | Detects unusual patterns |
-| **Usually takes place in:** Public health departments, registries, national systems | **Usually takes place in:** Emergency departments, urgent care, pharmacies |
-| Example: flu incidence over years | Example: spikes in fever-related ER visits |
+| **NHIS** — National Health Interview Survey | Reported health conditions, functioning, and healthcare access |
+| **NHANES** — National Health and Nutrition Examination Survey | Interviews, examinations, and laboratory measurements |
+| **BRFSS** — Behavioral Risk Factor Surveillance System | State-level adult data on behaviors, chronic conditions, and preventive services |
+
+The question determines which measurements and population we need.
 
 ::: {.notes}
+Use 2 minutes of the next exercise's 10-minute allocation to introduce the sources. NHIS and NHANES are NCHS surveys. BRFSS is a CDC/state collaboration, not an NCHS survey. For any source, inspect eligible ages, sampling, years, exact items, geography, and survey weights before estimating prevalence. Sources: [NHIS](https://www.cdc.gov/nchs/nhis/about/index.html), [NHANES](https://www.cdc.gov/nchs/nhanes/about/index.html), [BRFSS](https://www.cdc.gov/brfss/index.html).
 :::
 
+## Exercise: Which Source Fits?
 
-## Exercise: Types of Surveillance {.compact}
+**Project groups · 10 minutes with source table**
 
-<!-- Source PDF page 21; split for slide readability. -->
+For our disease topic—or diabetes if we have not chosen one—complete:
 
-<!-- The scenarios to match are on the next slide. Figure out a better way to format this. -->
+“To learn **[what]** about **[whom]**, we would first examine **[source]** because **[reason]**. We would still need to check **[limitation]**.”
 
-Match each scenario with the correct type:
+Name a measurement we need and a competing source that would answer a different question.
 
-::: {.grid-2}
-::: {.panel}
-**PUBLIC HEALTH SURVEILLANCE**
-
-Long-term, systematic, incidence and policy focus
-:::
-
-::: {.panel}
-**SYNDROMIC SURVEILLANCE**
-
-Real-time, early warning, symptom and pattern focus
-:::
-:::
+Our existing project still uses CDI or an approved alternative.
 
 ::: {.notes}
+After 2 minutes with the source table, allow 3 minutes to formulate a question, 2 to examine the linked source description, and 3 to compare recommendations. Diabetes examples: NHIS for reported diagnosis and access; NHANES for measured markers that can identify previously undiagnosed disease; BRFSS for state comparisons of reported diagnosis or behaviors. Do not assume all sources support county estimates. The course project requirement is unchanged; this is a source-selection exercise. Fallback: use the preceding table on screen or paper; list documentation to check later.
 :::
 
+## Exercise: A Parkinson’s Registry Grows
 
-## Exercise: Types of Surveillance — Scenarios {.compact}
+**Hypothetical data—not TCU results · Pairs · 5 minutes**
 
-<!-- Source PDF page 21; split for slide readability. -->
+A Parkinson’s registry adds two clinics and an online enrollment option. Enrollment rises from **200 to 350 people**.
 
-1. Health officials analyze flu vaccination rates every year to guide next season’s immunization campaign.
-2. A sudden rise in ER visits for fever and cough signals a possible flu outbreak.
-3. Monitoring long-term cancer incidence to plan screening programs.
-4. Tracking over-the-counter cold medicine sales during winter to catch early spikes.
+Can we conclude that Parkinson’s incidence increased?
 
-Focus on *why* one approach fits better than the other.
+What would we need to know about diagnosis dates, duplicate records, and who could enroll?
+
+Name one question this registry could help answer even without measuring population incidence.
 
 ::: {.notes}
+Allow 2 minutes to discuss and 3 to debrief. Enrollment rose by 150 people, but newly enrolled people need not be newly diagnosed. Expanded recruitment alone could explain the increase. Population incidence requires new cases during a defined interval and an appropriate population at risk, with adequate case ascertainment. A registry can still help describe enrolled participants, support recruitment, or follow their outcomes. Do not generalize a clinic or volunteer registry to all residents. Fallback: write a conclusion and limitation on paper. This is a hypothetical design exercise, not a description of TCU's actual registry.
 :::
 
+## Exercise: Comparing Countries
 
-## Public Health Surveillance Programs {.compact}
+**Fictional data · Pairs · 5 minutes**
 
-<!-- Break this up into multiple slides -->
+Two countries each report **1,000 influenza cases** this month.
 
-- **Communicable and infectious diseases**
-  - Track cases, hospitalizations, and spread
-  - *Example:* COVID-19 surveillance (cases, hospitalizations)
-  - *Example:* National Wastewater Surveillance System (NWSS)
-- **Chronic diseases**
-  - Monitor long-term incidence and outcomes
-  - *Example:* Cancer registries (incidence, types, outcomes)
-  - *Example:* CDC Chronic Disease Indicators (CDI; state-level indicators for chronic disease patterns)
-- **Risk factors for chronic disease**
-  - Track behaviors and exposures
-  - *Example:* BRFSS (obesity, smoking, physical activity)
+Country A reports laboratory-confirmed cases from selected hospitals. Country B reports symptom-defined cases from clinics nationwide.
+
+Can we rank their influenza burden from these counts?
+
+What would we need to make a useful comparison? What could international coordination contribute?
 
 ::: {.notes}
+Allow 2 minutes for pairs and 3 for debrief with the next slide. Equal counts do not imply equal incidence. Definitions, testing, coverage, population denominators, and time periods must be considered. Simply dividing by each country's population does not resolve incompatible case definitions or coverage. Fallback: use the written scenario and collect one proposed improvement per pair.
 :::
 
+## International Coordination
 
-## National Center for Health Statistics (NCHS) {.compact}
+WHO’s **Global Influenza Surveillance and Response System (GISRS)** connects national institutions that share respiratory-virus data.
 
-<!-- Add BRFSS -->
+Shared definitions and laboratory methods help us interpret differences between places.
 
-**NCHS is a major source of U.S. population-based health data.**
-
-- NCHS data complement surveillance by describing population health beyond reported cases.
-- **Survey-based systems**
-  - **NHIS:** health status, access to care, prevention
-  - **NHANES:** exams and interviews (diet, activity, disease prevalence)
-- **Vital statistics**
-  - **NVSS:** births, deaths, life expectancy, leading causes of death
+International organizations can coordinate information; they cannot make missing or incompatible observations disappear.
 
 ::: {.notes}
+Use within the preceding debrief. WHO coordinates collaboration among participating institutions; FluNet shares virologic surveillance data and FluID shares epidemiologic surveillance data. This connects local observations to global monitoring and response. [WHO GISRS](https://www.who.int/initiatives/global-influenza-surveillance-and-response-system).
 :::
 
+## Check on Learning: Choosing a Source {.quiz}
 
-## Why International Organizations Matter {.compact}
+{{< include quiz-slides/disease-data-application-source.qmd >}}
 
-<!-- Make this slide more visual. -->
+## Check on Learning: Interpreting an Increase {.quiz}
 
-- Diseases cross national borders.
-- Data must be **comparable across countries**.
-- Surveillance and response require **coordination**.
+{{< include quiz-slides/disease-data-application-reporting.qmd >}}
+
+## Our Questions for Any Dataset
+
+What question can these records answer?
+
+Who and what do they count—and miss?
+
+Does the denominator match the numerator?
+
+What could change the records without changing disease occurrence?
 
 ::: {.notes}
+Allow 1 minute to close. Invite students to carry these questions into their group projects. The preceding two checks take about 3 minutes together: individual choice, brief pair explanation, then debrief. Stop here for the core module; the following activity is optional.
 :::
 
+## Optional Exercise: Google Trends {.compact}
 
-## What International Organizations Do {.compact}
+**Pairs · 9 minutes**
 
-- **Surveillance and reporting** — global monitoring
-  - *Example:* WHO Global Influenza Surveillance and Response System (GISRS)
-- **Policy guidance** — shared recommendations
-  - *Example:* UNAIDS guidance for HIV/AIDS programs
-- **Resource support** — capacity and access
-  - *Example:* Gavi, the Vaccine Alliance
+In [Google Trends](https://trends.google.com/trends/), compare the search terms **“elder abuse”** and **“elder mistreatment.”**
+
+Use **United States · January 1–December 31, 2023 · Web Search**.
+
+Write one sentence describing the search data and one tempting conclusion they cannot establish.
+
+The **0–100 index** describes relative search interest, not numbers of people or cases. What else could make searches increase?
 
 ::: {.notes}
+Allow 1 minute for setup, 3 to explore, 2 to write, and 3 to compare. Use search terms, not topics; record settings and do not require a specific peak. Relative interest is normalized within the comparison. News coverage, coursework, or changed terminology can alter searches; searching is not a validated disease count. Low-volume terms can appear as zero, and Google's statistical noise can produce misleading small spikes. [Google Trends explanation](https://support.google.com/trends/answer/4365533?hl=en).
+
+Fallback: use simulated indices 25, 50, and 100 across three weeks, displayed on the next slide. Ask students to revise “Cases quadrupled.” The simulation illustrates interpretation, not real findings.
 :::
 
+## Google Trends: Offline Exercise
 
-## Key Takeaways: Epidemiologic Data {.compact}
+**Simulated relative search-interest indices**
 
-- Epidemiology depends on **population-based data** to describe health patterns.
-- **Different public health questions require different data systems.**
-- **Vital statistics** describe long-term population patterns (births, deaths).
-- **Reportable disease data** support rapid detection and public health response.
-- **Surveillance** turns reported data into ongoing monitoring and action.
-- **Data quality** determines what conclusions can (and cannot) be drawn.
-- Selecting an appropriate data source is a **critical epidemiologic decision**.
+| Week | Index |
+|---|---:|
+| 1 | 25 |
+| 2 | 50 |
+| 3 | 100 |
+
+A headline says: “Cases quadrupled.”
+
+What did the data actually measure? Write a better headline and give another possible explanation.
 
 ::: {.notes}
+Use only if the preceding live activity is unavailable, within its 9-minute allocation. A defensible statement is that the simulated relative search-interest index increased from 25 to 100. These values do not count cases, people, or absolute searches. A public-awareness campaign could change the signal. Reinforce that association and prediction do not establish causation. Source for interpretation: [Google Trends explanation](https://support.google.com/trends/answer/4365533?hl=en).
 :::
-
-<!-- Add a check on learning quiz. -->
