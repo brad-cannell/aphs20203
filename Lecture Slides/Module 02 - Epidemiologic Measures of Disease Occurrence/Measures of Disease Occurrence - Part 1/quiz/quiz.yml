@@ -4,7 +4,7 @@
 # the Reveal.js slides, the QR-code participation prompts, and the printed
 # low-tech fallback handout. Create matching Poll Everywhere activities from
 # this source; make future changes here first, synchronize the activities, and
-# rebuild with _ai/tools/python/build_quiz_slides.py.
+# rebuild with _presentations/scripts/presentation_build_quiz_slides.py.
 #
 # Schema
 # ------

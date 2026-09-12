@@ -2,9 +2,11 @@ project:
   type: website
   output-dir: _site
   pre-render:
-    - python3 "/Users/bradcannell/Desktop/Git/knowledge-workbench/_presentations/scripts/build_quiz_slides.py" .
+    - >-
+      "/Users/bradcannell/Desktop/Git/knowledge-workbench/_ai/tools/python/.venv/bin/python" "/Users/bradcannell/Desktop/Git/knowledge-workbench/_presentations/scripts/presentation_build_quiz_slides.py" .
   post-render:
-    - python3 "/Users/bradcannell/Desktop/Git/knowledge-workbench/_presentations/scripts/render_presentation.py" --site-output-dir _site
+    - >-
+      "/Users/bradcannell/Desktop/Git/knowledge-workbench/_ai/tools/python/.venv/bin/python" "/Users/bradcannell/Desktop/Git/knowledge-workbench/_presentations/scripts/presentation_render.py" --site-output-dir _site
   render:
     - index.qmd
     - "Module 01 - Welcome and Overview/Introduction to Epidemiology/Introduction to Epidemiology.qmd"

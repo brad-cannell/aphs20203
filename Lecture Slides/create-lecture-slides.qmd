@@ -1,5 +1,7 @@
 ---
 title: "Creating Lecture Slides"
+execute:
+  eval: false
 ---
 
 # Overview
@@ -7,15 +9,68 @@ title: "Creating Lecture Slides"
 - A guide for creating lecture slides for APHS 20203, Epidemiology and Biostatisics.
 - Clean this up later. For now, just get it operational.
 
+# Python Setup
+
+In Positron, select `knowledge-workbench/_ai/tools/python/.venv/bin/python` as the Python interpreter. Create that environment if needed with `python3 -m venv _ai/tools/python/.venv` from the KWB root, then install `-r _presentations/scripts/requirements.txt` with that environment's `python -m pip install`. Quarto must also be on `PATH`. The conversion guide in KWB has the complete setup commands.
+
+Run these chunks manually. Rendering this workflow document does not execute them. Set the machine-specific roots here once.
+
 ```{python}
+#| eval: false
+
 from pathlib import Path
 import subprocess
 import sys
+
+kwb_root = Path("/Users/bradcannell/Desktop/Git/knowledge-workbench")
+course_root = Path("/Users/bradcannell/Desktop/Git/Academia/Teaching/aphs20203")
+lecture_root = course_root / "Lecture Slides"
+script_root = kwb_root / "_presentations/scripts"
+if str(script_root) not in sys.path:
+    sys.path.insert(0, str(script_root))
+
+from presentation_convert import presentation_pptx_to_quarto
 ```
 
-# Create a Presentation Directory
+# Create a Draft from an Existing PowerPoint
 
-- Copy and past the template for now. I'm working on a more systematic approach, though.
+Select the source and a new deck folder. The example creates a draft beside the existing Introduction presentation. The converter creates the folder, local styles, empty bibliography and title partial, editable assets, source evidence, and review files. It references the course's shared theme. A template copy is unnecessary for conversion.
+
+```{python}
+#| eval: false
+
+source = lecture_root / "Module 01 - Welcome and Overview/Introduction to Epidemiology.pptx"
+output_qmd = lecture_root / "Module 01 - Welcome and Overview/Introduction to Epidemiology Draft/Introduction to Epidemiology.qmd"
+print(f"Source: {source}\nDraft: {output_qmd}")
+
+conversion = presentation_pptx_to_quarto(
+    source=source,
+    output_qmd=output_qmd,
+    title="Introduction to Epidemiology",
+    subtitle="APHS 20203",
+    project_root=lecture_root,
+    shared_theme=lecture_root / "_theme/tcu.scss",
+    report=True,
+)
+print(f"Draft: {conversion['qmd']}\nReport: {conversion['report']}")
+print(f"Structural errors: {conversion['errors']}")
+print(f"Items needing review: {len(conversion['review_needed'])}")
+```
+
+The output folder must be new or empty. For an existing draft, open its `.qmd` and `conversion/review.md`; do not rerun conversion. Use the stage commands in KWB's *Convert Presentation Sources to Quarto* guide for inspection and structural QA. The same guide documents standalone decks and PDF/Markdown inputs.
+
+# Review and Refine the Draft
+
+Work on one slide or section at a time. Save review findings and decisions in the draft's `conversion/review.md`, with the selected slide IDs, date, reviewer, and reviewed QMD hash. Preserve source evidence under `conversion/`. Instructor review files must remain outside the published site.
+
+1. Compare the draft with the PowerPoint source. Resolve missing content, reading order, bullet levels, titles, notes, tables, links, and unsupported objects before refining prose.
+2. Refine Quarto structure and layout. Split dense slides when useful, preserving source wording unless a specific content revision is approved. Update `conversion/source-map.yml` after splits, merges, or additions. Reuse `_theme/tcu.scss`; keep deck-specific styles in `custom.scss`.
+3. Review images in context for alt text, captions, and decorative status. Check headings, reading order, contrast, and source-supported citations. Keep unresolved issues visible.
+4. Render locally and inspect HTML and PDF for missing content, clipping, small text, blank slides, image failures, and citation problems. Record the current input hashes and recheck affected slides after edits.
+
+These are manual review steps. The focused presentation review skills are tracked in KWB's *Build a Script-Driven Presentation-to-Quarto Conversion Pipeline* task; use a bounded source-and-draft review in chat until those skills are delivered. A structural pass or successful render does not establish classroom readiness.
+
+For a local course check, use a disposable copy of `Lecture Slides/` with the draft added to its render list and run `quarto render` there. Its pre/post-render hooks use the same KWB Python environment to build quiz materials and PDFs. If a fresh copy lacks generated include files, run `presentation_build_quiz_slides.py` on that copy once before rendering; Quarto may inspect include paths before running its pre-render hook. Keep review files out of the published resources. When the reviewed course is ready for release, use the existing `quarto publish gh-pages` process from `Lecture Slides/`.
 
 # Create In-Class Learning Activities
 
@@ -42,7 +97,7 @@ import sys
 ```{python}
 #| eval: false
 
-script = Path("/Users/bradcannell/Desktop/Git/knowledge-workbench/_ai/tools/python/build_poll_everywhere_import.py")
+script = script_root / "presentation_build_poll_everywhere_import.py"
 quiz = Path("/Users/bradcannell/Desktop/Git/Academia/Teaching/aphs20203/Lecture Slides/Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml")
 
 subprocess.run([sys.executable, script, quiz], check=True)
@@ -61,7 +116,7 @@ subprocess.run([sys.executable, script, quiz], check=True)
 #| eval: false
 
 python_executable = sys.executable
-include_script = Path("/Users/bradcannell/Desktop/Git/knowledge-workbench/_ai/tools/python/generate_quiz_includes.py")
+include_script = script_root / "presentation_generate_quiz_includes.py"
 quiz = Path("/Users/bradcannell/Desktop/Git/Academia/Teaching/aphs20203/Lecture Slides/Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml")
 
 generated = subprocess.run(
@@ -85,4 +140,3 @@ generated = subprocess.run(
 subprocess.run(["pbcopy"], input=generated.stdout, check=True, text=True)
 print("Copied the generated quiz includes to the clipboard.")
 ```
-
