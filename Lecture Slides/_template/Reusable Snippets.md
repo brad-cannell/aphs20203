@@ -2,9 +2,18 @@
 
 ## Frequently Used Comments
 
+<!-- 🔴 Left off here. -->
+
 <!-- Make this slide more visual and less wordy. -->
 
 <!-- Summarize the slide notes into easily-scannable bullets. -->
+
+
+## Classes
+
+{.fragment} - {.incremental}
+{visibility="hidden"}
+{.spaced-options}
 
 ## AI Prompts
 
@@ -34,3 +43,35 @@ Please break this long paragraph into bullet points that are easier to skim whil
   publisher = {Jones & Bartlett Learning},
   edition = {3rd}
 }
+
+
+## In-Class Exercises
+
+### Notes
+
+::: {.notes}
+**Instructions**
+
+- Take 2 minutes to answer these questions with your group.
+
+**Discussion**
+
+- Option 1 allows us to answer questions about residents’ experiences; 
+- Option 2 allows us to answer questions about serious illness and healthcare use; 
+- Option 3 allows us to answer questions about environmental conditions and geographic targeting. 
+- The value of each data sources changes as the question changes.
+
+**Follow-up**
+
+- Ask: “What would your chosen source leave unanswered?”
+- Neither primary nor secondary data guarantees **quality**. 
+- Neighborhood data can be relevant to health without containing diagnoses.
+
+**Takeaway**: 
+- Choose the source after clarifying the question.
+:::
+
+
+### Timer
+
+{{< countdown minutes=2 warn_when=30 start_immediately=false >}}
