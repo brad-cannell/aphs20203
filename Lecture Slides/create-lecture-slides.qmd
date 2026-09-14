@@ -11,7 +11,7 @@ execute:
 
 # Python Setup
 
-In Positron, select `knowledge-workbench/_ai/tools/python/.venv/bin/python` as the Python interpreter. Create that environment if needed with `python3 -m venv _ai/tools/python/.venv` from the KWB root, then install `-r _presentations/scripts/requirements.txt` with that environment's `python -m pip install`. Quarto must also be on `PATH`. The conversion guide in KWB has the complete setup commands.
+From the `aphs20203` repository root, run `sh _ai/tools/shell/setup_python.sh` once, then select `aphs20203/.venv/bin/python` as the Python interpreter in Positron. Quarto must also be on `PATH`. The course [README](../README.md#python-setup) owns environment setup and course build instructions; KWB retains the shared scripts and general conversion guide.
 
 Run these chunks manually. Rendering this workflow document does not execute them. Set the machine-specific roots here once.
 
@@ -25,6 +25,14 @@ import sys
 kwb_root = Path("/Users/bradcannell/Desktop/Git/knowledge-workbench")
 course_root = Path("/Users/bradcannell/Desktop/Git/Academia/Teaching/aphs20203")
 lecture_root = course_root / "Lecture Slides"
+
+# Match the interpreter used by the course's Quarto hooks so manual chunks
+# have the same QR, PDF, and conversion dependencies as preview and builds.
+if Path(sys.prefix).resolve() != (course_root / ".venv").resolve():
+    raise RuntimeError("Select aphs20203/.venv/bin/python in Positron, then restart the Python session.")
+
+# Import the canonical shared tools from KWB without relying on its Python
+# environment or creating a second copy of the presentation scripts.
 script_root = kwb_root / "_presentations/scripts"
 if str(script_root) not in sys.path:
     sys.path.insert(0, str(script_root))
@@ -70,7 +78,7 @@ Work on one slide or section at a time. Save review findings and decisions in th
 
 These are manual review steps. The focused presentation review skills are tracked in KWB's *Build a Script-Driven Presentation-to-Quarto Conversion Pipeline* task; use a bounded source-and-draft review in chat until those skills are delivered. A structural pass or successful render does not establish classroom readiness.
 
-For a local course check, use a disposable copy of `Lecture Slides/` with the draft added to its render list and run `quarto render` there. Its pre/post-render hooks use the same KWB Python environment to build quiz materials and PDFs. If a fresh copy lacks generated include files, run `presentation_build_quiz_slides.py` on that copy once before rendering; Quarto may inspect include paths before running its pre-render hook. Keep review files out of the published resources. When the reviewed course is ready for release, use the existing `quarto publish gh-pages` process from `Lecture Slides/`.
+For a local course check, follow the disposable-copy instructions in the course [README](../README.md#validation-copies), add the draft to that copy's render list, and run `quarto render` there. Its hooks use the course Python environment to build quiz materials and PDFs. If a fresh copy lacks generated include files, run the README's quiz-generation command on that copy once before rendering; Quarto may inspect include paths before running its pre-render hook. Keep review files out of the published resources. When the reviewed course is ready for release, use the existing `quarto publish gh-pages` process from `Lecture Slides/`.
 
 # Create In-Class Learning Activities
 

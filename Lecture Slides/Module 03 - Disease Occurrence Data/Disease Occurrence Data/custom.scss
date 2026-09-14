@@ -45,6 +45,16 @@
   margin-top: 0.25em;
 }
 
+// Add a full line above and below the choices; padding prevents margin collapse.
+.reveal .spaced-options {
+  padding-block: 1lh;
+}
+
+// Add breathing room between exercise choices written as paragraphs.
+.reveal .spaced-options > p + p {
+  margin-top: 0.8em;
+}
+
 // Keep long quiz options and full-size QR codes within the slide canvas.
 .reveal .quiz .quiz-options {
   max-width: 90%;
