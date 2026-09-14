@@ -42,6 +42,19 @@ By the end of this week, you should be able to:
 :::
 
 
+# Reading Comprehension Quiz {.section}
+
+::: {.notes}
+Before diving in, let's complete a reading comprehension exercise to refresh your memory and solidify what you read for this week.
+:::
+
+
+<!--  
+The reading comprehension quiz uses Poll Everywhere.
+Change to AhaSlides or slide-quiz when time allows.
+-->
+
+
 ## Reading Comprehension Quiz 01 {#disease-data-linkage .quiz}
 
 {{< include quiz-slides/disease-data-linkage.qmd >}}
@@ -220,9 +233,11 @@ D: Good effort. NHANES collects information from participants through interviews
 -->
 
 
-## Data Sources
+# Data Sources {.section}
 
-- Primary vs. secondary data
+## Primary vs. Secondary Data
+
+![](assets/primary-vs-secondary-data.png){width=90% fig-alt="Primary data: a researcher interviews a participant to collect data. Secondary data: a researcher uses existing health records and databases."}
 
 ::: {.notes}
 - One way to categorize the data we often use in epidemiology is primary vs. secondary data.
@@ -243,15 +258,15 @@ D: Good effort. NHANES collects information from participants through interviews
 
 Our county wants to understand barriers to staying safe during extreme heat. We can fund one initial approach:
 
-::: {.spaced-options}
-**Option 1.** Interview residents about cooling access and transportation. We can ask exactly what we need, but recruitment takes time and some residents may not respond.
+::: {.spaced-options .fragment}
+**Option 1.** Interview residents about cooling access and transportation. We can ask exactly what we need to ask, but recruitment takes time and some residents may not respond.
 
-**Option 2.** Analyze existing emergency-department records. They show serious health events, but miss people who never reach an emergency department.
+**Option 2.** Analyze existing emergency-department records. They contain detailed records of serious health events, but miss people who never reach an emergency department.
 
 **Option 3.** Combine existing housing, tree-cover, and population data. They describe neighborhood conditions, but do not tell us who became ill.
 :::
 
-### Which would we start with and why?
+### Which would we start with and why? {.fragment}
 
 {{< countdown minutes=2 warn_when=30 start_immediately=false >}}
 
@@ -262,24 +277,23 @@ Our county wants to understand barriers to staying safe during extreme heat. We 
 
 **Discussion**
 
-- Option 1 fits questions about residents’ experiences; 
-- Option 2 fits serious illness and healthcare use; 
-- Option 3 fits environmental conditions and geographic targeting. 
-- Each becomes more or less useful as the question changes.
+- Option 1 allows us to answer questions about residents’ experiences; 
+- Option 2 allows us to answer questions about serious illness and healthcare use; 
+- Option 3 allows us to answer questions about environmental conditions and geographic targeting. 
+- The value of each data sources changes as the question changes.
 
 **Follow-up**
 
 - Ask: “What would your chosen source leave unanswered?”
-- Neither primary nor secondary data guarantees quality. 
+- Neither primary nor secondary data guarantees **quality**. 
 - Neighborhood data can be relevant to health without containing diagnoses. 
-- Takeaway: Choose the source after clarifying the question.
+- **Takeaway**: Choose the source after clarifying the question.
 :::
 
 
-## Data Sources
+## Health Data vs. Health Insights from Repurposed Data
 
-- Primary vs. secondary data
-- Health data by design vs. health insights from repurposed data
+![](assets/health-data-vs-repurposed-data.png){width=90% fig-alt="Data collected for health, illustrated by a health examination and records, compared with online search activity repurposed for health research."}
 
 ::: {.notes}
 - In epidemiology, we frequently use data that was collected explicitly to understand health (e.g., Vital Statistics, NHANES).
@@ -287,29 +301,58 @@ Our county wants to understand barriers to staying safe during extreme heat. We 
 - We will see examples of both.
 :::
 
+# Health {.section}
 
-## Vital Events
+::: {.notes}
+We'll start by discussing data that was collected for tracking human health.
+:::
 
-<!-- Consider replacing with multiple choice questions. -->
 
-::: {.incremental}
-- Deaths, births, marriages, divorce, and fetal deaths.
-- Legally mandated.
-- Births: Local -> State
+## Vital Events: Check Understanding
+
+Which group consists entirely of **vital events**?
+
+::: {.spaced-options}
+**A.** Births, deaths, and hospital admissions.  
+**B.** Births, marriages, and vaccinations.  
+**C.** Births, deaths, marriages, divorces, and fetal deaths.  
+**D.** Deaths, divorces, and new cancer diagnoses.  
+:::
+
+::: {.fragment}
+**Correct answer: C.** Vital events include births, deaths, marriages, divorces, and fetal deaths.
 :::
 
 ::: {.notes}
-- Perhaps the most basic health data is births and deaths.
-- In the United States, birth certificates are managed, stored, and issued by individual state and local governments.
-- Death certificates are also managed and stored by individual state, county, or local vital statistics offices.
-- However, the NCHS, a division of the CDC, tracks every single death occurring within the US.
+- A: Hospital admissions describe healthcare use and are not vital events.
+- B: Vaccinations are preventive healthcare services and are not vital events.
+- C: All five are vital events.
+- D: New cancer diagnoses can be tracked in a cancer registry, but they are not vital events.
 :::
 
 
-## Vital Events - Mortality
+## Vital Events
 
-- Deaths, births, marriages, divorce, and fetal deaths.
-- Legally mandated.
+- Legally mandated
+
+::: {.notes}
+- Perhaps the most basic health data is births and deaths.
+:::
+
+
+## Vital Events: Births
+
+- Legally mandated
+- Births: Local -> State
+
+::: {.notes}
+- In the United States, birth certificates are managed, stored, and issued by individual state and local governments.
+:::
+
+
+## Vital Events: Deaths
+
+- Legally mandated
 - Births: Local -> State
 - Deaths: Local -> State -> Federal (NCHS)
 
@@ -327,23 +370,54 @@ https://www.cdc.gov/nchs/nvss/index.htm
 
 Open [CDC’s *Mortality in the United States, 2024*](https://www.cdc.gov/nchs/products/databriefs/db548.htm). Each pair takes one task:
 
+::: {.spaced-options}
 - **A. Life expectancy:** Find life expectancy at birth. Explain why it is not a promise about how long a particular newborn will live.
 
 - **B. Death rates:** Find the age-adjusted death rates for 2023 and 2024. Explain what age adjustment contributes to the comparison.
 
 - **C. Leading causes:** Find which cause entered the top ten in 2024. Did its age-adjusted death rate increase?
+:::
 
 Produce two sentences: one accurate finding with year and units, and one interpretation or limitation.
 
+{{< countdown minutes=4 warn_when=30 start_immediately=false >}}
+
+<!-- 🔴 Left off here. Clean up the notes and add the correct answers to the next slide. -->
+
 ::: {.notes}
-- **How to run it and timing:** **8 minutes:** 1 minute to assign tasks, 3 for retrieval, 1 to write, and 3 for up to three voluntary reports and synthesis. Preparation: link directly to the brief and have its tables available on paper.
+**Instructions**
+
+- 1 minute to assign tasks
+- 3 for retrieval
+- 1 to write
+- 3 for up to three voluntary reports and synthesis.
 - **Instructor notes and debrief:**  Verified answers are **79.0 years**; **750.5 versus 722.1 deaths per 100,000 standard population**; and **suicide**, whose age-adjusted rate declined from **14.1 to 13.7** even as it became the tenth leading cause. [CDC brief](https://www.cdc.gov/nchs/products/databriefs/db548.htm).
+- The interpretation: 79.0 years is the average lifespan that hypothetical cohort would have if it experienced 2024’s age-specific mortality rates throughout life. It is neither the observed average age of people who died in 2024 nor a forecast of the actual lifespan of babies born that year. Future mortality conditions can change.
 - Life expectancy summarizes mortality conditions; age adjustment facilitates comparisons accounting for age composition. Ranking is relative to other causes, so a rank can rise while a rate falls. Ask: “Which finding would we use to compare mortality across populations with different age structures?”
 - **Takeaway:** Report the measure and its meaning together.
 :::
 
+## Mortality Data for the Exercise {.compact}
 
-## Leading Cause ≠ Highest Risk {.compact}
+[CDC: Mortality in the United States, 2024](https://www.cdc.gov/nchs/products/databriefs/db548.htm)
+
+| Measure | 2023 | 2024 |
+|---|---:|---:|
+| Life expectancy at birth | 78.4 years | 79.0 years |
+| All-cause age-adjusted death rate | 750.5 | 722.1 |
+| Suicide age-adjusted death rate | 14.1 | 13.7 |
+
+::: {.aside}
+- Rates are deaths per 100,000 U.S. standard population.
+- Suicide entered the ten leading causes in 2024; COVID-19 dropped out.
+:::
+
+::: {.notes}
+Use as a debrief after retrieval, or display throughout if internet access fails. Values come from CDC Data Brief 548, January 2026, tables 1, 2, and 4. Life expectancy applies the period's age-specific mortality conditions; it does not predict one child's lifespan. Age adjustment supports comparisons with a common age distribution. Keep this debrief within the preceding exercise's 8 minutes.
+:::
+
+
+## Leading Cause ≠ Highest Risk {.compact visibility="hidden"}
 
 <!--  
 This is an important concept.

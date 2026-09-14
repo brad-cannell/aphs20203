@@ -1,0 +1,12 @@
+Generated using the built-in image_gen tool.
+
+Use case: scientific-educational
+Asset type: wide illustration asset for a university epidemiology slide titled "Health Data vs. Health Insights from Repurposed Data". Create the illustration, not a complete slide.
+Primary request: show two routes to studying population health, distinguished by the ORIGINAL PURPOSE of data collection, not primary versus secondary data.
+Style: polished friendly flat editorial illustration, crisp shapes, natural human proportions, white background, deep purple and lavender with muted teal accents, charcoal details; match a companion illustration showing researchers and participants in this palette. Large readable bold sans-serif text.
+Composition: landscape 2:1 aspect ratio. Two equal panels, ample whitespace, faint lavender vertical divider. Both sides are equally valid. Pure white edges. No overall title.
+Left panel heading exactly: "Collected for health"
+Left scene: a health-survey professional measuring an adult participant's blood pressure, with an oversized health-survey clipboard and a vital-record document nearby, communicating purpose-built health information. Below illustration, two modest legible example labels on a single line: "Vital statistics • NHANES".
+Right panel heading exactly: "Repurposed for health"
+Right scene: a casually dressed adult using a phone to search online; an enlarged generic search box containing only a magnifying-glass icon appears above the phone. A clear curved arrow leads from the search activity to a researcher's laptop displaying a simple illustrative search-interest trend line, with a magnifying glass indicating analysis. This shows everyday search activity becoming data for health research. No medical cross or heartbeat on the search box or trend, and do not imply searches are confirmed diagnoses or disease counts. Below illustration, exact example label: "Google Trends".
+Constraints: only the five text strings specified (two headings, two left examples separated with a bullet, and right example); no other labels, numbers, letters, brand logos or watermark. Keep source-to-analysis flow simple. No primary/secondary labels, no superiority ranking, no actual empirical data. Minimal clutter, large visual elements and readable type for classroom projection.

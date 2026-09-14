@@ -81,15 +81,24 @@ $code-block-color: $tcu-white;
   padding-top: 0.24em;
 }
 
+// Separate content-slide titles from the body with a thin TCU-purple rule.
+.reveal .slides section.slide:not(.section) > h2 {
+  border-bottom: 2px solid $tcu-purple;
+  padding-bottom: 0.2em;
+}
+
 .reveal .slides section.section {
   box-sizing: border-box;
   min-height: 100%;
   padding: 1.1em;
+  // Center section content vertically while preserving Reveal's slide visibility.
+  align-content: center;
   background: $tcu-purple;
   color: $tcu-white;
 }
 
 .reveal .slides section.section h1 {
+  margin-block: 0;
   color: $tcu-white;
   border-bottom-color: $tcu-white;
 }

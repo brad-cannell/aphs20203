@@ -1,0 +1,10 @@
+Generated using the built-in image_gen tool.
+
+Use case: scientific-educational
+Asset type: wide illustration asset for a university epidemiology lecture slide titled Data Sources, not an entire slide.
+Primary request: illustrate primary versus secondary data through two clear, equally weighted scenes.
+Composition: landscape 2:1 aspect ratio, clean white background, two spacious side-by-side panels separated only by generous whitespace and a very light vertical line. Large legible dark-purple sans-serif headings. Very little text.
+Left panel exact heading: "Primary data". Below, a polished flat editorial illustration of a researcher with a clipboard interviewing an adult participant, with a small survey form and pencil integrated into the scene. Exact subtitle beneath: "Collect data ourselves".
+Right panel exact heading: "Secondary data". Below, a matching illustration of a researcher at a laptop using existing records, with a tidy group of a medical-record folder, a population-table document, and a database cylinder visibly feeding toward the laptop. Exact subtitle beneath: "Use data already collected".
+Style: sophisticated friendly flat illustration, simple human figures with natural proportions, crisp shapes, subtle texture at most, deep purple and lavender accents with muted teal secondary accents and charcoal details. Restrained academic aesthetic, ample white space, strong readability from the back of a classroom. Show both approaches as equally valid.
+Constraints: ONLY the four specified text strings, spelled exactly, no other letters or numbers. No overall title, no footer, no branding, no watermark, no decorative charts or random data, no superiority ranking. Keep illustration details large and uncluttered. Pure white canvas edges for seamless placement on a white slide.
