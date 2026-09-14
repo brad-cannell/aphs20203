@@ -1,0 +1,9 @@
+# Course runtime for KWB's shared presentation tools and manual Positron chunks.
+# Direct dependencies pinned to the versions verified in the working slide build.
+# KWB owns the scripts; this repository owns the course's installed environment.
+PyYAML==6.0.3
+python-pptx==1.0.2
+pdfplumber==0.11.10
+qrcode[pil]==8.2
+websocket-client==1.9.2
+ipykernel==7.3.0

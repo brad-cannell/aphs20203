@@ -3,3 +3,6 @@
 
 # Quarto files
 .quarto/
+
+# Recreate the course Python environment with the setup script; never commit it.
+/.venv/
