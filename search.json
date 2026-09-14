@@ -4,7 +4,7 @@
     "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#learning-objectives",
     "title": "Disease Occurrence Data",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nBy the end of this week, you should be able to:\n\nIdentify key factors that influence epidemiologic data quality.\nDistinguish between vital statistics and reportable/notifiable disease data.\nIdentify major surveillance programs in the United States.\nDescribe major sources of epidemiologic data used in public health.\nExplain the role of international organizations in collecting and disseminating epidemiologic data.\n\n\n\nIn our last module we learned about calculating some foundational epidemiologic measures.\nAsk the class to recall some examples of measures.\nBut where do we get the data? That’s today’s topic.\nBefore diving in, let’s complete a reading comprehension exercise to refresh your memory and solidify what you read for this week."
+    "text": "Learning Objectives\n\nBy the end of this week, you should be able to:\n\nIdentify key factors that influence epidemiologic data quality.\nDistinguish between vital statistics and reportable/notifiable disease data.\nIdentify major surveillance programs in the United States.\nDescribe major sources of epidemiologic data used in public health.\nExplain the role of international organizations in collecting and disseminating epidemiologic data.\n\n\n\nIn our last module we learned about calculating some foundational epidemiologic measures.\nAsk the class to recall some examples of measures of event/disease/outcome occurrence that are commonly used in epidemiology.\nBut where do we get the data to calculate those measures? That’s today’s topic.\nBefore diving in, let’s complete a reading comprehension exercise to refresh your memory and solidify what you read for this week."
   },
   {
     "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#disease-data-linkage",
@@ -77,53 +77,67 @@
     "text": "Reading Comprehension Quiz 10\n\n\nHow does the National Health and Nutrition Examination Survey (NHANES) differ from the National Health Interview Survey (NHIS)?\n\n\nA. NHANES gathers death certificates instead of conducting interviews.\nB. NHANES uses only interviews, while NHIS adds physical examinations.\nC. NHANES adds physical examinations to interviews, while NHIS uses interviews only.\nD. NHANES gathers published research articles instead of information from participants.\n\n\nRespond here\n\n\n\nAnswer: C. A: Good effort. NHANES collects information through interviews and examinations. Death certificates are a separate source of health data.\nB: Keep going. The distinction is reversed: NHANES includes physical examinations, while NHIS collects information through interviews only.\nC: That’s right. Both surveys use interviews, and NHANES also uses physical examinations, which can reveal previously undiagnosed conditions.\nD: Good effort. NHANES collects information from participants through interviews and examinations; it is not a literature search. Reveal the answer: after_discussion. Show the distribution: yes. Responses are anonymous. If polling fails: Read the question aloud, allow time for us to think, then take a show of hands for each option and discuss the answers together.\n\n\nA: Good effort. NHANES collects information through interviews and examinations. Death certificates are a separate source of health data.\nB: Keep going. The distinction is reversed: NHANES includes physical examinations, while NHIS collects information through interviews only.\nC: That’s right. Both surveys use interviews, and NHANES also uses physical examinations, which can reveal previously undiagnosed conditions.\nD: Good effort. NHANES collects information from participants through interviews and examinations; it is not a literature search."
   },
   {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#data-sources",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#data-sources",
+    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#primary-vs.-secondary-data",
+    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#primary-vs.-secondary-data",
     "title": "Disease Occurrence Data",
-    "section": "Data Sources",
-    "text": "Data Sources\n\nPrimary vs. secondary data\n\n\n\nPrimary data: Data we collect ourselves for a specific purpose.\nFor example, a survey, interview, direct observation, or laboratory measurement we design and conduct.\nSecondary data: Data that already exists because it was collected by someone else. Often for a different purpose than ours.\n\nFor example, electronic health records, surveillance data, census data, hospital discharge records, or a previously conducted survey.\n\nThe practical tradeoff:\n\nPrimary data give us more control over what and how we measure, but take more time and resources.\nSecondary data are faster and often less expensive to use, but their variables, measurement quality, population, and timing may not fully fit our question.\n\nThis is a topic we will explore today."
+    "section": "Primary vs. Secondary Data",
+    "text": "Primary vs. Secondary Data\n\n\n\nOne way to categorize the data we often use in epidemiology is primary vs. secondary data.\nPrimary data: Data we collect ourselves for a specific purpose.\nFor example, a survey, interview, direct observation, or laboratory measurement we design and conduct.\nSecondary data: Data that already exists because it was collected by someone else. Often, though not always, for a different purpose than ours.\n\nFor example, electronic health records, surveillance data, census data, hospital discharge records, or a previously conducted survey.\n\nThe practical tradeoff:\n\nPrimary data give us more control over what and how we measure, but take more time and resources.\nSecondary data are faster and often less expensive to use, but their variables, measurement quality, population, and timing may not fully fit our question.\n\nThis is a topic we will explore today."
   },
   {
     "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-primary-vs.-secondary-data",
     "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-primary-vs.-secondary-data",
     "title": "Disease Occurrence Data",
-    "section": "Exercise: Primary Vs. Secondary Data",
-    "text": "Exercise: Primary Vs. Secondary Data\n\nOur county wants to understand barriers to staying safe during extreme heat. We can fund one initial approach:\nA. Interview residents about cooling access and transportation. We can ask exactly what we need, but recruitment takes time and some residents may not respond.\nB. Analyze existing emergency-department records. They show serious health events, but miss people who never reach an emergency department.\nC. Combine existing housing, tree-cover, and population data. They describe neighborhood conditions, but do not tell us who became ill.\nWhich would we start with and why?\n\n\nTake 2 minuts to answer these questions with your group.\nA fits questions about residents’ experiences;\nB fits serious illness and healthcare use;\nC fits environmental conditions and geographic targeting.\nEach becomes more or less useful as the question changes.\nAsk: “What would your chosen source leave unanswered?”\nNeither primary nor secondary data guarantees quality.\nNeighborhood data can be relevant to health without containing diagnoses.\nTakeaway: Choose the source after clarifying the question."
+    "section": "Exercise: Primary vs. Secondary Data",
+    "text": "Exercise: Primary vs. Secondary Data\nOur county wants to understand barriers to staying safe during extreme heat. We can fund one initial approach:\n\nOption 1. Interview residents about cooling access and transportation. We can ask exactly what we need to ask, but recruitment takes time and some residents may not respond.\nOption 2. Analyze existing emergency-department records. They contain detailed records of serious health events, but miss people who never reach an emergency department.\nOption 3. Combine existing housing, tree-cover, and population data. They describe neighborhood conditions, but do not tell us who became ill.\n\nWhich would we start with and why?\n\n \n\nInstructions\n\nTake 2 minuts to answer these questions with your group.\n\nDiscussion\n\nOption 1 allows us to answer questions about residents’ experiences;\nOption 2 allows us to answer questions about serious illness and healthcare use;\nOption 3 allows us to answer questions about environmental conditions and geographic targeting.\nThe value of each data sources changes as the question changes.\n\nFollow-up\n\nAsk: “What would your chosen source leave unanswered?”\nNeither primary nor secondary data guarantees quality.\nNeighborhood data can be relevant to health without containing diagnoses.\nTakeaway: Choose the source after clarifying the question."
   },
   {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#data-sources-1",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#data-sources-1",
+    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#health-data-vs.-health-insights-from-repurposed-data",
+    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#health-data-vs.-health-insights-from-repurposed-data",
     "title": "Disease Occurrence Data",
-    "section": "Data Sources",
-    "text": "Data Sources\n\nPrimary vs. secondary data\nHealth data by design vs. health insights from repurposed data\n\n\n\nIn epidemiology, we frequently use data that was collected explicitly to understand health (e.g., Vital Statistics, NHANES).\nHowever, it’s becoming increasingly common to use data that was created for a different purpose (e.g., Google Trends).\nWe will see examples of both."
+    "section": "Health Data vs. Health Insights from Repurposed Data",
+    "text": "Health Data vs. Health Insights from Repurposed Data\n\n\n\nIn epidemiology, we frequently use data that was collected explicitly to understand health (e.g., Vital Statistics, NHANES).\nHowever, it’s becoming increasingly common to use data that was created for a different purpose (e.g., Google Trends).\nWe will see examples of both."
   },
   {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-events",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-events",
+    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-events-check-understanding",
+    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-events-check-understanding",
     "title": "Disease Occurrence Data",
-    "section": "Vital Events",
-    "text": "Vital Events\n\nDeaths, births, marriages, divorce, and fetal deaths.\nLegally mandated.\nBirths: Local -&gt; State\n\n\n\nPerhaps the most basic health data is births and deaths.\nIn the United States, birth certificates managed, stored, and issued by individual state and local governments.\nDeath certificates are also managed and stored by individual state, county, or local vital statistics offices.\nHowever, the NCHS, a division of the CDC, tracks every single death occurring within the US."
+    "section": "Vital Events: Check Understanding",
+    "text": "Vital Events: Check Understanding\nWhich group consists entirely of vital events?\n\nA. Births, deaths, and hospital admissions.\nB. Births, marriages, and vaccinations.\nC. Births, deaths, marriages, divorces, and fetal deaths.\nD. Deaths, divorces, and new cancer diagnoses.\n\n\nCorrect answer: C. Vital events include births, deaths, marriages, divorces, and fetal deaths.\n\n\n\nA: Hospital admissions describe healthcare use and are not vital events.\nB: Vaccinations are preventive healthcare services and are not vital events.\nC: All five are vital events.\nD: New cancer diagnoses can be tracked in a cancer registry, but they are not vital events."
   },
   {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-events---mortality",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-events---mortality",
+    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-events-births",
+    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-events-births",
     "title": "Disease Occurrence Data",
-    "section": "Vital Events - Mortality",
-    "text": "Vital Events - Mortality\n\nDeaths, births, marriages, divorce, and fetal deaths.\nLegally mandated.\nBirths: Local -&gt; State\nDeaths: Local -&gt; State -&gt; Federal (NCHS)\n\nhttps://www.cdc.gov/nchs/nvss/index.htm\n\n\nDeath certificates are also managed and stored by individual state, county, or local vital statistics offices.\nHowever, the NCHS, a division of the CDC, tracks every single death occurring within the US."
+    "section": "Vital Events: Births",
+    "text": "Vital Events: Births\n\nLegally mandated\nBirths: Local -&gt; State\n\n\n\nIn the United States, birth certificates are managed, stored, and issued by individual state and local governments."
+  },
+  {
+    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-events-deaths",
+    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-events-deaths",
+    "title": "Disease Occurrence Data",
+    "section": "Vital Events: Deaths",
+    "text": "Vital Events: Deaths\n\nLegally mandated\nBirths: Local -&gt; State\nDeaths: Local -&gt; State -&gt; Federal (NCHS)\n\nhttps://www.cdc.gov/nchs/nvss/index.htm\n\n\nDeath certificates are also managed and stored by individual state, county, or local vital statistics offices.\nHowever, the NCHS, a division of the CDC, tracks every single death occurring within the US."
   },
   {
     "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-vital-statistics-retrieval",
     "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-vital-statistics-retrieval",
     "title": "Disease Occurrence Data",
     "section": "Exercise: Vital-Statistics Retrieval",
-    "text": "Exercise: Vital-Statistics Retrieval\n\nOpen CDC’s Mortality in the United States, 2024. Each pair takes one task:\n\nA. Life expectancy: Find life expectancy at birth. Explain why it is not a promise about how long a particular newborn will live.\nB. Death rates: Find the age-adjusted death rates for 2023 and 2024. Explain what age adjustment contributes to the comparison.\nC. Leading causes: Find which cause entered the top ten in 2024. Did its age-adjusted death rate increase?\n\nProduce two sentences: one accurate finding with year and units, and one interpretation or limitation.\n\n\nHow to run it and timing: 8 minutes: 1 minute to assign tasks, 3 for retrieval, 1 to write, and 3 for up to three voluntary reports and synthesis. Preparation: link directly to the brief and have its tables available on paper.\nInstructor notes and debrief: Verified answers are 79.0 years; 750.5 versus 722.1 deaths per 100,000 standard population; and suicide, whose age-adjusted rate declined from 14.1 to 13.7 even as it became the tenth leading cause. CDC brief.\nLife expectancy summarizes mortality conditions; age adjustment facilitates comparisons accounting for age composition. Ranking is relative to other causes, so a rank can rise while a rate falls. Ask: “Which finding would we use to compare mortality across populations with different age structures?”\nTakeaway: Report the measure and its meaning together."
+    "text": "Exercise: Vital-Statistics Retrieval\nOpen CDC’s Mortality in the United States, 2024. Each pair takes one task:\n\n\nA. Life expectancy: Find life expectancy at birth. Explain why it is not a promise about how long a particular newborn will live.\nB. Death rates: Find the age-adjusted death rates for 2023 and 2024. Explain what age adjustment contributes to the comparison.\nC. Leading causes: Find which cause entered the top ten in 2024. Did its age-adjusted death rate increase?\n\n\nProduce two sentences: one accurate finding with year and units, and one interpretation or limitation.\n\n \n\nInstructions\n\n1 minute to assign tasks\n3 for retrieval\n1 to write\n3 for up to three voluntary reports and synthesis.\nAnswers are on the next slide."
+  },
+  {
+    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#mortality-data-for-the-exercise",
+    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#mortality-data-for-the-exercise",
+    "title": "Disease Occurrence Data",
+    "section": "Mortality Data for the Exercise",
+    "text": "Mortality Data for the Exercise\nCDC: Mortality in the United States, 2024\n\n\n\nMeasure\n2023\n2024\n\n\n\n\nLife expectancy at birth\n78.4 years\n79.0 years\n\n\nAll-cause age-adjusted death rate\n750.5\n722.1\n\n\nSuicide age-adjusted death rate\n14.1\n13.7\n\n\n\n\n\n\nThe interpretation: 79.0 years is the average lifespan that hypothetical cohort would have if it experienced 2024’s age-specific mortality rates throughout life. It is neither the observed average age of people who died in 2024 nor a forecast of the actual lifespan of babies born that year. Future mortality conditions can change.\nLife expectancy summarizes mortality conditions; age adjustment facilitates comparisons accounting for age composition.\nRanking is relative to other causes, so a rank can rise while a rate falls.\n\n\n\n\nRates are deaths per 100,000 U.S. standard population.\nSuicide entered the ten leading causes in 2024; COVID-19 dropped out."
   },
   {
     "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#leading-cause-highest-risk",
     "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#leading-cause-highest-risk",
     "title": "Disease Occurrence Data",
     "section": "Leading Cause ≠ Highest Risk",
-    "text": "Leading Cause ≠ Highest Risk\n\n\nLeading causes of death are ranked by proportion of total deaths (PMR).\nRanking answers “how many deaths?” → Burden.\nRisk answers “how likely is death?” → measured by rates (e.g., CSMR).\nA cause with a lower rank can still pose high risk to specific populations.\nPublic health concern depends on context, not rank alone.\n\n\nBurden ≠ Risk"
+    "text": "Leading Cause ≠ Highest Risk\n\n\nLeading causes of death are ranked by proportion of total deaths (PMR).\nRanking answers “how many deaths?” → Burden.\nRisk answers “how likely is death?” → measured by rates (e.g., CSMR).\nA cause with a lower rank can still pose high risk to specific populations.\nPublic health concern depends on context, not rank alone.\nBurden ≠ Risk\n\n\n\nPMR = Proportionate Mortality Ratio (proportion of total deaths attributable to a specific cause) — this is the burden measure being ranked.\nCSMR = Cause-Specific Mortality Rate (deaths from a specific cause per population at risk, over a time period) — this is the risk measure being contrasted with rank."
   },
   {
     "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#example-suicide",
@@ -137,189 +151,70 @@
     "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-one-death-several-conditions-death-certificate-interpretation",
     "title": "Disease Occurrence Data",
     "section": "Exercise: One Death, Several Conditions — Death-Certificate Interpretation",
-    "text": "Exercise: One Death, Several Conditions — Death-Certificate Interpretation\n\nThe certifying clinician documents this sequence:\nCOVID-19 → pneumonia → acute respiratory distress syndrome → death.\nThe clinician also documents diabetes as contributing to the death.\nA reader says: “The person died of respiratory distress, so this should not count as a COVID-19 death.”\nIn two sentences, explain what the reader has misunderstood. Then identify one uncertainty that could still affect the accuracy of the death certificate.\n\nHow to run it and timing: 8 minutes: 1 minute to explain the documented sequence, 2 for individual writing, 2 for pairs, and 3 for debrief. Introduce “underlying” as the condition initiating the sequence; students need not diagnose the case.\nInstructor notes and debrief: In this supplied sequence, COVID-19 is the underlying cause, respiratory distress syndrome the immediate cause, and diabetes an additional contributing condition. Multiple listed conditions do not negate the underlying cause. CDC’s certification guidance explicitly illustrates reporting COVID-19 together with pneumonia and respiratory distress. CDC guidance\nLegitimate uncertainties include incomplete clinical information and errors in documenting the sequence. The factual correction is not an invitation to assume every certificate is accurate.\nAsk: “How would ‘deaths with COVID-19 listed anywhere’ differ from ‘deaths with COVID-19 as the underlying cause’?”\nTakeaway: Complete death registration and accurate cause classification are different qualities."
+    "text": "Exercise: One Death, Several Conditions — Death-Certificate Interpretation\nThe certifying clinician documents this sequence:\n\nCOVID-19 → pneumonia → acute respiratory distress syndrome → death.\n\nThe clinician also documents diabetes as contributing to the death.\nA reader says:\n\n“The person died of respiratory distress, so this should not count as a COVID-19 death.”\n\nIn two sentences, explain what the reader has misunderstood. Then identify one uncertainty that could still affect the accuracy of the death certificate.\n\n \n\nInstructions\n\n1 minute to explain the documented sequence,\n2 for individual writing,\n2 for pairs, and\n3 for debrief.\nIntroduce “underlying” as the condition initiating the sequence; students need not diagnose the case.\n\nDiscussion\n\nIn this supplied sequence, COVID-19 is the underlying cause, respiratory distress syndrome the immediate cause, and diabetes an additional contributing condition.\nMultiple listed conditions do not negate the underlying cause. CDC’s certification guidance explicitly illustrates reporting COVID-19 together with pneumonia and respiratory distress. CDC guidance\nLegitimate uncertainties include:\n\nincomplete clinical information and\nerrors in documenting the sequence.\n\n\nFollow-up\n\nAsk: “How would ‘deaths with COVID-19 listed anywhere’ differ from ‘deaths with COVID-19 as the underlying cause’?”\n“Deaths with COVID-19 listed anywhere” includes deaths where COVID-19 initiated the sequence leading to death or contributed to the death without initiating that sequence. “Deaths with COVID-19 as the underlying cause” includes only those where COVID-19 initiated the sequence, so it is a subset of the broader count. CDC definitions\nThe death in this exercise would count in both groups, because COVID-19 initiated the documented sequence.\nCOVID-19 played a causal role in both categories, but its role differed.\nAs the underlying cause: COVID-19 started the sequence that led to death. Saying the person “died from COVID-19” is appropriate, even though pneumonia and respiratory distress occurred along the way.\nAs a contributing cause only: COVID-19 helped bring about the death, but another condition initiated the fatal sequence. “COVID-19 contributed to the person’s death” is more precise. CDC definitions\nFor students: The broader count tells us how often COVID-19 was involved in causing death; the underlying-cause count tells us how often it initiated the fatal sequence. Neither category simply means the person happened to have COVID-19 when they died.\n\nTakeaway: - Complete death registration and accurate cause classification are different qualities."
   },
   {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-find-the-denominator-that-belongs-to-our-numerator",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-find-the-denominator-that-belongs-to-our-numerator",
+    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-the-population-denominator",
+    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-the-population-denominator",
     "title": "Disease Occurrence Data",
-    "section": "Exercise: Find the Denominator That Belongs to Our Numerator",
-    "text": "Exercise: Find the Denominator That Belongs to Our Numerator\n\nSimulated numerator: During 2025, 2,248 Tarrant County residents died from a fictional condition.\nOpen Census QuickFacts: Tarrant County.\n\nFind the population estimate most appropriate for this numerator. Record its value and date.\nCalculate deaths per 100,000 residents.\nExplain why the 2020 Census count is less suitable.\n\nExtension: If the deaths were only among residents aged 65 or older, what would need to change?\n\nHow to run it and timing: 9 minutes: 1 minute of instructions, 3 for retrieval, 2 for calculation, and 3 for comparison and the extension. Pairs need a browser and calculator. Preparation: bookmark the page and retain the two population figures below as a fallback.\nInstructor notes and debrief: QuickFacts currently reports 2,248,466 residents on July 1, 2025, and a 2020 Census count of 2,110,640. Census source\nThe intended calculation is:\n\\[\n\\frac{2,248}{2,248,466} \\times 100,000 \\approx 100.0\n\\]\nUsing the 2020 count gives 106.5 per 100,000. The difference arises entirely from denominator selection. For deaths among older residents, use the corresponding older population, with compatible geography and year.\nAsk: “Would the same denominator work for deaths occurring in Tarrant County hospitals, including nonresidents?”\nTakeaway: A plausible population number is not necessarily the correct denominator."
+    "section": "Exercise: The Population Denominator",
+    "text": "Exercise: The Population Denominator\nSimulated numerator: During 2025, 2,248 Tarrant County residents died from a fictional condition.\n\n1. Find the population estimate most appropriate for this numerator. Record its value and date.\n2. Calculate deaths per 100,000 residents.\n\n\nOpen Census QuickFacts: Tarrant County.\n\n\n \n\nInstructions\n\n1 minute of instructions,\n\nAsk where we can look for the population size denominator.\n\n3 for retrieval,\n2 for calculation, and\n3 for comparison and the extension.\nPairs need a browser and calculator.\n\nDiscussion\n\nSee next slide."
   },
   {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#review-of-mortality-real-data-cdc-nvss-2023",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#review-of-mortality-real-data-cdc-nvss-2023",
+    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-the-population-denominator-discussion",
+    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-the-population-denominator-discussion",
     "title": "Disease Occurrence Data",
-    "section": "Review of Mortality: Real Data (CDC NVSS, 2023)",
-    "text": "Review of Mortality: Real Data (CDC NVSS, 2023)\n\n\nSource: CDC NCHS Data Brief 521\nSelected findings:\n\nLife expectancy: 78.4 years (↑ 0.9 from 2022)\nAge-adjusted death rate: ↓ 6.0% (798.8 → 750.5 per 100,000)\nAge-specific death rates decreased for all age groups ≥5 years.\nLeading causes unchanged: heart disease, cancer, injuries.\nInfant mortality: 560.2 per 100,000 live births (no change)."
+    "section": "Exercise: The Population Denominator Discussion",
+    "text": "Exercise: The Population Denominator Discussion\nQuickFacts currently reports 2,248,466 residents on July 1, 2025, and a 2020 Census count of 2,110,640. Census source\n\n\\[\n\\frac{2,248}{2,248,466} \\times 100,000 \\approx 100.0\n\\]\n\nFollow-up\n\nAsk: “Explain why the 2020 Census count is less suitable.”\n\nUsing the 2020 count gives 106.5 per 100,000.\nThat denominator is out of date.\n\nAsk: “Would the same denominator work for deaths occurring in Tarrant County hospitals?”\n\nNo. Because non-residents use the hospitals in Tarrant County and because people who live in Tarrant County use hospitals in other places.\n\nAsk: “If the deaths were only among residents aged 65 or older, what would need to change?””\n\nFor deaths among older residents, use the corresponding older population, with compatible geography and year.\n\n\nTakeaway:\n\nA plausible population number is not necessarily the correct denominator."
   },
   {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#leading-cause-highest-risk-1",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#leading-cause-highest-risk-1",
+    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-statistics-vs.-disease-surveillance",
+    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-statistics-vs.-disease-surveillance",
     "title": "Disease Occurrence Data",
-    "section": "Leading Cause ≠ Highest Risk",
-    "text": "Leading Cause ≠ Highest Risk\n\n\nLeading causes of death are ranked by proportion of total deaths (PMR).\nRanking answers “how many deaths?” → Burden.\nRisk answers “how likely is death?” → measured by rates (e.g., CSMR).\nA cause with a lower rank can still pose high risk to specific populations.\nPublic health concern depends on context, not rank alone.\n\n\nBurden ≠ Risk"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#example-suicide-1",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#example-suicide-1",
-    "title": "Disease Occurrence Data",
-    "section": "Example: Suicide",
-    "text": "Example: Suicide\n\n\nSuicide is not a top-ranked cause of death overall.\nBut it is a leading cause of death among young adults.\nThis reflects high cause-specific mortality rates in certain groups.\nKey contrast:\n\nPMR (overall): low\nCSMR (subgroups): high"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#conceptual-transition",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#conceptual-transition",
-    "title": "Disease Occurrence Data",
-    "section": "Conceptual Transition",
-    "text": "Conceptual Transition\n\n\nYou just interpreted multiple mortality measures using one short summary.\nQuestion: What assumptions are we making about the data behind these numbers?\n(Write down your responses; we will revisit soon.)"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#epidemiologic-data",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#epidemiologic-data",
-    "title": "Disease Occurrence Data",
-    "section": "Epidemiologic Data",
-    "text": "Epidemiologic Data\n\n\nEpidemiologic data are population-based data used to:\n\nDescribe disease occurrence\nMonitor health trends\nIdentify disparities\n\nEpidemiologic data capture:\n\nMorbidity (disease, illness)\nMortality (death)\n\nMajor sources of epidemiologic data:\n\nVital statistics\nReportable/notifiable disease data\nSurvey and surveillance data"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#factors-affecting-epidemiologic-data-quality",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#factors-affecting-epidemiologic-data-quality",
-    "title": "Disease Occurrence Data",
-    "section": "Factors Affecting Epidemiologic Data Quality",
-    "text": "Factors Affecting Epidemiologic Data Quality\n\n\nData quality reflects whether the assumptions behind our measures hold.\nKey dimensions:\n\nCoverage: Who is included?\nAccuracy: Are events classified correctly?\nConsistency: Are the same definitions used over time and place?\nTimeliness: How current are the data?\nProcessing and quality control: Errors and checks"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#two-types-of-epidemiologic-data-systems",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#two-types-of-epidemiologic-data-systems",
-    "title": "Disease Occurrence Data",
-    "section": "Two Types of Epidemiologic Data Systems",
-    "text": "Two Types of Epidemiologic Data Systems\nEpidemiologic data systems serve different public health purposes.\n\n\nVITAL STATISTICS\n\nTrack life events (births, deaths)\nPopulation-wide and complete\nDesigned for long-term patterns\n\n\n\nREPORTABLE/NOTIFIABLE DISEASE DATA\n\nTrack specific diseases\nFocus on timeliness and rapid detection\nDesigned for public health action\n\n\n\n\nSame population → different questions → different systems"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#how-epidemiologic-data-are-generated-and-used",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#how-epidemiologic-data-are-generated-and-used",
-    "title": "Disease Occurrence Data",
-    "section": "How Epidemiologic Data Are Generated and Used",
-    "text": "How Epidemiologic Data Are Generated and Used"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-registration-system",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-registration-system",
-    "title": "Disease Occurrence Data",
-    "section": "Vital Registration System",
-    "text": "Vital Registration System\n\n\nVital events: births, deaths, fetal deaths, marriages, divorces\nIn the United States, these events are compiled through the National Vital Statistics System (NVSS).\nhttps://www.cdc.gov/nchs/nvss/index.htm"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#information-collected-by-birth-and-fetal-death-certificates",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#information-collected-by-birth-and-fetal-death-certificates",
-    "title": "Disease Occurrence Data",
-    "section": "Information Collected by Birth and Fetal Death Certificates",
-    "text": "Information Collected by Birth and Fetal Death Certificates\n\n\n\n\n\n\n\n\n\nVariable\nU.S. Certificate of Live Birth\nU.S. Report of Fetal Death\n\n\n\n\nName\nChild’s name\nName of fetus (optional)\n\n\nDisposition (e.g., burial)\nNot applicable\nDisposition of fetus\n\n\nLocation\nFacility name\nWhere delivered\n\n\nMother identifying information\nName, age, and place of residence\nName, age, and place of residence\n\n\nMother\nHeight, weight, number of previous live births\nHeight, weight, number of previous live births\n\n\nConditions contributing to fetal death\nNot applicable\nInitiating cause and other causes (e.g., pregnancy complications, fetal anomalies)\n\n\nRisk factors in pregnancy\nDiabetes, hypertension, infections\nDiabetes, hypertension, infections\n\n\nCongenital anomalies\nAnencephaly, cleft palate, Down syndrome\nAnencephaly, cleft palate, Down syndrome\n\n\nFather\nName and age\nName and age"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-statistics-example-texas-birth-data",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-statistics-example-texas-birth-data",
-    "title": "Disease Occurrence Data",
-    "section": "Vital Statistics Example: Texas Birth Data",
-    "text": "Vital Statistics Example: Texas Birth Data"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-statistics-example-texas-death-data",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#vital-statistics-example-texas-death-data",
-    "title": "Disease Occurrence Data",
-    "section": "Vital Statistics Example: Texas Death Data",
-    "text": "Vital Statistics Example: Texas Death Data"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#why-do-some-diseases-have-to-be-reported",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#why-do-some-diseases-have-to-be-reported",
-    "title": "Disease Occurrence Data",
-    "section": "Why Do Some Diseases Have to Be Reported?",
-    "text": "Why Do Some Diseases Have to Be Reported?\n\n\nSome diseases require immediate public health action.\nWaiting for routine statistics is too slow.\nThese data support detection, response, and control.\n\n\nDifferent purpose → different data system"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#reportablenotifiable-disease-data",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#reportablenotifiable-disease-data",
-    "title": "Disease Occurrence Data",
-    "section": "Reportable/Notifiable Disease Data",
-    "text": "Reportable/Notifiable Disease Data\n\n\nCase-based surveillance\nFocus on specific diseases of public health importance\nInformation typically includes:\n\nCase counts (incidence)\nBasic person, place, and time\nKey clinical outcomes\n\nKey tradeoff:\n\nStrength: Timeliness\nLimitation: Incomplete population coverage\n\nDesigned for action, not completeness."
+    "section": "Vital Statistics vs. Disease Surveillance",
+    "text": "Vital Statistics vs. Disease Surveillance\n\n\nVITAL STATISTICS\n\nTrack life events (births, deaths)\nPopulation-wide and complete\nDesigned for long-term patterns\n\n\n\nREPORTABLE/NOTIFIABLE DISEASE DATA\n\nTrack specific diseases\nFocus on timeliness and rapid detection\nDesigned for public health action\n\n\n\n\n\nSame population → different questions → different systems"
   },
   {
     "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#reportable-vs.-notifiable-whats-the-difference",
     "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#reportable-vs.-notifiable-whats-the-difference",
     "title": "Disease Occurrence Data",
     "section": "Reportable vs. Notifiable — What’s the Difference?",
-    "text": "Reportable vs. Notifiable — What’s the Difference?\n\n\nREPORTABLE DISEASES\n\nReported to local or state health departments\nUsed for local public health action\nLists vary by jurisdiction\n\n\n\nNOTIFIABLE DISEASES\n\nReported to national authorities (e.g., CDC)\nAggregated for national monitoring\nDe-identified (age, sex, location)\n\n\n\n\nEvery notifiable disease is first reported locally.\n\n\nSame case → different reporting level → different purpose"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#examples-of-nationally-notifiable-diseases",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#examples-of-nationally-notifiable-diseases",
-    "title": "Disease Occurrence Data",
-    "section": "Examples of Nationally Notifiable Diseases",
-    "text": "Examples of Nationally Notifiable Diseases\n\nNational Notifiable Diseases Surveillance System (NNDSS): the endpoint of the data-report flow\n\n\n\nAnthrax\nCOVID-19\nBotulism\nGonorrhea\nHepatitis A, hepatitis B, hepatitis C\nHuman immunodeficiency virus (HIV) infection\nMeningococcal disease\n\n\n\n\nMumps\nSyphilis\nTuberculosis\nViral hemorrhagic fever (includes Ebola virus)\nZika virus disease\n\n\n\n\nSource: Centers for Disease Control and Prevention. National Notifiable Diseases Surveillance System (NNDSS). 2022 Nationally Notifiable Conditions. Available at: https://ndc.services.cdc.gov/event-code-list-other-surveillance-resources/. Accessed February 20, 2025."
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#discussion-nationally-notifiable-diseases",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#discussion-nationally-notifiable-diseases",
-    "title": "Disease Occurrence Data",
-    "section": "Discussion: Nationally Notifiable Diseases",
-    "text": "Discussion: Nationally Notifiable Diseases\n\n\n\nPick one disease on the list. At what level would it first be reported?\nWhy would CDC want to track this nationally?\nWould birth or death data ever appear on this list? Why not?"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#surveillance-from-reporting-to-monitoring",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#surveillance-from-reporting-to-monitoring",
-    "title": "Disease Occurrence Data",
-    "section": "Surveillance: From Reporting to Monitoring",
-    "text": "Surveillance: From Reporting to Monitoring\n\n\nReporting captures individual cases.\nSurveillance looks for patterns over time.\nGoal: inform ongoing public health action.\n\n\nReporting → Surveillance → Action"
+    "text": "Reportable vs. Notifiable — What’s the Difference?\n\n\nReportable Diseases\n\nReported to local or state health departments\nUsed for local public health action\nLists vary by jurisdiction\nExamples: Sexually transmitted diseases, rubella, tetanus, measles, plague, and foodborne disease\n\n\n\nNotifiable Diseases\n\nReported to national authorities (e.g., CDC)\nAggregated for national monitoring\nExamples: Anthrax, COVID-19, Botulism, HIV, Tuberculosis, Zika virus\nEvery notifiable disease is first reported locally.\n\n\n\n\n\n\nStates voluntarily send qualifying case information to CDC for national monitoring.\n\n\n\nSource: Centers for Disease Control and Prevention. National Notifiable Diseases Surveillance System (NNDSS). 2026 National Notifiable Conditions (Historical). Available at: https://ndc.services.cdc.gov/search-results-year/?os=vb&ref=app. Accessed September 14, 2026."
   },
   {
     "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#two-approaches-to-public-health-surveillance",
     "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#two-approaches-to-public-health-surveillance",
     "title": "Disease Occurrence Data",
     "section": "Two Approaches to Public Health Surveillance",
-    "text": "Two Approaches to Public Health Surveillance\n\n\n\n\n\n\n\nPublic Health Surveillance\nSyndromic Surveillance\n\n\n\n\nRoutine, ongoing monitoring\nReal-time, early warning\n\n\nUses confirmed diagnoses\nUses symptoms and signals\n\n\nTracks incidence and trends\nDetects unusual patterns\n\n\nUsually takes place in: Public health departments, registries, national systems\nUsually takes place in: Emergency departments, urgent care, pharmacies\n\n\nExample: flu incidence over years\nExample: spikes in fever-related ER visits"
+    "text": "Two Approaches to Public Health Surveillance\n\n\nPublic Health Surveillance\n\nRoutine, ongoing monitoring\nUses confirmed diagnoses\nTracks incidence and trends\nUsually takes place in: Public health departments, registries, national systems\nExample: flu incidence over years\n\n\n\nSyndromic Surveillance\n\nReal-time, early warning\nUses symptoms and signals\nDetects unusual patterns\nUsually takes place in: Emergency departments, urgent care, pharmacies\nExample: spikes in fever-related ER visits"
   },
   {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-types-of-surveillance",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-types-of-surveillance",
+    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-an-early-warning",
+    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-an-early-warning",
     "title": "Disease Occurrence Data",
-    "section": "Exercise: Types of Surveillance",
-    "text": "Exercise: Types of Surveillance\n\n\nMatch each scenario with the correct type:\n\n\nPUBLIC HEALTH SURVEILLANCE\nLong-term, systematic, incidence and policy focus\n\n\nSYNDROMIC SURVEILLANCE\nReal-time, early warning, symptom and pattern focus"
+    "section": "Exercise: An Early Warning",
+    "text": "Exercise: An Early Warning\nEmergency departments record an unusual increase in fever-and-cough visits this week. Laboratory results are still arriving.\n\n1. What can we reasonably conclude now? 2. What information would help us interpret the signal? 3. What could explain the increase besides more infections?\n\nWould waiting for death certificates answer the same question soon enough?\n\n \n\nInstructions\n\nAllow 2 minutes to discuss and 3 to debrief using the next slide.\n\nDiscussion\n\nWe know recorded symptom-related visits increased, not that confirmed influenza incidence rose.\nExamine total visits, participating facilities, coding changes, laboratory results, and timing.\nHealthcare-seeking behavior or another respiratory infection could explain the signal.\nTimely investigation can begin before certainty.\nDeath records describe a different outcome and are not a substitute for this early signal."
   },
   {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-types-of-surveillance-scenarios",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-types-of-surveillance-scenarios",
+    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#sources-for-our-project-questions",
+    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#sources-for-our-project-questions",
     "title": "Disease Occurrence Data",
-    "section": "Exercise: Types of Surveillance — Scenarios",
-    "text": "Exercise: Types of Surveillance — Scenarios\n\n\nHealth officials analyze flu vaccination rates every year to guide next season’s immunization campaign.\nA sudden rise in ER visits for fever and cough signals a possible flu outbreak.\nMonitoring long-term cancer incidence to plan screening programs.\nTracking over-the-counter cold medicine sales during winter to catch early spikes.\n\nFocus on why one approach fits better than the other."
+    "section": "Sources for Our Project Questions",
+    "text": "Sources for Our Project Questions\n\n\n\n\n\n\n\nSource\nWhat it can offer\n\n\n\n\nNHIS — National Health Interview Survey\nReported health conditions, functioning, and healthcare access\n\n\nNHANES — National Health and Nutrition Examination Survey\nInterviews, examinations, and laboratory measurements\n\n\nBRFSS — Behavioral Risk Factor Surveillance System\nState-level adult data on behaviors, chronic conditions, and preventive services\n\n\n\n\nFor any source, inspect eligible ages, sampling, years, exact items, geography, and survey weights before estimating prevalence.\n\n\n\nNHIS and NHANES are NCHS surveys. BRFSS is a CDC/state collaboration, not an NCHS survey.\n\n\n\nSources: NHIS, NHANES, BRFSS."
   },
   {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#public-health-surveillance-programs",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#public-health-surveillance-programs",
+    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-which-source-fits",
+    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#exercise-which-source-fits",
     "title": "Disease Occurrence Data",
-    "section": "Public Health Surveillance Programs",
-    "text": "Public Health Surveillance Programs\n\n\nCommunicable and infectious diseases\n\nTrack cases, hospitalizations, and spread\nExample: COVID-19 surveillance (cases, hospitalizations)\nExample: National Wastewater Surveillance System (NWSS)\n\nChronic diseases\n\nMonitor long-term incidence and outcomes\nExample: Cancer registries (incidence, types, outcomes)\nExample: CDC Chronic Disease Indicators (CDI; state-level indicators for chronic disease patterns)\n\nRisk factors for chronic disease\n\nTrack behaviors and exposures\nExample: BRFSS (obesity, smoking, physical activity)"
+    "section": "Exercise: Which Source Fits?",
+    "text": "Exercise: Which Source Fits?\nFor your group’s disease topic:\n\n“To learn [what] about [whom], we would first examine [source] because [reason]. We would still need to check [limitation].”\n\n\n \n\nInstructions\n\nAfter 2 minutes with the source table,\nallow 3 minutes to formulate a question,\n2 to examine the linked source description, and\n3 to compare recommendations.\n\nDiscussion\n\nDiabetes examples:\n\nNHIS for reported diagnosis and access;\nNHANES for measured markers that can identify previously undiagnosed disease;\nBRFSS for state comparisons of reported diagnosis or behaviors.\n\nDo not assume all sources support county estimates.\nThe course project requirement is unchanged; this is a source-selection exercise."
   },
   {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#national-center-for-health-statistics-nchs",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#national-center-for-health-statistics-nchs",
+    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#factors-affecting-epidemiologic-data-quality",
+    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#factors-affecting-epidemiologic-data-quality",
     "title": "Disease Occurrence Data",
-    "section": "National Center for Health Statistics (NCHS)",
-    "text": "National Center for Health Statistics (NCHS)\n\nNCHS is a major source of U.S. population-based health data.\n\nNCHS data complement surveillance by describing population health beyond reported cases.\nSurvey-based systems\n\nNHIS: health status, access to care, prevention\nNHANES: exams and interviews (diet, activity, disease prevalence)\n\nVital statistics\n\nNVSS: births, deaths, life expectancy, leading causes of death"
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#why-international-organizations-matter",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#why-international-organizations-matter",
-    "title": "Disease Occurrence Data",
-    "section": "Why International Organizations Matter",
-    "text": "Why International Organizations Matter\n\n\nDiseases cross national borders.\nData must be comparable across countries.\nSurveillance and response require coordination."
-  },
-  {
-    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#what-international-organizations-do",
-    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#what-international-organizations-do",
-    "title": "Disease Occurrence Data",
-    "section": "What International Organizations Do",
-    "text": "What International Organizations Do\n\nSurveillance and reporting — global monitoring\n\nExample: WHO Global Influenza Surveillance and Response System (GISRS)\n\nPolicy guidance — shared recommendations\n\nExample: UNAIDS guidance for HIV/AIDS programs\n\nResource support — capacity and access\n\nExample: Gavi, the Vaccine Alliance"
+    "section": "Factors Affecting Epidemiologic Data Quality",
+    "text": "Factors Affecting Epidemiologic Data Quality\nData quality reflects whether the assumptions behind our measures hold.\n\nKey dimensions:\n\nCoverage: Who is included?\n\nAccuracy: Are events classified correctly?\n\nConsistency: Are the same definitions used over time and place?\n\nTimeliness: How current are the data?\n\nProcessing and quality control: Errors and checks\n\n\n\n\nAsk the class to connect each dimension to an earlier example.\nA large database does not automatically solve these problems."
   },
   {
     "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#key-takeaways-epidemiologic-data",
@@ -327,6 +222,13 @@
     "title": "Disease Occurrence Data",
     "section": "Key Takeaways: Epidemiologic Data",
     "text": "Key Takeaways: Epidemiologic Data\n\nEpidemiology depends on population-based data to describe health patterns.\nDifferent public health questions require different data systems.\nVital statistics describe long-term population patterns (births, deaths).\nReportable disease data support rapid detection and public health response.\nSurveillance turns reported data into ongoing monitoring and action.\nData quality determines what conclusions can (and cannot) be drawn.\nSelecting an appropriate data source is a critical epidemiologic decision."
+  },
+  {
+    "objectID": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#references",
+    "href": "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.html#references",
+    "title": "Disease Occurrence Data",
+    "section": "References",
+    "text": "References\n\n\nCenters for Disease Control and Prevention. 2026a. 2026 National Notifiable Conditions (Historical). National Notifiable Diseases Surveillance System. https://ndc.services.cdc.gov/search-results-year/?os=vb&ref=app.\n\n\nCenters for Disease Control and Prevention. 2026b. Behavioral Risk Factor Surveillance System. https://www.cdc.gov/brfss/index.html.\n\n\nNational Center for Health Statistics. 2020. Guidance for Certifying COVID-19 Deaths. COVID-19 Alert No. 1. Centers for Disease Control and Prevention. https://stacks.cdc.gov/view/cdc/86558.\n\n\nNational Center for Health Statistics. 2024. About NHANES. Centers for Disease Control and Prevention. https://www.cdc.gov/nchs/nhanes/about/index.html.\n\n\nNational Center for Health Statistics. 2026. About NHIS. Centers for Disease Control and Prevention. https://www.cdc.gov/nchs/nhis/about/index.html.\n\n\nNational Center for Health Statistics. n.d.-a. Coronavirus Disease 2019 (COVID-19) FAQs. Centers for Disease Control and Prevention. Accessed September 14, 2026. https://www.cdc.gov/nchs/covid19/faq.htm.\n\n\nNational Center for Health Statistics. n.d.-b. National Vital Statistics System. Centers for Disease Control and Prevention. Accessed September 14, 2026. https://www.cdc.gov/nchs/nvss/index.htm.\n\n\nU.S. Census Bureau. n.d. QuickFacts: Tarrant County, Texas. Accessed September 14, 2026. https://www.census.gov/quickfacts/tarrantcountytexas.\n\n\nXu, Jiaquan, Sherry L. Murphy, Kenneth D. Kochanek, and Elizabeth Arias. 2026. “Mortality in the United States, 2024.” NCHS Data Brief, no. 548 (January): 1–14. https://doi.org/10.15620/cdc/174641."
   },
   {
     "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 1/Measures of Disease Occurrence - Part 1.html#course-learning-objectives",
