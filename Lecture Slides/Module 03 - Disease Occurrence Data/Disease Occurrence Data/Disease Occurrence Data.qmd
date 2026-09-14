@@ -26,17 +26,12 @@ execute:
 
 ## Learning Objectives {.compact}
 
-<!--  
-Revise and update the learning objectives last.
--->
-
 By the end of this week, you should be able to:
 
 1. Identify key factors that influence **epidemiologic data quality**.
 2. Distinguish between **vital statistics** and **reportable/notifiable disease data**.
 3. Identify major **surveillance programs in the United States**.
 4. Describe major **sources of epidemiologic data** used in public health.
-5. Explain the role of **international organizations** in collecting and disseminating epidemiologic data.
 
 ::: {.notes}
 - In our last module we learned about calculating some foundational epidemiologic measures.
@@ -104,20 +99,7 @@ D: That's right. Census population counts help us define the denominator when ca
 :::
 
 
-## Reading Comprehension Quiz 04 {#disease-data-vital-events .quiz}
-
-{{< include quiz-slides/disease-data-vital-events.qmd >}}
-
-::: {.notes}
-Model answer: Births and deaths.
-
-Acceptable equivalent wording: Any two of births, deaths, marriages, divorces, and fetal deaths are acceptable. Brief terms are enough; we do not need a formal definition.
-
-Supportive guidance: Good effort. If our examples are medical visits or diagnoses, let's distinguish healthcare encounters from vital events. Vital events include births, deaths, and changes in marital status.
-:::
-
-
-## Reading Comprehension Quiz 05 {#disease-data-death-certificates .quiz}
+## Reading Comprehension Quiz 04 {#disease-data-death-certificates .quiz}
 
 {{< include quiz-slides/disease-data-death-certificates.qmd >}}
 
@@ -132,7 +114,7 @@ D: Good effort. Death certificates are widely used to study mortality. We still 
 :::
 
 
-## Reading Comprehension Quiz 06 {#disease-data-surveillance .quiz}
+## Reading Comprehension Quiz 05 {#disease-data-surveillance .quiz}
 
 {{< include quiz-slides/disease-data-surveillance.qmd >}}
 
@@ -147,7 +129,7 @@ D: Good effort. Assigning treatments is part of an experimental study. Surveilla
 :::
 
 
-## Reading Comprehension Quiz 07 {#disease-data-reportable-diseases .quiz}
+## Reading Comprehension Quiz 06 {#disease-data-reportable-diseases .quiz}
 
 {{< include quiz-slides/disease-data-reportable-diseases.qmd >}}
 
@@ -162,20 +144,7 @@ D: That's right. Reportable diseases are diseases whose cases healthcare provide
 :::
 
 
-## Reading Comprehension Quiz 08 {#disease-data-incomplete-reporting .quiz}
-
-{{< include quiz-slides/disease-data-incomplete-reporting.qmd >}}
-
-::: {.notes}
-Model answer: Some people with a disease do not seek medical care, so their cases may never be reported.
-
-Acceptable equivalent wording: We can mention an illness without noticeable symptoms, a healthcare provider failing to submit a report, lack of awareness of reporting requirements, or reluctance to report because of confidentiality concerns. Any one reason is enough.
-
-Supportive guidance: Good effort. A reporting requirement does not guarantee that every case is recognized and reported. If our answer assumes complete coverage, let's remember that some illnesses never come to medical attention.
-:::
-
-
-## Reading Comprehension Quiz 09 {#disease-data-case-registry .quiz}
+## Reading Comprehension Quiz 07 {#disease-data-case-registry .quiz}
 
 {{< include quiz-slides/disease-data-case-registry.qmd >}}
 
@@ -190,7 +159,7 @@ D: Good effort. An appointment schedule organizes clinic visits. A registry coll
 :::
 
 
-## Reading Comprehension Quiz 10 {#disease-data-health-surveys .quiz}
+## Reading Comprehension Quiz 08 {#disease-data-health-surveys .quiz}
 
 {{< include quiz-slides/disease-data-health-surveys.qmd >}}
 
@@ -203,38 +172,6 @@ C: That's right. Both surveys use interviews, and NHANES also uses physical exam
 
 D: Good effort. NHANES collects information from participants through interviews and examinations; it is not a literature search.
 :::
-
-
-<!-- 
-- Sources of data
-  - Primary vs secondary data collection.
-  - Health data vs data for understanding health.
-  - Using administrative data. I could use DETECT as an example.
-  - Census and vital statistics data.
-  - Federal health surveys - NHANES (https://www.cdc.gov/nchs/nhanes/index.html), NHIS (https://www.cdc.gov/nchs/nhis/index.html), BRFSS (https://www.cdc.gov/brfss/index.html), All Of Us (https://www.nih.gov/allofus).
-  - Case registries. For example, we are creating a Parkinson's registry at TCU.
-  - Data that wasn't collected for health monitoring. For example, Google Trends (https://trends.google.com/trends/).
-- As I was reading Chapter 4, here are some other topics I thought we may want to touch on:
-  - Briefly introduce HIPAA and PHI/PII at a conceptual level.
-  - Some of the challenges of using administrative data. I could use DETECT as an example (https://www.tandfonline.com/doi/full/10.1080/08946566.2018.1564104). 
-  - Big data and some of the issues I discovered when completing the big data certificates. For example, prediction isn't causation.
-  - Google Flu. I could either talk about this in class or make reading about it an assignment. 
--->
-
-<!-- AI Exercises 
-1. Primary vs. secondary data. (7 min) - Added.
-2. Using administrative records. (8 min)
-3. HIPAA/PHI/PII (7 min)
-4. Census data - denominator (9 min) - Added.
-5. Vital statistics in the US. (8 min) - Added.
-6. Death certificates (8 min) - Added.
-7. Which federal survey should we use? (10 min)
-8. Parkinson's registry (7 min)
-9. Google Trends (9 min)
-10. Google Flu (don't use)
-
-7 + 8 + 7 + 9 + 8 + 8 + 10 + 7 + 9 = 73.
--->
 
 
 # Data Sources {.section}
@@ -427,26 +364,6 @@ Let's make this more interactive somehow.
 ::: {.notes}
 - **PMR** = Proportionate Mortality Ratio (proportion of total deaths attributable to a specific cause) — this is the burden measure being ranked.
 - **CSMR** = Cause-Specific Mortality Rate (deaths from a specific cause per population at risk, over a time period) — this is the risk measure being contrasted with rank.
-:::
-
-
-## Exercise: Rank and Rate {visibility="hidden"}
-
-<!-- Decide if you want to use this or not. -->
-<!-- If you do, add a timer. -->
-
-**Pairs · 3 minutes**
-
-Suicide entered the ten leading causes of death in 2024, while its age-adjusted death rate fell from **14.1 to 13.7 per 100,000**.
-
-A headline says: “Suicide became a leading cause because the death rate increased.”
-
-How would we correct the headline?
-
-What does rank tell us that a population death rate does not?
-
-::: {.notes}
-Allow 1 minute to write and 2 to debrief. Ranking compares causes by their numbers of deaths. A cause's rank can rise when deaths from another cause decline more. A population death rate uses a population denominator; proportionate mortality uses all deaths as its denominator. Neither rank nor proportionate mortality is an individual's risk. Age-adjusted rates are comparative summary measures, not individual probabilities. Fallback: write the correction on paper. Source: [CDC Data Brief 548](https://www.cdc.gov/nchs/products/databriefs/db548.htm), tables 2 and 4.
 :::
 
 
@@ -768,8 +685,6 @@ Data quality reflects whether the assumptions behind our measures hold.
 
 ::: {.notes}
 :::
-
-<!-- Add a check on learning quiz. -->
 
 
 ## References {.references-slide .scrollable}
