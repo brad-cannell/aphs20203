@@ -71,3 +71,13 @@
 .reveal .quiz img.qr {
   margin-top: 0.35em;
 }
+
+// Keep full citations readable on the references slide.
+.reveal .references-slide #refs {
+  font-size: 0.8em;
+  line-height: 1.25;
+}
+
+.reveal .references-slide .csl-entry + .csl-entry {
+  margin-top: 0.6em;
+}
