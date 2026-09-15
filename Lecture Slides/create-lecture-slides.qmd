@@ -11,9 +11,9 @@ execute:
 
 # Python Setup
 
-From the `aphs20203` repository root, run `sh _ai/tools/shell/setup_python.sh` once, then select `aphs20203/.venv/bin/python` as the Python interpreter in Positron. Quarto must also be on `PATH`. The course [README](../README.md#python-setup) owns environment setup and course build instructions; KWB retains the shared scripts and general conversion guide.
-
-Run these chunks manually. Rendering this workflow document does not execute them. Set the machine-specific roots here once.
+- From the `aphs20203` repository root, run `sh _ai/tools/shell/setup_python.sh` once, then select `aphs20203/.venv/bin/python` as the Python interpreter in Positron. 
+- Quarto must also be on `PATH`. 
+- The course [README](../README.md#python-setup) owns environment setup and course build instructions; KWB retains the shared scripts and general conversion guide.
 
 ```{python}
 #| eval: false
@@ -42,19 +42,23 @@ from presentation_convert import presentation_pptx_to_quarto
 
 # Create a Draft from an Existing PowerPoint
 
-Select the source and a new deck folder. The example creates a draft beside the existing Introduction presentation. The converter creates the folder, local styles, empty bibliography and title partial, editable assets, source evidence, and review files. It references the course's shared theme. A template copy is unnecessary for conversion.
+- Select the source and a new deck folder. 
+- The converter creates the folder, local styles, empty bibliography and title partial, editable assets, source evidence, and review files. 
+- It references the course's shared theme. 
+- A template copy is unnecessary for conversion.
+- The output folder must be new or empty.
 
 ```{python}
 #| eval: false
 
-source = lecture_root / "Module 01 - Welcome and Overview/Introduction to Epidemiology.pptx"
-output_qmd = lecture_root / "Module 01 - Welcome and Overview/Introduction to Epidemiology Draft/Introduction to Epidemiology.qmd"
+source = '/Users/bradcannell/Library/CloudStorage/Box-Box/2026/APHS 20203 W4-Descriptive Epi.pptx'
+output_qmd = lecture_root / "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.qmd"
 print(f"Source: {source}\nDraft: {output_qmd}")
 
 conversion = presentation_pptx_to_quarto(
     source=source,
     output_qmd=output_qmd,
-    title="Introduction to Epidemiology",
+    title="Descriptive Epidemiology",
     subtitle="APHS 20203",
     project_root=lecture_root,
     shared_theme=lecture_root / "_theme/tcu.scss",
@@ -65,7 +69,7 @@ print(f"Structural errors: {conversion['errors']}")
 print(f"Items needing review: {len(conversion['review_needed'])}")
 ```
 
-The output folder must be new or empty. For an existing draft, open its `.qmd` and `conversion/review.md`; do not rerun conversion. Use the stage commands in KWB's *Convert Presentation Sources to Quarto* guide for inspection and structural QA. The same guide documents standalone decks and PDF/Markdown inputs.
+For an existing draft, open its `.qmd` and `conversion/review.md`; do not rerun conversion. Use the stage commands in KWB's *Convert Presentation Sources to Quarto* guide for inspection and structural QA. The same guide documents standalone decks and PDF/Markdown inputs.
 
 # Review and Refine the Draft
 
