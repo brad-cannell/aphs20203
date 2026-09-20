@@ -1,226 +1,222 @@
 ---
 title: Descriptive Epidemiology
-subtitle: APHS 20203
-author: Brad Cannell, PhD, MPH
-date: last-modified
-date-format: YYYY-MM-DD
-bibliography: references.bib
+subtitle: APHS 20203 • Epidemiology & Biostatistics
 format:
   revealjs:
     theme:
     - default
     - ../../_theme/tcu.scss
     - custom.scss
-    slide-number: c/t
-    chalkboard: true
-    preview-links: auto
-    incremental: false
-    embed-resources: false
-    width: 1280
-    height: 720
-    template-partials:
-    - title-slide.html
-  pptx:
     slide-level: 2
 execute:
   eval: false
-  echo: false
-  warning: false
 ---
 
-## APHS 20203 Epidemiology \& Biostatistics {#source-001}
 
-Week 4: Descriptive Epidemiology: Patterns of Disease—Person, Place, Time
+## Course Learning objectives {visibility="hidden"}
 
-::: {.notes}
+<!-- I'm not sure there's a lot of value in showing these learning objectives to the students, but I'm adding and hiding them as a reminder to myself. What am I actually trying to accomplish? -->
 
-:::
+1. Define epidemiology and key associated terminology, especially confounding.
+2. Distinguish among association, prediction, and causation.
+3. Explain the Rothman model of sufficient-component causes (RMSCC) and the concept of multifactorial causation.
+4. Explain the limitations of anecdotal evidence in drawing epidemiologic conclusions.
+5. Explain why disseminating risk information is sometimes necessary but rarely sufficient to improve population health.
 
-## Learning Objectives {#source-002}
 
-- Describe the **scope and uses of descriptive epidemiology**\.
+## Learning Objectives {visibility="hidden"}
 
-- Distinguish among **case reports, case series, and cross\-sectional 	studies**\.
+- Describe the **scope and uses of descriptive epidemiology**.
 
-- Describe disease patterns using **person, place, and time**\.
+- Distinguish among **case reports, case series, and cross-sectional 	studies**.
 
-- Use descriptive epidemiologic data to **make preliminary 	epidemiologic inferences**\.
+- Describe disease patterns using **person, place, and time**.
 
-- Identify **health disparities** using descriptive epidemiologic methods\.
+- Use descriptive epidemiologic data to **make preliminary 	epidemiologic inferences**.
 
-::: {.notes}
+- Identify **health disparities** using descriptive epidemiologic methods.
 
-:::
 
-## What Is Descriptive Epidemiology? {#source-003}
+## What Is Descriptive Epidemiology?
+
+<!-- Consider breaking this up into multiple slides. -->
 
 - **Purpose:** Describe how health and disease are distributed across 	populations
 
 - **Core Questions**
 
-- **Who** is affected? *(Person)*
+    - **Who** is affected? *(Person)*
 
-- **Where** does it occur? *(Place)*
+    - **Where** does it occur? *(Place)*
 
-- **When** does it occur? *(Time)*
+    - **When** does it occur? *(Time)*
 
 - **Why It Matters**
 
-- Monitor health and disease trends
+    - Monitor health and disease trends
 
-- Guide health services planning
+    - Guide health services planning
 
-- Identify priorities for further study
+    - Identify priorities for further study
 
 ::: {.notes}
 
 :::
 
-## Example: Descriptive Epidemiology in Practice {#source-004}
 
-- **Scenario:** Breastfeeding trends among U\.S\. infants born in 2012:
+## Example: Descriptive Epidemiology in Practice
 
-- **43%** exclusively breastfed for the first **3 months**
+<!-- Consider breaking this up into multiple slides. -->
 
-- **22%** exclusively breastfed for **6 months**
+- **Scenario:** Breastfeeding trends among U.S. infants born in 2012:
+
+    - **43%** exclusively breastfed for the first **3 months**
+
+    - **22%** exclusively breastfed for **6 months**
 
 - **What This Describes**
 
-- **Person:** U\.S\. infants; **Place:** United States; **Time:** First 3 vs\. 6 months after 	birth
+    - **Person:** U.S. infants; **Place:** United States; **Time:** First 3 vs. 6 months after 	birth
 
 - **Discussion Questions**
 
-- What **patterns** do you observe across time?
+    - What **patterns** do you observe across time?
 
-- What **additional descriptive data** would help clarify this pattern (e\.g\., age, 	SES, region)?
+    - What **additional descriptive data** would help clarify this pattern (e.g., age, 	SES, region)?
 
-- Which **groups might be most affected** by this decline?
+    - Which **groups might be most affected** by this decline?
 
 ::: {.notes}
 
 :::
 
-## Descriptive Epidemiologic Study Designs {#source-005}
+
+<!-- Consider adding a section break: Study Designs. -->
+
+
+## Descriptive Epidemiologic Study Designs
+
+<!-- Consider breaking this up into multiple slides. -->
+<!-- I think it's important for them to understand these study designs, including their strengths and weaknesses. Perhaps it's the most important concept in the chapter. -->
 
 - **This section focuses on three common descriptive designs:**
 
-- **Case reports**
+    - **Case reports**
 
-- **Case series**
+    - **Case series**
 
-- **Cross\-sectional studies**
+    - **Cross-sectional studies**
 
-- Other descriptive designs exist (e\.g\., **ecologic studies**, **surveillance\-based 	descriptions**)
+    - Other descriptive designs exist (e.g., **ecologic studies**, **surveillance-based 	descriptions**)
 
 - **What these designs have in common**
 
-- Describe **who**, **where**, and **when**
+    - Describe **who**, **where**, and **when**
 
-- Do **not** test causal relationships
+    - Do **not** test causal relationships
 
-- Often provide the **first signal** of a health issue or disparity
+    - Often provide the **first signal** of a health issue or disparity
 
 ::: {.notes}
 
 :::
 
-## Case Reports {#source-006}
 
-- **Definition:** A detailed description of a **single patient** or a **small number of unusual cases**, typically reported **individually**, not as a group analysis\.
+<!-- Consider adding the slide with the hierarchy of study designs. -->
+
+
+## Case Reports
+
+<!-- Consider breaking this up into multiple slides. -->
+<!-- Consider creating a COL question. -->
+<!-- What are some real-life examples of important case reports? -->
+
+- **Definition:** A detailed description of a **single patient** or a **small number of unusual cases**, typically reported **individually**, not as a group analysis.
 
 - **Purpose**
 
-- Document **novel, rare, or unexpected** health events
+    - Document **novel, rare, or unexpected** health events
 
-- Alert clinicians and public health officials to **new or emerging issues**
+    - Alert clinicians and public health officials to **new or emerging issues**
 
 - **Why They Matter**
 
-- Often provide the **first signal** of a new disease, complication, or side effect
+    - Often provide the **first signal** of a new disease, complication, or side effect
 
-- Contribute to early **public health awareness**
+    - Contribute to early **public health awareness**
 
-- Serve as educational examples in clinical and public health settings
+    - Serve as educational examples in clinical and public health settings
 
 - **Key Limitation**
 
-- No comparison group → **cannot estimate risk or prevalence**
+    - No comparison group → **cannot estimate risk or prevalence**
 
 ::: {.notes}
 
 :::
 
-## Case Reports: Example {#source-007}
 
-<!-- REVIEW: source-007 | Grouped object 2: verify transformed position and order. -->
+## Case Reports: Example {.case-report-example}
 
-<!-- REVIEW: source-007 | Side-by-side layout with 2 columns (object 7 | object 3, object 4); consider a columns div. Source order kept column by column. -->
+<!-- Don't have students read from this slide on the screen. Provdide them with the article or a link to the article. -->
 
-<!-- REVIEW: source-007 | Text fields/soft breaks in shape 9: verify formatting and links. -->
+:::: {.columns}
 
-<!-- source-007-shape-3.png -->
-![](assets/source-007-shape-3.png){fig-alt=""}
-<!-- REVIEW: source-007-b001 | Inspect image and author contextual alt text or record decorative status. -->
+::: {.column width="54%"}
 
-<!-- source-007-shape-4.jpg -->
-![](assets/source-007-shape-4.jpg){fig-alt=""}
-<!-- REVIEW: source-007-b002 | Inspect image and author contextual alt text or record decorative status. -->
-
-<!-- source-007-shape-5.png -->
-![](assets/source-007-shape-5.png){fig-alt=""}
-<!-- REVIEW: source-007-b003 | Inspect image and author contextual alt text or record decorative status. -->
-
-7
-
-[Source: https://www\.nejm\.org/doi/full/10\.1056/nejmoa2001191](<https://www.nejm.org/doi/full/10.1056/nejmoa2001191>)
-
-- **Scan the text and answer:**
+**Scan the text and answer:**
 
 - **How many cases are described in detail?**
-
-- Where do you see evidence to support this is a *single case*?
-
+    - Where do you see evidence to support this is a *single case*?
 - **Person**
-
-- What basic characteristics of the patient are provided?
-
+    - What basic characteristics of the patient are provided?
 - **Place**
-
-- Where did this case occur?
-
-- Where did the outbreak begin?
-
+    - Where did this case occur?
+    - Where did the outbreak begin?
 - **Time**
+    - When was this case identified relative to the outbreak timeline?
+- **What is being described vs. inferred?**
+    - Which parts describe *this patient*?
+    - Which parts reference *broader context*?
 
-- When was this case identified relative to the outbreak timeline?
+:::
 
-- **What is being described vs\. inferred?**
+::: {.column width="44%"}
 
-- Which parts describe *this patient*?
+**First case of COVID-19 in USA**
 
-- Which parts reference *broader context*?
+![](assets/source-007-shape-4.jpg){height="480" fig-alt="Article excerpt from the first reported U.S. COVID-19 case, with Summary, outbreak background, and Case Report sections. The case report describes a 35-year-old man presenting to urgent care in Snohomish County, Washington, on January 19, 2020, after returning from Wuhan, China."}
 
-First case of COVID\-19 in USA
+[Source: NEJM case report](https://www.nejm.org/doi/full/10.1056/nejmoa2001191){.case-report-source}
+
+:::
+
+::::
 
 ::: {.notes}
 
 :::
 
-## Case Series {#source-008}
 
-- **Definition:** A descriptive study that reports on **multiple patients** with 	the **same diagnosis or condition**, described **collectively**\.
+## Case Series
 
-- **Case report:** Each case is described **on its own**
+<!-- Consider breaking this up into multiple slides. -->
+<!-- Consider creating a COL question. -->
+<!-- What are some real-life examples of important case series? -->
 
-- **Case series:** Multiple cases are described **together to identify patterns**
+- **Definition:** A descriptive study that reports on **multiple patients** with 	the **same diagnosis or condition**, described **collectively**.
+
+    - **Case report:** Each case is described **on its own**
+
+    - **Case series:** Multiple cases are described **together to identify patterns**
 
 - **What Case Series Can Describe**
 
-- Common **clinical features**
+    - Common **clinical features**
 
-- Typical **disease progression**
+    - Typical **disease progression**
 
-- Distribution by **person, place, or time**
+    - Distribution by **person, place, or time**
 
 - **Key Limitation:** Cannot estimate **risk**, **rates**, or **causal effects**
 
@@ -228,97 +224,79 @@ First case of COVID\-19 in USA
 
 :::
 
-## Case Series: Example {#source-009}
 
-<!-- REVIEW: source-009 | Grouped object 4: verify transformed position and order. -->
+## Case Series: Example {.case-report-example}
 
-<!-- REVIEW: source-009 | Reading order: shapes reordered top-to-bottom, left-to-right because drawing order differed; verify against the source slide. -->
+<!-- Don't have students read from this slide on the screen. Provdide them with the article or a link to the article. -->
 
-<!-- source-009-shape-5.png -->
-![](assets/source-009-shape-5.png){fig-alt=""}
-<!-- REVIEW: source-009-b001 | Inspect image and author contextual alt text or record decorative status. -->
+:::: {.columns}
 
-<!-- source-009-shape-6.png -->
-![](assets/source-009-shape-6.png){fig-alt=""}
-<!-- REVIEW: source-009-b002 | Inspect image and author contextual alt text or record decorative status. -->
+::: {.column width="54%"}
 
-- **Scan the text and answer:**
+**Scan the text and answer:**
 
 - **How many patients are included?**
-
-- Where in the text do you see evidence that **more than one case** is described?
-
-- **Why is this a case series and not multiple case reports?**
-
+    - Where in the text do you see evidence that **more than one case** is described?
+    - **Why is this a case series and not multiple case reports?**
 - **How are the patients discussed?**
-
-- Are patients described **one at a time**, or
-
-- Are findings described **across patients as a group**?
-
-- What language signals grouping?
-
+    - Are patients described **one at a time**, or
+    - Are findings described **across patients as a group**?
+    - What language signals grouping?
 - **What patterns are described across cases?**
-
-*(e\.g\., symptoms, clinical course, outcomes, timing)*
-
+    - *(e.g., symptoms, clinical course, outcomes, timing)*
 - **What important information is still missing that prevents causal conclusions?**
 
+:::
 
+::: {.column width="44%"}
 
-Source: [www\.nature\.com/articles/s41591\-020\-0877\-5](<http://www.nature.com/articles/s41591-020-0877-5>)
+![](assets/source-009-shape-6.png){height="480" fig-alt="Article excerpt describing the first 12 U.S. patients confirmed to have COVID-19 from January 20 to February 5, 2020. Findings summarize symptoms, clinical course, laboratory results, and outcomes across the patients as a group."}
 
-9
+[Source: Nature Medicine case series](http://www.nature.com/articles/s41591-020-0877-5){.case-report-source}
+
+:::
+
+::::
 
 ::: {.notes}
 
 :::
 
-## Why Individual Cases Belong in Epidemiology {#source-010}
 
-<!-- REVIEW: source-010 | Text fields/soft breaks in shape 5: verify formatting and links. -->
+## Why Individual Cases Belong in Epidemiology
 
-<!-- REVIEW: source-010 | Animations/transitions are not reproduced. -->
+<!-- Consider breaking this up into multiple slides. -->
 
 **“Isn’t epidemiology about populations?”**
 
-- **Yes — but populations are built from individual cases\.**
+- **Yes — but populations are built from individual cases.**
 
-- **Case reports and case series** focus on individuals
-
-→ to **identify and describe new or unusual health events**
+- **Case reports and case series** focus on individuals → to **identify and describe new or unusual health events**
 
 - These early descriptions:
 
-- Reveal **what counts as a case**
+    - Reveal **what counts as a case**
 
-- Signal **emerging health problems**
+    - Signal **emerging health problems**
 
-- Motivate **population\-level investigation**
+    - Motivate **population-level investigation**
 
-<!-- source-010-shape-4.jpg -->
 ![](assets/source-010-shape-4.jpg){fig-alt=""}
-<!-- REVIEW: source-010-b002 | Inspect image and author contextual alt text or record decorative status. -->
 
-10
 
-::: {.notes}
+## Cross-Sectional Studies
 
-:::
-
-## Cross\-Sectional Studies {#source-011}
-
-- **Definition:** A descriptive study that examines **health outcomes and 	related characteristics** across a defined **population at a single point 	in time**\.
+- **Definition:** A descriptive study that examines **health outcomes and 	related characteristics** across a defined **population at a single point 	in time**.
 
 - **Key Features**
 
-- Data collected from **individuals**
+    - Data collected from **individuals**
 
-- Results describe **population\-level patterns**
+    - Results describe **population-level patterns**
 
-- Measures **prevalence**, not incidence
+    - Measures **prevalence**, not incidence
 
-- Exposure(s) and outcome(s) assessed **simultaneously**
+    - Exposure(s) and outcome(s) assessed **simultaneously**
 
 - **Core Focus: A snapshot** describing how health outcomes are 	distributed **across a population**
 
@@ -326,167 +304,158 @@ Source: [www\.nature\.com/articles/s41591\-020\-0877\-5](<http://www.nature.com/
 
 :::
 
-## Cross\-Sectional: One\-Time Snapshot {#source-012}
 
-<!-- REVIEW: source-012 | Grouped object 3: verify transformed position and order. -->
+## Cross-Sectional: One-Time Snapshot
 
-<!-- REVIEW: source-012 | Text fields/soft breaks in shape 6: verify formatting and links. -->
+<!-- Figure out what you want to say while presenting this slide. -->
 
-<!-- source-012-shape-4.jpg -->
 ![](assets/source-012-shape-4.jpg){fig-alt=""}
-<!-- REVIEW: source-012-b001 | Inspect image and author contextual alt text or record decorative status. -->
 
-<!-- REVIEW: source-012-b002 | Drawing without text (FREEFORM (5), object 5): reconstruct or crop the source slide. Source: /ppt/slides/slide12.xml, shape 5 (object 5) -->
 
-12
+## Cross-Sectional Study: Example {.case-report-example}
 
-::: {.notes}
+:::: {.columns}
 
-:::
-
-## Cross\-Sectional Study: Example {#source-013}
-
-<!-- REVIEW: source-013 | Grouped object 5: verify transformed position and order. -->
-
-<!-- REVIEW: source-013 | Side-by-side layout with 2 columns (object 2, object 3 | object 6, object 7, object 8); consider a columns div. Source order kept column by column. -->
-
-<!-- REVIEW: source-013 | Text fields/soft breaks in shape 9: verify formatting and links. -->
+::: {.column width="54%"}
 
 **Scan and Answer:**
 
 - **Health problem:**
-
-- What outcome is being described?
-
-→ Incidence or **prevalence**?
-
+    - What outcome is being described? → Incidence or **prevalence**?
 - **Who:** Who is included in the study population?
-
 - **Where:** What geographic or service area is studied?
-
-- **When:** Does this describe a **snapshot** or follow\-up over time?
-
+- **When:** Does this describe a **snapshot** or follow-up over time?
 - **Measures:** What outcomes and exposures are assessed **at the same time**?
+- **Design check:** What tells you this is **cross-sectional**, not a case series or cohort?
 
-- **Design check:** What tells you this is **cross\-sectional**, not a case series or cohort?
+:::
 
-<!-- source-013-shape-6.png -->
-![](assets/source-013-shape-6.png){fig-alt=""}
-<!-- REVIEW: source-013-b003 | Inspect image and author contextual alt text or record decorative status. -->
+::: {.column width="44%"}
 
-<!-- source-013-shape-7.jpg -->
-![](assets/source-013-shape-7.jpg){fig-alt=""}
-<!-- REVIEW: source-013-b004 | Inspect image and author contextual alt text or record decorative status. -->
+![](assets/source-013-shape-7.jpg){height="480" fig-alt="Article abstract with Background, Objective, Methods, Results, and Conclusions sections. The study surveyed 1,694 patients between April 30 and May 13, 2020, and linked survey responses to COVID-19 testing data for 454 patients to estimate prevalence and examine associated factors in a hospital service area."}
 
-[Source: publichealth\.jmir\.org/2021/1/e24320](<https://publichealth.jmir.org/2021/1/e24320>)
+[Source: publichealth.jmir.org/2021/1/e24320](https://publichealth.jmir.org/2021/1/e24320){.case-report-source}
 
-13
+:::
+
+::::
 
 ::: {.notes}
 
 :::
 
-## Untitled source 14 {#source-014}
 
-<!-- REVIEW: source-014 | Title inferred from text size but ambiguous (candidates: 'Epi Project Prep 2 Get Started!' 60pt; '14' 0pt); verify or author a heading. -->
+# Project Prep 2 {.section}
 
-<!-- REVIEW: source-014 | Reading order: shapes reordered top-to-bottom, left-to-right because drawing order differed; verify against the source slide. -->
-
-<!-- REVIEW: source-014 | Text fields/soft breaks in shape 3: verify formatting and links. -->
-
-Epi Project Prep 2
-
-Get Started\!
-
-14
+<!-- I'm not sure I'm going to have them do this. -->
 
 ::: {.notes}
-
+Get Started!
 :::
 
-## Person Variables: the “Who” Factor {#source-015}
 
-- **Definition:** Person variables are demographic characteristics that can 	influence health outcomes\.
+# Person, Place, and Time {.section}
 
-- **Purpose:** Understanding who is at risk helps tailor public health 	interventions\.
+
+## Person Variables: The “Who” Factor
+
+<!-- Consider breaking this up into multiple slides. -->
+<!-- Consider creating a COL question. -->
+
+- **Definition:** Person variables are demographic characteristics that can influence health outcomes.
+
+- **Purpose:** Understanding who is at risk helps tailor public health interventions.
 
 - **Key Person Variables:**
 
-- Age, Sex, Race/ethnicity, Socioeconomic status
+    - Age, Sex, Race/ethnicity, Socioeconomic status
 
-- Other examples: Gender, Marital status, Nativity (place of origin), Religion
+    - Other examples: Gender, Marital status, Nativity (place of origin), Religion
 
 ::: {.notes}
 
 :::
 
-## Age {#source-016}
 
-- **Definition:** Age describes how disease occurrence and health outcomes vary across the life course\.
+## Age
+
+<!-- Consider breaking this up into multiple slides. -->
+<!-- Consider creating a COL question. -->
+
+- **Definition:** Age describes how disease occurrence and health outcomes vary across the life course.
 
 - **Why Age Matters**
 
-- Disease patterns often differ by **life stage**
+    - Disease patterns often differ by **life stage**
 
-- Helps identify **age\-specific health priorities**
+    - Helps identify **age-specific health priorities**
 
 - **Examples**
 
-- **Childhood:** Higher occurrence of some infectious diseases
+    - **Childhood:** Higher occurrence of some infectious diseases
 
-- **Young adults:** Higher rates of injury\-related outcomes
+    - **Young adults:** Higher rates of injury-related outcomes
 
-- **Older adults:** Higher prevalence of chronic disease and mortality
+    - **Older adults:** Higher prevalence of chronic disease and mortality
 
 - **Discussion Question:** What health concerns are most common among
 
-**college\-aged adults**?
+**college-aged adults**?
 
 ::: {.notes}
 
 :::
 
-## Sex/Gender {#source-017}
 
-- **Definition:** Sex and gender describe differences in health outcomes related to **biological characteristics** and **social roles, behaviors, and norms**\.
+## Sex/Gender
+
+<!-- Consider breaking this up into multiple slides. -->
+<!-- Consider creating a COL question. -->
+<!-- Talk about chromosomes vs social norms, -->
+
+- **Definition:** Sex and gender describe differences in health outcomes related to **biological characteristics** and **social roles, behaviors, and norms**.
 
 - **Why Sex/Gender Matters**
 
-- Many diseases show different **patterns of occurrence and outcomes** by sex or gender
+    - Many diseases show different **patterns of occurrence and outcomes** by sex or gender
 
-- Differences may reflect **biology, behavior, social context, or access to care**
+    - Differences may reflect **biology, behavior, social context, or access to care**
 
 - **Examples**
 
-- **Heart disease:** Higher rates and earlier onset among males
+    - **Heart disease:** Higher rates and earlier onset among males
 
-- **Autoimmune diseases \& depression:** Higher prevalence among females
+    - **Autoimmune diseases & depression:** Higher prevalence among females
 
-- **Mortality:** All\-cause age\-specific mortality rates are typically higher among males
+    - **Mortality:** All-cause age-specific mortality rates are typically higher among males
 
-- **Discussion Question:** What health concerns or health\-related behaviors differ by **sex or gender** among college students?
+- **Discussion Question:** What health concerns or health-related behaviors differ by **sex or gender** among college students?
 
 ::: {.notes}
 
 :::
 
-## Race/Ethnicity {#source-018}
 
-- **Definition:** Race and ethnicity describe population groups based on **social, cultural, historical, and geographic characteristics**\.
+## Race/Ethnicity
+
+<!-- Consider breaking this up into multiple slides. -->
+<!-- Consider creating a COL question. -->
+
+- **Definition:** Race and ethnicity describe population groups based on **social, cultural, historical, and geographic characteristics**.
 
 - **Why Race/Ethnicity Matters**
 
-- Disease occurrence and health outcomes often vary across groups
+    - Disease occurrence and health outcomes often vary across groups
 
-- Patterns reflect **inequities in exposure, resources, and access to care**, not biology alone
+    - Patterns reflect **inequities in exposure, resources, and access to care**, not biology alone
 
 - **Examples of Observed Patterns**
 
-- **Asthma:** Lower reported prevalence among some Hispanic populations
+    - **Asthma:** Lower reported prevalence among some Hispanic populations
 
-- **Cognitive decline:** Higher prevalence among American Indian or Alaska Native populations
+    - **Cognitive decline:** Higher prevalence among American Indian or Alaska Native populations
 
-- **COVID\-19:** Higher mortality rates among non\-Hispanic Black populations, especially early in the pandemic
+    - **COVID-19:** Higher mortality rates among non-Hispanic Black populations, especially early in the pandemic
 
 - **Discussion Question:** What factors—other than biology—might help explain differences in health outcomes across racial or ethnic groups?
 
@@ -494,23 +463,27 @@ Get Started\!
 
 :::
 
-## Socioeconomic Status (SES) {#source-019}
 
-- **Definition:** Socioeconomic status reflects an individual’s or group’s **economic and social position**, commonly measured by **income, education, and occupation**\.
+## Socioeconomic Status (SES)
+
+<!-- Consider breaking this up into multiple slides. -->
+<!-- Consider creating a COL question. -->
+
+- **Definition:** Socioeconomic status reflects an individual’s or group’s **economic and social position**, commonly measured by **income, education, and occupation**.
 
 - **Why SES Matters**
 
-- Strongly associated with differences in **health outcomes and access to care**
+    - Strongly associated with differences in **health outcomes and access to care**
 
-- Patterns often show a **social gradient**, with worse health at lower SES levels
+    - Patterns often show a **social gradient**, with worse health at lower SES levels
 
-- **Examples of SES\-Related Patterns**
+- **Examples of SES-Related Patterns**
 
-- Higher rates of chronic disease and mortality in lower\-SES groups
+    - Higher rates of chronic disease and mortality in lower-SES groups
 
-- Reduced access to preventive services and timely care
+    - Reduced access to preventive services and timely care
 
-- Greater exposure to environmental and occupational risks
+    - Greater exposure to environmental and occupational risks
 
 - **Discussion Question:** Which aspects of SES might most strongly influence health among **college students**?
 
@@ -518,27 +491,31 @@ Get Started\!
 
 :::
 
-## Social Determinants of Health (SDOH) {#source-020}
 
-- **Definition:** Social determinants of health are the **conditions in which people are 	born, grow, live, work, and age** that influence health outcomes\.
+## Social Determinants of Health (SDOH)
+
+<!-- Consider breaking this up into multiple slides. -->
+<!-- Consider creating a COL question. -->
+
+- **Definition:** Social determinants of health are the **conditions in which people are born, grow, live, work, and age** that influence health outcomes.
 
 - **Why SDOH Matter**
 
-- Shape **opportunities for health** beyond individual behaviors
+    - Shape **opportunities for health** beyond individual behaviors
 
-- Help explain **persistent health disparities** across populations
+    - Help explain **persistent health disparities** across populations
 
 - **Common SDOH Domains**
 
-- Economic stability: e\.g\. Ability to afford food, housing, or health care
+    - Economic stability: e.g. Ability to afford food, housing, or health care
 
-- Education access and quality: e\.g\. Access to quality schools or educational resources
+    - Education access and quality: e.g. Access to quality schools or educational resources
 
-- Health care access and quality: e\.g\. Availability of primary care or mental health services
+    - Health care access and quality: e.g. Availability of primary care or mental health services
 
-- Neighborhood and built environment: e\.g\. Safe housing, and access to healthy foods
+    - Neighborhood and built environment: e.g. Safe housing, and access to healthy foods
 
-- Social and community context: e\.g\. Social support, or community connectedness
+    - Social and community context: e.g. Social support, or community connectedness
 
 - **Discussion Question:** Which SDOH are most relevant to health outcomes among
 
@@ -548,11 +525,10 @@ Get Started\!
 
 :::
 
-## SES vs\. SDOH {#source-021}
 
-<!-- REVIEW: source-021 | Reading order: shapes reordered top-to-bottom, left-to-right because drawing order differed; verify against the source slide. -->
+## SES vs. SDOH
 
-<!-- REVIEW: source-021 | Text fields/soft breaks in shape 5: verify formatting and links. -->
+<!-- Double-check the information on this slide. -->
 
 |  | Socioeconomic Status (SES) | Social Determinants of Health (SDOH) |
 | --- | --- | --- |
@@ -560,19 +536,18 @@ Get Started\!
 | What it describes | Social and economic standing | Conditions shaping daily life and health |
 | Common measures / examples | Income, education, occupation | Housing, working conditions, access to care, education, social support |
 
-**Key distinction:** SES reflects social position; SDOH reflect lived conditions\.
+::: {.notes}
+**Key distinction:** SES reflects social position; SDOH reflect lived conditions.
 
 **Relationship: SES → influences → SDOH → shapes health outcomes**
-
-21
-
-::: {.notes}
-
 :::
 
-## Exercise: SES or SDOH? {#source-022}
 
-For each example, decide whether it best represents **SES** or **SDOH**\. Reminder: SES reflects **position**; SDOH reflect **conditions that come with that position**\.
+## Exercise: SES or SDOH?
+
+<!-- I'm not sure how important this distinction is. -->
+
+For each example, decide whether it best represents **SES** or **SDOH**. Reminder: SES reflects **position**; SDOH reflect **conditions that come with that position**.
 
 - A person’s highest level of education
 
@@ -587,369 +562,388 @@ For each example, decide whether it best represents **SES** or **SDOH**\. Remind
 - Household income level
 
 ::: {.notes}
-
+- A person’s highest level of education: SES
+- Living in a neighborhood with limited access to grocery stores: SDOH
+- Type of job and employment status: SES
+- Exposure to hazardous conditions at work: SDOH
+- Ability to take paid sick leave: SDOH
+- Household income level: SES
 :::
 
-## Health Disparities {#source-023}
 
-- **Definition:** Health disparities are **differences in health outcomes, disease 	burden, or access to care** across population groups\.
+## Health Disparities
+
+<!-- Consider breaking this up into multiple slides. -->
+<!-- Consider creating a COL question. -->
+
+- **Definition:** Health disparities are **differences in health outcomes, disease 	burden, or access to care** across population groups.
 
 - **Why Health Disparities Matter**
 
-- Indicate **inequities** in health and health care
+    - Indicate **inequities** in health and health care
 
-- Reflect differences in **SES, SDOH, and social context**
+    - Reflect differences in **SES, SDOH, and social context**
 
 - **Examples of Health Disparities**
 
-- Higher rates of chronic disease in lower\-SES populations
+    - Higher rates of chronic disease in lower-SES populations
 
-- Differences in access to preventive care by income or insurance status
+    - Differences in access to preventive care by income or insurance status
 
-- Higher mortality rates for certain conditions across racial or ethnic groups
+    - Higher mortality rates for certain conditions across racial or ethnic groups
 
-- **Key Point:** Health disparities are **descriptive patterns**, not explanations\.
+- **Key Point:** Health disparities are **descriptive patterns**, not explanations.
 
 - **Discussion Question:**
 
-- Which person\-related factors (age, race/ethnicity, SES, SDOH) are most likely contributing to health disparities among **college students**?
+    - Which person-related factors (age, race/ethnicity, SES, SDOH) are most likely contributing to health disparities among **college students**?
 
 ::: {.notes}
 
 :::
 
-## Place Variables\-the “Where” Factor {#source-024}
 
-- **Definition:** Place describes how disease occurrence and health outcomes vary by **geographic location**\.
+## Place Variables: The “Where” Factor
+
+<!-- Consider breaking this up into multiple slides. -->
+<!-- Consider creating a COL question. -->
+
+- **Definition:** Place describes how disease occurrence and health outcomes vary by **geographic location**.
 
 - **Why Place Matters**
 
-- Health patterns often differ across locations due to **environmental, social, and structural factors**
+    - Health patterns often differ across locations due to **environmental, social, and structural factors**
 
-- Helps identify **geographic disparities** in health and access to care
+    - Helps identify **geographic disparities** in health and access to care
 
 - **Common Place Levels**
 
-- International
+    - International
 
-- National (within\-country)
+    - National (within-country)
 
-- Regional or state
+    - Regional or state
 
-- Urban vs\. rural
+    - Urban vs. rural
 
-- Local or neighborhood
+    - Local or neighborhood
 
 ::: {.notes}
 
 :::
 
-## International Variation {#source-025}
 
-- **Definition:** Differences in disease patterns and health outcomes **across countries**\.
+## International Variation
+
+- **Definition:** Differences in disease patterns and health outcomes **across countries**.
 
 - **Why Place Matters Internationally**
 
-- Health outcomes vary widely due to **contextual differences**
+    - Health outcomes vary widely due to **contextual differences**
 
-- Reflect differences in **health systems, environments, and resources**
+    - Reflect differences in **health systems, environments, and resources**
 
 - **Examples**
 
-- **Infectious diseases:** Polio remains endemic in a few countries while eliminated elsewhere
+    - **Infectious diseases:** Polio remains endemic in a few countries while eliminated elsewhere
 
-- **Life expectancy:** Substantial differences across countries and regions
+    - **Life expectancy:** Substantial differences across countries and regions
 
-- **Maternal and child health:** Higher mortality in lower\-resource settings
+    - **Maternal and child health:** Higher mortality in lower-resource settings
 
-- **Key Point:** International variation reflects **where people live**, not individual risk 	alone\.
+- **Key Point:** International variation reflects **where people live**, not individual risk 	alone.
 
 - **Discussion Question**
 
-- What factors might contribute to health differences between countries?
+    - What factors might contribute to health differences between countries?
 
 ::: {.notes}
 
 :::
 
-## National (Within\-Country) Variations {#source-026}
 
-- **Definition:** Differences in disease patterns and health outcomes **across regions or locations within the same country**\.
+## National (Within-Country) Variations
+
+- **Definition:** Differences in disease patterns and health outcomes **across regions or locations within the same country**.
 
 - **Why Place Matters Within Countries**
 
-- Health outcomes vary by **region, state, and community**
+    - Health outcomes vary by **region, state, and community**
 
-- Reflect differences in **environment, resources, policies, and access to care**
+    - Reflect differences in **environment, resources, policies, and access to care**
 
 - **Examples**
 
-- **Heart disease:** Rates vary substantially by U\.S\. state and region
+    - **Heart disease:** Rates vary substantially by U.S. state and region
 
-- **Respiratory illness:** Higher prevalence in areas with greater air pollution
+    - **Respiratory illness:** Higher prevalence in areas with greater air pollution
 
-- **Injury and violence:** Higher rates in some regions compared with others
+    - **Injury and violence:** Higher rates in some regions compared with others
 
-- **Key Point:** Health patterns can differ greatly **even within the same country**\.
+- **Key Point:** Health patterns can differ greatly **even within the same country**.
 
 - **Discussion Question**
 
-- What factors might explain health differences between regions within the U\.S\.?
+    - What factors might explain health differences between regions within the U.S.?
 
 ::: {.notes}
 
 :::
 
-## National Variation (Example) {#source-027}
+
+## National Variation (Example)
 
 <!-- source-027-shape-2.jpg -->
 ![](assets/source-027-shape-2.jpg){fig-alt="The map highlights the age prevalence of heart attacks. The data inferred from the map is as follows: 2.4 to 3.0, Washington, California, Utah, Alaska, Hawaii, Colorado, Nebraska, Wisconsin, New York, New Jersey, Maryland, New Hampshire, Washington D C; 3.1 to 3.4, Oregon, Nevada, Montana, Wyoming; New Mexico, Texas, Minnesota, Iowa, Illinois, Virginia, Vermont, Massachusetts, Rhode Island, Puerto Rico; 3.5 to 4.0, Idaho, Arizona, North Dakota, South Dakota, Kansas, Louisiana, Michigan, Indiana, Pennsylvania, North Carolina, South Carolina, Delaware, Guam; 4.1 to 5.6, Oklahoma, Missouri, Arkansas, Mississippi, Tennessee, Alabama, Georgia, Kentucky, Ohio, West Virginia, Maine, Guam; Data not available, Florida, Virgin Island."}
 
 Question: What do you notice about the geographic pattern?
 
-::: {.notes}
 
-:::
+## From Urban–Rural to Local
 
-## From Urban–Rural to Local {#source-028}
-
-- **Definition:** Geographic health patterns can exist at **multiple spatial scales**, from broad categories to very specific locations\.
+- **Definition:** Geographic health patterns can exist at **multiple spatial scales**, from broad categories to very specific locations.
 
 - **Examples**
 
-- **Urban vs\. rural:**	Higher **motor vehicle fatality rates** in rural areas compared with urban areas in the U\.S\.
+    - **Urban vs. rural:**	Higher **motor vehicle fatality rates** in rural areas compared with urban areas in the U.S.
 
-- **Local areas:** Elevated **childhood lead exposure** in neighborhoods with older housing stock; higher **asthma prevalence** near major highways or industrial sites\.
+    - **Local areas:** Elevated **childhood lead exposure** in neighborhoods with older housing stock; higher **asthma prevalence** near major highways or industrial sites.
 
-- **Key Point:** As place becomes more specific, patterns may point to **localized risks or exposures**\.
+- **Key Point:** As place becomes more specific, patterns may point to **localized risks or exposures**.
 
 - **Discussion Questions**
 
-- Do you know any examples of diseases that show localized geographic patterns?
+    - Do you know any examples of diseases that show localized geographic patterns?
 
 ::: {.notes}
 
 :::
 
-## Localized Patterns of Disease {#source-029}
+
+## Localized Patterns of Disease
 
 - Associated with specific environmental conditions that may exist in a 	particular geographic area
 
 - Examples:
 
-- Lung cancer:	regions with high level radon gas
+    - Lung cancer:	regions with high level radon gas
 
-- Skin lesions and increased risks of lung, bladder, and skin cancers: regions 	with naturally occurring arsenic in water supply
+    - Skin lesions and increased risks of lung, bladder, and skin cancers: regions 	with naturally occurring arsenic in water supply
 
-- Dengue Fever: along the Texas–Mexico border linked to the presence of 	Aedes mosquitoes
+    - Dengue Fever: along the Texas–Mexico border linked to the presence of 	Aedes mosquitoes
 
-- Lyme disease: Northeast, mid\-Atlantic, and upper Midwest in US (\~90% 	reported cases)
+    - Lyme disease: Northeast, mid-Atlantic, and upper Midwest in US (\~90% 	reported cases)
 
 ::: {.notes}
 
 :::
 
-## Time: The “When” {#source-030}
 
-- **Definition:**	Time describes how disease occurrence and health 	outcomes **change or vary over time**\.
+## Time: The “When” Factor
+
+<!-- Consider breaking this up into multiple slides. -->
+<!-- Consider creating a COL question. -->
+
+- **Definition:** Time describes how disease occurrence and health outcomes **change or vary over time**.
 
 - **Why Time Matters**
 
-- Reveals **trends, cycles, and outbreaks**
+    - Reveals **trends, cycles, and outbreaks**
 
-- Helps distinguish **short\-term events** from **long\-term patterns**
+    - Helps distinguish **short-term events** from **long-term patterns**
 
 - **Common Time Patterns**
 
-- **Secular trends:** Long\-term changes over years or decades
+    - **Secular trends:** Long-term changes over years or decades
 
-- **Seasonal or cyclic trends:** Regular patterns within a year or over cycles
+    - **Seasonal or cyclic trends:** Regular patterns within a year or over cycles
 
-- **Point epidemics:** Sudden increases over a short period
+    - **Point epidemics:** Sudden increases over a short period
 
-- **Clustering:** Higher\-than\-expected cases in a specific time period or place
+    - **Clustering:** Higher-than-expected cases in a specific time period or place
 
 ::: {.notes}
 
 :::
 
-## Secular Trends {#source-031}
 
-- **Definition:** Long\-term changes in disease occurrence or health outcomes observed over
+## Secular Trends
 
-**many years or decades**\.
+<!-- Consider breaking this up into multiple slides. -->
+
+- **Definition:** Long-term changes in disease occurrence or health outcomes observed over **many years or decades**.
 
 - **Why Secular Trends Matter**
 
-- Show whether a health problem is **increasing, decreasing, or stable** over time
+    - Show whether a health problem is **increasing, decreasing, or stable** over time
 
-- Reflect broad changes in **population behavior, environment, or policy**
+    - Reflect broad changes in **population behavior, environment, or policy**
 
 - **Examples**
 
-- **Smoking prevalence:** Steady decline in the U\.S\. over several decades
+    - **Smoking prevalence:** Steady decline in the U.S. over several decades
 
-- **Obesity prevalence:** Long\-term increase across many age groups
+    - **Obesity prevalence:** Long-term increase across many age groups
 
-- **Life expectancy:** Gradual increases over time, with recent plateaus or declines in some populations
+    - **Life expectancy:** Gradual increases over time, with recent plateaus or declines in some populations
 
-- **Key Point:** Secular trends describe **direction and magnitude of change**, not causes\.
+- **Key Point:** Secular trends describe **direction and magnitude of change**, not causes.
 
 - **Discussion Question**
 
-- Can you think of a health outcome that has shown major changes **past several decades or across generations in the U\.S\.**?
+    - Can you think of a health outcome that has shown major changes **past several decades or across generations in the U.S.**?
 
 ::: {.notes}
 
 :::
 
-## Seasonal (Cyclic) Trends {#source-032}
 
-- **Definition:** Regular increases and decreases in disease occurrence that repeat over **specific periods**, often within a year\.
+## Seasonal (Cyclic) Trends
+
+<!-- Consider breaking this up into multiple slides. -->
+
+- **Definition:** Regular increases and decreases in disease occurrence that repeat over **specific periods**, often within a year.
 
 - **Why Seasonal Trends Matter**
 
-- Help anticipate **predictable changes** in disease burden
+    - Help anticipate **predictable changes** in disease burden
 
-- Support **timing of prevention and response** efforts
+    - Support **timing of prevention and response** efforts
 
 - **Examples**
 
-- **Influenza:** Higher incidence during winter months
+    - **Influenza:** Higher incidence during winter months
 
-- **Allergic conditions:** Increased symptoms during spring and fall
+    - **Allergic conditions:** Increased symptoms during spring and fall
 
-- **Foodborne illness:** Higher incidence in summer months
+    - **Foodborne illness:** Higher incidence in summer months
 
-- **Key Point:** Seasonal trends repeat in a **predictable pattern** over time\.
+- **Key Point:** Seasonal trends repeat in a **predictable pattern** over time.
 
 - **Discussion Question**
 
-- What health conditions tend to increase during specific seasons?
+    - What health conditions tend to increase during specific seasons?
 
 ::: {.notes}
 
 :::
 
-## Point Epidemics {#source-033}
 
-- **Definition:** A sudden increase in disease occurrence over a **short period of time**, 	often linked to a **common exposure**\.
+## Point Epidemics
+
+<!-- Consider breaking this up into multiple slides. -->
+
+- **Definition:** A sudden increase in disease occurrence over a **short period of time**, 	often linked to a **common exposure**.
 
 - **Why Point Epidemics Matter**
 
-- Signal a **recent or ongoing outbreak**
+    - Signal a **recent or ongoing outbreak**
 
-- Help identify **when** exposure likely occurred
+    - Help identify **when** exposure likely occurred
 
 - **Examples**
 
-- **Food poisoning outbreak** linked to a single meal or event
+    - **Food poisoning outbreak** linked to a single meal or event
 
-- **Legionnaires’ disease** outbreak associated with a contaminated water source
+    - **Legionnaires’ disease** outbreak associated with a contaminated water source
 
-- **Chemical exposure** causing acute illness in a community
+    - **Chemical exposure** causing acute illness in a community
 
-- **Key Point:** Point epidemics reflect **short\-term changes**, not long\-term trends\.
+- **Key Point:** Point epidemics reflect **short-term changes**, not long-term trends.
 
 - **Discussion Question**
 
-- What **time\-related information** helps identify **when exposure likely occurred** during a point epidemic?
+    - What **time-related information** helps identify **when exposure likely occurred** during a point epidemic?
 
 ::: {.notes}
-
+- Latency period: The time that passes between being exposed to a disease-causing agent, such as a virus or radiation, and the actual appearance of symptoms
 :::
 
-## Clustering {#source-034}
 
-- **Definition:** The occurrence of a **greater\-than\-expected number of cases**
+## Clustering
 
-within a **specific time period**, **geographic area, or population group**\.
+<!-- Consider breaking this up into multiple slides. -->
+
+- **Definition:** The occurrence of a **greater-than-expected number of cases** within a **specific time period**, **geographic area, or population group**.
 
 - **Why Clustering Matters**
 
-- May signal **unusual aggregation** of disease
+    - May signal **unusual aggregation** of disease
 
-- Helps identify patterns that warrant **closer monitoring or investigation**
+    - Helps identify patterns that warrant **closer monitoring or investigation**
 
 - **Examples**
 
-- **Temporal clustering:** Increased cases of influenza during a short winter period
+    - **Temporal clustering:** Increased cases of influenza during a short winter period
 
-- **Spatial clustering:** Higher\-than\-expected leukemia cases in a small community
+    - **Spatial clustering:** Higher-than-expected leukemia cases in a small community
 
-- **Spatiotemporal clustering:** Dengue cases occurring in a specific neighborhood over several weeks
+    - **Spatiotemporal clustering:** Dengue cases occurring in a specific neighborhood over several weeks
 
-- **Key Point:** Clustering describes **where and when cases group together**, not why they occur\.
+- **Key Point:** Clustering describes **where and when cases group together**, not why they occur.
 
 ::: {.notes}
 
 :::
 
-## Comparing Time and Place Patterns {#source-035}
+
+## Comparing Time and Place Patterns {.scrollable}
+
+::: {style="font-size: 0.65em; line-height: 1.2;"}
 
 | Pattern | What it represents | Key distinguishing feature | Example |
 | --- | --- | --- | --- |
 | Seasonal trend | Expected, recurring variation over time | Predictable and repeats regularly | Influenza peaks every winter |
-| <br>Temporal clustering | Descriptive observation of cases grouped in time | Higher\-than\-expected cases during a specific period; no designation implied | Unusual increase in meningitis cases over 2 weeks |
+| Temporal clustering | Descriptive observation of cases grouped in time | Higher-than-expected cases during a specific period; no designation implied | Unusual increase in meningitis cases over 2 weeks |
 | Point epidemic | A sharp form of temporal clustering | Very short time window, often consistent with a single exposure | Food poisoning after one shared meal |
-| Endemic pattern | Baseline, expected level of disease in a population | Ongoing and relatively stable over time | Malaria in parts of sub\-Saharan Africa |
-| Spatial clustering | Descriptive observation of cases grouped in place | Higher\-than\-expected cases in a specific location | Lyme disease concentrated in the Northeast U\.S\. |
-| <br>Spatiotemporal clustering | Descriptive observation of cases grouped by time and place | Unusual concentration in both dimensions | Dengue cases in one neighborhood over several weeks |
-| Epidemic (Week 1 term) | Public health designation | Determination that observed clustering exceeds what is expected | COVID\-19 epidemic in early 2020 |
+| Endemic pattern | Baseline, expected level of disease in a population | Ongoing and relatively stable over time | Malaria in parts of sub-Saharan Africa |
+| Spatial clustering | Descriptive observation of cases grouped in place | Higher-than-expected cases in a specific location | Lyme disease concentrated in the Northeast U.S. |
+| Spatiotemporal clustering | Descriptive observation of cases grouped by time and place | Unusual concentration in both dimensions | Dengue cases in one neighborhood over several weeks |
+| Epidemic (Week 1 term) | Public health designation | Determination that observed clustering exceeds what is expected | COVID-19 epidemic in early 2020 |
+
+:::
 
 ::: {.notes}
 
 :::
 
-## Descriptive Epidemiology: Advantages and Limitations {#source-036}
 
-<!-- REVIEW: source-036 | Side-by-side layout with 2 columns (object 3 | object 4); consider a columns div. Source order kept column by column. -->
+## Descriptive Epidemiology: Advantages and Limitations
 
-<!-- REVIEW: source-036 | Text fields/soft breaks in shape 5: verify formatting and links. -->
+:::: {.columns}
 
-36
+::: {.column width="50%"}
 
-Advantages
+### Advantages
 
-- Describes who, where, and 	when disease occurs
+- Describes who, where, and when disease occurs
 
-- Identifies patterns and 	disparities in populations
+- Identifies patterns and disparities in populations
 
-- Supports public health 	surveillance and planning
+- Supports public health surveillance and planning
 
-- Helps generate questions for 	further study
-
-Limitations
-
-- Cannot establish causal 	relationships
-
-- Often lacks temporal order
-
-between exposure and outcome
-
-- May be influenced by reporting 	or measurement differences
-
-- Describes patterns but does not 	explain why they occur
-
-::: {.notes}
+- Helps generate questions for further study
 
 :::
 
-## Epidemiologic Inference {#source-037}
+::: {.column width="50%"}
 
-<!-- source-037-shape-3.jpg -->
-![](assets/source-037-shape-3.jpg){fig-alt="The steps involved in the process of epidemiologic inference are as follows: Observation leads to a cyclic process that involves the following four steps: make comparisons, generate, hypotheses, and test. The cyclic process further gives rise to descriptive epidemiology, analytic epidemiology, and epidemiologic inference. Descriptive epidemiology involves questions such as who, what, where, when, & how many? It rules out chance, bias, and confounding and involves design, conduct, analysis, and interpretation. Analytic epidemiology involves questions such as why & how? It controls for chance, bias, and confounding and involves design, conduct, analysis, and interpretation."}
+### Limitations
 
-::: {.notes}
+- Cannot establish causal relationships
 
-:::
+- Often lacks temporal order between exposure and outcome
 
-## Epi Project Prep 2 {#source-038}
+- May be influenced by reporting or measurement differences
 
-<!-- REVIEW: source-038 | Text fields/soft breaks in shape 3: verify formatting and links. -->
-
-38
-
-::: {.notes}
+- Describes patterns but does not explain why they occur
 
 :::
+
+::::
+
+
+<!-- Add a references slide. -->
+
+
+# Project Prep 2 {.section}

@@ -66,3 +66,36 @@
   border-bottom: 2px solid $presentation-heading-color;
   padding-bottom: 0.2em;
 }
+
+// Keep the case-report questions beside the complete excerpt. These local
+// rules leave the shared theme and every other slide unchanged.
+.reveal .case-report-example .columns {
+  align-items: flex-start;
+}
+
+.reveal .case-report-example .column {
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.reveal .case-report-example .column p {
+  margin: 0 0 0.3em;
+}
+
+.reveal .case-report-example .column > ul > li {
+  margin-bottom: 0.3em;
+}
+
+// Preserve the entire evidence image, including its bottom Case Report text.
+.reveal .case-report-example .column img {
+  display: block;
+  height: 480px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.reveal .case-report-example .case-report-source {
+  font-size: 18px;
+}
