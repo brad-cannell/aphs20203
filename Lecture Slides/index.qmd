@@ -27,3 +27,8 @@ Interactive slide decks for APHS 20203.
 
 - [View interactive slides](Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.qmd)
 - [Download PDF](Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.pdf)
+
+## Module 4: Descriptive Epidemiology
+
+- [View interactive slides](Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.qmd)
+- [Download PDF](Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.pdf)

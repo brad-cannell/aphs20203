@@ -9,9 +9,13 @@ execute:
 - A guide for creating lecture slides for APHS 20203, Epidemiology and Biostatisics.
 - Clean this up later. For now, just get it operational.
 
+
 # Python Setup
 
-- From the `aphs20203` repository root, run `sh _ai/tools/shell/setup_python.sh` once, then select `aphs20203/.venv/bin/python` as the Python interpreter in Positron. 
+1. From the `aphs20203` repository root, run `sh _ai/tools/shell/setup_python.sh` once.
+2. Select `aphs20203/.venv/bin/python` as the Python interpreter in Positron.
+
+**Notes**
 - Quarto must also be on `PATH`. 
 - The course [README](../README.md#python-setup) owns environment setup and course build instructions; KWB retains the shared scripts and general conversion guide.
 
@@ -40,10 +44,12 @@ if str(script_root) not in sys.path:
 from presentation_convert import presentation_pptx_to_quarto
 ```
 
-# Create a Draft from an Existing PowerPoint
+
+# Create a Draft Quarto Document from an Existing PowerPoint
 
 - Select the source and a new deck folder. 
-- The converter creates the folder, local styles, empty bibliography and title partial, editable assets, source evidence, and review files. 
+- The converter creates the `.qmd`, images, and local styles. Quarto generates the title slide from `title` and `subtitle` using the course theme.
+- Set `skip_first_slide=True` when the PowerPoint starts with a cover. Its content is retained in the first content slide's speaker notes.
 - It references the course's shared theme. 
 - A template copy is unnecessary for conversion.
 - The output folder must be new or empty.
@@ -59,30 +65,21 @@ conversion = presentation_pptx_to_quarto(
     source=source,
     output_qmd=output_qmd,
     title="Descriptive Epidemiology",
-    subtitle="APHS 20203",
+    subtitle="APHS 20203 • Epidemiology & Biostatistics",
+    skip_first_slide=True,
     project_root=lecture_root,
     shared_theme=lecture_root / "_theme/tcu.scss",
-    report=True,
 )
-print(f"Draft: {conversion['qmd']}\nReport: {conversion['report']}")
-print(f"Structural errors: {conversion['errors']}")
-print(f"Items needing review: {len(conversion['review_needed'])}")
+print(f"Draft: {conversion['qmd']}\nSlides: {conversion['slides']}")
 ```
 
-For an existing draft, open its `.qmd` and `conversion/review.md`; do not rerun conversion. Use the stage commands in KWB's *Convert Presentation Sources to Quarto* guide for inspection and structural QA. The same guide documents standalone decks and PDF/Markdown inputs.
 
 # Review and Refine the Draft
 
-Work on one slide or section at a time. Save review findings and decisions in the draft's `conversion/review.md`, with the selected slide IDs, date, reviewer, and reviewed QMD hash. Preserve source evidence under `conversion/`. Instructor review files must remain outside the published site.
+1. Compare the draft with the PowerPoint and address any `REVIEW` comments for unsupported content or uncertain formatting. Edit the `.qmd` directly, one slide or section at a time.
+2. Adjust layout and image alt text as needed. Reuse `_theme/tcu.scss`; keep deck-specific styles in `custom.scss`.
+3. Preview the deck and inspect the rendered slides for missing content, clipping, and image or table problems. Use the course [README](../README.md) for preview, rendering, and publication commands.
 
-1. Compare the draft with the PowerPoint source. Resolve missing content, reading order, bullet levels, titles, notes, tables, links, and unsupported objects before refining prose.
-2. Refine Quarto structure and layout. Split dense slides when useful, preserving source wording unless a specific content revision is approved. Update `conversion/source-map.yml` after splits, merges, or additions. Reuse `_theme/tcu.scss`; keep deck-specific styles in `custom.scss`.
-3. Review images in context for alt text, captions, and decorative status. Check headings, reading order, contrast, and source-supported citations. Keep unresolved issues visible.
-4. Render locally and inspect HTML and PDF for missing content, clipping, small text, blank slides, image failures, and citation problems. Record the current input hashes and recheck affected slides after edits.
-
-These are manual review steps. The focused presentation review skills are tracked in KWB's *Build a Script-Driven Presentation-to-Quarto Conversion Pipeline* task; use a bounded source-and-draft review in chat until those skills are delivered. A structural pass or successful render does not establish classroom readiness.
-
-For a local course check, follow the disposable-copy instructions in the course [README](../README.md#validation-copies), add the draft to that copy's render list, and run `quarto render` there. Its hooks use the course Python environment to build quiz materials and PDFs. If a fresh copy lacks generated include files, run the README's quiz-generation command on that copy once before rendering; Quarto may inspect include paths before running its pre-render hook. Keep review files out of the published resources. When the reviewed course is ready for release, use the existing `quarto publish gh-pages` process from `Lecture Slides/`.
 
 # Create In-Class Learning Activities
 
@@ -90,17 +87,20 @@ For a local course check, follow the disposable-copy instructions in the course 
 - Use this prompt for ideas: `/Users/bradcannell/Desktop/Git/knowledge-workbench/Tasks/Teaching/APHS 2023 Epidemiology and Biostatistics/Week 3 Preparations - Fall 2026.md`
 - You can also teach new topics that aren't covered in the book.
 
+
 # Copy the Textbook
 
 - Open: https://www.jblearning.com/
 - Print chapter in 3-pages chunks. Naming them `Pages xx-yy.pdf`.
 - Combine into a single chapter PDF.
 
+
 # Create Reading Comprehension Quiz Questions
 
 - Start each class session with a reading comprehension quiz.
 - Create a `quiz` subfolder`.
 - Use this prompt: `/Users/bradcannell/Desktop/Git/knowledge-workbench/_ai/prompts/teaching/create-basic-reading-comprehension-questions.md`
+
 
 # Add Reading Comprehension Quiz to Poll Everywhere
 
@@ -119,6 +119,7 @@ subprocess.run([sys.executable, script, quiz], check=True)
 - Create a new folder for the questions. The folder name should match the presentation name.
 - Import the CSV file you created above.
 - Add the response links to the `participation_url`in `quiz.yml`.
+
 
 # Add Reading Comprehension Quiz Questions to the Presentation
 

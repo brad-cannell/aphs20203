@@ -83,8 +83,8 @@ For disposable validation, copy `Lecture Slides/` and `_ai/` under a temporary c
 
 ### Convert inherited PowerPoint slides
 
-Open `Lecture Slides/create-lecture-slides.qmd` in Positron and select this repository's `.venv/bin/python` interpreter. Its setup chunk imports `presentation_pptx_to_quarto()` from KWB's `_presentations/scripts/presentation_convert.py`. The conversion chunk creates a new editable deck with the shared course theme, source evidence, and explicit review findings. Run it manually; rendering the workflow does not execute conversion. No template copy is needed.
+Open `Lecture Slides/create-lecture-slides.qmd` in Positron and select this repository's `.venv/bin/python` interpreter. Its setup chunk imports `presentation_pptx_to_quarto()` from KWB's `_presentations/scripts/presentation_convert.py`. The conversion chunk creates an editable `.qmd`, images and local styles, referencing the shared course theme. It creates no `conversion/` folder, source copies, hashes, manifests, or reports. Run it manually; rendering the workflow does not execute conversion. Edit the draft directly, address any extraction comments, and preview it before publication. No template copy is needed.
 
-The `pptx` command in the same script calls the same function. See KWB's *Convert Presentation Sources to Quarto* guide for arguments, environment setup, stage commands, and the review sequence. An existing or edited draft is never overwritten. Conversion does not render or publish.
+The `pptx` command in the same script calls the same function. See KWB's *Convert Presentation Sources to Quarto* guide for arguments, environment setup, and rendering instructions. An existing or edited draft is never overwritten. Conversion does not render or publish.
 
 The course hooks and manual chunks use this repository's environment to execute KWB's shared scripts. Changes to those scripts can affect this course and other presentations; validate course preview, full builds, and any affected manual workflows after shared-tool updates.
