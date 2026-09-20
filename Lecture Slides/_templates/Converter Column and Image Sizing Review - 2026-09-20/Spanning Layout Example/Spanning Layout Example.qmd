@@ -1,0 +1,43 @@
+---
+title: Spanning Layout Example
+subtitle: ''
+format:
+  revealjs:
+    theme:
+    - default
+    - theme.scss
+    - custom.scss
+    slide-level: 2
+execute:
+  eval: false
+---
+
+
+## Spanning text and a landscape image
+
+Shared introduction: compare the text with the image.
+
+:::: {.columns}
+
+::: {.column width="59%"}
+
+First: identify the main point.
+
+Second: discuss the supporting evidence.
+
+:::
+
+::: {.column width="41%"}
+
+<!-- source-001-shape-3.png -->
+![](assets/source-001-shape-3.png){fig-alt="A picture of Brad posing for a picture with his great-grandmother." .nostretch width="354" style="max-width:100%;height:auto;"}
+
+:::
+
+::::
+
+Shared caption: retain this below both columns.
+
+::: {.notes}
+Controlled layout case. Image reused from the accessible pattern library. Expected: introduction, left text in top-to-bottom order, right image, full-width caption.
+:::
