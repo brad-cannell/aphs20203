@@ -50,7 +50,7 @@ from presentation_convert import presentation_pptx_to_quarto
 - Select the source and a new deck folder. 
 - The converter creates the `.qmd`, images, and local styles. Quarto generates the title slide from `title` and `subtitle` using the course theme.
 - Set `skip_first_slide=True` when the PowerPoint starts with a cover. Its content is retained in the first content slide's speaker notes.
-- It references the course's shared theme. 
+- It references the course's shared theme and logo, and includes slide numbering, chalkboard, and link-preview settings.
 - A template copy is unnecessary for conversion.
 - The output folder must be new or empty.
 
@@ -69,6 +69,7 @@ conversion = presentation_pptx_to_quarto(
     skip_first_slide=True,
     project_root=lecture_root,
     shared_theme=lecture_root / "_theme/tcu.scss",
+    logo=lecture_root / "assets/tcu-logo-purple.svg",
 )
 print(f"Draft: {conversion['qmd']}\nSlides: {conversion['slides']}")
 ```
