@@ -57,14 +57,14 @@ from presentation_convert import presentation_pptx_to_quarto
 ```{python}
 #| eval: false
 
-source = '/Users/bradcannell/Library/CloudStorage/Box-Box/2026/APHS 20203 W4-Descriptive Epi.pptx'
-output_qmd = lecture_root / "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.qmd"
+source = '/Users/bradcannell/Library/CloudStorage/Box-Box/2026/APHS 20203 W5-Aossication and Causality.pptx'
+output_qmd = lecture_root / "Module 05 - Association and Causality/Association and Causality/Association and Causality.qmd"
 print(f"Source: {source}\nDraft: {output_qmd}")
 
 conversion = presentation_pptx_to_quarto(
     source=source,
     output_qmd=output_qmd,
-    title="Descriptive Epidemiology",
+    title="Association and Causality",
     subtitle="APHS 20203 • Epidemiology & Biostatistics",
     skip_first_slide=True,
     project_root=lecture_root,
