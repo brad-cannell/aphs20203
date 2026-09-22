@@ -1,10 +1,6 @@
 /*-- scss:rules --*/
 
 // Deck-specific utilities preserve the source content at a readable 16:9 size.
-.reveal .slides section.compact {
-  font-size: 0.78em;
-}
-
 .reveal .panel > p:first-child strong {
   display: block;
   margin-bottom: 0.35em;

@@ -23,6 +23,11 @@ $code-block-color: $tcu-white;
 
 /*-- scss:rules --*/
 
+// Opt in to smaller slide text by adding {.compact} to a slide heading.
+.reveal .slides section.compact {
+  font-size: 0.78em;
+}
+
 // Brand Central confirms Eurostile only for administration combination marks,
 // not general presentation typography. This system stack is an accessibility
 // fallback, not a claim about TCU's institutional type system.
