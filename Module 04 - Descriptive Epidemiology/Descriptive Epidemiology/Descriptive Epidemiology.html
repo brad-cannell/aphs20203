@@ -6,8 +6,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.36">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>APHS 20203 Lecture Slides – Descriptive Epidemiology</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -19,10 +19,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -31,10 +34,12 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-33e0a3aa67e3d4ba5b60843e2a49110b.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-cf521e613dd95c216de0d82246492396.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -140,7 +145,6 @@
 
 <section id="what-is-descriptive-epidemiology" class="slide level2">
 <h2>What Is Descriptive Epidemiology?</h2>
-<!-- Consider breaking this up into multiple slides. -->
 <ul>
 <li><p><strong>Purpose:</strong> Describe how health and disease are distributed across populations</p></li>
 <li><p><strong>Core Questions</strong></p>
@@ -157,7 +161,9 @@
 </ul></li>
 </ul>
 <aside class="notes">
-
+<ul>
+<li>Descriptive as opposed to analytic, although there is often some gray area.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -170,19 +176,27 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="example-descriptive-epidemiology-in-practice" class="slide level2">
+<section id="example-descriptive-epidemiology-in-practice" class="slide level2 compact">
 <h2>Example: Descriptive Epidemiology in Practice</h2>
-<!-- Consider breaking this up into multiple slides. -->
 <ul>
 <li><p><strong>Scenario:</strong> Breastfeeding trends among U.S. infants born in 2012:</p>
 <ul>
 <li><p><strong>43%</strong> exclusively breastfed for the first <strong>3 months</strong></p></li>
 <li><p><strong>22%</strong> exclusively breastfed for <strong>6 months</strong></p></li>
 </ul></li>
+</ul>
+<div class="fragment">
+<ul>
 <li><p><strong>What This Describes</strong></p>
 <ul>
-<li><strong>Person:</strong> U.S. infants; <strong>Place:</strong> United States; <strong>Time:</strong> First 3 vs.&nbsp;6 months after birth</li>
+<li><p><strong>Person:</strong> U.S. infants</p></li>
+<li><p><strong>Place:</strong> United States</p></li>
+<li><p><strong>Time:</strong> First 3 vs.&nbsp;6 months after birth</p></li>
 </ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
 <li><p><strong>Discussion Questions</strong></p>
 <ul>
 <li><p>What <strong>patterns</strong> do you observe across time?</p></li>
@@ -190,8 +204,12 @@
 <li><p>Which <strong>groups might be most affected</strong> by this decline?</p></li>
 </ul></li>
 </ul>
+</div>
 <aside class="notes">
-
+<p><strong>Fragment 1</strong></p>
+<p>Ask them to describe the person, place, and time.</p>
+<p><strong>Fragment 2</strong></p>
+<p>Discussion questions</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -203,9 +221,13 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- Consider adding a section break: Study Designs. -->
 </section>
-<section id="descriptive-epidemiologic-study-designs" class="slide level2">
+<section>
+<section id="descriptive-epidemiologic-study-designs" class="title-slide slide level1 section center">
+<h1>Descriptive Epidemiologic Study Designs</h1>
+
+</section>
+<section id="descriptive-epidemiologic-study-designs-1" class="slide level2 compact">
 <h2>Descriptive Epidemiologic Study Designs</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <!-- I think it's important for them to understand these study designs, including their strengths and weaknesses. Perhaps it's the most important concept in the chapter. -->
@@ -224,8 +246,19 @@
 <li><p>Often provide the <strong>first signal</strong> of a health issue or disparity</p></li>
 </ul></li>
 </ul>
-<aside class="notes">
+</section>
+<section id="hierarchy-of-study-designs" class="slide level2">
+<h2>Hierarchy of Study Designs</h2>
 
+<img data-src="../../assets/study_design_hierarchy.png" alt="Diagram grouping study designs into observational and experimental approaches. From left to right: case descriptions, ecological, cross-sectional, case-control, and cohort studies are observational; nonrandomized and randomized studies are experimental. An arrow indicates that evidence typically becomes more convincing from left to right." class="r-stretch"><aside class="notes">
+<ul>
+<li>As you can see in the diagram on the screen, case reports and cross-sectional studies are a type of observational study.<br>
+</li>
+<li>They are often considered to produce less convincing (or “weaker”) evidence than other study designs.<br>
+</li>
+<li>Having said that, they definitely serve an important purpose in epidemiology.<br>
+</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -237,9 +270,8 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- Consider adding the slide with the hierarchy of study designs. -->
 </section>
-<section id="case-reports" class="slide level2">
+<section id="case-reports" class="slide level2 compact">
 <h2>Case Reports</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -262,69 +294,8 @@
 <li>No comparison group → <strong>cannot estimate risk or prevalence</strong></li>
 </ul></li>
 </ul>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="case-reports-example" class="slide level2 case-report-example">
-<h2>Case Reports: Example</h2>
-<!-- Don't have students read from this slide on the screen. Provdide them with the article or a link to the article. -->
-<div class="columns">
-<div class="column" style="width:54%;">
-<p><strong>Scan the text and answer:</strong></p>
-<ul>
-<li><strong>How many cases are described in detail?</strong>
-<ul>
-<li>Where do you see evidence to support this is a <em>single case</em>?</li>
-</ul></li>
-<li><strong>Person</strong>
-<ul>
-<li>What basic characteristics of the patient are provided?</li>
-</ul></li>
-<li><strong>Place</strong>
-<ul>
-<li>Where did this case occur?</li>
-<li>Where did the outbreak begin?</li>
-</ul></li>
-<li><strong>Time</strong>
-<ul>
-<li>When was this case identified relative to the outbreak timeline?</li>
-</ul></li>
-<li><strong>What is being described vs.&nbsp;inferred?</strong>
-<ul>
-<li>Which parts describe <em>this patient</em>?</li>
-<li>Which parts reference <em>broader context</em>?</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:44%;">
-<p><strong>First case of COVID-19 in USA</strong></p>
-<p><img data-src="assets/source-007-shape-4.jpg" alt="Article excerpt from the first reported U.S. COVID-19 case, with Summary, outbreak background, and Case Report sections. The case report describes a 35-year-old man presenting to urgent care in Snohomish County, Washington, on January 19, 2020, after returning from Wuhan, China." height="480"></p>
-<p><a href="https://www.nejm.org/doi/full/10.1056/nejmoa2001191" class="case-report-source">Source: NEJM case report</a></p>
-</div></div>
-<aside class="notes">
 
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
 <section id="case-series" class="slide level2">
 <h2>Case Series</h2>
 <!-- Consider breaking this up into multiple slides. -->
@@ -344,63 +315,9 @@
 </ul></li>
 <li><p><strong>Key Limitation:</strong> Cannot estimate <strong>risk</strong>, <strong>rates</strong>, or <strong>causal effects</strong></p></li>
 </ul>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="case-series-example" class="slide level2 case-report-example">
-<h2>Case Series: Example</h2>
-<!-- Don't have students read from this slide on the screen. Provdide them with the article or a link to the article. -->
-<div class="columns">
-<div class="column" style="width:54%;">
-<p><strong>Scan the text and answer:</strong></p>
-<ul>
-<li><strong>How many patients are included?</strong>
-<ul>
-<li>Where in the text do you see evidence that <strong>more than one case</strong> is described?</li>
-<li><strong>Why is this a case series and not multiple case reports?</strong></li>
-</ul></li>
-<li><strong>How are the patients discussed?</strong>
-<ul>
-<li>Are patients described <strong>one at a time</strong>, or</li>
-<li>Are findings described <strong>across patients as a group</strong>?</li>
-<li>What language signals grouping?</li>
-</ul></li>
-<li><strong>What patterns are described across cases?</strong>
-<ul>
-<li><em>(e.g., symptoms, clinical course, outcomes, timing)</em></li>
-</ul></li>
-<li><strong>What important information is still missing that prevents causal conclusions?</strong></li>
-</ul>
-</div><div class="column" style="width:44%;">
-<p><img data-src="assets/source-009-shape-6.png" alt="Article excerpt describing the first 12 U.S. patients confirmed to have COVID-19 from January 20 to February 5, 2020. Findings summarize symptoms, clinical course, laboratory results, and outcomes across the patients as a group." height="480"></p>
-<p><a href="http://www.nature.com/articles/s41591-020-0877-5" class="case-report-source">Source: Nature Medicine case series</a></p>
-</div></div>
-<aside class="notes">
 
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="why-individual-cases-belong-in-epidemiology" class="slide level2">
+<section id="why-individual-cases-belong-in-epidemiology" class="slide level2 individual-cases">
 <h2>Why Individual Cases Belong in Epidemiology</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <p><strong>“Isn’t epidemiology about populations?”</strong></p>
@@ -414,8 +331,23 @@
 <li><p>Motivate <strong>population-level investigation</strong></p></li>
 </ul></li>
 </ul>
-
-<img data-src="assets/source-010-shape-4.jpg" alt="" class="r-stretch"></section>
+<p><img data-src="assets/source-010-shape-4.jpg" class="" alt="Diagram showing how individual cases reveal patterns that lead to population studies: Individuals → Patterns → Population studies." width="900"></p>
+<aside class="notes">
+<ul>
+<li>Initially, COVID-19 was reported as a case report.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="cross-sectional-studies" class="slide level2">
 <h2>Cross-Sectional Studies</h2>
 <ul>
@@ -429,8 +361,27 @@
 </ul></li>
 <li><p><strong>Core Focus: A snapshot</strong> describing how health outcomes are distributed <strong>across a population</strong></p></li>
 </ul>
-<aside class="notes">
+</section>
+<section id="cross-sectional-one-time-snapshot" class="slide level2">
+<h2>Cross-Sectional: One-Time Snapshot</h2>
 
+<img data-src="assets/cross_sectional_studies_diagram.png" alt="Diagram showing a sample selected from a population, with exposure and outcome measured simultaneously at one point in time. Colors represent exposure status, and shapes represent outcome status. Prevalence is calculated for each exposure group and compared between groups." class="r-stretch"><aside class="notes">
+<p>When we use a cross-sectional study design, we simultaneously measure exposures and outcomes at a single point in time. So here, we have a population of interest where exposures and outcomes have occurred out in the world. We come along and take a sample of the population and measure the exposures and outcomes at the same time.</p>
+<p>For example:</p>
+<ul>
+<li>Orange = Exposed to hepatitis B virus<br>
+</li>
+<li>Blue = Unexposed to hepatitis B virus<br>
+</li>
+<li>Circle = No aplastic anemia<br>
+</li>
+<li>Triangle = Aplastic anemia</li>
+</ul>
+<p>Let’s stop and notice a couple of things here:</p>
+<ol type="1">
+<li><p>Notice here that there is some ambiguity about which is the exposure and which is the outcome (or more precisely, which is the cause and which is the effect).</p></li>
+<li><p>Notice that now we must use prevalence as our measure of disease occurrence.</p></li>
+</ol>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -443,44 +394,6 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="cross-sectional-one-time-snapshot" class="slide level2">
-<h2>Cross-Sectional: One-Time Snapshot</h2>
-<!-- Figure out what you want to say while presenting this slide. -->
-
-<img data-src="assets/source-012-shape-4.jpg" alt="" class="r-stretch"></section>
-<section id="cross-sectional-study-example" class="slide level2 case-report-example">
-<h2>Cross-Sectional Study: Example</h2>
-<div class="columns">
-<div class="column" style="width:54%;">
-<p><strong>Scan and Answer:</strong></p>
-<ul>
-<li><strong>Health problem:</strong>
-<ul>
-<li>What outcome is being described? → Incidence or <strong>prevalence</strong>?</li>
-</ul></li>
-<li><strong>Who:</strong> Who is included in the study population?</li>
-<li><strong>Where:</strong> What geographic or service area is studied?</li>
-<li><strong>When:</strong> Does this describe a <strong>snapshot</strong> or follow-up over time?</li>
-<li><strong>Measures:</strong> What outcomes and exposures are assessed <strong>at the same time</strong>?</li>
-<li><strong>Design check:</strong> What tells you this is <strong>cross-sectional</strong>, not a case series or cohort?</li>
-</ul>
-</div><div class="column" style="width:44%;">
-<p><img data-src="assets/source-013-shape-7.jpg" alt="Article abstract with Background, Objective, Methods, Results, and Conclusions sections. The study surveyed 1,694 patients between April 30 and May 13, 2020, and linked survey responses to COVID-19 testing data for 454 patients to estimate prevalence and examine associated factors in a hospital service area." height="480"></p>
-<p><a href="https://publichealth.jmir.org/2021/1/e24320" class="case-report-source">Source: publichealth.jmir.org/2021/1/e24320</a></p>
-</div></div>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="project-prep-2" class="title-slide slide level1 section center">
 <h1>Project Prep 2</h1>
@@ -512,14 +425,20 @@
 <ul>
 <li><p><strong>Definition:</strong> Person variables are demographic characteristics that can influence health outcomes.</p></li>
 <li><p><strong>Purpose:</strong> Understanding who is at risk helps tailor public health interventions.</p></li>
+</ul>
+<div class="fragment">
+<ul>
 <li><p><strong>Key Person Variables:</strong></p>
 <ul>
 <li><p>Age, Sex, Race/ethnicity, Socioeconomic status</p></li>
 <li><p>Other examples: Gender, Marital status, Nativity (place of origin), Religion</p></li>
 </ul></li>
 </ul>
+</div>
 <aside class="notes">
-
+<ul>
+<li>What are some key person-level characteristics?</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -532,7 +451,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="age" class="slide level2">
+<section id="age" class="slide level2 compact">
 <h2>Age</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -549,28 +468,13 @@
 <li><p><strong>Young adults:</strong> Higher rates of injury-related outcomes</p></li>
 <li><p><strong>Older adults:</strong> Higher prevalence of chronic disease and mortality</p></li>
 </ul></li>
-<li><p><strong>Discussion Question:</strong> What health concerns are most common among</p></li>
+<li><p><strong>Discussion Question:</strong> What health concerns are most common among <strong>college-aged adults</strong>?</p></li>
 </ul>
-<p><strong>college-aged adults</strong>?</p>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="sexgender" class="slide level2">
+<section id="sexgender" class="slide level2 compact">
 <h2>Sex/Gender</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
-<!-- Talk about chromosomes vs social norms, -->
 <ul>
 <li><p><strong>Definition:</strong> Sex and gender describe differences in health outcomes related to <strong>biological characteristics</strong> and <strong>social roles, behaviors, and norms</strong>.</p></li>
 <li><p><strong>Why Sex/Gender Matters</strong></p>
@@ -587,7 +491,13 @@
 <li><p><strong>Discussion Question:</strong> What health concerns or health-related behaviors differ by <strong>sex or gender</strong> among college students?</p></li>
 </ul>
 <aside class="notes">
-
+<ul>
+<li><p><strong>Sex</strong> is a biological trait. Chromosomes (like XX or XY), hormones, internal reproductive organs, and external genitals.</p></li>
+<li><p>Females usually have two X chromosomes (XX).<br>
+</p></li>
+<li><p>Males usually have one X and one Y chromosome.</p></li>
+<li><p><strong>Gender</strong> refers to the socially constructed roles, behaviors, expressions, and expectations that a culture considers appropriate for men, women, and gender-diverse people.</p></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -600,7 +510,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="raceethnicity" class="slide level2">
+<section id="raceethnicity" class="slide level2 compact">
 <h2>Race/Ethnicity</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -620,7 +530,9 @@
 <li><p><strong>Discussion Question:</strong> What factors—other than biology—might help explain differences in health outcomes across racial or ethnic groups?</p></li>
 </ul>
 <aside class="notes">
-
+<ul>
+<li>Typically not a biologically determined difference.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -633,7 +545,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="socioeconomic-status-ses" class="slide level2">
+<section id="socioeconomic-status-ses" class="slide level2 compact">
 <h2>Socioeconomic Status (SES)</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -652,21 +564,8 @@
 </ul></li>
 <li><p><strong>Discussion Question:</strong> Which aspects of SES might most strongly influence health among <strong>college students</strong>?</p></li>
 </ul>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="social-determinants-of-health-sdoh" class="slide level2">
+<section id="social-determinants-of-health-sdoh" class="slide level2 compact">
 <h2>Social Determinants of Health (SDOH)</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -679,30 +578,16 @@
 </ul></li>
 <li><p><strong>Common SDOH Domains</strong></p>
 <ul>
-<li><p>Economic stability: e.g.&nbsp;Ability to afford food, housing, or health care</p></li>
-<li><p>Education access and quality: e.g.&nbsp;Access to quality schools or educational resources</p></li>
-<li><p>Health care access and quality: e.g.&nbsp;Availability of primary care or mental health services</p></li>
-<li><p>Neighborhood and built environment: e.g.&nbsp;Safe housing, and access to healthy foods</p></li>
-<li><p>Social and community context: e.g.&nbsp;Social support, or community connectedness</p></li>
+<li><p>Economic stability: e.g., ability to afford food, housing, or health care</p></li>
+<li><p>Education access and quality: e.g., access to quality schools or educational resources</p></li>
+<li><p>Health care access and quality: e.g., availability of primary care or mental health services</p></li>
+<li><p>Neighborhood and built environment: e.g., safe housing and access to healthy foods</p></li>
+<li><p>Social and community context: e.g., social support or community connectedness</p></li>
 </ul></li>
-<li><p><strong>Discussion Question:</strong> Which SDOH are most relevant to health outcomes among</p></li>
+<li><p><strong>Discussion Question:</strong> Which SDOH are most relevant to health outcomes among <strong>college students</strong>?</p></li>
 </ul>
-<p><strong>college students</strong>?</p>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="ses-vs.-sdoh" class="slide level2">
+<section id="ses-vs.-sdoh" class="slide level2 compact">
 <h2>SES vs.&nbsp;SDOH</h2>
 <!-- Double-check the information on this slide. -->
 <table class="caption-top">
@@ -738,7 +623,7 @@
 </table>
 <aside class="notes">
 <p><strong>Key distinction:</strong> SES reflects social position; SDOH reflect lived conditions.</p>
-<p><strong>Relationship: SES → influences → SDOH → shapes health outcomes</strong></p>
+<p><strong>Relationship: SES → influences → SDOH → shape health outcomes</strong></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -751,7 +636,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="exercise-ses-or-sdoh" class="slide level2">
+<section id="exercise-ses-or-sdoh" class="slide level2 compact">
 <h2>Exercise: SES or SDOH?</h2>
 <!-- I'm not sure how important this distinction is. -->
 <p>For each example, decide whether it best represents <strong>SES</strong> or <strong>SDOH</strong>. Reminder: SES reflects <strong>position</strong>; SDOH reflect <strong>conditions that come with that position</strong>.</p>
@@ -784,7 +669,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="health-disparities" class="slide level2">
+<section id="health-disparities" class="slide level2 compact">
 <h2>Health Disparities</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -807,21 +692,8 @@
 <li>Which person-related factors (age, race/ethnicity, SES, SDOH) are most likely contributing to health disparities among <strong>college students</strong>?</li>
 </ul></li>
 </ul>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="place-variables-the-where-factor" class="slide level2">
+<section id="place-variables-the-where-factor" class="slide level2 compact">
 <h2>Place Variables: The “Where” Factor</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -841,21 +713,8 @@
 <li><p>Local or neighborhood</p></li>
 </ul></li>
 </ul>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="international-variation" class="slide level2">
+<section id="international-variation" class="slide level2 compact">
 <h2>International Variation</h2>
 <ul>
 <li><p><strong>Definition:</strong> Differences in disease patterns and health outcomes <strong>across countries</strong>.</p></li>
@@ -876,21 +735,8 @@
 <li>What factors might contribute to health differences between countries?</li>
 </ul></li>
 </ul>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="national-within-country-variations" class="slide level2">
+<section id="national-within-country-variations" class="slide level2 compact">
 <h2>National (Within-Country) Variations</h2>
 <ul>
 <li><p><strong>Definition:</strong> Differences in disease patterns and health outcomes <strong>across regions or locations within the same country</strong>.</p></li>
@@ -911,27 +757,14 @@
 <li>What factors might explain health differences between regions within the U.S.?</li>
 </ul></li>
 </ul>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="national-variation-example" class="slide level2">
 <h2>National Variation (Example)</h2>
 <!-- source-027-shape-2.jpg -->
 
-<img data-src="assets/source-027-shape-2.jpg" alt="The map highlights the age prevalence of heart attacks. The data inferred from the map is as follows: 2.4 to 3.0, Washington, California, Utah, Alaska, Hawaii, Colorado, Nebraska, Wisconsin, New York, New Jersey, Maryland, New Hampshire, Washington D C; 3.1 to 3.4, Oregon, Nevada, Montana, Wyoming; New Mexico, Texas, Minnesota, Iowa, Illinois, Virginia, Vermont, Massachusetts, Rhode Island, Puerto Rico; 3.5 to 4.0, Idaho, Arizona, North Dakota, South Dakota, Kansas, Louisiana, Michigan, Indiana, Pennsylvania, North Carolina, South Carolina, Delaware, Guam; 4.1 to 5.6, Oklahoma, Missouri, Arkansas, Mississippi, Tennessee, Alabama, Georgia, Kentucky, Ohio, West Virginia, Maine, Guam; Data not available, Florida, Virgin Island." class="r-stretch"><p>Question: What do you notice about the geographic pattern?</p>
+<img data-src="assets/source-027-shape-2.jpg" alt="The map highlights the age prevalence of heart attacks. The data inferred from the map is as follows: 2.4 to 3.0, Washington, California, Utah, Alaska, Hawaii, Colorado, Nebraska, Wisconsin, New York, New Jersey, Maryland, New Hampshire, Washington, D.C.; 3.1 to 3.4, Oregon, Nevada, Montana, Wyoming; New Mexico, Texas, Minnesota, Iowa, Illinois, Virginia, Vermont, Massachusetts, Rhode Island, Puerto Rico; 3.5 to 4.0, Idaho, Arizona, North Dakota, South Dakota, Kansas, Louisiana, Michigan, Indiana, Pennsylvania, North Carolina, South Carolina, Delaware, Guam; 4.1 to 5.6, Oklahoma, Missouri, Arkansas, Mississippi, Tennessee, Alabama, Georgia, Kentucky, Ohio, West Virginia, Maine, Guam; Data not available, Florida, Virgin Islands." class="r-stretch"><p>Question: What do you notice about the geographic pattern?</p>
 </section>
-<section id="from-urbanrural-to-local" class="slide level2">
+<section id="from-urbanrural-to-local" class="slide level2 compact">
 <h2>From Urban–Rural to Local</h2>
 <ul>
 <li><p><strong>Definition:</strong> Geographic health patterns can exist at <strong>multiple spatial scales</strong>, from broad categories to very specific locations.</p></li>
@@ -946,19 +779,6 @@
 <li>Do you know any examples of diseases that show localized geographic patterns?</li>
 </ul></li>
 </ul>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="localized-patterns-of-disease" class="slide level2">
 <h2>Localized Patterns of Disease</h2>
@@ -966,27 +786,14 @@
 <li><p>Associated with specific environmental conditions that may exist in a particular geographic area</p></li>
 <li><p>Examples:</p>
 <ul>
-<li><p>Lung cancer: regions with high level radon gas</p></li>
-<li><p>Skin lesions and increased risks of lung, bladder, and skin cancers: regions with naturally occurring arsenic in water supply</p></li>
-<li><p>Dengue Fever: along the Texas–Mexico border linked to the presence of Aedes mosquitoes</p></li>
-<li><p>Lyme disease: Northeast, mid-Atlantic, and upper Midwest in US (~90% reported cases)</p></li>
+<li><p>Lung cancer: regions with high levels of radon gas</p></li>
+<li><p>Skin lesions and increased risks of lung, bladder, and skin cancers: regions with naturally occurring arsenic in the water supply</p></li>
+<li><p>Dengue fever: along the Texas–Mexico border linked to the presence of Aedes mosquitoes</p></li>
+<li><p>Lyme disease: Northeast, mid-Atlantic, and upper Midwest in the U.S. (~90% of reported cases)</p></li>
 </ul></li>
 </ul>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="time-the-when-factor" class="slide level2">
+<section id="time-the-when-factor" class="slide level2 compact">
 <h2>Time: The “When” Factor</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -1002,24 +809,11 @@
 <li><p><strong>Secular trends:</strong> Long-term changes over years or decades</p></li>
 <li><p><strong>Seasonal or cyclic trends:</strong> Regular patterns within a year or over cycles</p></li>
 <li><p><strong>Point epidemics:</strong> Sudden increases over a short period</p></li>
-<li><p><strong>Clustering:</strong> Higher-than-expected cases in a specific time period or place</p></li>
+<li><p><strong>Clustering:</strong> A higher-than-expected number of cases in a specific time period or place</p></li>
 </ul></li>
 </ul>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="secular-trends" class="slide level2">
+<section id="secular-trends" class="slide level2 compact">
 <h2>Secular Trends</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <ul>
@@ -1038,24 +832,11 @@
 <li><p><strong>Key Point:</strong> Secular trends describe <strong>direction and magnitude of change</strong>, not causes.</p></li>
 <li><p><strong>Discussion Question</strong></p>
 <ul>
-<li>Can you think of a health outcome that has shown major changes <strong>past several decades or across generations in the U.S.</strong>?</li>
+<li>Can you think of a health outcome that has shown major changes <strong>over the past several decades or across generations in the U.S.</strong>?</li>
 </ul></li>
 </ul>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="seasonal-cyclic-trends" class="slide level2">
+<section id="seasonal-cyclic-trends" class="slide level2 compact">
 <h2>Seasonal (Cyclic) Trends</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <ul>
@@ -1091,7 +872,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="point-epidemics" class="slide level2">
+<section id="point-epidemics" class="slide level2 compact">
 <h2>Point Epidemics</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <ul>
@@ -1129,7 +910,7 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="clustering" class="slide level2">
+<section id="clustering" class="slide level2 compact">
 <h2>Clustering</h2>
 <!-- Consider breaking this up into multiple slides. -->
 <ul>
@@ -1142,13 +923,15 @@
 <li><p><strong>Examples</strong></p>
 <ul>
 <li><p><strong>Temporal clustering:</strong> Increased cases of influenza during a short winter period</p></li>
-<li><p><strong>Spatial clustering:</strong> Higher-than-expected leukemia cases in a small community</p></li>
+<li><p><strong>Spatial clustering:</strong> A higher-than-expected number of leukemia cases in a small community</p></li>
 <li><p><strong>Spatiotemporal clustering:</strong> Dengue cases occurring in a specific neighborhood over several weeks</p></li>
 </ul></li>
 <li><p><strong>Key Point:</strong> Clustering describes <strong>where and when cases group together</strong>, not why they occur.</p></li>
 </ul>
 <aside class="notes">
-
+<ul>
+<li>Military bases and cancer/Parkinson’s disease.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1189,7 +972,7 @@
 <tr class="even">
 <td>Temporal clustering</td>
 <td>Descriptive observation of cases grouped in time</td>
-<td>Higher-than-expected cases during a specific period; no designation implied</td>
+<td>A higher-than-expected number of cases during a specific period; no designation implied</td>
 <td>Unusual increase in meningitis cases over 2 weeks</td>
 </tr>
 <tr class="odd">
@@ -1207,7 +990,7 @@
 <tr class="odd">
 <td>Spatial clustering</td>
 <td>Descriptive observation of cases grouped in place</td>
-<td>Higher-than-expected cases in a specific location</td>
+<td>A higher-than-expected number of cases in a specific location</td>
 <td>Lyme disease concentrated in the Northeast U.S.</td>
 </tr>
 <tr class="even">
@@ -1226,7 +1009,9 @@
 </table>
 </div>
 <aside class="notes">
-
+<ul>
+<li>You can use this to study.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1245,7 +1030,7 @@
 <div class="column" style="width:50%;">
 <h3 id="advantages">Advantages</h3>
 <ul>
-<li><p>Describes who, where, and when disease occurs</p></li>
+<li><p>Describes who is affected and where and when disease occurs</p></li>
 <li><p>Identifies patterns and disparities in populations</p></li>
 <li><p>Supports public health surveillance and planning</p></li>
 <li><p>Helps generate questions for further study</p></li>
@@ -1268,6 +1053,7 @@
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../assets/tcu-logo-purple.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
@@ -1280,6 +1066,7 @@
   <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1295,13 +1082,14 @@
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
-'previewLinksAuto': false,
+'previewLinksAuto': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1322,7 +1110,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -1447,9 +1235,9 @@
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1280,
 
-        height: 700,
+        height: 720,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
@@ -1472,7 +1260,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,

@@ -4,21 +4,28 @@
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#what-is-descriptive-epidemiology",
     "title": "Descriptive Epidemiology",
     "section": "What Is Descriptive Epidemiology?",
-    "text": "What Is Descriptive Epidemiology?\n\n\nPurpose: Describe how health and disease are distributed across populations\nCore Questions\n\nWho is affected? (Person)\nWhere does it occur? (Place)\nWhen does it occur? (Time)\n\nWhy It Matters\n\nMonitor health and disease trends\nGuide health services planning\nIdentify priorities for further study"
+    "text": "What Is Descriptive Epidemiology?\n\nPurpose: Describe how health and disease are distributed across populations\nCore Questions\n\nWho is affected? (Person)\nWhere does it occur? (Place)\nWhen does it occur? (Time)\n\nWhy It Matters\n\nMonitor health and disease trends\nGuide health services planning\nIdentify priorities for further study\n\n\n\n\nDescriptive as opposed to analytic, although there is often some gray area."
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#example-descriptive-epidemiology-in-practice",
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#example-descriptive-epidemiology-in-practice",
     "title": "Descriptive Epidemiology",
     "section": "Example: Descriptive Epidemiology in Practice",
-    "text": "Example: Descriptive Epidemiology in Practice\n\n\nScenario: Breastfeeding trends among U.S. infants born in 2012:\n\n43% exclusively breastfed for the first 3 months\n22% exclusively breastfed for 6 months\n\nWhat This Describes\n\nPerson: U.S. infants; Place: United States; Time: First 3 vs. 6 months after birth\n\nDiscussion Questions\n\nWhat patterns do you observe across time?\nWhat additional descriptive data would help clarify this pattern (e.g., age, SES, region)?\nWhich groups might be most affected by this decline?"
+    "text": "Example: Descriptive Epidemiology in Practice\n\nScenario: Breastfeeding trends among U.S. infants born in 2012:\n\n43% exclusively breastfed for the first 3 months\n22% exclusively breastfed for 6 months\n\n\n\n\nWhat This Describes\n\nPerson: U.S. infants\nPlace: United States\nTime: First 3 vs. 6 months after birth\n\n\n\n\n\nDiscussion Questions\n\nWhat patterns do you observe across time?\nWhat additional descriptive data would help clarify this pattern (e.g., age, SES, region)?\nWhich groups might be most affected by this decline?\n\n\n\n\nFragment 1\nAsk them to describe the person, place, and time.\nFragment 2\nDiscussion questions"
   },
   {
-    "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#descriptive-epidemiologic-study-designs",
-    "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#descriptive-epidemiologic-study-designs",
+    "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#descriptive-epidemiologic-study-designs-1",
+    "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#descriptive-epidemiologic-study-designs-1",
     "title": "Descriptive Epidemiology",
     "section": "Descriptive Epidemiologic Study Designs",
     "text": "Descriptive Epidemiologic Study Designs\n\n\n\nThis section focuses on three common descriptive designs:\n\nCase reports\nCase series\nCross-sectional studies\nOther descriptive designs exist (e.g., ecologic studies, surveillance-based descriptions)\n\nWhat these designs have in common\n\nDescribe who, where, and when\nDo not test causal relationships\nOften provide the first signal of a health issue or disparity"
+  },
+  {
+    "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#hierarchy-of-study-designs",
+    "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#hierarchy-of-study-designs",
+    "title": "Descriptive Epidemiology",
+    "section": "Hierarchy of Study Designs",
+    "text": "Hierarchy of Study Designs\n\n\n\nAs you can see in the diagram on the screen, case reports and cross-sectional studies are a type of observational study.\n\nThey are often considered to produce less convincing (or “weaker”) evidence than other study designs.\n\nHaving said that, they definitely serve an important purpose in epidemiology."
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#case-reports",
@@ -28,13 +35,6 @@
     "text": "Case Reports\n\n\n\n\nDefinition: A detailed description of a single patient or a small number of unusual cases, typically reported individually, not as a group analysis.\nPurpose\n\nDocument novel, rare, or unexpected health events\nAlert clinicians and public health officials to new or emerging issues\n\nWhy They Matter\n\nOften provide the first signal of a new disease, complication, or side effect\nContribute to early public health awareness\nServe as educational examples in clinical and public health settings\n\nKey Limitation\n\nNo comparison group → cannot estimate risk or prevalence"
   },
   {
-    "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#case-reports-example",
-    "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#case-reports-example",
-    "title": "Descriptive Epidemiology",
-    "section": "Case Reports: Example",
-    "text": "Case Reports: Example\n\n\n\nScan the text and answer:\n\nHow many cases are described in detail?\n\nWhere do you see evidence to support this is a single case?\n\nPerson\n\nWhat basic characteristics of the patient are provided?\n\nPlace\n\nWhere did this case occur?\nWhere did the outbreak begin?\n\nTime\n\nWhen was this case identified relative to the outbreak timeline?\n\nWhat is being described vs. inferred?\n\nWhich parts describe this patient?\nWhich parts reference broader context?\n\n\n\nFirst case of COVID-19 in USA\n\nSource: NEJM case report"
-  },
-  {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#case-series",
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#case-series",
     "title": "Descriptive Epidemiology",
@@ -42,18 +42,11 @@
     "text": "Case Series\n\n\n\n\nDefinition: A descriptive study that reports on multiple patients with the same diagnosis or condition, described collectively.\n\nCase report: Each case is described on its own\nCase series: Multiple cases are described together to identify patterns\n\nWhat Case Series Can Describe\n\nCommon clinical features\nTypical disease progression\nDistribution by person, place, or time\n\nKey Limitation: Cannot estimate risk, rates, or causal effects"
   },
   {
-    "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#case-series-example",
-    "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#case-series-example",
-    "title": "Descriptive Epidemiology",
-    "section": "Case Series: Example",
-    "text": "Case Series: Example\n\n\n\nScan the text and answer:\n\nHow many patients are included?\n\nWhere in the text do you see evidence that more than one case is described?\nWhy is this a case series and not multiple case reports?\n\nHow are the patients discussed?\n\nAre patients described one at a time, or\nAre findings described across patients as a group?\nWhat language signals grouping?\n\nWhat patterns are described across cases?\n\n(e.g., symptoms, clinical course, outcomes, timing)\n\nWhat important information is still missing that prevents causal conclusions?\n\n\n\nSource: Nature Medicine case series"
-  },
-  {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#why-individual-cases-belong-in-epidemiology",
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#why-individual-cases-belong-in-epidemiology",
     "title": "Descriptive Epidemiology",
     "section": "Why Individual Cases Belong in Epidemiology",
-    "text": "Why Individual Cases Belong in Epidemiology\n\n“Isn’t epidemiology about populations?”\n\nYes — but populations are built from individual cases.\nCase reports and case series focus on individuals → to identify and describe new or unusual health events\nThese early descriptions:\n\nReveal what counts as a case\nSignal emerging health problems\nMotivate population-level investigation"
+    "text": "Why Individual Cases Belong in Epidemiology\n\n“Isn’t epidemiology about populations?”\n\nYes — but populations are built from individual cases.\nCase reports and case series focus on individuals → to identify and describe new or unusual health events\nThese early descriptions:\n\nReveal what counts as a case\nSignal emerging health problems\nMotivate population-level investigation\n\n\n\n\n\nInitially, COVID-19 was reported as a case report."
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#cross-sectional-studies",
@@ -67,42 +60,35 @@
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#cross-sectional-one-time-snapshot",
     "title": "Descriptive Epidemiology",
     "section": "Cross-Sectional: One-Time Snapshot",
-    "text": "Cross-Sectional: One-Time Snapshot"
-  },
-  {
-    "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#cross-sectional-study-example",
-    "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#cross-sectional-study-example",
-    "title": "Descriptive Epidemiology",
-    "section": "Cross-Sectional Study: Example",
-    "text": "Cross-Sectional Study: Example\n\n\nScan and Answer:\n\nHealth problem:\n\nWhat outcome is being described? → Incidence or prevalence?\n\nWho: Who is included in the study population?\nWhere: What geographic or service area is studied?\nWhen: Does this describe a snapshot or follow-up over time?\nMeasures: What outcomes and exposures are assessed at the same time?\nDesign check: What tells you this is cross-sectional, not a case series or cohort?\n\n\n\nSource: publichealth.jmir.org/2021/1/e24320"
+    "text": "Cross-Sectional: One-Time Snapshot\n\n\nWhen we use a cross-sectional study design, we simultaneously measure exposures and outcomes at a single point in time. So here, we have a population of interest where exposures and outcomes have occurred out in the world. We come along and take a sample of the population and measure the exposures and outcomes at the same time.\nFor example:\n\nOrange = Exposed to hepatitis B virus\n\nBlue = Unexposed to hepatitis B virus\n\nCircle = No aplastic anemia\n\nTriangle = Aplastic anemia\n\nLet’s stop and notice a couple of things here:\n\nNotice here that there is some ambiguity about which is the exposure and which is the outcome (or more precisely, which is the cause and which is the effect).\nNotice that now we must use prevalence as our measure of disease occurrence."
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#person-variables-the-who-factor",
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#person-variables-the-who-factor",
     "title": "Descriptive Epidemiology",
     "section": "Person Variables: The “Who” Factor",
-    "text": "Person Variables: The “Who” Factor\n\n\n\nDefinition: Person variables are demographic characteristics that can influence health outcomes.\nPurpose: Understanding who is at risk helps tailor public health interventions.\nKey Person Variables:\n\nAge, Sex, Race/ethnicity, Socioeconomic status\nOther examples: Gender, Marital status, Nativity (place of origin), Religion"
+    "text": "Person Variables: The “Who” Factor\n\n\n\nDefinition: Person variables are demographic characteristics that can influence health outcomes.\nPurpose: Understanding who is at risk helps tailor public health interventions.\n\n\n\nKey Person Variables:\n\nAge, Sex, Race/ethnicity, Socioeconomic status\nOther examples: Gender, Marital status, Nativity (place of origin), Religion\n\n\n\n\n\nWhat are some key person-level characteristics?"
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#age",
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#age",
     "title": "Descriptive Epidemiology",
     "section": "Age",
-    "text": "Age\n\n\n\nDefinition: Age describes how disease occurrence and health outcomes vary across the life course.\nWhy Age Matters\n\nDisease patterns often differ by life stage\nHelps identify age-specific health priorities\n\nExamples\n\nChildhood: Higher occurrence of some infectious diseases\nYoung adults: Higher rates of injury-related outcomes\nOlder adults: Higher prevalence of chronic disease and mortality\n\nDiscussion Question: What health concerns are most common among\n\ncollege-aged adults?"
+    "text": "Age\n\n\n\nDefinition: Age describes how disease occurrence and health outcomes vary across the life course.\nWhy Age Matters\n\nDisease patterns often differ by life stage\nHelps identify age-specific health priorities\n\nExamples\n\nChildhood: Higher occurrence of some infectious diseases\nYoung adults: Higher rates of injury-related outcomes\nOlder adults: Higher prevalence of chronic disease and mortality\n\nDiscussion Question: What health concerns are most common among college-aged adults?"
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#sexgender",
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#sexgender",
     "title": "Descriptive Epidemiology",
     "section": "Sex/Gender",
-    "text": "Sex/Gender\n\n\n\n\nDefinition: Sex and gender describe differences in health outcomes related to biological characteristics and social roles, behaviors, and norms.\nWhy Sex/Gender Matters\n\nMany diseases show different patterns of occurrence and outcomes by sex or gender\nDifferences may reflect biology, behavior, social context, or access to care\n\nExamples\n\nHeart disease: Higher rates and earlier onset among males\nAutoimmune diseases & depression: Higher prevalence among females\nMortality: All-cause age-specific mortality rates are typically higher among males\n\nDiscussion Question: What health concerns or health-related behaviors differ by sex or gender among college students?"
+    "text": "Sex/Gender\n\n\n\nDefinition: Sex and gender describe differences in health outcomes related to biological characteristics and social roles, behaviors, and norms.\nWhy Sex/Gender Matters\n\nMany diseases show different patterns of occurrence and outcomes by sex or gender\nDifferences may reflect biology, behavior, social context, or access to care\n\nExamples\n\nHeart disease: Higher rates and earlier onset among males\nAutoimmune diseases & depression: Higher prevalence among females\nMortality: All-cause age-specific mortality rates are typically higher among males\n\nDiscussion Question: What health concerns or health-related behaviors differ by sex or gender among college students?\n\n\n\nSex is a biological trait. Chromosomes (like XX or XY), hormones, internal reproductive organs, and external genitals.\nFemales usually have two X chromosomes (XX).\n\nMales usually have one X and one Y chromosome.\nGender refers to the socially constructed roles, behaviors, expressions, and expectations that a culture considers appropriate for men, women, and gender-diverse people."
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#raceethnicity",
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#raceethnicity",
     "title": "Descriptive Epidemiology",
     "section": "Race/Ethnicity",
-    "text": "Race/Ethnicity\n\n\n\nDefinition: Race and ethnicity describe population groups based on social, cultural, historical, and geographic characteristics.\nWhy Race/Ethnicity Matters\n\nDisease occurrence and health outcomes often vary across groups\nPatterns reflect inequities in exposure, resources, and access to care, not biology alone\n\nExamples of Observed Patterns\n\nAsthma: Lower reported prevalence among some Hispanic populations\nCognitive decline: Higher prevalence among American Indian or Alaska Native populations\nCOVID-19: Higher mortality rates among non-Hispanic Black populations, especially early in the pandemic\n\nDiscussion Question: What factors—other than biology—might help explain differences in health outcomes across racial or ethnic groups?"
+    "text": "Race/Ethnicity\n\n\n\nDefinition: Race and ethnicity describe population groups based on social, cultural, historical, and geographic characteristics.\nWhy Race/Ethnicity Matters\n\nDisease occurrence and health outcomes often vary across groups\nPatterns reflect inequities in exposure, resources, and access to care, not biology alone\n\nExamples of Observed Patterns\n\nAsthma: Lower reported prevalence among some Hispanic populations\nCognitive decline: Higher prevalence among American Indian or Alaska Native populations\nCOVID-19: Higher mortality rates among non-Hispanic Black populations, especially early in the pandemic\n\nDiscussion Question: What factors—other than biology—might help explain differences in health outcomes across racial or ethnic groups?\n\n\n\nTypically not a biologically determined difference."
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#socioeconomic-status-ses",
@@ -116,14 +102,14 @@
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#social-determinants-of-health-sdoh",
     "title": "Descriptive Epidemiology",
     "section": "Social Determinants of Health (SDOH)",
-    "text": "Social Determinants of Health (SDOH)\n\n\n\nDefinition: Social determinants of health are the conditions in which people are born, grow, live, work, and age that influence health outcomes.\nWhy SDOH Matter\n\nShape opportunities for health beyond individual behaviors\nHelp explain persistent health disparities across populations\n\nCommon SDOH Domains\n\nEconomic stability: e.g. Ability to afford food, housing, or health care\nEducation access and quality: e.g. Access to quality schools or educational resources\nHealth care access and quality: e.g. Availability of primary care or mental health services\nNeighborhood and built environment: e.g. Safe housing, and access to healthy foods\nSocial and community context: e.g. Social support, or community connectedness\n\nDiscussion Question: Which SDOH are most relevant to health outcomes among\n\ncollege students?"
+    "text": "Social Determinants of Health (SDOH)\n\n\n\nDefinition: Social determinants of health are the conditions in which people are born, grow, live, work, and age that influence health outcomes.\nWhy SDOH Matter\n\nShape opportunities for health beyond individual behaviors\nHelp explain persistent health disparities across populations\n\nCommon SDOH Domains\n\nEconomic stability: e.g., ability to afford food, housing, or health care\nEducation access and quality: e.g., access to quality schools or educational resources\nHealth care access and quality: e.g., availability of primary care or mental health services\nNeighborhood and built environment: e.g., safe housing and access to healthy foods\nSocial and community context: e.g., social support or community connectedness\n\nDiscussion Question: Which SDOH are most relevant to health outcomes among college students?"
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#ses-vs.-sdoh",
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#ses-vs.-sdoh",
     "title": "Descriptive Epidemiology",
     "section": "SES vs. SDOH",
-    "text": "SES vs. SDOH\n\n\n\n\n\n\n\n\n\n\nSocioeconomic Status (SES)\nSocial Determinants of Health (SDOH)\n\n\n\n\nConcept\nSocial position\nLiving and working conditions\n\n\nWhat it describes\nSocial and economic standing\nConditions shaping daily life and health\n\n\nCommon measures / examples\nIncome, education, occupation\nHousing, working conditions, access to care, education, social support\n\n\n\n\nKey distinction: SES reflects social position; SDOH reflect lived conditions.\nRelationship: SES → influences → SDOH → shapes health outcomes"
+    "text": "SES vs. SDOH\n\n\n\n\n\n\n\n\n\n\nSocioeconomic Status (SES)\nSocial Determinants of Health (SDOH)\n\n\n\n\nConcept\nSocial position\nLiving and working conditions\n\n\nWhat it describes\nSocial and economic standing\nConditions shaping daily life and health\n\n\nCommon measures / examples\nIncome, education, occupation\nHousing, working conditions, access to care, education, social support\n\n\n\n\nKey distinction: SES reflects social position; SDOH reflect lived conditions.\nRelationship: SES → influences → SDOH → shape health outcomes"
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#exercise-ses-or-sdoh",
@@ -179,21 +165,21 @@
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#localized-patterns-of-disease",
     "title": "Descriptive Epidemiology",
     "section": "Localized Patterns of Disease",
-    "text": "Localized Patterns of Disease\n\nAssociated with specific environmental conditions that may exist in a particular geographic area\nExamples:\n\nLung cancer: regions with high level radon gas\nSkin lesions and increased risks of lung, bladder, and skin cancers: regions with naturally occurring arsenic in water supply\nDengue Fever: along the Texas–Mexico border linked to the presence of Aedes mosquitoes\nLyme disease: Northeast, mid-Atlantic, and upper Midwest in US (~90% reported cases)"
+    "text": "Localized Patterns of Disease\n\nAssociated with specific environmental conditions that may exist in a particular geographic area\nExamples:\n\nLung cancer: regions with high levels of radon gas\nSkin lesions and increased risks of lung, bladder, and skin cancers: regions with naturally occurring arsenic in the water supply\nDengue fever: along the Texas–Mexico border linked to the presence of Aedes mosquitoes\nLyme disease: Northeast, mid-Atlantic, and upper Midwest in the U.S. (~90% of reported cases)"
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#time-the-when-factor",
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#time-the-when-factor",
     "title": "Descriptive Epidemiology",
     "section": "Time: The “When” Factor",
-    "text": "Time: The “When” Factor\n\n\n\nDefinition: Time describes how disease occurrence and health outcomes change or vary over time.\nWhy Time Matters\n\nReveals trends, cycles, and outbreaks\nHelps distinguish short-term events from long-term patterns\n\nCommon Time Patterns\n\nSecular trends: Long-term changes over years or decades\nSeasonal or cyclic trends: Regular patterns within a year or over cycles\nPoint epidemics: Sudden increases over a short period\nClustering: Higher-than-expected cases in a specific time period or place"
+    "text": "Time: The “When” Factor\n\n\n\nDefinition: Time describes how disease occurrence and health outcomes change or vary over time.\nWhy Time Matters\n\nReveals trends, cycles, and outbreaks\nHelps distinguish short-term events from long-term patterns\n\nCommon Time Patterns\n\nSecular trends: Long-term changes over years or decades\nSeasonal or cyclic trends: Regular patterns within a year or over cycles\nPoint epidemics: Sudden increases over a short period\nClustering: A higher-than-expected number of cases in a specific time period or place"
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#secular-trends",
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#secular-trends",
     "title": "Descriptive Epidemiology",
     "section": "Secular Trends",
-    "text": "Secular Trends\n\n\nDefinition: Long-term changes in disease occurrence or health outcomes observed over many years or decades.\nWhy Secular Trends Matter\n\nShow whether a health problem is increasing, decreasing, or stable over time\nReflect broad changes in population behavior, environment, or policy\n\nExamples\n\nSmoking prevalence: Steady decline in the U.S. over several decades\nObesity prevalence: Long-term increase across many age groups\nLife expectancy: Gradual increases over time, with recent plateaus or declines in some populations\n\nKey Point: Secular trends describe direction and magnitude of change, not causes.\nDiscussion Question\n\nCan you think of a health outcome that has shown major changes past several decades or across generations in the U.S.?"
+    "text": "Secular Trends\n\n\nDefinition: Long-term changes in disease occurrence or health outcomes observed over many years or decades.\nWhy Secular Trends Matter\n\nShow whether a health problem is increasing, decreasing, or stable over time\nReflect broad changes in population behavior, environment, or policy\n\nExamples\n\nSmoking prevalence: Steady decline in the U.S. over several decades\nObesity prevalence: Long-term increase across many age groups\nLife expectancy: Gradual increases over time, with recent plateaus or declines in some populations\n\nKey Point: Secular trends describe direction and magnitude of change, not causes.\nDiscussion Question\n\nCan you think of a health outcome that has shown major changes over the past several decades or across generations in the U.S.?"
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#seasonal-cyclic-trends",
@@ -214,21 +200,21 @@
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#clustering",
     "title": "Descriptive Epidemiology",
     "section": "Clustering",
-    "text": "Clustering\n\n\nDefinition: The occurrence of a greater-than-expected number of cases within a specific time period, geographic area, or population group.\nWhy Clustering Matters\n\nMay signal unusual aggregation of disease\nHelps identify patterns that warrant closer monitoring or investigation\n\nExamples\n\nTemporal clustering: Increased cases of influenza during a short winter period\nSpatial clustering: Higher-than-expected leukemia cases in a small community\nSpatiotemporal clustering: Dengue cases occurring in a specific neighborhood over several weeks\n\nKey Point: Clustering describes where and when cases group together, not why they occur."
+    "text": "Clustering\n\n\nDefinition: The occurrence of a greater-than-expected number of cases within a specific time period, geographic area, or population group.\nWhy Clustering Matters\n\nMay signal unusual aggregation of disease\nHelps identify patterns that warrant closer monitoring or investigation\n\nExamples\n\nTemporal clustering: Increased cases of influenza during a short winter period\nSpatial clustering: A higher-than-expected number of leukemia cases in a small community\nSpatiotemporal clustering: Dengue cases occurring in a specific neighborhood over several weeks\n\nKey Point: Clustering describes where and when cases group together, not why they occur.\n\n\n\nMilitary bases and cancer/Parkinson’s disease."
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#comparing-time-and-place-patterns",
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#comparing-time-and-place-patterns",
     "title": "Descriptive Epidemiology",
     "section": "Comparing Time and Place Patterns",
-    "text": "Comparing Time and Place Patterns\n\n\n\n\n\n\n\n\n\n\nPattern\nWhat it represents\nKey distinguishing feature\nExample\n\n\n\n\nSeasonal trend\nExpected, recurring variation over time\nPredictable and repeats regularly\nInfluenza peaks every winter\n\n\nTemporal clustering\nDescriptive observation of cases grouped in time\nHigher-than-expected cases during a specific period; no designation implied\nUnusual increase in meningitis cases over 2 weeks\n\n\nPoint epidemic\nA sharp form of temporal clustering\nVery short time window, often consistent with a single exposure\nFood poisoning after one shared meal\n\n\nEndemic pattern\nBaseline, expected level of disease in a population\nOngoing and relatively stable over time\nMalaria in parts of sub-Saharan Africa\n\n\nSpatial clustering\nDescriptive observation of cases grouped in place\nHigher-than-expected cases in a specific location\nLyme disease concentrated in the Northeast U.S.\n\n\nSpatiotemporal clustering\nDescriptive observation of cases grouped by time and place\nUnusual concentration in both dimensions\nDengue cases in one neighborhood over several weeks\n\n\nEpidemic (Week 1 term)\nPublic health designation\nDetermination that observed clustering exceeds what is expected\nCOVID-19 epidemic in early 2020"
+    "text": "Comparing Time and Place Patterns\n\n\n\n\n\n\n\n\n\n\nPattern\nWhat it represents\nKey distinguishing feature\nExample\n\n\n\n\nSeasonal trend\nExpected, recurring variation over time\nPredictable and repeats regularly\nInfluenza peaks every winter\n\n\nTemporal clustering\nDescriptive observation of cases grouped in time\nA higher-than-expected number of cases during a specific period; no designation implied\nUnusual increase in meningitis cases over 2 weeks\n\n\nPoint epidemic\nA sharp form of temporal clustering\nVery short time window, often consistent with a single exposure\nFood poisoning after one shared meal\n\n\nEndemic pattern\nBaseline, expected level of disease in a population\nOngoing and relatively stable over time\nMalaria in parts of sub-Saharan Africa\n\n\nSpatial clustering\nDescriptive observation of cases grouped in place\nA higher-than-expected number of cases in a specific location\nLyme disease concentrated in the Northeast U.S.\n\n\nSpatiotemporal clustering\nDescriptive observation of cases grouped by time and place\nUnusual concentration in both dimensions\nDengue cases in one neighborhood over several weeks\n\n\nEpidemic (Week 1 term)\nPublic health designation\nDetermination that observed clustering exceeds what is expected\nCOVID-19 epidemic in early 2020\n\n\n\n\n\n\nYou can use this to study."
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#descriptive-epidemiology-advantages-and-limitations",
     "href": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#descriptive-epidemiology-advantages-and-limitations",
     "title": "Descriptive Epidemiology",
     "section": "Descriptive Epidemiology: Advantages and Limitations",
-    "text": "Descriptive Epidemiology: Advantages and Limitations\n\n\nAdvantages\n\nDescribes who, where, and when disease occurs\nIdentifies patterns and disparities in populations\nSupports public health surveillance and planning\nHelps generate questions for further study\n\n\nLimitations\n\nCannot establish causal relationships\nOften lacks temporal order between exposure and outcome\nMay be influenced by reporting or measurement differences\nDescribes patterns but does not explain why they occur"
+    "text": "Descriptive Epidemiology: Advantages and Limitations\n\n\nAdvantages\n\nDescribes who is affected and where and when disease occurs\nIdentifies patterns and disparities in populations\nSupports public health surveillance and planning\nHelps generate questions for further study\n\n\nLimitations\n\nCannot establish causal relationships\nOften lacks temporal order between exposure and outcome\nMay be influenced by reporting or measurement differences\nDescribes patterns but does not explain why they occur"
   },
   {
     "objectID": "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.html#course-learning-objectives",
