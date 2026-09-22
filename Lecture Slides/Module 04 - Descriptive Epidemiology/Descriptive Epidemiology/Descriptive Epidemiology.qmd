@@ -8,12 +8,20 @@ format:
     - ../../_theme/tcu.scss
     - custom.scss
     slide-level: 2
+    slide-number: c/t
+    chalkboard: true
+    preview-links: auto
+    incremental: false
+    embed-resources: false
+    width: 1280
+    height: 720
+    logo: ../../assets/tcu-logo-purple.svg
 execute:
   eval: false
 ---
 
 
-## Course Learning objectives {visibility="hidden"}
+## Course Learning Objectives {visibility="hidden"}
 
 <!-- I'm not sure there's a lot of value in showing these learning objectives to the students, but I'm adding and hiding them as a reminder to myself. What am I actually trying to accomplish? -->
 
@@ -39,8 +47,6 @@ execute:
 
 ## What Is Descriptive Epidemiology?
 
-<!-- Consider breaking this up into multiple slides. -->
-
 - **Purpose:** Describe how health and disease are distributed across 	populations
 
 - **Core Questions**
@@ -60,24 +66,30 @@ execute:
     - Identify priorities for further study
 
 ::: {.notes}
-
+- Descriptive as opposed to analytic, although there is often some gray area.
 :::
 
 
-## Example: Descriptive Epidemiology in Practice
-
-<!-- Consider breaking this up into multiple slides. -->
+## Example: Descriptive Epidemiology in Practice {.compact}
 
 - **Scenario:** Breastfeeding trends among U.S. infants born in 2012:
 
     - **43%** exclusively breastfed for the first **3 months**
 
     - **22%** exclusively breastfed for **6 months**
-
+    
+::: {.fragment}
 - **What This Describes**
 
-    - **Person:** U.S. infants; **Place:** United States; **Time:** First 3 vs. 6 months after 	birth
+    - **Person:** U.S. infants 
 
+    - **Place:** United States 
+
+    - **Time:** First 3 vs. 6 months after 	birth
+:::
+
+
+::: {.fragment}
 - **Discussion Questions**
 
     - What **patterns** do you observe across time?
@@ -85,16 +97,23 @@ execute:
     - What **additional descriptive data** would help clarify this pattern (e.g., age, 	SES, region)?
 
     - Which **groups might be most affected** by this decline?
+:::
 
 ::: {.notes}
+**Fragment 1**
 
+Ask them to describe the person, place, and time.
+
+**Fragment 2**
+
+Discussion questions
 :::
 
 
-<!-- Consider adding a section break: Study Designs. -->
+# Descriptive Epidemiologic Study Designs {.section}
 
 
-## Descriptive Epidemiologic Study Designs
+## Descriptive Epidemiologic Study Designs {.compact}
 
 <!-- Consider breaking this up into multiple slides. -->
 <!-- I think it's important for them to understand these study designs, including their strengths and weaknesses. Perhaps it's the most important concept in the chapter. -->
@@ -117,15 +136,19 @@ execute:
 
     - Often provide the **first signal** of a health issue or disparity
 
-::: {.notes}
 
+## Hierarchy of Study Designs
+
+![](../../assets/study_design_hierarchy.png){fig-alt="Diagram grouping study designs into observational and experimental approaches. From left to right: case descriptions, ecological, cross-sectional, case-control, and cohort studies are observational; nonrandomized and randomized studies are experimental. An arrow indicates that evidence typically becomes more convincing from left to right."}
+
+::: {.notes}
+- As you can see in the diagram on the screen, case reports and cross-sectional studies are a type of observational study.   
+- They are often considered to produce less convincing (or “weaker”) evidence than other study designs.   
+- Having said that, they definitely serve an important purpose in epidemiology.  
 :::
 
 
-<!-- Consider adding the slide with the hierarchy of study designs. -->
-
-
-## Case Reports
+## Case Reports {.compact}
 
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -151,14 +174,10 @@ execute:
 
     - No comparison group → **cannot estimate risk or prevalence**
 
-::: {.notes}
 
-:::
+## Case Reports: Example {.case-report-example} {visibility="hidden"}
 
-
-## Case Reports: Example {.case-report-example}
-
-<!-- Don't have students read from this slide on the screen. Provdide them with the article or a link to the article. -->
+<!-- Don't have students read from this slide on the screen. Provide them with the article or a link to the article. -->
 
 :::: {.columns}
 
@@ -167,7 +186,7 @@ execute:
 **Scan the text and answer:**
 
 - **How many cases are described in detail?**
-    - Where do you see evidence to support this is a *single case*?
+    - Where do you see evidence that this is a *single case*?
 - **Person**
     - What basic characteristics of the patient are provided?
 - **Place**
@@ -183,7 +202,7 @@ execute:
 
 ::: {.column width="44%"}
 
-**First case of COVID-19 in USA**
+**First case of COVID-19 in the USA**
 
 ![](assets/source-007-shape-4.jpg){height="480" fig-alt="Article excerpt from the first reported U.S. COVID-19 case, with Summary, outbreak background, and Case Report sections. The case report describes a 35-year-old man presenting to urgent care in Snohomish County, Washington, on January 19, 2020, after returning from Wuhan, China."}
 
@@ -192,10 +211,6 @@ execute:
 :::
 
 ::::
-
-::: {.notes}
-
-:::
 
 
 ## Case Series
@@ -220,14 +235,10 @@ execute:
 
 - **Key Limitation:** Cannot estimate **risk**, **rates**, or **causal effects**
 
-::: {.notes}
 
-:::
+## Case Series: Example {.case-report-example} {visibility="hidden"}
 
-
-## Case Series: Example {.case-report-example}
-
-<!-- Don't have students read from this slide on the screen. Provdide them with the article or a link to the article. -->
+<!-- Don't have students read from this slide on the screen. Provide them with the article or a link to the article. -->
 
 :::: {.columns}
 
@@ -258,12 +269,8 @@ execute:
 
 ::::
 
-::: {.notes}
 
-:::
-
-
-## Why Individual Cases Belong in Epidemiology
+## Why Individual Cases Belong in Epidemiology {.individual-cases}
 
 <!-- Consider breaking this up into multiple slides. -->
 
@@ -281,12 +288,16 @@ execute:
 
     - Motivate **population-level investigation**
 
-![](assets/source-010-shape-4.jpg){fig-alt=""}
+![](assets/source-010-shape-4.jpg){width="900" .nostretch fig-alt="Diagram showing how individual cases reveal patterns that lead to population studies: Individuals → Patterns → Population studies."}
+
+::: {.notes}
+- Initially, COVID-19 was reported as a case report.
+:::
 
 
 ## Cross-Sectional Studies
 
-- **Definition:** A descriptive study that examines **health outcomes and 	related characteristics** across a defined **population at a single point 	in time**.
+- **Definition:** A descriptive study that examines **health outcomes and related characteristics** across a defined **population at a single point in time**.
 
 - **Key Features**
 
@@ -298,21 +309,32 @@ execute:
 
     - Exposure(s) and outcome(s) assessed **simultaneously**
 
-- **Core Focus: A snapshot** describing how health outcomes are 	distributed **across a population**
-
-::: {.notes}
-
-:::
+- **Core Focus: A snapshot** describing how health outcomes are distributed **across a population**
 
 
 ## Cross-Sectional: One-Time Snapshot
 
-<!-- Figure out what you want to say while presenting this slide. -->
+![](assets/cross_sectional_studies_diagram.png){fig-alt="Diagram showing a sample selected from a population, with exposure and outcome measured simultaneously at one point in time. Colors represent exposure status, and shapes represent outcome status. Prevalence is calculated for each exposure group and compared between groups."}
 
-![](assets/source-012-shape-4.jpg){fig-alt=""}
+::: {.notes}
+When we use a cross-sectional study design, we simultaneously measure exposures and outcomes at a single point in time. So here, we have a population of interest where exposures and outcomes have occurred out in the world. We come along and take a sample of the population and measure the exposures and outcomes at the same time.
+
+For example:
+
+- Orange = Exposed to hepatitis B virus   
+- Blue = Unexposed to hepatitis B virus   
+- Circle = No aplastic anemia   
+- Triangle = Aplastic anemia   
+
+Let’s stop and notice a couple of things here:
+
+1. Notice here that there is some ambiguity about which is the exposure and which is the outcome (or more precisely, which is the cause and which is the effect).
+
+2. Notice that now we must use prevalence as our measure of disease occurrence.
+:::
 
 
-## Cross-Sectional Study: Example {.case-report-example}
+## Cross-Sectional Study: Example {.case-report-example} {visibility="hidden"}
 
 :::: {.columns}
 
@@ -341,7 +363,8 @@ execute:
 ::::
 
 ::: {.notes}
-
+- What about the big federal surveys we discussed?
+- Some of them have a longitudinal component, but most are cross-sectional.
 :::
 
 
@@ -366,18 +389,20 @@ Get Started!
 
 - **Purpose:** Understanding who is at risk helps tailor public health interventions.
 
+::: {.fragment}
 - **Key Person Variables:**
 
     - Age, Sex, Race/ethnicity, Socioeconomic status
 
     - Other examples: Gender, Marital status, Nativity (place of origin), Religion
+:::
 
 ::: {.notes}
-
+- What are some key person-level characteristics?
 :::
 
 
-## Age
+## Age {.compact}
 
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -398,20 +423,13 @@ Get Started!
 
     - **Older adults:** Higher prevalence of chronic disease and mortality
 
-- **Discussion Question:** What health concerns are most common among
-
-**college-aged adults**?
-
-::: {.notes}
-
-:::
+- **Discussion Question:** What health concerns are most common among **college-aged adults**?
 
 
-## Sex/Gender
+## Sex/Gender {.compact}
 
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
-<!-- Talk about chromosomes vs social norms, -->
 
 - **Definition:** Sex and gender describe differences in health outcomes related to **biological characteristics** and **social roles, behaviors, and norms**.
 
@@ -432,11 +450,15 @@ Get Started!
 - **Discussion Question:** What health concerns or health-related behaviors differ by **sex or gender** among college students?
 
 ::: {.notes}
+- **Sex** is a biological trait. Chromosomes (like XX or XY), hormones, internal reproductive organs, and external genitals.
+ - Females usually have two X chromosomes (XX).   
+ - Males usually have one X and one Y chromosome.   
 
+- **Gender** refers to the socially constructed roles, behaviors, expressions, and expectations that a culture considers appropriate for men, women, and gender-diverse people.
 :::
 
 
-## Race/Ethnicity
+## Race/Ethnicity {.compact}
 
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -460,11 +482,11 @@ Get Started!
 - **Discussion Question:** What factors—other than biology—might help explain differences in health outcomes across racial or ethnic groups?
 
 ::: {.notes}
-
+- Typically not a biologically determined difference.
 :::
 
 
-## Socioeconomic Status (SES)
+## Socioeconomic Status (SES) {.compact}
 
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -487,12 +509,8 @@ Get Started!
 
 - **Discussion Question:** Which aspects of SES might most strongly influence health among **college students**?
 
-::: {.notes}
 
-:::
-
-
-## Social Determinants of Health (SDOH)
+## Social Determinants of Health (SDOH) {.compact}
 
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -507,26 +525,20 @@ Get Started!
 
 - **Common SDOH Domains**
 
-    - Economic stability: e.g. Ability to afford food, housing, or health care
+    - Economic stability: e.g., ability to afford food, housing, or health care
 
-    - Education access and quality: e.g. Access to quality schools or educational resources
+    - Education access and quality: e.g., access to quality schools or educational resources
 
-    - Health care access and quality: e.g. Availability of primary care or mental health services
+    - Health care access and quality: e.g., availability of primary care or mental health services
 
-    - Neighborhood and built environment: e.g. Safe housing, and access to healthy foods
+    - Neighborhood and built environment: e.g., safe housing and access to healthy foods
 
-    - Social and community context: e.g. Social support, or community connectedness
+    - Social and community context: e.g., social support or community connectedness
 
-- **Discussion Question:** Which SDOH are most relevant to health outcomes among
-
-**college students**?
-
-::: {.notes}
-
-:::
+- **Discussion Question:** Which SDOH are most relevant to health outcomes among **college students**?
 
 
-## SES vs. SDOH
+## SES vs. SDOH {.compact}
 
 <!-- Double-check the information on this slide. -->
 
@@ -539,11 +551,11 @@ Get Started!
 ::: {.notes}
 **Key distinction:** SES reflects social position; SDOH reflect lived conditions.
 
-**Relationship: SES → influences → SDOH → shapes health outcomes**
+**Relationship: SES → influences → SDOH → shape health outcomes**
 :::
 
 
-## Exercise: SES or SDOH?
+## Exercise: SES or SDOH? {.compact}
 
 <!-- I'm not sure how important this distinction is. -->
 
@@ -571,7 +583,7 @@ For each example, decide whether it best represents **SES** or **SDOH**. Reminde
 :::
 
 
-## Health Disparities
+## Health Disparities {.compact}
 
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -598,12 +610,8 @@ For each example, decide whether it best represents **SES** or **SDOH**. Reminde
 
     - Which person-related factors (age, race/ethnicity, SES, SDOH) are most likely contributing to health disparities among **college students**?
 
-::: {.notes}
 
-:::
-
-
-## Place Variables: The “Where” Factor
+## Place Variables: The “Where” Factor {.compact}
 
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -628,12 +636,8 @@ For each example, decide whether it best represents **SES** or **SDOH**. Reminde
 
     - Local or neighborhood
 
-::: {.notes}
 
-:::
-
-
-## International Variation
+## International Variation {.compact}
 
 - **Definition:** Differences in disease patterns and health outcomes **across countries**.
 
@@ -657,12 +661,8 @@ For each example, decide whether it best represents **SES** or **SDOH**. Reminde
 
     - What factors might contribute to health differences between countries?
 
-::: {.notes}
 
-:::
-
-
-## National (Within-Country) Variations
+## National (Within-Country) Variations {.compact}
 
 - **Definition:** Differences in disease patterns and health outcomes **across regions or locations within the same country**.
 
@@ -686,20 +686,16 @@ For each example, decide whether it best represents **SES** or **SDOH**. Reminde
 
     - What factors might explain health differences between regions within the U.S.?
 
-::: {.notes}
-
-:::
-
 
 ## National Variation (Example)
 
 <!-- source-027-shape-2.jpg -->
-![](assets/source-027-shape-2.jpg){fig-alt="The map highlights the age prevalence of heart attacks. The data inferred from the map is as follows: 2.4 to 3.0, Washington, California, Utah, Alaska, Hawaii, Colorado, Nebraska, Wisconsin, New York, New Jersey, Maryland, New Hampshire, Washington D C; 3.1 to 3.4, Oregon, Nevada, Montana, Wyoming; New Mexico, Texas, Minnesota, Iowa, Illinois, Virginia, Vermont, Massachusetts, Rhode Island, Puerto Rico; 3.5 to 4.0, Idaho, Arizona, North Dakota, South Dakota, Kansas, Louisiana, Michigan, Indiana, Pennsylvania, North Carolina, South Carolina, Delaware, Guam; 4.1 to 5.6, Oklahoma, Missouri, Arkansas, Mississippi, Tennessee, Alabama, Georgia, Kentucky, Ohio, West Virginia, Maine, Guam; Data not available, Florida, Virgin Island."}
+![](assets/source-027-shape-2.jpg){fig-alt="The map highlights the age prevalence of heart attacks. The data inferred from the map is as follows: 2.4 to 3.0, Washington, California, Utah, Alaska, Hawaii, Colorado, Nebraska, Wisconsin, New York, New Jersey, Maryland, New Hampshire, Washington, D.C.; 3.1 to 3.4, Oregon, Nevada, Montana, Wyoming; New Mexico, Texas, Minnesota, Iowa, Illinois, Virginia, Vermont, Massachusetts, Rhode Island, Puerto Rico; 3.5 to 4.0, Idaho, Arizona, North Dakota, South Dakota, Kansas, Louisiana, Michigan, Indiana, Pennsylvania, North Carolina, South Carolina, Delaware, Guam; 4.1 to 5.6, Oklahoma, Missouri, Arkansas, Mississippi, Tennessee, Alabama, Georgia, Kentucky, Ohio, West Virginia, Maine, Guam; Data not available, Florida, Virgin Islands."}
 
 Question: What do you notice about the geographic pattern?
 
 
-## From Urban–Rural to Local
+## From Urban–Rural to Local {.compact}
 
 - **Definition:** Geographic health patterns can exist at **multiple spatial scales**, from broad categories to very specific locations.
 
@@ -715,10 +711,6 @@ Question: What do you notice about the geographic pattern?
 
     - Do you know any examples of diseases that show localized geographic patterns?
 
-::: {.notes}
-
-:::
-
 
 ## Localized Patterns of Disease
 
@@ -726,20 +718,16 @@ Question: What do you notice about the geographic pattern?
 
 - Examples:
 
-    - Lung cancer:	regions with high level radon gas
+    - Lung cancer:	regions with high levels of radon gas
 
-    - Skin lesions and increased risks of lung, bladder, and skin cancers: regions 	with naturally occurring arsenic in water supply
+    - Skin lesions and increased risks of lung, bladder, and skin cancers: regions 	with naturally occurring arsenic in the water supply
 
-    - Dengue Fever: along the Texas–Mexico border linked to the presence of 	Aedes mosquitoes
+    - Dengue fever: along the Texas–Mexico border linked to the presence of 	Aedes mosquitoes
 
-    - Lyme disease: Northeast, mid-Atlantic, and upper Midwest in US (\~90% 	reported cases)
-
-::: {.notes}
-
-:::
+    - Lyme disease: Northeast, mid-Atlantic, and upper Midwest in the U.S. (\~90% of 	reported cases)
 
 
-## Time: The “When” Factor
+## Time: The “When” Factor {.compact}
 
 <!-- Consider breaking this up into multiple slides. -->
 <!-- Consider creating a COL question. -->
@@ -760,14 +748,10 @@ Question: What do you notice about the geographic pattern?
 
     - **Point epidemics:** Sudden increases over a short period
 
-    - **Clustering:** Higher-than-expected cases in a specific time period or place
-
-::: {.notes}
-
-:::
+    - **Clustering:** A higher-than-expected number of cases in a specific time period or place
 
 
-## Secular Trends
+## Secular Trends {.compact}
 
 <!-- Consider breaking this up into multiple slides. -->
 
@@ -791,14 +775,10 @@ Question: What do you notice about the geographic pattern?
 
 - **Discussion Question**
 
-    - Can you think of a health outcome that has shown major changes **past several decades or across generations in the U.S.**?
-
-::: {.notes}
-
-:::
+    - Can you think of a health outcome that has shown major changes **over the past several decades or across generations in the U.S.**?
 
 
-## Seasonal (Cyclic) Trends
+## Seasonal (Cyclic) Trends {.compact}
 
 <!-- Consider breaking this up into multiple slides. -->
 
@@ -829,7 +809,7 @@ Question: What do you notice about the geographic pattern?
 :::
 
 
-## Point Epidemics
+## Point Epidemics {.compact}
 
 <!-- Consider breaking this up into multiple slides. -->
 
@@ -860,7 +840,7 @@ Question: What do you notice about the geographic pattern?
 :::
 
 
-## Clustering
+## Clustering {.compact}
 
 <!-- Consider breaking this up into multiple slides. -->
 
@@ -876,14 +856,14 @@ Question: What do you notice about the geographic pattern?
 
     - **Temporal clustering:** Increased cases of influenza during a short winter period
 
-    - **Spatial clustering:** Higher-than-expected leukemia cases in a small community
+    - **Spatial clustering:** A higher-than-expected number of leukemia cases in a small community
 
     - **Spatiotemporal clustering:** Dengue cases occurring in a specific neighborhood over several weeks
 
 - **Key Point:** Clustering describes **where and when cases group together**, not why they occur.
 
 ::: {.notes}
-
+- Military bases and cancer/Parkinson's disease.
 :::
 
 
@@ -894,17 +874,17 @@ Question: What do you notice about the geographic pattern?
 | Pattern | What it represents | Key distinguishing feature | Example |
 | --- | --- | --- | --- |
 | Seasonal trend | Expected, recurring variation over time | Predictable and repeats regularly | Influenza peaks every winter |
-| Temporal clustering | Descriptive observation of cases grouped in time | Higher-than-expected cases during a specific period; no designation implied | Unusual increase in meningitis cases over 2 weeks |
+| Temporal clustering | Descriptive observation of cases grouped in time | A higher-than-expected number of cases during a specific period; no designation implied | Unusual increase in meningitis cases over 2 weeks |
 | Point epidemic | A sharp form of temporal clustering | Very short time window, often consistent with a single exposure | Food poisoning after one shared meal |
 | Endemic pattern | Baseline, expected level of disease in a population | Ongoing and relatively stable over time | Malaria in parts of sub-Saharan Africa |
-| Spatial clustering | Descriptive observation of cases grouped in place | Higher-than-expected cases in a specific location | Lyme disease concentrated in the Northeast U.S. |
+| Spatial clustering | Descriptive observation of cases grouped in place | A higher-than-expected number of cases in a specific location | Lyme disease concentrated in the Northeast U.S. |
 | Spatiotemporal clustering | Descriptive observation of cases grouped by time and place | Unusual concentration in both dimensions | Dengue cases in one neighborhood over several weeks |
 | Epidemic (Week 1 term) | Public health designation | Determination that observed clustering exceeds what is expected | COVID-19 epidemic in early 2020 |
 
 :::
 
 ::: {.notes}
-
+- You can use this to study.
 :::
 
 
@@ -916,7 +896,7 @@ Question: What do you notice about the geographic pattern?
 
 ### Advantages
 
-- Describes who, where, and when disease occurs
+- Describes who is affected and where and when disease occurs
 
 - Identifies patterns and disparities in populations
 

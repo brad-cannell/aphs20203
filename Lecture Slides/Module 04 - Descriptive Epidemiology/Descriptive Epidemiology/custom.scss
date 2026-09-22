@@ -99,3 +99,26 @@
 .reveal .case-report-example .case-report-source {
   font-size: 18px;
 }
+
+// Reserve room for the wide diagram below the text, as in source slide 10.
+.reveal .individual-cases > p,
+.reveal .individual-cases > ul {
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.reveal .individual-cases p {
+  margin: 0 0 0.2em;
+}
+
+.reveal .individual-cases li {
+  margin-bottom: 0.25em;
+}
+
+.reveal .individual-cases img {
+  display: block;
+  width: 900px;
+  max-width: 100%;
+  height: auto;
+  margin: 0.4em auto 0;
+}
