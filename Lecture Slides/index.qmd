@@ -32,3 +32,8 @@ Interactive slide decks for APHS 20203.
 
 - [View interactive slides](Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.qmd)
 - [Download PDF](Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.pdf)
+
+## Module 5: Association and Causality
+
+- [View interactive slides](Module 05 - Association and Causality/Association and Causality/Association and Causality.qmd)
+- [Download PDF](Module 05 - Association and Causality/Association and Causality/Association and Causality.pdf)

@@ -18,6 +18,7 @@ execute:
 **Notes**
 - Quarto must also be on `PATH`. 
 - The course [README](../README.md#python-setup) owns environment setup and course build instructions; KWB retains the shared scripts and general conversion guide.
+- Restart the Positron Python session after updating the shared tools, then rerun this setup chunk.
 
 ```{python}
 #| eval: false
@@ -47,14 +48,14 @@ from presentation_convert import presentation_pptx_to_quarto
 
 # Create a Draft Quarto Document from an Existing PowerPoint
 
-- Select the source and a new deck folder. 
-- The converter creates the `.qmd`, images, and local styles. Quarto generates the title slide from `title` and `subtitle` using the course theme.
-- Set `skip_first_slide=True` when the PowerPoint starts with a cover. Its content is retained in the first content slide's speaker notes.
-- It references the course's shared theme and logo, and includes slide numbering, chalkboard, and link-preview settings.
-- A template copy is unnecessary for conversion.
+## Select the Source and Output
+
+This chunk sets the source, output path, and diagram-group setting for the audit and conversion chunks below. It prints the paths but does not create a draft.
+
+- Set `source` to the PowerPoint file and `output_qmd` to the desired `.qmd` path.
 - The output folder must be new or empty. Keep editing an existing draft directly; rerunning this converter will refuse its populated folder.
 - Group every component of each diagram in PowerPoint and save it. With `group_images=True`, each outer group becomes one static image using PowerPoint on macOS. Surrounding text and slide layout still need review.
-- Set `group_images=False` to restore ordinary conversion. PowerPoint may request access to a temporary export folder. Restart the Positron Python session after updating the shared tools.
+- Set `group_images=False` to use ordinary conversion. The audit and conversion chunks may request PowerPoint access to a temporary export folder when exporting groups.
 
 ```{python}
 #| eval: false
@@ -67,9 +68,12 @@ print(f"Source: {source}\nDraft: {output_qmd}")
 
 ```
 
+
 ## Optional Image Audit
 
-Run this chunk to inspect image assets and slide-specific repair suggestions without creating a Quarto deck. The gallery shows images at review size; it does not preview surrounding slide layout or text fit. Group previews use the same native export as conversion and can request temporary-folder access.
+- Run this chunk to inspect image assets and slide-specific repair suggestions without creating a Quarto deck.
+- The gallery shows images at review size; it does not preview surrounding slide layout or text fit.
+- Group previews use the same native export as conversion and may request access to a temporary folder.
 
 ```{python}
 #| eval: false
@@ -86,6 +90,11 @@ display(HTML(image_audit["html"]))
 If a diagram is split or incomplete, group all of its related objects in PowerPoint, save, and rerun the audit. Discuss ambiguous warnings in chat. Skip or remove this section to stop using the audit; conversion remains independent.
 
 ## Create the Draft
+
+- This chunk creates the `.qmd`, images, and local styles. A template copy is unnecessary.
+- Set `title` and `subtitle` below; Quarto uses them to generate the title slide with the course theme.
+- Set `skip_first_slide=True` when the PowerPoint starts with a cover. Its content is retained in the first content slide's speaker notes.
+- The converter references the course's shared theme and logo, and includes slide numbering, chalkboard, and link-preview settings.
 
 ```{python}
 #| eval: false
@@ -135,6 +144,8 @@ print(f"Draft: {conversion['qmd']}\nSlides: {conversion['slides']}")
 
 
 # Add Reading Comprehension Quiz to Poll Everywhere
+
+<!-- I think we may want to start using AhaSlides instead. -->
 
 - Add the questions in `quiz.yml` to a CSV file that can be imported in Poll Everywhere.
 

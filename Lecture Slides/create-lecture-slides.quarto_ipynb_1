@@ -1,0 +1,279 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Creating Lecture Slides\"\n",
+        "execute:\n",
+        "  eval: false\n",
+        "---\n",
+        "\n",
+        "# Overview\n",
+        "\n",
+        "- A guide for creating lecture slides for APHS 20203, Epidemiology and Biostatisics.\n",
+        "- Clean this up later. For now, just get it operational.\n",
+        "\n",
+        "\n",
+        "# Python Setup\n",
+        "\n",
+        "1. From the `aphs20203` repository root, run `sh _ai/tools/shell/setup_python.sh` once.\n",
+        "2. Select `aphs20203/.venv/bin/python` as the Python interpreter in Positron.\n",
+        "\n",
+        "**Notes**\n",
+        "- Quarto must also be on `PATH`. \n",
+        "- The course [README](../README.md#python-setup) owns environment setup and course build instructions; KWB retains the shared scripts and general conversion guide.\n",
+        "- Restart the Positron Python session after updating the shared tools, then rerun this setup chunk."
+      ],
+      "id": "5a32997f"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| eval: false\n",
+        "\n",
+        "from pathlib import Path\n",
+        "import subprocess\n",
+        "import sys\n",
+        "\n",
+        "kwb_root = Path(\"/Users/bradcannell/Desktop/Git/knowledge-workbench\")\n",
+        "course_root = Path(\"/Users/bradcannell/Desktop/Git/Academia/Teaching/aphs20203\")\n",
+        "lecture_root = course_root / \"Lecture Slides\"\n",
+        "\n",
+        "# Match the interpreter used by the course's Quarto hooks so manual chunks\n",
+        "# have the same QR, PDF, and conversion dependencies as preview and builds.\n",
+        "if Path(sys.prefix).resolve() != (course_root / \".venv\").resolve():\n",
+        "    raise RuntimeError(\"Select aphs20203/.venv/bin/python in Positron, then restart the Python session.\")\n",
+        "\n",
+        "# Import the canonical shared tools from KWB without relying on its Python\n",
+        "# environment or creating a second copy of the presentation scripts.\n",
+        "script_root = kwb_root / \"_presentations/scripts\"\n",
+        "if str(script_root) not in sys.path:\n",
+        "    sys.path.insert(0, str(script_root))\n",
+        "\n",
+        "from presentation_convert import presentation_pptx_to_quarto"
+      ],
+      "id": "f7ddc935",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# Create a Draft Quarto Document from an Existing PowerPoint\n",
+        "\n",
+        "## Select the Source and Output\n",
+        "\n",
+        "This chunk sets the source, output path, and diagram-group setting for the audit and conversion chunks below. It prints the paths but does not create a draft.\n",
+        "\n",
+        "- Set `source` to the PowerPoint file and `output_qmd` to the desired `.qmd` path.\n",
+        "- The output folder must be new or empty. Keep editing an existing draft directly; rerunning this converter will refuse its populated folder.\n",
+        "- Group every component of each diagram in PowerPoint and save it. With `group_images=True`, each outer group becomes one static image using PowerPoint on macOS. Surrounding text and slide layout still need review.\n",
+        "- Set `group_images=False` to use ordinary conversion. The audit and conversion chunks may request PowerPoint access to a temporary export folder when exporting groups."
+      ],
+      "id": "78381ed2"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| eval: false\n",
+        "\n",
+        "source = '/Users/bradcannell/Library/CloudStorage/Box-Box/2026/APHS 20203 W5-Aossication and Causality.pptx'\n",
+        "output_qmd = lecture_root / \"Module 05 - Association and Causality/Association and Causality/Association and Causality.qmd\"\n",
+        "# Preserve explicit diagram groups; switch this off for ordinary conversion.\n",
+        "group_images = True\n",
+        "print(f\"Source: {source}\\nDraft: {output_qmd}\")"
+      ],
+      "id": "5b8dd968",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Optional Image Audit\n",
+        "\n",
+        "- Run this chunk to inspect image assets and slide-specific repair suggestions without creating a Quarto deck.\n",
+        "- The gallery shows images at review size; it does not preview surrounding slide layout or text fit.\n",
+        "- Group previews use the same native export as conversion and may request access to a temporary folder."
+      ],
+      "id": "1a7aa655"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| eval: false\n",
+        "\n",
+        "from IPython.display import HTML, display\n",
+        "from presentation_audit_images import presentation_audit_images\n",
+        "\n",
+        "# Check the same group setting that conversion will use. This optional step\n",
+        "# leaves the PowerPoint unchanged and creates no draft or persistent assets.\n",
+        "image_audit = presentation_audit_images(source, group_images=group_images, preview=True)\n",
+        "display(HTML(image_audit[\"html\"]))"
+      ],
+      "id": "e0bf18c0",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "If a diagram is split or incomplete, group all of its related objects in PowerPoint, save, and rerun the audit. Discuss ambiguous warnings in chat. Skip or remove this section to stop using the audit; conversion remains independent.\n",
+        "\n",
+        "## Create the Draft\n",
+        "\n",
+        "- This chunk creates the `.qmd`, images, and local styles. A template copy is unnecessary.\n",
+        "- Set `title` and `subtitle` below; Quarto uses them to generate the title slide with the course theme.\n",
+        "- Set `skip_first_slide=True` when the PowerPoint starts with a cover. Its content is retained in the first content slide's speaker notes.\n",
+        "- The converter references the course's shared theme and logo, and includes slide numbering, chalkboard, and link-preview settings."
+      ],
+      "id": "5b8a26df"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| eval: false\n",
+        "\n",
+        "# Create a new draft only after choosing any source repairs from the audit.\n",
+        "conversion = presentation_pptx_to_quarto(\n",
+        "    source=source,\n",
+        "    output_qmd=output_qmd,\n",
+        "    title=\"Association and Causality\",\n",
+        "    subtitle=\"APHS 20203 • Epidemiology & Biostatistics\",\n",
+        "    skip_first_slide=True,\n",
+        "    group_images=group_images,\n",
+        "    project_root=lecture_root,\n",
+        "    shared_theme=lecture_root / \"_theme/tcu.scss\",\n",
+        "    logo=lecture_root / \"assets/tcu-logo-purple.svg\",\n",
+        ")\n",
+        "print(f\"Draft: {conversion['qmd']}\\nSlides: {conversion['slides']}\")"
+      ],
+      "id": "a310bd4b",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# Review and Refine the Draft\n",
+        "\n",
+        "1. Compare the draft with the PowerPoint and address any `REVIEW` comments for unsupported content or uncertain formatting. Edit the `.qmd` directly, one slide or section at a time.\n",
+        "2. Adjust layout and image alt text as needed. Reuse `_theme/tcu.scss`; keep deck-specific styles in `custom.scss`.\n",
+        "3. Preview the deck and inspect the rendered slides for missing content, clipping, and image or table problems. Use the course [README](../README.md) for preview, rendering, and publication commands.\n",
+        "\n",
+        "\n",
+        "# Create In-Class Learning Activities\n",
+        "\n",
+        "- Don't reteach topics from the book. Instead, use in-class review questions and exercises.\n",
+        "- Use this prompt for ideas: `/Users/bradcannell/Desktop/Git/knowledge-workbench/Tasks/Teaching/APHS 2023 Epidemiology and Biostatistics/Week 3 Preparations - Fall 2026.md`\n",
+        "- You can also teach new topics that aren't covered in the book.\n",
+        "\n",
+        "\n",
+        "# Copy the Textbook\n",
+        "\n",
+        "- Open: https://www.jblearning.com/\n",
+        "- Print chapter in 3-pages chunks. Naming them `Pages xx-yy.pdf`.\n",
+        "- Combine into a single chapter PDF.\n",
+        "\n",
+        "\n",
+        "# Create Reading Comprehension Quiz Questions\n",
+        "\n",
+        "- Start each class session with a reading comprehension quiz.\n",
+        "- Create a `quiz` subfolder`.\n",
+        "- Use this prompt: `/Users/bradcannell/Desktop/Git/knowledge-workbench/_ai/prompts/teaching/create-basic-reading-comprehension-questions.md`\n",
+        "\n",
+        "\n",
+        "# Add Reading Comprehension Quiz to Poll Everywhere\n",
+        "\n",
+        "- Add the questions in `quiz.yml` to a CSV file that can be imported in Poll Everywhere."
+      ],
+      "id": "b3b5e8c1"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| eval: false\n",
+        "\n",
+        "script = script_root / \"presentation_build_poll_everywhere_import.py\"\n",
+        "quiz = Path(\"/Users/bradcannell/Desktop/Git/Academia/Teaching/aphs20203/Lecture Slides/Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml\")\n",
+        "\n",
+        "subprocess.run([sys.executable, script, quiz], check=True)"
+      ],
+      "id": "ff35ae6f",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "- Open Poll Everywhere: https://www.polleverywhere.com/\n",
+        "- Create a new folder for the questions. The folder name should match the presentation name.\n",
+        "- Import the CSV file you created above.\n",
+        "- Add the response links to the `participation_url`in `quiz.yml`.\n",
+        "\n",
+        "\n",
+        "# Add Reading Comprehension Quiz Questions to the Presentation\n",
+        "\n",
+        "- Add them immediately after the learning objectives."
+      ],
+      "id": "36cb4a34"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| eval: false\n",
+        "\n",
+        "python_executable = sys.executable\n",
+        "include_script = script_root / \"presentation_generate_quiz_includes.py\"\n",
+        "quiz = Path(\"/Users/bradcannell/Desktop/Git/Academia/Teaching/aphs20203/Lecture Slides/Module 03 - Disease Occurrence Data/Disease Occurrence Data/quiz/quiz.yml\")\n",
+        "\n",
+        "generated = subprocess.run(\n",
+        "    [\n",
+        "        python_executable,\n",
+        "        include_script,\n",
+        "        quiz,\n",
+        "        \"--questions\",\n",
+        "        \"disease-data-linkage - disease-data-health-surveys\",\n",
+        "        \"--title-prefix\",\n",
+        "        \"Reading Comprehension Quiz\",\n",
+        "        \"--start-number\",\n",
+        "        \"1\",\n",
+        "        \"--include-feedback-notes\"\n",
+        "    ],\n",
+        "    check=True,\n",
+        "    capture_output=True,\n",
+        "    text=True,\n",
+        ")\n",
+        "\n",
+        "subprocess.run([\"pbcopy\"], input=generated.stdout, check=True, text=True)\n",
+        "print(\"Copied the generated quiz includes to the clipboard.\")"
+      ],
+      "id": "030cc7cd",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/bradcannell/Desktop/Git/Academia/Teaching/aphs20203/.venv/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

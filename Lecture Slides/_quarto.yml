@@ -14,6 +14,7 @@ project:
     - "Module 02 - Epidemiologic Measures of Disease Occurrence/Measures of Disease Occurrence - Part 2/Measures of Disease Occurrence - Part 2.qmd"
     - "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.qmd"
     - "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.qmd"
+    - "Module 05 - Association and Causality/Association and Causality/Association and Causality.qmd"
   resources:
     - "assets/tcu-logo.svg"
     - "assets/tcu-logo-purple.svg"
