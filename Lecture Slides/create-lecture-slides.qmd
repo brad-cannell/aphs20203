@@ -52,13 +52,17 @@ from presentation_convert import presentation_pptx_to_quarto
 - Set `skip_first_slide=True` when the PowerPoint starts with a cover. Its content is retained in the first content slide's speaker notes.
 - It references the course's shared theme and logo, and includes slide numbering, chalkboard, and link-preview settings.
 - A template copy is unnecessary for conversion.
-- The output folder must be new or empty.
+- The output folder must be new or empty. Keep editing an existing draft directly; rerunning this converter will refuse its populated folder.
+- Group every component of each diagram in PowerPoint and save it. With `group_images=True`, each outer group becomes one static image using PowerPoint on macOS. Surrounding text and slide layout still need review.
+- Set `group_images=False` to restore ordinary conversion. PowerPoint may request access to a temporary export folder. Restart the Positron Python session after updating the shared tools.
 
 ```{python}
 #| eval: false
 
 source = '/Users/bradcannell/Library/CloudStorage/Box-Box/2026/APHS 20203 W5-Aossication and Causality.pptx'
 output_qmd = lecture_root / "Module 05 - Association and Causality/Association and Causality/Association and Causality.qmd"
+# Preserve explicit diagram groups; switch this off for ordinary conversion.
+group_images = True
 print(f"Source: {source}\nDraft: {output_qmd}")
 
 conversion = presentation_pptx_to_quarto(
@@ -67,6 +71,7 @@ conversion = presentation_pptx_to_quarto(
     title="Association and Causality",
     subtitle="APHS 20203 • Epidemiology & Biostatistics",
     skip_first_slide=True,
+    group_images=group_images,
     project_root=lecture_root,
     shared_theme=lecture_root / "_theme/tcu.scss",
     logo=lecture_root / "assets/tcu-logo-purple.svg",
