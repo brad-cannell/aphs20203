@@ -69,18 +69,17 @@ print(f"Source: {source}\nDraft: {output_qmd}")
 
 ## Optional Image Audit
 
-Run this chunk to inspect image assets and slide-specific repair suggestions without creating a Quarto deck. The gallery shows images at review size; it does not preview surrounding slide layout or text fit. Group previews use the same native export as conversion and can request temporary-folder access. For a quick text-only check, set `preview=False` and omit `display(...)`.
+Run this chunk to inspect image assets and slide-specific repair suggestions without creating a Quarto deck. The gallery shows images at review size; it does not preview surrounding slide layout or text fit. Group previews use the same native export as conversion and can request temporary-folder access.
 
 ```{python}
 #| eval: false
 
 from IPython.display import HTML, display
-from presentation_audit_images import presentation_audit_images, format_image_audit
+from presentation_audit_images import presentation_audit_images
 
 # Check the same group setting that conversion will use. This optional step
 # leaves the PowerPoint unchanged and creates no draft or persistent assets.
 image_audit = presentation_audit_images(source, group_images=group_images, preview=True)
-print(format_image_audit(image_audit))
 display(HTML(image_audit["html"]))
 ```
 
