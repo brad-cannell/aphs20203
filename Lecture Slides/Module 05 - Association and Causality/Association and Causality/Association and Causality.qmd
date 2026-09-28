@@ -21,7 +21,7 @@ execute:
 ---
 
 
-## Learning Objectives
+## Learning Objectives {visibility="hidden"}
 
 By the end of this week, you should be able to:
 
@@ -37,22 +37,10 @@ By the end of this week, you should be able to:
 
 - Key idea: Association does not imply causation.
 
-::: {.notes}
-Source cover: APHS 20203  Epidemiology & Biostatistics
-
-Week 5: Association and Causality
-
-
-:::
-
 
 ## Epidemiological Study: Fundamental Question
 
-<!-- REVIEW: Slide 3 | Animations/transitions are not reproduced. -->
-
-<!-- REVIEW: Slide 3 | Group 2 preserved as a static image; verify appearance and contextual alt text. -->
-
-<!-- REVIEW: Slide 3 | Automatic layout declined: Overlapping content may be a layered composition. Extracted content retained in source drawing order; manually arrange and check for overflow. -->
+<!-- I don't love this graphic. It isn't terrible, but we could probably do better. -->
 
 After identifying patterns (Person–Place–Time), we ask: **Are exposure and outcome linked?**
 
@@ -70,7 +58,9 @@ Basic designs in epidemiology examine if exposures are correlated with disease.
 :::
 
 
-## How Would You Find the Cause of Disease-Across History?
+## How Would You Find the Cause of Disease-Across History? {visibility="hidden"}
+
+<!-- I see what she's trying to do here, but I don't find this slide very useful. -->
 
 **Imagine you are trying to explain why people get sick…**
 
@@ -110,7 +100,7 @@ Causal explanations evolve with **available evidence, tools, and methods**.
 
 ## What Do Epidemiologists Observe First?
 
-<!-- REVIEW: Slide 6 | Animations/transitions are not reproduced. -->
+<!-- Try using slide-quiz or AhaSlides.  -->
 
 Poll: When studying health in populations, we usually see:
 
@@ -122,12 +112,15 @@ Poll: When studying health in populations, we usually see:
 
 **D.** Random events with no structure
 
+::: {.notes}
 - Epidemiology starts with **association**.
-
-- Causality requires **additional evaluation**.
+- Causality requires **additional evaluation and assumptions**.
+:::
 
 
 ## Association
+
+<!-- Use a different definition of association. See my Epi III slides. -->
 
 - **Association:** A relationship between two **factors or events** that occur together **more often than expected by chance**.
 
@@ -140,9 +133,9 @@ Poll: When studying health in populations, we usually see:
 - **Types:** positive association and negative association 
 
 
-
-
 ## Types of Association
+
+<!-- This slide isn't bad. I think I have some others. See the Epi III slides. -->
 
 ::::: {.columns}
 
@@ -166,6 +159,8 @@ Negative Association
 
 
 ## Spurious (Misleading ) Association
+
+<!-- I don't love how this is set up. There's nothing inherently "bad" about spurious associations. It's just that in epidemiology, our curriousity typically doesn't end with "are x and y related?" -->
 
 - Spurious Association: Sometimes two factors appear related **even though neither causes the other**.
 
@@ -198,7 +193,6 @@ Negative Association
 
 ::: {.notes}
 Answer: While there appears to be a positive association between sunscreen use and skin cancer rates, this may be a spurious association due to the confounding factor of increased sun exposure. People who use sunscreen might spend more time in the sun, which independently increases skin cancer risk.
-
 :::
 
 
@@ -206,40 +200,36 @@ Answer: While there appears to be a positive association between sunscreen use a
 
 Which scenario shows a **misleading association**?
 
-- A. As outside temperature drops, more people wear hats.
+**A.** As outside temperature drops, more people wear hats.
 
-- B. As vaccination rates increase, the targeted disease decreases.
+**B.** As vaccination rates increase, the targeted disease decreases.
 
-- C. Ice cream sales and shark attacks both increase during summer.
+**C.** Ice cream sales and shark attacks both increase during summer.
 
-- D. People who exercise regularly have lower rates of heart disease.
+**D.** People who exercise regularly have lower rates of heart disease.
 
 ::: {.notes}
-A. As outside temperature drops, more people wear hats
-This is not spurious.
-Cold temperature plausibly causes both discomfort and hat use.
-This is a reasonable causal relationship, not a misleading one.
-B. As vaccination rates increase, the targeted disease decreases
-This is a plausible causal association supported by strong evidence.
-Students may say “this is still just an association,” which is technically true, but:
-It is not spurious because no third factor explains both in opposite directions.
-Extensive experimental and observational evidence supports causality.
-C. Ice cream sales and shark attacks increase during summer ✅
-Classic spurious association.
-Neither causes the other.
-Season (summer) is a third factor influencing both.
-This is the clearest example of a misleading association.
-D. People who exercise regularly have lower rates of heart disease
-This is an association that may be causal but is not obviously spurious.
-Students may argue confounding (diet, SES), which is valid.
-Key distinction:
-Confounding does not automatically make an association spurious.
-The association may still reflect a real causal effect.
+**A.** As outside temperature drops, more people wear hats.
+This is not spurious. Cold temperature plausibly causes both discomfort and hat use. This is a reasonable causal relationship, not a misleading one.
 
+**B.** As MMR vaccination rates increase, measles incidence decreases.
+This is a plausible causal association supported by strong evidence.
+Students may say “this is still just an association,” which is technically true, but: It is not spurious because no third factor explains both in opposite directions. Extensive experimental and observational evidence supports causality.
+
+**C.** Ice cream sales and shark attacks increase during summer ✅
+Classic spurious association.
+Neither causes the other. Season (summer) is a third factor influencing both. This is the clearest example of a misleading association.
+
+**D.** People who exercise regularly have lower rates of heart disease
+This is an association that may be causal but is not obviously spurious. Students may argue confounding (diet, SES), which is valid.
+
+Notice that these are population averages. Not every person wears a hat when the temperature drops outside.
 :::
 
 
 ## Example: Sugar and Type 2 Diabetes
+
+<!-- Consider moving this to later in the presentation. After we've discussed evidence for causality. -->
 
 - **Observed finding:** People who consume more sugar have higher rates of type 2 diabetes.
 
@@ -247,9 +237,7 @@ The association may still reflect a real causal effect.
 
     - **Spurious association?** Could a third factor (e.g., overall diet, physical activity) explain both?
 
-    - **Non-spurious association (not yet causal)?** Is this a real pattern that still needs stronger evidence?
-
-    - **Causal relationship?** What additional evidence would be needed to support causality?
+    - **Causal relationship?** Is this a real pattern that still needs stronger evidence? What additional evidence would be needed to support causality?
 
 
 ## Causality
@@ -291,6 +279,10 @@ The association may still reflect a real causal effect.
 
     - Epidemiology focuses mostly on **probabilistic causality**.
 
+::: {.notes}
+- Can we really even call the light switch example completely deterministic? Does the light ALWAYS come on when we press the light switch?
+:::
+
 
 ## Deterministic Causality in Epidemiology (Rare)
 
@@ -326,34 +318,28 @@ The association may still reflect a real causal effect.
 - **Key takeaway:** Most epidemiologic causal relationships involve **risk, not certainty**.
 
 
-## Sufficient Component Cause Model (Causal Pie)
+## Rothman's Model of Sufficient and Component Causes (RMSCC)
 
-<!-- REVIEW: Slide 17 | Animations/transitions are not reproduced. -->
-
-<!-- REVIEW: Slide 17 | Automatic layout declined: Overlapping content may be a layered composition. Extracted content retained in source drawing order; manually arrange and check for overflow. -->
+<!-- I have some additional slides that I might want to use. -->
 
 <!-- source-017-shape-5.png -->
 <div class="pptx-cropped-picture" style="position:relative;overflow:hidden;width:905.000px;max-width:100%;aspect-ratio:8873185/3091303;"><img class="nostretch" src="assets/source-017-shape-5.png" alt="" style="position:absolute;max-width:none;max-height:none;margin:0;border:0;object-fit:fill;left:-0.00000%;top:-30.78712%;width:100.00000%;height:161.45959%;"></div>
 <!-- REVIEW: source-017-b001 | Inspect image and author contextual alt text or record decorative status. -->
 
-**Causal Pie: Understanding Causal Complexity**
+**Outcome: Flu**
+
+- Each pie is a **sufficient cause set** - "sufficient" to produce the outcome
 
 - Each slice represents a **component cause**
 
-- No single slice can cause disease by itself
+- Different combinations of slices can produce the **same outcome**
 
-- Different combinations of slices can produce the **same disease**
-
-?: unknown or additional factors
-
-Effect: Getting Sick (flu)
+- A **necessary cause** is a component cause that appears in every sufficient cause set
 
 ::: {.notes}
-Each “slice” = a component cause
-A complete “pie” = a sufficient cause for disease
-Different combinations can lead to the same outcome
-Key takeaway: Disease occurs when enough causes act together, not from one cause alone.
+- ? = unknown causes.
 
+- Key takeaway: Disease occurs when enough causes act together, not from one cause alone.
 :::
 
 
@@ -361,60 +347,63 @@ Key takeaway: Disease occurs when enough causes act together, not from one cause
 
 Which example best fits **deterministic causality**?
 
-- A. A medication leads to different levels of improvement across patients
+**A.** A medication leads to different levels of improvement across patients
 
-- B. A specific bacterium always causes disease in people without immunity
+**B.** A specific bacterium always causes disease in people without immunity
 
-- C. Increased exercise in a population is linked to lower heart disease rates
+**C.** Increased exercise in a population is linked to lower heart disease rates
 
-- D. Rising global temperature is correlated with rising sea levels
+**D.** Rising global temperature is correlated with rising sea levels
 
 ::: {.notes}
 Explanation:
 Deterministic causality implies a fixed, predictable, and consistent cause-and-effect relationship. If a certain cause is present, the effect will always occur. In option B, the presence of a specific pathogen leading to disease in susceptible individuals is an example of a deterministic cause-and-effect scenario, assuming no other factors, such as immunity, intervene.
+
+Brad's notes
+I left this in here in case it's on the quiz. However, I'd try to train myself to think about it this way:
+- Virtually no outcome is truly deterministic.  
+- If a particular exposure-outcome relationship happens to be pretty close to deterministic, how can we use that to our advantage?
 :::
 
 
-## Exercises: Sugar and Diabetes
+## Exercise: Sugar and Diabetes
 
-<!-- REVIEW: Slide 19 | Animations/transitions are not reproduced. -->
+<!-- At first glance, this is a good exercise, but what do we actually want them to do here? -->
 
-**Task:** Identify if this is an association or causality and specify the type.
+**Task:** Identify if this association is causal. If so, specify the type.
 
-- **Statement:** High sugar intake directly increases the risk of type 2 diabetes by causing insulin resistance.
+> **Statement 1:** High sugar intake directly increases the risk of type 2 diabetes by causing insulin resistance.
 
-**Causality (probabilistic):** Proposes a cause-and-effect relationship in which high sugar intake increases diabetes risk through insulin resistance, but not with certainty.
+**Causality (probabilistic):** Propose a cause-and-effect relationship in which high sugar intake increases diabetes risk through insulin resistance, but not with certainty.
 
-- **Statement:** Studies have found a correlation between sugar-sweetened beverage consumption and the incidence of diabetes.
+> **Statement 2:** Studies have found a correlation between sugar-sweetened beverage consumption and the incidence of diabetes.
 
 **Association - Positive:** describes a correlation between two variables (sugar-sweetened beverage consumption and diabetes incidence) without establishing a direct causal link.
 
+::: {.notes}
+**Statement 1**
+- It does say _directly_, but it also says _risk_.
+:::
 
-## Exercises: Sugar and Diabetes
 
-<!-- REVIEW: Slide 20 | Animations/transitions are not reproduced. -->
+## Exercise: Sugar and Diabetes Continued
 
-**Task:** Identify if this is an association or causality and specify the type.
+<!-- At first glance, this is a good exercise, but what do we actually want them to do here? -->
 
-- **Statement:** Consuming sugar does not guarantee that an individual will develop diabetes, but it significantly increases the probability.
+**Task:** Identify if this association is causal. If so, specify the type.
+
+> **Statement:** Consuming sugar does not guarantee that an individual will develop diabetes, but it significantly increases the probability.
 
 **Causality - Probabilistic:** while sugar consumption increases the risk of diabetes, it does not do so with certainty for every individual, acknowledging the role of other factors.
 
-- **Statement:** In regions where sugar consumption has decreased, the rates of diabetes have also shown a decline.
+> **Statement:** In regions where sugar consumption has decreased, the rates of diabetes have also shown a decline.
 
 **Association – Positive:** This statement could be seen as suggesting a positive association (if interpreted as "less sugar, less diabetes") but is more about observing a trend over time. The causality (if implied) would be probabilistic due to the lack of direct cause-and-effect evidence provided.
 
 
-## Slide 21
-
-<!-- REVIEW: Slide 21 | Media, embedded objects, or SmartArt need manual reconstruction; inspect source. -->
-
-<!-- REVIEW: Slide 21 | Automatic layout declined: Unsupported drawing/chart requires manual layout. Extracted content retained in source drawing order; manually arrange and check for overflow. -->
-
-<!-- REVIEW: source-021-b001 | Drawing without text (MEDIA (16), Online Media 5): reconstruct or crop the source slide. Source: /ppt/slides/slide21.xml, shape 6 (Online Media 5) -->
-
-
 ## The Search for Causality
+
+<!-- Should we move this up to come immediately after the slides about association? -->
 
 - When an association is observed, epidemiologists ask:
 
@@ -430,20 +419,26 @@ Deterministic causality implies a fixed, predictable, and consistent cause-and-e
 - **Key idea:** Causality is not proven by a single study, but **evaluated through accumulated evidence**.
 
 
-## Epi Prep 2
+# Project Prep 2 {.section}
+
+::: {.notes}
+Give them time to work on project prep 2.
+:::
 
 
 ## Quick Review: Association vs Causality
 
+<!-- This slide would be better if the course were taught in a different order. We haven't even discussed p-values yet. -->
+
 What distinguishes a **causal relationship** from an **association**?
 
-- A causal relationship means the two factors increase at the same time.
+**A.** A causal relationship means the two factors increase at the same time.
 
-- A causal relationship means changes in one factor lead to changes in another, with evidence that the exposure occurs before the outcome.
+**B.** A causal relationship means changes in one factor lead to changes in another, with evidence that the exposure occurs before the outcome.
 
-- An association requires a statistically significant p-value, while a causal relationship does not.
+**C.** An association requires a statistically significant p-value, while a causal relationship does not.
 
-- Associations can only be observed in laboratory settings, while causal relationships are observed in real-world settings.
+**D.** Associations can only be observed in laboratory settings, while causal relationships are observed in real-world settings.
 
 ::: {.notes}
 Causality implies that there is a direct cause-and-effect link between two variables, and it is established through various criteria such as temporality (cause precedes effect), strength (strong association), consistency (repeated observations across studies), plausibility (biological rationale), and others. An association may suggest that two variables are related in some way, but it does not confirm that one causes the other.
@@ -452,6 +447,8 @@ Causality implies that there is a direct cause-and-effect link between two varia
 
 
 ## The Search for Causality: EVALI Outbreak
+
+<!-- This example is fine I guess. Maybe we should move to the end after we dicuss causal criteria. -->
 
 **EVALI:** E-cigarette or Vaping–Associated Lung Injury
 
@@ -468,12 +465,15 @@ Causality implies that there is a direct cause-and-effect link between two varia
 - **Causal inference (2020):** Evidence supports a causal role for vitamin E acetate in EVALI
 
 ::: {.notes}
-
 Vitamin E acetate is a thick, sticky substance added to some vaping products and can be harmful when inhaled, unlike regular vitamin E, which is a nutrient found in foods that's good for your skin and overall health.
 :::
 
 
 ## Hill’s Criteria of Causality: Overview
+
+<!-- I probably have some slides that I can use to supplement this material. -->
+
+<!-- Break these up into multiple slides. Also provide counter examples. -->
 
 - **Context:** Proposed by Sir Austin Bradford Hill (1965) to guide causal reasoning in epidemiology
 
@@ -599,6 +599,8 @@ Vitamin E acetate is a thick, sticky substance added to some vaping products and
 
 ## Best Practices for Using Hill’s Criteria
 
+<!-- Even temporality isn't sufficient on its own. -->
+
 - **Start with temporality:** If exposure does not precede outcome, causality cannot be established
 
 - **Evaluate criteria collectively:** No single criterion, beyond temporality, is sufficient on its own
@@ -610,31 +612,26 @@ Vitamin E acetate is a thick, sticky substance added to some vaping products and
 - **Avoid checklist thinking:** Hill’s Criteria guide reasoning but do not prove causation
 
 
-
-
 ## Example: Zika Virus & Microcephaly
 
-<!-- REVIEW: Slide 33 | Automatic layout declined: No unique, clear two-column partition. Extracted content retained in source drawing order; manually arrange and check for overflow. -->
+<!-- Decide if you want to use this exercise or not. If you do, you will need to assign group numbers (1-8). -->
 
 - **Zika virus** is a member of the virus family Flaviviridae. It is spread by daytime-active Aedes mosquitoes
 
 - **Microcephaly** is a medical condition involving a smaller-than-normal head. 
 
-<!-- source-033-shape-4.png -->
 ![](assets/source-033-shape-4.png){fig-alt=""}
-<!-- REVIEW: source-033-b002 | Inspect image and author contextual alt text or record decorative status. -->
 
 Atichat Kuadkitkan, Nitwara Wikan, Wannapa Sornjai, Duncan R. Smith, Zika virus and microcephaly in Southeast Asia: A cause for concern?, Journal of Infection and Public Health,Volume 13, Issue 1,2020,Pages 11-15,
 
 ::: {.notes}
-
 The Zika virus is a disease that you can get from mosquito bites in certain parts of the world. If a pregnant woman gets bitten by a mosquito carrying Zika, there's a chance it can harm her unborn baby. One serious problem it can cause is microcephaly, where the baby's head and brain don't develop properly and are smaller than they should be. This can lead to serious health and development issues for the baby as it grows.
 :::
 
 
 ## Group Activity: Zika Virus and Causal Reasoning
 
-<!-- REVIEW: Slide 34 | Automatic layout declined: Overlapping content may be a layered composition. Extracted content retained in source drawing order; manually arrange and check for overflow. -->
+<!-- Decide if you want to use this exercise or not. If you do, you will need to assign group numbers (1-8). -->
 
 - You will watch a short video about the Zika virus and microcephaly.
 
@@ -658,19 +655,12 @@ The Zika virus is a disease that you can get from mosquito bites in certain part
 
     - Why some causal criteria may be harder to demonstrate than others\
       
-
-<!-- source-034-shape-6.png -->
 ![](assets/source-034-shape-6.png){fig-alt=""}
-<!-- REVIEW: source-034-b002 | Inspect image and author contextual alt text or record decorative status. -->
 
 
 ## Video: Zika Virus & Microcephaly
 
-<!-- REVIEW: Slide 35 | Media, embedded objects, or SmartArt need manual reconstruction; inspect source. -->
-
-<!-- REVIEW: Slide 35 | Automatic layout declined: Unsupported drawing/chart requires manual layout. Extracted content retained in source drawing order; manually arrange and check for overflow. -->
-
-<!-- REVIEW: source-035-b001 | Drawing without text (PLACEHOLDER (14), Online Media 4): reconstruct or crop the source slide. Source: /ppt/slides/slide35.xml, shape 5 (Online Media 4) -->
+<!-- Embed the video. -->
 
 ::: {.notes}
 “As you watch, listen for which pieces of evidence strengthened the causal argument and which questions remained.”
@@ -700,7 +690,7 @@ The Zika virus is a disease that you can get from mosquito bites in certain part
 
 ## Multivariate Causality
 
-<!-- REVIEW: Slide 37 | Automatic layout declined: No unique, clear two-column partition. Extracted content retained in source drawing order; manually arrange and check for overflow. -->
+<!-- Make the image larger. -->
 
 - Most health outcomes do not have a single cause.
 
@@ -714,7 +704,7 @@ The Zika virus is a disease that you can get from mosquito bites in certain part
 
 - **Key idea:** Causal reasoning in epidemiology focuses on **how factors combine**, not on identifying one “true” cause.
 
-<!-- source-037-shape-5122.png -->
+<!-- Make the image larger. -->
 ![](assets/source-037-shape-5122.png){fig-alt="Why Some People Get COVID and Others Don't | by Viggy Hampton, MPH | Medium"}
 
 ::: {.notes}
@@ -722,24 +712,9 @@ The Zika virus is a disease that you can get from mosquito bites in certain part
 :::
 
 
-## Disease Triangle and Web of Causes
-
-<!-- REVIEW: Slide 38 | Automatic layout declined: Unsupported drawing/chart requires manual layout. Extracted content retained in source drawing order; manually arrange and check for overflow. -->
-
-<!-- REVIEW: source-038-b002 | Drawing without text (PLACEHOLDER (14), Content Placeholder 9): reconstruct or crop the source slide. Source: /ppt/slides/slide38.xml, shape 10 (Content Placeholder 9) -->
-
-<!-- source-038-shape-4.png -->
-![](assets/source-038-shape-4.png){fig-alt=""}
-<!-- REVIEW: source-038-b001 | Inspect image and author contextual alt text or record decorative status. -->
-
-::: {.notes}
-Even with good causal reasoning, we are still studying populations, not certainties.
-:::
-
-
 ## Population, Sample & Uncertainty
 
-<!-- REVIEW: Slide 39 | Reading order: shapes reordered top-to-bottom, left-to-right because drawing order differed; verify against the source slide. -->
+<!-- Either make the image larger or delete it. I'm leaning toward deleting it. -->
 
 - In epidemiology, we study **populations** using **samples**.
 
@@ -757,12 +732,13 @@ Even with good causal reasoning, we are still studying populations, not certaint
 
 - **Key idea:** Causal reasoning always involves **uncertainty** because it relies on samples.
 
-<!-- source-039-shape-2.png -->
+<!-- Either make the image larger or delete it. I'm leaning toward deleting it. -->
 ![](assets/source-039-shape-2.png){fig-alt=""}
-<!-- REVIEW: source-039-b002 | Inspect image and author contextual alt text or record decorative status. -->
 
 
 ## Role of Chance in Association/Causality
+
+<!-- Is anything truly random? I think I have a slide about this in my Epi III materials. -->
 
 - **Chance** refers to **random variation** that occurs because we study **samples**, not entire populations.
 
@@ -783,11 +759,15 @@ Even with good causal reasoning, we are still studying populations, not certaint
 - **Key idea:** Uncertainty in epidemiology arises because **chance affects what we observe in samples**.
 
 ::: {.notes}
-“Chance is one of the main reasons associations can mislead us, even when we apply causal criteria carefully.” Activity: Encourage students to think of other examples where two unrelated factors might seem connected due to external influences, enhancing their understanding of confounding.
+“Chance is one of the main reasons associations can mislead us, even when we apply causal criteria carefully.” 
+
+Activity: Encourage students to think of other examples where two unrelated factors might seem connected due to external influences, enhancing their understanding of confounding.
 :::
 
 
 ## Controlling for Chance in Epidemiologic Studies
+
+<!-- This condences and glosses over so many topics -->
 
 - Even when chance affects what we observe, epidemiologists can **reduce its impact**.
 
@@ -801,6 +781,8 @@ Even with good causal reasoning, we are still studying populations, not certaint
 
 
 ## Putting It All Together
+
+<!-- I'm not sure associations are the starting point. We often start by searching for causes. I think it's more accurate to say that all causal relationships produce associations. -->
 
 - Causal inference in epidemiology requires careful judgment.
 
