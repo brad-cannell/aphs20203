@@ -54,7 +54,7 @@ After identifying patterns (Person–Place–Time), we ask: **Are exposure and o
 - Does the evidence support a causal interpretation?
 
 ::: {.notes}
-Basic designs in epidemiology examine if exposures are correlated with disease.
+- Last week, we discussed descriptive epidemiology - describing the occurrence of exposures and outcomes - but we are rarely content to stop there.
 :::
 
 
@@ -64,19 +64,19 @@ Basic designs in epidemiology examine if exposures are correlated with disease.
 
 **Imagine you are trying to explain why people get sick…**
 
-**1\. Stone Age / Early Societies** *(No writing, no labs, no statistics)*
+**1. Stone Age / Early Societies** *(No writing, no labs, no statistics)*
 
 - What visible signs or events would you blame for illness?
 
 - What explanations would feel convincing?
 
-**2\. Pre-Germ Theory** *(People notice patterns but cannot see microbes)*
+**2. Pre-Germ Theory** *(People notice patterns but cannot see microbes)*
 
 - What patterns in **place, season, or environment** would stand out?
 
 - How might surroundings be linked to disease?
 
-**3\. Early Modern Science** *(Counting, mapping, and observation become common)*
+**3. Early Modern Science** *(Counting, mapping, and observation become common)*
 
 - What new observations or comparisons could suggest cause?
 
@@ -158,6 +158,43 @@ Negative Association
 <!-- REVIEW: source-008-b003 | Inspect image and author contextual alt text or record decorative status. -->
 
 
+## Causality
+
+- **Causality:** A relationship where a change in one factor **directly produces** a change in an outcome.
+
+- **Key distinctions**
+
+    - **Causality implies association**
+
+    - **Association does not imply causality**
+
+- **Why causality is harder to establish**
+
+    - Multiple contributing factors
+
+    - Role of chance, bias, and confounding
+
+    - Ethical and practical limits on experimentation
+
+
+## The Search for Causality
+
+<!-- Should we move this up to come immediately after the slides about association? -->
+
+- When an association is observed, epidemiologists ask:
+
+    - **Is the association real?**\
+      Could chance, bias, or confounding explain it?
+
+    - **Is the association consistent with what we know?**\
+      Across time, place, populations, and biology?
+
+    - **Does the evidence support a causal interpretation?**\
+      Or are alternative explanations more plausible?
+
+- **Key idea:** Causality is not proven by a single study, but **evaluated through accumulated evidence**.
+
+
 ## Spurious (Misleading ) Association
 
 <!-- I don't love how this is set up. There's nothing inherently "bad" about spurious associations. It's just that in epidemiology, our curriousity typically doesn't end with "are x and y related?" -->
@@ -227,36 +264,72 @@ Notice that these are population averages. Not every person wears a hat when the
 :::
 
 
-## Example: Sugar and Type 2 Diabetes
+## Population, Sample & Uncertainty
 
-<!-- Consider moving this to later in the presentation. After we've discussed evidence for causality. -->
+<!-- Either make the image larger or delete it. I'm leaning toward deleting it. -->
 
-- **Observed finding:** People who consume more sugar have higher rates of type 2 diabetes.
+- In epidemiology, we study **populations** using **samples**.
 
-- **How should we interpret this?**
+    - A **population** is the group we want to understand
 
-    - **Spurious association?** Could a third factor (e.g., overall diet, physical activity) explain both?
+    - A **sample** is the subset we actually observe
 
-    - **Causal relationship?** Is this a real pattern that still needs stronger evidence? What additional evidence would be needed to support causality?
+    - Conclusions about populations are based on **incomplete information**
+
+- **Why this matters for causality**
+
+    - We rarely observe all cases or all exposures
+
+    - Some uncertainty is unavoidable when drawing conclusions
+
+- **Key idea:** Causal reasoning always involves **uncertainty** because it relies on samples.
+
+<!-- Either make the image larger or delete it. I'm leaning toward deleting it. -->
+![](assets/source-039-shape-2.png){fig-alt=""}
 
 
-## Causality
+## Role of Chance in Association/Causality
 
-- **Causality:** A relationship where a change in one factor **directly produces** a change in an outcome.
+<!-- Is anything truly random? I think I have a slide about this in my Epi III materials. -->
 
-- **Key distinctions**
+- **Chance** refers to **random variation** that occurs because we study **samples**, not entire populations.
 
-    - **Causality implies association**
+- **How chance creates uncertainty**
 
-    - **Association does not imply causality**
+    - Results can vary simply due to randomness
 
-- **Why causality is harder to establish**
+    - An observed association may differ from the true population relationship
 
-    - Multiple contributing factors
+- **Why chance matters**
 
-    - Role of chance, bias, and confounding
+    - Chance can make two events appear related when they are not
 
-    - Ethical and practical limits on experimentation
+    - Chance can hide a real association
+
+    - *Example:* In one flu season, both **flu cases** and **asthma hospitalizations** increase. With small numbers, this co-occurrence may reflect **random variation**, not a causal relationship.
+
+- **Key idea:** Uncertainty in epidemiology arises because **chance affects what we observe in samples**.
+
+::: {.notes}
+“Chance is one of the main reasons associations can mislead us, even when we apply causal criteria carefully.” 
+
+Activity: Encourage students to think of other examples where two unrelated factors might seem connected due to external influences, enhancing their understanding of confounding.
+:::
+
+
+## Controlling for Chance in Epidemiologic Studies
+
+<!-- This condences and glosses over so many topics -->
+
+- Even when chance affects what we observe, epidemiologists can **reduce its impact**.
+
+    - Studying **larger populations** reduces random variation
+
+    - Comparing **exposed and unexposed groups** improves clarity
+
+    - Careful study design strengthens confidence in findings
+
+- **Key idea:** We cannot eliminate chance, but we can **design studies to limit its influence**.
 
 
 ## Types of Causality
@@ -318,31 +391,6 @@ Notice that these are population averages. Not every person wears a hat when the
 - **Key takeaway:** Most epidemiologic causal relationships involve **risk, not certainty**.
 
 
-## Rothman's Model of Sufficient and Component Causes (RMSCC)
-
-<!-- I have some additional slides that I might want to use. -->
-
-<!-- source-017-shape-5.png -->
-<div class="pptx-cropped-picture" style="position:relative;overflow:hidden;width:905.000px;max-width:100%;aspect-ratio:8873185/3091303;"><img class="nostretch" src="assets/source-017-shape-5.png" alt="" style="position:absolute;max-width:none;max-height:none;margin:0;border:0;object-fit:fill;left:-0.00000%;top:-30.78712%;width:100.00000%;height:161.45959%;"></div>
-<!-- REVIEW: source-017-b001 | Inspect image and author contextual alt text or record decorative status. -->
-
-**Outcome: Flu**
-
-- Each pie is a **sufficient cause set** - "sufficient" to produce the outcome
-
-- Each slice represents a **component cause**
-
-- Different combinations of slices can produce the **same outcome**
-
-- A **necessary cause** is a component cause that appears in every sufficient cause set
-
-::: {.notes}
-- ? = unknown causes.
-
-- Key takeaway: Disease occurs when enough causes act together, not from one cause alone.
-:::
-
-
 ## Exercise: Which Best Describes Deterministic Causality?
 
 Which example best fits **deterministic causality**?
@@ -366,57 +414,53 @@ I left this in here in case it's on the quiz. However, I'd try to train myself t
 :::
 
 
-## Exercise: Sugar and Diabetes
+## Multivariate Causality
 
-<!-- At first glance, this is a good exercise, but what do we actually want them to do here? -->
+<!-- Make the image larger. -->
 
-**Task:** Identify if this association is causal. If so, specify the type.
+- Most health outcomes do not have a single cause.
 
-> **Statement 1:** High sugar intake directly increases the risk of type 2 diabetes by causing insulin resistance.
+    - Diseases usually result from **multiple contributing factors**
 
-**Causality (probabilistic):** Propose a cause-and-effect relationship in which high sugar intake increases diabetes risk through insulin resistance, but not with certainty.
+    - Causes may act **together**, not independently
 
-> **Statement 2:** Studies have found a correlation between sugar-sweetened beverage consumption and the incidence of diabetes.
+    - The same outcome can arise through **different causal pathways**
 
-**Association - Positive:** describes a correlation between two variables (sugar-sweetened beverage consumption and diabetes incidence) without establishing a direct causal link.
+    - *Example (Zika and microcephaly):Risk reflects the interaction of viral exposure, timing during pregnancy, biological susceptibility, and environmental context*
+
+- **Key idea:** Causal reasoning in epidemiology focuses on **how factors combine**, not on identifying one “true” cause.
+
+<!-- Make the image larger. -->
+![](assets/source-037-shape-5122.png){fig-alt="Why Some People Get COVID and Others Don't | by Viggy Hampton, MPH | Medium"}
 
 ::: {.notes}
-**Statement 1**
-- It does say _directly_, but it also says _risk_.
+“Notice that no single piece of evidence was sufficient. That’s because most diseases have multiple contributing causes.”
 :::
 
 
-## Exercise: Sugar and Diabetes Continued
+## Rothman's Model of Sufficient and Component Causes (RMSCC)
 
-<!-- At first glance, this is a good exercise, but what do we actually want them to do here? -->
+<!-- I have some additional slides that I might want to use. -->
 
-**Task:** Identify if this association is causal. If so, specify the type.
+<!-- source-017-shape-5.png -->
+<div class="pptx-cropped-picture" style="position:relative;overflow:hidden;width:905.000px;max-width:100%;aspect-ratio:8873185/3091303;"><img class="nostretch" src="assets/source-017-shape-5.png" alt="" style="position:absolute;max-width:none;max-height:none;margin:0;border:0;object-fit:fill;left:-0.00000%;top:-30.78712%;width:100.00000%;height:161.45959%;"></div>
+<!-- REVIEW: source-017-b001 | Inspect image and author contextual alt text or record decorative status. -->
 
-> **Statement:** Consuming sugar does not guarantee that an individual will develop diabetes, but it significantly increases the probability.
+**Outcome: Flu**
 
-**Causality - Probabilistic:** while sugar consumption increases the risk of diabetes, it does not do so with certainty for every individual, acknowledging the role of other factors.
+- Each pie is a **sufficient cause set** - "sufficient" to produce the outcome
 
-> **Statement:** In regions where sugar consumption has decreased, the rates of diabetes have also shown a decline.
+- Each slice represents a **component cause**
 
-**Association – Positive:** This statement could be seen as suggesting a positive association (if interpreted as "less sugar, less diabetes") but is more about observing a trend over time. The causality (if implied) would be probabilistic due to the lack of direct cause-and-effect evidence provided.
+- Different combinations of slices can produce the **same outcome**
 
+- A **necessary cause** is a component cause that appears in every sufficient cause set
 
-## The Search for Causality
+::: {.notes}
+- ? = unknown causes.
 
-<!-- Should we move this up to come immediately after the slides about association? -->
-
-- When an association is observed, epidemiologists ask:
-
-    - **Is the association real?**\
-      Could chance, bias, or confounding explain it?
-
-    - **Is the association consistent with what we know?**\
-      Across time, place, populations, and biology?
-
-    - **Does the evidence support a causal interpretation?**\
-      Or are alternative explanations more plausible?
-
-- **Key idea:** Causality is not proven by a single study, but **evaluated through accumulated evidence**.
+- Key takeaway: Disease occurs when enough causes act together, not from one cause alone.
+:::
 
 
 # Project Prep 2 {.section}
@@ -443,29 +487,6 @@ What distinguishes a **causal relationship** from an **association**?
 ::: {.notes}
 Causality implies that there is a direct cause-and-effect link between two variables, and it is established through various criteria such as temporality (cause precedes effect), strength (strong association), consistency (repeated observations across studies), plausibility (biological rationale), and others. An association may suggest that two variables are related in some way, but it does not confirm that one causes the other.
  
-:::
-
-
-## The Search for Causality: EVALI Outbreak
-
-<!-- This example is fine I guess. Maybe we should move to the end after we dicuss causal criteria. -->
-
-**EVALI:** E-cigarette or Vaping–Associated Lung Injury
-
-**Question:** How did epidemiologists move from **observation** to **causal judgment**?
-
-- **Observation (Early 2019):** Surge in lung injuries among people who reported vaping
-
-- **Initial hypotheses:** Vaping products may be linked to lung injury: Which products? Which components?
-
-- **Data collection (Mid 2019):** Patient histories, product testing, pattern comparison
-
-- **Evidence accumulation (Late 2019):** Vitamin E acetate identified in many THC-containing products
-
-- **Causal inference (2020):** Evidence supports a causal role for vitamin E acetate in EVALI
-
-::: {.notes}
-Vitamin E acetate is a thick, sticky substance added to some vaping products and can be harmful when inhaled, unlike regular vitamin E, which is a nutrient found in foods that's good for your skin and overall health.
 :::
 
 
@@ -612,6 +633,77 @@ Vitamin E acetate is a thick, sticky substance added to some vaping products and
 - **Avoid checklist thinking:** Hill’s Criteria guide reasoning but do not prove causation
 
 
+## Example: Sugar and Type 2 Diabetes
+
+<!-- Consider moving this to later in the presentation. After we've discussed evidence for causality. -->
+
+- **Observed finding:** People who consume more sugar have higher rates of type 2 diabetes.
+
+- **How should we interpret this?**
+
+    - **Spurious association?** Could a third factor (e.g., overall diet, physical activity) explain both?
+
+    - **Causal relationship?** Is this a real pattern that still needs stronger evidence? What additional evidence would be needed to support causality?
+
+
+## Exercise: Sugar and Diabetes
+
+<!-- At first glance, this is a good exercise, but what do we actually want them to do here? -->
+
+**Task:** Identify if this association is causal. If so, specify the type.
+
+> **Statement 1:** High sugar intake directly increases the risk of type 2 diabetes by causing insulin resistance.
+
+**Causality (probabilistic):** Propose a cause-and-effect relationship in which high sugar intake increases diabetes risk through insulin resistance, but not with certainty.
+
+> **Statement 2:** Studies have found a correlation between sugar-sweetened beverage consumption and the incidence of diabetes.
+
+**Association - Positive:** describes a correlation between two variables (sugar-sweetened beverage consumption and diabetes incidence) without establishing a direct causal link.
+
+::: {.notes}
+**Statement 1**
+- It does say _directly_, but it also says _risk_.
+:::
+
+
+## Exercise: Sugar and Diabetes Continued
+
+<!-- At first glance, this is a good exercise, but what do we actually want them to do here? -->
+
+**Task:** Identify if this association is causal. If so, specify the type.
+
+> **Statement:** Consuming sugar does not guarantee that an individual will develop diabetes, but it significantly increases the probability.
+
+**Causality - Probabilistic:** while sugar consumption increases the risk of diabetes, it does not do so with certainty for every individual, acknowledging the role of other factors.
+
+> **Statement:** In regions where sugar consumption has decreased, the rates of diabetes have also shown a decline.
+
+**Association – Positive:** This statement could be seen as suggesting a positive association (if interpreted as "less sugar, less diabetes") but is more about observing a trend over time. The causality (if implied) would be probabilistic due to the lack of direct cause-and-effect evidence provided.
+
+
+## The Search for Causality: EVALI Outbreak
+
+<!-- This example is fine I guess. Maybe we should move to the end after we dicuss causal criteria. -->
+
+**EVALI:** E-cigarette or Vaping–Associated Lung Injury
+
+**Question:** How did epidemiologists move from **observation** to **causal judgment**?
+
+- **Observation (Early 2019):** Surge in lung injuries among people who reported vaping
+
+- **Initial hypotheses:** Vaping products may be linked to lung injury: Which products? Which components?
+
+- **Data collection (Mid 2019):** Patient histories, product testing, pattern comparison
+
+- **Evidence accumulation (Late 2019):** Vitamin E acetate identified in many THC-containing products
+
+- **Causal inference (2020):** Evidence supports a causal role for vitamin E acetate in EVALI
+
+::: {.notes}
+Vitamin E acetate is a thick, sticky substance added to some vaping products and can be harmful when inhaled, unlike regular vitamin E, which is a nutrient found in foods that's good for your skin and overall health.
+:::
+
+
 ## Example: Zika Virus & Microcephaly
 
 <!-- Decide if you want to use this exercise or not. If you do, you will need to assign group numbers (1-8). -->
@@ -686,98 +778,6 @@ The Zika virus is a disease that you can get from mosquito bites in certain part
 - **Experiment:** No direct clinical trials (ethical limits), but strong observational and lab evidence.
 
 - **Analogy:** Similar viruses (e.g., rubella) cause birth defects, supporting the Zika-microcephaly link.
-
-
-## Multivariate Causality
-
-<!-- Make the image larger. -->
-
-- Most health outcomes do not have a single cause.
-
-    - Diseases usually result from **multiple contributing factors**
-
-    - Causes may act **together**, not independently
-
-    - The same outcome can arise through **different causal pathways**
-
-    - *Example (Zika and microcephaly):Risk reflects the interaction of viral exposure, timing during pregnancy, biological susceptibility, and environmental context*
-
-- **Key idea:** Causal reasoning in epidemiology focuses on **how factors combine**, not on identifying one “true” cause.
-
-<!-- Make the image larger. -->
-![](assets/source-037-shape-5122.png){fig-alt="Why Some People Get COVID and Others Don't | by Viggy Hampton, MPH | Medium"}
-
-::: {.notes}
-“Notice that no single piece of evidence was sufficient. That’s because most diseases have multiple contributing causes.”
-:::
-
-
-## Population, Sample & Uncertainty
-
-<!-- Either make the image larger or delete it. I'm leaning toward deleting it. -->
-
-- In epidemiology, we study **populations** using **samples**.
-
-    - A **population** is the group we want to understand
-
-    - A **sample** is the subset we actually observe
-
-    - Conclusions about populations are based on **incomplete information**
-
-- **Why this matters for causality**
-
-    - We rarely observe all cases or all exposures
-
-    - Some uncertainty is unavoidable when drawing conclusions
-
-- **Key idea:** Causal reasoning always involves **uncertainty** because it relies on samples.
-
-<!-- Either make the image larger or delete it. I'm leaning toward deleting it. -->
-![](assets/source-039-shape-2.png){fig-alt=""}
-
-
-## Role of Chance in Association/Causality
-
-<!-- Is anything truly random? I think I have a slide about this in my Epi III materials. -->
-
-- **Chance** refers to **random variation** that occurs because we study **samples**, not entire populations.
-
-- **How chance creates uncertainty**
-
-    - Results can vary simply due to randomness
-
-    - An observed association may differ from the true population relationship
-
-- **Why chance matters**
-
-    - Chance can make two events appear related when they are not
-
-    - Chance can hide a real association
-
-    - *Example:* In one flu season, both **flu cases** and **asthma hospitalizations** increase. With small numbers, this co-occurrence may reflect **random variation**, not a causal relationship.
-
-- **Key idea:** Uncertainty in epidemiology arises because **chance affects what we observe in samples**.
-
-::: {.notes}
-“Chance is one of the main reasons associations can mislead us, even when we apply causal criteria carefully.” 
-
-Activity: Encourage students to think of other examples where two unrelated factors might seem connected due to external influences, enhancing their understanding of confounding.
-:::
-
-
-## Controlling for Chance in Epidemiologic Studies
-
-<!-- This condences and glosses over so many topics -->
-
-- Even when chance affects what we observe, epidemiologists can **reduce its impact**.
-
-    - Studying **larger populations** reduces random variation
-
-    - Comparing **exposed and unexposed groups** improves clarity
-
-    - Careful study design strengthens confidence in findings
-
-- **Key idea:** We cannot eliminate chance, but we can **design studies to limit its influence**.
 
 
 ## Putting It All Together
