@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
+
+  <title>APHS 20203 Lecture Slides – Association and Causality</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-b044a490f555c0c45f07d290b73d27a7.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Association and Causality</h1>
+  <p class="subtitle">APHS 20203 • Epidemiology &amp; Biostatistics</p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+
+<section id="epidemiological-study-fundamental-question" class="slide level2">
+<h2>Epidemiological Study: Fundamental Question</h2>
+<p>After identifying patterns (Person–Place–Time), we ask:</p>
+<ul>
+<li><p><strong>Are exposure and outcome linked?</strong></p></li>
+<li><p>Is the observed association valid or misleading?</p></li>
+<li><p>Could chance, bias, or confounding explain the finding?</p></li>
+<li><p>Does the evidence support a causal interpretation?</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Last week, we discussed descriptive epidemiology - describing the occurrence of exposures and outcomes - but we are rarely content to stop there.</li>
+<li>We’ll discuss each of these terms a little bit today.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="disease-causality-concepts-over-time" class="slide level2">
+<h2>Disease Causality: Concepts Over Time</h2>
+<p>Causal explanations evolve with <strong>available evidence, tools, and methods</strong>.</p>
+<ul>
+<li><p><strong>Supernatural explanations:</strong> Disease attributed to fate, spirits, or moral forces</p></li>
+<li><p><strong>Environmental (Miasma) theories:</strong> Illness linked to air, water, climate, and surroundings</p></li>
+<li><p><strong>Germ theory:</strong> Specific biological agents identified as causes of many infectious diseases</p></li>
+<li><p><strong>Risk-factor &amp; multicausal models:</strong> Most diseases arise from <strong>multiple interacting factors</strong>, not a single cause</p></li>
+<li><p><strong>Modern epidemiology:</strong> Causal inference integrates biology, behavior, environment, and social context over time</p></li>
+</ul>
+</section>
+<section id="what-do-epidemiologists-report-first" class="slide level2">
+<h2>What Do Epidemiologists Report First?</h2>
+<!-- Try using slide-quiz or AhaSlides.  -->
+<p>When studying health in populations, epidemiologists usually start by reporting:</p>
+<p><strong>A.</strong> Clear cause-and-effect relationships</p>
+<p><strong>B.</strong> Patterns and correlations</p>
+<p><strong>C.</strong> Biological mechanisms</p>
+<p><strong>D.</strong> Random events with no structure</p>
+<aside class="notes">
+<ul>
+<li>We usually report patterns and correlations first.</li>
+<li>Causality requires <strong>additional evaluation and assumptions</strong>.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="association" class="slide level2">
+<h2>Association</h2>
+<ul>
+<li><p><strong>Association:</strong> The distribution of an outcome differs across levels of an exposure.</p>
+<ul>
+<li>For example, the outcome may be more common in one group than another.</li>
+</ul></li>
+<li><p>Knowing something about <strong>X</strong> helps us predict something about <strong>Y</strong>.</p></li>
+<li><p><strong>Types:</strong> Positive association and negative association.</p></li>
+<li><p>An association alone does not tell us <strong>why</strong> the groups differ.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>The outcome’s distribution can differ in its average, spread, or proportion in each category.</li>
+<li>An association does not require a statistically significant p-value. Evaluating random error is a separate question.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="types-of-association" class="slide level2">
+<h2>Types of Association</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Positive Association</p>
+</div><div class="column" style="width:50%;">
+<p>Negative Association</p>
+</div></div>
+<!-- source-008-shape-4.png -->
+<p><img data-src="assets/source-008-shape-4.png" class="" style="max-width:100%;height:auto;" alt="" width="1111"> <!-- REVIEW: source-008-b003 | Inspect image and author contextual alt text or record decorative status. --></p>
+</section>
+<section id="causality" class="slide level2">
+<h2>Causality</h2>
+<ul>
+<li><p><strong>Causality:</strong> A relationship where a change in one factor <strong>directly produces</strong> a change in an outcome.</p></li>
+<li><p><strong>Key distinctions</strong></p>
+<ul>
+<li><p><strong>Causality implies association</strong></p></li>
+<li><p><strong>Association does not imply causality</strong></p></li>
+</ul></li>
+<li><p><strong>Why causality is harder to establish</strong></p>
+<ul>
+<li><p>Multiple contributing factors</p></li>
+<li><p>Role of chance, bias, and confounding</p></li>
+<li><p>Ethical and practical limits on experimentation</p></li>
+</ul></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Another way to think about the distinction: If I changed X and held everything else constant, would I expect Y to change?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-search-for-causality" class="slide level2">
+<h2>The Search for Causality</h2>
+<ul>
+<li><p>When an association is observed, epidemiologists may ask:</p>
+<ul>
+<li><p><strong>Is the association causal?</strong><br>
+Could chance, bias, or confounding explain it?</p></li>
+<li><p><strong>Is the association consistent with what we (think we) know about how the world works?</strong><br>
+Across time, place, populations, and biology?</p></li>
+<li><p><strong>Does the evidence support a causal interpretation?</strong><br>
+Or are alternative explanations more plausible?</p></li>
+</ul></li>
+<li><p><strong>Key idea:</strong> Causality is not proven by a single study, but <strong>evaluated through accumulated evidence</strong>.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>We are rarely content to stop at description or even prediction.</li>
+<li>We will talk about chance, bias, and confounding next.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bias" class="slide level2">
+<h2>Bias</h2>
+<ul>
+<li><p><strong>Bias:</strong> <em>Systematic</em> error in an estimate. The gap between what we measured and what we intended to measure.</p></li>
+<li><p>Bias can arise from <strong>who enters a study</strong>, <strong>how we measure variables</strong>, or <strong>how we estimate a causal effect</strong>.</p></li>
+</ul>
+<div class="fragment">
+<ul>
+<li><strong>Example:</strong> We want to estimate average physical activity among all Texas adults, so we measure physical activity patterns at local gyms.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><strong>Key idea:</strong> A larger sample does not generally eliminate bias.</li>
+</ul>
+</div>
+<aside class="notes">
+<ul>
+<li><p>Our sample will likely systematically overrepresent more active people.</p></li>
+<li><p>Because the error is systematic, a larger sample will not generally eliminate the bias.</p></li>
+<li><p>Transition to the next slide: Confounding is one source of bias when estimating causal effects. Some epidemiology texts distinguish confounding from other biases; for today, emphasize how each can lead our estimate away from the quantity we want to understand.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="confounding" class="slide level2">
+<h2>Confounding</h2>
+<ul>
+<li><p><strong>Confounding:</strong> The effects of other factors become mixed into our estimate of an exposure’s causal effect. Or giving credit to the wrong variable.</p></li>
+<li><p><strong>Example:</strong> Ice cream sales and drownings both increase during hot weather.</p>
+<ul>
+<li>Hot weather influences both ice cream sales and drowning risk.</li>
+</ul></li>
+<li><p><strong>Question:</strong> Would reducing ice cream sales reduce drownings?</p></li>
+<li><p><strong>Key idea:</strong> The association can be real and useful for prediction without representing a causal effect of ice cream sales.</p></li>
+</ul>
+<aside class="notes">
+<p>The association itself need not be incorrect. The problem arises when we attribute it to a causal effect of ice cream sales rather than the common cause, hot weather.</p>
+<p>Introduce the term “spurious association” here for the reading, quiz, and later exercise. It describes an association that does not represent the causal relationship we might infer from it. Do not use it as a synonym for confounding: chance and other biases can also produce misleading findings.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercise-sunscreen-use-and-skin-cancer" class="slide level2">
+<h2>Exercise: Sunscreen Use and Skin Cancer</h2>
+<ul>
+<li><p><strong>Observed association:</strong> Higher rates of skin cancer are associated with increased sunscreen use.</p></li>
+<li><p><strong>Question:</strong> What might <strong>confound</strong> the relationship between sunscreen use and skin cancer?</p></li>
+<li><p><strong>Think about:</strong></p>
+<ul>
+<li><p>Who is more likely to use sunscreen?</p></li>
+<li><p>What other exposure might be related to both sunscreen use and skin cancer?</p></li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>Answer: Sun exposure is a potential confounder. People who spend more time in the sun may be more likely to use sunscreen, and greater sun exposure also increases skin cancer risk. The observed association alone does not establish that sunscreen causes skin cancer.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercise-which-is-a-spurious-association" class="slide level2">
+<h2>Exercise: Which Is a Spurious Association?</h2>
+<p>Which scenario shows a <strong>spurious association</strong>?</p>
+<p><strong>A.</strong> As outside temperature drops, more people wear hats.</p>
+<p><strong>B.</strong> As vaccination rates increase, the targeted disease decreases.</p>
+<p><strong>C.</strong> Fires attended by more firefighters tend to cause more property damage.</p>
+<p><strong>D.</strong> People who exercise regularly have lower rates of heart disease.</p>
+<aside class="notes">
+<p><strong>A.</strong> As outside temperature drops, more people wear hats. This is not spurious. Cold temperature plausibly causes both discomfort and hat use. This is a reasonable causal relationship, not a misleading one.</p>
+<p><strong>B.</strong> As MMR vaccination rates increase, measles incidence decreases. This is a plausible causal association supported by strong evidence. Students may say “this is still just an association,” which is technically true, but it is not spurious because no third factor explains both in opposite directions. Extensive experimental and observational evidence supports causality.</p>
+<p><strong>C.</strong> Fires attended by more firefighters tend to cause more property damage. ✅ Classic spurious association.</p>
+<p><strong>D.</strong> People who exercise regularly have lower rates of heart disease. This is an association that may be causal but is not obviously spurious. Students may argue confounding (diet, SES), which is valid.</p>
+<p>Notice that these are population averages. Not every person wears a hat when the temperature drops outside.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="population-sample-uncertainty" class="slide level2">
+<h2>Population, Sample &amp; Uncertainty</h2>
+<p><strong>Example:</strong> We want to understand the health of adults living in Texas.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>Who belongs to it?</th>
+<th>In our example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Target population</strong></td>
+<td>People we want findings to apply to</td>
+<td>All Texas adults</td>
+</tr>
+<tr class="even">
+<td><strong>Source population</strong></td>
+<td>People from whom we select participants</td>
+<td>Adult patients at several Texas clinics</td>
+</tr>
+<tr class="odd">
+<td><strong>Study sample</strong></td>
+<td>People whose data we analyze</td>
+<td>500 participating patients</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<ul>
+<li><strong>Chance:</strong> Would another random sample from the same source give a different estimate?</li>
+<li><strong>Applicability:</strong> How well do these findings apply to all Texas adults?</li>
+</ul>
+</div>
+<aside class="notes">
+<p>Sampling introduces uncertainty into our estimates. Who we recruit also affects which populations our findings may apply to. These are distinct questions: a larger clinic sample does not automatically make it representative of all Texas adults.</p>
+<p>Distinguish statistical uncertainty from causal uncertainty, as in Measures of Occurrence, slides 14–16. Even a precisely estimated association can leave uncertainty about its causal interpretation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="role-of-chance-in-associationcausality" class="slide level2">
+<h2>Role of Chance in Association/Causality</h2>
+<p><strong>Sampling variability:</strong> Estimates differ from sample to sample, even when we sample randomly from the same population.</p>
+<div class="columns">
+<div class="column" style="width:57%;">
+<p><img data-src="assets/uthealth-random-error-sampling.png" class="" alt="A population with a mean BMI of 28 and a sample with a mean BMI of 30. The sample estimate is 2 units above the population mean." width="630"></p>
+</div><div class="column" style="width:43%;">
+<p><strong>Hypothetical BMI example</strong></p>
+<ul>
+<li>Population mean: <strong>28</strong></li>
+<li>One random sample: <strong>30</strong></li>
+<li>Another random sample might have a mean of <strong>26</strong>.</li>
+</ul>
+<p><strong>Question:</strong> Must a difference between an estimate and the truth mean someone made a mistake?</p>
+</div></div>
+<aside class="notes">
+<p>Answer: No.&nbsp;Samples can differ by chance. In practice, we usually do not know the true population mean. The same idea applies to estimates of associations: sampling variability can exaggerate, weaken, or reverse an observed association.</p>
+<p>Sampling variability is one source of random error. The old deck also illustrates random measurement error. Random error need not average to exactly zero across a small number of samples.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="controlling-for-chance-in-epidemiologic-studies" class="slide level2">
+<h2>Controlling for Chance in Epidemiologic Studies</h2>
+<ul>
+<li><p><strong>Larger samples</strong> generally reduce sampling variability.</p></li>
+<li><p><strong>Systematic bias is a different problem.</strong> A larger sample does not typically correct biased recruitment, measurement, or confounding.</p></li>
+<li><p><strong>Precision and causality are different questions.</strong> We can estimate an association precisely and still be uncertain whether it is causal.</p></li>
+<li><p><strong>Key idea:</strong> More data can improve precision, but causal interpretation still requires careful judgment.</p></li>
+</ul>
+<aside class="notes">
+<p>Increasing sample size generally reduces sampling variability when other features of the study are comparable. It does not guarantee that a particular estimate is closer to the truth. Comparing exposed and unexposed groups is essential to many association questions, but doing so alone does not control chance.</p>
+<p>Now, we will transition from association to causation…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="types-of-causality" class="slide level2">
+<h2>Types of Causality</h2>
+<ul>
+<li><p><strong>Deterministic causality</strong></p>
+<ul>
+<li><p>A cause leads to an outcome <strong>with certainty</strong></p></li>
+<li><p>If the cause occurs, the outcome follows</p></li>
+<li><p><em>Everyday example:</em> Pressing a light switch → the light turns on</p></li>
+</ul></li>
+<li><p><strong>Probabilistic causality</strong></p>
+<ul>
+<li><p>A cause <strong>changes the chance</strong> of an outcome</p></li>
+<li><p>The outcome does not always occur</p></li>
+<li><p><em>Everyday example:</em> Studying more → higher chance of doing well on an exam</p></li>
+<li><p>Epidemiology focuses mostly on <strong>probabilistic causality</strong>.</p></li>
+</ul></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Can we really even call the light switch example completely deterministic? Does the light ALWAYS come on when we press the light switch?</li>
+<li>Ask what else must be present: electricity, a working bulb, and a complete circuit. Return to these conditions when introducing component causes.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="deterministic-causality-in-epidemiology-rare" class="slide level2">
+<h2>Deterministic Causality in Epidemiology (Rare)</h2>
+<ul>
+<li><p><strong>Defining feature:</strong> Exposure leads to disease <strong>with near certainty</strong></p></li>
+<li><p><strong>Why it’s unusual</strong></p>
+<ul>
+<li><p>Most diseases involve <strong>multiple interacting causes</strong></p></li>
+<li><p>Individual susceptibility and context matter</p></li>
+</ul></li>
+<li><p><strong>Epidemiologic example</strong></p>
+<ul>
+<li>Untreated rabies virus exposure → rabies disease</li>
+</ul></li>
+<li><p><strong>Key takeaway:</strong> Deterministic causality exists in epidemiology, but it is <strong>rare and exceptional</strong>.</p></li>
+</ul>
+</section>
+<section id="probabilistic-causality-in-epidemiology-typical" class="slide level2">
+<h2>Probabilistic Causality in Epidemiology (Typical)</h2>
+<ul>
+<li><p><strong>Defining feature:</strong> Exposure <strong>increases the likelihood</strong> of disease</p></li>
+<li><p><strong>Why this is typical</strong></p>
+<ul>
+<li><p>Diseases arise from <strong>multiple interacting causes</strong></p></li>
+<li><p>Susceptibility varies across individuals</p></li>
+</ul></li>
+<li><p><strong>Epidemiologic example</strong></p>
+<ul>
+<li>Smoking → higher risk of lung cancer</li>
+</ul></li>
+<li><p><strong>Key takeaway:</strong> Most epidemiologic causal relationships involve <strong>risk, not certainty</strong>.</p></li>
+</ul>
+</section>
+<section id="exercise-which-best-describes-deterministic-causality" class="slide level2">
+<h2>Exercise: Which Best Describes Deterministic Causality?</h2>
+<p>Which example best fits <strong>deterministic causality</strong>?</p>
+<p><strong>A.</strong> A medication leads to different levels of improvement across patients</p>
+<p><strong>B.</strong> A specific bacterium always causes disease in people without immunity</p>
+<p><strong>C.</strong> Increased exercise in a population is linked to lower heart disease rates</p>
+<p><strong>D.</strong> Rising global temperature is correlated with rising sea levels</p>
+<aside class="notes">
+<p>Explanation: Deterministic causality implies a fixed, predictable, and consistent cause-and-effect relationship. If a certain cause is present, the effect will always occur. In option B, the presence of a specific pathogen leading to disease in susceptible individuals is an example of a deterministic cause-and-effect scenario, assuming no other factors, such as immunity, intervene.</p>
+<p>Brad’s notes I left this in here in case it’s on the quiz. However, I’d try to train myself to think about it this way: - Virtually no outcome is truly deterministic.<br>
+- If a particular exposure-outcome relationship happens to be pretty close to deterministic, how can we use that to our advantage?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="multivariate-causality" class="slide level2">
+<h2>Multivariate Causality</h2>
+<ul>
+<li><p>Most health outcomes involve <strong>multiple contributing causes</strong>.</p></li>
+<li><p>Causes can act together, and different combinations can produce the same outcome.</p></li>
+</ul>
+<p><strong>Return to the light switch:</strong> What else must be present for flipping the switch to turn on the light?</p>
+<div class="fragment">
+<ul>
+<li><p>Electricity, a working bulb, and a complete circuit.</p></li>
+<li><p>Flipping the switch may complete the combination of conditions needed for the light to turn on.</p></li>
+</ul>
+<p><strong>Key idea:</strong> The final event in a sequence is not necessarily the only cause.</p>
+</div>
+<aside class="notes">
+<p>Pause for students to name the other conditions before revealing or discussing the examples. Use this as the transition to Rothman’s model: a component contributes to a causal mechanism, while a complete set is sufficient to produce the outcome.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="rothmans-model-of-sufficient-and-component-causes-rmscc" class="slide level2 compact">
+<h2>Rothman’s Model of Sufficient and Component Causes (RMSCC)</h2>
+<!-- source-017-shape-5.png -->
+<div class="pptx-cropped-picture" style="position:relative;overflow:hidden;width:905.000px;max-width:100%;aspect-ratio:8873185/3091303;">
+<img class="" src="assets/source-017-shape-5.png" alt="Three illustrative sufficient-cause pies for flu. All include exposure to the virus and unknown causes, while other components differ: vaccination status, handwashing, sleep, and stress." style="position:absolute;max-width:none;max-height:none;margin:0;border:0;object-fit:fill;left:-0.00000%;top:-30.78712%;width:100.00000%;height:161.45959%;">
+</div>
+<p><strong>Outcome: Flu</strong></p>
+<ul>
+<li><p>Each pie is a <strong>sufficient cause set</strong> - “sufficient” to produce the outcome</p></li>
+<li><p>Each slice represents a <strong>component cause</strong></p></li>
+<li><p>Different combinations of slices can produce the <strong>same outcome</strong></p></li>
+<li><p>A <strong>necessary cause</strong> is a component cause that appears in every sufficient cause set</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><p>? = unknown causes. These pies illustrate hypothetical causal mechanisms.</p></li>
+<li><p>Connect this to the light-switch example: the switch, electricity, bulb, and circuit contribute to a complete causal mechanism. We often notice the last component, but the other components also matter.</p></li>
+<li><p>Work through examples. Make sure to discuss necessary and sufficient causes.</p></li>
+<li><p>Key takeaway: Disease occurs when enough causes act together, not from one cause alone.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section>
+<section id="project-prep-2" class="title-slide slide level1 section center">
+<h1>Project Prep 2</h1>
+<aside class="notes">
+<p>Give them time to work on project prep 2.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quick-review-association-vs-causality" class="slide level2">
+<h2>Quick Review: Association vs Causality</h2>
+<!-- This slide would be better if the course were taught in a different order. We haven't even discussed p-values yet. -->
+<p>What distinguishes a <strong>causal relationship</strong> from an <strong>association</strong>?</p>
+<p><strong>A.</strong> A causal relationship means the two factors increase at the same time.</p>
+<p><strong>B.</strong> A causal relationship means changes in one factor lead to changes in another, with evidence that the exposure occurs before the outcome.</p>
+<p><strong>C.</strong> An association requires a statistically significant p-value, while a causal relationship does not.</p>
+<p><strong>D.</strong> Associations can only be observed in laboratory settings, while causal relationships are observed in real-world settings.</p>
+<aside class="notes">
+<p>Causality implies that there is a direct cause-and-effect link between two variables, and it is established through various criteria such as temporality (cause precedes effect), strength (strong association), consistency (repeated observations across studies), plausibility (biological rationale), and others. An association may suggest that two variables are related in some way, but it does not confirm that one causes the other.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="hills-criteria-of-causality-overview" class="slide level2">
+<h2>Hill’s Criteria of Causality: Overview</h2>
+<!-- I probably have some slides that I can use to supplement this material. -->
+<!-- Break these up into multiple slides. Also provide counterexamples. -->
+<ul>
+<li><p><strong>Context:</strong> Proposed by Sir Austin Bradford Hill (1965) to guide causal reasoning in epidemiology</p></li>
+<li><p><strong>Purpose:</strong> A set of principles to help evaluate whether an observed <strong>association</strong> is likely to be <strong>causal</strong></p></li>
+<li><p><strong>Important clarifications</strong></p>
+<ul>
+<li><p>Not a checklist</p></li>
+<li><p>Not all criteria must be met</p></li>
+<li><p><strong>Temporality</strong> (exposure precedes outcome) is essential</p></li>
+</ul></li>
+<li><p><strong>Key idea:</strong> Hill’s Criteria <strong>organize evidence</strong>; they do not prove causation.</p></li>
+</ul>
+</section>
+<section id="temporality-strength-of-association" class="slide level2">
+<h2>Temporality &amp; Strength of Association</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Temporality</strong></p>
+<ul>
+<li>The exposure must occur before the outcome.</li>
+<li><em>Example:</em> Smoking precedes lung cancer development.</li>
+<li><em>Counterexample:</em> A rooster crows before sunrise. Does it cause sunrise?</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Strength of association</strong></p>
+<ul>
+<li>A large association can support a causal interpretation, but alternative explanations still matter.</li>
+<li><em>Counterexample:</em> Children’s shoe sizes and reading aptitude are associated. What could explain both?</li>
+</ul>
+</div></div>
+<p><strong>Key idea:</strong> Temporality is necessary, but neither timing nor strength alone establishes causality.</p>
+<aside class="notes">
+<p>Counterexamples adapted from Brad Cannell, Epidemiology III, Introduction to Causal Inference, slide 10.</p>
+<p>The rooster example shows why occurring first is not sufficient. Age helps explain the shoe-size and reading association: older children tend to have larger feet and greater reading aptitude. Increasing shoe size would not itself improve reading.</p>
+<p>Retain smoking and lung cancer as an example of an association supported by multiple lines of evidence. A large association is not automatically free of confounding or bias.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="consistency-and-coherence" class="slide level2">
+<h2>Consistency and Coherence</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Consistency</strong></p>
+<ul>
+<li>Similar findings across studies, populations, and settings.</li>
+<li><em>Example:</em> High salt intake is linked to high blood pressure in many countries.</li>
+<li><strong>Limitation:</strong> Studies that share the same bias can produce consistently misleading findings.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Coherence</strong></p>
+<ul>
+<li>Findings fit with existing biological and epidemiologic knowledge.</li>
+<li><em>Example:</em> Smoking-related lung cancer aligns with known carcinogenic effects of tobacco.</li>
+</ul>
+</div></div>
+<p><strong>Comparison:</strong> Consistency compares studies. Coherence compares findings with existing knowledge.</p>
+<aside class="notes">
+<p>The consistency counterexample comes from Brad Cannell, Epidemiology III, Introduction to Causal Inference, slide 10: many biased studies are still biased studies.</p>
+<p>Ask whether repeating the same recruitment or measurement problem would make us more confident merely because the results agree.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="dose-response-relationship-biological-plausibility" class="slide level2">
+<h2>Dose-Response Relationship &amp; Biological Plausibility</h2>
+<ul>
+<li><p><strong>Dose-Response Relationship (Biological Gradient)</strong></p>
+<ul>
+<li><p>Higher levels of exposure are associated with higher risk of the outcome</p></li>
+<li><p>A clear pattern strengthens confidence in a causal interpretation</p></li>
+<li><p><em>Example:</em> Smoking more cigarettes per day is associated with higher lung cancer risk</p></li>
+</ul></li>
+<li><p><strong>Biological Plausibility</strong></p>
+<ul>
+<li><p>A reasonable biological mechanism links exposure to outcome</p></li>
+<li><p>The explanation should align with existing biological knowledge</p></li>
+<li><p><em>Example:</em> Carcinogens in tobacco smoke damage lung cells and increase cancer risk</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="experiment-and-specificity" class="slide level2">
+<h2>Experiment and Specificity</h2>
+<ul>
+<li><p><strong>Experiment</strong></p>
+<ul>
+<li><p>Evidence comes from interventions or natural experiments</p></li>
+<li><p>Changes in exposure are followed by changes in outcomes</p></li>
+<li><p><em>Example:</em> Smoking bans are followed by fewer asthma-related hospitalizations</p></li>
+</ul></li>
+<li><p><strong>Specificity</strong></p>
+<ul>
+<li><p>A specific exposure is linked to a specific outcome</p></li>
+<li><p>This criterion is less emphasized today because many exposures have multiple effects</p></li>
+<li><p><em>Example:</em> Mycobacterium tuberculosis bacteria cause tuberculosis</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="analogy-weakest-criterion" class="slide level2">
+<h2>Analogy (Weakest Criterion)</h2>
+<ul>
+<li><p><strong>Analogy</strong></p>
+<ul>
+<li><p>Similar exposures are known to cause similar outcomes</p></li>
+<li><p>Raises a hypothesis by comparison, not by direct evidence</p></li>
+<li><p><em>Example:</em> Other viruses are known to cause birth defects, raising concern about Zika virus</p></li>
+</ul></li>
+<li><p><strong>Why this criterion is weak</strong></p>
+<ul>
+<li><p>Relies on <strong>similarity</strong>, not direct observation</p></li>
+<li><p>Does not test exposure, timing, or mechanism</p></li>
+<li><p>Easily misleading if used alone</p></li>
+</ul></li>
+<li><p><strong>Key point:</strong> Analogy can <strong>suggest</strong> a causal relationship, but it provides the <strong>weakest support</strong> and <strong>cannot establish causality</strong>.</p></li>
+</ul>
+</section>
+<section id="best-practices-for-using-hills-criteria" class="slide level2">
+<h2>Best Practices for Using Hill’s Criteria</h2>
+<ul>
+<li><p><strong>Start with temporality:</strong> If exposure does not precede outcome, causality cannot be established</p></li>
+<li><p><strong>Evaluate criteria collectively:</strong> No single criterion is sufficient. Temporality is necessary, but it is not sufficient.</p></li>
+<li><p><strong>Consider alternative explanations:</strong> Always assess confounding, bias, and chance</p></li>
+<li><p><strong>Interpret findings in context:</strong> Align evidence with biology and existing research</p></li>
+<li><p><strong>Avoid checklist thinking:</strong> Hill’s Criteria guide reasoning but do not prove causation</p></li>
+</ul>
+</section>
+<section id="example-sugar-and-type-2-diabetes" class="slide level2">
+<h2>Example: Sugar and Type 2 Diabetes</h2>
+<!-- Consider moving this to later in the presentation. After we've discussed evidence for causality. -->
+<ul>
+<li><p><strong>Observed finding:</strong> People who consume more sugar have higher rates of type 2 diabetes.</p></li>
+<li><p><strong>How should we interpret this?</strong></p>
+<ul>
+<li><p><strong>Spurious association?</strong> Could a third factor (e.g., overall diet, physical activity) explain both?</p></li>
+<li><p><strong>Causal relationship?</strong> Is this a real pattern that still needs stronger evidence? What additional evidence would be needed to support causality?</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="exercise-sugar-and-diabetes" class="slide level2">
+<h2>Exercise: Sugar and Diabetes</h2>
+<!-- At first glance, this is a good exercise, but what do we actually want them to do here? -->
+<p><strong>Task:</strong> Identify whether this association is causal. If so, specify the type.</p>
+<blockquote>
+<p><strong>Statement 1:</strong> High sugar intake directly increases the risk of type 2 diabetes by causing insulin resistance.</p>
+</blockquote>
+<p><strong>Causality (probabilistic):</strong> Proposes a cause-and-effect relationship in which high sugar intake increases diabetes risk through insulin resistance, but not with certainty.</p>
+<blockquote>
+<p><strong>Statement 2:</strong> Studies have found a correlation between sugar-sweetened beverage consumption and the incidence of diabetes.</p>
+</blockquote>
+<p><strong>Association - Positive:</strong> Describes a correlation between two variables (sugar-sweetened beverage consumption and diabetes incidence) without establishing a direct causal link.</p>
+<aside class="notes">
+<p><strong>Statement 1</strong> - It does say <em>directly</em>, but it also says <em>risk</em>.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercise-sugar-and-diabetes-continued" class="slide level2">
+<h2>Exercise: Sugar and Diabetes Continued</h2>
+<!-- At first glance, this is a good exercise, but what do we actually want them to do here? -->
+<p><strong>Task:</strong> Identify whether this association is causal. If so, specify the type.</p>
+<blockquote>
+<p><strong>Statement:</strong> Consuming sugar does not guarantee that an individual will develop diabetes, but it significantly increases the probability.</p>
+</blockquote>
+<p><strong>Causality - Probabilistic:</strong> While sugar consumption increases the risk of diabetes, it does not do so with certainty for every individual, given the role of other factors.</p>
+<blockquote>
+<p><strong>Statement:</strong> In regions where sugar consumption has decreased, the rates of diabetes have also shown a decline.</p>
+</blockquote>
+<p><strong>Association – Positive:</strong> This statement could be seen as suggesting a positive association (if interpreted as “less sugar, less diabetes”) but is more about observing a trend over time. The causality (if implied) would be probabilistic due to the lack of direct cause-and-effect evidence provided.</p>
+</section>
+<section id="the-search-for-causality-evali-outbreak" class="slide level2">
+<h2>The Search for Causality: EVALI Outbreak</h2>
+<!-- This example is fine I guess. Maybe we should move to the end after we discuss causal criteria. -->
+<p><strong>EVALI:</strong> E-cigarette or Vaping–Associated Lung Injury</p>
+<p><strong>Question:</strong> How did epidemiologists move from <strong>observation</strong> to <strong>causal judgment</strong>?</p>
+<ul>
+<li><p><strong>Observation (Early 2019):</strong> Surge in lung injuries among people who reported vaping</p></li>
+<li><p><strong>Initial hypotheses:</strong> Vaping products may be linked to lung injury: Which products? Which components?</p></li>
+<li><p><strong>Data collection (Mid-2019):</strong> Patient histories, product testing, pattern comparison</p></li>
+<li><p><strong>Evidence accumulation (Late 2019):</strong> Vitamin E acetate identified in many THC-containing products</p></li>
+<li><p><strong>Causal inference (2020):</strong> Evidence supports a causal role for vitamin E acetate in EVALI</p></li>
+</ul>
+<aside class="notes">
+<p>Vitamin E acetate is a thick, sticky substance added to some vaping products and can be harmful when inhaled, unlike regular vitamin E, which is a nutrient found in foods that’s good for your skin and overall health.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="example-zika-virus-microcephaly" class="slide level2">
+<h2>Example: Zika Virus &amp; Microcephaly</h2>
+<!-- Decide if you want to use this exercise or not. If you do, you will need to assign group numbers (1-8). -->
+<ul>
+<li><p><strong>Zika virus</strong> is a member of the virus family Flaviviridae. It is spread by daytime-active Aedes mosquitoes.</p></li>
+<li><p><strong>Microcephaly</strong> is a medical condition involving a smaller-than-normal head.</p></li>
+</ul>
+
+<img data-src="assets/source-033-shape-4.png" alt="" class="r-stretch"><p>Atichat Kuadkitkan, Nitwara Wikan, Wannapa Sornjai, Duncan R. Smith, Zika virus and microcephaly in Southeast Asia: A cause for concern?, Journal of Infection and Public Health, Volume 13, Issue 1, 2020, Pages 11–15.</p>
+<aside class="notes">
+<p>The Zika virus is a disease that you can get from mosquito bites in certain parts of the world. If a pregnant woman gets bitten by a mosquito carrying Zika, there’s a chance it can harm her unborn baby. One serious problem it can cause is microcephaly, where the baby’s head and brain don’t develop properly and are smaller than they should be. This can lead to serious health and development issues for the baby as it grows.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="group-activity-zika-virus-and-causal-reasoning" class="slide level2">
+<h2>Group Activity: Zika Virus and Causal Reasoning</h2>
+<!-- Decide if you want to use this exercise or not. If you do, you will need to assign group numbers (1-8). -->
+<ul>
+<li><p>You will watch a short video about the Zika virus and microcephaly.</p></li>
+<li><p>Each group has been assigned a <strong>different lens</strong> for evaluating causality at this Google link: <a href="https://tinyurl.com/W5GroupActivity">https://tinyurl.com/W5GroupActivity</a> or via the QR code</p></li>
+<li><p><strong>While watching the video:</strong></p>
+<ul>
+<li><p>Focus only on your assigned lens and the last slide about dose-response&nbsp;</p></li>
+<li><p>Capture brief bullet points, not full sentences</p></li>
+</ul></li>
+<li><p><strong>After the video, your group should report:</strong></p>
+<ul>
+<li><p>One piece of evidence that supports causality</p></li>
+<li><p>One limitation or uncertainty related to your lens</p></li>
+</ul></li>
+<li><p><strong>As a whole class, we will then discuss:</strong></p>
+<ul>
+<li><p>Whether there is evidence of a dose–response relationship, and</p></li>
+<li><p>Why some causal criteria may be harder to demonstrate than others<br>
+</p></li>
+</ul></li>
+</ul>
+
+<img data-src="assets/source-034-shape-6.png" alt="" class="r-stretch"></section>
+<section id="video-zika-virus-microcephaly" class="slide level2">
+<h2>Video: Zika Virus &amp; Microcephaly</h2>
+<!-- Embed the video. -->
+<p>https://youtu.be/t-N9mryaVpY?si=RGQuPVqqhxsc4rxm</p>
+<aside class="notes">
+<p>“As you watch, listen for which pieces of evidence strengthened the causal argument and which questions remained.”</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="causality-criteria-zika-virus-microcephaly" class="slide level2">
+<h2>Causality Criteria: Zika Virus &amp; Microcephaly</h2>
+<ul>
+<li><p><strong>Temporality:</strong> Pregnant mothers got Zika before having babies with microcephaly.</p></li>
+<li><p><strong>Strength:</strong> Big spike in microcephaly where Zika outbreaks occurred.</p></li>
+<li><p><strong>Consistency:</strong> Similar rises reported in multiple regions (e.g., Brazil, French Polynesia).</p></li>
+<li><p><strong>Specificity:</strong> Most increases appeared where Zika was active (though microcephaly has other causes).</p></li>
+<li><p><strong>Dose-Response (Biological Gradient):</strong> More severe or earlier Zika infections may lead to higher risk of microcephaly.</p></li>
+<li><p><strong>Biological Plausibility:</strong> Zika infects developing brain cells, a direct biological link to smaller head size.</p></li>
+<li><p><strong>Coherence:</strong> Fits with existing knowledge that viruses can damage fetal brain development.</p></li>
+<li><p><strong>Experiment:</strong> No direct clinical trials (ethical limits), but strong observational and lab evidence.</p></li>
+<li><p><strong>Analogy:</strong> Similar viruses (e.g., rubella) cause birth defects, supporting the Zika-microcephaly link.</p></li>
+</ul>
+</section>
+<section id="putting-it-all-together" class="slide level2">
+<h2>Putting It All Together</h2>
+<!-- I'm not sure associations are the starting point. We often start by searching for causes. I think it's more accurate to say that all causal relationships produce associations. -->
+<ul>
+<li><p>Causal inference in epidemiology requires careful judgment.</p>
+<ul>
+<li><p>Associations are the starting point</p></li>
+<li><p>Causality is evaluated using multiple lines of evidence</p></li>
+<li><p>Most diseases have <strong>multiple contributing causes</strong></p></li>
+<li><p>Uncertainty and chance are always present</p></li>
+</ul></li>
+<li><p><strong>Final takeaway:</strong> Epidemiology is about making the <strong>best possible causal judgments</strong> with imperfect evidence.</p></li>
+</ul>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../assets/tcu-logo-purple.svg" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1244,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/brad-cannell\.github\.io\/aphs20203\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
