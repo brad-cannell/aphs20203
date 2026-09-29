@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"/Users/bradcannell/Desktop/Git/Academia/Teaching/aphs20203\" && grep -rl \"def presentation_audit_images\" --include=*.py . ~/Desktop/Git 2>/dev/null | head)",
+      "Read(//Users/bradcannell/Desktop/Git/**)"
+    ]
+  }
+}
