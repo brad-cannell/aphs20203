@@ -33,8 +33,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-b044a490f555c0c45f07d290b73d27a7.css">
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-d520b1b61f93d010244c9e714ed0a90e.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -242,7 +261,7 @@
 <p>Negative Association</p>
 </div></div>
 <!-- source-008-shape-4.png -->
-<p><img data-src="assets/source-008-shape-4.png" class="" style="max-width:100%;height:auto;" alt="" width="1111"> <!-- REVIEW: source-008-b003 | Inspect image and author contextual alt text or record decorative status. --></p>
+<p><img data-src="assets/source-008-shape-4.png" class="" style="max-width:100%;height:auto;" alt="Two graphs illustrate positive and negative associations. As cigarettes smoked per day increase, lung cancer risk increases. As hours of exercise per week increase, heart disease risk decreases." width="1111"></p>
 </section>
 <section id="causality" class="slide level2">
 <h2>Causality</h2>
@@ -693,7 +712,6 @@ Or are alternative explanations more plausible?</p></li>
 </section>
 <section id="quick-review-association-vs-causality" class="slide level2">
 <h2>Quick Review: Association vs Causality</h2>
-<!-- This slide would be better if the course were taught in a different order. We haven't even discussed p-values yet. -->
 <p>What distinguishes a <strong>causal relationship</strong> from an <strong>association</strong>?</p>
 <p><strong>A.</strong> A causal relationship means the two factors increase at the same time.</p>
 <p><strong>B.</strong> A causal relationship means changes in one factor lead to changes in another, with evidence that the exposure occurs before the outcome.</p>
@@ -713,44 +731,28 @@ Or are alternative explanations more plausible?</p></li>
           display:block!important;
       }</style></aside>
 </section>
-<section id="hills-criteria-of-causality-overview" class="slide level2">
-<h2>Hill’s Criteria of Causality: Overview</h2>
-<!-- I probably have some slides that I can use to supplement this material. -->
-<!-- Break these up into multiple slides. Also provide counterexamples. -->
+<section id="hills-viewpoints-for-causality" class="slide level2">
+<h2>Hill’s Viewpoints for Causality</h2>
 <ul>
 <li><p><strong>Context:</strong> Proposed by Sir Austin Bradford Hill (1965) to guide causal reasoning in epidemiology</p></li>
-<li><p><strong>Purpose:</strong> A set of principles to help evaluate whether an observed <strong>association</strong> is likely to be <strong>causal</strong></p></li>
+<li><p><strong>Purpose:</strong> A set of nine principles to consider when evaluating whether an observed <strong>association</strong> is likely to be <strong>causal</strong></p></li>
 <li><p><strong>Important clarifications</strong></p>
 <ul>
 <li><p>Not a checklist</p></li>
 <li><p>Not all criteria must be met</p></li>
 <li><p><strong>Temporality</strong> (exposure precedes outcome) is essential</p></li>
 </ul></li>
-<li><p><strong>Key idea:</strong> Hill’s Criteria <strong>organize evidence</strong>; they do not prove causation.</p></li>
+<li><p><strong>Key idea:</strong> Hill’s guidelines <strong>organize evidence</strong>; they do not prove causation.</p></li>
 </ul>
-</section>
-<section id="temporality-strength-of-association" class="slide level2">
-<h2>Temporality &amp; Strength of Association</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Temporality</strong></p>
-<ul>
-<li>The exposure must occur before the outcome.</li>
-<li><em>Example:</em> Smoking precedes lung cancer development.</li>
-<li><em>Counterexample:</em> A rooster crows before sunrise. Does it cause sunrise?</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Strength of association</strong></p>
-<ul>
-<li>A large association can support a causal interpretation, but alternative explanations still matter.</li>
-<li><em>Counterexample:</em> Children’s shoe sizes and reading aptitude are associated. What could explain both?</li>
-</ul>
-</div></div>
-<p><strong>Key idea:</strong> Temporality is necessary, but neither timing nor strength alone establishes causality.</p>
 <aside class="notes">
-<p>Counterexamples adapted from Brad Cannell, Epidemiology III, Introduction to Causal Inference, slide 10.</p>
-<p>The rooster example shows why occurring first is not sufficient. Age helps explain the shoe-size and reading association: older children tend to have larger feet and greater reading aptitude. Increasing shoe size would not itself improve reading.</p>
-<p>Retain smoking and lung cancer as an example of an association supported by multiple lines of evidence. A large association is not automatically free of confounding or bias.</p>
+<ul>
+<li><p>Well, a perfectly natural human thing to do is to make a checklist and start to classify things based on that checklist.</p></li>
+<li><p>One famous example of such a checklist, which was never intended by the author to be a checklist, is Hill’s guidelines. Hill’s description was “nine different viewpoints from all of which we should study association before we cry causation.”</p></li>
+<li><p>Your assigned readings covered Hill’s guidelines and why these guidelines are absolutely not sufficient for distinguishing causal from non-causal associations.</p></li>
+<li><p>However, they still have historical significance in the sense that these criteria, along with a lot of observational data, resulted in consensus that smoking was an important cause of lung cancer. Not merely associated with lung cancer.</p></li>
+<li><p>I think it can also be instructive to review the ways in which each of these guidelines, as intuitive as they may seem, cannot be relied upon for drawing causal conclusions.</p></li>
+<li><p>Having said that, you do feel better about your results when they conform to some, or all, of these guidelines.</p></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -763,27 +765,19 @@ Or are alternative explanations more plausible?</p></li>
           display:block!important;
       }</style></aside>
 </section>
-<section id="consistency-and-coherence" class="slide level2">
-<h2>Consistency and Coherence</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Consistency</strong></p>
+<section id="strength-of-association-effect-size" class="slide level2">
+<h2>1. Strength of Association (Effect Size)</h2>
+<p>A small association does not mean that there is not a causal effect, though the larger the association, the more likely that it is causal.</p>
 <ul>
-<li>Similar findings across studies, populations, and settings.</li>
-<li><em>Example:</em> High salt intake is linked to high blood pressure in many countries.</li>
-<li><strong>Limitation:</strong> Studies that share the same bias can produce consistently misleading findings.</li>
+<li class="fragment"><p><strong>Example:</strong> People who smoke cigarettes are about 25 times as likely to develop lung cancer as people who do not smoke <span class="citation" data-cites="usdhhs2014">(<a href="#/references" role="doc-biblioref" onclick="">U.S. Department of Health and Human Services 2014</a>)</span>.</p></li>
+<li class="fragment"><p><strong>Limitations:</strong> Strong associations can still arise from confounding or bias. Effect size alone does not establish causation.</p></li>
+<li class="fragment"><p><strong>Counterexample:</strong> Children’s shoe sizes and reading aptitude are associated. What could explain both?</p></li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Coherence</strong></p>
-<ul>
-<li>Findings fit with existing biological and epidemiologic knowledge.</li>
-<li><em>Example:</em> Smoking-related lung cancer aligns with known carcinogenic effects of tobacco.</li>
-</ul>
-</div></div>
-<p><strong>Comparison:</strong> Consistency compares studies. Coherence compares findings with existing knowledge.</p>
 <aside class="notes">
-<p>The consistency counterexample comes from Brad Cannell, Epidemiology III, Introduction to Causal Inference, slide 10: many biased studies are still biased studies.</p>
-<p>Ask whether repeating the same recruitment or measurement problem would make us more confident merely because the results agree.</p>
+<ul>
+<li><p>Would a risk ratio of 25 make you more confident in a causal explanation than a risk ratio of 1.2? Why?</p></li>
+<li><p>Increasing shoe size would not itself improve reading.</p></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -796,121 +790,234 @@ Or are alternative explanations more plausible?</p></li>
           display:block!important;
       }</style></aside>
 </section>
-<section id="dose-response-relationship-biological-plausibility" class="slide level2">
-<h2>Dose-Response Relationship &amp; Biological Plausibility</h2>
+<section id="consistency-reproducibility" class="slide level2">
+<h2>2. Consistency (Reproducibility)</h2>
+<p>Consistent findings across studies, populations, and settings strengthen the likelihood of a causal effect.</p>
 <ul>
-<li><p><strong>Dose-Response Relationship (Biological Gradient)</strong></p>
+<li class="fragment"><p><strong>Example:</strong> Higher sodium intake is associated with higher blood pressure across populations in many countries <span class="citation" data-cites="elliott1996">(<a href="#/references" role="doc-biblioref" onclick="">Elliott et al. 1996</a>)</span>.</p></li>
+<li class="fragment"><p><strong>Limitation:</strong> Studies that share the same bias can produce consistently misleading findings.</p></li>
+<li class="fragment"><p><strong>Counterexample:</strong> Suppose studies in many cities consistently find that ice cream sales and murders rise together. Does repeating this finding mean that ice cream causes murder?</p></li>
+</ul>
+<aside class="notes">
 <ul>
-<li><p>Higher levels of exposure are associated with higher risk of the outcome</p></li>
-<li><p>A clear pattern strengthens confidence in a causal interpretation</p></li>
-<li><p><em>Example:</em> Smoking more cigarettes per day is associated with higher lung cancer risk</p></li>
+<li><p>If we repeated the ice cream and murder study many times, what do you think we would find?</p></li>
+<li><p>Seasonal factors could affect both ice cream sales and violence. If every study fails to account for those factors, the same misleading association could appear repeatedly. Replication does not automatically eliminate confounding.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="specificity" class="slide level2">
+<h2>3. Specificity</h2>
+<p>An association concentrated in a particular exposure–disease relationship can support a causal interpretation, but specificity is not required.</p>
+<ul>
+<li class="fragment"><p><strong>Example:</strong> A disease-causing expansion of CAG (cytosine–adenine–guanine) repeats in the <em>HTT</em> gene causes Huntington’s disease—a specific genetic alteration linked to a particular disease <span class="citation" data-cites="nlm2020huntington">(<a href="#/references" role="doc-biblioref" onclick="">National Library of Medicine 2020</a>)</span>.</p></li>
+<li class="fragment"><p><strong>Limitations:</strong> One exposure can cause several diseases, and one disease can have several causes. A lack of specificity does not rule out causation.</p></li>
+<li class="fragment"><p><strong>Counterexample:</strong> Does the fact that smoking causes lung cancer make it any less likely that it also causes heart disease?</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><p>Specificity concerns which disease is linked to a cause, not whether everyone with the cause develops disease. People with 36–39 CAG repeats may or may not develop Huntington’s disease; people with 40 or more repeats almost always develop it <span class="citation" data-cites="nlm2020huntington">(<a href="#/references" role="doc-biblioref" onclick="">National Library of Medicine 2020</a>)</span>.</p></li>
+<li><p>This criterion is less emphasized today because many exposures have multiple effects.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="temporality" class="slide level2">
+<h2>4. Temporality</h2>
+<p>The effect has to occur after the cause (and if there is an expected delay between the cause and expected effect, then the effect must occur after that delay).</p>
+<ul>
+<li class="fragment"><p><strong>Example:</strong> Smoking precedes lung cancer development.</p></li>
+<li class="fragment"><p><strong>Limitations:</strong> The order of exposure and outcome may be difficult to establish. Even when an exposure clearly precedes an outcome, that sequence alone does not mean it caused the outcome.</p></li>
+<li class="fragment"><p><strong>Counterexample:</strong> A rooster crows before sunrise. Does it cause sunrise?</p></li>
+<li class="fragment"><p><strong>Key idea:</strong> Temporality is necessary, but timing alone does not establish causality.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><p>The rooster example shows why occurring first is not sufficient.</p></li>
+<li><p><strong>Question</strong>: Generally speaking, can we establish temporality in case reports and cross-sectional studies?</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="biological-gradient-dose-response" class="slide level2">
+<h2>5. Biological Gradient (Dose-Response)</h2>
+<p>Increasing exposure is associated with increasing risk of the outcome, which can support a causal interpretation.</p>
+<ul>
+<li class="fragment"><p><strong>Example:</strong> Smoking more cigarettes per day is associated with higher lung cancer risk.</p></li>
+<li class="fragment"><p><strong>Limitations:</strong> Threshold effects and nonlinear relationships.</p></li>
+<li class="fragment"><p><strong>Counterexample:</strong> Suppose days with higher ice cream sales also have more drownings. Does buying more ice cream increase the risk of drowning?</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><p>Hot weather could increase both ice cream sales and swimming. The resulting gradient could reflect confounding by temperature rather than a causal effect of ice cream.</p></li>
+<li><p>A graded association can occur without causation. Threshold effects and nonlinear relationships illustrate the other direction: a causal relationship may exist without a simple increasing gradient.</p></li>
+<li><p><strong>Threshold effect</strong>: Vitamin C deficiency and scurvy: Scurvy can develop after many weeks of extremely low vitamin C intake. The threshold varies with body stores and duration of deficiency.</p>
+<ul>
+<li>Disease may appear only after exposure—here, deprivation—passes a critical level.</li>
 </ul></li>
-<li><p><strong>Biological Plausibility</strong></p>
+<li><p><strong>Diminishing returns</strong>: Physical activity and mortality: Moving from inactivity to some activity is associated with substantial reductions in mortality risk; additional activity provides progressively smaller reductions.</p>
 <ul>
-<li><p>A reasonable biological mechanism links exposure to outcome</p></li>
-<li><p>The explanation should align with existing biological knowledge</p></li>
-<li><p><em>Example:</em> Carcinogens in tobacco smoke damage lung cells and increase cancer risk</p></li>
+<li>Equal increases in exposure do not necessarily produce equal changes in risk.</li>
+</ul></li>
+<li><p><strong>U-shaped relationship</strong>: iodine and thyroid dysfunction: Both too little and too much iodine can cause thyroid problems, including hypothyroidism.</p>
+<ul>
+<li>Risk can be higher at both low and high exposure levels.</li>
 </ul></li>
 </ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="experiment-and-specificity" class="slide level2">
-<h2>Experiment and Specificity</h2>
+<section id="biological-plausibility" class="slide level2">
+<h2>6. Biological Plausibility</h2>
+<p>A plausible mechanism between cause and effect increases the likelihood of a causal effect.</p>
 <ul>
-<li><p><strong>Experiment</strong></p>
-<ul>
-<li><p>Evidence comes from interventions or natural experiments</p></li>
-<li><p>Changes in exposure are followed by changes in outcomes</p></li>
-<li><p><em>Example:</em> Smoking bans are followed by fewer asthma-related hospitalizations</p></li>
-</ul></li>
-<li><p><strong>Specificity</strong></p>
-<ul>
-<li><p>A specific exposure is linked to a specific outcome</p></li>
-<li><p>This criterion is less emphasized today because many exposures have multiple effects</p></li>
-<li><p><em>Example:</em> Mycobacterium tuberculosis bacteria cause tuberculosis</p></li>
-</ul></li>
+<li class="fragment"><p><strong>Example:</strong> Chemicals in tobacco smoke can damage DNA in lung cells. That damage can disrupt the control of cell growth and lead to cancer <span class="citation" data-cites="cdc2024cancer">(<a href="#/references" role="doc-biblioref" onclick="">Centers for Disease Control and Prevention 2024</a>)</span>.</p></li>
+<li class="fragment"><p><strong>Limitation:</strong> What seems biologically plausible depends on current knowledge. A convincing explanation can be wrong, and a real causal effect may exist before its mechanism is understood.</p></li>
+<li class="fragment"><p><strong>Counterexample:</strong> Miasma theory of disease causation.</p></li>
 </ul>
+<aside class="notes">
+<p>The mechanism can be summarized as: tobacco smoke → DNA damage → uncontrolled cell growth → cancer.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="analogy-weakest-criterion" class="slide level2">
-<h2>Analogy (Weakest Criterion)</h2>
+<section id="coherence" class="slide level2">
+<h2>7. Coherence</h2>
+<p>Coherence between epidemiological and laboratory findings increases the likelihood of a causal effect.</p>
 <ul>
-<li><p><strong>Analogy</strong></p>
+<li class="fragment"><p><strong>Example:</strong> Smoking-related lung cancer aligns with known carcinogenic effects of tobacco.</p></li>
+<li class="fragment"><p><strong>Limitations:</strong> Agreement with existing knowledge does not rule out alternative explanations. Apparent disagreement may reflect gaps or errors in current knowledge rather than the absence of a causal effect.</p></li>
+<li class="fragment"><p><strong>Counterexample:</strong></p>
 <ul>
-<li><p>Similar exposures are known to cause similar outcomes</p></li>
-<li><p>Raises a hypothesis by comparison, not by direct evidence</p></li>
-<li><p><em>Example:</em> Other viruses are known to cause birth defects, raising concern about Zika virus</p></li>
+<li class="fragment"><p>Epidemiology: Observational studies found lower coronary heart disease risk among hormone users <span class="citation" data-cites="grodstein1996">(<a href="#/references" role="doc-biblioref" onclick="">Grodstein et al. 1996</a>)</span>.</p></li>
+<li class="fragment"><p>Biology: Hormone therapy lowered LDL cholesterol, supporting a possible protective mechanism <span class="citation" data-cites="pepi1995">(<a href="#/references" role="doc-biblioref" onclick="">The Writing Group for the PEPI Trial 1995</a>)</span>.</p></li>
+<li class="fragment"><p>Later evidence: The Women’s Health Initiative randomized trial found that the estrogen-plus-progestin regimen tested did <strong>not</strong> prevent coronary heart disease and could increase its risk <span class="citation" data-cites="manson2003">(<a href="#/references" role="doc-biblioref" onclick="">Manson et al. 2003</a>)</span>.</p></li>
 </ul></li>
-<li><p><strong>Why this criterion is weak</strong></p>
-<ul>
-<li><p>Relies on <strong>similarity</strong>, not direct observation</p></li>
-<li><p>Does not test exposure, timing, or mechanism</p></li>
-<li><p>Easily misleading if used alone</p></li>
-</ul></li>
-<li><p><strong>Key point:</strong> Analogy can <strong>suggest</strong> a causal relationship, but it provides the <strong>weakest support</strong> and <strong>cannot establish causality</strong>.</p></li>
+<li class="fragment"><p><strong>Comparison:</strong> Consistency compares studies. Coherence compares findings with existing knowledge.</p></li>
 </ul>
-</section>
-<section id="best-practices-for-using-hills-criteria" class="slide level2">
-<h2>Best Practices for Using Hill’s Criteria</h2>
+<aside class="notes">
 <ul>
-<li><p><strong>Start with temporality:</strong> If exposure does not precede outcome, causality cannot be established</p></li>
+<li>Coherence asks whether the evidence fits together, but fitting together does not guarantee that our explanation is correct. Conversely, we should not dismiss a finding simply because laboratory evidence is missing. Hill explicitly cautioned that a lack of laboratory support cannot invalidate epidemiological observations.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="experiment" class="slide level2">
+<h2>8. Experiment</h2>
+<p>Well-designed randomized experiments can strengthen causal inference by changing exposure and reducing confounding.</p>
+<ul>
+<li class="fragment"><p><strong>Example:</strong> In the DASH-Sodium trial, participants consumed diets with different sodium levels in random order. Lower sodium intake reduced blood pressure <span class="citation" data-cites="sacks2001">(<a href="#/references" role="doc-biblioref" onclick="">Sacks et al. 2001</a>)</span>.</p></li>
+<li class="fragment"><p><strong>Limitations:</strong> Experiments may be unethical or impractical. Missing outcomes, poor adherence, and measurement problems can undermine results. Findings may not generalize beyond the participants and conditions studied.</p></li>
+<li class="fragment"><p><strong>Counterexample:</strong> Suppose a randomized treatment trial loses follow-up data from participants whose health worsens. Could the treatment appear more effective than it really is?</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><p>Randomization helps make groups comparable at the start, but it does not prevent every problem afterward. If missing outcomes are related to treatment and health, analyzing only participants with complete data can produce a misleading result.</p></li>
+<li><p>Experimental evidence is also not required to establish causation: we do not need to assign people to start smoking to determine that smoking causes disease.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="analogy" class="slide level2">
+<h2>9. Analogy</h2>
+<p>A known causal relationship can suggest that a similar exposure might produce a similar outcome.</p>
+<ul>
+<li class="fragment"><p><strong>Example:</strong> Rubella infection during pregnancy can cause birth defects. By analogy, another viral infection during pregnancy—such as Zika—might also harm fetal development <span class="citation" data-cites="rasmussen2016">(<a href="#/references" role="doc-biblioref" onclick="">Rasmussen et al. 2016</a>)</span>.</p></li>
+<li class="fragment"><p><strong>Limitations:</strong> Similarities may be superficial. Similar exposures can act through different mechanisms and produce different outcomes. Analogy suggests a hypothesis; it does not establish causation.</p></li>
+<li class="fragment"><p><strong>Counterexample:</strong> Smoking and getting punched in the gut can both make someone cough. Does that mean both cause lung cancer?</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><p>The relevant similarity in the example is maternal infection with the potential to affect fetal development. Evidence specific to Zika was still needed.</p></li>
+<li><p>The counterexample illustrates a weak analogy: sharing one consequence—coughing—does not mean two exposures share other consequences.</p></li>
+</ul>
+<p><strong>Coherence:</strong> Does this explanation fit the broader evidence?</p>
+<p><strong>Analogy:</strong> Does this resemble another known cause-and-effect relationship?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="best-practices-for-thinking-about-hills-viewpoints" class="slide level2">
+<h2>Best Practices for Thinking About Hill’s Viewpoints</h2>
+<ul>
+<li><p><strong>Start with temporality:</strong> If exposure does not precede outcome, causality cannot be established.</p></li>
 <li><p><strong>Evaluate criteria collectively:</strong> No single criterion is sufficient. Temporality is necessary, but it is not sufficient.</p></li>
-<li><p><strong>Consider alternative explanations:</strong> Always assess confounding, bias, and chance</p></li>
-<li><p><strong>Interpret findings in context:</strong> Align evidence with biology and existing research</p></li>
-<li><p><strong>Avoid checklist thinking:</strong> Hill’s Criteria guide reasoning but do not prove causation</p></li>
+<li><p><strong>Consider alternative explanations:</strong> Always assess confounding, bias, and chance.</p></li>
+<li><p><strong>Avoid checklist thinking:</strong> Hill’s viewpoints guide reasoning but do not prove causation.</p></li>
 </ul>
 </section>
-<section id="example-sugar-and-type-2-diabetes" class="slide level2">
-<h2>Example: Sugar and Type 2 Diabetes</h2>
-<!-- Consider moving this to later in the presentation. After we've discussed evidence for causality. -->
-<ul>
-<li><p><strong>Observed finding:</strong> People who consume more sugar have higher rates of type 2 diabetes.</p></li>
-<li><p><strong>How should we interpret this?</strong></p>
-<ul>
-<li><p><strong>Spurious association?</strong> Could a third factor (e.g., overall diet, physical activity) explain both?</p></li>
-<li><p><strong>Causal relationship?</strong> Is this a real pattern that still needs stronger evidence? What additional evidence would be needed to support causality?</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="exercise-sugar-and-diabetes" class="slide level2">
-<h2>Exercise: Sugar and Diabetes</h2>
-<!-- At first glance, this is a good exercise, but what do we actually want them to do here? -->
-<p><strong>Task:</strong> Identify whether this association is causal. If so, specify the type.</p>
-<blockquote>
-<p><strong>Statement 1:</strong> High sugar intake directly increases the risk of type 2 diabetes by causing insulin resistance.</p>
-</blockquote>
-<p><strong>Causality (probabilistic):</strong> Proposes a cause-and-effect relationship in which high sugar intake increases diabetes risk through insulin resistance, but not with certainty.</p>
-<blockquote>
-<p><strong>Statement 2:</strong> Studies have found a correlation between sugar-sweetened beverage consumption and the incidence of diabetes.</p>
-</blockquote>
-<p><strong>Association - Positive:</strong> Describes a correlation between two variables (sugar-sweetened beverage consumption and diabetes incidence) without establishing a direct causal link.</p>
-<aside class="notes">
-<p><strong>Statement 1</strong> - It does say <em>directly</em>, but it also says <em>risk</em>.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="exercise-sugar-and-diabetes-continued" class="slide level2">
-<h2>Exercise: Sugar and Diabetes Continued</h2>
-<!-- At first glance, this is a good exercise, but what do we actually want them to do here? -->
-<p><strong>Task:</strong> Identify whether this association is causal. If so, specify the type.</p>
-<blockquote>
-<p><strong>Statement:</strong> Consuming sugar does not guarantee that an individual will develop diabetes, but it significantly increases the probability.</p>
-</blockquote>
-<p><strong>Causality - Probabilistic:</strong> While sugar consumption increases the risk of diabetes, it does not do so with certainty for every individual, given the role of other factors.</p>
-<blockquote>
-<p><strong>Statement:</strong> In regions where sugar consumption has decreased, the rates of diabetes have also shown a decline.</p>
-</blockquote>
-<p><strong>Association – Positive:</strong> This statement could be seen as suggesting a positive association (if interpreted as “less sugar, less diabetes”) but is more about observing a trend over time. The causality (if implied) would be probabilistic due to the lack of direct cause-and-effect evidence provided.</p>
-</section>
-<section id="the-search-for-causality-evali-outbreak" class="slide level2">
-<h2>The Search for Causality: EVALI Outbreak</h2>
+<section id="the-search-for-causality-evali-outbreak-example" class="slide level2">
+<h2>The Search for Causality: EVALI Outbreak Example</h2>
 <!-- This example is fine I guess. Maybe we should move to the end after we discuss causal criteria. -->
 <p><strong>EVALI:</strong> E-cigarette or Vaping–Associated Lung Injury</p>
 <p><strong>Question:</strong> How did epidemiologists move from <strong>observation</strong> to <strong>causal judgment</strong>?</p>
@@ -937,13 +1044,16 @@ Or are alternative explanations more plausible?</p></li>
 </section>
 <section id="example-zika-virus-microcephaly" class="slide level2">
 <h2>Example: Zika Virus &amp; Microcephaly</h2>
-<!-- Decide if you want to use this exercise or not. If you do, you will need to assign group numbers (1-8). -->
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
 <li><p><strong>Zika virus</strong> is a member of the virus family Flaviviridae. It is spread by daytime-active Aedes mosquitoes.</p></li>
 <li><p><strong>Microcephaly</strong> is a medical condition involving a smaller-than-normal head.</p></li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="assets/source-033-shape-4.png" class="" style="max-width:100%;height:auto;" alt="Illustration of mosquito-borne Zika infection during pregnancy and a comparison of typical infant head and brain size with microcephaly." width="700"></p>
+</div></div>
 
-<img data-src="assets/source-033-shape-4.png" alt="" class="r-stretch"><p>Atichat Kuadkitkan, Nitwara Wikan, Wannapa Sornjai, Duncan R. Smith, Zika virus and microcephaly in Southeast Asia: A cause for concern?, Journal of Infection and Public Health, Volume 13, Issue 1, 2020, Pages 11–15.</p>
 <aside class="notes">
 <p>The Zika virus is a disease that you can get from mosquito bites in certain parts of the world. If a pregnant woman gets bitten by a mosquito carrying Zika, there’s a chance it can harm her unborn baby. One serious problem it can cause is microcephaly, where the baby’s head and brain don’t develop properly and are smaller than they should be. This can lead to serious health and development issues for the baby as it grows.</p>
 <style type="text/css">
@@ -957,10 +1067,13 @@ Or are alternative explanations more plausible?</p></li>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="group-activity-zika-virus-and-causal-reasoning" class="slide level2">
+<aside><div>
+<p><span class="citation" data-cites="kuadkitkan2020">(<a href="#/references" role="doc-biblioref" onclick="">Kuadkitkan et al. 2020</a>)</span></p>
+</div></aside></section>
+<section id="group-activity-zika-virus-and-causal-reasoning" class="slide level2 compact">
 <h2>Group Activity: Zika Virus and Causal Reasoning</h2>
-<!-- Decide if you want to use this exercise or not. If you do, you will need to assign group numbers (1-8). -->
+<div class="columns">
+<div class="column" style="width:70%;">
 <ul>
 <li><p>You will watch a short video about the Zika virus and microcephaly.</p></li>
 <li><p>Each group has been assigned a <strong>different lens</strong> for evaluating causality at this Google link: <a href="https://tinyurl.com/W5GroupActivity">https://tinyurl.com/W5GroupActivity</a> or via the QR code</p></li>
@@ -977,16 +1090,31 @@ Or are alternative explanations more plausible?</p></li>
 <li><p><strong>As a whole class, we will then discuss:</strong></p>
 <ul>
 <li><p>Whether there is evidence of a dose–response relationship, and</p></li>
-<li><p>Why some causal criteria may be harder to demonstrate than others<br>
-</p></li>
+<li><p>Why some causal criteria may be harder to demonstrate than others</p></li>
 </ul></li>
 </ul>
-
-<img data-src="assets/source-034-shape-6.png" alt="" class="r-stretch"></section>
+</div><div class="column" style="width:30%;">
+<p><img data-src="assets/source-034-shape-6.png" class="qr" alt="QR code for the Zika virus group activity at https://tinyurl.com/W5GroupActivity." width="320"></p>
+</div></div>
+<aside class="notes">
+<p><strong>Instructions</strong><br>
+- Assign groups 1-8.<br>
+- Ask them to scan the QR code and read the slide for their group before we watch the video.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="video-zika-virus-microcephaly" class="slide level2">
 <h2>Video: Zika Virus &amp; Microcephaly</h2>
-<!-- Embed the video. -->
-<p>https://youtu.be/t-N9mryaVpY?si=RGQuPVqqhxsc4rxm</p>
+<iframe data-external="1" src="https://www.youtube.com/embed/t-N9mryaVpY" width="960" height="540" title="Zika Virus &amp; Microcephaly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 <aside class="notes">
 <p>“As you watch, listen for which pieces of evidence strengthened the causal argument and which questions remained.”</p>
 <style type="text/css">
@@ -1001,7 +1129,7 @@ Or are alternative explanations more plausible?</p></li>
           display:block!important;
       }</style></aside>
 </section>
-<section id="causality-criteria-zika-virus-microcephaly" class="slide level2">
+<section id="causality-criteria-zika-virus-microcephaly" class="slide level2 compact">
 <h2>Causality Criteria: Zika Virus &amp; Microcephaly</h2>
 <ul>
 <li><p><strong>Temporality:</strong> Pregnant mothers got Zika before having babies with microcephaly.</p></li>
@@ -1017,17 +1145,51 @@ Or are alternative explanations more plausible?</p></li>
 </section>
 <section id="putting-it-all-together" class="slide level2">
 <h2>Putting It All Together</h2>
-<!-- I'm not sure associations are the starting point. We often start by searching for causes. I think it's more accurate to say that all causal relationships produce associations. -->
 <ul>
 <li><p>Causal inference in epidemiology requires careful judgment.</p>
 <ul>
-<li><p>Associations are the starting point</p></li>
-<li><p>Causality is evaluated using multiple lines of evidence</p></li>
-<li><p>Most diseases have <strong>multiple contributing causes</strong></p></li>
-<li><p>Uncertainty and chance are always present</p></li>
+<li><p>Associations are typically reported first.</p></li>
+<li><p>Causality is evaluated using multiple lines of evidence.</p></li>
+<li><p>Most diseases have <strong>multiple contributing causes</strong>.</p></li>
+<li><p>Uncertainty and chance are always present.</p></li>
 </ul></li>
 <li><p><strong>Final takeaway:</strong> Epidemiology is about making the <strong>best possible causal judgments</strong> with imperfect evidence.</p></li>
 </ul>
+</section>
+<section id="references" class="slide level2 references-slide smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-cdc2024cancer" class="csl-entry" role="listitem">
+Centers for Disease Control and Prevention. 2024. <span>“Health Effects of Cigarettes: Cancer.”</span> September 17. <a href="https://www.cdc.gov/tobacco/about/cigarettes-and-cancer.html">https://www.cdc.gov/tobacco/about/cigarettes-and-cancer.html</a>.
+</div>
+<div id="ref-elliott1996" class="csl-entry" role="listitem">
+Elliott, Paul, Jeremiah Stamler, Rob Nichols, et al. 1996. <span>“<span>Intersalt</span> Revisited: Further Analyses of 24 Hour Sodium Excretion and Blood Pressure Within and Across Populations.”</span> <em>BMJ</em> 312 (7041): 1249–53. <a href="https://doi.org/10.1136/bmj.312.7041.1249">https://doi.org/10.1136/bmj.312.7041.1249</a>.
+</div>
+<div id="ref-grodstein1996" class="csl-entry" role="listitem">
+Grodstein, Francine, Meir J. Stampfer, JoAnn E. Manson, et al. 1996. <span>“Postmenopausal Estrogen and Progestin Use and the Risk of Cardiovascular Disease.”</span> <em>New England Journal of Medicine</em> 335 (7): 453–61. <a href="https://doi.org/10.1056/NEJM199608153350701">https://doi.org/10.1056/NEJM199608153350701</a>.
+</div>
+<div id="ref-kuadkitkan2020" class="csl-entry" role="listitem">
+Kuadkitkan, Atichat, Nitwara Wikan, Wannapa Sornjai, and Duncan R. Smith. 2020. <span>“<span>Zika</span> Virus and Microcephaly in <span>Southeast Asia</span>: A Cause for Concern?”</span> <em>Journal of Infection and Public Health</em> 13 (1): 11–15. <a href="https://doi.org/10.1016/j.jiph.2019.09.012">https://doi.org/10.1016/j.jiph.2019.09.012</a>.
+</div>
+<div id="ref-manson2003" class="csl-entry" role="listitem">
+Manson, JoAnn E., Judith Hsia, Karen C. Johnson, et al. 2003. <span>“Estrogen Plus Progestin and the Risk of Coronary Heart Disease.”</span> <em>New England Journal of Medicine</em> 349 (6): 523–34. <a href="https://doi.org/10.1056/NEJMoa030808">https://doi.org/10.1056/NEJMoa030808</a>.
+</div>
+<div id="ref-nlm2020huntington" class="csl-entry" role="listitem">
+National Library of Medicine. 2020. <span>“Huntington’s Disease.”</span> MedlinePlus Genetics, July 1. <a href="https://medlineplus.gov/genetics/condition/huntingtons-disease/">https://medlineplus.gov/genetics/condition/huntingtons-disease/</a>.
+</div>
+<div id="ref-rasmussen2016" class="csl-entry" role="listitem">
+Rasmussen, Sonja A., Denise J. Jamieson, Margaret A. Honein, and Lyle R. Petersen. 2016. <span>“<span>Zika</span> Virus and Birth Defects—Reviewing the Evidence for Causality.”</span> <em>New England Journal of Medicine</em> 374: 1981–87. <a href="https://doi.org/10.1056/NEJMsr1604338">https://doi.org/10.1056/NEJMsr1604338</a>.
+</div>
+<div id="ref-sacks2001" class="csl-entry" role="listitem">
+Sacks, F. M., L. P. Svetkey, W. M. Vollmer, et al. 2001. <span>“Effects on Blood Pressure of Reduced Dietary Sodium and the <span class="nocase">Dietary Approaches to Stop Hypertension (DASH)</span> Diet.”</span> <em>New England Journal of Medicine</em> 344 (1): 3–10. <a href="https://doi.org/10.1056/NEJM200101043440101">https://doi.org/10.1056/NEJM200101043440101</a>.
+</div>
+<div id="ref-pepi1995" class="csl-entry" role="listitem">
+The Writing Group for the PEPI Trial. 1995. <span>“Effects of Estrogen or Estrogen/Progestin Regimens on Heart Disease Risk Factors in Postmenopausal Women: The <span>Postmenopausal Estrogen/Progestin Interventions (PEPI)</span> Trial.”</span> <em>JAMA</em> 273 (3): 199–208. <a href="https://pubmed.ncbi.nlm.nih.gov/7807658/">https://pubmed.ncbi.nlm.nih.gov/7807658/</a>.
+</div>
+<div id="ref-usdhhs2014" class="csl-entry" role="listitem">
+U.S. Department of Health and Human Services. 2014. <em>The Health Consequences of Smoking—50 Years of Progress: A Report of the Surgeon General</em>. <span>U.S. Dept of Health and Human Services</span>. <a href="https://www.ncbi.nlm.nih.gov/books/NBK179276/">https://www.ncbi.nlm.nih.gov/books/NBK179276/</a>.
+</div>
+</div>
 
 
 </section></section>
