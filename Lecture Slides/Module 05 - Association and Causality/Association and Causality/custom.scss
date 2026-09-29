@@ -1,5 +1,9 @@
 /*-- scss:rules --*/
 
+.reveal .references-slide {
+  font-size: 0.58em;
+}
+
 // Shared interactive question styles. The generated partials emit
 // .quiz-prompt, .quiz-options, .participation, and .qr; the main deck may add
 // .quiz to a slide heading for quiz-specific title styling.

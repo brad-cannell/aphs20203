@@ -1,6 +1,7 @@
 ---
 title: Association and Causality
 subtitle: APHS 20203 • Epidemiology & Biostatistics
+bibliography: references.bib
 format:
   revealjs:
     theme:
@@ -153,8 +154,7 @@ Negative Association
 :::::
 
 <!-- source-008-shape-4.png -->
-![](assets/source-008-shape-4.png){fig-alt="" .nostretch width="1111" style="max-width:100%;height:auto;"}
-<!-- REVIEW: source-008-b003 | Inspect image and author contextual alt text or record decorative status. -->
+![](assets/source-008-shape-4.png){fig-alt="Two graphs illustrate positive and negative associations. As cigarettes smoked per day increase, lung cancer risk increases. As hours of exercise per week increase, heart disease risk decreases." .nostretch width="1111" style="max-width:100%;height:auto;"}
 
 
 ## Causality
@@ -495,8 +495,6 @@ Give them time to work on project prep 2.
 
 ## Quick Review: Association vs Causality
 
-<!-- This slide would be better if the course were taught in a different order. We haven't even discussed p-values yet. -->
-
 What distinguishes a **causal relationship** from an **association**?
 
 **A.** A causal relationship means the two factors increase at the same time.
@@ -509,19 +507,14 @@ What distinguishes a **causal relationship** from an **association**?
 
 ::: {.notes}
 Causality implies that there is a direct cause-and-effect link between two variables, and it is established through various criteria such as temporality (cause precedes effect), strength (strong association), consistency (repeated observations across studies), plausibility (biological rationale), and others. An association may suggest that two variables are related in some way, but it does not confirm that one causes the other.
- 
 :::
 
 
-## Hill’s Criteria of Causality: Overview
-
-<!-- I probably have some slides that I can use to supplement this material. -->
-
-<!-- Break these up into multiple slides. Also provide counterexamples. -->
+## Hill’s Viewpoints for Causality
 
 - **Context:** Proposed by Sir Austin Bradford Hill (1965) to guide causal reasoning in epidemiology
 
-- **Purpose:** A set of principles to help evaluate whether an observed **association** is likely to be **causal**
+- **Purpose:** A set of nine principles to consider when evaluating whether an observed **association** is likely to be **causal**
 
 - **Important clarifications**
 
@@ -531,186 +524,229 @@ Causality implies that there is a direct cause-and-effect link between two varia
 
     - **Temporality** (exposure precedes outcome) is essential
 
-- **Key idea:** Hill’s Criteria **organize evidence**; they do not prove causation.
-
-
-## Temporality & Strength of Association
-
-:::: {.columns}
-::: {.column width="50%"}
-**Temporality**
-
-- The exposure must occur before the outcome.
-- *Example:* Smoking precedes lung cancer development.
-- *Counterexample:* A rooster crows before sunrise. Does it cause sunrise?
-:::
-::: {.column width="50%"}
-**Strength of association**
-
-- A large association can support a causal interpretation, but alternative explanations still matter.
-- *Counterexample:* Children's shoe sizes and reading aptitude are associated. What could explain both?
-:::
-::::
-
-**Key idea:** Temporality is necessary, but neither timing nor strength alone establishes causality.
+- **Key idea:** Hill’s guidelines **organize evidence**; they do not prove causation.
 
 ::: {.notes}
-Counterexamples adapted from Brad Cannell, Epidemiology III, Introduction to Causal Inference, slide 10.
+- Well, a perfectly natural human thing to do is to make a checklist and start to classify things based on that checklist. 
 
-The rooster example shows why occurring first is not sufficient. Age helps explain the shoe-size and reading association: older children tend to have larger feet and greater reading aptitude. Increasing shoe size would not itself improve reading.
+- One famous example of such a checklist, which was never intended by the author to be a checklist, is Hill’s guidelines. Hill's description was "nine different viewpoints from all of which we should study association before we cry causation."
 
-Retain smoking and lung cancer as an example of an association supported by multiple lines of evidence. A large association is not automatically free of confounding or bias.
+- Your assigned readings covered Hill’s guidelines and why these guidelines are absolutely not sufficient for distinguishing causal from non-causal associations. 
+
+- However, they still have historical significance in the sense that these criteria, along with a lot of observational data, resulted in consensus that smoking was an important cause of lung cancer. Not merely associated with lung cancer.
+
+- I think it can also be instructive to review the ways in which each of these guidelines, as intuitive as they may seem, cannot be relied upon for drawing causal conclusions. 
+
+- Having said that, you do feel better about your results when they conform to some, or all, of these guidelines.
 :::
 
 
-## Consistency and Coherence
+## 1. Strength of Association (Effect Size)
 
-:::: {.columns}
-::: {.column width="50%"}
-**Consistency**
+A small association does not mean that there is not a causal effect, though the larger the association, the more likely that it is causal.
 
-- Similar findings across studies, populations, and settings.
-- *Example:* High salt intake is linked to high blood pressure in many countries.
+::: {.incremental}
+- **Example:** People who smoke cigarettes are about 25 times as likely to develop lung cancer as people who do not smoke [@usdhhs2014].
+
+- **Limitations:** Strong associations can still arise from confounding or bias. Effect size alone does not establish causation.
+
+- **Counterexample:** Children's shoe sizes and reading aptitude are associated. What could explain both?
+:::
+
+::: {.notes}
+- Would a risk ratio of 25 make you more confident in a causal explanation than a risk ratio of 1.2? Why?
+
+- Increasing shoe size would not itself improve reading.
+:::
+
+
+
+## 2. Consistency (Reproducibility)
+
+Consistent findings across studies, populations, and settings strengthen the likelihood of a causal effect.
+
+::: {.incremental}
+- **Example:** Higher sodium intake is associated with higher blood pressure across populations in many countries [@elliott1996].
+
 - **Limitation:** Studies that share the same bias can produce consistently misleading findings.
-:::
-::: {.column width="50%"}
-**Coherence**
 
-- Findings fit with existing biological and epidemiologic knowledge.
-- *Example:* Smoking-related lung cancer aligns with known carcinogenic effects of tobacco.
+- **Counterexample:** Suppose studies in many cities consistently find that ice cream sales and murders rise together. Does repeating this finding mean that ice cream causes murder?
 :::
-::::
-
-**Comparison:** Consistency compares studies. Coherence compares findings with existing knowledge.
 
 ::: {.notes}
-The consistency counterexample comes from Brad Cannell, Epidemiology III, Introduction to Causal Inference, slide 10: many biased studies are still biased studies.
+- If we repeated the ice cream and murder study many times, what do you think we would find?
 
-Ask whether repeating the same recruitment or measurement problem would make us more confident merely because the results agree.
+- Seasonal factors could affect both ice cream sales and violence. If every study fails to account for those factors, the same misleading association could appear repeatedly. Replication does not automatically eliminate confounding.
 :::
 
 
-## Dose-Response Relationship & Biological Plausibility
+## 3. Specificity
 
-- **Dose-Response Relationship (Biological Gradient)** 
+An association concentrated in a particular exposure–disease relationship can support a causal interpretation, but specificity is not required.
 
-    - Higher levels of exposure are associated with higher risk of the outcome
+::: {.incremental}
+- **Example:** A disease-causing expansion of CAG (cytosine–adenine–guanine) repeats in the *HTT* gene causes Huntington's disease—a specific genetic alteration linked to a particular disease [@nlm2020huntington].
 
-    - A clear pattern strengthens confidence in a causal interpretation
+- **Limitations:** One exposure can cause several diseases, and one disease can have several causes. A lack of specificity does not rule out causation.
 
-    - *Example:* Smoking more cigarettes per day is associated with higher lung cancer risk
+- **Counterexample:** Does the fact that smoking causes lung cancer make it any less likely that it also causes heart disease?
+:::
 
-- **Biological Plausibility**
+::: {.notes}
+- Specificity concerns which disease is linked to a cause, not whether everyone with the cause develops disease. People with 36–39 CAG repeats may or may not develop Huntington's disease; people with 40 or more repeats almost always develop it [@nlm2020huntington].
 
-    - A reasonable biological mechanism links exposure to outcome
-
-    - The explanation should align with existing biological knowledge
-
-    - *Example:* Carcinogens in tobacco smoke damage lung cells and increase cancer risk
-
-
-## Experiment and Specificity
-
-- **Experiment**
-
-    - Evidence comes from interventions or natural experiments
-
-    - Changes in exposure are followed by changes in outcomes
-
-    - *Example:* Smoking bans are followed by fewer asthma-related hospitalizations
-
-- **Specificity**
-
-    - A specific exposure is linked to a specific outcome
-
-    - This criterion is less emphasized today because many exposures have multiple effects
-
-    - *Example:* Mycobacterium tuberculosis bacteria cause tuberculosis
+- This criterion is less emphasized today because many exposures have multiple effects.
+:::
 
 
-## Analogy (Weakest Criterion)
+## 4. Temporality
 
-- **Analogy**
+The effect has to occur after the cause (and if there is an expected delay between the cause and expected effect, then the effect must occur after that delay).
 
-    - Similar exposures are known to cause similar outcomes
+::: {.incremental}
+- **Example:** Smoking precedes lung cancer development.
 
-    - Raises a hypothesis by comparison, not by direct evidence
+- **Limitations:** The order of exposure and outcome may be difficult to establish. Even when an exposure clearly precedes an outcome, that sequence alone does not mean it caused the outcome.
 
-    - *Example:* Other viruses are known to cause birth defects, raising concern about Zika virus
+- **Counterexample:** A rooster crows before sunrise. Does it cause sunrise?
 
-- **Why this criterion is weak**
+- **Key idea:** Temporality is necessary, but timing alone does not establish causality.
+:::
 
-    - Relies on **similarity**, not direct observation
+::: {.notes}
+- The rooster example shows why occurring first is not sufficient.
 
-    - Does not test exposure, timing, or mechanism
-
-    - Easily misleading if used alone
-
-- **Key point:** Analogy can **suggest** a causal relationship, but it provides the **weakest support** and **cannot establish causality**.
+- **Question**: Generally speaking, can we establish temporality in case reports and cross-sectional studies?
+:::
 
 
-## Best Practices for Using Hill’s Criteria
+## 5. Biological Gradient (Dose-Response)
 
-- **Start with temporality:** If exposure does not precede outcome, causality cannot be established
+Increasing exposure is associated with increasing risk of the outcome, which can support a causal interpretation.
+
+::: {.incremental}
+- **Example:** Smoking more cigarettes per day is associated with higher lung cancer risk.
+
+- **Limitations:** Threshold effects and nonlinear relationships.
+
+- **Counterexample:** Suppose days with higher ice cream sales also have more drownings. Does buying more ice cream increase the risk of drowning?
+:::
+
+::: {.notes}
+- Hot weather could increase both ice cream sales and swimming. The resulting gradient could reflect confounding by temperature rather than a causal effect of ice cream.
+
+- A graded association can occur without causation. Threshold effects and nonlinear relationships illustrate the other direction: a causal relationship may exist without a simple increasing gradient.
+
+- **Threshold effect**: Vitamin C deficiency and scurvy: Scurvy can develop after many weeks of extremely low vitamin C intake. The threshold varies with body stores and duration of deficiency. 
+
+    - Disease may appear only after exposure—here, deprivation—passes a critical level.
+
+- **Diminishing returns**: Physical activity and mortality: Moving from inactivity to some activity is associated with substantial reductions in mortality risk; additional activity provides progressively smaller reductions. 
+
+    - Equal increases in exposure do not necessarily produce equal changes in risk.
+
+- **U-shaped relationship**: iodine and thyroid dysfunction: Both too little and too much iodine can cause thyroid problems, including hypothyroidism.
+
+    - Risk can be higher at both low and high exposure levels.
+:::
+
+
+## 6. Biological Plausibility
+
+A plausible mechanism between cause and effect increases the likelihood of a causal effect.
+
+::: {.incremental}
+- **Example:** Chemicals in tobacco smoke can damage DNA in lung cells. That damage can disrupt the control of cell growth and lead to cancer [@cdc2024cancer].
+
+- **Limitation:** What seems biologically plausible depends on current knowledge. A convincing explanation can be wrong, and a real causal effect may exist before its mechanism is understood.
+
+- **Counterexample:** Miasma theory of disease causation.
+:::
+
+::: {.notes}
+The mechanism can be summarized as: tobacco smoke → DNA damage → uncontrolled cell growth → cancer.
+:::
+
+
+## 7. Coherence
+
+Coherence between epidemiological and laboratory findings increases the likelihood of a causal effect.
+
+::: {.incremental}
+- **Example:** Smoking-related lung cancer aligns with known carcinogenic effects of tobacco.
+
+- **Limitations:** Agreement with existing knowledge does not rule out alternative explanations. Apparent disagreement may reflect gaps or errors in current knowledge rather than the absence of a causal effect.
+
+- **Counterexample:**
+
+    - Epidemiology: Observational studies found lower coronary heart disease risk among hormone users [@grodstein1996].
+
+    - Biology: Hormone therapy lowered LDL cholesterol, supporting a possible protective mechanism [@pepi1995].
+
+    - Later evidence: The Women’s Health Initiative randomized trial found that the estrogen-plus-progestin regimen tested did **not** prevent coronary heart disease and could increase its risk [@manson2003].
+
+- **Comparison:** Consistency compares studies. Coherence compares findings with existing knowledge.
+:::
+
+::: {.notes}
+- Coherence asks whether the evidence fits together, but fitting together does not guarantee that our explanation is correct. Conversely, we should not dismiss a finding simply because laboratory evidence is missing. Hill explicitly cautioned that a lack of laboratory support cannot invalidate epidemiological observations.
+:::
+
+
+## 8. Experiment
+
+Well-designed randomized experiments can strengthen causal inference by changing exposure and reducing confounding.
+
+::: {.incremental}
+- **Example:** In the DASH-Sodium trial, participants consumed diets with different sodium levels in random order. Lower sodium intake reduced blood pressure [@sacks2001].
+
+- **Limitations:** Experiments may be unethical or impractical. Missing outcomes, poor adherence, and measurement problems can undermine results. Findings may not generalize beyond the participants and conditions studied.
+
+- **Counterexample:** Suppose a randomized treatment trial loses follow-up data from participants whose health worsens. Could the treatment appear more effective than it really is?
+:::
+
+::: {.notes}
+- Randomization helps make groups comparable at the start, but it does not prevent every problem afterward. If missing outcomes are related to treatment and health, analyzing only participants with complete data can produce a misleading result.
+
+- Experimental evidence is also not required to establish causation: we do not need to assign people to start smoking to determine that smoking causes disease.
+:::
+
+
+## 9. Analogy
+
+A known causal relationship can suggest that a similar exposure might produce a similar outcome.
+
+::: {.incremental}
+- **Example:** Rubella infection during pregnancy can cause birth defects. By analogy, another viral infection during pregnancy—such as Zika—might also harm fetal development [@rasmussen2016].
+
+- **Limitations:** Similarities may be superficial. Similar exposures can act through different mechanisms and produce different outcomes. Analogy suggests a hypothesis; it does not establish causation.
+
+- **Counterexample:** Smoking and getting punched in the gut can both make someone cough. Does that mean both cause lung cancer?
+:::
+
+::: {.notes}
+- The relevant similarity in the example is maternal infection with the potential to affect fetal development. Evidence specific to Zika was still needed.
+
+- The counterexample illustrates a weak analogy: sharing one consequence—coughing—does not mean two exposures share other consequences.
+
+**Coherence:** Does this explanation fit the broader evidence?
+
+**Analogy:** Does this resemble another known cause-and-effect relationship?
+:::
+
+
+## Best Practices for Thinking About Hill’s Viewpoints
+
+- **Start with temporality:** If exposure does not precede outcome, causality cannot be established.
 
 - **Evaluate criteria collectively:** No single criterion is sufficient. Temporality is necessary, but it is not sufficient.
 
-- **Consider alternative explanations:** Always assess confounding, bias, and chance
+- **Consider alternative explanations:** Always assess confounding, bias, and chance.
 
-- **Interpret findings in context:** Align evidence with biology and existing research
-
-- **Avoid checklist thinking:** Hill’s Criteria guide reasoning but do not prove causation
+- **Avoid checklist thinking:** Hill’s viewpoints guide reasoning but do not prove causation.
 
 
-## Example: Sugar and Type 2 Diabetes
-
-<!-- Consider moving this to later in the presentation. After we've discussed evidence for causality. -->
-
-- **Observed finding:** People who consume more sugar have higher rates of type 2 diabetes.
-
-- **How should we interpret this?**
-
-    - **Spurious association?** Could a third factor (e.g., overall diet, physical activity) explain both?
-
-    - **Causal relationship?** Is this a real pattern that still needs stronger evidence? What additional evidence would be needed to support causality?
-
-
-## Exercise: Sugar and Diabetes
-
-<!-- At first glance, this is a good exercise, but what do we actually want them to do here? -->
-
-**Task:** Identify whether this association is causal. If so, specify the type.
-
-> **Statement 1:** High sugar intake directly increases the risk of type 2 diabetes by causing insulin resistance.
-
-**Causality (probabilistic):** Proposes a cause-and-effect relationship in which high sugar intake increases diabetes risk through insulin resistance, but not with certainty.
-
-> **Statement 2:** Studies have found a correlation between sugar-sweetened beverage consumption and the incidence of diabetes.
-
-**Association - Positive:** Describes a correlation between two variables (sugar-sweetened beverage consumption and diabetes incidence) without establishing a direct causal link.
-
-::: {.notes}
-**Statement 1**
-- It does say _directly_, but it also says _risk_.
-:::
-
-
-## Exercise: Sugar and Diabetes Continued
-
-<!-- At first glance, this is a good exercise, but what do we actually want them to do here? -->
-
-**Task:** Identify whether this association is causal. If so, specify the type.
-
-> **Statement:** Consuming sugar does not guarantee that an individual will develop diabetes, but it significantly increases the probability.
-
-**Causality - Probabilistic:** While sugar consumption increases the risk of diabetes, it does not do so with certainty for every individual, given the role of other factors.
-
-> **Statement:** In regions where sugar consumption has decreased, the rates of diabetes have also shown a decline.
-
-**Association – Positive:** This statement could be seen as suggesting a positive association (if interpreted as "less sugar, less diabetes") but is more about observing a trend over time. The causality (if implied) would be probabilistic due to the lack of direct cause-and-effect evidence provided.
-
-
-## The Search for Causality: EVALI Outbreak
+## The Search for Causality: EVALI Outbreak Example
 
 <!-- This example is fine I guess. Maybe we should move to the end after we discuss causal criteria. -->
 
@@ -735,24 +771,34 @@ Vitamin E acetate is a thick, sticky substance added to some vaping products and
 
 ## Example: Zika Virus & Microcephaly
 
-<!-- Decide if you want to use this exercise or not. If you do, you will need to assign group numbers (1-8). -->
+:::: {.columns}
+::: {.column width="40%"}
 
 - **Zika virus** is a member of the virus family Flaviviridae. It is spread by daytime-active Aedes mosquitoes.
 
 - **Microcephaly** is a medical condition involving a smaller-than-normal head. 
 
-![](assets/source-033-shape-4.png){fig-alt=""}
+:::
+::: {.column width="60%"}
 
-Atichat Kuadkitkan, Nitwara Wikan, Wannapa Sornjai, Duncan R. Smith, Zika virus and microcephaly in Southeast Asia: A cause for concern?, Journal of Infection and Public Health, Volume 13, Issue 1, 2020, Pages 11–15.
+![](assets/source-033-shape-4.png){fig-alt="Illustration of mosquito-borne Zika infection during pregnancy and a comparison of typical infant head and brain size with microcephaly." .nostretch width="700" style="max-width:100%;height:auto;"}
+
+:::
+::::
+
+::: {.aside}
+[@kuadkitkan2020]
+:::
 
 ::: {.notes}
 The Zika virus is a disease that you can get from mosquito bites in certain parts of the world. If a pregnant woman gets bitten by a mosquito carrying Zika, there's a chance it can harm her unborn baby. One serious problem it can cause is microcephaly, where the baby's head and brain don't develop properly and are smaller than they should be. This can lead to serious health and development issues for the baby as it grows.
 :::
 
 
-## Group Activity: Zika Virus and Causal Reasoning
+## Group Activity: Zika Virus and Causal Reasoning {.compact}
 
-<!-- Decide if you want to use this exercise or not. If you do, you will need to assign group numbers (1-8). -->
+:::: {.columns}
+::: {.column width="70%"}
 
 - You will watch a short video about the Zika virus and microcephaly.
 
@@ -774,22 +820,33 @@ The Zika virus is a disease that you can get from mosquito bites in certain part
 
     - Whether there is evidence of a dose–response relationship, and
 
-    - Why some causal criteria may be harder to demonstrate than others\
-      
-![](assets/source-034-shape-6.png){fig-alt=""}
+    - Why some causal criteria may be harder to demonstrate than others
+
+:::
+::: {.column width="30%"}
+
+![](assets/source-034-shape-6.png){fig-alt="QR code for the Zika virus group activity at https://tinyurl.com/W5GroupActivity." .qr .nostretch width="320"}
+
+:::
+::::
+
+::: {.notes}
+**Instructions**\
+- Assign groups 1-8.\
+- Ask them to scan the QR code and read the slide for their group before we watch the video.
+:::
 
 
 ## Video: Zika Virus & Microcephaly
 
-<!-- Embed the video. -->
-https://youtu.be/t-N9mryaVpY?si=RGQuPVqqhxsc4rxm
+{{< video https://www.youtube.com/watch?v=t-N9mryaVpY width="960" height="540" title="Zika Virus & Microcephaly" >}}
 
 ::: {.notes}
 “As you watch, listen for which pieces of evidence strengthened the causal argument and which questions remained.”
 :::
 
 
-## Causality Criteria: Zika Virus & Microcephaly
+## Causality Criteria: Zika Virus & Microcephaly {.compact}
 
 - **Temporality:** Pregnant mothers got Zika before having babies with microcephaly.
 
@@ -812,16 +869,20 @@ https://youtu.be/t-N9mryaVpY?si=RGQuPVqqhxsc4rxm
 
 ## Putting It All Together
 
-<!-- I'm not sure associations are the starting point. We often start by searching for causes. I think it's more accurate to say that all causal relationships produce associations. -->
-
 - Causal inference in epidemiology requires careful judgment.
 
-    - Associations are the starting point
+    - Associations are typically reported first.
 
-    - Causality is evaluated using multiple lines of evidence
+    - Causality is evaluated using multiple lines of evidence.
 
-    - Most diseases have **multiple contributing causes**
+    - Most diseases have **multiple contributing causes**.
 
-    - Uncertainty and chance are always present
+    - Uncertainty and chance are always present.
 
 - **Final takeaway:** Epidemiology is about making the **best possible causal judgments** with imperfect evidence.
+
+
+## References {.references-slide}
+
+::: {#refs}
+:::
