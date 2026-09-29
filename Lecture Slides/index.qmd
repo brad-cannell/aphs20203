@@ -37,3 +37,8 @@ Interactive slide decks for APHS 20203.
 
 - [View interactive slides](Module 05 - Association and Causality/Association and Causality/Association and Causality.qmd)
 - [Download PDF](Module 05 - Association and Causality/Association and Causality/Association and Causality.pdf)
+
+## Module 6: Analytic Epidemiology — Study Designs I
+
+- [View interactive slides](Module 06 - Analytic Epidemiology - Study Designs I/Analytic Epidemiology - Study Designs I/Analytic Epidemiology - Study Designs I.qmd)
+- [Download PDF](Module 06 - Analytic Epidemiology - Study Designs I/Analytic Epidemiology - Study Designs I/Analytic Epidemiology - Study Designs I.pdf)

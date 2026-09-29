@@ -71,8 +71,13 @@ $code-block-color: $tcu-white;
   margin: 0;
 }
 
+// Anchor the title by its bottom edge so a title that wraps grows upward
+// toward the logo instead of down into the subtitle. 330px from the bottom of
+// the 700px slide puts a one-line title in the same place as the earlier
+// `top: 270px` rule (85px heading x 1.2 line height ends near 370px).
 .reveal .slides #title-slide .title {
-  top: 270px;
+  top: auto;
+  bottom: 330px;
 }
 
 .reveal .slides #title-slide .subtitle {

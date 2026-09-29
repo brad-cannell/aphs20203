@@ -15,6 +15,7 @@ project:
     - "Module 03 - Disease Occurrence Data/Disease Occurrence Data/Disease Occurrence Data.qmd"
     - "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.qmd"
     - "Module 05 - Association and Causality/Association and Causality/Association and Causality.qmd"
+    - "Module 06 - Analytic Epidemiology - Study Designs I/Analytic Epidemiology - Study Designs I/Analytic Epidemiology - Study Designs I.qmd"
   resources:
     - "assets/tcu-logo.svg"
     - "assets/tcu-logo-purple.svg"

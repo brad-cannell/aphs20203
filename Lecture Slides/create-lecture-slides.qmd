@@ -60,8 +60,8 @@ This chunk sets the source, output path, and diagram-group setting for the audit
 ```{python}
 #| eval: false
 
-source = '/Users/bradcannell/Library/CloudStorage/Box-Box/2026/APHS 20203 W5-Aossication and Causality.pptx'
-output_qmd = lecture_root / "Module 05 - Association and Causality/Association and Causality/Association and Causality.qmd"
+source = '/Users/bradcannell/Library/CloudStorage/Box-Box/2026/APHS 20203 W6-Analytic Epi-Design Types and Validity.pptx'
+output_qmd = lecture_root / "Module 06 - Analytic Epidemiology - Study Designs I/Analytic Epidemiology - Study Designs I/Analytic Epidemiology - Study Designs I.qmd"
 # Preserve explicit diagram groups; switch this off for ordinary conversion.
 group_images = True
 print(f"Source: {source}\nDraft: {output_qmd}")
@@ -78,16 +78,25 @@ print(f"Source: {source}\nDraft: {output_qmd}")
 ```{python}
 #| eval: false
 
-from IPython.display import HTML, display
+import tempfile
+import webbrowser
 from presentation_audit_images import presentation_audit_images
 
 # Check the same group setting that conversion will use. This optional step
 # leaves the PowerPoint unchanged and creates no draft or persistent assets.
 image_audit = presentation_audit_images(source, group_images=group_images, preview=True)
-display(HTML(image_audit["html"]))
+
+# Positron's inline HTML output strips the gallery's embedded (data: URI)
+# images, so open the gallery in the browser instead. The file lives in the
+# system temp folder and is overwritten on each run, so nothing is added to
+# the course repo.
+audit_html = Path(tempfile.gettempdir()) / "pptx-image-audit.html"
+audit_html.write_text(image_audit["html"], encoding="utf-8")
+webbrowser.open(audit_html.as_uri())
 ```
 
 If a diagram is split or incomplete, group all of its related objects in PowerPoint, save, and rerun the audit. Discuss ambiguous warnings in chat. Skip or remove this section to stop using the audit; conversion remains independent.
+
 
 ## Create the Draft
 
