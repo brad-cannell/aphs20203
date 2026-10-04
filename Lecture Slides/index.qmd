@@ -38,7 +38,19 @@ Interactive slide decks for APHS 20203.
 - [View interactive slides](Module 05 - Association and Causality/Association and Causality/Association and Causality.qmd)
 - [Download PDF](Module 05 - Association and Causality/Association and Causality/Association and Causality.pdf)
 
-## Module 6: Analytic Epidemiology — Study Designs I
+## Modules 6–7: Analytic Epidemiology — Study Designs
 
-- [View interactive slides](Module 06 - Analytic Epidemiology - Study Designs I/Analytic Epidemiology - Study Designs I/Analytic Epidemiology - Study Designs I.qmd)
-- [Download PDF](Module 06 - Analytic Epidemiology - Study Designs I/Analytic Epidemiology - Study Designs I/Analytic Epidemiology - Study Designs I.pdf)
+### Experimental and Cohort Studies
+
+- [View interactive slides](Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.qmd)
+- [Download PDF](Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.pdf)
+
+### Case-Control Studies
+
+- [View interactive slides](Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.qmd)
+- [Download PDF](Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.pdf)
+
+### Ecologic Studies and Confounding
+
+- [View interactive slides](Module 06-07 - Analytic Epidemiology/Ecologic Studies and Confounding/Ecologic Studies and Confounding.qmd)
+- [Download PDF](Module 06-07 - Analytic Epidemiology/Ecologic Studies and Confounding/Ecologic Studies and Confounding.pdf)
