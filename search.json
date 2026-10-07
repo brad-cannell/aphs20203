@@ -158,14 +158,14 @@
     "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#review-association-vs-causality",
     "title": "Experimental and Cohort Studies",
     "section": "Review: Association vs Causality",
-    "text": "Review: Association vs Causality\nWhat is an association?\n\n\nThe distribution of an outcome differs across levels of an exposure.\n\nFor example, the outcome may be more common in one group than another.\n\nKnowing something about X helps us predict something about Y."
+    "text": "Review: Association vs Causality\nWhat is an association?\n\n\nThe distribution of an outcome differs across levels of an exposure.\n\nFor example, the outcome may be more common in one group than another.\n\nKnowing something about X helps us predict something about Y.\n\n\n\nAnswer in a fragment."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#review-association-vs-causality-1",
     "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#review-association-vs-causality-1",
     "title": "Experimental and Cohort Studies",
     "section": "Review: Association vs Causality",
-    "text": "Review: Association vs Causality\nWhat distinguishes an association from a causal relationship?\n\n\nCounterfactual definition: The outcome would differ for the same person if their exposure had been different.\nIntervention definition: Intervening to change the exposure would change the outcome or its probability. Said another way, X is a cause of Y if we can change Y by manipulating X.\nHelpful question: If I changed X and held everything else constant, would I expect Y to change?\n\n\n\n\nAssociation compares people with different exposures; causation asks what would happen to the same people under different exposures."
+    "text": "Review: Association vs Causality\nWhat distinguishes an association from a causal relationship?\n\n\nCounterfactual definition: The outcome would differ for the same person if their exposure had been different.\nIntervention definition: Intervening to change the exposure would change the outcome or its probability. Said another way, X is a cause of Y if we can change Y by manipulating X.\nHelpful question: If I changed X and held everything else constant, would I expect Y to change?\n\n\n\n\nAnswer in a fragment.\n\nAssociation compares people with different exposures; causation asks what would happen to the same people under different exposures."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#review-deterministic-vs-probabilistic-causality",
@@ -193,21 +193,21 @@
     "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#basic-experimental-study-design",
     "title": "Experimental and Cohort Studies",
     "section": "Basic Experimental Study Design",
-    "text": "Basic Experimental Study Design\n\n\n\nWe’ve already talked about experimental studies where we start with a group of people who have not yet been exposed to our primary exposure of interest and who have not yet experienced our outcome of interest.\nFor example, if our outcome of interest was the flu and our exposure of interest was the flu vaccine, then our initial study group would include only people who had not yet received the flu vaccine (probably within some window of time) and who didn’t have the flu (probably within some window of time).\nThe researchers would then choose who gets the flu vaccine and who doesn’t, ideally at random. The study participants do NOT choose their own exposure value.\nWe then follow these participants for some meaningful period of time, and then we compare the occurrence of the outcome – in this case the flu – between our exposure groups – in this case, those who did and did not get vaccinated.\n\nWhere: Orange = Exposed to vaccine Blue = Unexposed to vaccine Circle = No Flu Triangle = Flu"
+    "text": "Basic Experimental Study Design\n\n\n\nWe’ve already talked about experimental studies where we start with a group of people who have not yet been exposed to our primary exposure of interest and who have not yet experienced our outcome of interest.\nFor example, if our outcome of interest was the flu and our exposure of interest was the flu vaccine, then our initial study group would include only people who had not yet received the flu vaccine (probably within some window of time) and who didn’t have the flu (probably within some window of time).\nThe researchers would then choose who gets the flu vaccine and who doesn’t, ideally at random. The study participants do NOT choose their own exposure value.\nWe then follow these participants for some meaningful period of time, and then we compare the occurrence of the outcome – in this case the flu – between our exposure groups – in this case, those who did and did not get vaccinated.\n\nWhere:\nOrange = Exposed to vaccine\nBlue = Unexposed to vaccine\nCircle = No Flu\nTriangle = Flu"
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#rct-randomization",
     "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#rct-randomization",
     "title": "Experimental and Cohort Studies",
     "section": "RCT: Randomization",
-    "text": "RCT: Randomization\nRandomization assigns participants to treatment groups using a chance process.\nWhy randomization matters\n\nBreaks the link between baseline causes of the outcome and treatment assignment.\nProtects against confounding by measured and unmeasured factors, without needing to identify them all.\nProduces exchangeable groups on average: groups expected to have the same outcome risk if given the same treatment.\n\nTake-home message\nRandomization protects against confounding on average. Chance differences between groups can still occur in a particular trial.\n\n\nPearl describes randomization as replacing the usual causes of treatment with a chance mechanism, breaking the links responsible for confounding. The random device can affect the outcome through treatment; it should have no separate path to the outcome. Source: Judea Pearl, “The Art and Science of Cause and Effect,” slide 46: https://bayes.cs.ucla.edu/LECTURE/TEXT/lec1_text.htm\nHernán and Robins emphasize exchangeability in Chapter 2 and discuss chance imbalance in Chapter 10 of Causal Inference: What If: https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/04/hernanrobins_WhatIf_26apr24.pdf\nThe slide describes simple random assignment with a common assignment probability.\nRandomization probabilities that differ across baseline strata require accounting for those strata.\nRandomization applies directly to assigned treatment; treatment actually received may also depend on adherence.\nRandomization does not by itself prevent bias from loss to follow-up or outcome measurement."
+    "text": "RCT: Randomization\nRandomization assigns participants to treatment groups using a chance process.\nWhy randomization matters\n\nBreaks the link between baseline causes of the outcome and treatment assignment.\nProtects against confounding by measured and unmeasured factors, without needing to identify them all.\nProduces exchangeable groups on average: groups expected to have the same outcome risk if given the same treatment.\n\nTake-home message\nRandomization protects against confounding on average. Chance differences between groups can still occur in a particular trial.\n\n\nAnd what is randomization?\nPearl describes randomization as replacing the usual causes of treatment with a chance mechanism, breaking the links responsible for confounding. The random device can affect the outcome through treatment; it should have no separate path to the outcome. Source: Judea Pearl, “The Art and Science of Cause and Effect,” slide 46: https://bayes.cs.ucla.edu/LECTURE/TEXT/lec1_text.htm\nHernán and Robins emphasize exchangeability in Chapter 2 and discuss chance imbalance in Chapter 10 of Causal Inference: What If: https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/04/hernanrobins_WhatIf_26apr24.pdf\nThe slide describes simple random assignment with a common assignment probability.\nRandomization probabilities that differ across baseline strata require accounting for those strata.\nRandomization applies directly to assigned treatment; treatment actually received may also depend on adherence.\nRandomization does not by itself prevent bias from loss to follow-up or outcome measurement."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#practice-baseline-group-comparability",
     "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#practice-baseline-group-comparability",
     "title": "Experimental and Cohort Studies",
     "section": "Practice: Baseline Group Comparability",
-    "text": "Practice: Baseline Group Comparability\n\n\nPhysicians were randomly assigned to aspirin (11,037) or placebo (11,034).\n\n\n\nBaseline characteristic\nAspirin, n\nPlacebo, n\nRatio*\n\n\n\n\nPast cigarette smoking\n4,373\n4,301\n1.02\n\n\nCurrent cigarette smoking\n1,213\n1,225\n0.99\n\n\nDiabetes mellitus\n275\n258\n1.07\n\n\n\nRatio of the proportion with the characteristic in the aspirin group to the proportion in the placebo group; labeled RR in the source table.\n\nWhat does a ratio close to 1 tell us about a baseline characteristic?\nDo these rows describe treatment outcomes or participants before treatment?\nDo similar proportions for these three characteristics establish that the groups are identical in every way?\n\n\n \n\n\nGroup exercise. Answers are on the next slide."
+    "text": "Practice: Baseline Group Comparability\nParticipants were randomly assigned to aspirin (8,517) or placebo (8,514).\n\n\n\nBaseline characteristic\nAspirin, n\nPlacebo, n\nRatio*\n\n\n\n\nPast cigarette smoking\n3,321\n3,320\n1.00\n\n\nCurrent cigarette smoking\n847\n841\n1.01\n\n\nDiabetes mellitus\n196\n195\n1.01\n\n\n\nRatio of the proportion with the characteristic in the aspirin group to the proportion in the placebo group; labeled RR in the source table.\n\nWhat does a ratio close to 1 tell us about a baseline characteristic?\nDo these rows describe treatment outcomes or participants before treatment?\nDo similar proportions for these three characteristics establish that the groups are identical in every way?\n\n\n \n\n\nGroup exercise. Answers are on the next slide."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#interpreting-the-baseline-table",
@@ -217,11 +217,11 @@
     "text": "Interpreting the Baseline Table\n\nRatios close to 1 indicate similar proportions with these measured baseline characteristics.\n\nThese rows contain baseline comparisons, so they describe participants before treatment.\n\nSimilarity in these measured characteristics does not establish similarity in every measured or unmeasured characteristic.\n\nRandomization supports comparability on average; chance differences can remain in a particular trial."
   },
   {
-    "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#validity",
-    "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#validity",
+    "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#internal-and-external-validity",
+    "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#internal-and-external-validity",
     "title": "Experimental and Cohort Studies",
-    "section": "Validity",
-    "text": "Validity\n\nInternal validity: Does the study provide an unbiased estimate of the association in the population studied?\nExternal validity: Can the findings be generalized to other populations?\n\n\nWe’ve considered how comparable the treatment groups were within this trial. Now let’s distinguish two questions: whether the study gives us an unbiased answer for the population studied, and whether that answer applies to other populations."
+    "section": "Internal and External Validity",
+    "text": "Internal and External Validity\n\nInternal validity: Does the study provide an unbiased estimate of the association among the people studied?\n\nComparable groups at baseline, like the aspirin and placebo groups we just examined, support internal validity.\n\nExternal validity: Do the findings apply to people outside the study?\n\nThis depends on who enrolled. Would the aspirin results hold for people who differ from the trial participants in age, sex, or health?\n\n\n\n\nThe baseline table answered a question about what happened inside the trial: were the aspirin and placebo groups comparable? That’s a question about internal validity, meaning whether the trial gives an unbiased answer for the people in it.\nA separate question is whether that answer carries over to the people we actually want to treat. That’s external validity. Randomization doesn’t help with this one, because it depends on who enrolled in the trial, not on how they were assigned to groups.\nKeep these two questions in mind on the next slide. RCTs tend to be strong on the first and weaker on the second."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#rcts-strengths-limitations",
@@ -333,35 +333,35 @@
     "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#a-prospective-cohort-study-example",
     "title": "Experimental and Cohort Studies",
     "section": "A Prospective Cohort Study Example",
-    "text": "A Prospective Cohort Study Example\n\nResearch Question: Is passive tobacco smoke exposure associated with increased respiratory infections in children?\n\n\n\nStudy Design:\n\nEnroll disease-free children (&lt;12 years)\nClassify by household smoking exposure\n\nExposed vs Not exposed\n\n\n\n\n\n\nFollow forward in time\n\nMeasure incident infections\n\n\n\n\n\nPotential Confounders:\n\nAir pollution\nSocioeconomic status\nCrowded housing\n\nNext Step: Calculate Risk, RR, and ARD\n\n\n\n\nWhy can’t we use an RCT to answer this question?\n\nConfounding factors…weather….living environment AC dust condition …define the population, define the exposure and outcome."
+    "text": "A Prospective Cohort Study Example\n\nResearch Question: Is passive tobacco smoke exposure associated with increased respiratory infections in children?\n\n\n\nStudy Design:\n\nEnroll disease-free children (&lt;12 years)\nClassify by household smoking exposure\n\nExposed vs Not exposed\n\n\n\n\n\n\nFollow forward in time\n\nMeasure incident infections\n\n\n\n\n\nPotential Confounders:\n\nAir pollution\nSocioeconomic status\nCrowded housing\n\nNext Step: Calculate Risk, RR, and ARD\n\n\n\n\nResearch Question: Why can’t we use an RCT to answer this question?\n\nStudy Design: So how might we design a study to answer this research question?\n\nPotential Confounders: What are some potential confounding factors we should consider?"
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#reading-a-22-table",
     "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#reading-a-22-table",
     "title": "Experimental and Cohort Studies",
     "section": "Reading a 2×2 Table",
-    "text": "Reading a 2×2 Table\n\n\n\n\n\nInfection (+)\nInfection (–)\nTotal\n\n\n\n\nExposed\nA\nB\nA + B\n\n\nNot Exposed\nC\nD\nC + D\n\n\n\n\n\nRows identify exposure status; columns identify infection status.\nEach letter represents a count of people. For example, A is the number of exposed children who developed an infection.\nA + B is the total exposed group; C + D is the total unexposed group.\nThese are the denominators for calculating risk in each group.\n\n\n\nBefore we calculate risk, relative risk, and absolute risk difference, we need to talk about 2x2 tables."
+    "text": "Reading a 2×2 Table\n\n\n\n\n\nInfection (+)\nInfection (–)\nTotal\n\n\n\n\nExposed\nA\nB\nA + B\n\n\nNot Exposed\nC\nD\nC + D\n\n\n\n\n\nRows identify exposure status; columns identify infection status.\nEach letter represents a count of people. For example, A is the number of exposed children who developed an infection.\nA + B is the total exposed group; C + D is the total unexposed group.\nThese are the denominators for calculating risk in each group.\n\n\n\nBefore we calculate risk, relative risk, and absolute risk difference, we need to talk about 2x2 tables.\n\nThey are a really commonly used tool in epidemiology and biostatistics."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#exercise-risk-incidence-proportion",
     "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#exercise-risk-incidence-proportion",
     "title": "Experimental and Cohort Studies",
     "section": "Exercise: Risk (Incidence Proportion)",
-    "text": "Exercise: Risk (Incidence Proportion)\n\n\n\n\n\nInfection (+)\nInfection (–)\nTotal\n\n\n\n\nExposed\n100\n400\n500\n\n\nNot Exposed\n30\n470\n500\n\n\n\n\nCalculate Risk (Incidence Proportion)\n\nRisk in the exposed = A / (A + B)\nRisk in the unexposed = C / (C + D)"
+    "text": "Exercise: Risk (Incidence Proportion)\n\n\n\n\n\nInfection (+)\nInfection (–)\nTotal\n\n\n\n\nExposed\n100\n400\n500\n\n\nNot Exposed\n30\n470\n500\n\n\n\n\nCalculate Risk (Incidence Proportion)\n\nRisk in the exposed = A / (A + B)\nRisk in the unexposed = C / (C + D)\n\n\n \n\n\nTake a moment to do this calculation on your own."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#interpretation-risk-incidence-proportion",
     "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#interpretation-risk-incidence-proportion",
     "title": "Experimental and Cohort Studies",
     "section": "Interpretation: Risk (Incidence Proportion)",
-    "text": "Interpretation: Risk (Incidence Proportion)\n\nRisk in the exposed = 100 / 500 = 0.20 = 20%\n\n20 out of every 100 exposed children developed an infection during follow-up.\n\nRisk in the unexposed = 30 / 500 = 0.06 = 6%\n\n6 out of every 100 unexposed children developed an infection during follow-up."
+    "text": "Interpretation: Risk (Incidence Proportion)\n\nRisk in the exposed = 100 / 500 = 0.20 = 20%\n\n20 out of every 100 exposed children developed an infection during follow-up.\n\nRisk in the unexposed = 30 / 500 = 0.06 = 6%\n\n6 out of every 100 unexposed children developed an infection during follow-up.\n\n\n\n\nThese findings are interesting, and we could stop here and report them.\n\nBut it can be handy to summarize them in a single measure, especially if we want to compare these results to other results.\n\nWe will discuss two options next."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#exercise-relative-risk-rr",
     "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#exercise-relative-risk-rr",
     "title": "Experimental and Cohort Studies",
     "section": "Exercise: Relative Risk (RR)",
-    "text": "Exercise: Relative Risk (RR)\n\n\n\n\n\nInfection (+)\nInfection (–)\nTotal\n\n\n\n\nExposed\n100\n400\n500\n\n\nNot Exposed\n30\n470\n500\n\n\n\n\nCalculate Relative Risk (RR)\n\nRR = Risk in the exposed ÷ Risk in the unexposed"
+    "text": "Exercise: Relative Risk (RR)\n\n\n\n\n\nInfection (+)\nInfection (–)\nTotal\n\n\n\n\nExposed\n100\n400\n500\n\n\nNot Exposed\n30\n470\n500\n\n\n\n\nCalculate Relative Risk (RR)\n\nRR = Risk in the exposed ÷ Risk in the unexposed\n\n\n \n\n\nTake a moment to do this calculation on your own."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#interpretation-relative-risk-rr",
@@ -375,7 +375,7 @@
     "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#exercise-absolute-risk-difference-ard",
     "title": "Experimental and Cohort Studies",
     "section": "Exercise: Absolute Risk Difference (ARD)",
-    "text": "Exercise: Absolute Risk Difference (ARD)\n\n\n\n\n\nInfection (+)\nInfection (–)\nTotal\n\n\n\n\nExposed\n100\n400\n500\n\n\nNot Exposed\n30\n470\n500\n\n\n\n\nCalculate Absolute Risk Difference (ARD)\n\nARD = Risk in the exposed − Risk in the unexposed"
+    "text": "Exercise: Absolute Risk Difference (ARD)\n\n\n\n\n\nInfection (+)\nInfection (–)\nTotal\n\n\n\n\nExposed\n100\n400\n500\n\n\nNot Exposed\n30\n470\n500\n\n\n\n\nCalculate Absolute Risk Difference (ARD)\n\nARD = Risk in the exposed − Risk in the unexposed\n\n\n \n\n\nTake a moment to do this calculation on your own."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#interpretation-absolute-risk-difference-ard",
@@ -399,11 +399,11 @@
     "text": "Poll: Interpreting Risk Difference\nIn a cohort study of smoking and cardiovascular disease (CVD), the risks over the same follow-up period are:\n\nRisk in smokers = 20%; Risk in non-smokers = 10%\nAbsolute Risk Difference (ARD) = 20% − 10% = 10 percentage points\n\nWhat does this ARD mean?\nA. There were 10 more CVD cases per 100 smokers than per 100 non-smokers during follow-up\nB. Smoking increases CVD risk by 10 times compared to non-smokers during follow-up\nC. There was no association between smoking and CVD during follow-up\nD. 10 out of every 100 cases of CVD were caused by smoking during follow-up\n\n\nCorrect Answer: A. There were 10 more CVD cases per 100 smokers than per 100 non-smokers during follow-up.\nBrief Explanation: The observed CVD risk was 10 percentage points higher in smokers than in non-smokers over the same follow-up period (20% versus 10%).\nThis is an absolute difference in risk, not a relative increase of 10% or a tenfold increase. These results alone do not establish that smoking caused the difference."
   },
   {
-    "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#strengths-and-limitations",
-    "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#strengths-and-limitations",
+    "objectID": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#cohort-studies-strengths-and-limitations",
+    "href": "Module 06-07 - Analytic Epidemiology/Experimental and Cohort Studies/Experimental and Cohort Studies.html#cohort-studies-strengths-and-limitations",
     "title": "Experimental and Cohort Studies",
-    "section": "Strengths and Limitations",
-    "text": "Strengths and Limitations\n\n\nStrengths\n\nDirectly measure incidence\nEstablish clear temporal sequence (Exposure → Outcome)\nStudy rare exposures efficiently\nExamine multiple outcomes from one exposure\n\n\nLimitations\n\nTime-consuming and costly\nVulnerable to loss to follow-up\nPotential exposure misclassification\nLess efficient for rare diseases"
+    "section": "Cohort Studies: Strengths and Limitations",
+    "text": "Cohort Studies: Strengths and Limitations\n\n\nStrengths\n\nDirectly measure incidence\nEstablish clear temporal sequence (Exposure → Outcome)\nStudy rare exposures efficiently\nExamine multiple outcomes from one exposure\n\n\nLimitations\n\nTime-consuming and costly\nVulnerable to loss to follow-up\nPotential exposure misclassification\nLess efficient for rare diseases"
   },
   {
     "objectID": "Module 04 - Descriptive Epidemiology/Descriptive Epidemiology/Descriptive Epidemiology.html#what-is-descriptive-epidemiology",

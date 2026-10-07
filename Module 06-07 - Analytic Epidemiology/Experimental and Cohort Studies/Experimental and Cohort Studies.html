@@ -6,10 +6,10 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/quarto-contrib/countdown-0.6.0/countdown.js"></script>
 <link href="../../site_libs/quarto-contrib/countdown-0.6.0/countdown.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.36">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>APHS 20203 Lecture Slides – Experimental and Cohort Studies</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -21,10 +21,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -152,6 +155,19 @@
 <li><p>Knowing something about <strong>X</strong> helps us predict something about <strong>Y</strong>.</p></li>
 </ul>
 </div>
+<aside class="notes">
+<p>Answer in a fragment.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="review-association-vs-causality-1" class="slide level2">
 <h2>Review: Association vs Causality</h2>
@@ -165,6 +181,8 @@
 </div>
 <aside class="notes">
 <ul>
+<li>Answer in a fragment.<br>
+</li>
 <li>Association compares people with different exposures; causation asks what would happen to the same people under different exposures.</li>
 </ul>
 <style type="text/css">
@@ -237,7 +255,11 @@
 <li><p>The researchers would then choose who gets the flu vaccine and who doesn’t, ideally at <strong>random</strong>. The study participants do <strong>NOT</strong> choose their own exposure value.</p></li>
 <li><p>We then follow these participants for some meaningful period of time, and then we compare the occurrence of the outcome – in this case the flu – between our exposure groups – in this case, those who did and did not get vaccinated.</p></li>
 </ul>
-<p>Where: Orange = Exposed to vaccine Blue = Unexposed to vaccine Circle = No Flu Triangle = Flu</p>
+<p>Where:<br>
+Orange = Exposed to vaccine<br>
+Blue = Unexposed to vaccine<br>
+Circle = No Flu<br>
+Triangle = Flu</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -263,6 +285,7 @@
 Randomization protects against <strong>confounding on average</strong>. Chance differences between groups can still occur in a particular trial.</p>
 <aside class="notes">
 <ul>
+<li><p>And what is randomization?</p></li>
 <li><p>Pearl describes randomization as replacing the usual causes of treatment with a chance mechanism, breaking the links responsible for confounding. The random device can affect the outcome through treatment; it should have no separate path to the outcome. Source: Judea Pearl, “The Art and Science of Cause and Effect,” slide 46: https://bayes.cs.ucla.edu/LECTURE/TEXT/lec1_text.htm</p></li>
 <li><p>Hernán and Robins emphasize exchangeability in Chapter 2 and discuss chance imbalance in Chapter 10 of Causal Inference: What If: https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/04/hernanrobins_WhatIf_26apr24.pdf</p></li>
 <li><p>The slide describes simple random assignment with a common assignment probability.</p></li>
@@ -284,9 +307,7 @@ Randomization protects against <strong>confounding on average</strong>. Chance d
 </section>
 <section id="practice-baseline-group-comparability" class="slide level2 compact">
 <h2>Practice: Baseline Group Comparability</h2>
-<!-- Source: Baseline table in the supplied Quiz 03 Answer Key.pdf, bonus Question 21. Three original rows, group sizes, and ratios are reused without inventing observations. -->
-<!-- REVIEW: These rows also appear on the quiz. Retain as worked practice only if this degree of overlap with the assessment is intended. -->
-<p>Physicians were randomly assigned to aspirin (<strong>11,037</strong>) or placebo (<strong>11,034</strong>).</p>
+<p>Participants were randomly assigned to aspirin (<strong>8,517</strong>) or placebo (<strong>8,514</strong>).</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -299,21 +320,21 @@ Randomization protects against <strong>confounding on average</strong>. Chance d
 <tbody>
 <tr class="odd">
 <td>Past cigarette smoking</td>
-<td style="text-align: right;">4,373</td>
-<td style="text-align: right;">4,301</td>
-<td style="text-align: right;">1.02</td>
+<td style="text-align: right;">3,321</td>
+<td style="text-align: right;">3,320</td>
+<td style="text-align: right;">1.00</td>
 </tr>
 <tr class="even">
 <td>Current cigarette smoking</td>
-<td style="text-align: right;">1,213</td>
-<td style="text-align: right;">1,225</td>
-<td style="text-align: right;">0.99</td>
+<td style="text-align: right;">847</td>
+<td style="text-align: right;">841</td>
+<td style="text-align: right;">1.01</td>
 </tr>
 <tr class="odd">
 <td>Diabetes mellitus</td>
-<td style="text-align: right;">275</td>
-<td style="text-align: right;">258</td>
-<td style="text-align: right;">1.07</td>
+<td style="text-align: right;">196</td>
+<td style="text-align: right;">195</td>
+<td style="text-align: right;">1.01</td>
 </tr>
 </tbody>
 </table>
@@ -323,7 +344,7 @@ Randomization protects against <strong>confounding on average</strong>. Chance d
 <li>Do these rows describe treatment outcomes or participants <strong>before treatment</strong>?</li>
 <li>Do similar proportions for these three characteristics establish that the groups are identical in every way?</li>
 </ol>
-<countdown-timer id="timer_eef92888b1ca5d388f26bf18f044e2a466b6fc0a" minutes="02" seconds="00" class="countdown" warn-when="30" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<countdown-timer id="timer_b99b9041137da9ffa371c173619b6d8f7b2e1c44" minutes="02" seconds="00" class="countdown" warn-when="30" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
  </countdown-timer>
 <aside class="notes">
 <ul>
@@ -354,14 +375,24 @@ Randomization protects against <strong>confounding on average</strong>. Chance d
 </ul></li>
 </ol>
 </section>
-<section id="validity" class="slide level2">
-<h2>Validity</h2>
+<section id="internal-and-external-validity" class="slide level2">
+<h2>Internal and External Validity</h2>
 <ul>
-<li><p><strong>Internal validity:</strong> Does the study provide an unbiased estimate of the association in the population studied?</p></li>
-<li><p><strong>External validity:</strong> Can the findings be generalized to other populations?</p></li>
+<li><strong>Internal validity:</strong> Does the study provide an unbiased estimate of the association <em>among the people studied</em>?
+<ul>
+<li>Comparable groups at baseline, like the aspirin and placebo groups we just examined, support internal validity.</li>
+</ul></li>
+<li><strong>External validity:</strong> Do the findings apply to people <em>outside the study</em>?
+<ul>
+<li>This depends on who enrolled. Would the aspirin results hold for people who differ from the trial participants in age, sex, or health?</li>
+</ul></li>
 </ul>
 <aside class="notes">
-<p>We’ve considered how comparable the treatment groups were within this trial. Now let’s distinguish two questions: whether the study gives us an unbiased answer for the population studied, and whether that answer applies to other populations.</p>
+<ul>
+<li><p>The baseline table answered a question about what happened <em>inside</em> the trial: were the aspirin and placebo groups comparable? That’s a question about internal validity, meaning whether the trial gives an unbiased answer for the people in it.</p></li>
+<li><p>A separate question is whether that answer carries over to the people we actually want to treat. That’s external validity. Randomization doesn’t help with this one, because it depends on who enrolled in the trial, not on how they were assigned to groups.</p></li>
+<li><p>Keep these two questions in mind on the next slide. RCTs tend to be strong on the first and weaker on the second.</p></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -779,9 +810,11 @@ Randomization protects against <strong>confounding on average</strong>. Chance d
 </div>
 <aside class="notes">
 <ul>
-<li>Why can’t we use an RCT to answer this question?<br>
+<li><strong>Research Question:</strong> Why can’t we use an RCT to answer this question?<br>
 </li>
-<li>Confounding factors…weather….living environment AC dust condition …define the population, define the exposure and outcome.</li>
+<li><strong>Study Design:</strong> So how might we design a study to answer this research question?<br>
+</li>
+<li><strong>Potential Confounders:</strong> What are some potential confounding factors we should consider?</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -831,7 +864,9 @@ Randomization protects against <strong>confounding on average</strong>. Chance d
 </ul>
 <aside class="notes">
 <ul>
-<li>Before we calculate risk, relative risk, and absolute risk difference, we need to talk about 2x2 tables.</li>
+<li>Before we calculate risk, relative risk, and absolute risk difference, we need to talk about 2x2 tables.<br>
+</li>
+<li>They are a really commonly used tool in epidemiology and biostatistics.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -878,6 +913,23 @@ Randomization protects against <strong>confounding on average</strong>. Chance d
 <li><p>Risk in the exposed = A / (A + B)</p></li>
 <li><p>Risk in the unexposed = C / (C + D)</p></li>
 </ul>
+<countdown-timer id="timer_b99b9041137da9ffa371c173619b6d8f7b2e1c44" minutes="01" seconds="00" class="countdown" warn-when="30" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+<aside class="notes">
+<ul>
+<li>Take a moment to do this calculation on your own.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="interpretation-risk-incidence-proportion" class="slide level2 compact">
 <h2>Interpretation: Risk (Incidence Proportion)</h2>
@@ -891,6 +943,25 @@ Randomization protects against <strong>confounding on average</strong>. Chance d
 <li>6 out of every 100 unexposed children developed an infection during follow-up.</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<ul>
+<li>These findings are interesting, and we could stop here and report them.<br>
+</li>
+<li>But it can be handy to summarize them in a single measure, especially if we want to compare these results to other results.<br>
+</li>
+<li>We will discuss two options next.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="exercise-relative-risk-rr" class="slide level2 compact">
 <h2>Exercise: Relative Risk (RR)</h2>
@@ -924,6 +995,23 @@ Randomization protects against <strong>confounding on average</strong>. Chance d
 <ul>
 <li>RR = Risk in the exposed ÷ Risk in the unexposed</li>
 </ul>
+<countdown-timer id="timer_b99b9041137da9ffa371c173619b6d8f7b2e1c44" minutes="00" seconds="30" class="countdown" warn-when="10" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+<aside class="notes">
+<ul>
+<li>Take a moment to do this calculation on your own.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="interpretation-relative-risk-rr" class="slide level2 compact">
 <h2>Interpretation: Relative Risk (RR)</h2>
@@ -965,6 +1053,23 @@ Randomization protects against <strong>confounding on average</strong>. Chance d
 <ul>
 <li>ARD = Risk in the exposed − Risk in the unexposed</li>
 </ul>
+<countdown-timer id="timer_b99b9041137da9ffa371c173619b6d8f7b2e1c44" minutes="00" seconds="30" class="countdown" warn-when="10" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
+<aside class="notes">
+<ul>
+<li>Take a moment to do this calculation on your own.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="interpretation-absolute-risk-difference-ard" class="slide level2 compact">
 <h2>Interpretation: Absolute Risk Difference (ARD)</h2>
@@ -1050,8 +1155,8 @@ Randomization protects against <strong>confounding on average</strong>. Chance d
           display:block!important;
       }</style></aside>
 </section>
-<section id="strengths-and-limitations" class="slide level2 compact">
-<h2>Strengths and Limitations</h2>
+<section id="cohort-studies-strengths-and-limitations" class="slide level2 compact">
+<h2>Cohort Studies: Strengths and Limitations</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Strengths</strong></p>
