@@ -32,6 +32,10 @@ What is an **association**?
 - Knowing something about **X** helps us predict something about **Y**.
 :::
 
+::: {.notes}
+Answer in a fragment.
+:::
+
 
 ## Review: Association vs Causality
 
@@ -46,6 +50,7 @@ What distinguishes an **association** from a **causal relationship**?
 :::
 
 ::: {.notes}
+- Answer in a fragment.\
 - Association compares people with different exposures; causation asks what would happen to the same people under different exposures.
 :::
 
@@ -103,10 +108,10 @@ What distinguishes **deterministic** causality from **probabilistic** causality?
 
 - We then follow these participants for some meaningful period of time, and then we compare the occurrence of the outcome – in this case the flu – between our exposure groups – in this case, those who did and did not get vaccinated.
 
-Where:
-Orange = Exposed to vaccine
-Blue = Unexposed to vaccine
-Circle = No Flu
+Where:\
+Orange = Exposed to vaccine\
+Blue = Unexposed to vaccine\
+Circle = No Flu\
 Triangle = Flu
 :::
 
@@ -127,6 +132,8 @@ Triangle = Flu
 Randomization protects against **confounding on average**. Chance differences between groups can still occur in a particular trial.
 
 ::: {.notes}
+- And what is randomization?
+
 - Pearl describes randomization as replacing the usual causes of treatment with a chance mechanism, breaking the links responsible for confounding. The random device can affect the outcome through treatment; it should have no separate path to the outcome. Source: Judea Pearl, "The Art and Science of Cause and Effect," slide 46: https://bayes.cs.ucla.edu/LECTURE/TEXT/lec1_text.htm
 
 - Hernán and Robins emphasize exchangeability in Chapter 2 and discuss chance imbalance in Chapter 10 of Causal Inference: What If: https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/04/hernanrobins_WhatIf_26apr24.pdf
@@ -143,16 +150,13 @@ Randomization protects against **confounding on average**. Chance differences be
 
 ## Practice: Baseline Group Comparability {.compact}
 
-<!-- Source: Baseline table in the supplied Quiz 03 Answer Key.pdf, bonus Question 21. Three original rows, group sizes, and ratios are reused without inventing observations. -->
-<!-- REVIEW: These rows also appear on the quiz. Retain as worked practice only if this degree of overlap with the assessment is intended. -->
-
-Physicians were randomly assigned to aspirin (**11,037**) or placebo (**11,034**).
+Participants were randomly assigned to aspirin (**8,517**) or placebo (**8,514**).
 
 | Baseline characteristic | Aspirin, n | Placebo, n | Ratio* |
 |---|---:|---:|---:|
-| Past cigarette smoking | 4,373 | 4,301 | 1.02 |
-| Current cigarette smoking | 1,213 | 1,225 | 0.99 |
-| Diabetes mellitus | 275 | 258 | 1.07 |
+| Past cigarette smoking | 3,321 | 3,320 | 1.00 |
+| Current cigarette smoking | 847 | 841 | 1.01 |
+| Diabetes mellitus | 196 | 195 | 1.01 |
 
 *Ratio of the proportion with the characteristic in the aspirin group to the proportion in the placebo group; labeled RR in the source table.*
 
@@ -175,14 +179,20 @@ Physicians were randomly assigned to aspirin (**11,037**) or placebo (**11,034**
     - Randomization supports comparability **on average**; chance differences can remain in a particular trial.
 
 
-## Validity
+## Internal and External Validity
 
-- **Internal validity:** Does the study provide an unbiased estimate of the association in the population studied?
+- **Internal validity:** Does the study provide an unbiased estimate of the association *among the people studied*?
+    - Comparable groups at baseline, like the aspirin and placebo groups we just examined, support internal validity.
 
-- **External validity:** Can the findings be generalized to other populations?
+- **External validity:** Do the findings apply to people *outside the study*?
+    - This depends on who enrolled. Would the aspirin results hold for people who differ from the trial participants in age, sex, or health?
 
 ::: {.notes}
-We’ve considered how comparable the treatment groups were within this trial. Now let’s distinguish two questions: whether the study gives us an unbiased answer for the population studied, and whether that answer applies to other populations.
+- The baseline table answered a question about what happened *inside* the trial: were the aspirin and placebo groups comparable? That's a question about internal validity, meaning whether the trial gives an unbiased answer for the people in it.
+
+- A separate question is whether that answer carries over to the people we actually want to treat. That's external validity. Randomization doesn't help with this one, because it depends on who enrolled in the trial, not on how they were assigned to groups.
+
+- Keep these two questions in mind on the next slide. RCTs tend to be strong on the first and weaker on the second.
 :::
 
 
@@ -575,8 +585,9 @@ https://sphweb.bumc.bu.edu/otlt/mph-modules/ep/ep713\_cohortstudies/ep713\_cohor
 :::
 
 ::: {.notes}
-- Why can't we use an RCT to answer this question?\
-- Confounding factors…weather….living environment  AC dust condition …define the population, define the exposure and outcome.
+- **Research Question:** Why can't we use an RCT to answer this question?\
+- **Study Design:** So how might we design a study to answer this research question?\
+- **Potential Confounders:** What are some potential confounding factors we should consider?
 :::
 
 
@@ -598,7 +609,8 @@ https://sphweb.bumc.bu.edu/otlt/mph-modules/ep/ep713\_cohortstudies/ep713\_cohor
 - These are the denominators for calculating risk in each group.
 
 ::: {.notes}
-- Before we calculate risk, relative risk, and absolute risk difference, we need to talk about 2x2 tables.
+- Before we calculate risk, relative risk, and absolute risk difference, we need to talk about 2x2 tables.\
+- They are a really commonly used tool in epidemiology and biostatistics.
 :::
 
 
@@ -617,6 +629,12 @@ https://sphweb.bumc.bu.edu/otlt/mph-modules/ep/ep713\_cohortstudies/ep713\_cohor
 
 - Risk in the unexposed = C / (C + D)
 
+{{< countdown minutes=1 warn_when=30 start_immediately=false >}}
+
+::: {.notes}
+- Take a moment to do this calculation on your own.
+:::
+
 
 ## Interpretation: Risk (Incidence Proportion) {.compact}
 
@@ -627,6 +645,12 @@ https://sphweb.bumc.bu.edu/otlt/mph-modules/ep/ep713\_cohortstudies/ep713\_cohor
 - **Risk in the unexposed = 30 / 500 = 0.06 = 6%**
 
     - 6 out of every 100 unexposed children developed an infection during follow-up.
+
+::: {.notes}
+- These findings are interesting, and we could stop here and report them.\
+- But it can be handy to summarize them in a single measure, especially if we want to compare these results to other results.\
+- We will discuss two options next.
+:::
 
 
 ## Exercise: Relative Risk (RR) {.compact}
@@ -641,6 +665,12 @@ https://sphweb.bumc.bu.edu/otlt/mph-modules/ep/ep713\_cohortstudies/ep713\_cohor
 **Calculate Relative Risk (RR)**
 
 - RR = Risk in the exposed ÷ Risk in the unexposed
+
+{{< countdown minutes=0.5 warn_when=10 start_immediately=false >}}
+
+::: {.notes}
+- Take a moment to do this calculation on your own.
+:::
 
 
 ## Interpretation: Relative Risk (RR) {.compact}
@@ -664,6 +694,12 @@ https://sphweb.bumc.bu.edu/otlt/mph-modules/ep/ep713\_cohortstudies/ep713\_cohor
 **Calculate Absolute Risk Difference (ARD)**
 
 - ARD = Risk in the exposed − Risk in the unexposed
+
+{{< countdown minutes=0.5 warn_when=10 start_immediately=false >}}
+
+::: {.notes}
+- Take a moment to do this calculation on your own.
+:::
 
 
 ## Interpretation: Absolute Risk Difference (ARD) {.compact}
@@ -729,7 +765,7 @@ What does this ARD mean?
 :::
 
 
-## Strengths and Limitations {.compact}
+## Cohort Studies: Strengths and Limitations {.compact}
 
 :::: {.columns}
 ::: {.column width="50%"}
