@@ -14,14 +14,53 @@ format:
     embed-resources: false
     width: 1244
     height: 700
-    logo: assets/tcu-logo-purple.svg
+    logo: ../../assets/tcu-logo-purple.svg
 execute:
   eval: false
 ---
 
-## Retrospective Cohort vs. Case-Control
+## Hierarchy of Study Designs
 
-<!-- Add a quick review of experimental, prospective, and retrospective cohort studies. -->
+![](../../assets/study_design_hierarchy.png){fig-alt="Diagram grouping study designs into observational and experimental approaches. From left to right: case descriptions, ecological, cross-sectional, case-control, and cohort studies are observational; nonrandomized and randomized studies are experimental. An arrow indicates that evidence typically becomes more convincing from left to right."}
+
+::: {.notes}
+- Here is a review of our study design hierarchy.
+:::
+
+
+## Basic Experimental Study Design
+
+![](<../Experimental and Cohort Studies/assets/cohort-studies-slide-06.png>){fig-alt="Experimental design: researchers assign exposure to an initially unexposed, outcome-free source population, follow exposed and unexposed groups, measure outcomes, and compare incidence proportions. Orange denotes exposed, blue unexposed, triangles outcomes, and circles no outcome." .nostretch width="1120" height="530" style="object-fit:contain;"}
+
+
+## Common Prospective Cohort Study Design
+
+![](<../Experimental and Cohort Studies/assets/cohort-studies-slide-12.png>){fig-alt="Complete prospective cohort design: identify the cohort, measure exposure, follow exposed and unexposed groups for outcomes, calculate each incidence proportion, and compare the two." .nostretch width="1120" height="530" style="object-fit:contain;"}
+
+
+## Common Retrospective Cohort Study Design
+
+![](<../Experimental and Cohort Studies/assets/cohort-studies-slide-13.png>){fig-alt="Retrospective cohort design: exposure and outcomes occur before researchers identify the cohort and gather exposure and outcome measurements from records. Incidence proportions are calculated and compared for exposed and unexposed groups." .nostretch width="1120" height="530" style="object-fit:contain;"}
+
+
+## Basic Case-Control Study Design
+
+![](assets/case-control.png){fig-alt="Case-control design: identify cases with the outcome and controls without the outcome from the population of interest, measure prior exposure in each group, calculate the odds of exposure among cases and controls, and compare those odds. Orange denotes exposed, blue unexposed, triangles cases, and circles controls." .nostretch width="1120" height="530" style="object-fit:contain;"}
+
+::: {.notes}
+- Here’s my graphical representation of the basic case-control study design. There are other case-control designs, but this gives us an intuitive starting point.
+
+- Exposures and outcomes occur out in the world. We then identify a group of people who have experienced the outcome of interest, called cases, and measure their history of exposure.
+
+- We also identify a comparison group without the outcome, called controls, from the population that gave rise to the cases. We measure their history of exposure in the same way.
+
+- Finally, we calculate the odds of prior exposure in each group and compare those odds.
+
+- In this example, orange represents exposure to smoking and blue represents no exposure to smoking. Triangles represent people with lung cancer, and circles represent people without lung cancer.
+:::
+
+
+## Retrospective Cohort vs. Case-Control
 
 - Case-control
 
@@ -55,7 +94,19 @@ Cohort studies are powerful — but not always practical.
     - In these situations, a different design may be more efficient.
 
 
-<!-- Consider adding a slide about latency period. -->
+## Induction and Latent Periods
+
+![](assets/cohort-studies-slide-23.png){fig-alt="Timeline distinguishing the induction period, from smoking exposure to disease initiation when the sufficient cause is complete, from the latent period, from disease initiation to diagnosis. Symptoms appear between disease initiation and diagnosis. Causal pies show smoking followed by the addition of U, representing other causal components." .nostretch width="1120" height="530" style="object-fit:contain;"}
+
+::: {.notes}
+- The induction period is the time from exposure to disease initiation. In this diagram, disease begins when the sufficient cause is complete.
+
+- The latent period is the time from disease initiation to detection, shown here as diagnosis. Disease can be present before we detect it.
+
+- The key idea is that exposure, disease initiation, symptoms, and diagnosis can occur at different times. A cohort study may need a long follow-up period to observe the outcome.
+
+- Source: cohort_studies.pptx, slide 23. The original slide notes cite Kenneth J. Rothman, Epidemiology: An Introduction, p. 81.
+:::
 
 
 ## Basic Case-Control Study Design
@@ -216,7 +267,412 @@ Recall bias is another important threat to validity when conducting case-control
     - Case-Control → Uses **Odds Ratio (OR)**
 
 
-## Calculating Odds Ratio
+## Odds of Exposure Among Cases {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 24. -->
+
+::: {style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;"}
+|  | Cases | Controls |
+| --- | :---: | :---: |
+| Exposed | 50 | 25 |
+| Not exposed | 100 | 100 |
+| Odds of exposure | 50 / 100 | ??? |
+:::
+
+The odds of exposure among cases = $a/c = 50/100 = 0.5$.
+
+Equivalent ways to express these odds: **50:100 = 0.5:1 = 5:10 = 1:2**.
+
+For every **1 exposed case**, there are **2 unexposed cases**.
+
+What are the odds of exposure among controls?
+
+::: {.notes}
+- And we can express the odds in many different ways. For example, as a over c or as a to c. In this particular case, that translates to 50 over 100 or 50 to 100. Or, if we divide 50 by 100 we get 0.5, which we can also express as 0.5 to 1. In other words, for every 0.5 cases who were exposed there was one who wasn't exposed.
+
+- If we move the decimal one place to the right on both sides of our ratio (multiply by 10), we get 5 to 10, and we can say for every 5 cases who were exposed there were 10 cases who were not exposed.
+
+- We could also divide one by the odds (0.5) and add the result to the right-hand side of the ratio. We could then say for every case who was exposed there were 2 cases who were not exposed. As you can see, we can get the same answer by dividing 100 by 50 and putting the answer on the right-hand side of the ratio.
+
+- All of these are equivalent ways of expressing the odds of exposure among cases.
+:::
+
+
+## Odds of Exposure {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 25. -->
+
+::: {style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;"}
+|  | Cases | Controls |
+| --- | :---: | :---: |
+| Exposed | 50 | 25 |
+| Not exposed | 100 | 100 |
+| Odds of exposure | 50 / 100 | 25 / 100 |
+:::
+
+- Odds of exposure among cases = 50 / 100 = **0.5**
+
+- Odds of exposure among controls = 25 / 100 = **0.25**
+
+::: {.notes}
+- Now that we've calculated the odds of exposure among cases and controls, we may want to compare them in order to say something about the association (or lack thereof) between exposure and outcome -- or being a case.
+:::
+
+
+## Association {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 26. -->
+
+- The distribution of the thing we are measuring differs, on average, between two groups. This could be its center, spread, shape, or the proportion of people in each category.
+
+- Knowing something about **X** tells us something about **Y**.
+
+::: {.notes}
+- And remember that an association exists when the distribution of the thing we are measuring is different, on average, in two groups. Alternatively, we can say that Knowing something about x tells us something about y or helps us predict y.
+:::
+
+
+## Comparing Exposure Odds {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 27. -->
+
+::: {style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;"}
+|  | Cases | Controls |
+| --- | :---: | :---: |
+| Exposed | 50 | 25 |
+| Not exposed | 100 | 100 |
+| Odds of exposure | 50 / 100 | 25 / 100 |
+:::
+
+- Odds of exposure among cases = **0.5**
+
+- Odds of exposure among controls = **0.25**
+
+The odds are higher among cases. **How much higher?**
+
+::: {.notes}
+- We can tell just by looking at the odds, which are 0.5 and 0.25, that they aren't the same. That is, the odds of being exposed if you are a case are greater than the odds of being exposed if you are a control. But, how much greater?
+:::
+
+
+## Calculating the Exposure Odds Ratio {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 28. -->
+
+::: {style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;"}
+|  | Cases | Controls |
+| --- | :---: | :---: |
+| Exposed | 50 | 25 |
+| Not exposed | 100 | 100 |
+| Odds of exposure | 50 / 100 | 25 / 100 |
+:::
+
+$$
+\text{Exposure OR} = \frac{\text{Odds of exposure among cases}}{\text{Odds of exposure among controls}} = \frac{a/c}{b/d}
+$$
+
+Here, $a = 50$, $b = 25$, $c = 100$, and $d = 100$.
+
+::: {.notes}
+- Well, we can answer that question by calculating the ratio of the odds among cases to the odds among controls.
+:::
+
+
+## Exposure Odds Ratio: Calculation {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 29. -->
+
+::: {style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;"}
+|  | Cases | Controls |
+| --- | :---: | :---: |
+| Exposed | 50 | 25 |
+| Not exposed | 100 | 100 |
+| Odds of exposure | 50 / 100 | 25 / 100 |
+:::
+
+$$
+\text{Exposure OR} = \frac{a/c}{b/d} = \frac{50/100}{25/100} = \frac{0.5}{0.25} = 2
+$$
+
+How would you interpret this odds ratio?
+
+::: {.notes}
+- So, our exposure OR is 2. And how do we interpret that?
+:::
+
+
+## Exposure Odds Ratio: Interpretation {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 30. -->
+
+::: {style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;"}
+|  | Cases | Controls |
+| --- | :---: | :---: |
+| Exposed | 50 | 25 |
+| Not exposed | 100 | 100 |
+| Odds of exposure | 50 / 100 | 25 / 100 |
+:::
+
+$$
+\text{Exposure OR} = \frac{50/100}{25/100} = \frac{0.5}{0.25} = 2
+$$
+
+The odds of exposure among cases are **2 times** the odds of exposure among controls.
+
+::: {.notes}
+- The odds of exposure among cases is 2 times the odds of exposure among controls.
+:::
+
+
+## Why Use the Odds Ratio? {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 31. -->
+
+::: {style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;"}
+|  | Cases | Controls |
+| --- | :---: | :---: |
+| Exposed | 50 | 25 |
+| Not exposed | 100 | 100 |
+| Odds of exposure | 50 / 100 | 25 / 100 |
+:::
+
+- We can calculate it directly from a case-control study.
+
+- We can also estimate it using logistic regression.
+
+- Under certain conditions, it approximates the **risk ratio**.
+
+::: {.notes}
+- And the odds ratio has some really convenient traits that make it an attractive measure of association when we have data from a case-control study
+
+- Unlike the incidence proportion ratio, the odds ratio can be directly calculated from case-based case-control study.
+
+- It can be derived from logistic regression models.
+
+- It can be used to approximate the incidence proportion ratio under certain conditions. And as we’ve said before, the incidence proportion ratio is generally considered to be a more intuitive measure of association.
+
+- Therefore, we will briefly compare the odds ratio and the incidence proportion ratio.
+:::
+
+
+## Hypothetical Cohort: Hypertension and MI {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 32. -->
+<!-- Corrected the source risk denominator from 10,00 to 10,000. -->
+
+One-year incidence of acute myocardial infarction (**MI**, or heart attack). Severe systolic hypertension: ≥180 mm Hg. Normal systolic blood pressure: <120 mm Hg.
+
+::: {style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;"}
+|  | MI (+) | MI (–) | Total |
+| --- | :---: | :---: | :---: |
+| Severe hypertension | 180 | 9,820 | 10,000 |
+| Normotensive | 30 | 9,970 | 10,000 |
+:::
+
+- Risk with severe hypertension = 180 / 10,000 = **0.018**
+- Risk with normal blood pressure = 30 / 10,000 = **0.003**
+- Risk ratio (incidence proportion ratio) = 0.018 / 0.003 = **6**
+
+Participants with severe hypertension had **6 times the risk of MI** over one year compared with normotensive participants.
+
+*Source: Szklo and Nieto, Epidemiology. Jones & Bartlett Learning.*
+
+::: {.notes}
+- Sometimes, it’s helpful to start by discussing a cohort study. In the example shown here, severe hypertension and acute myocardial infarction are the exposure and the outcome of interest, respectively.
+
+- Because this is a cohort study and we know the row totals, we can calculate the incidence proportion ratio as we’ve done all semester. In this case, participants with severe hypertension had 6 times the risk of MI over the 1-year study period compared to participants with normotensive blood pressure.
+
+- For these data, the risk of myocardial infarction is relatively low for both the exposed and unexposed groups. Specifically, risk of MI is 0.018 among those with severe hypertension and 0.003 among people with normotensive blood pressure.
+
+- Therefore, the odds of developing MI will approximate the probabilities; as a result, the odds ratio of disease approximates the incidence proportion ratio.
+
+- Why?
+
+- Szklo, Moyses,Nieto, F. Javier. Epidemiology (Kindle Locations 2410-2415). Jones & Bartlett Learning. Kindle Edition.
+:::
+
+
+## Risk and Odds {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 33. -->
+
+::: {style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;"}
+|  | Outcome | No outcome | Total |
+| --- | :---: | :---: | :---: |
+| Exposed | a | b | a + b |
+| Unexposed | c | d | c + d |
+:::
+
+Risk in the exposed: $p = a/(a+b)$. Odds in the exposed: $p/(1-p) = a/b$.
+
+| Measure | When $a = 0$ | When $p = 0.001$ |
+| --- | :---: | :---: |
+| Risk | $0/(0+b) = 0$ | $0.001$ |
+| Odds | $0/(1-0) = 0$ | $0.001/0.999 \approx 0.001001$ |
+
+When risk is small, **1 − risk is close to 1**, so odds and risk are similar.
+
+::: {.notes}
+- Because the odds are calculated as the incidence over 1 minus the incidence. When the risk is really low, 1 – minus the incidence is very close to 1-0, or 1, and any number divided by 1 is that number. So, you basically end up with the incidence divided by 1, which is just the incidence.
+
+- As an extreme example, if a is 0 then the incidence in the exposed is 0. Likewise, the odds in the exposed is 0 divided by 1 minus zero, which is 0 divided by 1, which is also zero. In this case, the odds equal the incidence.
+
+- Now, as a slightly less extreme example, let’s imagine the incidence is 0.001 or 1 in 1,000. In this case, the denominator is almost 1 (0.999 to be exact) and therefore, the odds are almost identical to the incidence.
+
+- So, the lower the incidence, the closer 1 minus the incidence is to one, and therefore, the better the incidence and the odds approximate each other. As the outcome becomes less rare, the OR will generally become increasingly more extreme than the IPR.
+:::
+
+
+## Comparing the Risk Ratio and Odds Ratio {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 34. -->
+
+::: {style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;"}
+|  | MI (+) | MI (–) | Total |
+| --- | :---: | :---: | :---: |
+| Severe hypertension | 180 | 9,820 | 10,000 |
+| Normotensive | 30 | 9,970 | 10,000 |
+:::
+
+- Risk with severe hypertension = 180 / 10,000 = **0.018**
+- Risk with normal blood pressure = 30 / 10,000 = **0.003**
+- **Risk ratio = 0.018 / 0.003 = 6**
+- Exposure odds among cases = 180 / 30 = **6**
+- Exposure odds among non-cases = 9,820 / 9,970 ≈ **0.985**
+- **Exposure OR = (180 / 30) / (9,820 / 9,970) ≈ 6.09**
+
+*Source: Szklo and Nieto, Epidemiology. Jones & Bartlett Learning.*
+
+::: {.notes}
+- And although we would typically calculate the incidence proportion ratio as our measure of association from cohort data like this, we can also calculate the odds ratio. In this case, the exposure odds ratio is 6.09 – similar to the incidence proportion ratio.
+
+- And how would we interpret that odds ratio?
+:::
+
+
+## Hypertension and MI: Interpreting the OR {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 35. -->
+
+::: {style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;"}
+|  | MI (+) | MI (–) | Total |
+| --- | :---: | :---: | :---: |
+| Severe hypertension | 180 | 9,820 | 10,000 |
+| Normotensive | 30 | 9,970 | 10,000 |
+:::
+
+- Exposure odds among cases = 180 / 30 = **6**
+- Exposure odds among non-cases = 9,820 / 9,970 ≈ **0.985**
+- **Exposure OR = (180 / 30) / (9,820 / 9,970) ≈ 6.09**
+
+Participants with MI had **6.09 times the odds of severe hypertension** compared with participants who did not have an MI during the one-year study period.
+
+*Source: Szklo and Nieto, Epidemiology. Jones & Bartlett Learning.*
+
+::: {.notes}
+- We could say participants with MI had 6.09 times the odds of severe hypertension compared to participants who did not have an MI over the 1-year study period.
+
+- Ok, great. The odds ratio approximates the incidence proportion ratio. But, why not just always calculate the incidence proportion ratio to begin with?
+
+- Again, here we know the total number of participants who were exposed and who were unexposed in this cohort study data – 10,000 each -- but in a typical case-based case-control study we don’t have that information. That’s the basic reason we can’t just keep calculating the more intuitive incidence proportion ratio.
+:::
+
+
+## Sampling 10% of Controls {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 36. -->
+<!-- Corrected the source control-odds calculation to use the displayed 10% sample: 982 / 997. -->
+
+::: {style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;"}
+|  | MI (+) | MI (–) | Cohort total |
+| --- | :---: | :---: | :---: |
+| Severe hypertension | 180 | 982 | ?? |
+| Normotensive | 30 | 997 | ?? |
+:::
+
+- Population risks require the original cohort denominators: **180 / ??** and **30 / ??**.
+- Exposure odds among cases = 180 / 30 = **6**
+- Exposure odds among sampled controls = 982 / 997 ≈ **0.985**
+- **Exposure OR = (180 / 30) / (982 / 997) ≈ 6.09**
+
+The OR is unchanged when we sample the same fraction of exposed and unexposed non-cases.
+
+*Source: Szklo and Nieto, Epidemiology. Jones & Bartlett Learning.*
+
+::: {.notes}
+- For this illustration, keep all cases and take exactly 10% of the exposed non-cases and 10% of the unexposed non-cases. The control counts become 982 and 997.
+
+- The row sums in the case-control sample are not the original cohort denominators. Without those denominators or sampling information that lets us reconstruct them, we cannot calculate the population risks directly.
+
+- Here we know the sampling fraction because we created this example from a complete cohort. In a typical case-control study, we do not have that complete cohort information.
+
+- The odds of exposure among controls remain 982 / 997 = 9,820 / 9,970. Therefore, the exposure odds ratio is unchanged at approximately 6.09. Random sampling may introduce sampling error.
+:::
+
+
+## Disease Odds Ratio {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 37. -->
+<!-- Calculate from the original counts before rounding; distinguish sample odds from population odds. -->
+
+::: {style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;"}
+|  | MI (+) | MI (–) | Cohort total |
+| --- | :---: | :---: | :---: |
+| Severe hypertension | 180 | 9,820 | ?? |
+| Normotensive | 30 | 9,970 | ?? |
+:::
+
+- Disease odds with severe hypertension = 180 / 9,820 ≈ **0.01833**
+- Disease odds with normal blood pressure = 30 / 9,970 ≈ **0.003009**
+- **Disease OR = (180 / 9,820) / (30 / 9,970) ≈ 6.09**
+
+Participants with severe hypertension had **6.09 times the odds of MI** over one year compared with normotensive participants.
+
+*Source: Szklo and Nieto, Epidemiology. Jones & Bartlett Learning.*
+
+::: {.notes}
+- The exposure odds ratio and disease odds ratio are algebraically identical: (a/c) / (b/d) = (a/b) / (c/d) = ad/bc.
+
+- Here we use the full counts from the hypothetical cohort. We retain the unknown cohort totals to show that calculating the odds ratio does not require those denominators.
+
+- Participants with severe hypertension had 6.09 times the odds of MI compared with normotensive participants over the one-year study period. This disease-focused interpretation is generally the one of greater interest.
+
+- Use the original counts in the calculation. Rounding the two individual odds to 0.018 and 0.003 before dividing would obscure the difference between the odds ratio and the risk ratio.
+:::
+
+
+## Disease OR With 10% of Controls {.compact}
+
+<!-- Source: case_control_studies.pptx, slide 38. -->
+<!-- Calculate from the original counts before rounding; distinguish sample odds from population odds. -->
+
+::: {style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;"}
+|  | MI (+) | MI (–) | Cohort total |
+| --- | :---: | :---: | :---: |
+| Severe hypertension | 180 | 982 | ?? |
+| Normotensive | 30 | 997 | ?? |
+:::
+
+- Sample odds with severe hypertension = 180 / 982 ≈ **0.1833**
+- Sample odds with normal blood pressure = 30 / 997 ≈ **0.03009**
+- **Disease OR = (180 / 982) / (30 / 997) ≈ 6.09**
+
+Participants with severe hypertension had **6.09 times the odds of MI** over one year compared with normotensive participants. The individual sample odds differ from the population odds.
+
+*Source: Szklo and Nieto, Epidemiology. Jones & Bartlett Learning.*
+
+::: {.notes}
+- We can repeat the calculation using the 10% sample of controls. Both row odds are ten times the corresponding cohort odds, so their ratio is unchanged.
+
+- These individual sample odds do not estimate the population odds of MI directly. The odds ratio is preserved because we sampled the same fraction of exposed and unexposed non-cases while retaining all cases.
+
+- With appropriate control sampling, the odds ratio estimates the disease odds ratio in the source population. When the outcome is rare, it can also approximate the risk ratio.
+
+- Random samples will introduce sampling error. This example keeps the exposure proportions exactly constant to show the underlying calculation.
+:::
+
+
+## Calculating Odds Ratio {visibility="hidden"}
 
 <!-- Use my slides instead. -->
 
@@ -231,7 +687,8 @@ Recall bias is another important threat to validity when conducting case-control
 **OR = (a/c) ÷ (b/d) = (a × d)/(b × c)**
 
 
-## Smoking and Lung Cancer {.compact}
+## Smoking and Lung Cancer {.compact} {visibility="hidden"}
+
 
 <!-- I think I might have a better example in my Epi III slides. -->
 
