@@ -1,6 +1,6 @@
 ---
 title: Case-Control Studies
-subtitle: "APHS 20203 · Epidemiology & Biostatistics<br>October 12, 2026"
+subtitle: "APHS 20203 · Epidemiology & Biostatistics"
 format:
   revealjs:
     theme:
@@ -21,12 +21,7 @@ execute:
 
 ## Retrospective Cohort vs. Case-Control
 
-<!-- REVIEW: Second of three sessions. Existing questions are retained for discussion/polling with show-of-hands fallback. Check Quiz 3 alignment; matched and nested analyses are deliberately not introduced. -->
-
-
-
-<!-- Source: cohort_study_design.pptx, slide 19. -->
-<!-- REVIEW: The source says cohort participants are sampled by exposure. Distinguish exposure-based recruitment from cohorts assembled by membership in a population; a new explanation has not been written. -->
+<!-- Add a quick review of experimental, prospective, and retrospective cohort studies. -->
 
 - Case-control
 
@@ -45,8 +40,6 @@ Don’t confuse retrospective cohort and case-control.
 
 ## When Cohort Is Not Ideal
 
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 33. -->
-
 Cohort studies are powerful — but not always practical.
 
 - What if:
@@ -62,9 +55,10 @@ Cohort studies are powerful — but not always practical.
     - In these situations, a different design may be more efficient.
 
 
-## Basic Case-Control Study Design
+<!-- Consider adding a slide about latency period. -->
 
-<!-- Source: UTHealth case_control_study_design.pdf, page 6; corresponding PowerPoint slide 7. -->
+
+## Basic Case-Control Study Design
 
 ![](assets/case-control.png){fig-alt="Cases and controls are selected from a population. Prior exposure is measured in each group, and exposure odds are compared." .nostretch width="1000" height="500" style="object-fit:contain;"}
 
@@ -100,43 +94,7 @@ This is a very simplistic description, but it’s intended to just give you an i
 - **Primary Measure of Association: Odds Ratio (OR)**
 
 
-## Poll: Identify the Study Design {.compact}
-
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 49. -->
-<!-- REVIEW: Originally hidden. Source does not include an answer key; review the response with Brad rather than adding a newly authored explanation. -->
-
-- Researchers identify 500 patients with lung cancer and 500 patients without lung cancer. They compare prior smoking history.
-
-- What type of study is this?
-
-**A.** Cohort study
-
-**B.** Case-control study
-
-**C.** Cross-sectional study
-
-**D.** Randomized trial
-
-
-## Discussion: How Would You Study Lung Cancer?
-
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 38. -->
-
-If lung cancer is a **rare disease**, how would you design the study?
-
-- Would you start with **exposure** or **outcome**?
-
-- Would long-term follow-up be practical?
-
-- How could you efficiently identify cases?
-
-- What comparison group would you need?
-
-
 ## Doll and Hill (1950) {.compact}
-
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 40. -->
-<!-- REVIEW: Retains the historical example from Yan's slides. Verify the original study citation and the framing of rarity before publication; no new historical detail has been added. -->
 
 - **Research Question:** Is cigarette smoking associated with lung cancer?
 
@@ -158,41 +116,16 @@ If lung cancer is a **rare disease**, how would you design the study?
 
     - Efficient comparison of prior exposure
 
-
-## Review: Population and Sample {.compact}
-
-<!-- Source: Association and Causality.qmd, "Population, Sample & Uncertainty". -->
-
-**Example:** We want to understand the health of adults living in Texas.
-
-| Group | Who belongs to it? | In our example |
-|---|---|---|
-| **Target population** | People we want findings to apply to | All Texas adults |
-| **Source population** | People from whom we select participants | Adult patients at several Texas clinics |
-| **Study sample** | People whose data we analyze | 500 participating patients |
-
-::: {.fragment}
-- **Chance:** Would another random sample from the same source give a different estimate?
-- **Applicability:** How well do these findings apply to all Texas adults?
-:::
-
 ::: {.notes}
-Sampling introduces uncertainty into our estimates. Who we recruit also affects which populations our findings may apply to. These are distinct questions: a larger clinic sample does not automatically make it representative of all Texas adults.
-
-Distinguish statistical uncertainty from causal uncertainty, as in Measures of Occurrence, slides 14–16. Even a precisely estimated association can leave uncertainty about its causal interpretation.
+Choosing the controls is one of the most important decisions we need to make when conducting a case-control study.
 :::
 
 
 ## Study Base Principle
 
-<!-- Source: case_control_study_design.pptx, slide 10. -->
-<!-- REVIEW: Use the common-source-population concept here. The absolute selection-bias statement is shorthand; assess whether selection actually distorts the exposure comparison. -->
-
 - Cases and controls should be “representative of the same base experience.”
 
-- If a potential control had gotten the disease, they would have been selected with the same probability as any other case
-
-    - If this is not true, you have selection bias!
+- If a potential control had gotten the disease, they would have been selected with the same probability as any other case.
 
 
 ## Group Exercise: Shands Hospital {.compact}
@@ -202,28 +135,10 @@ Distinguish statistical uncertainty from causal uncertainty, as in Measures of O
 
 Shands Hospital at the University of Florida is a referral hospital for a variety of cancer diagnoses \-\- including bronchogenic carcinoma \-\- for the North Florida region where it is located. Researchers are interested in the association between bronchogenic carcinoma and a history of cigarette smoking, and they decide to conduct a case-control study. Cases are selected from the admissions records to the cancer center. Controls are randomly selected from the population of the surrounding county. Does the control group violate the study base principle?
 
-## Selection Bias in Case-Control Studies {.compact}
-
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 42. -->
-<!-- REVIEW: The matching paragraph was omitted: matching alone does not establish a valid source population or control confounding. A replacement explanation would require additional material. -->
-
-- **Core Issue:** Controls must represent the **same source population** as the cases.
-
-    - If not, the exposure comparison becomes biased.
-
-- **Example (Smoking & Lung Cancer):**
-
-    - If controls are selected from a group with unusually low smoking rates,\
-      smoking may appear more strongly associated with lung cancer.
-
-- **Key Principle:**
-
-    - Controls should reflect the **exposure distribution** of the population that produced the cases.
-
 
 ## Recall Bias
 
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Types of Information Bias: Recall Bias". -->
+<!-- It would be cool to come up with some sort of in-class exercise that demonstrates this. Put something on the line for some students but not others and see how well they remember. -->
 
 ::::: {.columns}
 
@@ -248,11 +163,14 @@ Shands Hospital at the University of Florida is a referral hospital for a variet
 
 :::::
 
+::: {.notes}
+Recall bias is another important threat to validity when conducting case-control studies.
+:::
+
 
 ## Interviewer and Observer Bias {.compact}
 
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Types of Information Bias: Researcher Bias". -->
-
+<!-- Give this a two column layout. -->
 
 - **Interviewer Bias**
 
@@ -275,8 +193,7 @@ Shands Hospital at the University of Florida is a referral hospital for a variet
 
 ## Why Use an Odds Ratio? {.compact}
 
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 43. -->
-<!-- REVIEW: The no-incidence statement applies to the basic case-control sample presented here. Specialized designs and external denominator information need qualifications if introduced later. -->
+<!-- I have a better slide (or set of slides) for examplaining this in my Epi III slides. The slide(s) use a 2x2 table. -->
 
 - In case-control studies, we cannot calculate **risk** directly. Why?
 
@@ -301,8 +218,7 @@ Shands Hospital at the University of Florida is a referral hospital for a variet
 
 ## Calculating Odds Ratio
 
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 44. -->
-<!-- REVIEW: The source table and odds-ratio equation are transcribed into editable Quarto text instead of retaining equation screenshots. -->
+<!-- Use my slides instead. -->
 
 | | Cases | Controls |
 | --- | --- | --- |
@@ -317,7 +233,7 @@ Shands Hospital at the University of Florida is a referral hospital for a variet
 
 ## Smoking and Lung Cancer {.compact}
 
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 46. -->
+<!-- I think I might have a better example in my Epi III slides. -->
 
 - **Research Question:** Is smoking associated with lung cancer?
 
@@ -361,51 +277,7 @@ Shands Hospital at the University of Florida is a referral hospital for a variet
     - When cases are rare: **Total population ≈ Non-cases**
 
 
-## Poll: Interpreting Odds Ratio {.compact}
-
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 51. -->
-
-- In a case-control study examining asbestos exposure and lung cancer, researchers identified 400 lung cancer cases and 400 controls without lung cancer. The Odds Ratio (OR) for asbestos exposure was **3.0**.
-
-- What does this mean?
-
-**A.** Exposed individuals have 3 times the risk of lung cancer
-
-**B.** Asbestos exposure causes lung cancer
-
-**C.** There is no association between asbestos and lung cancer
-
-**D.** Lung cancer cases had 3 times the odds of prior asbestos exposure compared to controls
-
-::: {.notes}
-Explanation: OR compares the odds of prior exposure between cases and controls. It does not directly measure risk or prove causation.
-:::
-
-
-## Poll: Identifying Bias {.compact}
-
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 52. -->
-
-- In a case-control study investigating the relationship between alcohol use and liver cancer, cases were recruited from a major urban hospital. Controls were recruited from a local fitness club.
-
-- Which bias is most likely?
-
-**A.** Recall bias
-
-**B.** Attrition bias
-
-**C.** Selection bias
-
-**D.** Interviewer bias
-
-::: {.notes}
-Explanation: Controls from a fitness club may not represent the same source population as hospital cases, leading to distorted exposure comparison.
-:::
-
-
 ## Strengths and Limitations {.compact}
-
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 47. -->
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -436,7 +308,7 @@ Explanation: Controls from a fitness club may not represent the same source popu
 ## Cohort vs. Case-Control Studies {.compact}
 
 <!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 48. -->
-<!-- REVIEW: This source table is a basic comparison. Time/cost and primary bias concerns depend on the study; cohort studies also support association measures other than RR. -->
+<!-- REVIEW: This source table is a basic comparison.  -->
 
 | Feature | Cohort Study | Case-Control Study |
 | --- | --- | --- |
@@ -447,3 +319,80 @@ Explanation: Controls from a fitness club may not represent the same source popu
 | Time & Cost | Longer, more expensive | Faster, less expensive |
 | Main Bias Concern | Loss to follow-up | Selection & recall bias |
 | Can Measure Incidence? | Yes | No |
+
+::: {.notes}
+- Time/cost and primary bias concerns depend on the study.\ 
+- Cohort studies also support association measures other than RR.
+:::
+
+
+## Poll: Identify the Study Design {.compact}
+
+<!-- Either make this a little more subtle or move it to the end. -->
+
+- Researchers identify 500 patients with lung cancer and 500 patients without lung cancer. They compare prior smoking history.
+
+- What type of study is this?
+
+**A.** Cohort study
+
+**B.** Case-control study
+
+**C.** Cross-sectional study
+
+**D.** Randomized trial
+
+
+## Discussion: How Would You Study Lung Cancer?
+
+<!-- Either make this a little more subtle or move it to the end. -->
+
+If lung cancer is a **rare disease**, how would you design the study?
+
+- Would you start with **exposure** or **outcome**?
+
+- Would long-term follow-up be practical?
+
+- How could you efficiently identify cases?
+
+- What comparison group would you need?
+
+
+## Poll: Interpreting Odds Ratio {.compact}
+
+<!-- Don't use lung cancer for all of the examples. Actually, neurodegenerative diseases might make a good example. -->
+
+- In a case-control study examining asbestos exposure and lung cancer, researchers identified 400 lung cancer cases and 400 controls without lung cancer. The Odds Ratio (OR) for asbestos exposure was **3.0**.
+
+- What does this mean?
+
+**A.** Exposed individuals have 3 times the risk of lung cancer
+
+**B.** Asbestos exposure causes lung cancer
+
+**C.** There is no association between asbestos and lung cancer
+
+**D.** Lung cancer cases had 3 times the odds of prior asbestos exposure compared to controls
+
+::: {.notes}
+Explanation: OR compares the odds of prior exposure between cases and controls. It does not directly measure risk or prove causation.
+:::
+
+
+## Poll: Identifying Bias {.compact}
+
+- In a case-control study investigating the relationship between alcohol use and liver cancer, cases were recruited from a major urban hospital. Controls were recruited from a local fitness club.
+
+- Which bias is most likely?
+
+**A.** Recall bias
+
+**B.** Attrition bias
+
+**C.** Selection bias
+
+**D.** Interviewer bias
+
+::: {.notes}
+Explanation: Controls from a fitness club may not represent the same source population as hospital cases, leading to distorted exposure comparison.
+:::
