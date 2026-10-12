@@ -34,7 +34,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-ad630a0279582c0eafd7793d2460ec2b.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-34e970d70970bc47f7dd43e325559e70.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -135,17 +135,104 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Case-Control Studies</h1>
-  <p class="subtitle">APHS 20203 · Epidemiology &amp; Biostatistics<br>October 12, 2026</p>
+  <p class="subtitle">APHS 20203 · Epidemiology &amp; Biostatistics</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
+<section id="hierarchy-of-study-designs" class="slide level2">
+<h2>Hierarchy of Study Designs</h2>
+
+<img data-src="../../assets/study_design_hierarchy.png" alt="Diagram grouping study designs into observational and experimental approaches. From left to right: case descriptions, ecological, cross-sectional, case-control, and cohort studies are observational; nonrandomized and randomized studies are experimental. An arrow indicates that evidence typically becomes more convincing from left to right." class="r-stretch"><aside class="notes">
+<ul>
+<li>Here is a review of our study design hierarchy.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="basic-experimental-study-design" class="slide level2">
+<h2>Basic Experimental Study Design</h2>
+<p><img data-src="../Experimental and Cohort Studies/assets/cohort-studies-slide-06.png" class="" style="object-fit:contain;" alt="Experimental design: researchers assign exposure to an initially unexposed, outcome-free source population, follow exposed and unexposed groups, measure outcomes, and compare incidence proportions. Orange denotes exposed, blue unexposed, triangles outcomes, and circles no outcome." width="1120" height="530"></p>
+</section>
+<section id="common-prospective-cohort-study-design" class="slide level2">
+<h2>Common Prospective Cohort Study Design</h2>
+<p><img data-src="../Experimental and Cohort Studies/assets/cohort-studies-slide-12.png" class="" style="object-fit:contain;" alt="Complete prospective cohort design: identify the cohort, measure exposure, follow exposed and unexposed groups for outcomes, calculate each incidence proportion, and compare the two." width="1120" height="530"></p>
+</section>
+<section id="common-retrospective-cohort-study-design" class="slide level2">
+<h2>Common Retrospective Cohort Study Design</h2>
+<p><img data-src="../Experimental and Cohort Studies/assets/cohort-studies-slide-13.png" class="" style="object-fit:contain;" alt="Retrospective cohort design: exposure and outcomes occur before researchers identify the cohort and gather exposure and outcome measurements from records. Incidence proportions are calculated and compared for exposed and unexposed groups." width="1120" height="530"></p>
+</section>
+<section id="when-cohort-is-not-ideal" class="slide level2">
+<h2>When Cohort Is Not Ideal</h2>
+<p>Cohort studies are powerful — but not always practical.</p>
+<ul>
+<li><p>What if:</p>
+<ul>
+<li><p>The disease is <strong>rare</strong>?</p></li>
+<li><p>The outcome has a <strong>long latency period</strong>?</p></li>
+<li><p>Long-term follow-up is <strong>too costly or infeasible</strong>?</p></li>
+<li><p>You need results <strong>quickly</strong>?</p></li>
+<li><p>In these situations, a different design may be more efficient.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="induction-and-latent-periods" class="slide level2">
+<h2>Induction and Latent Periods</h2>
+<p><img data-src="assets/cohort-studies-slide-23.png" class="" style="object-fit:contain;" alt="Timeline distinguishing the induction period, from smoking exposure to disease initiation when the sufficient cause is complete, from the latent period, from disease initiation to diagnosis. Symptoms appear between disease initiation and diagnosis. Causal pies show smoking followed by the addition of U, representing other causal components." width="1120" height="530"></p>
+<aside class="notes">
+<ul>
+<li><p>The induction period is the time from exposure to disease initiation. In this diagram, disease begins when the sufficient cause is complete.</p></li>
+<li><p>The latent period is the time from disease initiation to detection, shown here as diagnosis. Disease can be present before we detect it.</p></li>
+<li><p>The key idea is that exposure, disease initiation, symptoms, and diagnosis can occur at different times. A cohort study may need a long follow-up period to observe the outcome.</p></li>
+<li><p>Source: cohort_studies.pptx, slide 23. The original slide notes cite Kenneth J. Rothman, Epidemiology: An Introduction, p.&nbsp;81.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="basic-case-control-study-design" class="slide level2">
+<h2>Basic Case-Control Study Design</h2>
+<p><img data-src="assets/case-control.png" class="" style="object-fit:contain;" alt="Case-control design: identify cases with the outcome and controls without the outcome from the population of interest, measure prior exposure in each group, calculate the odds of exposure among cases and controls, and compare those odds. Orange denotes exposed, blue unexposed, triangles cases, and circles controls." width="1120" height="530"></p>
+<aside class="notes">
+<ul>
+<li><p>Here’s my graphical representation of the basic case-control study design. There are other case-control designs, but this gives us an intuitive starting point.</p></li>
+<li><p>Exposures and outcomes occur out in the world. We then identify a group of people who have experienced the outcome of interest, called cases, and measure their history of exposure.</p></li>
+<li><p>We also identify a comparison group without the outcome, called controls, from the population that gave rise to the cases. We measure their history of exposure in the same way.</p></li>
+<li><p>Finally, we calculate the odds of prior exposure in each group and compare those odds.</p></li>
+<li><p>In this example, orange represents exposure to smoking and blue represents no exposure to smoking. Triangles represent people with lung cancer, and circles represent people without lung cancer.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="retrospective-cohort-vs.-case-control" class="slide level2">
 <h2>Retrospective Cohort vs.&nbsp;Case-Control</h2>
-<!-- REVIEW: Second of three sessions. Existing questions are retained for discussion/polling with show-of-hands fallback. Check Quiz 3 alignment; matched and nested analyses are deliberately not introduced. -->
-<!-- Source: cohort_study_design.pptx, slide 19. -->
-<!-- REVIEW: The source says cohort participants are sampled by exposure. Distinguish exposure-based recruitment from cohorts assembled by membership in a population; a new explanation has not been written. -->
 <ul>
 <li><p>Case-control</p>
 <ul>
@@ -154,7 +241,7 @@
 <li><p>Retrospective Cohort</p>
 <ul>
 <li><p>Sample based on exposure and look “forward” towards the outcome</p></li>
-<li><p>A cohort study was done, you just weren’t there to initially observe it</p></li>
+<li><p>A cohort study was done. You just weren’t there to initially observe it</p></li>
 </ul></li>
 </ul>
 <aside class="notes">
@@ -171,198 +258,37 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="when-cohort-is-not-ideal" class="slide level2">
-<h2>When Cohort Is Not Ideal</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 33. -->
-<p>Cohort studies are powerful — but not always practical.</p>
-<ul>
-<li><p>What if:</p>
-<ul>
-<li><p>The disease is <strong>rare</strong>?</p></li>
-<li><p>The outcome has a <strong>long latency period</strong>?</p></li>
-<li><p>Long-term follow-up is <strong>too costly or infeasible</strong>?</p></li>
-<li><p>You need results <strong>quickly</strong>?</p></li>
-<li><p>In these situations, a different design may be more efficient.</p></li>
-</ul></li>
-</ul>
+<section>
+<section id="threats-to-validity" class="title-slide slide level1 section center">
+<h1>Threats to Validity</h1>
+
 </section>
-<section id="basic-case-control-study-design" class="slide level2">
-<h2>Basic Case-Control Study Design</h2>
-<!-- Source: UTHealth case_control_study_design.pdf, page 6; corresponding PowerPoint slide 7. -->
-<p><img data-src="assets/case-control.png" class="" style="object-fit:contain;" alt="Cases and controls are selected from a population. Prior exposure is measured in each group, and exposure odds are compared." width="1000" height="500"></p>
-<aside class="notes">
-<p>Here’s my little graphical representation of the basic case-based case-control study design. There are other case-control designs, but when someone simply says, “case-control” study, this is probably what they are talking about.</p>
-<p>In this design, exposures and outcomes that we are interested in occur out in the world. Then, we come along and gather up a group of people who have already had the outcome we are interested in and then measure their history of exposures(s). Similarly, we gather up a group of people who we think are comparable to the people with the outcome in all relevant ways, but who haven’t had the outcome, and we also measure their history of exposure(s). Finally, we calculate the odds of being exposed in both groups and compare.</p>
-<p>Where: Orange = Exposed to smoking Blue = Unexposed to smoking Circle = No lung cancer Triangle = Lung cancer</p>
-<p>This is a very simplistic description, but it’s intended to just give you an intuitive feel for what we are talking about.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="case-control-studies-overview" class="slide level2">
-<h2>Case-Control Studies: Overview</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 34. -->
-<!-- REVIEW: Traditional, nested, and matched were listed as separate types in the source, although the categories can overlap. That taxonomy is omitted; the slide illustrates a basic case-control study. -->
-<ul>
-<li><p><strong>Definition:</strong> Start with <strong>outcome status</strong></p>
-<ul>
-<li><p><strong>Cases</strong> → Have the disease; <strong>Controls</strong> → Do not have the disease</p></li>
-<li><p>Then look backward to assess <strong>prior exposure</strong></p></li>
-</ul></li>
-<li><p><strong>Direction of Inquiry:</strong> Outcome → Exposure</p></li>
-<li><p><strong>Primary Measure of Association: Odds Ratio (OR)</strong></p></li>
-</ul>
-</section>
-<section id="poll-identify-the-study-design" class="slide level2 compact">
-<h2>Poll: Identify the Study Design</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 49. -->
-<!-- REVIEW: Originally hidden. Source does not include an answer key; review the response with Brad rather than adding a newly authored explanation. -->
-<ul>
-<li><p>Researchers identify 500 patients with lung cancer and 500 patients without lung cancer. They compare prior smoking history.</p></li>
-<li><p>What type of study is this?</p></li>
-</ul>
-<p><strong>A.</strong> Cohort study</p>
-<p><strong>B.</strong> Case-control study</p>
-<p><strong>C.</strong> Cross-sectional study</p>
-<p><strong>D.</strong> Randomized trial</p>
-</section>
-<section id="discussion-how-would-you-study-lung-cancer" class="slide level2">
-<h2>Discussion: How Would You Study Lung Cancer?</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 38. -->
-<p>If lung cancer is a <strong>rare disease</strong>, how would you design the study?</p>
-<ul>
-<li><p>Would you start with <strong>exposure</strong> or <strong>outcome</strong>?</p></li>
-<li><p>Would long-term follow-up be practical?</p></li>
-<li><p>How could you efficiently identify cases?</p></li>
-<li><p>What comparison group would you need?</p></li>
-</ul>
-</section>
-<section id="doll-and-hill-1950" class="slide level2 compact">
-<h2>Doll and Hill (1950)</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 40. -->
-<!-- REVIEW: Retains the historical example from Yan's slides. Verify the original study citation and the framing of rarity before publication; no new historical detail has been added. -->
-<ul>
-<li><p><strong>Research Question:</strong> Is cigarette smoking associated with lung cancer?</p></li>
-<li><p><strong>Study Design:</strong></p>
-<ul>
-<li><p><strong>Cases:</strong> Patients diagnosed with lung cancer</p></li>
-<li><p><strong>Controls:</strong> Hospital patients without lung cancer</p></li>
-<li><p>Collected prior <strong>smoking history</strong></p></li>
-</ul></li>
-<li><p><strong>Direction of Inquiry:</strong> Outcome → Exposure</p></li>
-<li><p><strong>Why Case-Control Was Appropriate:</strong></p>
-<ul>
-<li><p>Lung cancer was a <strong>rare disease</strong></p></li>
-<li><p>Long-term follow-up would have been impractical</p></li>
-<li><p>Efficient comparison of prior exposure</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="review-population-and-sample" class="slide level2 compact">
-<h2>Review: Population and Sample</h2>
-<!-- Source: Association and Causality.qmd, "Population, Sample & Uncertainty". -->
-<p><strong>Example:</strong> We want to understand the health of adults living in Texas.</p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Group</th>
-<th>Who belongs to it?</th>
-<th>In our example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Target population</strong></td>
-<td>People we want findings to apply to</td>
-<td>All Texas adults</td>
-</tr>
-<tr class="even">
-<td><strong>Source population</strong></td>
-<td>People from whom we select participants</td>
-<td>Adult patients at several Texas clinics</td>
-</tr>
-<tr class="odd">
-<td><strong>Study sample</strong></td>
-<td>People whose data we analyze</td>
-<td>500 participating patients</td>
-</tr>
-</tbody>
-</table>
-<div class="fragment">
-<ul>
-<li><strong>Chance:</strong> Would another random sample from the same source give a different estimate?</li>
-<li><strong>Applicability:</strong> How well do these findings apply to all Texas adults?</li>
-</ul>
-</div>
-<aside class="notes">
-<p>Sampling introduces uncertainty into our estimates. Who we recruit also affects which populations our findings may apply to. These are distinct questions: a larger clinic sample does not automatically make it representative of all Texas adults.</p>
-<p>Distinguish statistical uncertainty from causal uncertainty, as in Measures of Occurrence, slides 14–16. Even a precisely estimated association can leave uncertainty about its causal interpretation.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="study-base-principle" class="slide level2">
+<section id="study-base-principle" class="slide level2 compact">
 <h2>Study Base Principle</h2>
-<!-- Source: case_control_study_design.pptx, slide 10. -->
-<!-- REVIEW: Use the common-source-population concept here. The absolute selection-bias statement is shorthand; assess whether selection actually distorts the exposure comparison. -->
 <ul>
 <li><p>Cases and controls should be “representative of the same base experience.”</p></li>
-<li><p>If a potential control had gotten the disease, they would have been selected with the same probability as any other case</p>
-<ul>
-<li>If this is not true, you have selection bias!</li>
-</ul></li>
+<li><p>If a potential control had gotten the disease, they would have been selected with the same probability as any other case.</p></li>
 </ul>
-</section>
-<section id="group-exercise-shands-hospital" class="slide level2 compact">
-<h2>Group Exercise: Shands Hospital</h2>
-<!-- Source: case_control_study_design.pptx, slide 11. -->
-<!-- REVIEW: Retain the original Shands question. The old Poll Everywhere activity link is omitted because it has not been checked; use group discussion or a show of hands. No new answer explanation has been authored. -->
-<p>Shands Hospital at the University of Florida is a referral hospital for a variety of cancer diagnoses -- including bronchogenic carcinoma -- for the North Florida region where it is located.&nbsp;Researchers are interested in the association between bronchogenic carcinoma and a history of cigarette smoking, and they decide to conduct a case-control study. Cases are selected from the admissions records to the cancer center. Controls are randomly selected from the population of the surrounding county. Does the control group violate the study base principle?</p>
-</section>
-<section id="selection-bias-in-case-control-studies" class="slide level2 compact">
-<h2>Selection Bias in Case-Control Studies</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 42. -->
-<!-- REVIEW: The matching paragraph was omitted: matching alone does not establish a valid source population or control confounding. A replacement explanation would require additional material. -->
+<p><img data-src="assets/case-control.png" class="" style="object-fit:contain;" alt="Case-control design: identify cases with the outcome and controls without the outcome from the population of interest, measure prior exposure in each group, calculate the odds of exposure among cases and controls, and compare those odds. Orange denotes exposed, blue unexposed, triangles cases, and circles controls." width="1120" height="530"></p>
+<aside class="notes">
 <ul>
-<li><p><strong>Core Issue:</strong> Controls must represent the <strong>same source population</strong> as the cases.</p>
-<ul>
-<li>If not, the exposure comparison becomes biased.</li>
-</ul></li>
-<li><p><strong>Example (Smoking &amp; Lung Cancer):</strong></p>
-<ul>
-<li>If controls are selected from a group with unusually low smoking rates,<br>
-smoking may appear more strongly associated with lung cancer.</li>
-</ul></li>
-<li><p><strong>Key Principle:</strong></p>
-<ul>
-<li>Controls should reflect the <strong>exposure distribution</strong> of the population that produced the cases.</li>
-</ul></li>
+<li>Selecting controls can be one of the trickiest parts of using case-control studies. It starts with the study base principle.</li>
 </ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="recall-bias" class="slide level2">
 <h2>Recall Bias</h2>
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Types of Information Bias: Recall Bias". -->
+<!-- It would be cool to come up with some sort of in-class exercise that demonstrates this. Put something on the line for some students but not others and see how well they remember. -->
 <div class="columns">
 <div class="column" style="width:47%;">
 <ul>
@@ -377,10 +303,23 @@ smoking may appear more strongly associated with lung cancer.</li>
 </div><div class="column" style="width:53%;">
 <p><img data-src="assets/m6-source-035-shape-2.png" class="" style="max-width:100%;height:auto;" alt="Cartoon of an interviewee claiming to remember exact foods, quantities, date, and time of a meal eaten years earlier." width="583"></p>
 </div></div>
+<aside class="notes">
+<p>Recall bias is another important threat to validity when conducting case-control studies.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="interviewer-and-observer-bias" class="slide level2 compact">
 <h2>Interviewer and Observer Bias</h2>
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Types of Information Bias: Researcher Bias". -->
+<!-- Give this a two-column layout. -->
 <ul>
 <li><p><strong>Interviewer Bias</strong></p>
 <ul>
@@ -399,8 +338,7 @@ smoking may appear more strongly associated with lung cancer.</li>
 </section>
 <section id="why-use-an-odds-ratio" class="slide level2 compact">
 <h2>Why Use an Odds Ratio?</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 43. -->
-<!-- REVIEW: The no-incidence statement applies to the basic case-control sample presented here. Specialized designs and external denominator information need qualifications if introduced later. -->
+<!-- I have a better slide (or set of slides) for explaining this in my Epi III slides. The slide(s) use a 2x2 table. -->
 <ul>
 <li><p>In case-control studies, we cannot calculate <strong>risk</strong> directly. Why?</p>
 <ul>
@@ -419,148 +357,996 @@ smoking may appear more strongly associated with lung cancer.</li>
 <li><p>Case-Control → Uses <strong>Odds Ratio (OR)</strong></p></li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="analysis-of-case-control-studies" class="title-slide slide level1 section center">
+<h1>Analysis of Case-Control Studies</h1>
+
 </section>
-<section id="calculating-odds-ratio" class="slide level2">
-<h2>Calculating Odds Ratio</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 44. -->
-<!-- REVIEW: The source table and odds-ratio equation are transcribed into editable Quarto text instead of retaining equation screenshots. -->
+<section id="odds-of-exposure-among-cases" class="slide level2 compact">
+<h2>Odds of Exposure Among Cases</h2>
+<p>Given the prototypical 2x2 table for case-control data, which of the formulas below will calculate the odds of exposure among cases?</p>
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th></th>
-<th>Cases</th>
-<th>Controls</th>
+<th style="text-align: center;">Cases</th>
+<th style="text-align: center;">Controls</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Exposed</td>
-<td>a</td>
-<td>b</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">B</td>
 </tr>
 <tr class="even">
 <td>Not exposed</td>
-<td>c</td>
-<td>d</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">D</td>
 </tr>
 <tr class="odd">
-<td>Odds of exposure</td>
-<td>a/c</td>
-<td>b/d</td>
+<td></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Odds ratio:</strong> odds of exposure in cases versus odds of exposure in controls.</p>
-<p><strong>OR = (a/c) ÷ (b/d) = (a × d)/(b × c)</strong></p>
-</section>
-<section id="smoking-and-lung-cancer" class="slide level2 compact">
-<h2>Smoking and Lung Cancer</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 46. -->
+</div>
+<p><strong>A.</strong> <span class="math inline">\(\frac{a}{c}\)</span><br>
+</p>
+<p><strong>B.</strong> <span class="math inline">\(\frac{a}{b}\)</span><br>
+</p>
+<p><strong>C.</strong> <span class="math inline">\(\frac{a}{a+b}\)</span><br>
+</p>
+<p><strong>D.</strong> <span class="math inline">\(\frac{a}{a+c}\)</span></p>
+<aside class="notes">
 <ul>
-<li><p><strong>Research Question:</strong> Is smoking associated with lung cancer?</p></li>
-<li><p><strong>Study Design:</strong></p>
-<ul>
-<li><p><strong>Cases:</strong> Patients with lung cancer</p></li>
-<li><p><strong>Controls:</strong> Patients without lung cancer</p></li>
-<li><p>Collected prior <strong>smoking history</strong></p></li>
-</ul></li>
-<li><p><strong>OR</strong> = (A × D) / (B × C)= (647 × 27) / (622 × 2)≈ <strong>14.0</strong></p></li>
-<li><p><strong>Interpretation:</strong> The odds of prior smoking among lung cancer cases are about <strong>14 times higher</strong> than among controls.</p></li>
-<li><p><strong>Conclusion:</strong> Smoking is strongly associated with lung cancer.</p></li>
+<li>Do you remember how to calculate and interpret odds?<br>
+</li>
+<li>Do you remember how to calculate and interpret an odds ratio?<br>
+</li>
+<li>Let’s have a little refresher.</li>
+<li>The odds of exposure among cases can be calculated as a / c.</li>
 </ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="odds-of-exposure-among-cases-1" class="slide level2 compact">
+<h2>Odds of Exposure Among Cases</h2>
+<p>Given the prototypical 2x2 table for case-control data, which of the following is an accurate expression of the odds of exposure among cases?</p>
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th></th>
-<th>Lung Cancer (+)</th>
-<th>Lung Cancer (–)</th>
+<th style="text-align: center;">Cases</th>
+<th style="text-align: center;">Controls</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Smoker</td>
-<td>647</td>
-<td>622</td>
+<td>Exposed</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">25</td>
 </tr>
 <tr class="even">
-<td>Non-Smoker</td>
-<td>2</td>
-<td>27</td>
+<td>Not exposed</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr class="odd">
+<td>Odds of exposure</td>
+<td style="text-align: center;">???</td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
+</div>
+<ul>
+<li class="fragment"><p>The odds of exposure among cases = <span class="math inline">\(a/c = 50/100 = 0.5\)</span>.</p></li>
+<li class="fragment"><p>Equivalent ways to express these odds: <strong>50:100 = 0.5:1 = 5:10 = 1:2</strong>.</p></li>
+<li class="fragment"><p>For every <strong>1 exposed case</strong>, there are <strong>2 unexposed cases</strong>.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><p>And we can express the odds in many different ways.</p></li>
+<li><p>For example, as a over c or as a to c.&nbsp;In this particular case, that translates to 50 over 100 or 50 to 100. Or, if we divide 50 by 100, we get 0.5, which we can also express as 0.5 to 1. In other words, for every 0.5 cases who were exposed, there was one who wasn’t exposed.</p></li>
+<li><p>If we move the decimal one place to the right on both sides of our ratio (multiply by 10), we get 5 to 10, and we can say for every 5 cases who were exposed, there were 10 cases who were not exposed.</p></li>
+<li><p>We could also divide one by the odds (0.5) and add the result to the right-hand side of the ratio. We could then say for every case who was exposed, there were 2 cases who were not exposed. As you can see, we can get the same answer by dividing 100 by 50 and putting the answer on the right-hand side of the ratio.</p></li>
+<li><p>All of these are equivalent ways of expressing the odds of exposure among cases.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
+<section id="odds-of-exposure-among-controls" class="slide level2 compact">
+<h2>Odds of Exposure Among Controls</h2>
+<p>Given the prototypical 2x2 table for case-control data, which of the following is an accurate expression of the odds of exposure among controls?</p>
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Cases</th>
+<th style="text-align: center;">Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exposed</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr class="even">
+<td>Not exposed</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr class="odd">
+<td>Odds of exposure</td>
+<td style="text-align: center;">50 / 100</td>
+<td style="text-align: center;">???</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>A.</strong> 0.2</p>
+<p><strong>B.</strong> 1:2</p>
+<p><strong>C.</strong> 2.5:1</p>
+<p><strong>D.</strong> 0.25</p>
+<aside class="notes">
+<ul>
+<li>The only correct expression of the odds among the choices above is 0.25. You can derive this answer by dividing 25 by 100.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="odds-of-exposure" class="slide level2 compact">
+<h2>Odds of Exposure</h2>
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Cases</th>
+<th style="text-align: center;">Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exposed</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr class="even">
+<td>Not exposed</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr class="odd">
+<td>Odds of exposure</td>
+<td style="text-align: center;">50 / 100</td>
+<td style="text-align: center;">25 / 100</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>Odds of exposure among cases = 50 / 100 = <strong>0.5</strong></p></li>
+<li><p>Odds of exposure among controls = 25 / 100 = <strong>0.25</strong></p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Now that we’ve calculated the odds of exposure among cases and controls, we may want to compare them in order to say something about the association (or lack thereof) between exposure and outcome – or being a case.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="association" class="slide level2 compact">
+<h2>Association</h2>
+<div class="fragment">
+<ul>
+<li><p>The distribution of the thing we are measuring differs, on average, between two groups. This could be its center, spread, shape, or the proportion of people in each category.</p></li>
+<li><p>Knowing something about <strong>X</strong> tells us something about <strong>Y</strong>.</p></li>
+</ul>
+</div>
+<aside class="notes">
+<ul>
+<li>And remember that an association exists when the distribution of the thing we are measuring is different, on average, in two groups. Alternatively, we can say that knowing something about x tells us something about y or helps us predict y.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="comparing-exposure-odds" class="slide level2 compact">
+<h2>Comparing Exposure Odds</h2>
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Cases</th>
+<th style="text-align: center;">Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exposed</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr class="even">
+<td>Not exposed</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr class="odd">
+<td>Odds of exposure</td>
+<td style="text-align: center;">50 / 100</td>
+<td style="text-align: center;">25 / 100</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>Odds of exposure among cases = <span style="color: red;"><strong>0.5</strong></span></p></li>
+<li><p>Odds of exposure among controls = <span style="color: red;"><strong>0.25</strong></span></p></li>
+</ul>
+<p>The odds are higher among cases. <strong>How much higher?</strong></p>
+<aside class="notes">
+<ul>
+<li>We can tell just by looking at the odds, which are 0.5 and 0.25, that they aren’t the same. That is, the odds of being exposed if you are a case are greater than the odds of being exposed if you are a control. But, how much greater?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="calculating-the-exposure-odds-ratio" class="slide level2 compact">
+<h2>Calculating the Exposure Odds Ratio</h2>
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Cases</th>
+<th style="text-align: center;">Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exposed</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr class="even">
+<td>Not exposed</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr class="odd">
+<td>Odds of exposure</td>
+<td style="text-align: center;">50 / 100</td>
+<td style="text-align: center;">25 / 100</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math display">\[
+\text{Exposure OR} = \frac{\text{Odds of exposure among cases}}{\text{Odds of exposure among controls}} = \frac{a/c}{b/d}
+\]</span></p>
+<aside class="notes">
+<ul>
+<li>Well, we can answer that question by calculating the ratio of the odds among cases to the odds among controls.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="odds-of-exposure-among-controls-1" class="slide level2 compact">
+<h2>Odds of Exposure Among Controls</h2>
+<p>Given the prototypical 2x2 table for case-control data, what is the exposure odds ratio?</p>
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Cases</th>
+<th style="text-align: center;">Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exposed</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr class="even">
+<td>Not exposed</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr class="odd">
+<td>Odds of exposure</td>
+<td style="text-align: center;">50 / 100</td>
+<td style="text-align: center;">25 / 100</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>A.</strong> 1</p>
+<p><strong>B.</strong> 2</p>
+<p><strong>C.</strong> 3</p>
+<p><strong>D.</strong> 4</p>
+<aside class="notes">
+<ul>
+<li>The answer (2) is on the next slide.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exposure-odds-ratio-calculation" class="slide level2 compact">
+<h2>Exposure Odds Ratio: Calculation</h2>
+<!-- Source: case_control_studies.pptx, slide 29. -->
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Cases</th>
+<th style="text-align: center;">Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exposed</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr class="even">
+<td>Not exposed</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr class="odd">
+<td>Odds of exposure</td>
+<td style="text-align: center;">50 / 100</td>
+<td style="text-align: center;">25 / 100</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math display">\[
+\text{Exposure OR} = \frac{a/c}{b/d} = \frac{50/100}{25/100} = \frac{0.5}{0.25} = 2
+\]</span></p>
+<p>How would you interpret this odds ratio?</p>
+<aside class="notes">
+<ul>
+<li>So, our exposure OR is 2. And how do we interpret that?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exposure-odds-ratio-interpretation" class="slide level2 compact">
+<h2>Exposure Odds Ratio: Interpretation</h2>
+<!-- Source: case_control_studies.pptx, slide 30. -->
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Cases</th>
+<th style="text-align: center;">Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exposed</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr class="even">
+<td>Not exposed</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr class="odd">
+<td>Odds of exposure</td>
+<td style="text-align: center;">50 / 100</td>
+<td style="text-align: center;">25 / 100</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math display">\[
+\text{Exposure OR} = \frac{50/100}{25/100} = \frac{0.5}{0.25} = 2
+\]</span></p>
+<p>The odds of exposure among cases are <strong>2 times</strong> the odds of exposure among controls.</p>
+<aside class="notes">
+<ul>
+<li>The odds of exposure among cases are 2 times the odds of exposure among controls.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="why-use-the-odds-ratio" class="slide level2 compact">
+<h2>Why Use the Odds Ratio?</h2>
+<!-- Source: case_control_studies.pptx, slide 31. -->
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Cases</th>
+<th style="text-align: center;">Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exposed</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr class="even">
+<td>Not exposed</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr class="odd">
+<td>Odds of exposure</td>
+<td style="text-align: center;">50 / 100</td>
+<td style="text-align: center;">25 / 100</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>We can calculate it directly from a case-control study.</p></li>
+<li><p>We can also estimate it using logistic regression.</p></li>
+<li><p>Under certain conditions, it approximates the <strong>risk ratio</strong>.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><p>And the odds ratio has some really convenient traits that make it an attractive measure of association when we have data from a case-control study.</p></li>
+<li><p>Unlike the incidence proportion ratio, the odds ratio can be directly calculated from a case-based case-control study.</p></li>
+<li><p>It can be derived from logistic regression models.</p></li>
+<li><p>It can be used to approximate the incidence proportion ratio under certain conditions. And as we’ve said before, the incidence proportion ratio is generally considered to be a more intuitive measure of association.</p></li>
+<li><p>Therefore, we will briefly compare the odds ratio and the incidence proportion ratio.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="hypothetical-cohort-hypertension-and-mi" class="slide level2 compact">
+<h2>Hypothetical Cohort: Hypertension and MI</h2>
+<!-- Source: case_control_studies.pptx, slide 32. -->
+<!-- Corrected the source risk denominator from 10,00 to 10,000. -->
+<p>One-year incidence of acute myocardial infarction (<strong>MI</strong>, or heart attack). Severe systolic hypertension: ≥180 mm Hg. Normal systolic blood pressure: &lt;120 mm Hg.</p>
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">MI (+)</th>
+<th style="text-align: center;">MI (–)</th>
+<th style="text-align: center;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Severe hypertension</td>
+<td style="text-align: center;">180</td>
+<td style="text-align: center;">9,820</td>
+<td style="text-align: center;">10,000</td>
+</tr>
+<tr class="even">
+<td>Normotensive</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">9,970</td>
+<td style="text-align: center;">10,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li class="fragment"><p>Risk of MI among people with severe hypertension = 180 / 10,000 = <strong>0.018</strong></p></li>
+<li class="fragment"><p>Risk of MI among normotensive people = 30 / 10,000 = <strong>0.003</strong></p></li>
+<li class="fragment"><p>Risk ratio (incidence proportion ratio) = 0.018 / 0.003 = <strong>6</strong></p></li>
+<li class="fragment"><p>Participants with severe hypertension had <strong>6 times the risk of MI</strong> over one year compared with normotensive participants.</p></li>
+</ul>
+
+<aside class="notes">
+<ul>
+<li><p>mmHg is said as “millimeters of mercury.”</p></li>
+<li><p>Sometimes, it’s helpful to start by discussing a cohort study. In the example shown here, severe hypertension and acute myocardial infarction are the exposure and the outcome of interest, respectively.</p></li>
+<li><p>Because this is a cohort study and we know the row totals, we can calculate the incidence proportion ratio as we’ve done all semester. In this case, participants with severe hypertension had 6 times the risk of MI over the 1-year study period compared to participants with normotensive blood pressure.</p></li>
+<li><p>For these data, the risk of myocardial infarction is relatively low for both the exposed and unexposed groups. Specifically, the risk of MI is 0.018 among those with severe hypertension and 0.003 among people with normotensive blood pressure.</p></li>
+<li><p>Therefore, the odds of developing MI will approximate the probabilities; as a result, the odds ratio of disease approximates the incidence proportion ratio.</p></li>
+<li><p>Why?</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p><em>Source: Szklo and Nieto, Epidemiology. Jones &amp; Bartlett Learning.</em></p>
+</div></aside></section>
+<section id="risk-and-odds" class="slide level2 compact">
+<h2>Risk and Odds</h2>
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Outcome</th>
+<th style="text-align: center;">No outcome</th>
+<th style="text-align: center;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exposed</td>
+<td style="text-align: center;">a</td>
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">a + b</td>
+</tr>
+<tr class="even">
+<td>Unexposed</td>
+<td style="text-align: center;">c</td>
+<td style="text-align: center;">d</td>
+<td style="text-align: center;">c + d</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="purple-table-header" style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 41%">
+<col style="width: 20%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Measure</strong></th>
+<th style="text-align: center;">Formula</th>
+<th style="text-align: center;">a = 0</th>
+<th style="text-align: center;">Incidence = 0.001</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Incidence</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{a}{a+b}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{0}{0+b}=0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0.001\)</span></td>
+</tr>
+<tr class="even">
+<td>Odds</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{\frac{a}{a+b}}{1-\frac{a}{a+b}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{\frac{0}{0+b}}{1-\frac{0}{0+b}} = \frac{0}{1-0} = \frac{0}{1} = 0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{0.001}{1-0.001} \approx \frac{0.001}{1}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Risk in the exposed: <span class="math inline">\(p = a/(a+b)\)</span>. Odds in the exposed: <span class="math inline">\(p/(1-p) = a/b\)</span>.</p>
+<p>When risk is small, <strong>1 − risk is close to 1</strong>, so odds and risk are similar.</p>
+<aside class="notes">
+<ul>
+<li><p>Because the odds are calculated as the incidence over 1 minus the incidence. When the risk is really low, 1 minus the incidence is very close to 1-0, or 1, and any number divided by 1 is that number. So, you basically end up with the incidence divided by 1, which is just the incidence.</p></li>
+<li><p>As an extreme example, if a is 0, then the incidence in the exposed is 0. Likewise, the odds in the exposed are 0 divided by 1 minus zero, which is 0 divided by 1, which is also zero. In this case, the odds equal the incidence.</p></li>
+<li><p>Now, as a slightly less extreme example, let’s imagine the incidence is 0.001 or 1 in 1,000. In this case, the denominator is almost 1 (0.999 to be exact), and therefore, the odds are almost identical to the incidence.</p></li>
+<li><p>So, the lower the incidence, the closer 1 minus the incidence is to one, and therefore, the better the incidence and the odds approximate each other. As the outcome becomes less rare, the OR will generally become increasingly more extreme than the IPR.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="comparing-the-risk-ratio-and-odds-ratio" class="slide level2 compact">
+<h2>Comparing the Risk Ratio and Odds Ratio</h2>
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">MI (+)</th>
+<th style="text-align: center;">MI (–)</th>
+<th style="text-align: center;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Severe hypertension</td>
+<td style="text-align: center;">180</td>
+<td style="text-align: center;">9,820</td>
+<td style="text-align: center;">10,000</td>
+</tr>
+<tr class="even">
+<td>Normotensive</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">9,970</td>
+<td style="text-align: center;">10,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>The incidence of MI among people with severe hypertension = 180 / 10,000 = <strong>0.018</strong></li>
+<li>The incidence of MI among people who are normotensive = 30 / 10,000 = <strong>0.003</strong></li>
+<li><strong>Risk ratio = 0.018 / 0.003 = 6</strong> <br></li>
+<li>The odds of severe hypertension among cases = 180 / 30 = <strong>6</strong></li>
+<li>The odds of severe hypertension among controls = 9,820 / 9,970 ≈ <strong>0.985</strong></li>
+<li><strong>Exposure OR = (180 / 30) / (9,820 / 9,970) ≈ 6.09</strong></li>
+</ul>
+
+<aside class="notes">
+<ul>
+<li><p>And although we would typically calculate the incidence proportion ratio as our measure of association from cohort data like this, we can also calculate the odds ratio. In this case, the exposure odds ratio is 6.09 – similar to the incidence proportion ratio.</p></li>
+<li><p>And how would we interpret that odds ratio?</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p><em>Source: Szklo and Nieto, Epidemiology. Jones &amp; Bartlett Learning.</em></p>
+</div></aside></section>
+<section id="hypertension-and-mi-interpreting-the-or" class="slide level2 compact">
+<h2>Hypertension and MI: Interpreting the OR</h2>
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">MI (+)</th>
+<th style="text-align: center;">MI (–)</th>
+<th style="text-align: center;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Severe hypertension</td>
+<td style="text-align: center;">180</td>
+<td style="text-align: center;">9,820</td>
+<td style="text-align: center;">10,000</td>
+</tr>
+<tr class="even">
+<td>Normotensive</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">9,970</td>
+<td style="text-align: center;">10,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>Exposure odds among cases = 180 / 30 = <strong>6</strong></li>
+<li>Exposure odds among non-cases = 9,820 / 9,970 ≈ <strong>0.985</strong></li>
+<li><strong>Exposure OR = (180 / 30) / (9,820 / 9,970) ≈ 6.09</strong></li>
+</ul>
+<p>Participants with MI had <strong>6.09 times the odds of severe hypertension</strong> compared with participants who did not have an MI during the one-year study period.</p>
+
+<aside class="notes">
+<ul>
+<li><p>We could say participants with MI had 6.09 times the odds of severe hypertension compared to participants who did not have an MI over the 1-year study period.</p></li>
+<li><p>Okay, great. The odds ratio approximates the incidence proportion ratio. But, why not just always calculate the incidence proportion ratio to begin with?</p></li>
+<li><p>Again, here we know the total number of participants who were exposed and who were unexposed in these cohort study data – 10,000 each – but in a typical case-based case-control study we don’t have that information. That’s the basic reason we can’t just keep calculating the more intuitive incidence proportion ratio.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p><em>Source: Szklo and Nieto, Epidemiology. Jones &amp; Bartlett Learning.</em></p>
+</div></aside></section>
+<section id="sampling-10-of-controls" class="slide level2 compact">
+<h2>Sampling 10% of Controls</h2>
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">MI (+)</th>
+<th style="text-align: center;">MI (–)</th>
+<th style="text-align: center;">Cohort total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Severe hypertension</td>
+<td style="text-align: center;">180</td>
+<td style="text-align: center;">982</td>
+<td style="text-align: center;">??</td>
+</tr>
+<tr class="even">
+<td>Normotensive</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">997</td>
+<td style="text-align: center;">??</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>Population risks require the original cohort denominators: <strong>180 / ??</strong> and <strong>30 / ??</strong>.</li>
+<li>Exposure odds among cases = 180 / 30 = <strong>6</strong></li>
+<li>Exposure odds among sampled controls = 982 / 997 ≈ <strong>0.985</strong></li>
+<li><strong>Exposure OR = (180 / 30) / (982 / 997) ≈ 6.09</strong></li>
+</ul>
+<p>The OR is unchanged when we sample the same fraction of exposed and unexposed non-cases.</p>
+
+<aside class="notes">
+<ul>
+<li><p>For this illustration, keep all cases and take exactly 10% of the exposed non-cases and 10% of the unexposed non-cases. The control counts become 982 and 997.</p></li>
+<li><p>The row sums in the case-control sample are not the original cohort denominators. Without those denominators or sampling information that lets us reconstruct them, we cannot calculate the population risks directly.</p></li>
+<li><p>Here we know the sampling fraction because we created this example from a complete cohort. In a typical case-control study, we do not have that complete cohort information.</p></li>
+<li><p>The odds of exposure among controls remain 982 / 997 = 9,820 / 9,970. Therefore, the exposure odds ratio is unchanged at approximately 6.09. Random sampling may introduce sampling error.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p><em>Source: Szklo and Nieto, Epidemiology. Jones &amp; Bartlett Learning.</em></p>
+</div></aside></section>
+<section id="disease-odds-ratio" class="slide level2 compact">
+<h2>Disease Odds Ratio</h2>
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">MI (+)</th>
+<th style="text-align: center;">MI (–)</th>
+<th style="text-align: center;">Cohort total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Severe hypertension</td>
+<td style="text-align: center;">180</td>
+<td style="text-align: center;">9,820</td>
+<td style="text-align: center;">??</td>
+</tr>
+<tr class="even">
+<td>Normotensive</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">9,970</td>
+<td style="text-align: center;">??</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>Disease odds with severe hypertension = 180 / 9,820 ≈ <strong>0.01833</strong></li>
+<li>Disease odds with normal blood pressure = 30 / 9,970 ≈ <strong>0.003009</strong></li>
+<li><strong>Disease OR = (180 / 9,820) / (30 / 9,970) ≈ 6.09</strong></li>
+</ul>
+<p>Participants with severe hypertension had <strong>6.09 times the odds of MI</strong> over one year compared with normotensive participants.</p>
+
+<aside class="notes">
+<ul>
+<li><p>The exposure odds ratio and disease odds ratio are algebraically identical: (a/c) / (b/d) = (a/b) / (c/d) = ad/bc.</p></li>
+<li><p>Here we use the full counts from the hypothetical cohort. We retain the unknown cohort totals to show that calculating the odds ratio does not require those denominators.</p></li>
+<li><p>Participants with severe hypertension had 6.09 times the odds of MI compared with normotensive participants over the one-year study period. This disease-focused interpretation is generally the one of greater interest.</p></li>
+<li><p>Use the original counts in the calculation. Rounding the two individual odds to 0.018 and 0.003 before dividing would obscure the difference between the odds ratio and the risk ratio.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p><em>Source: Szklo and Nieto, Epidemiology. Jones &amp; Bartlett Learning.</em></p>
+</div></aside></section>
+<section id="disease-or-with-10-of-controls" class="slide level2 compact">
+<h2>Disease OR With 10% of Controls</h2>
+<div style="border: 2px solid currentColor; width: fit-content; margin:2em auto 2em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">MI (+)</th>
+<th style="text-align: center;">MI (–)</th>
+<th style="text-align: center;">Cohort total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Severe hypertension</td>
+<td style="text-align: center;">180</td>
+<td style="text-align: center;">982</td>
+<td style="text-align: center;">??</td>
+</tr>
+<tr class="even">
+<td>Normotensive</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">997</td>
+<td style="text-align: center;">??</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>Sample odds with severe hypertension = 180 / 982 ≈ <strong>0.1833</strong></li>
+<li>Sample odds with normal blood pressure = 30 / 997 ≈ <strong>0.03009</strong></li>
+<li><strong>Disease OR = (180 / 982) / (30 / 997) ≈ 6.09</strong></li>
+</ul>
+<p>Participants with severe hypertension had <strong>6.09 times the odds of MI</strong> over one year compared with normotensive participants. The individual sample odds differ from the population odds.</p>
+
+<aside class="notes">
+<ul>
+<li><p>We can repeat the calculation using the 10% sample of controls. Both row odds are ten times the corresponding cohort odds, so their ratio is unchanged.</p></li>
+<li><p>These individual sample odds do not estimate the population odds of MI directly. The odds ratio is preserved because we sampled the same fraction of exposed and unexposed non-cases while retaining all cases.</p></li>
+<li><p>With appropriate control sampling, the odds ratio estimates the disease odds ratio in the source population. When the outcome is rare, it can also approximate the risk ratio.</p></li>
+<li><p>Random samples will introduce sampling error. This example keeps the exposure proportions exactly constant to show the underlying calculation.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p><em>Source: Szklo and Nieto, Epidemiology. Jones &amp; Bartlett Learning.</em></p>
+</div></aside></section>
 <section id="interpreting-the-odds-ratio" class="slide level2 compact">
 <h2>Interpreting the Odds Ratio</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 45. -->
-<!-- REVIEW: The source's "protective effect" wording should not imply that the OR establishes causation. The rare-disease approximation needs appropriate source-population sampling assumptions; do not generalize it to every case-control design. -->
 <ul>
 <li><p><strong>Interpreting the Odds Ratio (OR)</strong></p>
 <ul>
 <li><p><strong>OR = 1:</strong> No association between exposure and disease</p></li>
 <li><p><strong>OR &gt; 1:</strong> Exposure is associated with <strong>higher odds</strong> of disease</p></li>
-<li><p><strong>OR &lt; 1:</strong> Exposure is associated with <strong>lower odds</strong> of disease (protective effect)</p></li>
-</ul></li>
-<li><p><strong>Important:</strong> OR reflects <strong>odds</strong>, not risk.</p></li>
-<li><p>When the disease is <strong>rare</strong>, the OR closely approximates the <strong>Relative Risk (RR)</strong>.</p>
-<ul>
-<li>When cases are rare: <strong>Total population ≈ Non-cases</strong></li>
+<li><p><strong>OR &lt; 1:</strong> Exposure is associated with <strong>lower odds</strong> of disease</p></li>
 </ul></li>
 </ul>
-</section>
-<section id="poll-interpreting-odds-ratio" class="slide level2 compact">
-<h2>Poll: Interpreting Odds Ratio</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 51. -->
-<ul>
-<li><p>In a case-control study examining asbestos exposure and lung cancer, researchers identified 400 lung cancer cases and 400 controls without lung cancer. The Odds Ratio (OR) for asbestos exposure was <strong>3.0</strong>.</p></li>
-<li><p>What does this mean?</p></li>
-</ul>
-<p><strong>A.</strong> Exposed individuals have 3 times the risk of lung cancer</p>
-<p><strong>B.</strong> Asbestos exposure causes lung cancer</p>
-<p><strong>C.</strong> There is no association between asbestos and lung cancer</p>
-<p><strong>D.</strong> Lung cancer cases had 3 times the odds of prior asbestos exposure compared to controls</p>
-<aside class="notes">
-<p>Explanation: OR compares the odds of prior exposure between cases and controls. It does not directly measure risk or prove causation.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="poll-identifying-bias" class="slide level2 compact">
-<h2>Poll: Identifying Bias</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 52. -->
-<ul>
-<li><p>In a case-control study investigating the relationship between alcohol use and liver cancer, cases were recruited from a major urban hospital. Controls were recruited from a local fitness club.</p></li>
-<li><p>Which bias is most likely?</p></li>
-</ul>
-<p><strong>A.</strong> Recall bias</p>
-<p><strong>B.</strong> Attrition bias</p>
-<p><strong>C.</strong> Selection bias</p>
-<p><strong>D.</strong> Interviewer bias</p>
-<aside class="notes">
-<p>Explanation: Controls from a fitness club may not represent the same source population as hospital cases, leading to distorted exposure comparison.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="strengths-and-limitations" class="slide level2 compact">
 <h2>Strengths and Limitations</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 47. -->
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Strengths</strong></p>
@@ -582,8 +1368,6 @@ smoking may appear more strongly associated with lung cancer.</li>
 </section>
 <section id="cohort-vs.-case-control-studies" class="slide level2 compact">
 <h2>Cohort vs.&nbsp;Case-Control Studies</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 48. -->
-<!-- REVIEW: This source table is a basic comparison. Time/cost and primary bias concerns depend on the study; cohort studies also support association measures other than RR. -->
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -630,12 +1414,241 @@ smoking may appear more strongly associated with lung cancer.</li>
 </tr>
 </tbody>
 </table>
-
-
+<aside class="notes">
+<ul>
+<li>Time/cost and primary bias concerns depend on the study.&nbsp;</li>
+<li>Cohort studies also support association measures other than RR.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
+<section id="practice-sampling" class="slide level2">
+<h2>Practice: Sampling</h2>
+<p>In a case-control study, we typically sample based on the _____ we are interested in studying.</p>
+<p><strong>A.</strong> Exposure</p>
+<p><strong>B.</strong> Outcome</p>
+<aside class="notes">
+<p>In a case-control study, we typically start with an outcome we are interested in studying. We then sample (select) people for the study based on the presence or absence of that outcome.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="practice-identify-the-study-design" class="slide level2 compact">
+<h2>Practice: Identify the Study Design</h2>
+<p>Researchers survey 1,000 adults at a single point in time, asking about their current smoking status and whether they currently have a chronic cough. What type of study is this?</p>
+<p><strong>A.</strong> Cohort study</p>
+<p><strong>B.</strong> Case-control study</p>
+<p><strong>C.</strong> Cross-sectional study</p>
+<p><strong>D.</strong> Randomized trial</p>
+<aside class="notes">
+<p>Answer: Cross-sectional study. Smoking status and cough are assessed at the same time.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="practice-identify-the-study-design-1" class="slide level2 compact">
+<h2>Practice: Identify the Study Design</h2>
+<p>Researchers use medical records from 2010 to identify 1,000 smokers and 1,000 nonsmokers who were free of lung cancer. They review records through 2020 to determine who developed lung cancer. All records already exist when the study begins. What type of study is this?</p>
+<p><strong>A.</strong> Cohort study</p>
+<p><strong>B.</strong> Case-control study</p>
+<p><strong>C.</strong> Cross-sectional study</p>
+<p><strong>D.</strong> Randomized trial</p>
+<aside class="notes">
+<p>Answer: Retrospective cohort study. Researchers group people by past exposure and use existing records to compare subsequent disease occurrence.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="practice-identify-the-study-design-2" class="slide level2 compact">
+<h2>Practice: Identify the Study Design</h2>
+<p>Researchers sample 500 patients who have lung cancer and 500 patients who do not have lung cancer. They compare the two groups’ smoking histories before the lung cancer diagnoses. What type of study is this?</p>
+<p><strong>A.</strong> Cohort study</p>
+<p><strong>B.</strong> Case-control study</p>
+<p><strong>C.</strong> Cross-sectional study</p>
+<p><strong>D.</strong> Randomized trial</p>
+<aside class="notes">
+<p>Answer: Case-control study. Participants are selected based on disease status, and researchers compare their prior exposure.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="practice-study-base-principle" class="slide level2 compact">
+<h2>Practice: Study Base Principle</h2>
+<p>Shands Hospital at the University of Florida is a referral hospital for a variety of cancer diagnoses -- including bronchogenic carcinoma -- for the North Florida region where it is located.&nbsp;</p>
+<p>Researchers are interested in the association between bronchogenic carcinoma and a history of cigarette smoking, and they decide to conduct a case-control study. Cases are selected from the admissions records to the cancer center. Controls are randomly selected from the population of the surrounding county.</p>
+<p>Does the control group violate the study base principle?</p>
+<p><strong>A.</strong> Probably</p>
+<p><strong>B.</strong> Probably not</p>
+<aside class="notes">
+<p>Remember that the study base principle tells us that cases and controls should be “representative of the same base experience.” One way to conceptualize this in our heads is to think of the study base as those who would have been selected as cases if they developed the disease. Based on the narrative above, it seems like people from the surrounding county would likely go to Shands if they developed bronchogenic carcinoma, and then they would have had the same probability of selection as any other case. Therefore, the study base principle is probably not violated in this scenario.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="practice-control-selection" class="slide level2 compact">
+<h2>Practice: Control Selection</h2>
+<p>Researchers are interested in the effect of obesity on colorectal cancer and conduct a case-control study. Cases are selected from a large colon cancer registry. Researchers are concerned that unmeasured genetic factors may bias study results.</p>
+<p>What would be a good control group to remove the potential confounding effects of genetic factors?</p>
+<aside class="notes">
+<p>Matching study subjects with siblings may be used in both cohort and case-control studies to control for shared genetic and environmental factors. (Modern Epidemiology, 4th ed.)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="practice-identifying-bias" class="slide level2 compact">
+<h2>Practice: Identifying Bias</h2>
+<p>In a case-control study investigating the relationship between alcohol use and liver cancer, cases were recruited from a major urban hospital. Controls were recruited from a local fitness club.</p>
+<p>Which bias is most likely?</p>
+<p><strong>A.</strong> Recall bias</p>
+<p><strong>B.</strong> Attrition bias</p>
+<p><strong>C.</strong> Selection bias</p>
+<p><strong>D.</strong> Interviewer bias</p>
+<aside class="notes">
+<p>Explanation: Controls from a fitness club may not represent the same source population as hospital cases, leading to distorted exposure comparison.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="practice-interpreting-odds" class="slide level2 compact">
+<h2>Practice: Interpreting Odds</h2>
+<p>In a study of Parkinson’s disease, the odds of prior pesticide exposure among cases were <strong>0.25</strong>, or <strong>1 to 4</strong>.</p>
+<p>What does this mean?</p>
+<p><strong>A.</strong> 25% of cases had prior pesticide exposure</p>
+<p><strong>B.</strong> For every 1 case with prior pesticide exposure, there were 4 cases without prior exposure</p>
+<p><strong>C.</strong> Cases had 25% greater risk of pesticide exposure</p>
+<p><strong>D.</strong> Cases were 4 times as likely to have prior pesticide exposure as to have no prior exposure</p>
+<aside class="notes">
+<p>Correct answer: B.</p>
+<p>Odds of 1 to 4 mean 1 exposed case for every 4 unexposed cases. The corresponding proportion exposed is 1 / (1 + 4) = 20%, not 25%.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="practice-interpreting-an-odds-ratio" class="slide level2 compact">
+<h2>Practice: Interpreting an Odds Ratio</h2>
+<p>In a case-control study, researchers compared patients with Parkinson’s disease to controls without Parkinson’s disease. The odds ratio for prior pesticide exposure was <strong>2.5</strong>.</p>
+<p>What does this mean?</p>
+<p><strong>A.</strong> Pesticide exposure causes Parkinson’s disease</p>
+<p><strong>B.</strong> People exposed to pesticides had 2.5 times the risk of Parkinson’s disease</p>
+<p><strong>C.</strong> Parkinson’s disease cases had 2.5 times the odds of prior pesticide exposure compared to controls</p>
+<p><strong>D.</strong> 2.5% of Parkinson’s disease cases had prior pesticide exposure</p>
+<aside class="notes">
+<p>Correct answer: C.</p>
+<p>An OR greater than 1 indicates a positive association. Cases had higher odds of prior exposure than controls. This result does not directly measure risk or establish causation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="practice-interpreting-an-odds-ratio-1" class="slide level2 compact">
+<h2>Practice: Interpreting an Odds Ratio</h2>
+<p>In a case-control study, researchers compared patients with Alzheimer’s disease to controls without Alzheimer’s disease. The odds ratio for regular physical activity during midlife was <strong>0.60</strong>.</p>
+<p>What does this mean?</p>
+<p><strong>A.</strong> Alzheimer’s disease cases had 40% lower odds of regular physical activity during midlife compared to controls</p>
+<p><strong>B.</strong> Physically active people had 60% lower risk of Alzheimer’s disease</p>
+<p><strong>C.</strong> Regular physical activity prevents Alzheimer’s disease</p>
+<p><strong>D.</strong> There was no association between physical activity and Alzheimer’s disease</p>
+<aside class="notes">
+<p>Correct answer: A.</p>
+<p>Cases had 0.60 times the odds of prior regular physical activity compared to controls. This is equivalent to 40% lower odds: (1 − 0.60) × 100%.</p>
+<p>An OR less than 1 indicates an inverse association. This result does not establish that physical activity prevents Alzheimer’s disease.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="assets/tcu-logo-purple.svg" class="slide-logo"></p>
+<p><img src="../../assets/tcu-logo-purple.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>

@@ -1897,88 +1897,74 @@
     "text": "References\n\n\nCenters for Disease Control and Prevention. 2024. “Health Effects of Cigarettes: Cancer.” September 17. https://www.cdc.gov/tobacco/about/cigarettes-and-cancer.html.\n\n\nElliott, Paul, Jeremiah Stamler, Rob Nichols, et al. 1996. “Intersalt Revisited: Further Analyses of 24 Hour Sodium Excretion and Blood Pressure Within and Across Populations.” BMJ 312 (7041): 1249–53. https://doi.org/10.1136/bmj.312.7041.1249.\n\n\nGrodstein, Francine, Meir J. Stampfer, JoAnn E. Manson, et al. 1996. “Postmenopausal Estrogen and Progestin Use and the Risk of Cardiovascular Disease.” New England Journal of Medicine 335 (7): 453–61. https://doi.org/10.1056/NEJM199608153350701.\n\n\nKuadkitkan, Atichat, Nitwara Wikan, Wannapa Sornjai, and Duncan R. Smith. 2020. “Zika Virus and Microcephaly in Southeast Asia: A Cause for Concern?” Journal of Infection and Public Health 13 (1): 11–15. https://doi.org/10.1016/j.jiph.2019.09.012.\n\n\nManson, JoAnn E., Judith Hsia, Karen C. Johnson, et al. 2003. “Estrogen Plus Progestin and the Risk of Coronary Heart Disease.” New England Journal of Medicine 349 (6): 523–34. https://doi.org/10.1056/NEJMoa030808.\n\n\nNational Library of Medicine. 2020. “Huntington’s Disease.” MedlinePlus Genetics, July 1. https://medlineplus.gov/genetics/condition/huntingtons-disease/.\n\n\nRasmussen, Sonja A., Denise J. Jamieson, Margaret A. Honein, and Lyle R. Petersen. 2016. “Zika Virus and Birth Defects—Reviewing the Evidence for Causality.” New England Journal of Medicine 374: 1981–87. https://doi.org/10.1056/NEJMsr1604338.\n\n\nSacks, F. M., L. P. Svetkey, W. M. Vollmer, et al. 2001. “Effects on Blood Pressure of Reduced Dietary Sodium and the Dietary Approaches to Stop Hypertension (DASH) Diet.” New England Journal of Medicine 344 (1): 3–10. https://doi.org/10.1056/NEJM200101043440101.\n\n\nThe Writing Group for the PEPI Trial. 1995. “Effects of Estrogen or Estrogen/Progestin Regimens on Heart Disease Risk Factors in Postmenopausal Women: The Postmenopausal Estrogen/Progestin Interventions (PEPI) Trial.” JAMA 273 (3): 199–208. https://pubmed.ncbi.nlm.nih.gov/7807658/.\n\n\nU.S. Department of Health and Human Services. 2014. The Health Consequences of Smoking—50 Years of Progress: A Report of the Surgeon General. U.S. Dept of Health and Human Services. https://www.ncbi.nlm.nih.gov/books/NBK179276/."
   },
   {
-    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#retrospective-cohort-vs.-case-control",
-    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#retrospective-cohort-vs.-case-control",
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#hierarchy-of-study-designs",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#hierarchy-of-study-designs",
     "title": "Case-Control Studies",
-    "section": "Retrospective Cohort vs. Case-Control",
-    "text": "Retrospective Cohort vs. Case-Control\n\n\n\n\nCase-control\n\nSample based on outcome and look backward for exposure.\n\nRetrospective Cohort\n\nSample based on exposure and look “forward” towards the outcome\nA cohort study was done, you just weren’t there to initially observe it\n\n\n\nDon’t confuse retrospective cohort and case-control."
+    "section": "Hierarchy of Study Designs",
+    "text": "Hierarchy of Study Designs\n\n\n\nHere is a review of our study design hierarchy."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#basic-experimental-study-design",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#basic-experimental-study-design",
+    "title": "Case-Control Studies",
+    "section": "Basic Experimental Study Design",
+    "text": "Basic Experimental Study Design"
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#common-prospective-cohort-study-design",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#common-prospective-cohort-study-design",
+    "title": "Case-Control Studies",
+    "section": "Common Prospective Cohort Study Design",
+    "text": "Common Prospective Cohort Study Design"
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#common-retrospective-cohort-study-design",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#common-retrospective-cohort-study-design",
+    "title": "Case-Control Studies",
+    "section": "Common Retrospective Cohort Study Design",
+    "text": "Common Retrospective Cohort Study Design"
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#when-cohort-is-not-ideal",
     "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#when-cohort-is-not-ideal",
     "title": "Case-Control Studies",
     "section": "When Cohort Is Not Ideal",
-    "text": "When Cohort Is Not Ideal\n\nCohort studies are powerful — but not always practical.\n\nWhat if:\n\nThe disease is rare?\nThe outcome has a long latency period?\nLong-term follow-up is too costly or infeasible?\nYou need results quickly?\nIn these situations, a different design may be more efficient."
+    "text": "When Cohort Is Not Ideal\nCohort studies are powerful — but not always practical.\n\nWhat if:\n\nThe disease is rare?\nThe outcome has a long latency period?\nLong-term follow-up is too costly or infeasible?\nYou need results quickly?\nIn these situations, a different design may be more efficient."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#induction-and-latent-periods",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#induction-and-latent-periods",
+    "title": "Case-Control Studies",
+    "section": "Induction and Latent Periods",
+    "text": "Induction and Latent Periods\n\n\n\nThe induction period is the time from exposure to disease initiation. In this diagram, disease begins when the sufficient cause is complete.\nThe latent period is the time from disease initiation to detection, shown here as diagnosis. Disease can be present before we detect it.\nThe key idea is that exposure, disease initiation, symptoms, and diagnosis can occur at different times. A cohort study may need a long follow-up period to observe the outcome.\nSource: cohort_studies.pptx, slide 23. The original slide notes cite Kenneth J. Rothman, Epidemiology: An Introduction, p. 81."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#basic-case-control-study-design",
     "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#basic-case-control-study-design",
     "title": "Case-Control Studies",
     "section": "Basic Case-Control Study Design",
-    "text": "Basic Case-Control Study Design\n\n\n\nHere’s my little graphical representation of the basic case-based case-control study design. There are other case-control designs, but when someone simply says, “case-control” study, this is probably what they are talking about.\nIn this design, exposures and outcomes that we are interested in occur out in the world. Then, we come along and gather up a group of people who have already had the outcome we are interested in and then measure their history of exposures(s). Similarly, we gather up a group of people who we think are comparable to the people with the outcome in all relevant ways, but who haven’t had the outcome, and we also measure their history of exposure(s). Finally, we calculate the odds of being exposed in both groups and compare.\nWhere: Orange = Exposed to smoking Blue = Unexposed to smoking Circle = No lung cancer Triangle = Lung cancer\nThis is a very simplistic description, but it’s intended to just give you an intuitive feel for what we are talking about."
+    "text": "Basic Case-Control Study Design\n\n\n\nHere’s my graphical representation of the basic case-control study design. There are other case-control designs, but this gives us an intuitive starting point.\nExposures and outcomes occur out in the world. We then identify a group of people who have experienced the outcome of interest, called cases, and measure their history of exposure.\nWe also identify a comparison group without the outcome, called controls, from the population that gave rise to the cases. We measure their history of exposure in the same way.\nFinally, we calculate the odds of prior exposure in each group and compare those odds.\nIn this example, orange represents exposure to smoking and blue represents no exposure to smoking. Triangles represent people with lung cancer, and circles represent people without lung cancer."
   },
   {
-    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#case-control-studies-overview",
-    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#case-control-studies-overview",
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#retrospective-cohort-vs.-case-control",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#retrospective-cohort-vs.-case-control",
     "title": "Case-Control Studies",
-    "section": "Case-Control Studies: Overview",
-    "text": "Case-Control Studies: Overview\n\n\n\nDefinition: Start with outcome status\n\nCases → Have the disease; Controls → Do not have the disease\nThen look backward to assess prior exposure\n\nDirection of Inquiry: Outcome → Exposure\nPrimary Measure of Association: Odds Ratio (OR)"
-  },
-  {
-    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#poll-identify-the-study-design",
-    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#poll-identify-the-study-design",
-    "title": "Case-Control Studies",
-    "section": "Poll: Identify the Study Design",
-    "text": "Poll: Identify the Study Design\n\n\n\nResearchers identify 500 patients with lung cancer and 500 patients without lung cancer. They compare prior smoking history.\nWhat type of study is this?\n\nA. Cohort study\nB. Case-control study\nC. Cross-sectional study\nD. Randomized trial"
-  },
-  {
-    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#discussion-how-would-you-study-lung-cancer",
-    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#discussion-how-would-you-study-lung-cancer",
-    "title": "Case-Control Studies",
-    "section": "Discussion: How Would You Study Lung Cancer?",
-    "text": "Discussion: How Would You Study Lung Cancer?\n\nIf lung cancer is a rare disease, how would you design the study?\n\nWould you start with exposure or outcome?\nWould long-term follow-up be practical?\nHow could you efficiently identify cases?\nWhat comparison group would you need?"
-  },
-  {
-    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#doll-and-hill-1950",
-    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#doll-and-hill-1950",
-    "title": "Case-Control Studies",
-    "section": "Doll and Hill (1950)",
-    "text": "Doll and Hill (1950)\n\n\n\nResearch Question: Is cigarette smoking associated with lung cancer?\nStudy Design:\n\nCases: Patients diagnosed with lung cancer\nControls: Hospital patients without lung cancer\nCollected prior smoking history\n\nDirection of Inquiry: Outcome → Exposure\nWhy Case-Control Was Appropriate:\n\nLung cancer was a rare disease\nLong-term follow-up would have been impractical\nEfficient comparison of prior exposure"
-  },
-  {
-    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#review-population-and-sample",
-    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#review-population-and-sample",
-    "title": "Case-Control Studies",
-    "section": "Review: Population and Sample",
-    "text": "Review: Population and Sample\n\nExample: We want to understand the health of adults living in Texas.\n\n\n\n\n\n\n\n\nGroup\nWho belongs to it?\nIn our example\n\n\n\n\nTarget population\nPeople we want findings to apply to\nAll Texas adults\n\n\nSource population\nPeople from whom we select participants\nAdult patients at several Texas clinics\n\n\nStudy sample\nPeople whose data we analyze\n500 participating patients\n\n\n\n\n\nChance: Would another random sample from the same source give a different estimate?\nApplicability: How well do these findings apply to all Texas adults?\n\n\n\nSampling introduces uncertainty into our estimates. Who we recruit also affects which populations our findings may apply to. These are distinct questions: a larger clinic sample does not automatically make it representative of all Texas adults.\nDistinguish statistical uncertainty from causal uncertainty, as in Measures of Occurrence, slides 14–16. Even a precisely estimated association can leave uncertainty about its causal interpretation."
+    "section": "Retrospective Cohort vs. Case-Control",
+    "text": "Retrospective Cohort vs. Case-Control\n\nCase-control\n\nSample based on outcome and look backward for exposure.\n\nRetrospective Cohort\n\nSample based on exposure and look “forward” towards the outcome\nA cohort study was done. You just weren’t there to initially observe it\n\n\n\nDon’t confuse retrospective cohort and case-control."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#study-base-principle",
     "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#study-base-principle",
     "title": "Case-Control Studies",
     "section": "Study Base Principle",
-    "text": "Study Base Principle\n\n\n\nCases and controls should be “representative of the same base experience.”\nIf a potential control had gotten the disease, they would have been selected with the same probability as any other case\n\nIf this is not true, you have selection bias!"
-  },
-  {
-    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#group-exercise-shands-hospital",
-    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#group-exercise-shands-hospital",
-    "title": "Case-Control Studies",
-    "section": "Group Exercise: Shands Hospital",
-    "text": "Group Exercise: Shands Hospital\n\n\nShands Hospital at the University of Florida is a referral hospital for a variety of cancer diagnoses -- including bronchogenic carcinoma -- for the North Florida region where it is located. Researchers are interested in the association between bronchogenic carcinoma and a history of cigarette smoking, and they decide to conduct a case-control study. Cases are selected from the admissions records to the cancer center. Controls are randomly selected from the population of the surrounding county. Does the control group violate the study base principle?"
-  },
-  {
-    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#selection-bias-in-case-control-studies",
-    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#selection-bias-in-case-control-studies",
-    "title": "Case-Control Studies",
-    "section": "Selection Bias in Case-Control Studies",
-    "text": "Selection Bias in Case-Control Studies\n\n\n\nCore Issue: Controls must represent the same source population as the cases.\n\nIf not, the exposure comparison becomes biased.\n\nExample (Smoking & Lung Cancer):\n\nIf controls are selected from a group with unusually low smoking rates,\nsmoking may appear more strongly associated with lung cancer.\n\nKey Principle:\n\nControls should reflect the exposure distribution of the population that produced the cases."
+    "text": "Study Base Principle\n\nCases and controls should be “representative of the same base experience.”\nIf a potential control had gotten the disease, they would have been selected with the same probability as any other case.\n\n\n\n\nSelecting controls can be one of the trickiest parts of using case-control studies. It starts with the study base principle."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#recall-bias",
     "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#recall-bias",
     "title": "Case-Control Studies",
     "section": "Recall Bias",
-    "text": "Recall Bias\n\n\n\n\nDefinition: A type of information bias in which participants remember past exposures differently.\nWhen it occurs\n\nOften in case-control studies\nCases may recall exposures more carefully than controls\n\nKey idea: Differences in memory between groups can distort the exposure–outcome association."
+    "text": "Recall Bias\n\n\n\n\nDefinition: A type of information bias in which participants remember past exposures differently.\nWhen it occurs\n\nOften in case-control studies\nCases may recall exposures more carefully than controls\n\nKey idea: Differences in memory between groups can distort the exposure–outcome association.\n\n\n\n\n\nRecall bias is another important threat to validity when conducting case-control studies."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#interviewer-and-observer-bias",
@@ -1992,55 +1978,223 @@
     "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#why-use-an-odds-ratio",
     "title": "Case-Control Studies",
     "section": "Why Use an Odds Ratio?",
-    "text": "Why Use an Odds Ratio?\n\n\n\nIn case-control studies, we cannot calculate risk directly. Why?\n\nWe start with a fixed number of cases and controls\nThe total population at risk is unknown\nIncidence cannot be measured\nInstead, we quantify association using the Odds Ratio (OR)\n\nWhat Does OR Measure?\n\nThe odds of prior exposure among cases compared to the odds of exposure among controls\n\nKey Contrast:\n\nCohort → Uses Relative Risk (RR)\nCase-Control → Uses Odds Ratio (OR)"
+    "text": "Why Use an Odds Ratio?\n\n\nIn case-control studies, we cannot calculate risk directly. Why?\n\nWe start with a fixed number of cases and controls\nThe total population at risk is unknown\nIncidence cannot be measured\nInstead, we quantify association using the Odds Ratio (OR)\n\nWhat Does OR Measure?\n\nThe odds of prior exposure among cases compared to the odds of exposure among controls\n\nKey Contrast:\n\nCohort → Uses Relative Risk (RR)\nCase-Control → Uses Odds Ratio (OR)"
   },
   {
-    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#calculating-odds-ratio",
-    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#calculating-odds-ratio",
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#odds-of-exposure-among-cases",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#odds-of-exposure-among-cases",
     "title": "Case-Control Studies",
-    "section": "Calculating Odds Ratio",
-    "text": "Calculating Odds Ratio\n\n\n\n\n\n\nCases\nControls\n\n\n\n\nExposed\na\nb\n\n\nNot exposed\nc\nd\n\n\nOdds of exposure\na/c\nb/d\n\n\n\nOdds ratio: odds of exposure in cases versus odds of exposure in controls.\nOR = (a/c) ÷ (b/d) = (a × d)/(b × c)"
+    "section": "Odds of Exposure Among Cases",
+    "text": "Odds of Exposure Among Cases\nGiven the prototypical 2x2 table for case-control data, which of the formulas below will calculate the odds of exposure among cases?\n\n\n\n\n\nCases\nControls\n\n\n\n\nExposed\nA\nB\n\n\nNot exposed\nC\nD\n\n\n\n\n\n\n\n\n\nA. \\(\\frac{a}{c}\\)\n\nB. \\(\\frac{a}{b}\\)\n\nC. \\(\\frac{a}{a+b}\\)\n\nD. \\(\\frac{a}{a+c}\\)\n\n\nDo you remember how to calculate and interpret odds?\n\nDo you remember how to calculate and interpret an odds ratio?\n\nLet’s have a little refresher.\nThe odds of exposure among cases can be calculated as a / c."
   },
   {
-    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#smoking-and-lung-cancer",
-    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#smoking-and-lung-cancer",
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#odds-of-exposure-among-cases-1",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#odds-of-exposure-among-cases-1",
     "title": "Case-Control Studies",
-    "section": "Smoking and Lung Cancer",
-    "text": "Smoking and Lung Cancer\n\n\nResearch Question: Is smoking associated with lung cancer?\nStudy Design:\n\nCases: Patients with lung cancer\nControls: Patients without lung cancer\nCollected prior smoking history\n\nOR = (A × D) / (B × C)= (647 × 27) / (622 × 2)≈ 14.0\nInterpretation: The odds of prior smoking among lung cancer cases are about 14 times higher than among controls.\nConclusion: Smoking is strongly associated with lung cancer.\n\n\n\n\n\nLung Cancer (+)\nLung Cancer (–)\n\n\n\n\nSmoker\n647\n622\n\n\nNon-Smoker\n2\n27"
+    "section": "Odds of Exposure Among Cases",
+    "text": "Odds of Exposure Among Cases\nGiven the prototypical 2x2 table for case-control data, which of the following is an accurate expression of the odds of exposure among cases?\n\n\n\n\n\nCases\nControls\n\n\n\n\nExposed\n50\n25\n\n\nNot exposed\n100\n100\n\n\nOdds of exposure\n???\n\n\n\n\n\n\nThe odds of exposure among cases = \\(a/c = 50/100 = 0.5\\).\nEquivalent ways to express these odds: 50:100 = 0.5:1 = 5:10 = 1:2.\nFor every 1 exposed case, there are 2 unexposed cases.\n\n\n\nAnd we can express the odds in many different ways.\nFor example, as a over c or as a to c. In this particular case, that translates to 50 over 100 or 50 to 100. Or, if we divide 50 by 100, we get 0.5, which we can also express as 0.5 to 1. In other words, for every 0.5 cases who were exposed, there was one who wasn’t exposed.\nIf we move the decimal one place to the right on both sides of our ratio (multiply by 10), we get 5 to 10, and we can say for every 5 cases who were exposed, there were 10 cases who were not exposed.\nWe could also divide one by the odds (0.5) and add the result to the right-hand side of the ratio. We could then say for every case who was exposed, there were 2 cases who were not exposed. As you can see, we can get the same answer by dividing 100 by 50 and putting the answer on the right-hand side of the ratio.\nAll of these are equivalent ways of expressing the odds of exposure among cases."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#odds-of-exposure-among-controls",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#odds-of-exposure-among-controls",
+    "title": "Case-Control Studies",
+    "section": "Odds of Exposure Among Controls",
+    "text": "Odds of Exposure Among Controls\nGiven the prototypical 2x2 table for case-control data, which of the following is an accurate expression of the odds of exposure among controls?\n\n\n\n\n\nCases\nControls\n\n\n\n\nExposed\n50\n25\n\n\nNot exposed\n100\n100\n\n\nOdds of exposure\n50 / 100\n???\n\n\n\n\nA. 0.2\nB. 1:2\nC. 2.5:1\nD. 0.25\n\n\nThe only correct expression of the odds among the choices above is 0.25. You can derive this answer by dividing 25 by 100."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#odds-of-exposure",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#odds-of-exposure",
+    "title": "Case-Control Studies",
+    "section": "Odds of Exposure",
+    "text": "Odds of Exposure\n\n\n\n\n\nCases\nControls\n\n\n\n\nExposed\n50\n25\n\n\nNot exposed\n100\n100\n\n\nOdds of exposure\n50 / 100\n25 / 100\n\n\n\n\n\nOdds of exposure among cases = 50 / 100 = 0.5\nOdds of exposure among controls = 25 / 100 = 0.25\n\n\n\nNow that we’ve calculated the odds of exposure among cases and controls, we may want to compare them in order to say something about the association (or lack thereof) between exposure and outcome – or being a case."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#association",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#association",
+    "title": "Case-Control Studies",
+    "section": "Association",
+    "text": "Association\n\n\nThe distribution of the thing we are measuring differs, on average, between two groups. This could be its center, spread, shape, or the proportion of people in each category.\nKnowing something about X tells us something about Y.\n\n\n\n\nAnd remember that an association exists when the distribution of the thing we are measuring is different, on average, in two groups. Alternatively, we can say that knowing something about x tells us something about y or helps us predict y."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#comparing-exposure-odds",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#comparing-exposure-odds",
+    "title": "Case-Control Studies",
+    "section": "Comparing Exposure Odds",
+    "text": "Comparing Exposure Odds\n\n\n\n\n\nCases\nControls\n\n\n\n\nExposed\n50\n25\n\n\nNot exposed\n100\n100\n\n\nOdds of exposure\n50 / 100\n25 / 100\n\n\n\n\n\nOdds of exposure among cases = 0.5\nOdds of exposure among controls = 0.25\n\nThe odds are higher among cases. How much higher?\n\n\nWe can tell just by looking at the odds, which are 0.5 and 0.25, that they aren’t the same. That is, the odds of being exposed if you are a case are greater than the odds of being exposed if you are a control. But, how much greater?"
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#calculating-the-exposure-odds-ratio",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#calculating-the-exposure-odds-ratio",
+    "title": "Case-Control Studies",
+    "section": "Calculating the Exposure Odds Ratio",
+    "text": "Calculating the Exposure Odds Ratio\n\n\n\n\n\nCases\nControls\n\n\n\n\nExposed\n50\n25\n\n\nNot exposed\n100\n100\n\n\nOdds of exposure\n50 / 100\n25 / 100\n\n\n\n\n\\[\n\\text{Exposure OR} = \\frac{\\text{Odds of exposure among cases}}{\\text{Odds of exposure among controls}} = \\frac{a/c}{b/d}\n\\]\n\n\nWell, we can answer that question by calculating the ratio of the odds among cases to the odds among controls."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#odds-of-exposure-among-controls-1",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#odds-of-exposure-among-controls-1",
+    "title": "Case-Control Studies",
+    "section": "Odds of Exposure Among Controls",
+    "text": "Odds of Exposure Among Controls\nGiven the prototypical 2x2 table for case-control data, what is the exposure odds ratio?\n\n\n\n\n\nCases\nControls\n\n\n\n\nExposed\n50\n25\n\n\nNot exposed\n100\n100\n\n\nOdds of exposure\n50 / 100\n25 / 100\n\n\n\n\nA. 1\nB. 2\nC. 3\nD. 4\n\n\nThe answer (2) is on the next slide."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#exposure-odds-ratio-calculation",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#exposure-odds-ratio-calculation",
+    "title": "Case-Control Studies",
+    "section": "Exposure Odds Ratio: Calculation",
+    "text": "Exposure Odds Ratio: Calculation\n\n\n\n\n\n\nCases\nControls\n\n\n\n\nExposed\n50\n25\n\n\nNot exposed\n100\n100\n\n\nOdds of exposure\n50 / 100\n25 / 100\n\n\n\n\n\\[\n\\text{Exposure OR} = \\frac{a/c}{b/d} = \\frac{50/100}{25/100} = \\frac{0.5}{0.25} = 2\n\\]\nHow would you interpret this odds ratio?\n\n\nSo, our exposure OR is 2. And how do we interpret that?"
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#exposure-odds-ratio-interpretation",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#exposure-odds-ratio-interpretation",
+    "title": "Case-Control Studies",
+    "section": "Exposure Odds Ratio: Interpretation",
+    "text": "Exposure Odds Ratio: Interpretation\n\n\n\n\n\n\nCases\nControls\n\n\n\n\nExposed\n50\n25\n\n\nNot exposed\n100\n100\n\n\nOdds of exposure\n50 / 100\n25 / 100\n\n\n\n\n\\[\n\\text{Exposure OR} = \\frac{50/100}{25/100} = \\frac{0.5}{0.25} = 2\n\\]\nThe odds of exposure among cases are 2 times the odds of exposure among controls.\n\n\nThe odds of exposure among cases are 2 times the odds of exposure among controls."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#why-use-the-odds-ratio",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#why-use-the-odds-ratio",
+    "title": "Case-Control Studies",
+    "section": "Why Use the Odds Ratio?",
+    "text": "Why Use the Odds Ratio?\n\n\n\n\n\n\nCases\nControls\n\n\n\n\nExposed\n50\n25\n\n\nNot exposed\n100\n100\n\n\nOdds of exposure\n50 / 100\n25 / 100\n\n\n\n\n\nWe can calculate it directly from a case-control study.\nWe can also estimate it using logistic regression.\nUnder certain conditions, it approximates the risk ratio.\n\n\n\nAnd the odds ratio has some really convenient traits that make it an attractive measure of association when we have data from a case-control study.\nUnlike the incidence proportion ratio, the odds ratio can be directly calculated from a case-based case-control study.\nIt can be derived from logistic regression models.\nIt can be used to approximate the incidence proportion ratio under certain conditions. And as we’ve said before, the incidence proportion ratio is generally considered to be a more intuitive measure of association.\nTherefore, we will briefly compare the odds ratio and the incidence proportion ratio."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#hypothetical-cohort-hypertension-and-mi",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#hypothetical-cohort-hypertension-and-mi",
+    "title": "Case-Control Studies",
+    "section": "Hypothetical Cohort: Hypertension and MI",
+    "text": "Hypothetical Cohort: Hypertension and MI\n\n\nOne-year incidence of acute myocardial infarction (MI, or heart attack). Severe systolic hypertension: ≥180 mm Hg. Normal systolic blood pressure: &lt;120 mm Hg.\n\n\n\n\n\nMI (+)\nMI (–)\nTotal\n\n\n\n\nSevere hypertension\n180\n9,820\n10,000\n\n\nNormotensive\n30\n9,970\n10,000\n\n\n\n\n\nRisk of MI among people with severe hypertension = 180 / 10,000 = 0.018\nRisk of MI among normotensive people = 30 / 10,000 = 0.003\nRisk ratio (incidence proportion ratio) = 0.018 / 0.003 = 6\nParticipants with severe hypertension had 6 times the risk of MI over one year compared with normotensive participants.\n\n\n\n\nmmHg is said as “millimeters of mercury.”\nSometimes, it’s helpful to start by discussing a cohort study. In the example shown here, severe hypertension and acute myocardial infarction are the exposure and the outcome of interest, respectively.\nBecause this is a cohort study and we know the row totals, we can calculate the incidence proportion ratio as we’ve done all semester. In this case, participants with severe hypertension had 6 times the risk of MI over the 1-year study period compared to participants with normotensive blood pressure.\nFor these data, the risk of myocardial infarction is relatively low for both the exposed and unexposed groups. Specifically, the risk of MI is 0.018 among those with severe hypertension and 0.003 among people with normotensive blood pressure.\nTherefore, the odds of developing MI will approximate the probabilities; as a result, the odds ratio of disease approximates the incidence proportion ratio.\nWhy?\n\n\n\nSource: Szklo and Nieto, Epidemiology. Jones & Bartlett Learning."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#risk-and-odds",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#risk-and-odds",
+    "title": "Case-Control Studies",
+    "section": "Risk and Odds",
+    "text": "Risk and Odds\n\n\n\n\n\nOutcome\nNo outcome\nTotal\n\n\n\n\nExposed\na\nb\na + b\n\n\nUnexposed\nc\nd\nc + d\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeasure\nFormula\na = 0\nIncidence = 0.001\n\n\n\n\nIncidence\n\\(\\frac{a}{a+b}\\)\n\\(\\frac{0}{0+b}=0\\)\n\\(0.001\\)\n\n\nOdds\n\\(\\frac{\\frac{a}{a+b}}{1-\\frac{a}{a+b}}\\)\n\\(\\frac{\\frac{0}{0+b}}{1-\\frac{0}{0+b}} = \\frac{0}{1-0} = \\frac{0}{1} = 0\\)\n\\(\\frac{0.001}{1-0.001} \\approx \\frac{0.001}{1}\\)\n\n\n\n\nRisk in the exposed: \\(p = a/(a+b)\\). Odds in the exposed: \\(p/(1-p) = a/b\\).\nWhen risk is small, 1 − risk is close to 1, so odds and risk are similar.\n\n\nBecause the odds are calculated as the incidence over 1 minus the incidence. When the risk is really low, 1 minus the incidence is very close to 1-0, or 1, and any number divided by 1 is that number. So, you basically end up with the incidence divided by 1, which is just the incidence.\nAs an extreme example, if a is 0, then the incidence in the exposed is 0. Likewise, the odds in the exposed are 0 divided by 1 minus zero, which is 0 divided by 1, which is also zero. In this case, the odds equal the incidence.\nNow, as a slightly less extreme example, let’s imagine the incidence is 0.001 or 1 in 1,000. In this case, the denominator is almost 1 (0.999 to be exact), and therefore, the odds are almost identical to the incidence.\nSo, the lower the incidence, the closer 1 minus the incidence is to one, and therefore, the better the incidence and the odds approximate each other. As the outcome becomes less rare, the OR will generally become increasingly more extreme than the IPR."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#comparing-the-risk-ratio-and-odds-ratio",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#comparing-the-risk-ratio-and-odds-ratio",
+    "title": "Case-Control Studies",
+    "section": "Comparing the Risk Ratio and Odds Ratio",
+    "text": "Comparing the Risk Ratio and Odds Ratio\n\n\n\n\n\nMI (+)\nMI (–)\nTotal\n\n\n\n\nSevere hypertension\n180\n9,820\n10,000\n\n\nNormotensive\n30\n9,970\n10,000\n\n\n\n\n\nThe incidence of MI among people with severe hypertension = 180 / 10,000 = 0.018\nThe incidence of MI among people who are normotensive = 30 / 10,000 = 0.003\nRisk ratio = 0.018 / 0.003 = 6 \nThe odds of severe hypertension among cases = 180 / 30 = 6\nThe odds of severe hypertension among controls = 9,820 / 9,970 ≈ 0.985\nExposure OR = (180 / 30) / (9,820 / 9,970) ≈ 6.09\n\n\n\n\nAnd although we would typically calculate the incidence proportion ratio as our measure of association from cohort data like this, we can also calculate the odds ratio. In this case, the exposure odds ratio is 6.09 – similar to the incidence proportion ratio.\nAnd how would we interpret that odds ratio?\n\n\n\nSource: Szklo and Nieto, Epidemiology. Jones & Bartlett Learning."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#hypertension-and-mi-interpreting-the-or",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#hypertension-and-mi-interpreting-the-or",
+    "title": "Case-Control Studies",
+    "section": "Hypertension and MI: Interpreting the OR",
+    "text": "Hypertension and MI: Interpreting the OR\n\n\n\n\n\nMI (+)\nMI (–)\nTotal\n\n\n\n\nSevere hypertension\n180\n9,820\n10,000\n\n\nNormotensive\n30\n9,970\n10,000\n\n\n\n\n\nExposure odds among cases = 180 / 30 = 6\nExposure odds among non-cases = 9,820 / 9,970 ≈ 0.985\nExposure OR = (180 / 30) / (9,820 / 9,970) ≈ 6.09\n\nParticipants with MI had 6.09 times the odds of severe hypertension compared with participants who did not have an MI during the one-year study period.\n\n\n\nWe could say participants with MI had 6.09 times the odds of severe hypertension compared to participants who did not have an MI over the 1-year study period.\nOkay, great. The odds ratio approximates the incidence proportion ratio. But, why not just always calculate the incidence proportion ratio to begin with?\nAgain, here we know the total number of participants who were exposed and who were unexposed in these cohort study data – 10,000 each – but in a typical case-based case-control study we don’t have that information. That’s the basic reason we can’t just keep calculating the more intuitive incidence proportion ratio.\n\n\n\nSource: Szklo and Nieto, Epidemiology. Jones & Bartlett Learning."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#sampling-10-of-controls",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#sampling-10-of-controls",
+    "title": "Case-Control Studies",
+    "section": "Sampling 10% of Controls",
+    "text": "Sampling 10% of Controls\n\n\n\n\n\nMI (+)\nMI (–)\nCohort total\n\n\n\n\nSevere hypertension\n180\n982\n??\n\n\nNormotensive\n30\n997\n??\n\n\n\n\n\nPopulation risks require the original cohort denominators: 180 / ?? and 30 / ??.\nExposure odds among cases = 180 / 30 = 6\nExposure odds among sampled controls = 982 / 997 ≈ 0.985\nExposure OR = (180 / 30) / (982 / 997) ≈ 6.09\n\nThe OR is unchanged when we sample the same fraction of exposed and unexposed non-cases.\n\n\n\nFor this illustration, keep all cases and take exactly 10% of the exposed non-cases and 10% of the unexposed non-cases. The control counts become 982 and 997.\nThe row sums in the case-control sample are not the original cohort denominators. Without those denominators or sampling information that lets us reconstruct them, we cannot calculate the population risks directly.\nHere we know the sampling fraction because we created this example from a complete cohort. In a typical case-control study, we do not have that complete cohort information.\nThe odds of exposure among controls remain 982 / 997 = 9,820 / 9,970. Therefore, the exposure odds ratio is unchanged at approximately 6.09. Random sampling may introduce sampling error.\n\n\n\nSource: Szklo and Nieto, Epidemiology. Jones & Bartlett Learning."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#disease-odds-ratio",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#disease-odds-ratio",
+    "title": "Case-Control Studies",
+    "section": "Disease Odds Ratio",
+    "text": "Disease Odds Ratio\n\n\n\n\n\nMI (+)\nMI (–)\nCohort total\n\n\n\n\nSevere hypertension\n180\n9,820\n??\n\n\nNormotensive\n30\n9,970\n??\n\n\n\n\n\nDisease odds with severe hypertension = 180 / 9,820 ≈ 0.01833\nDisease odds with normal blood pressure = 30 / 9,970 ≈ 0.003009\nDisease OR = (180 / 9,820) / (30 / 9,970) ≈ 6.09\n\nParticipants with severe hypertension had 6.09 times the odds of MI over one year compared with normotensive participants.\n\n\n\nThe exposure odds ratio and disease odds ratio are algebraically identical: (a/c) / (b/d) = (a/b) / (c/d) = ad/bc.\nHere we use the full counts from the hypothetical cohort. We retain the unknown cohort totals to show that calculating the odds ratio does not require those denominators.\nParticipants with severe hypertension had 6.09 times the odds of MI compared with normotensive participants over the one-year study period. This disease-focused interpretation is generally the one of greater interest.\nUse the original counts in the calculation. Rounding the two individual odds to 0.018 and 0.003 before dividing would obscure the difference between the odds ratio and the risk ratio.\n\n\n\nSource: Szklo and Nieto, Epidemiology. Jones & Bartlett Learning."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#disease-or-with-10-of-controls",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#disease-or-with-10-of-controls",
+    "title": "Case-Control Studies",
+    "section": "Disease OR With 10% of Controls",
+    "text": "Disease OR With 10% of Controls\n\n\n\n\n\nMI (+)\nMI (–)\nCohort total\n\n\n\n\nSevere hypertension\n180\n982\n??\n\n\nNormotensive\n30\n997\n??\n\n\n\n\n\nSample odds with severe hypertension = 180 / 982 ≈ 0.1833\nSample odds with normal blood pressure = 30 / 997 ≈ 0.03009\nDisease OR = (180 / 982) / (30 / 997) ≈ 6.09\n\nParticipants with severe hypertension had 6.09 times the odds of MI over one year compared with normotensive participants. The individual sample odds differ from the population odds.\n\n\n\nWe can repeat the calculation using the 10% sample of controls. Both row odds are ten times the corresponding cohort odds, so their ratio is unchanged.\nThese individual sample odds do not estimate the population odds of MI directly. The odds ratio is preserved because we sampled the same fraction of exposed and unexposed non-cases while retaining all cases.\nWith appropriate control sampling, the odds ratio estimates the disease odds ratio in the source population. When the outcome is rare, it can also approximate the risk ratio.\nRandom samples will introduce sampling error. This example keeps the exposure proportions exactly constant to show the underlying calculation.\n\n\n\nSource: Szklo and Nieto, Epidemiology. Jones & Bartlett Learning."
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#interpreting-the-odds-ratio",
     "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#interpreting-the-odds-ratio",
     "title": "Case-Control Studies",
     "section": "Interpreting the Odds Ratio",
-    "text": "Interpreting the Odds Ratio\n\n\n\nInterpreting the Odds Ratio (OR)\n\nOR = 1: No association between exposure and disease\nOR &gt; 1: Exposure is associated with higher odds of disease\nOR &lt; 1: Exposure is associated with lower odds of disease (protective effect)\n\nImportant: OR reflects odds, not risk.\nWhen the disease is rare, the OR closely approximates the Relative Risk (RR).\n\nWhen cases are rare: Total population ≈ Non-cases"
-  },
-  {
-    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#poll-interpreting-odds-ratio",
-    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#poll-interpreting-odds-ratio",
-    "title": "Case-Control Studies",
-    "section": "Poll: Interpreting Odds Ratio",
-    "text": "Poll: Interpreting Odds Ratio\n\n\nIn a case-control study examining asbestos exposure and lung cancer, researchers identified 400 lung cancer cases and 400 controls without lung cancer. The Odds Ratio (OR) for asbestos exposure was 3.0.\nWhat does this mean?\n\nA. Exposed individuals have 3 times the risk of lung cancer\nB. Asbestos exposure causes lung cancer\nC. There is no association between asbestos and lung cancer\nD. Lung cancer cases had 3 times the odds of prior asbestos exposure compared to controls\n\nExplanation: OR compares the odds of prior exposure between cases and controls. It does not directly measure risk or prove causation."
-  },
-  {
-    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#poll-identifying-bias",
-    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#poll-identifying-bias",
-    "title": "Case-Control Studies",
-    "section": "Poll: Identifying Bias",
-    "text": "Poll: Identifying Bias\n\n\nIn a case-control study investigating the relationship between alcohol use and liver cancer, cases were recruited from a major urban hospital. Controls were recruited from a local fitness club.\nWhich bias is most likely?\n\nA. Recall bias\nB. Attrition bias\nC. Selection bias\nD. Interviewer bias\n\nExplanation: Controls from a fitness club may not represent the same source population as hospital cases, leading to distorted exposure comparison."
+    "text": "Interpreting the Odds Ratio\n\nInterpreting the Odds Ratio (OR)\n\nOR = 1: No association between exposure and disease\nOR &gt; 1: Exposure is associated with higher odds of disease\nOR &lt; 1: Exposure is associated with lower odds of disease"
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#strengths-and-limitations",
     "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#strengths-and-limitations",
     "title": "Case-Control Studies",
     "section": "Strengths and Limitations",
-    "text": "Strengths and Limitations\n\n\n\nStrengths\n\nEfficient for studying rare diseases\nFaster and less costly than cohort studies\nRequire fewer participants\nUseful for diseases with long latency\n\n\nLimitations\n\nCannot directly measure incidence or risk\nVulnerable to selection bias\nProne to recall bias\nControl selection can be challenging"
+    "text": "Strengths and Limitations\n\n\nStrengths\n\nEfficient for studying rare diseases\nFaster and less costly than cohort studies\nRequire fewer participants\nUseful for diseases with long latency\n\n\nLimitations\n\nCannot directly measure incidence or risk\nVulnerable to selection bias\nProne to recall bias\nControl selection can be challenging"
   },
   {
     "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#cohort-vs.-case-control-studies",
     "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#cohort-vs.-case-control-studies",
     "title": "Case-Control Studies",
     "section": "Cohort vs. Case-Control Studies",
-    "text": "Cohort vs. Case-Control Studies\n\n\n\n\n\nFeature\nCohort Study\nCase-Control Study\n\n\n\n\nStart With\nExposure\nOutcome\n\n\nDirection\nExposure → Outcome\nOutcome → Exposure\n\n\nMeasure\nRelative Risk (RR)\nOdds Ratio (OR)\n\n\nBest For\nRare exposures\nRare diseases\n\n\nTime & Cost\nLonger, more expensive\nFaster, less expensive\n\n\nMain Bias Concern\nLoss to follow-up\nSelection & recall bias\n\n\nCan Measure Incidence?\nYes\nNo"
+    "text": "Cohort vs. Case-Control Studies\n\n\n\nFeature\nCohort Study\nCase-Control Study\n\n\n\n\nStart With\nExposure\nOutcome\n\n\nDirection\nExposure → Outcome\nOutcome → Exposure\n\n\nMeasure\nRelative Risk (RR)\nOdds Ratio (OR)\n\n\nBest For\nRare exposures\nRare diseases\n\n\nTime & Cost\nLonger, more expensive\nFaster, less expensive\n\n\nMain Bias Concern\nLoss to follow-up\nSelection & recall bias\n\n\nCan Measure Incidence?\nYes\nNo\n\n\n\n\n\nTime/cost and primary bias concerns depend on the study. \nCohort studies also support association measures other than RR."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-sampling",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-sampling",
+    "title": "Case-Control Studies",
+    "section": "Practice: Sampling",
+    "text": "Practice: Sampling\nIn a case-control study, we typically sample based on the _____ we are interested in studying.\nA. Exposure\nB. Outcome\n\nIn a case-control study, we typically start with an outcome we are interested in studying. We then sample (select) people for the study based on the presence or absence of that outcome."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-identify-the-study-design",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-identify-the-study-design",
+    "title": "Case-Control Studies",
+    "section": "Practice: Identify the Study Design",
+    "text": "Practice: Identify the Study Design\nResearchers survey 1,000 adults at a single point in time, asking about their current smoking status and whether they currently have a chronic cough. What type of study is this?\nA. Cohort study\nB. Case-control study\nC. Cross-sectional study\nD. Randomized trial\n\nAnswer: Cross-sectional study. Smoking status and cough are assessed at the same time."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-identify-the-study-design-1",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-identify-the-study-design-1",
+    "title": "Case-Control Studies",
+    "section": "Practice: Identify the Study Design",
+    "text": "Practice: Identify the Study Design\nResearchers use medical records from 2010 to identify 1,000 smokers and 1,000 nonsmokers who were free of lung cancer. They review records through 2020 to determine who developed lung cancer. All records already exist when the study begins. What type of study is this?\nA. Cohort study\nB. Case-control study\nC. Cross-sectional study\nD. Randomized trial\n\nAnswer: Retrospective cohort study. Researchers group people by past exposure and use existing records to compare subsequent disease occurrence."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-identify-the-study-design-2",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-identify-the-study-design-2",
+    "title": "Case-Control Studies",
+    "section": "Practice: Identify the Study Design",
+    "text": "Practice: Identify the Study Design\nResearchers sample 500 patients who have lung cancer and 500 patients who do not have lung cancer. They compare the two groups’ smoking histories before the lung cancer diagnoses. What type of study is this?\nA. Cohort study\nB. Case-control study\nC. Cross-sectional study\nD. Randomized trial\n\nAnswer: Case-control study. Participants are selected based on disease status, and researchers compare their prior exposure."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-study-base-principle",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-study-base-principle",
+    "title": "Case-Control Studies",
+    "section": "Practice: Study Base Principle",
+    "text": "Practice: Study Base Principle\nShands Hospital at the University of Florida is a referral hospital for a variety of cancer diagnoses -- including bronchogenic carcinoma -- for the North Florida region where it is located. \nResearchers are interested in the association between bronchogenic carcinoma and a history of cigarette smoking, and they decide to conduct a case-control study. Cases are selected from the admissions records to the cancer center. Controls are randomly selected from the population of the surrounding county.\nDoes the control group violate the study base principle?\nA. Probably\nB. Probably not\n\nRemember that the study base principle tells us that cases and controls should be “representative of the same base experience.” One way to conceptualize this in our heads is to think of the study base as those who would have been selected as cases if they developed the disease. Based on the narrative above, it seems like people from the surrounding county would likely go to Shands if they developed bronchogenic carcinoma, and then they would have had the same probability of selection as any other case. Therefore, the study base principle is probably not violated in this scenario."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-control-selection",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-control-selection",
+    "title": "Case-Control Studies",
+    "section": "Practice: Control Selection",
+    "text": "Practice: Control Selection\nResearchers are interested in the effect of obesity on colorectal cancer and conduct a case-control study. Cases are selected from a large colon cancer registry. Researchers are concerned that unmeasured genetic factors may bias study results.\nWhat would be a good control group to remove the potential confounding effects of genetic factors?\n\nMatching study subjects with siblings may be used in both cohort and case-control studies to control for shared genetic and environmental factors. (Modern Epidemiology, 4th ed.)"
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-identifying-bias",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-identifying-bias",
+    "title": "Case-Control Studies",
+    "section": "Practice: Identifying Bias",
+    "text": "Practice: Identifying Bias\nIn a case-control study investigating the relationship between alcohol use and liver cancer, cases were recruited from a major urban hospital. Controls were recruited from a local fitness club.\nWhich bias is most likely?\nA. Recall bias\nB. Attrition bias\nC. Selection bias\nD. Interviewer bias\n\nExplanation: Controls from a fitness club may not represent the same source population as hospital cases, leading to distorted exposure comparison."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-interpreting-odds",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-interpreting-odds",
+    "title": "Case-Control Studies",
+    "section": "Practice: Interpreting Odds",
+    "text": "Practice: Interpreting Odds\nIn a study of Parkinson’s disease, the odds of prior pesticide exposure among cases were 0.25, or 1 to 4.\nWhat does this mean?\nA. 25% of cases had prior pesticide exposure\nB. For every 1 case with prior pesticide exposure, there were 4 cases without prior exposure\nC. Cases had 25% greater risk of pesticide exposure\nD. Cases were 4 times as likely to have prior pesticide exposure as to have no prior exposure\n\nCorrect answer: B.\nOdds of 1 to 4 mean 1 exposed case for every 4 unexposed cases. The corresponding proportion exposed is 1 / (1 + 4) = 20%, not 25%."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-interpreting-an-odds-ratio",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-interpreting-an-odds-ratio",
+    "title": "Case-Control Studies",
+    "section": "Practice: Interpreting an Odds Ratio",
+    "text": "Practice: Interpreting an Odds Ratio\nIn a case-control study, researchers compared patients with Parkinson’s disease to controls without Parkinson’s disease. The odds ratio for prior pesticide exposure was 2.5.\nWhat does this mean?\nA. Pesticide exposure causes Parkinson’s disease\nB. People exposed to pesticides had 2.5 times the risk of Parkinson’s disease\nC. Parkinson’s disease cases had 2.5 times the odds of prior pesticide exposure compared to controls\nD. 2.5% of Parkinson’s disease cases had prior pesticide exposure\n\nCorrect answer: C.\nAn OR greater than 1 indicates a positive association. Cases had higher odds of prior exposure than controls. This result does not directly measure risk or establish causation."
+  },
+  {
+    "objectID": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-interpreting-an-odds-ratio-1",
+    "href": "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.html#practice-interpreting-an-odds-ratio-1",
+    "title": "Case-Control Studies",
+    "section": "Practice: Interpreting an Odds Ratio",
+    "text": "Practice: Interpreting an Odds Ratio\nIn a case-control study, researchers compared patients with Alzheimer’s disease to controls without Alzheimer’s disease. The odds ratio for regular physical activity during midlife was 0.60.\nWhat does this mean?\nA. Alzheimer’s disease cases had 40% lower odds of regular physical activity during midlife compared to controls\nB. Physically active people had 60% lower risk of Alzheimer’s disease\nC. Regular physical activity prevents Alzheimer’s disease\nD. There was no association between physical activity and Alzheimer’s disease\n\nCorrect answer: A.\nCases had 0.60 times the odds of prior regular physical activity compared to controls. This is equivalent to 40% lower odds: (1 − 0.60) × 100%.\nAn OR less than 1 indicates an inverse association. This result does not establish that physical activity prevents Alzheimer’s disease."
   }
 ]
