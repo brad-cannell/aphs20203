@@ -156,6 +156,12 @@ $code-block-color: $tcu-white;
   border-bottom-color: $tcu-grey;
 }
 
+// Opt in to a purple header for individual tables.
+.reveal .purple-table-header table thead th {
+  background-color: $tcu-purple;
+  color: $tcu-white;
+}
+
 // Shared interactive-question styles. Generated quiz partials emit
 // .quiz-prompt, .quiz-options, .participation, and .qr.
 .reveal .quiz h2 {
