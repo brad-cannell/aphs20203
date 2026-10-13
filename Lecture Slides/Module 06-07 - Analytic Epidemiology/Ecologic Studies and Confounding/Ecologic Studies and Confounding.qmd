@@ -1,6 +1,7 @@
 ---
 title: Ecologic Studies and Confounding
-subtitle: "APHS 20203 · Epidemiology & Biostatistics<br>October 14, 2026"
+subtitle: "APHS 20203 · Epidemiology & Biostatistics"
+bibliography: references.bib
 format:
   revealjs:
     theme:
@@ -14,420 +15,696 @@ format:
     embed-resources: false
     width: 1244
     height: 700
-    logo: assets/tcu-logo-purple.svg
+    logo:
+      path: ../../assets/tcu-logo-purple.svg
+      alt: "Texas Christian University (TCU)"
+    include-after-body:
+      text: |
+        <script>
+        // The chalkboard plugin creates eraser images without text alternatives.
+        window.addEventListener("load", () => {
+          document.querySelectorAll('[data-eraser="true"] img').forEach((image) => {
+            image.alt = "Eraser";
+          });
+        });
+        </script>
 execute:
   eval: false
 ---
 
-## Ecologic Studies {.compact}
 
-<!-- REVIEW: Third of three sessions. Reserve time for AI Activity 2 if it is conducted in class. Check actual Quiz 3 items before declaring coverage complete. GAP: No complete, unambiguous exercise comparing all four designs was supplied; existing two-design discussion and the cohort/case-control comparison are reused instead. A new integrated exercise requires Brad's approval. -->
+## Hierarchy of Study Designs
+
+![](../../assets/study_design_hierarchy.png){fig-alt="Diagram grouping study designs into observational and experimental approaches. From left to right: case descriptions, ecological, cross-sectional, case-control, and cohort studies are observational; nonrandomized and randomized studies are experimental. An arrow indicates that evidence typically becomes more convincing from left to right."}
+
+::: {.notes}
+- Here is a review of our study design hierarchy.
+:::
 
 
+## Ecologic Studies
 
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Ecologic Studies: Limits of Causal Inference". -->
+- **Ecologic studies compare groups**, such as cities, schools, or countries.
 
-<!-- Define and explain unit of analysis and unit of observation. See: https://pressbooks.pub/scientificinquiryinsocialwork/chapter/7-3-unit-of-analysis-and-unit-of-observation/ -->
+- Researchers analyze **group characteristics**, such as average income and average blood pressure.
 
-- **Ecologic Studies:** *Group-level analysis*
+- They can describe population patterns and investigate questions about policies or environments.
 
-- **Unit of analysis:** groups (not individuals)
+- A relationship between groups does **not necessarily describe the relationship between individuals**.
 
-- **Exposure & outcome:** measured at the **population level**
+::: {.notes}
+- The important distinction is the level of the question and analysis. 
 
-- **Common use:** explore population patterns; generate hypotheses
+- Ecologic studies can address population questions directly, as well as generate hypotheses for individual-level research. 
 
-- **Key caution:** group-level associations ≠ individual-level conclusions
+- The hierarchy on the previous slide is a broad guide to individual causal inference, not a ranking of how well each design answers every possible question.
+:::
 
-- **Take-home message:** Ecologic studies are useful for **population questions**, but **cannot establish individual-level causality**.
+
+## Unit of Observation vs. Unit of Analysis {.compact}
+
+**Hypothetical example:** Measure residents' income and blood pressure, then compare city averages.
+
+| Term | What Does It Mean? | In This Example |
+|---|---|---|
+| **Unit of observation** | The entity we collect measurements from | Each resident |
+| **Unit of analysis** | The entity we compare and draw conclusions about | Each city |
+
+The same individual measurements could support a different analysis that compares **residents** instead of cities.
+
+::: {.notes}
+- Definitions adapted from @decarlo2018units. 
+
+- Here the original observations are residents; aggregating their measurements changes the unit of analysis to cities. 
+
+- If researchers receive only a table of city averages, their available observations are already at the city level. 
+
+- Observation and analysis can be at the same level or different levels. 
+
+- Do not teach that every ecologic study collects individual records.
+:::
 
 
 ## Ecologic Fallacy {.compact}
 
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Ecologic Fallacy". -->
-<!-- REVIEW: The source city-income/CHD scenario is illustrative; verify or label it as hypothetical before presenting it as an empirical finding. -->
+**Ecologic fallacy:** Assuming a relationship between groups also holds for individuals.
 
-<!-- Make the image larger or delete it. -->
+![](assets/ecologic-fallacy.svg){fig-alt="Hypothetical annual household income and systolic blood-pressure data for three cities. Left: city averages increase together, from 40 thousand dollars and 112 millimeters of mercury in City A to 100 thousand dollars and 148 millimeters of mercury in City C. Right: the five individual observations within each city show decreasing blood pressure as income increases. A positive association between city averages does not establish the association among individuals within cities." .nostretch width="1120" height="405" style="object-fit:contain;"}
 
-<!-- Should we also show a chart that demonostrates ecological falacy? -->
+**City averages alone do not reveal the relationships within cities.**
 
-::::: {.columns}
+::: {.notes}
+- These are invented teaching data, not evidence about income and blood pressure. 
 
-:::: {.column width="65%"}
+- Each city contains five equally weighted observations. The left panel contains their exact means; the right panel shows the individual observations that produced them. 
 
-- **Definition:** Incorrectly applying **group-level** findings to **individuals**
+- Income is the resident's reported annual household income, and the blood-pressure measure is systolic blood pressure.
 
-    - Occurs when associations observed in populations are assumed to hold at the individual level
+- **Ask students to describe each panel before explaining the error.**
 
-- **Example**
+- Between cities, higher average income accompanies higher average blood pressure. Within each city, higher-income residents have lower blood pressure in this constructed example. Neither pattern by itself establishes causation.
 
-    - Observation: Cities with higher income have higher CHD rates
+- A reversal makes the distinction easy to see, but ecological fallacy does not require a reversal. The error is assuming an individual association from aggregate data alone, whether the unknown individual association is weaker, absent, reversed, or similar. 
 
-    - Incorrect inference: Wealthier individuals have higher CHD risk
-
-    - Reality: Within cities, CHD risk may be higher among lower-income individuals
-
-- **Take-home message:** Group-level data cannot be used to draw **individual-level conclusions**.
-
-::::
-
-:::: {.column width="35%"}
-
-![](assets/m6-source-009-shape-6.png){fig-alt="An ecological-fallacy infographic contrasts a taller average male figure with a taller individual female figure, illustrating that population averages do not determine every individual comparison." .nostretch width="347" style="max-width:100%;height:auto;"}
-::::
-
-:::::
+Concept: @decarlo2018units. Figure generated from the hypothetical values in assets/ecologic-fallacy.R.
+:::
 
 
-## Ecologic Study: Strengths & Limitations
+## Practice: What Can We Conclude? {.compact}
 
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Ecologic Study: Strengths & Limitations". -->
-<!-- REVIEW: Brad's concern remains: this source does not explain when an ecological design is the preferred choice for a population-level question. No new example has been invented. -->
+Suppose we have **only the city averages** from the previous slide. Which conclusion is supported?
 
-<!-- This gives the impression that ecological studies are never the best design choice. Instead, they are the only option at times. I don't think that's true. I think there are times when an ecological study is the best choice, even if resources allow other designs. -->
+**A.** Increasing a person's income raises their blood pressure.
 
-::::: {.columns}
+**B.** Within each city, richer residents have higher blood pressure.
 
-:::: {.column width="50%"}
+**C.** Cities with higher average income have higher average blood pressure.
 
-Strengths
+**D.** Income has no relationship with anyone's blood pressure.
 
-- Uses existing population-level data
+::: {.notes}
+Answer: C. It stays at the level measured in the aggregate data. A adds a causal claim; B assumes an individual association; D also makes an unsupported individual claim. Ask students what information they would need to investigate B. Use a show of hands or letter cards if no live polling tool is configured.
+:::
 
-- Efficient: fast and low cost
 
-- Useful when individual-level data are unavailable
+## When the Population Is the Question {.compact}
 
-::::
+**Hypothetical question:** After cities adopt a smoke-free indoor-air policy, do their heart-attack admission rates decline compared with cities that do not?
 
-:::: {.column width="50%"}
+- **Exposure:** A city policy that changes the shared environment.
 
-Limitations
+- **Outcome:** The city's admission rate over time.
 
-- **Ecologic fallacy**
+- **Why study groups?** We want to evaluate the policy's overall population effect, including effects on people who do not smoke.
 
-- Crude exposure measurement
+- The analysis must still consider other changes occurring in those cities.
 
-- Limited control of confounding
+::: {.notes}
+- So, why would we use an ecological study design?
 
-::::
+- This is a proposed study question, not a claim about a particular policy evaluation. 
 
-:::::
+- Comparing population trends before and after adoption, with suitable comparison cities, fits the policy question. 
+
+- Individual smoking histories could add information, but they would not replace the question about changing a city's policy. 
+
+- A simple comparison of cities would not establish causality. 
+
+- **Ask what else might change at the same time, such as healthcare access or other tobacco policies.**
+:::
 
 
 ## Dietary Fat and Breast Cancer Mortality {.compact}
 
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Discussion: Ecologic Study Example". -->
-<!-- REVIEW: Use the source discussion prompts as a group exercise. The inherited answer notes mix cancer incidence/detection with mortality and make unsupported study-specific claims; they were omitted pending review. Complete the source citation formatting before publication. -->
+**The question:** Could differences in diet help explain why breast cancer death rates differ across countries?
 
-- **Study**
+@sasaki1993
 
-    - Sasaki et al. (1993): dietary fat intake & breast cancer mortality
+- **Design:** Ecologic study of 30 countries, using data from 1961 to 1986.
 
-    - Unit of analysis: **countries (30 countries total)**
+- **Exposure:** National food-supply estimates per person, separated by fat type.
 
-- **Key finding**
+- **Outcome:** Female breast cancer mortality rates.
 
-    - Higher animal fat intake was associated with higher breast cancer mortality
+- **Finding:** Animal fat excluding fish fat was positively associated with mortality among women aged 50 and older. Fish fat showed inverse associations when statistically significant.
 
-    - Fish fat intake was associated with lower breast cancer mortality
+::: {.fragment}
+**The country averages do not tell us what the women who died had eaten.**
+:::
 
-- **Discussion prompts**
+::: {.notes}
+- Start the story with a researcher looking across countries and wondering whether diet contributes to their different death rates. 
 
-    - What makes this study **feasible and efficient**?
+- Existing food-balance and mortality records allow a broad comparison without following individual diets for decades. 
 
-    - Why can these results **not** be interpreted at the individual level?
+- Distinguish national food supply from measured personal consumption. 
 
-    - What **other population-level factors** could explain the association?
+- This is an example of a research question, not a claim that this paper initiated the later trial.
 
-
-<!-- Turn this into a real citation and add to the references slide. -->
-Sasaki S, Horacsek M, Kesteloot H. An ecological study of the relationship between dietary fat intake and breast cancer mortality. Prev Med. 1993 Mar;22(2):187-202. doi: 10.1006/pmed.1993.1016. PMID: 8483858.
+- **What is the potential ecological fallacy we have to be careful to avoid?**
+:::
 
 
 ## Low-Fat Dietary Pattern: Randomized Trial {.compact}
 
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Discussion: Randomized Controlled Trial (RCT) Example". -->
+**A related question:** Does assignment to a dietary program reduce new breast cancers?
 
-- **Study overview**
+@prentice2006
 
-    - Large randomized controlled trial of a **low-fat dietary pattern**
+- **Participants:** 48,835 postmenopausal women, ages 50–79, without prior breast cancer.
 
-    - Postmenopausal women assigned to **intervention** or **usual diet**
+- **Intervention:** A program to reduce total fat and increase fruit, vegetables, and grains; comparison participants were not asked to change their diet.
 
-    - Long-term follow-up
+- **Outcome:** New invasive breast cancers during an average 8.1 years of follow-up.
 
-- **Discussion prompts**
+- **2006 result:** The intervention did not produce a statistically significant reduction in invasive breast cancer incidence.
 
-    - Why is an **RCT** an appropriate design for this question?
+::: {.notes}
+- Random assignment strengthens causal inference about assignment to this dietary program. 
 
-    - What features of this study strengthen **causal inference**?
+- It does not isolate one fat type. 
 
-    - What challenges might arise in **long-term behavioral interventions**?
+- A nonsignificant result does not prove the effect is zero. 
 
-- **Key takeaway:** RCTs strengthen causal conclusions, but feasibility, adherence, and follow-up matter.
+- The trial's reported hazard ratio was 0.91 (95% CI 0.83–1.01); interpreting hazard ratios is not required here. This slide summarizes the cited 2006 report, not subsequent follow-up publications.
+:::
 
-Prentice RL, Caan B, Chlebowski RT, et al. Low-Fat Dietary Pattern and Risk of Invasive Breast Cancer: The Women's Health Initiative Randomized Controlled Dietary Modification Trial. JAMA. 2006;295(6):629–642. doi:10.1001/jama.295.6.629
+
+## Ecologic Studies: Strengths and Limitations {.compact}
+
+::::: {.columns}
+
+:::: {.column width="50%"}
+
+**Strengths**
+
+- Fit questions about population policies and environments
+- Reveal patterns across places or time
+- Can use existing data efficiently
+
+::::
+
+:::: {.column width="50%"}
+
+**Limitations**
+
+- Group associations may not describe individuals
+- Averages can hide differences within groups
+- Other population differences can complicate interpretation
+
+::::
+
+:::::
+
+**Choose the design that fits the question and the level of the conclusion.**
+
+::: {.notes}
+- Return to the policy example: an ecologic design can be appropriate because the question concerns a population intervention, even when individual data are available. 
+
+- In the dietary study, national food supply is an imperfect proxy for consumption. 
+
+- Ecologic analyses can account for measured population characteristics, but aggregate data do not automatically resolve confounding or differences in measurement between places.
+:::
 
 
 ## Group Discussion: Comparing Study Designs {.compact}
 
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Discussion: Comparing Study Designs". -->
-<!-- REVIEW: The studies have different outcomes and exposure definitions. The comparison should not imply they estimate an identical causal effect. -->
+**Work in groups of 2–3 for 4 minutes. Prepare a brief explanation for each question.**
 
-<!-- Why are we comparing ecologic studies and RCTs? -->
+| | Ecologic Study | Randomized Trial |
+|---|---|---|
+| Unit of analysis | Countries | Individual women |
+| Exposure / intervention | National supply of different fats | Assignment to a dietary program |
+| Outcome | Breast cancer mortality | Invasive breast cancer incidence |
 
-- **Comparing Two Studies:** Think back to the two studies discussed today:
+1. Why does the ecologic study not tell us whether changing one woman's diet would change her risk?
+2. What does random assignment add, and what dietary question does this trial actually test?
+3. Why would it be misleading to say that this trial simply proves or disproves the ecologic study?
 
-    - **Ecologic study:** dietary fat intake and breast cancer mortality
-
-    - **Randomized controlled trial:** low-fat dietary intervention
-
-- **Discussion questions**
-
-    - What is the **unit of analysis** in each study?
-
-    - Which study provides **stronger evidence for causality**, and why?
-
-    - What kinds of conclusions are **appropriate** for each design?
+{{< countdown minutes=4 warn_when=30 start_immediately=false >}}
 
 ::: {.notes}
-Key takeaway Different study designs answer different questions and provide different levels of causal evidence.
+Purpose: practice matching conclusions to the question, unit of analysis, and design. This is not a competition to name the universally best design.
+
+Facilitation: allow four minutes, then invite a different group to answer each question. Keep the table visible.
+
+Answer key:
+
+1. The country records do not link each woman's own exposure to her outcome. Other national differences could contribute to the pattern. Access to effective treatment is one possible influence on mortality; it is a discussion hypothesis, not a finding established by this paper. Mortality involves both developing cancer and surviving it.
+2. Random assignment helps make the groups comparable at baseline. The trial tests assignment to a program with several dietary goals; adherence still matters.
+3. Exposure definitions, populations, and outcomes differ. A stronger design for one causal question does not turn it into a test of every related question. Ask students to name at least two differences from the table.
+
+Sources: @sasaki1993; @prentice2006.
+:::
+
+
+## From Study Design to Trustworthy Comparisons {.compact}
+
+The two dietary studies asked different questions. For either study, we still need to ask **what could make the comparison misleading**.
+
+- **Selection:** Who entered the study, and who stayed in it?
+- **Information:** Were exposure and outcome measured accurately?
+- **Confounding:** Did the groups differ in other causes of the outcome?
+
+We will connect these questions to the bias examples from the case-control lecture.
+
+::: {.notes}
+This is the transition from choosing a study design to evaluating the comparison it produces.
 :::
 
 
 ## Social Desirability Bias
 
-<!-- Source: Original Module 6, "Types of Information Bias: Social Desirability"; nonjudgmental-questioning application adapted from supplied Quiz 3 Question 8. Original decorative image omitted. -->
+- **Definition:** Participants report what seems socially acceptable instead of what actually happened.
+- **Example:** Someone understates their alcohol use because they worry the interviewer will judge them.
+- **Problem:** The recorded answer differs from the behavior we want to measure.
+- **Reducing it:** Use neutral questions and protect participants' privacy.
 
-- **Definition:** participants provide responses that are viewed as **socially acceptable** rather than accurate.
-- **When it occurs:** sensitive behaviors, such as smoking, alcohol use, drug use, and other self-reported behaviors.
-- **Key idea:** When participants modify responses to appear favorable, exposure or outcome data may be systematically distorted.
-- **Reducing it:** Ask about behaviors in a **neutral, nonjudgmental** way.
+::: {.notes}
+- Neutral wording can help, but it does not guarantee accurate reporting. 
+
+- Explain why responses are confidential and consider private self-administered questions when appropriate. 
+
+- Contrast reporting less drinking with actually drinking less because of being observed.
+:::
+
 
 ## Hawthorne Effect
 
-<!-- Source: Original Module 6, "Types of Information Bias: Hawthorne effect". The heading omits the source's information-bias classification because a change in behavior is not necessarily measurement error. -->
+- **Definition:** People change their behavior because they know they are being observed.
+- **Example:** Participants walk more while a research team monitors their activity.
+- Their recorded activity may be accurate, but it may differ from their usual activity.
 
-- **Definition:** participants change behavior because they know they are being observed.
-- **When it occurs:** during clinical trials or behavioral studies, when participants are monitored or aware of measurement.
-- **Key idea:** When behavior changes due to observation, the measured exposure or outcome may not reflect usual behavior.
+**Changing behavior and reporting behavior inaccurately are different problems.**
 
 ::: {.notes}
-Distinguish behavior changing from a participant reporting behavior inaccurately. The supplied exercise illustrates the distinction: exercise increases under observation, whereas socially desirable reporting can misrepresent alcohol use.
+- Observation-related behavior change is not automatically measurement error. 
+
+- Its implications depend on the question: are we interested in usual activity outside a study or activity during a monitored intervention? Preserve this distinction in the exercise.
 :::
 
 
-## Exercise: Bias and Behavior Changes {.compact}
+## Practice: Bias and Behavior Changes {.compact}
 
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Exercise: Identify the Type of Information Bias". -->
-<!-- Adaptation: Original scenarios retained; broadened the heading to distinguish information bias from the Hawthorne effect. -->
-
-For each scenario, identify the **bias or behavior change** being illustrated and explain why.
+For each scenario, identify the **bias or behavior change** and explain why.
 
 ::: {.incremental}
-- In a case-control study, parents of sick children recall pesticide exposure during pregnancy more carefully than parents of healthy children.
+- Parents of sick children recall pesticide exposure during pregnancy more carefully than parents of healthy children.
 
-- Participants report lower alcohol use in face-to-face interviews than expected from sales data.
+- Participants underreport alcohol use because they worry that the interviewer will judge them.
 
-- In a clinical trial, outcome assessors know which participants received the treatment and rate them more favorably.
+- Outcome assessors know who received treatment and rate those participants more favorably.
 
-- Interviewers ask more detailed exposure questions to lung cancer cases than to controls.
+- Interviewers ask lung cancer cases more detailed exposure questions than they ask controls.
 
-- Participants increase exercise levels during a study because they know their activity is being monitored.
+- Participants exercise more because they know their activity is being monitored.
 :::
 
 ::: {.notes}
-1. Recall bias: parents in the two groups recall exposure differently.
-2. Social desirability bias is the intended answer. Underreporting alone does not establish the mechanism; discuss why participants might alter their reports.
-3. Observer bias: knowledge of treatment influences outcome ratings.
+Ask for a brief explanation before revealing the next scenario. These mechanisms are stipulated for the exercise; they are not inferred from observed differences alone.
+
+1. Recall bias: exposure recall differs between groups.
+2. Social desirability bias: concern about judgment changes the report.
+3. Observer bias: treatment knowledge influences outcome ratings.
 4. Interviewer bias: exposure questioning differs between groups.
-5. Hawthorne effect: behavior changes because participants know they are being observed. This is not automatically an error in measuring the changed behavior.
+5. Hawthorne effect: observation changes actual behavior. An accurate measurement of that changed behavior is not itself an information error.
 :::
 
 
-## Reducing Bias {.compact}
+## Reducing Selection Bias {.compact} {visibility="hidden"}
 
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Reducing Selection and Information Bias". -->
+<!-- Setting this to hidden. We should have included this slide in the lecture that introduced selection bias. It feels out of place here. -->
 
-- **Reducing Selection Bias**
+**The comparison depends on who gets included.**
 
-    - Use appropriate **comparison groups**
+- Define the population that should give rise to both study groups.
+- Use clear eligibility rules and consistent recruitment procedures.
+- In case-control studies, select controls who represent the exposure experience of the population that produced the cases.
+- Follow participants consistently and investigate why people leave a study.
 
-    - Apply clear and consistent **inclusion criteria**
-
-    - Minimize **loss to follow-up**
-
-    - Ensure recruitment is not related to both exposure and outcome
-
-- **Reducing Information Bias**
-
-    - Use **standardized definitions** and procedures
-
-    - Apply **blinding** when possible
-
-    - Collect data **consistently across groups**
-
-    - Use validated measurement tools
-
-- **Key idea:** Careful design and consistent measurement strengthen internal validity.
-
-
-## Review: Sample Size and Bias
-
-<!-- Source: Module 5 "Bias" slide and original Module 6 "Random Error vs Systematic Error". Reused concepts for Quiz 3 Question 9. -->
-
-- **Random error:** Natural variability in data; affects **precision** and is generally reduced by increasing sample size.
-- **Bias:** Systematic error arising from study design, selection, or measurement. A larger sample does **not generally eliminate bias**.
-- **Existing example:** Measuring physical activity at local gyms may systematically overrepresent more active people, even with a large sample.
-
-**For information bias:** standardized definitions, consistent measurement procedures, and blinding address the measurement process; a larger sample alone does not.
-
-
-## Review: Confounding
-
-<!-- Source: Association and Causality.qmd, "Confounding". -->
-
-- **Confounding:** The effects of other factors become mixed into our estimate of an exposure's causal effect. Or giving credit to the wrong variable.
-
-- **Example:** Ice cream sales and drownings both increase during hot weather.
-
-    - Hot weather influences both ice cream sales and drowning risk.
-
-- **Question:** Would reducing ice cream sales reduce drownings?
-
-- **Key idea:** The association can be real and useful for prediction without representing a causal effect of ice cream sales.
+**Selecting by outcome is part of a case-control design. Distorting the exposure comparison is the problem.**
 
 ::: {.notes}
-The association itself need not be incorrect. The problem arises when we attribute it to a causal effect of ice cream sales rather than the common cause, hot weather.
-
-Introduce the term "spurious association" here for the reading, quiz, and later exercise. It describes an association that does not represent the causal relationship we might infer from it. Do not use it as a synonym for confounding: chance and other biases can also produce misleading findings.
+Sources: @dicker2025; @cdc2024design. A control should have been eligible to become a case if the outcome had occurred. This does not mean that cases and controls must have the same exposure prevalence or that all studies need a representative sample of the general public. The concern is a valid comparison for the target question.
 :::
 
 
-## Conventional Confounder Definition
+## How Recruitment Can Distort a Comparison {.compact} {visibility="hidden"}
 
-<!-- Source: Hernan, edX PH559x, Confounders Part 2, on-screen conventional definition. -->
-<!-- REVIEW: Present this as the conventional definition being evaluated, not a recommended checklist. GAP: Students have seen sufficient-cause pies but not a systematic DAG introduction. Introduce arrow/path/collider notation before the source video; that introduction has not been authored. -->
+<!-- Setting this to hidden. We should have included this slide in the case-control lecture. It feels out of place here. -->
 
-L is a confounder of the effect of A on Y if L meets these three conditions:
+**Hypothetical study:** Does smoking increase lung cancer risk?
 
-- L is associated with A
-- L is associated with Y conditional on A
-- L is not on a causal pathway from A to Y
+- Recruit **cases with lung cancer** from a hospital.
+- Recruit **controls without lung cancer**, but only from its emphysema clinic.
+- Smoking contributes to emphysema, so this control group may contain too many smokers for the intended comparison.
 
+Smoking could look **less strongly associated** with lung cancer because the recruitment process raised smoking prevalence among controls.
 
-## Confounders: Part 1
-
-<!-- Source: Hernan, Confounders Part 1.mp4, frame at 7:45. -->
-<!-- REVIEW: The local Part 1 file ends at 9:13. This original diagram supplies the common-cause example. No narration has been transcribed. -->
-
-![](assets/hernan-common-cause.png){fig-alt="Hernan diagram: heart disease L causes aspirin use A and stroke Y; aspirin A also points to stroke Y." .nostretch width="1000" height="500" style="object-fit:contain;"}
-
-
-## Confounders: Part 3
-
-<!-- Source: Hernan, edX PH559x, supplied Confounders Part 3.mp4 (complete original video, approximately 7:13). -->
-<!-- REVIEW: Review playback and narration before teaching. The supplied file has no embedded subtitle track; an accurate caption/transcript file is a remaining accessibility gap. No transcript or replacement narration has been invented. Keep the following still diagram available as a visual fallback. -->
-
-{{< video assets/hernan-confounders-part-3.mp4 width="960" height="540" title="Miguel Hernan: Confounders, Part 3" >}}
-
-
-## Confounders: Part 3 Diagram
-
-<!-- Source: Hernan, Confounders Part 3.mp4, frame at 4:30. -->
-<!-- REVIEW: Use the original video explanation for the collider counterexample. Verify that students can identify the path and understand conditioning; a new worked explanation has not been authored. -->
-
-![](assets/hernan-collider.png){fig-alt="Physical activity A points to cervical cancer Y. Precancer lesion U1 points to Y and positive Pap L. Health-conscious personality U2 points to A and L. The two arrows meet at L." .nostretch width="1000" height="500" style="object-fit:contain;"}
-
-
-## Poll: Confounder Criteria {.compact}
-
-<!-- Source: Hernan, 03 Confounders Part 1.pdf, question 1. -->
-<!-- REVIEW: Original question reused verbatim, with letter labels added for classroom polling. Use a show of hands if no polling activity is configured. -->
-
-Consider a variable associated with the treatment A, associated with the outcome Y within levels of A, and not on a causal pathway from A to Y. Adjustment for such a variable will always reduce bias.
-
-**A.** True
-
-**B.** False
+**Better approach:** Select controls from the population that produced the cases, without restricting them to a smoking-related diagnosis.
 
 ::: {.notes}
-False. The supplied completed edX question marks this response correct.
+Ask: "Which part of recruitment depends on the outcome? Which part also depends on the exposure?" Lung cancer defines case status. Among potential controls, a smoking-related illness influences eligibility. This can distort the exposure contrast even if smoking is measured perfectly. The example illustrates the control-selection principle in @cdc2024design. It is not a report of an actual study, and not all hospital control groups are biased.
 :::
 
 
-## Poll: Causal Structure
+## Reducing Information Bias {.compact} {visibility="hidden"}
 
-<!-- Source: Hernan, 03 Confounders Part 1.pdf, question 2. -->
+<!-- Setting this to hidden. We should have included this slide in the lecture that introduced information bias. It feels out of place here. -->
 
-Generally, we need to use our expert knowledge of the causal structure of a problem to determine whether confounding is present.
+**Make measurements comparable across groups.**
 
-**A.** True
+- Use the same exposure and outcome definitions.
+- Train interviewers to use the same questions and prompts.
+- Blind outcome assessors to treatment when feasible.
+- Use measurement tools suited to the population and purpose.
+- Ask sensitive questions neutrally and privately.
 
-**B.** False
+**Example:** An assessor uses the same mobility test for everyone without knowing who attended the exercise class.
 
 ::: {.notes}
-True. The supplied completed edX question marks this response correct.
+The example is hypothetical. Standardization addresses how data are collected; blinding reduces opportunities for expectations to affect judgments. Consistency alone does not make a poorly chosen instrument valid. Source: @dicker2025.
 :::
 
 
-## Addressing Confounding
+## Review: Sample Size and Bias {.compact}
 
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Addressing Confounding". -->
-<!-- REVIEW: GAP: Brad requested a simple numerical before/after-adjustment example and a list of control methods. These supplied slides do not provide that complete teaching sequence. No new numbers, example, or methods lesson has been authored. -->
+- **Random error (sampling variability):** Results vary by chance. More observations generally improve precision.
+- **Bias:** A systematic problem in selection or measurement can remain even in a very large study.
 
-<!-- Add a slide that lists the ways to control for confounding. -->
+**Example:** Interviewing more people at local gyms does not fix the problem of estimating community activity from a sample that overrepresents gym users.
 
-<!-- Create a very simple example where there is an apparent association until we "control" for confounding. -->
+For bias, improve **who is included** or **how measurements are made**. Increasing the sample size alone does not repair those processes.
 
-- Confounding cannot be ignored when interpreting results.
-
-    - **Randomization** helps balance confounders between groups
-
-    - In observational studies, researchers must **identify and measure potential confounders**
-
-    - Results should be interpreted cautiously if important confounders are not accounted for
-
-- **Key idea:** If confounding is not addressed, an observed association may not reflect a true causal relationship.
+::: {.notes}
+- This example concerns estimating community activity, not every possible comparison among gym users. A large biased sample can give a very precise answer to the wrong population question. Then transition: even with careful recruitment and accurate measurement, groups can differ in other causes of the outcome.
+:::
 
 
-## Review: Cohort vs. Case-Control {.compact}
+## Review: Confounding {.compact}
 
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 48. -->
-<!-- REVIEW: Use as an existing comparison for review. It is not a complete four-design exercise; exceptions to the simplified rows still apply. -->
+**Confounding:** Other causes of the outcome get mixed into our estimate of the exposure's effect. We may give credit or blame to the wrong variable.
 
-| Feature | Cohort Study | Case-Control Study |
-| --- | --- | --- |
-| Start With | Exposure | Outcome |
-| Direction | Exposure → Outcome | Outcome → Exposure |
-| Measure | Relative Risk (RR) | Odds Ratio (OR) |
-| Best For | Rare exposures | Rare diseases |
-| Time & Cost | Longer, more expensive | Faster, less expensive |
-| Main Bias Concern | Loss to follow-up | Selection & recall bias |
-| Can Measure Incidence? | Yes | No |
+```{r}
+#| label: dag-setup
+#| eval: true
+#| include: false
+library(dagitty)
+library(ggdag, warn.conflicts = FALSE)
+library(ggplot2)
+
+# Shared slide styling; dagify() below defines each diagram's causal model.
+plot_slide_dag <- function(dag) {
+  ggplot(tidy_dagitty(dag), aes(x = x, y = y, xend = xend, yend = yend)) +
+    geom_dag_edges(
+      edge_colour = "#4d1979", edge_width = 1,
+      start_cap = ggraph::circle(20, "mm"),
+      end_cap = ggraph::circle(20, "mm"),
+      arrow_directed = grid::arrow(length = grid::unit(7, "pt"), type = "closed")
+    ) +
+    geom_dag_text(aes(label = label), colour = "#1f2328", size = 6.5) +
+    scale_x_continuous(limits = c(-0.45, 2.45), expand = expansion(mult = 0)) +
+    scale_y_continuous(limits = c(-0.3, 1.3), expand = expansion(mult = 0)) +
+    theme_dag() +
+    theme(plot.margin = margin(5, 10, 5, 10))
+}
+```
+
+```{r}
+#| label: hot-weather-dag
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| dev: svglite
+#| fig-width: 10
+#| fig-height: 2.7
+#| out-width: "1000px"
+#| out-height: "270px"
+#| fig-class: nostretch
+#| fig-align: center
+#| fig-alt: "Hot weather points to both ice cream sales and drownings. No arrow connects ice cream sales to drownings in this simplified teaching model."
+hot_weather_dag <- dagify(
+  ice_cream ~ weather,
+  drownings ~ weather,
+  labels = c(weather = "Hot weather", ice_cream = "Ice cream\nsales", drownings = "Drownings"),
+  coords = list(
+    x = c(weather = 1, ice_cream = 0, drownings = 2),
+    y = c(weather = 1, ice_cream = 0, drownings = 0)
+  )
+)
+plot_slide_dag(hot_weather_dag)
+```
+
+**Would reducing ice cream sales reduce drownings?** This pattern alone does not show that it would.
+
+::: {.notes}
+Original diagram for the familiar teaching example from Association and Causality.qmd. The arrows express the simplified causal assumptions, not estimates from data. Warm weather can raise sales and increase opportunities for swimming. The observed association may be useful for prediction without being the causal effect of ice cream sales.
+
+A "spurious association" is one that misleads us about the causal relationship. It is not a synonym for confounding; chance and other biases can also mislead.
+:::
 
 
-## Design-Selection Question for Review {.compact visibility="hidden"}
+## Reading a Causal Diagram {.compact}
 
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 50. -->
-<!-- REVIEW: HIDDEN PENDING REVIEW: This source question includes both a rare exposure and a rare disease. Recruitment and data availability are unspecified, so it does not support a unique best answer. Retained for Brad to revise rather than inventing a replacement. -->
+An **arrow** represents an assumed causal influence. It can increase or decrease the outcome.
 
-- You want to study whether a rare genetic mutation is associated with pancreatic cancer. Which design is most efficient?
+```{r}
+#| label: aspirin-stroke-dag
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| dev: svglite
+#| fig-width: 10
+#| fig-height: 2.7
+#| out-width: "1000px"
+#| out-height: "270px"
+#| fig-class: nostretch
+#| fig-align: center
+#| fig-alt: "Preexisting heart disease points to aspirin use and stroke. Aspirin use also points to stroke, representing the causal effect under investigation. Heart disease is a common cause in this teaching model."
+aspirin_stroke_dag <- dagify(
+  aspirin ~ heart_disease,
+  stroke ~ heart_disease + aspirin,
+  exposure = "aspirin",
+  outcome = "stroke",
+  labels = c(heart_disease = "Heart disease", aspirin = "Aspirin use", stroke = "Stroke"),
+  coords = list(
+    x = c(heart_disease = 1, aspirin = 0, stroke = 2),
+    y = c(heart_disease = 1, aspirin = 0, stroke = 0)
+  )
+)
+plot_slide_dag(aspirin_stroke_dag)
+```
 
-- Cohort study
+People taking aspirin may already have a different stroke risk. Comparing users with nonusers can mix that difference with aspirin's effect.
 
-- Case-control study
+**The arrows require knowledge about the problem, not just correlations.**
 
-- Cross-sectional study
+::: {.notes}
+Original rendering of the heart disease, aspirin, and stroke example supplied in Hernán's Confounders Part 1 materials. This is a simplified causal model, not treatment advice or a complete account of prescribing.
 
-- Clinical trial
+Introduce DAG as "directed acyclic graph": arrows have direction, and following them does not loop back to the starting variable. A path is a route along connected arrows. Students do not need formal path rules here. The route connecting aspirin and stroke through preexisting heart disease explains why their association need not equal aspirin's causal effect. Missing arrows also express assumptions. General diagram principles: @hernan2002.
+:::
+
+
+## Practice: Does the Class Increase Falls? {.compact}
+
+**Hypothetical study:** Follow 200 people for one year after some choose to attend a fall-prevention class.
+
+| | People With at Least One Fall | People Followed | One-Year Risk |
+|---|---:|---:|---:|
+| Attended class | 28 | 100 | **28%** |
+| Did not attend | 12 | 100 | **12%** |
+
+**Which conclusion is justified?**
+
+**A.** The class caused more falls.\
+**B.** Attendees had more falls, but they may have differed before class.\
+**C.** The class prevented falls.
+
+::: {.notes}
+Answer: B. These are invented counts for teaching, not findings about an actual program. Assume complete follow-up and accurate measurement so we can focus on confounding. The outcome is whether each person had at least one fall during the same one-year period, not the total number of falls.
+
+Ask what might lead someone to join: a prior fall may both encourage attendance and predict future falls. Participants chose whether to attend; they were not randomized.
+:::
+
+
+## Comparing People With the Same Fall History {.compact}
+
+The same 200 people, now separated by whether they had fallen **before** the class began:
+
+| | No Prior Fall | Prior Fall | All Participants |
+|---|---:|---:|---:|
+| Attended class | 1 / 10 = **10%** | 27 / 90 = **30%** | **28 / 100 = 28%** |
+| Did not attend | 9 / 90 = **10%** | 3 / 10 = **30%** | **12 / 100 = 12%** |
+
+- Within each history group, the risks are **the same**.
+- Attendees included more people with prior falls: **90% versus 10%**.
+
+**Accounting for fall history removes the apparent difference in this example.**
+
+::: {.notes}
+- Start with the rightmost column, "All Participants." These are the same totals we just saw: 28 of 100 class attendees and 12 of 100 nonattendees had at least one fall during follow-up.
+
+- The rows still separate people by whether they attended the class, just as in the previous table. The "No Prior Fall" and "Prior Fall" columns now divide each attendance group by whether people had fallen before the class began.
+
+- In each cell, the first number is the number of people who had at least one fall during the following year. The second number is the total number of people in that particular attendance and fall-history group.
+
+- For example, read the first cell under "No Prior Fall" as: "Of the 10 class attendees with no prior fall, 1 fell during follow-up, a risk of 10%." Then move down that column: among nonattendees with no prior fall, 9 of 90 fell, also 10%.
+
+- Now read down the "Prior Fall" column: 27 of 90 attendees and 3 of 10 nonattendees fell during follow-up. Both risks are 30%. Reading down each fall-history column lets us compare attendance groups with the same prior fall history.
+
+- This is stratification: compare people within categories of a relevant variable. 
+
+- Students should interpret the supplied percentages; calculation or a pooled adjustment formula is not required. 
+
+- All people and falls remain in the table. We changed the comparison, not the observations.
+
+- In this hypothetical story, previous falls influence attendance and predict subsequent falls. 
+
+- Those risks became mixed into the overall comparison. If both groups had an equal mix of the two history categories, each would have a 20% risk: the average of 10% and 30%. This optional illustration is standardization, not an additional result students must calculate.
+
+- Equal observed risks do not prove that a real intervention has no effect, nor does any change after adjustment prove confounding. Here the constructed numbers and stated causal assumptions illustrate the mechanism. Sources for stratification and interpretation: @dicker2025.
+:::
+
+
+## Conventional Confounder Criteria {.compact}
+
+A conventional definition looks for a variable that:
+
+1. Is associated with the exposure.
+2. Is associated with the outcome **among people with the same exposure status**.
+3. Is not a step through which the exposure causes the outcome.
+
+**"Conditional on the exposure"** means considering the outcome association separately among exposed and unexposed people.
+
+These criteria are **not a guarantee** that controlling for the variable will help. Its causal role matters. [@hernan2002]
+
+::: {.notes}
+Use familiar terms instead of L, A, and Y. This slide evaluates the inherited conventional definition; it is not a recommended variable-selection checklist.
+
+For criterion 3, a mediator is an intermediate step: for example, an exercise program might improve balance, which then reduces falls. Controlling for improved balance would remove part of the total effect we wanted to study. Fall history measured before the program is different from balance changed by the program. The next example illustrates a common effect, or collider.
+:::
+
+
+## A Collider: Two Arrows Meet {.compact}
+
+**Hypothetical recruitment rule:** Enroll people who exercise regularly **or** have had a recent injury, including those with both.
+
+```{r}
+#| label: enrollment-collider-dag
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| dev: svglite
+#| fig-width: 10
+#| fig-height: 2.7
+#| out-width: "1000px"
+#| out-height: "270px"
+#| fig-class: nostretch
+#| fig-align: center
+#| fig-alt: "Regular exercise and recent injury both point to study enrollment. Enrollment is their common effect. Restricting the comparison to enrolled people can create an association between exercise and injury."
+enrollment_dag <- dagify(
+  enrollment ~ exercise + injury,
+  labels = c(exercise = "Regular\nexercise", enrollment = "Study\nenrollment", injury = "Recent\ninjury"),
+  coords = list(
+    x = c(exercise = 0, enrollment = 1, injury = 2),
+    y = c(exercise = 0.5, enrollment = 0.5, injury = 0.5)
+  )
+)
+plot_slide_dag(enrollment_dag)
+```
+
+- Among enrollees, anyone who **does not exercise must have an injury**.
+- Exercise could therefore appear protective because of **who was selected**.
+
+**A common effect is not a common cause. Controlling for it can create bias.**
+
+::: {.notes}
+Keep the main explanation brief. "Collider" refers to the meeting arrowheads along this path. Selecting enrollees is conditioning on enrollment: we consider only people with enrollment = yes. This example demonstrates the mechanism discussed by @hernan2002 using an original, simpler scenario in place of the supplied video and Pap-test screenshot. It is not a transcript or a claim about an actual exercise study.
+
+Optional numerical explanation: suppose the source population contains 25 people in each of four categories: exercise/injury, exercise/no injury, no exercise/injury, and neither. Injury prevalence is 50% in both exercise groups. The rule excludes only the last category. Among enrollees, injury prevalence is now 50% among exercisers and 100% among nonexercisers. Nothing about anyone's exercise or injury changed.
+
+The example also shows why the conventional criteria are insufficient: enrollment is associated with exercise, is associated with injury among nonexercisers, and is not a causal step from exercise to injury. Yet selecting on it creates a misleading comparison. We do not need the formal rules for opening and blocking paths to understand this example.
+:::
+
+
+## Practice: Which Variable Needs Attention? {.compact}
+
+A study compares people who choose a fall-prevention class with people who do not.
+
+Researchers learn that **prior falls influence class attendance and the chance of another fall**.
+
+What is the best reason to consider prior falls when making the comparison?
+
+**A.** We should control for every variable available.
+
+**B.** Prior falls are a plausible common cause of attendance and later falls.
+
+**C.** Any variable associated with the outcome must be controlled.
+
+::: {.notes}
+Answer: B. The stated causal knowledge identifies the reason for concern. Associations alone do not establish a variable's role. A and C overlook mediators, colliders, and the question being asked. Use a show of hands or letter cards as a low-tech fallback.
+
+This replaces the abstract inherited true/false questions with a question about the worked example. Students should explain the common cause, not select a statistical model.
+:::
+
+
+## Addressing Confounding During Study Design {.compact}
+
+| Approach | Basic Idea | Example |
+|---|---|---|
+| **Randomization** | Assign the intervention by chance | Randomly offer the class |
+| **Restriction** | Limit a relevant characteristic | Enroll only people with no prior falls |
+| **Matching** | Select comparison participants with similar characteristics | Match participants on fall history |
+
+Randomization balances baseline factors **on average**, including factors we did not measure.
+
+Restriction narrows the population studied. Matching still requires an appropriate analysis.
+
+::: {.notes}
+This is a conceptual menu, not instruction in conducting a matched analysis. Random assignment does not guarantee identical groups in a particular sample, and it does not solve every problem arising after assignment. Restriction or matching only addresses the relevant factors selected and measured; neither automatically removes all confounding. Matching on the wrong variables can also introduce problems. Sources: @cdc2024design; @dicker2025.
+:::
+
+
+## Addressing Confounding During Analysis {.compact}
+
+- **Stratification:** Compare exposed and unexposed people within categories of a confounder, as in the fall-history table.
+
+- **Statistical adjustment:** Use methods such as regression or standardization to account for appropriate measured factors.
+
+- Both approaches depend on choosing relevant variables and measuring them adequately.
+
+**When reading a study, ask:** What did the researchers account for, why did they choose those factors, and what important differences might remain?
+
+::: {.notes}
+Students need to recognize these approaches and explain their purpose; they do not need to fit a regression model or calculate an adjusted effect. Confounding can remain when important factors are missing or measured poorly. Methods also rely on design and modeling assumptions. These methods do not make an observational comparison equivalent to randomization merely because an estimate is labeled "adjusted." Source: @dicker2025.
+:::
 
 
 ## Epidemiology Wrap-Up {.compact}
-
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 53. -->
-
 
 - Define and explain the **foundations of epidemiology**
 
@@ -446,42 +723,50 @@ True. The supplied completed edX question marks this response correct.
 
 ## From Concepts to Your Presentation {.compact}
 
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 54. -->
-<!-- REVIEW: Verify these inherited presentation requirements against the current assignment rubric. No assignment expectations have been added. -->
-
 ::::: {.columns}
 
-:::: {.column width="50%"}
+:::: {.column width="40%"}
 
-- **The Conceptual Progression**
+**The Conceptual Progression**
 
-    - Descriptive Epidemiology\
-      → Generates hypotheses
+- **Descriptive epidemiology:** Describe patterns and generate hypotheses.
 
-    - Analytic Epidemiology\
-      → Tests exposure → outcome relationships
+- **Analytic epidemiology:** Evaluate exposure–outcome relationships.
 
-    - Critical Thinking\
-      → Distinguish **association from causation**
+- **Critical thinking:** Distinguish association from causation.
 
 ::::
 
-:::: {.column width="50%"}
+:::: {.column width="55%"}
 
-- **For Your Epi Final Presentation**
+**For Group Presentation 1**
 
-- You are expected to:
+- Describe population patterns using appropriate **epidemiologic measures**.
 
-    - Clearly describe a population health issue
+- Include and cite at least one source of **analytic evidence**.
 
-    - Include and interpret an **analytic study**
+- Explain the evidence type, exposure, outcome, and main finding.
 
-    - Identify the **study design and measure**
+- Relate the evidence to your findings; discuss **limitations, bias, and confounding**.
 
-    - Discuss **bias, confounding, and limitations**
-
-    - Avoid overstating causality
+- Avoid definitive causal claims or policy recommendations.
 
 ::::
 
 :::::
+
+Use the **assignment instructions and rubric in D2L** for the full requirements.
+
+::: {.notes}
+Source: Group Presentation 1 assignment instructions, sections 3–6, in the course's Assignments/Group Presentation 1 folder.
+
+Acceptable analytic evidence includes peer-reviewed studies, government or public health reports, surveillance reports with analytic comparisons, and textbooks or course readings that synthesize analytic findings. A single primary research study is not required. Students should explain how their selected evidence supports or contextualizes their descriptive patterns without claiming it proves a causal explanation.
+
+This slide highlights the connection to our epidemiology lessons. The assignment also specifies presentation structure, timing, participation, slide design, and submission expectations; students should consult the full assignment and rubric in D2L.
+:::
+
+
+## References {.references-slide}
+
+::: {#refs}
+:::
