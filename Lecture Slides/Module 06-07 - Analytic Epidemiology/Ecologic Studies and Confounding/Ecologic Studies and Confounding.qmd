@@ -417,7 +417,11 @@ The example is hypothetical. Standardization addresses how data are collected; b
 For bias, improve **who is included** or **how measurements are made**. Increasing the sample size alone does not repair those processes.
 
 ::: {.notes}
-- This example concerns estimating community activity, not every possible comparison among gym users. A large biased sample can give a very precise answer to the wrong population question. Then transition: even with careful recruitment and accurate measurement, groups can differ in other causes of the outcome.
+- This example concerns estimating community activity, not every possible comparison among gym users. 
+
+- A large biased sample can give a very precise answer to the wrong population question. 
+
+- Then transition: even with careful recruitment and accurate measurement, groups can differ in other causes of the outcome.
 :::
 
 
@@ -479,52 +483,9 @@ plot_slide_dag(hot_weather_dag)
 **Would reducing ice cream sales reduce drownings?** This pattern alone does not show that it would.
 
 ::: {.notes}
-Original diagram for the familiar teaching example from Association and Causality.qmd. The arrows express the simplified causal assumptions, not estimates from data. Warm weather can raise sales and increase opportunities for swimming. The observed association may be useful for prediction without being the causal effect of ice cream sales.
+- The arrows express the simplified causal assumptions, not estimates from data. 
 
-A "spurious association" is one that misleads us about the causal relationship. It is not a synonym for confounding; chance and other biases can also mislead.
-:::
-
-
-## Reading a Causal Diagram {.compact}
-
-An **arrow** represents an assumed causal influence. It can increase or decrease the outcome.
-
-```{r}
-#| label: aspirin-stroke-dag
-#| eval: true
-#| echo: false
-#| message: false
-#| warning: false
-#| dev: svglite
-#| fig-width: 10
-#| fig-height: 2.7
-#| out-width: "1000px"
-#| out-height: "270px"
-#| fig-class: nostretch
-#| fig-align: center
-#| fig-alt: "Preexisting heart disease points to aspirin use and stroke. Aspirin use also points to stroke, representing the causal effect under investigation. Heart disease is a common cause in this teaching model."
-aspirin_stroke_dag <- dagify(
-  aspirin ~ heart_disease,
-  stroke ~ heart_disease + aspirin,
-  exposure = "aspirin",
-  outcome = "stroke",
-  labels = c(heart_disease = "Heart disease", aspirin = "Aspirin use", stroke = "Stroke"),
-  coords = list(
-    x = c(heart_disease = 1, aspirin = 0, stroke = 2),
-    y = c(heart_disease = 1, aspirin = 0, stroke = 0)
-  )
-)
-plot_slide_dag(aspirin_stroke_dag)
-```
-
-People taking aspirin may already have a different stroke risk. Comparing users with nonusers can mix that difference with aspirin's effect.
-
-**The arrows require knowledge about the problem, not just correlations.**
-
-::: {.notes}
-Original rendering of the heart disease, aspirin, and stroke example supplied in Hernán's Confounders Part 1 materials. This is a simplified causal model, not treatment advice or a complete account of prescribing.
-
-Introduce DAG as "directed acyclic graph": arrows have direction, and following them does not loop back to the starting variable. A path is a route along connected arrows. Students do not need formal path rules here. The route connecting aspirin and stroke through preexisting heart disease explains why their association need not equal aspirin's causal effect. Missing arrows also express assumptions. General diagram principles: @hernan2002.
+- Warm weather can raise sales and increase opportunities for swimming. The observed association may be useful for prediction without being the causal effect of ice cream sales.
 :::
 
 
@@ -589,7 +550,60 @@ The same 200 people, now separated by whether they had fallen **before** the cla
 :::
 
 
-## Conventional Confounder Criteria {.compact}
+## Prior Falls and Class Attendance {.compact}
+
+In our hypothetical study, **prior falls** can influence both class attendance and the chance of falling again.
+
+```{r}
+#| label: class-attendance-falls-dag
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| dev: svglite
+#| fig-width: 10
+#| fig-height: 2.7
+#| out-width: "1000px"
+#| out-height: "270px"
+#| fig-class: nostretch
+#| fig-align: center
+#| fig-alt: "Prior falls point to both class attendance and falls in the next year. No arrow connects class attendance to future falls because this hypothetical example assumes the class has no causal effect. Different fall histories explain the overall difference in risk."
+# Omit the attendance-to-falls arrow to represent the agreed teaching assumption
+# that the class has no causal effect, rather than infer that assumption from the table.
+class_attendance_falls_dag <- dagify(
+  attendance ~ prior_falls,
+  next_year_falls ~ prior_falls,
+  exposure = "attendance",
+  outcome = "next_year_falls",
+  labels = c(prior_falls = "Prior falls", attendance = "Class\nattendance", next_year_falls = "Falls in the\nnext year"),
+  coords = list(
+    x = c(prior_falls = 1, attendance = 0, next_year_falls = 2),
+    y = c(prior_falls = 1, attendance = 0, next_year_falls = 0)
+  )
+)
+plot_slide_dag(class_attendance_falls_dag)
+```
+
+In this hypothetical example, **assume the class has no effect on falls**.
+
+**The groups' different fall histories explain the overall difference in risk.**
+
+::: {.notes}
+- Read each arrow in ordinary language. In this hypothetical story, having fallen before can motivate someone to attend the class and can increase their chance of falling again. Each arrow represents a proposed causal influence.
+
+- There is no arrow from class attendance to falls in the next year because we assume the class has no causal effect in this hypothetical example. This is an assumption of the teaching story, not a conclusion established by the table alone.
+
+- Connect the diagram to the tables: 90% of attendees had a prior fall, compared with 10% of nonattendees. Their different fall histories produced the overall risk difference, which we could mistakenly attribute to class attendance.
+
+- Comparing attendees and nonattendees within the same fall-history category gave equal risks in our constructed example. The diagram explains why we considered fall history. The numbers alone do not establish the arrows or prove that a real class has no effect.
+
+- Ask students to explain why prior falls matter for both attendance and future falls. Formal diagram terminology and path rules are not needed here. General diagram principles: @hernan2002.
+:::
+
+
+## Conventional Confounder Criteria {.compact} {visibility="hidden"}
+
+<!-- I decided to hide this slide. I don't have enough time to teach colliders appropriately. Therefore, I think this slide will create more confusion than anything else. -->
 
 A conventional definition looks for a variable that:
 
@@ -608,7 +622,7 @@ For criterion 3, a mediator is an intermediate step: for example, an exercise pr
 :::
 
 
-## A Collider: Two Arrows Meet {.compact}
+## A Collider: Two Arrows Meet {.compact} {visibility="hidden"}
 
 **Hypothetical recruitment rule:** Enroll people who exercise regularly **or** have had a recent injury, including those with both.
 
