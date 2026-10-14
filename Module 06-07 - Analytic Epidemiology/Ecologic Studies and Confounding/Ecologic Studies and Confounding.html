@@ -6,10 +6,10 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.18">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/countdown-0.6.0/countdown.js"></script>
+<link href="../../site_libs/quarto-contrib/countdown-0.6.0/countdown.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.36">
 
   <title>APHS 20203 Lecture Slides – Ecologic Studies and Confounding</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -21,13 +21,10 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
+    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: 1.5em;}
-    div.column{flex: auto;}
-    @media screen {
-    div.columns{gap: min(4vw, 1.5em);}
-    div.column{overflow-x: auto;}
-    }
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -35,7 +32,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-34e970d70970bc47f7dd43e325559e70.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -137,138 +153,358 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Ecologic Studies and Confounding</h1>
-  <p class="subtitle">APHS 20203 · Epidemiology &amp; Biostatistics<br>October 14, 2026</p>
+  <p class="subtitle">APHS 20203 · Epidemiology &amp; Biostatistics</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="ecologic-studies" class="slide level2 compact">
-<h2>Ecologic Studies</h2>
-<!-- REVIEW: Third of three sessions. Reserve time for AI Activity 2 if it is conducted in class. Check actual Quiz 3 items before declaring coverage complete. GAP: No complete, unambiguous exercise comparing all four designs was supplied; existing two-design discussion and the cohort/case-control comparison are reused instead. A new integrated exercise requires Brad's approval. -->
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Ecologic Studies: Limits of Causal Inference". -->
-<!-- Define and explain unit of analysis and unit of observation. See: https://pressbooks.pub/scientificinquiryinsocialwork/chapter/7-3-unit-of-analysis-and-unit-of-observation/ -->
+<section id="hierarchy-of-study-designs" class="slide level2">
+<h2>Hierarchy of Study Designs</h2>
+
+<img data-src="../../assets/study_design_hierarchy.png" alt="Diagram grouping study designs into observational and experimental approaches. From left to right: case descriptions, ecological, cross-sectional, case-control, and cohort studies are observational; nonrandomized and randomized studies are experimental. An arrow indicates that evidence typically becomes more convincing from left to right." class="r-stretch"><aside class="notes">
 <ul>
-<li><p><strong>Ecologic Studies:</strong> <em>Group-level analysis</em></p></li>
-<li><p><strong>Unit of analysis:</strong> groups (not individuals)</p></li>
-<li><p><strong>Exposure &amp; outcome:</strong> measured at the <strong>population level</strong></p></li>
-<li><p><strong>Common use:</strong> explore population patterns; generate hypotheses</p></li>
-<li><p><strong>Key caution:</strong> group-level associations ≠ individual-level conclusions</p></li>
-<li><p><strong>Take-home message:</strong> Ecologic studies are useful for <strong>population questions</strong>, but <strong>cannot establish individual-level causality</strong>.</p></li>
+<li>Here is a review of our study design hierarchy.</li>
 </ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ecologic-studies" class="slide level2">
+<h2>Ecologic Studies</h2>
+<ul>
+<li><p><strong>Ecologic studies compare groups</strong>, such as cities, schools, or countries.</p></li>
+<li><p>Researchers analyze <strong>group characteristics</strong>, such as average income and average blood pressure.</p></li>
+<li><p>They can describe population patterns and investigate questions about policies or environments.</p></li>
+<li><p>A relationship between groups does <strong>not necessarily describe the relationship between individuals</strong>.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><p>The important distinction is the level of the question and analysis.</p></li>
+<li><p>Ecologic studies can address population questions directly, as well as generate hypotheses for individual-level research.</p></li>
+<li><p>The hierarchy on the previous slide is a broad guide to individual causal inference, not a ranking of how well each design answers every possible question.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="unit-of-observation-vs.-unit-of-analysis" class="slide level2 compact">
+<h2>Unit of Observation vs.&nbsp;Unit of Analysis</h2>
+<p><strong>Hypothetical example:</strong> Measure residents’ income and blood pressure, then compare city averages.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>What Does It Mean?</th>
+<th>In This Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Unit of observation</strong></td>
+<td>The entity we collect measurements from</td>
+<td>Each resident</td>
+</tr>
+<tr class="even">
+<td><strong>Unit of analysis</strong></td>
+<td>The entity we compare and draw conclusions about</td>
+<td>Each city</td>
+</tr>
+</tbody>
+</table>
+<p>The same individual measurements could support a different analysis that compares <strong>residents</strong> instead of cities.</p>
+<aside class="notes">
+<ul>
+<li><p>Definitions adapted from <span class="citation" data-cites="decarlo2018units">DeCarlo (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span>.</p></li>
+<li><p>Here the original observations are residents; aggregating their measurements changes the unit of analysis to cities.</p></li>
+<li><p>If researchers receive only a table of city averages, their available observations are already at the city level.</p></li>
+<li><p>Observation and analysis can be at the same level or different levels.</p></li>
+<li><p>Do not teach that every ecologic study collects individual records.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="ecologic-fallacy" class="slide level2 compact">
 <h2>Ecologic Fallacy</h2>
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Ecologic Fallacy". -->
-<!-- REVIEW: The source city-income/CHD scenario is illustrative; verify or label it as hypothetical before presenting it as an empirical finding. -->
-<!-- Make the image larger or delete it. -->
-<!-- Should we also show a chart that demonostrates ecological falacy? -->
-<div class="columns">
-<div class="column" style="width:65%;">
+<p><strong>Ecologic fallacy:</strong> Assuming a relationship between groups also holds for individuals.</p>
+<p><img data-src="assets/ecologic-fallacy.svg" class="" style="object-fit:contain;" alt="Hypothetical annual household income and systolic blood-pressure data for three cities. Left: city averages increase together, from 40 thousand dollars and 112 millimeters of mercury in City A to 100 thousand dollars and 148 millimeters of mercury in City C. Right: the five individual observations within each city show decreasing blood pressure as income increases. A positive association between city averages does not establish the association among individuals within cities." width="1120" height="405"></p>
+<p><strong>City averages alone do not reveal the relationships within cities.</strong></p>
+<aside class="notes">
 <ul>
-<li><p><strong>Definition:</strong> Incorrectly applying <strong>group-level</strong> findings to <strong>individuals</strong></p>
-<ul>
-<li>Occurs when associations observed in populations are assumed to hold at the individual level</li>
-</ul></li>
-<li><p><strong>Example</strong></p>
-<ul>
-<li><p>Observation: Cities with higher income have higher CHD rates</p></li>
-<li><p>Incorrect inference: Wealthier individuals have higher CHD risk</p></li>
-<li><p>Reality: Within cities, CHD risk may be higher among lower-income individuals</p></li>
-</ul></li>
-<li><p><strong>Take-home message:</strong> Group-level data cannot be used to draw <strong>individual-level conclusions</strong>.</p></li>
+<li><p>These are invented teaching data, not evidence about income and blood pressure.</p></li>
+<li><p>Each city contains five equally weighted observations. The left panel contains their exact means; the right panel shows the individual observations that produced them.</p></li>
+<li><p>Income is the resident’s reported annual household income, and the blood-pressure measure is systolic blood pressure.</p></li>
+<li><p><strong>Ask students to describe each panel before explaining the error.</strong></p></li>
+<li><p>Between cities, higher average income accompanies higher average blood pressure. Within each city, higher-income residents have lower blood pressure in this constructed example. Neither pattern by itself establishes causation.</p></li>
+<li><p>A reversal makes the distinction easy to see, but ecological fallacy does not require a reversal. The error is assuming an individual association from aggregate data alone, whether the unknown individual association is weaker, absent, reversed, or similar.</p></li>
 </ul>
-</div><div class="column" style="width:35%;">
-<p><img data-src="assets/m6-source-009-shape-6.png" class="" style="max-width:100%;height:auto;" alt="An ecological-fallacy infographic contrasts a taller average male figure with a taller individual female figure, illustrating that population averages do not determine every individual comparison." width="347"></p>
-</div></div>
+<p>Concept: <span class="citation" data-cites="decarlo2018units">DeCarlo (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span>. Figure generated from the hypothetical values in assets/ecologic-fallacy.R.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="ecologic-study-strengths-limitations" class="slide level2">
-<h2>Ecologic Study: Strengths &amp; Limitations</h2>
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Ecologic Study: Strengths & Limitations". -->
-<!-- REVIEW: Brad's concern remains: this source does not explain when an ecological design is the preferred choice for a population-level question. No new example has been invented. -->
-<!-- This gives the impression that ecological studies are never the best design choice. Instead, they are the only option at times. I don't think that's true. I think there are times when an ecological study is the best choice, even if resources allow other designs. -->
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Strengths</p>
+<section id="practice-what-can-we-conclude" class="slide level2 compact">
+<h2>Practice: What Can We Conclude?</h2>
+<p>Suppose we have <strong>only the city averages</strong> from the previous slide. Which conclusion is supported?</p>
+<p><strong>A.</strong> Increasing a person’s income raises their blood pressure.</p>
+<p><strong>B.</strong> Within each city, richer residents have higher blood pressure.</p>
+<p><strong>C.</strong> Cities with higher average income have higher average blood pressure.</p>
+<p><strong>D.</strong> Income has no relationship with anyone’s blood pressure.</p>
+<aside class="notes">
+<p>Answer: C. It stays at the level measured in the aggregate data. A adds a causal claim; B assumes an individual association; D also makes an unsupported individual claim. Ask students what information they would need to investigate B. Use a show of hands or letter cards if no live polling tool is configured.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="when-the-population-is-the-question" class="slide level2 compact">
+<h2>When the Population Is the Question</h2>
+<p><strong>Hypothetical question:</strong> After cities adopt a smoke-free indoor-air policy, do their heart-attack admission rates decline compared with cities that do not?</p>
 <ul>
-<li><p>Uses existing population-level data</p></li>
-<li><p>Efficient: fast and low cost</p></li>
-<li><p>Useful when individual-level data are unavailable</p></li>
+<li><p><strong>Exposure:</strong> A city policy that changes the shared environment.</p></li>
+<li><p><strong>Outcome:</strong> The city’s admission rate over time.</p></li>
+<li><p><strong>Why study groups?</strong> We want to evaluate the policy’s overall population effect, including effects on people who do not smoke.</p></li>
+<li><p>The analysis must still consider other changes occurring in those cities.</p></li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p>Limitations</p>
+<aside class="notes">
 <ul>
-<li><p><strong>Ecologic fallacy</strong></p></li>
-<li><p>Crude exposure measurement</p></li>
-<li><p>Limited control of confounding</p></li>
+<li><p>So, why would we use an ecological study design?</p></li>
+<li><p>This is a proposed study question, not a claim about a particular policy evaluation.</p></li>
+<li><p>Comparing population trends before and after adoption, with suitable comparison cities, fits the policy question.</p></li>
+<li><p>Individual smoking histories could add information, but they would not replace the question about changing a city’s policy.</p></li>
+<li><p>A simple comparison of cities would not establish causality.</p></li>
+<li><p><strong>Ask what else might change at the same time, such as healthcare access or other tobacco policies.</strong></p></li>
 </ul>
-</div></div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="dietary-fat-and-breast-cancer-mortality" class="slide level2 compact">
 <h2>Dietary Fat and Breast Cancer Mortality</h2>
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Discussion: Ecologic Study Example". -->
-<!-- REVIEW: Use the source discussion prompts as a group exercise. The inherited answer notes mix cancer incidence/detection with mortality and make unsupported study-specific claims; they were omitted pending review. Complete the source citation formatting before publication. -->
+<p><strong>The question:</strong> Could differences in diet help explain why breast cancer death rates differ across countries?</p>
+<p><span class="citation" data-cites="sasaki1993">Sasaki et al. (<a href="#/references" role="doc-biblioref" onclick="">1993</a>)</span></p>
 <ul>
-<li><p><strong>Study</strong></p>
-<ul>
-<li><p>Sasaki et al.&nbsp;(1993): dietary fat intake &amp; breast cancer mortality</p></li>
-<li><p>Unit of analysis: <strong>countries (30 countries total)</strong></p></li>
-</ul></li>
-<li><p><strong>Key finding</strong></p>
-<ul>
-<li><p>Higher animal fat intake was associated with higher breast cancer mortality</p></li>
-<li><p>Fish fat intake was associated with lower breast cancer mortality</p></li>
-</ul></li>
-<li><p><strong>Discussion prompts</strong></p>
-<ul>
-<li><p>What makes this study <strong>feasible and efficient</strong>?</p></li>
-<li><p>Why can these results <strong>not</strong> be interpreted at the individual level?</p></li>
-<li><p>What <strong>other population-level factors</strong> could explain the association?</p></li>
-</ul></li>
+<li><p><strong>Design:</strong> Ecologic study of 30 countries, using data from 1961 to 1986.</p></li>
+<li><p><strong>Exposure:</strong> National food-supply estimates per person, separated by fat type.</p></li>
+<li><p><strong>Outcome:</strong> Female breast cancer mortality rates.</p></li>
+<li><p><strong>Finding:</strong> Animal fat excluding fish fat was positively associated with mortality among women aged 50 and older. Fish fat showed inverse associations when statistically significant.</p></li>
 </ul>
-<!-- Turn this into a real citation and add to the references slide. -->
-<p>Sasaki S, Horacsek M, Kesteloot H. An ecological study of the relationship between dietary fat intake and breast cancer mortality. Prev Med. 1993 Mar;22(2):187-202. doi: 10.1006/pmed.1993.1016. PMID: 8483858.</p>
+<div class="fragment">
+<p><strong>The country averages do not tell us what the women who died had eaten.</strong></p>
+</div>
+<aside class="notes">
+<ul>
+<li><p>Start the story with a researcher looking across countries and wondering whether diet contributes to their different death rates.</p></li>
+<li><p>Existing food-balance and mortality records allow a broad comparison without following individual diets for decades.</p></li>
+<li><p>Distinguish national food supply from measured personal consumption.</p></li>
+<li><p>This is an example of a research question, not a claim that this paper initiated the later trial.</p></li>
+<li><p><strong>What is the potential ecological fallacy we have to be careful to avoid?</strong></p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="low-fat-dietary-pattern-randomized-trial" class="slide level2 compact">
 <h2>Low-Fat Dietary Pattern: Randomized Trial</h2>
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Discussion: Randomized Controlled Trial (RCT) Example". -->
+<p><strong>A related question:</strong> Does assignment to a dietary program reduce new breast cancers?</p>
+<p><span class="citation" data-cites="prentice2006"><span class="nocase">Prentice et al.</span> (<a href="#/references" role="doc-biblioref" onclick="">2006</a>)</span></p>
 <ul>
-<li><p><strong>Study overview</strong></p>
-<ul>
-<li><p>Large randomized controlled trial of a <strong>low-fat dietary pattern</strong></p></li>
-<li><p>Postmenopausal women assigned to <strong>intervention</strong> or <strong>usual diet</strong></p></li>
-<li><p>Long-term follow-up</p></li>
-</ul></li>
-<li><p><strong>Discussion prompts</strong></p>
-<ul>
-<li><p>Why is an <strong>RCT</strong> an appropriate design for this question?</p></li>
-<li><p>What features of this study strengthen <strong>causal inference</strong>?</p></li>
-<li><p>What challenges might arise in <strong>long-term behavioral interventions</strong>?</p></li>
-</ul></li>
-<li><p><strong>Key takeaway:</strong> RCTs strengthen causal conclusions, but feasibility, adherence, and follow-up matter.</p></li>
+<li><p><strong>Participants:</strong> 48,835 postmenopausal women, ages 50–79, without prior breast cancer.</p></li>
+<li><p><strong>Intervention:</strong> A program to reduce total fat and increase fruit, vegetables, and grains; comparison participants were not asked to change their diet.</p></li>
+<li><p><strong>Outcome:</strong> New invasive breast cancers during an average 8.1 years of follow-up.</p></li>
+<li><p><strong>2006 result:</strong> The intervention did not produce a statistically significant reduction in invasive breast cancer incidence.</p></li>
 </ul>
-<p>Prentice RL, Caan B, Chlebowski RT, et al.&nbsp;Low-Fat Dietary Pattern and Risk of Invasive Breast Cancer: The Women’s Health Initiative Randomized Controlled Dietary Modification Trial. JAMA. 2006;295(6):629–642. doi:10.1001/jama.295.6.629</p>
+<aside class="notes">
+<ul>
+<li><p>Random assignment strengthens causal inference about assignment to this dietary program.</p></li>
+<li><p>It does not isolate one fat type.</p></li>
+<li><p>A nonsignificant result does not prove the effect is zero.</p></li>
+<li><p>The trial’s reported hazard ratio was 0.91 (95% CI 0.83–1.01); interpreting hazard ratios is not required here. This slide summarizes the cited 2006 report, not subsequent follow-up publications.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ecologic-studies-strengths-and-limitations" class="slide level2 compact">
+<h2>Ecologic Studies: Strengths and Limitations</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Strengths</strong></p>
+<ul>
+<li>Fit questions about population policies and environments</li>
+<li>Reveal patterns across places or time</li>
+<li>Can use existing data efficiently</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Limitations</strong></p>
+<ul>
+<li>Group associations may not describe individuals</li>
+<li>Averages can hide differences within groups</li>
+<li>Other population differences can complicate interpretation</li>
+</ul>
+</div></div>
+<p><strong>Choose the design that fits the question and the level of the conclusion.</strong></p>
+<aside class="notes">
+<ul>
+<li><p>Return to the policy example: an ecologic design can be appropriate because the question concerns a population intervention, even when individual data are available.</p></li>
+<li><p>In the dietary study, national food supply is an imperfect proxy for consumption.</p></li>
+<li><p>Ecologic analyses can account for measured population characteristics, but aggregate data do not automatically resolve confounding or differences in measurement between places.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="group-discussion-comparing-study-designs" class="slide level2 compact">
 <h2>Group Discussion: Comparing Study Designs</h2>
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Discussion: Comparing Study Designs". -->
-<!-- REVIEW: The studies have different outcomes and exposure definitions. The comparison should not imply they estimate an identical causal effect. -->
-<!-- Why are we comparing ecologic studies and RCTs? -->
-<ul>
-<li><p><strong>Comparing Two Studies:</strong> Think back to the two studies discussed today:</p>
-<ul>
-<li><p><strong>Ecologic study:</strong> dietary fat intake and breast cancer mortality</p></li>
-<li><p><strong>Randomized controlled trial:</strong> low-fat dietary intervention</p></li>
-</ul></li>
-<li><p><strong>Discussion questions</strong></p>
-<ul>
-<li><p>What is the <strong>unit of analysis</strong> in each study?</p></li>
-<li><p>Which study provides <strong>stronger evidence for causality</strong>, and why?</p></li>
-<li><p>What kinds of conclusions are <strong>appropriate</strong> for each design?</p></li>
-</ul></li>
-</ul>
+<p><strong>Work in groups of 2–3 for 4 minutes. Prepare a brief explanation for each question.</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Ecologic Study</th>
+<th>Randomized Trial</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Unit of analysis</td>
+<td>Countries</td>
+<td>Individual women</td>
+</tr>
+<tr class="even">
+<td>Exposure / intervention</td>
+<td>National supply of different fats</td>
+<td>Assignment to a dietary program</td>
+</tr>
+<tr class="odd">
+<td>Outcome</td>
+<td>Breast cancer mortality</td>
+<td>Invasive breast cancer incidence</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>Why does the ecologic study not tell us whether changing one woman’s diet would change her risk?</li>
+<li>What does random assignment add, and what dietary question does this trial actually test?</li>
+<li>Why would it be misleading to say that this trial simply proves or disproves the ecologic study?</li>
+</ol>
+<countdown-timer id="timer_2e82d84004248a658a00e1f5bbbbc1e813ecfdee" minutes="04" seconds="00" class="countdown" warn-when="30" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+ </countdown-timer>
 <aside class="notes">
-<p>Key takeaway Different study designs answer different questions and provide different levels of causal evidence.</p>
+<p>Purpose: practice matching conclusions to the question, unit of analysis, and design. This is not a competition to name the universally best design.</p>
+<p>Facilitation: allow four minutes, then invite a different group to answer each question. Keep the table visible.</p>
+<p>Answer key:</p>
+<ol type="1">
+<li>The country records do not link each woman’s own exposure to her outcome. Other national differences could contribute to the pattern. Access to effective treatment is one possible influence on mortality; it is a discussion hypothesis, not a finding established by this paper. Mortality involves both developing cancer and surviving it.</li>
+<li>Random assignment helps make the groups comparable at baseline. The trial tests assignment to a program with several dietary goals; adherence still matters.</li>
+<li>Exposure definitions, populations, and outcomes differ. A stronger design for one causal question does not turn it into a test of every related question. Ask students to name at least two differences from the table.</li>
+</ol>
+<p>Sources: <span class="citation" data-cites="sasaki1993">Sasaki et al. (<a href="#/references" role="doc-biblioref" onclick="">1993</a>)</span>; <span class="citation" data-cites="prentice2006"><span class="nocase">Prentice et al.</span> (<a href="#/references" role="doc-biblioref" onclick="">2006</a>)</span>.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="from-study-design-to-trustworthy-comparisons" class="slide level2 compact">
+<h2>From Study Design to Trustworthy Comparisons</h2>
+<p>The two dietary studies asked different questions. For either study, we still need to ask <strong>what could make the comparison misleading</strong>.</p>
+<ul>
+<li><strong>Selection:</strong> Who entered the study, and who stayed in it?</li>
+<li><strong>Information:</strong> Were exposure and outcome measured accurately?</li>
+<li><strong>Confounding:</strong> Did the groups differ in other causes of the outcome?</li>
+</ul>
+<p>We will connect these questions to the bias examples from the case-control lecture.</p>
+<aside class="notes">
+<p>This is the transition from choosing a study design to evaluating the comparison it produces.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -283,24 +519,18 @@
 </section>
 <section id="social-desirability-bias" class="slide level2">
 <h2>Social Desirability Bias</h2>
-<!-- Source: Original Module 6, "Types of Information Bias: Social Desirability"; nonjudgmental-questioning application adapted from supplied Quiz 3 Question 8. Original decorative image omitted. -->
 <ul>
-<li><strong>Definition:</strong> participants provide responses that are viewed as <strong>socially acceptable</strong> rather than accurate.</li>
-<li><strong>When it occurs:</strong> sensitive behaviors, such as smoking, alcohol use, drug use, and other self-reported behaviors.</li>
-<li><strong>Key idea:</strong> When participants modify responses to appear favorable, exposure or outcome data may be systematically distorted.</li>
-<li><strong>Reducing it:</strong> Ask about behaviors in a <strong>neutral, nonjudgmental</strong> way.</li>
-</ul>
-</section>
-<section id="hawthorne-effect" class="slide level2">
-<h2>Hawthorne Effect</h2>
-<!-- Source: Original Module 6, "Types of Information Bias: Hawthorne effect". The heading omits the source's information-bias classification because a change in behavior is not necessarily measurement error. -->
-<ul>
-<li><strong>Definition:</strong> participants change behavior because they know they are being observed.</li>
-<li><strong>When it occurs:</strong> during clinical trials or behavioral studies, when participants are monitored or aware of measurement.</li>
-<li><strong>Key idea:</strong> When behavior changes due to observation, the measured exposure or outcome may not reflect usual behavior.</li>
+<li><strong>Definition:</strong> Participants report what seems socially acceptable instead of what actually happened.</li>
+<li><strong>Example:</strong> Someone understates their alcohol use because they worry the interviewer will judge them.</li>
+<li><strong>Problem:</strong> The recorded answer differs from the behavior we want to measure.</li>
+<li><strong>Reducing it:</strong> Use neutral questions and protect participants’ privacy.</li>
 </ul>
 <aside class="notes">
-<p>Distinguish behavior changing from a participant reporting behavior inaccurately. The supplied exercise illustrates the distinction: exercise increases under observation, whereas socially desirable reporting can misrepresent alcohol use.</p>
+<ul>
+<li><p>Neutral wording can help, but it does not guarantee accurate reporting.</p></li>
+<li><p>Explain why responses are confidential and consider private self-administered questions when appropriate.</p></li>
+<li><p>Contrast reporting less drinking with actually drinking less because of being observed.</p></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -313,25 +543,49 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="exercise-bias-and-behavior-changes" class="slide level2 compact">
-<h2>Exercise: Bias and Behavior Changes</h2>
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Exercise: Identify the Type of Information Bias". -->
-<!-- Adaptation: Original scenarios retained; broadened the heading to distinguish information bias from the Hawthorne effect. -->
-<p>For each scenario, identify the <strong>bias or behavior change</strong> being illustrated and explain why.</p>
+<section id="hawthorne-effect" class="slide level2">
+<h2>Hawthorne Effect</h2>
 <ul>
-<li class="fragment"><p>In a case-control study, parents of sick children recall pesticide exposure during pregnancy more carefully than parents of healthy children.</p></li>
-<li class="fragment"><p>Participants report lower alcohol use in face-to-face interviews than expected from sales data.</p></li>
-<li class="fragment"><p>In a clinical trial, outcome assessors know which participants received the treatment and rate them more favorably.</p></li>
-<li class="fragment"><p>Interviewers ask more detailed exposure questions to lung cancer cases than to controls.</p></li>
-<li class="fragment"><p>Participants increase exercise levels during a study because they know their activity is being monitored.</p></li>
+<li><strong>Definition:</strong> People change their behavior because they know they are being observed.</li>
+<li><strong>Example:</strong> Participants walk more while a research team monitors their activity.</li>
+<li>Their recorded activity may be accurate, but it may differ from their usual activity.</li>
+</ul>
+<p><strong>Changing behavior and reporting behavior inaccurately are different problems.</strong></p>
+<aside class="notes">
+<ul>
+<li><p>Observation-related behavior change is not automatically measurement error.</p></li>
+<li><p>Its implications depend on the question: are we interested in usual activity outside a study or activity during a monitored intervention? Preserve this distinction in the exercise.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="practice-bias-and-behavior-changes" class="slide level2 compact">
+<h2>Practice: Bias and Behavior Changes</h2>
+<p>For each scenario, identify the <strong>bias or behavior change</strong> and explain why.</p>
+<ul>
+<li class="fragment"><p>Parents of sick children recall pesticide exposure during pregnancy more carefully than parents of healthy children.</p></li>
+<li class="fragment"><p>Participants underreport alcohol use because they worry that the interviewer will judge them.</p></li>
+<li class="fragment"><p>Outcome assessors know who received treatment and rate those participants more favorably.</p></li>
+<li class="fragment"><p>Interviewers ask lung cancer cases more detailed exposure questions than they ask controls.</p></li>
+<li class="fragment"><p>Participants exercise more because they know their activity is being monitored.</p></li>
 </ul>
 <aside class="notes">
+<p>Ask for a brief explanation before revealing the next scenario. These mechanisms are stipulated for the exercise; they are not inferred from observed differences alone.</p>
 <ol type="1">
-<li>Recall bias: parents in the two groups recall exposure differently.</li>
-<li>Social desirability bias is the intended answer. Underreporting alone does not establish the mechanism; discuss why participants might alter their reports.</li>
-<li>Observer bias: knowledge of treatment influences outcome ratings.</li>
+<li>Recall bias: exposure recall differs between groups.</li>
+<li>Social desirability bias: concern about judgment changes the report.</li>
+<li>Observer bias: treatment knowledge influences outcome ratings.</li>
 <li>Interviewer bias: exposure questioning differs between groups.</li>
-<li>Hawthorne effect: behavior changes because participants know they are being observed. This is not automatically an error in measuring the changed behavior.</li>
+<li>Hawthorne effect: observation changes actual behavior. An accurate measurement of that changed behavior is not itself an information error.</li>
 </ol>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -345,52 +599,49 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="reducing-bias" class="slide level2 compact">
-<h2>Reducing Bias</h2>
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Reducing Selection and Information Bias". -->
-<ul>
-<li><p><strong>Reducing Selection Bias</strong></p>
-<ul>
-<li><p>Use appropriate <strong>comparison groups</strong></p></li>
-<li><p>Apply clear and consistent <strong>inclusion criteria</strong></p></li>
-<li><p>Minimize <strong>loss to follow-up</strong></p></li>
-<li><p>Ensure recruitment is not related to both exposure and outcome</p></li>
-</ul></li>
-<li><p><strong>Reducing Information Bias</strong></p>
-<ul>
-<li><p>Use <strong>standardized definitions</strong> and procedures</p></li>
-<li><p>Apply <strong>blinding</strong> when possible</p></li>
-<li><p>Collect data <strong>consistently across groups</strong></p></li>
-<li><p>Use validated measurement tools</p></li>
-</ul></li>
-<li><p><strong>Key idea:</strong> Careful design and consistent measurement strengthen internal validity.</p></li>
-</ul>
-</section>
-<section id="review-sample-size-and-bias" class="slide level2">
+
+
+
+<section id="review-sample-size-and-bias" class="slide level2 compact">
 <h2>Review: Sample Size and Bias</h2>
-<!-- Source: Module 5 "Bias" slide and original Module 6 "Random Error vs Systematic Error". Reused concepts for Quiz 3 Question 9. -->
 <ul>
-<li><strong>Random error:</strong> Natural variability in data; affects <strong>precision</strong> and is generally reduced by increasing sample size.</li>
-<li><strong>Bias:</strong> Systematic error arising from study design, selection, or measurement. A larger sample does <strong>not generally eliminate bias</strong>.</li>
-<li><strong>Existing example:</strong> Measuring physical activity at local gyms may systematically overrepresent more active people, even with a large sample.</li>
+<li><strong>Random error (sampling variability):</strong> Results vary by chance. More observations generally improve precision.</li>
+<li><strong>Bias:</strong> A systematic problem in selection or measurement can remain even in a very large study.</li>
 </ul>
-<p><strong>For information bias:</strong> standardized definitions, consistent measurement procedures, and blinding address the measurement process; a larger sample alone does not.</p>
+<p><strong>Example:</strong> Interviewing more people at local gyms does not fix the problem of estimating community activity from a sample that overrepresents gym users.</p>
+<p>For bias, improve <strong>who is included</strong> or <strong>how measurements are made</strong>. Increasing the sample size alone does not repair those processes.</p>
+<aside class="notes">
+<ul>
+<li>This example concerns estimating community activity, not every possible comparison among gym users. A large biased sample can give a very precise answer to the wrong population question. Then transition: even with careful recruitment and accurate measurement, groups can differ in other causes of the outcome.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="review-confounding" class="slide level2">
+<section id="review-confounding" class="slide level2 compact">
 <h2>Review: Confounding</h2>
-<!-- Source: Association and Causality.qmd, "Confounding". -->
-<ul>
-<li><p><strong>Confounding:</strong> The effects of other factors become mixed into our estimate of an exposure’s causal effect. Or giving credit to the wrong variable.</p></li>
-<li><p><strong>Example:</strong> Ice cream sales and drownings both increase during hot weather.</p>
-<ul>
-<li>Hot weather influences both ice cream sales and drowning risk.</li>
-</ul></li>
-<li><p><strong>Question:</strong> Would reducing ice cream sales reduce drownings?</p></li>
-<li><p><strong>Key idea:</strong> The association can be real and useful for prediction without representing a causal effect of ice cream sales.</p></li>
-</ul>
+<p><strong>Confounding:</strong> Other causes of the outcome get mixed into our estimate of the exposure’s effect. We may give credit or blame to the wrong variable.</p>
+<div class="cell" data-layout-align="center" data-fig-class="nostretch">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Ecologic-Studies-and-Confounding_files/figure-revealjs/hot-weather-dag-1.svg" class="quarto-figure quarto-figure-center" alt="Hot weather points to both ice cream sales and drownings. No arrow connects ice cream sales to drownings in this simplified teaching model." width="1000" height="270"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Would reducing ice cream sales reduce drownings?</strong> This pattern alone does not show that it would.</p>
 <aside class="notes">
-<p>The association itself need not be incorrect. The problem arises when we attribute it to a causal effect of ice cream sales rather than the common cause, hot weather.</p>
-<p>Introduce the term “spurious association” here for the reading, quiz, and later exercise. It describes an association that does not represent the causal relationship we might infer from it. Do not use it as a synonym for confounding: chance and other biases can also produce misleading findings.</p>
+<p>Original diagram for the familiar teaching example from Association and Causality.qmd. The arrows express the simplified causal assumptions, not estimates from data. Warm weather can raise sales and increase opportunities for swimming. The observed association may be useful for prediction without being the causal effect of ice cream sales.</p>
+<p>A “spurious association” is one that misleads us about the causal relationship. It is not a synonym for confounding; chance and other biases can also mislead.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -403,44 +654,23 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="conventional-confounder-definition" class="slide level2">
-<h2>Conventional Confounder Definition</h2>
-<!-- Source: Hernan, edX PH559x, Confounders Part 2, on-screen conventional definition. -->
-<!-- REVIEW: Present this as the conventional definition being evaluated, not a recommended checklist. GAP: Students have seen sufficient-cause pies but not a systematic DAG introduction. Introduce arrow/path/collider notation before the source video; that introduction has not been authored. -->
-<p>L is a confounder of the effect of A on Y if L meets these three conditions:</p>
-<ul>
-<li>L is associated with A</li>
-<li>L is associated with Y conditional on A</li>
-<li>L is not on a causal pathway from A to Y</li>
-</ul>
-</section>
-<section id="confounders-part-1" class="slide level2">
-<h2>Confounders: Part 1</h2>
-<!-- Source: Hernan, Confounders Part 1.mp4, frame at 7:45. -->
-<!-- REVIEW: The local Part 1 file ends at 9:13. This original diagram supplies the common-cause example. No narration has been transcribed. -->
-<p><img data-src="assets/hernan-common-cause.png" class="" style="object-fit:contain;" alt="Hernan diagram: heart disease L causes aspirin use A and stroke Y; aspirin A also points to stroke Y." width="1000" height="500"></p>
-</section>
-<section id="confounders-part-3" class="slide level2">
-<h2>Confounders: Part 3</h2>
-<!-- Source: Hernan, edX PH559x, supplied Confounders Part 3.mp4 (complete original video, approximately 7:13). -->
-<!-- REVIEW: Review playback and narration before teaching. The supplied file has no embedded subtitle track; an accurate caption/transcript file is a remaining accessibility gap. No transcript or replacement narration has been invented. Keep the following still diagram available as a visual fallback. -->
-<video id="video_shortcode_videojs_video1" width="960" height="540" class="video-js vjs-default-skin vjs-big-play-centered " controls="" preload="auto" data-setup="{}" title="Miguel Hernan: Confounders, Part 3"><source src="assets/hernan-confounders-part-3.mp4"></video>
-</section>
-<section id="confounders-part-3-diagram" class="slide level2">
-<h2>Confounders: Part 3 Diagram</h2>
-<!-- Source: Hernan, Confounders Part 3.mp4, frame at 4:30. -->
-<!-- REVIEW: Use the original video explanation for the collider counterexample. Verify that students can identify the path and understand conditioning; a new worked explanation has not been authored. -->
-<p><img data-src="assets/hernan-collider.png" class="" style="object-fit:contain;" alt="Physical activity A points to cervical cancer Y. Precancer lesion U1 points to Y and positive Pap L. Health-conscious personality U2 points to A and L. The two arrows meet at L." width="1000" height="500"></p>
-</section>
-<section id="poll-confounder-criteria" class="slide level2 compact">
-<h2>Poll: Confounder Criteria</h2>
-<!-- Source: Hernan, 03 Confounders Part 1.pdf, question 1. -->
-<!-- REVIEW: Original question reused verbatim, with letter labels added for classroom polling. Use a show of hands if no polling activity is configured. -->
-<p>Consider a variable associated with the treatment A, associated with the outcome Y within levels of A, and not on a causal pathway from A to Y. Adjustment for such a variable will always reduce bias.</p>
-<p><strong>A.</strong> True</p>
-<p><strong>B.</strong> False</p>
+<section id="reading-a-causal-diagram" class="slide level2 compact">
+<h2>Reading a Causal Diagram</h2>
+<p>An <strong>arrow</strong> represents an assumed causal influence. It can increase or decrease the outcome.</p>
+<div class="cell" data-layout-align="center" data-fig-class="nostretch">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Ecologic-Studies-and-Confounding_files/figure-revealjs/aspirin-stroke-dag-1.svg" class="quarto-figure quarto-figure-center" alt="Preexisting heart disease points to aspirin use and stroke. Aspirin use also points to stroke, representing the causal effect under investigation. Heart disease is a common cause in this teaching model." width="1000" height="270"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>People taking aspirin may already have a different stroke risk. Comparing users with nonusers can mix that difference with aspirin’s effect.</p>
+<p><strong>The arrows require knowledge about the problem, not just correlations.</strong></p>
 <aside class="notes">
-<p>False. The supplied completed edX question marks this response correct.</p>
+<p>Original rendering of the heart disease, aspirin, and stroke example supplied in Hernán’s Confounders Part 1 materials. This is a simplified causal model, not treatment advice or a complete account of prescribing.</p>
+<p>Introduce DAG as “directed acyclic graph”: arrows have direction, and following them does not loop back to the starting variable. A path is a route along connected arrows. Students do not need formal path rules here. The route connecting aspirin and stroke through preexisting heart disease explains why their association need not equal aspirin’s causal effect. Missing arrows also express assumptions. General diagram principles: <span class="citation" data-cites="hernan2002">Hernán et al. (<a href="#/references" role="doc-biblioref" onclick="">2002</a>)</span>.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -453,97 +683,270 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="poll-causal-structure" class="slide level2">
-<h2>Poll: Causal Structure</h2>
-<!-- Source: Hernan, 03 Confounders Part 1.pdf, question 2. -->
-<p>Generally, we need to use our expert knowledge of the causal structure of a problem to determine whether confounding is present.</p>
-<p><strong>A.</strong> True</p>
-<p><strong>B.</strong> False</p>
-<aside class="notes">
-<p>True. The supplied completed edX question marks this response correct.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="addressing-confounding" class="slide level2">
-<h2>Addressing Confounding</h2>
-<!-- Source: Analytic Epidemiology - Study Designs I.qmd, "Addressing Confounding". -->
-<!-- REVIEW: GAP: Brad requested a simple numerical before/after-adjustment example and a list of control methods. These supplied slides do not provide that complete teaching sequence. No new numbers, example, or methods lesson has been authored. -->
-<!-- Add a slide that lists the ways to control for confounding. -->
-<!-- Create a very simple example where there is an apparent association until we "control" for confounding. -->
-<ul>
-<li><p>Confounding cannot be ignored when interpreting results.</p>
-<ul>
-<li><p><strong>Randomization</strong> helps balance confounders between groups</p></li>
-<li><p>In observational studies, researchers must <strong>identify and measure potential confounders</strong></p></li>
-<li><p>Results should be interpreted cautiously if important confounders are not accounted for</p></li>
-</ul></li>
-<li><p><strong>Key idea:</strong> If confounding is not addressed, an observed association may not reflect a true causal relationship.</p></li>
-</ul>
-</section>
-<section id="review-cohort-vs.-case-control" class="slide level2 compact">
-<h2>Review: Cohort vs.&nbsp;Case-Control</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 48. -->
-<!-- REVIEW: Use as an existing comparison for review. It is not a complete four-design exercise; exceptions to the simplified rows still apply. -->
+<section id="practice-does-the-class-increase-falls" class="slide level2 compact">
+<h2>Practice: Does the Class Increase Falls?</h2>
+<p><strong>Hypothetical study:</strong> Follow 200 people for one year after some choose to attend a fall-prevention class.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Feature</th>
-<th>Cohort Study</th>
-<th>Case-Control Study</th>
+<th></th>
+<th style="text-align: right;">People With at Least One Fall</th>
+<th style="text-align: right;">People Followed</th>
+<th style="text-align: right;">One-Year Risk</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Start With</td>
-<td>Exposure</td>
-<td>Outcome</td>
+<td>Attended class</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;"><strong>28%</strong></td>
 </tr>
 <tr class="even">
-<td>Direction</td>
-<td>Exposure → Outcome</td>
-<td>Outcome → Exposure</td>
-</tr>
-<tr class="odd">
-<td>Measure</td>
-<td>Relative Risk (RR)</td>
-<td>Odds Ratio (OR)</td>
-</tr>
-<tr class="even">
-<td>Best For</td>
-<td>Rare exposures</td>
-<td>Rare diseases</td>
-</tr>
-<tr class="odd">
-<td>Time &amp; Cost</td>
-<td>Longer, more expensive</td>
-<td>Faster, less expensive</td>
-</tr>
-<tr class="even">
-<td>Main Bias Concern</td>
-<td>Loss to follow-up</td>
-<td>Selection &amp; recall bias</td>
-</tr>
-<tr class="odd">
-<td>Can Measure Incidence?</td>
-<td>Yes</td>
-<td>No</td>
+<td>Did not attend</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;"><strong>12%</strong></td>
 </tr>
 </tbody>
 </table>
+<p><strong>Which conclusion is justified?</strong></p>
+<p><strong>A.</strong> The class caused more falls.<br>
+<strong>B.</strong> Attendees had more falls, but they may have differed before class.<br>
+<strong>C.</strong> The class prevented falls.</p>
+<aside class="notes">
+<p>Answer: B. These are invented counts for teaching, not findings about an actual program. Assume complete follow-up and accurate measurement so we can focus on confounding. The outcome is whether each person had at least one fall during the same one-year period, not the total number of falls.</p>
+<p>Ask what might lead someone to join: a prior fall may both encourage attendance and predict future falls. Participants chose whether to attend; they were not randomized.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-
+<section id="comparing-people-with-the-same-fall-history" class="slide level2 compact">
+<h2>Comparing People With the Same Fall History</h2>
+<p>The same 200 people, now separated by whether they had fallen <strong>before</strong> the class began:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">No Prior Fall</th>
+<th style="text-align: right;">Prior Fall</th>
+<th style="text-align: right;">All Participants</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Attended class</td>
+<td style="text-align: right;">1 / 10 = <strong>10%</strong></td>
+<td style="text-align: right;">27 / 90 = <strong>30%</strong></td>
+<td style="text-align: right;"><strong>28 / 100 = 28%</strong></td>
+</tr>
+<tr class="even">
+<td>Did not attend</td>
+<td style="text-align: right;">9 / 90 = <strong>10%</strong></td>
+<td style="text-align: right;">3 / 10 = <strong>30%</strong></td>
+<td style="text-align: right;"><strong>12 / 100 = 12%</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Within each history group, the risks are <strong>the same</strong>.</li>
+<li>Attendees included more people with prior falls: <strong>90% versus 10%</strong>.</li>
+</ul>
+<p><strong>Accounting for fall history removes the apparent difference in this example.</strong></p>
+<aside class="notes">
+<ul>
+<li><p>Start with the rightmost column, “All Participants.” These are the same totals we just saw: 28 of 100 class attendees and 12 of 100 nonattendees had at least one fall during follow-up.</p></li>
+<li><p>The rows still separate people by whether they attended the class, just as in the previous table. The “No Prior Fall” and “Prior Fall” columns now divide each attendance group by whether people had fallen before the class began.</p></li>
+<li><p>In each cell, the first number is the number of people who had at least one fall during the following year. The second number is the total number of people in that particular attendance and fall-history group.</p></li>
+<li><p>For example, read the first cell under “No Prior Fall” as: “Of the 10 class attendees with no prior fall, 1 fell during follow-up, a risk of 10%.” Then move down that column: among nonattendees with no prior fall, 9 of 90 fell, also 10%.</p></li>
+<li><p>Now read down the “Prior Fall” column: 27 of 90 attendees and 3 of 10 nonattendees fell during follow-up. Both risks are 30%. Reading down each fall-history column lets us compare attendance groups with the same prior fall history.</p></li>
+<li><p>This is stratification: compare people within categories of a relevant variable.</p></li>
+<li><p>Students should interpret the supplied percentages; calculation or a pooled adjustment formula is not required.</p></li>
+<li><p>All people and falls remain in the table. We changed the comparison, not the observations.</p></li>
+<li><p>In this hypothetical story, previous falls influence attendance and predict subsequent falls.</p></li>
+<li><p>Those risks became mixed into the overall comparison. If both groups had an equal mix of the two history categories, each would have a 20% risk: the average of 10% and 30%. This optional illustration is standardization, not an additional result students must calculate.</p></li>
+<li><p>Equal observed risks do not prove that a real intervention has no effect, nor does any change after adjustment prove confounding. Here the constructed numbers and stated causal assumptions illustrate the mechanism. Sources for stratification and interpretation: <span class="citation" data-cites="dicker2025">Dicker (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span>.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="conventional-confounder-criteria" class="slide level2 compact">
+<h2>Conventional Confounder Criteria</h2>
+<p>A conventional definition looks for a variable that:</p>
+<ol type="1">
+<li>Is associated with the exposure.</li>
+<li>Is associated with the outcome <strong>among people with the same exposure status</strong>.</li>
+<li>Is not a step through which the exposure causes the outcome.</li>
+</ol>
+<p><strong>“Conditional on the exposure”</strong> means considering the outcome association separately among exposed and unexposed people.</p>
+<p>These criteria are <strong>not a guarantee</strong> that controlling for the variable will help. Its causal role matters. <span class="citation" data-cites="hernan2002">(<a href="#/references" role="doc-biblioref" onclick="">Hernán et al. 2002</a>)</span></p>
+<aside class="notes">
+<p>Use familiar terms instead of L, A, and Y. This slide evaluates the inherited conventional definition; it is not a recommended variable-selection checklist.</p>
+<p>For criterion 3, a mediator is an intermediate step: for example, an exercise program might improve balance, which then reduces falls. Controlling for improved balance would remove part of the total effect we wanted to study. Fall history measured before the program is different from balance changed by the program. The next example illustrates a common effect, or collider.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-collider-two-arrows-meet" class="slide level2 compact">
+<h2>A Collider: Two Arrows Meet</h2>
+<p><strong>Hypothetical recruitment rule:</strong> Enroll people who exercise regularly <strong>or</strong> have had a recent injury, including those with both.</p>
+<div class="cell" data-layout-align="center" data-fig-class="nostretch">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Ecologic-Studies-and-Confounding_files/figure-revealjs/enrollment-collider-dag-1.svg" class="quarto-figure quarto-figure-center" alt="Regular exercise and recent injury both point to study enrollment. Enrollment is their common effect. Restricting the comparison to enrolled people can create an association between exercise and injury." width="1000" height="270"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>Among enrollees, anyone who <strong>does not exercise must have an injury</strong>.</li>
+<li>Exercise could therefore appear protective because of <strong>who was selected</strong>.</li>
+</ul>
+<p><strong>A common effect is not a common cause. Controlling for it can create bias.</strong></p>
+<aside class="notes">
+<p>Keep the main explanation brief. “Collider” refers to the meeting arrowheads along this path. Selecting enrollees is conditioning on enrollment: we consider only people with enrollment = yes. This example demonstrates the mechanism discussed by <span class="citation" data-cites="hernan2002">Hernán et al. (<a href="#/references" role="doc-biblioref" onclick="">2002</a>)</span> using an original, simpler scenario in place of the supplied video and Pap-test screenshot. It is not a transcript or a claim about an actual exercise study.</p>
+<p>Optional numerical explanation: suppose the source population contains 25 people in each of four categories: exercise/injury, exercise/no injury, no exercise/injury, and neither. Injury prevalence is 50% in both exercise groups. The rule excludes only the last category. Among enrollees, injury prevalence is now 50% among exercisers and 100% among nonexercisers. Nothing about anyone’s exercise or injury changed.</p>
+<p>The example also shows why the conventional criteria are insufficient: enrollment is associated with exercise, is associated with injury among nonexercisers, and is not a causal step from exercise to injury. Yet selecting on it creates a misleading comparison. We do not need the formal rules for opening and blocking paths to understand this example.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="practice-which-variable-needs-attention" class="slide level2 compact">
+<h2>Practice: Which Variable Needs Attention?</h2>
+<p>A study compares people who choose a fall-prevention class with people who do not.</p>
+<p>Researchers learn that <strong>prior falls influence class attendance and the chance of another fall</strong>.</p>
+<p>What is the best reason to consider prior falls when making the comparison?</p>
+<p><strong>A.</strong> We should control for every variable available.</p>
+<p><strong>B.</strong> Prior falls are a plausible common cause of attendance and later falls.</p>
+<p><strong>C.</strong> Any variable associated with the outcome must be controlled.</p>
+<aside class="notes">
+<p>Answer: B. The stated causal knowledge identifies the reason for concern. Associations alone do not establish a variable’s role. A and C overlook mediators, colliders, and the question being asked. Use a show of hands or letter cards as a low-tech fallback.</p>
+<p>This replaces the abstract inherited true/false questions with a question about the worked example. Students should explain the common cause, not select a statistical model.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="addressing-confounding-during-study-design" class="slide level2 compact">
+<h2>Addressing Confounding During Study Design</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Approach</th>
+<th>Basic Idea</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Randomization</strong></td>
+<td>Assign the intervention by chance</td>
+<td>Randomly offer the class</td>
+</tr>
+<tr class="even">
+<td><strong>Restriction</strong></td>
+<td>Limit a relevant characteristic</td>
+<td>Enroll only people with no prior falls</td>
+</tr>
+<tr class="odd">
+<td><strong>Matching</strong></td>
+<td>Select comparison participants with similar characteristics</td>
+<td>Match participants on fall history</td>
+</tr>
+</tbody>
+</table>
+<p>Randomization balances baseline factors <strong>on average</strong>, including factors we did not measure.</p>
+<p>Restriction narrows the population studied. Matching still requires an appropriate analysis.</p>
+<aside class="notes">
+<p>This is a conceptual menu, not instruction in conducting a matched analysis. Random assignment does not guarantee identical groups in a particular sample, and it does not solve every problem arising after assignment. Restriction or matching only addresses the relevant factors selected and measured; neither automatically removes all confounding. Matching on the wrong variables can also introduce problems. Sources: <span class="citation" data-cites="cdc2024design">Centers for Disease Control and Prevention (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span>; <span class="citation" data-cites="dicker2025">Dicker (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span>.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="addressing-confounding-during-analysis" class="slide level2 compact">
+<h2>Addressing Confounding During Analysis</h2>
+<ul>
+<li><p><strong>Stratification:</strong> Compare exposed and unexposed people within categories of a confounder, as in the fall-history table.</p></li>
+<li><p><strong>Statistical adjustment:</strong> Use methods such as regression or standardization to account for appropriate measured factors.</p></li>
+<li><p>Both approaches depend on choosing relevant variables and measuring them adequately.</p></li>
+</ul>
+<p><strong>When reading a study, ask:</strong> What did the researchers account for, why did they choose those factors, and what important differences might remain?</p>
+<aside class="notes">
+<p>Students need to recognize these approaches and explain their purpose; they do not need to fit a regression model or calculate an adjusted effect. Confounding can remain when important factors are missing or measured poorly. Methods also rely on design and modeling assumptions. These methods do not make an observational comparison equivalent to randomization merely because an estimate is labeled “adjusted.” Source: <span class="citation" data-cites="dicker2025">Dicker (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span>.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="epidemiology-wrap-up" class="slide level2 compact">
 <h2>Epidemiology Wrap-Up</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 53. -->
 <ul>
 <li><p>Define and explain the <strong>foundations of epidemiology</strong></p></li>
 <li><p>Measure disease using <strong>incidence, prevalence, and rates</strong></p></li>
@@ -556,40 +959,69 @@
 </section>
 <section id="from-concepts-to-your-presentation" class="slide level2 compact">
 <h2>From Concepts to Your Presentation</h2>
-<!-- Source: APHS 20203 W7-Analytic Epi-Cohort and Case-control studies.pptx, slide 54. -->
-<!-- REVIEW: Verify these inherited presentation requirements against the current assignment rubric. No assignment expectations have been added. -->
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:40%;">
+<p><strong>The Conceptual Progression</strong></p>
 <ul>
-<li><p><strong>The Conceptual Progression</strong></p>
-<ul>
-<li><p>Descriptive Epidemiology<br>
-→ Generates hypotheses</p></li>
-<li><p>Analytic Epidemiology<br>
-→ Tests exposure → outcome relationships</p></li>
-<li><p>Critical Thinking<br>
-→ Distinguish <strong>association from causation</strong></p></li>
-</ul></li>
+<li><p><strong>Descriptive epidemiology:</strong> Describe patterns and generate hypotheses.</p></li>
+<li><p><strong>Analytic epidemiology:</strong> Evaluate exposure–outcome relationships.</p></li>
+<li><p><strong>Critical thinking:</strong> Distinguish association from causation.</p></li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:55%;">
+<p><strong>For Group Presentation 1</strong></p>
 <ul>
-<li><p><strong>For Your Epi Final Presentation</strong></p></li>
-<li><p>You are expected to:</p>
-<ul>
-<li><p>Clearly describe a population health issue</p></li>
-<li><p>Include and interpret an <strong>analytic study</strong></p></li>
-<li><p>Identify the <strong>study design and measure</strong></p></li>
-<li><p>Discuss <strong>bias, confounding, and limitations</strong></p></li>
-<li><p>Avoid overstating causality</p></li>
-</ul></li>
+<li><p>Describe population patterns using appropriate <strong>epidemiologic measures</strong>.</p></li>
+<li><p>Include and cite at least one source of <strong>analytic evidence</strong>.</p></li>
+<li><p>Explain the evidence type, exposure, outcome, and main finding.</p></li>
+<li><p>Relate the evidence to your findings; discuss <strong>limitations, bias, and confounding</strong>.</p></li>
+<li><p>Avoid definitive causal claims or policy recommendations.</p></li>
 </ul>
 </div></div>
+<p>Use the <strong>assignment instructions and rubric in D2L</strong> for the full requirements.</p>
+<aside class="notes">
+<p>Source: Group Presentation 1 assignment instructions, sections 3–6, in the course’s Assignments/Group Presentation 1 folder.</p>
+<p>Acceptable analytic evidence includes peer-reviewed studies, government or public health reports, surveillance reports with analytic comparisons, and textbooks or course readings that synthesize analytic findings. A single primary research study is not required. Students should explain how their selected evidence supports or contextualizes their descriptive patterns without claiming it proves a causal explanation.</p>
+<p>This slide highlights the connection to our epidemiology lessons. The assignment also specifies presentation structure, timing, participation, slide design, and submission expectations; students should consult the full assignment and rubric in D2L.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="references" class="slide level2 references-slide smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-cdc2024design" class="csl-entry" role="listitem">
+Centers for Disease Control and Prevention. 2024. <span>“Designing and Conducting Analytic Studies in the Field.”</span> <a href="https://www.cdc.gov/field-epi-manual/php/chapters/design-conduct-analyze-field-studies.html">https://www.cdc.gov/field-epi-manual/php/chapters/design-conduct-analyze-field-studies.html</a>.
+</div>
+<div id="ref-decarlo2018units" class="csl-entry" role="listitem">
+DeCarlo, Matthew. 2018. <span>“7.3 Unit of Analysis and Unit of Observation.”</span> Scientific Inquiry in Social Work. <a href="https://pressbooks.pub/scientificinquiryinsocialwork/chapter/7-3-unit-of-analysis-and-unit-of-observation/">https://pressbooks.pub/scientificinquiryinsocialwork/chapter/7-3-unit-of-analysis-and-unit-of-observation/</a>.
+</div>
+<div id="ref-dicker2025" class="csl-entry" role="listitem">
+Dicker, Richard C. 2025. <span>“Analyzing and Interpreting Data.”</span> Centers for Disease Control; Prevention, January 6. <a href="https://www.cdc.gov/field-epi-manual/php/chapters/analyze-interpret-data.html">https://www.cdc.gov/field-epi-manual/php/chapters/analyze-interpret-data.html</a>.
+</div>
+<div id="ref-hernan2002" class="csl-entry" role="listitem">
+Hernán, Miguel A., Sonia Hernández-Díaz, Martha M. Werler, and Allen A. Mitchell. 2002. <span>“Causal Knowledge as a Prerequisite for Confounding Evaluation: An Application to Birth Defects Epidemiology.”</span> <em>American Journal of Epidemiology</em> 155 (2): 176–84. <a href="https://doi.org/10.1093/aje/155.2.176">https://doi.org/10.1093/aje/155.2.176</a>.
+</div>
+<div id="ref-prentice2006" class="csl-entry" role="listitem">
+<span class="nocase">Prentice, Ross L., Bette Caan, Rowan T. Chlebowski, et al.</span> 2006. <span>“Low-Fat Dietary Pattern and Risk of Invasive Breast Cancer: The <span class="nocase">Women’s Health Initiative</span> Randomized Controlled Dietary Modification Trial.”</span> <em>JAMA</em> 295 (6): 629–42. <a href="https://doi.org/10.1001/jama.295.6.629">https://doi.org/10.1001/jama.295.6.629</a>.
+</div>
+<div id="ref-sasaki1993" class="csl-entry" role="listitem">
+Sasaki, S., M. Horacsek, and H. Kesteloot. 1993. <span>“An Ecological Study of the Relationship Between Dietary Fat Intake and Breast Cancer Mortality.”</span> <em>Preventive Medicine</em> 22 (2): 187–202. <a href="https://doi.org/10.1006/pmed.1993.1016">https://doi.org/10.1006/pmed.1993.1016</a>.
+</div>
+</div>
 
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="assets/tcu-logo-purple.svg" class="slide-logo"></p>
+<p><img src="../../assets/tcu-logo-purple.svg" alt="Texas Christian University (TCU)" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
@@ -805,6 +1237,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
@@ -973,7 +1443,14 @@
         }
       });
       </script>
-    <script>videojs(video_shortcode_videojs_video1);</script>
+    <script>
+    // The chalkboard plugin creates eraser images without text alternatives.
+    window.addEventListener("load", () => {
+      document.querySelectorAll('[data-eraser="true"] img').forEach((image) => {
+        image.alt = "Eraser";
+      });
+    });
+    </script>
     
 
 </body></html>
