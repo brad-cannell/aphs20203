@@ -470,7 +470,7 @@
 <li>What does random assignment add, and what dietary question does this trial actually test?</li>
 <li>Why would it be misleading to say that this trial simply proves or disproves the ecologic study?</li>
 </ol>
-<countdown-timer id="timer_2e82d84004248a658a00e1f5bbbbc1e813ecfdee" minutes="04" seconds="00" class="countdown" warn-when="30" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<countdown-timer id="timer_0ff671bec12cc606f2d3b20931cb54f4a304a694" minutes="04" seconds="00" class="countdown" warn-when="30" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
  </countdown-timer>
 <aside class="notes">
 <p>Purpose: practice matching conclusions to the question, unit of analysis, and design. This is not a competition to name the universally best design.</p>
@@ -612,7 +612,9 @@
 <p>For bias, improve <strong>who is included</strong> or <strong>how measurements are made</strong>. Increasing the sample size alone does not repair those processes.</p>
 <aside class="notes">
 <ul>
-<li>This example concerns estimating community activity, not every possible comparison among gym users. A large biased sample can give a very precise answer to the wrong population question. Then transition: even with careful recruitment and accurate measurement, groups can differ in other causes of the outcome.</li>
+<li><p>This example concerns estimating community activity, not every possible comparison among gym users.</p></li>
+<li><p>A large biased sample can give a very precise answer to the wrong population question.</p></li>
+<li><p>Then transition: even with careful recruitment and accurate measurement, groups can differ in other causes of the outcome.</p></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -640,37 +642,10 @@
 </div>
 <p><strong>Would reducing ice cream sales reduce drownings?</strong> This pattern alone does not show that it would.</p>
 <aside class="notes">
-<p>Original diagram for the familiar teaching example from Association and Causality.qmd. The arrows express the simplified causal assumptions, not estimates from data. Warm weather can raise sales and increase opportunities for swimming. The observed association may be useful for prediction without being the causal effect of ice cream sales.</p>
-<p>A “spurious association” is one that misleads us about the causal relationship. It is not a synonym for confounding; chance and other biases can also mislead.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="reading-a-causal-diagram" class="slide level2 compact">
-<h2>Reading a Causal Diagram</h2>
-<p>An <strong>arrow</strong> represents an assumed causal influence. It can increase or decrease the outcome.</p>
-<div class="cell" data-layout-align="center" data-fig-class="nostretch">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="Ecologic-Studies-and-Confounding_files/figure-revealjs/aspirin-stroke-dag-1.svg" class="quarto-figure quarto-figure-center" alt="Preexisting heart disease points to aspirin use and stroke. Aspirin use also points to stroke, representing the causal effect under investigation. Heart disease is a common cause in this teaching model." width="1000" height="270"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>People taking aspirin may already have a different stroke risk. Comparing users with nonusers can mix that difference with aspirin’s effect.</p>
-<p><strong>The arrows require knowledge about the problem, not just correlations.</strong></p>
-<aside class="notes">
-<p>Original rendering of the heart disease, aspirin, and stroke example supplied in Hernán’s Confounders Part 1 materials. This is a simplified causal model, not treatment advice or a complete account of prescribing.</p>
-<p>Introduce DAG as “directed acyclic graph”: arrows have direction, and following them does not loop back to the starting variable. A path is a route along connected arrows. Students do not need formal path rules here. The route connecting aspirin and stroke through preexisting heart disease explains why their association need not equal aspirin’s causal effect. Missing arrows also express assumptions. General diagram principles: <span class="citation" data-cites="hernan2002">Hernán et al. (<a href="#/references" role="doc-biblioref" onclick="">2002</a>)</span>.</p>
+<ul>
+<li><p>The arrows express the simplified causal assumptions, not estimates from data.</p></li>
+<li><p>Warm weather can raise sales and increase opportunities for swimming. The observed association may be useful for prediction without being the causal effect of ice cream sales.</p></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -793,52 +768,28 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="conventional-confounder-criteria" class="slide level2 compact">
-<h2>Conventional Confounder Criteria</h2>
-<p>A conventional definition looks for a variable that:</p>
-<ol type="1">
-<li>Is associated with the exposure.</li>
-<li>Is associated with the outcome <strong>among people with the same exposure status</strong>.</li>
-<li>Is not a step through which the exposure causes the outcome.</li>
-</ol>
-<p><strong>“Conditional on the exposure”</strong> means considering the outcome association separately among exposed and unexposed people.</p>
-<p>These criteria are <strong>not a guarantee</strong> that controlling for the variable will help. Its causal role matters. <span class="citation" data-cites="hernan2002">(<a href="#/references" role="doc-biblioref" onclick="">Hernán et al. 2002</a>)</span></p>
-<aside class="notes">
-<p>Use familiar terms instead of L, A, and Y. This slide evaluates the inherited conventional definition; it is not a recommended variable-selection checklist.</p>
-<p>For criterion 3, a mediator is an intermediate step: for example, an exercise program might improve balance, which then reduces falls. Controlling for improved balance would remove part of the total effect we wanted to study. Fall history measured before the program is different from balance changed by the program. The next example illustrates a common effect, or collider.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="a-collider-two-arrows-meet" class="slide level2 compact">
-<h2>A Collider: Two Arrows Meet</h2>
-<p><strong>Hypothetical recruitment rule:</strong> Enroll people who exercise regularly <strong>or</strong> have had a recent injury, including those with both.</p>
+<section id="prior-falls-and-class-attendance" class="slide level2 compact">
+<h2>Prior Falls and Class Attendance</h2>
+<p>In our hypothetical study, <strong>prior falls</strong> can influence both class attendance and the chance of falling again.</p>
 <div class="cell" data-layout-align="center" data-fig-class="nostretch">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="Ecologic-Studies-and-Confounding_files/figure-revealjs/enrollment-collider-dag-1.svg" class="quarto-figure quarto-figure-center" alt="Regular exercise and recent injury both point to study enrollment. Enrollment is their common effect. Restricting the comparison to enrolled people can create an association between exercise and injury." width="1000" height="270"></p>
+<p><img data-src="Ecologic-Studies-and-Confounding_files/figure-revealjs/class-attendance-falls-dag-1.svg" class="quarto-figure quarto-figure-center" alt="Prior falls point to both class attendance and falls in the next year. No arrow connects class attendance to future falls because this hypothetical example assumes the class has no causal effect. Different fall histories explain the overall difference in risk." width="1000" height="270"></p>
 </figure>
 </div>
 </div>
 </div>
-<ul>
-<li>Among enrollees, anyone who <strong>does not exercise must have an injury</strong>.</li>
-<li>Exercise could therefore appear protective because of <strong>who was selected</strong>.</li>
-</ul>
-<p><strong>A common effect is not a common cause. Controlling for it can create bias.</strong></p>
+<p>In this hypothetical example, <strong>assume the class has no effect on falls</strong>.</p>
+<p><strong>The groups’ different fall histories explain the overall difference in risk.</strong></p>
 <aside class="notes">
-<p>Keep the main explanation brief. “Collider” refers to the meeting arrowheads along this path. Selecting enrollees is conditioning on enrollment: we consider only people with enrollment = yes. This example demonstrates the mechanism discussed by <span class="citation" data-cites="hernan2002">Hernán et al. (<a href="#/references" role="doc-biblioref" onclick="">2002</a>)</span> using an original, simpler scenario in place of the supplied video and Pap-test screenshot. It is not a transcript or a claim about an actual exercise study.</p>
-<p>Optional numerical explanation: suppose the source population contains 25 people in each of four categories: exercise/injury, exercise/no injury, no exercise/injury, and neither. Injury prevalence is 50% in both exercise groups. The rule excludes only the last category. Among enrollees, injury prevalence is now 50% among exercisers and 100% among nonexercisers. Nothing about anyone’s exercise or injury changed.</p>
-<p>The example also shows why the conventional criteria are insufficient: enrollment is associated with exercise, is associated with injury among nonexercisers, and is not a causal step from exercise to injury. Yet selecting on it creates a misleading comparison. We do not need the formal rules for opening and blocking paths to understand this example.</p>
+<ul>
+<li><p>Read each arrow in ordinary language. In this hypothetical story, having fallen before can motivate someone to attend the class and can increase their chance of falling again. Each arrow represents a proposed causal influence.</p></li>
+<li><p>There is no arrow from class attendance to falls in the next year because we assume the class has no causal effect in this hypothetical example. This is an assumption of the teaching story, not a conclusion established by the table alone.</p></li>
+<li><p>Connect the diagram to the tables: 90% of attendees had a prior fall, compared with 10% of nonattendees. Their different fall histories produced the overall risk difference, which we could mistakenly attribute to class attendance.</p></li>
+<li><p>Comparing attendees and nonattendees within the same fall-history category gave equal risks in our constructed example. The diagram explains why we considered fall history. The numbers alone do not establish the arrows or prove that a real class has no effect.</p></li>
+<li><p>Ask students to explain why prior falls matter for both attendance and future falls. Formal diagram terminology and path rules are not needed here. General diagram principles: <span class="citation" data-cites="hernan2002">Hernán et al. (<a href="#/references" role="doc-biblioref" onclick="">2002</a>)</span>.</p></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -851,6 +802,8 @@
           display:block!important;
       }</style></aside>
 </section>
+
+
 <section id="practice-which-variable-needs-attention" class="slide level2 compact">
 <h2>Practice: Which Variable Needs Attention?</h2>
 <p>A study compares people who choose a fall-prevention class with people who do not.</p>
