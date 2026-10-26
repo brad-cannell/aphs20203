@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="Statistical Thinking and Describing Data_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Statistical Thinking and Describing Data_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Statistical Thinking and Describing Data_files/libs/quarto-html/popper.min.js"></script>
+<script src="Statistical Thinking and Describing Data_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Statistical Thinking and Describing Data_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Statistical Thinking and Describing Data_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="Statistical Thinking and Describing Data_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.36">
+
+  <title>Statistical Thinking and Describing Data</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="Statistical Thinking and Describing Data_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Statistical Thinking and Describing Data_files/libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="Statistical Thinking and Describing Data_files/libs/revealjs/dist/theme/quarto-34e970d70970bc47f7dd43e325559e70.css">
+  <link href="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Statistical Thinking and Describing Data</h1>
+  <p class="subtitle">APHS 20203 · October 26, 2026</p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+
+<section id="how-much-are-students-sleeping" class="slide level2">
+<h2>How Much Are Students Sleeping?</h2>
+<p>Imagine a student group wants to describe sleep and stress at TCU this semester.</p>
+<p>They survey <strong>150 students</strong>. Respondents report an average of <strong>6.2 hours of sleep per night</strong>.</p>
+<p><strong>What can the group say from those data?</strong></p>
+<aside class="notes">
+<p>Opening block: 8 minutes across this and the next slide. This is a fictional scenario adapted from Yan’s slides 8-9 and 11; it is not an actual TCU survey. Invite students to suggest a defensible sentence and a sentence that goes too far. Do not ask students to disclose their own sleep or stress. Ask how the respondents were recruited and what “per night” means. The later 12-person dataset is a separate, smaller practice example, not a subset of these 150 respondents.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-statistics-adds" class="slide level2">
+<h2>What Statistics Adds</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Question</th>
+<th style="text-align: left;">What we need</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">What did we observe?</td>
+<td style="text-align: left;">Counts, percentages, summaries, and graphs</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">How much do observations differ?</td>
+<td style="text-align: left;">Measures of spread</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">What might this tell us about a population?</td>
+<td style="text-align: left;">Sampling information and statistical inference</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Today: describe the data and be clear about whom they describe.</strong></p>
+<aside class="notes">
+<p>Compress Yan’s slides 4-7 into this bridge. Connect to the familiar epidemiologic questions of occurrence, distribution, and association. Statistical methods organize and evaluate evidence; they do not guarantee accurate measurements or remove selection bias. Precision and hypothesis testing will receive dedicated lessons later.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="population-and-sample" class="slide level2">
+<h2>Population and Sample</h2>
+<p><strong>Population:</strong> the full group we want to describe.</p>
+<p>All students enrolled at TCU in Fall 2026.</p>
+<p><strong>Sample:</strong> the people we actually observe.</p>
+<p>The 150 students who respond to the survey.</p>
+<aside class="notes">
+<p>Population/sample block: 12 minutes through the first poll. Adapted from Yan slides 8-9 and Friis Chapter 2, Terminology of Samples. Define the population by membership and time. Briefly ask whether a survey of students leaving one late-night study space would necessarily represent all enrolled students. Use the source/target population ideas from the existing course deck only to clarify this example; do not restart open/closed population or cohort terminology.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="describing-and-inferring" class="slide level2">
+<h2>Describing and Inferring</h2>
+<p><strong>Description</strong></p>
+<p>“The 150 respondents reported an average of 6.2 hours of sleep.”</p>
+<p><strong>Inference</strong></p>
+<p>“We estimate the average sleep duration of all TCU students from the sample.”</p>
+<p><strong>What would you need to know before trusting the second statement?</strong></p>
+<aside class="notes">
+<p>Give pairs 2 minutes, then collect two responses. Expected issues: recruitment, nonresponse, whether different student groups were represented, the measurement question, and the period measured. Samples can vary even with a sound sampling process; a biased recruitment process is a separate concern. A descriptive summary can describe an entire observed population too. The defining distinction is whether we summarize observed data or generalize beyond them. Adapted from Yan slides 9 and 13-14. Low-tech fallback: pair discussion and verbal responses.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="parameter-and-statistic" class="slide level2">
+<h2>Parameter and Statistic</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Population</th>
+<th style="text-align: left;">Sample</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Numerical summary</td>
+<td style="text-align: left;"><strong>Parameter</strong></td>
+<td style="text-align: left;"><strong>Statistic</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Example</td>
+<td style="text-align: left;">Mean sleep for all TCU students</td>
+<td style="text-align: left;">Mean sleep for 150 respondents</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mean symbol</td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math></td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p>A sample statistic can estimate a population parameter.</p>
+<aside class="notes">
+<p>Adapted from Yan slides 15-16. Emphasize what group is summarized, rather than memorizing a Greek-versus-Roman rule. Not all parameter symbols are Greek. The population parameter is fixed for the defined population and measurement period; a statistic can vary from sample to sample.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="poll-statistic-or-parameter" class="slide level2 quiz">
+<h2>Poll: Statistic or Parameter?</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: /Users/bradcannell/Desktop/Git/Academia/Teaching/aphs20203/Lecture Slides/Module 08 - Statistics Overview and Descriptive Statistics/Statistical Thinking and Describing Data/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>The mean sleep duration among 150 surveyed TCU students is 6.2 hours. What is 6.2 hours?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> A population parameter, because the students attend TCU.</p>
+<p><strong>B.</strong> A sample statistic, because it summarizes the surveyed students.</p>
+<p><strong>C.</strong> Both, because a sample always matches its population.</p>
+<p><strong>D.</strong> Neither, because sleep duration is a continuous variable.</p>
+</div>
+<aside class="notes">
+<p>Answer: B. B. The mean summarizes the 150 respondents. The mean for all enrolled TCU students would be a population parameter. A statistic may estimate a parameter, but the two need not be equal. Allow 3 minutes, including discussion. Reveal the answer: after_discussion. Show the distribution: no. Responses are anonymous. If polling fails: Write A, B, C, or D on paper, compare with a partner, then vote by raising fingers. Discuss the reason before revealing the answer.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-a-variable" class="slide level2">
+<h2>What Is a Variable?</h2>
+<p>A <strong>variable</strong> is a characteristic that can take different values across observations.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">One student</th>
+<th style="text-align: left;">Values recorded</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sleep duration</td>
+<td style="text-align: left;">6.5 hours per night</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">High stress reported</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Stress rating</td>
+<td style="text-align: left;">High</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of caffeinated drinks yesterday</td>
+<td style="text-align: left;">2</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>Variable block: 12 minutes through “Choose a Summary.” Each row here describes a different variable measured on the same fictional person, rather than four people. In a usual dataset, one student occupies one row and each variable has a column. The high-stress response is a binary self-report, not a diagnosis. Adapted from Yan slides 17-19 and Friis Chapter 2, Variables, Data, and Measurement Scales.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="categorical-and-quantitative-variables" class="slide level2">
+<h2>Categorical and Quantitative Variables</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Kind</th>
+<th style="text-align: left;">Distinction</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Nominal</td>
+<td style="text-align: left;">Categories without a natural order</td>
+<td style="text-align: left;">Major; yes/no response</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ordinal</td>
+<td style="text-align: left;">Categories with an order</td>
+<td style="text-align: left;">Low/moderate/high stress</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Discrete quantitative</td>
+<td style="text-align: left;">Countable numerical values</td>
+<td style="text-align: left;">Number of drinks</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Continuous quantitative</td>
+<td style="text-align: left;">Measurements along a continuum</td>
+<td style="text-align: left;">Sleep duration</td>
+</tr>
+</tbody>
+</table>
+<p><strong>A numerical code does not automatically make a category quantitative.</strong></p>
+<aside class="notes">
+<p>A binary variable has two categories. For example, 0 = no and 1 = yes remains a categorical response. Recorded sleep may be rounded to half-hours, but duration is the underlying continuous quantity. Do not classify counts as continuous. Interval and ratio describe another aspect of measurement: equal intervals and whether zero has a meaningful interpretation. If asked, temperature in Celsius is interval, while elapsed duration has a meaningful zero. Keep this distinction brief rather than adding another taxonomy lesson.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="classify-the-recorded-values" class="slide level2">
+<h2>Classify the Recorded Values</h2>
+<p>Work with a partner. Classify each variable and explain one choice.</p>
+<ol type="1">
+<li>Caffeine use: <strong>yes / no</strong></li>
+<li>Sleep duration: <strong>5.5 / 6.0 / 7.5 hours</strong></li>
+<li>Stress rating: <strong>low / moderate / high</strong></li>
+<li>Number of nights studied past midnight: <strong>0 / 1 / 2 / … / 7</strong></li>
+</ol>
+<aside class="notes">
+<p>Allow 3 minutes plus a brief debrief. Answers: nominal binary, continuous quantitative, ordinal, discrete quantitative. The wording and recorded values determine the classification. A numeric stress score is not the same variable as a low/moderate/high stress category; use the project’s codebook when interpreting the actual score. Low-tech fallback: pairs write their answers and one justification on paper.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="choose-a-summary" class="slide level2">
+<h2>Choose a Summary</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Start with</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">High stress: yes/no</td>
+<td style="text-align: left;">Counts, percentages, bar graph</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Low/moderate/high stress</td>
+<td style="text-align: left;">Ordered counts and percentages</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sleep hours</td>
+<td style="text-align: left;">Distribution, center, and spread</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Choose the summary from the variable and the question.</strong></p>
+<aside class="notes">
+<p>Adapted from Yan slides 17, 25, and 34-36. A histogram will show numerical intervals on Wednesday; a bar graph compares categories today. Counting respondents in categories is useful even when a later analysis will use a continuous score. Avoid treating all numeric codes as suitable for averaging.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-small-practice-dataset" class="slide level2 compact">
+<h2>A Small Practice Dataset</h2>
+<p><strong>12 fictional students.</strong> Each row represents one student.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Student</th>
+<th style="text-align: right;">Sleep hours</th>
+<th style="text-align: left;">High stress?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">S01</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S02</td>
+<td style="text-align: right;">5.5</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">S03</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S04</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">S05</td>
+<td style="text-align: right;">6.5</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S06</td>
+<td style="text-align: right;">6.5</td>
+<td style="text-align: left;">No</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Student</th>
+<th style="text-align: right;">Sleep hours</th>
+<th style="text-align: left;">High stress?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">S07</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S08</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">S09</td>
+<td style="text-align: right;">7.5</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S10</td>
+<td style="text-align: right;">8.0</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">S11</td>
+<td style="text-align: right;">8.0</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S12</td>
+<td style="text-align: right;">9.0</td>
+<td style="text-align: left;">No</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<aside class="notes">
+<p>Frequency-table block: 12 minutes through “What Grouping Hides.” This new fictional dataset is small enough to count directly and is separate from the opening 150-person scenario. No values are missing. Ask students to count yes responses before advancing. We will revisit this table for the group exercise. All classifications are for teaching, with no clinical interpretation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="counts-and-percentages" class="slide level2">
+<h2>Counts and Percentages</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">High stress reported</th>
+<th style="text-align: right;">Count</th>
+<th style="text-align: right;">Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Yes</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">41.7%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">58.3%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">100%</td>
+</tr>
+</tbody>
+</table>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Percentage</mtext><mo>=</mo><mfrac><mtext mathvariant="normal">Count in the category</mtext><mtext mathvariant="normal">Number in the group being described</mtext></mfrac><mo>×</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">\text{Percentage} = \frac{\text{Count in the category}}{\text{Number in the group being described}} \times 100</annotation></semantics></math></p>
+<aside class="notes">
+<p>Ask “41.7 percent of whom?” before accepting the percentage. Here the denominator is all 12 fictional students because every student supplied a response. If responses were missing, we would need to specify whether the denominator included all students or only respondents. Counts and percentages communicate complementary information: a percentage alone hides sample size.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-bar-graph-of-the-same-responses" class="slide level2">
+<h2>A Bar Graph of the Same Responses</h2>
+
+<img data-src="Statistical-Thinking-and-Describing-Data_files/figure-revealjs/stress-bar-1.png" style="width:85.0%" alt="Bar graph for 12 fictional students. Five report high stress and seven do not. The vertical axis shows counts from zero to eight." class="r-stretch"><aside class="notes">
+<p>Adapted conceptually from Yan slides 34-36. Ask students to identify the variable on the horizontal axis and the quantity on the vertical axis. Both a table and a graph summarize these same observations. The bars are separated because the horizontal positions are categories, not adjacent numerical intervals. Counts are used here, but a clearly labeled percentage axis would also be appropriate.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="grouped-frequency-tables" class="slide level2">
+<h2>Grouped Frequency Tables</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Sleep duration</th>
+<th style="text-align: right;">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">5 to less than 6 hours</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6 to less than 7 hours</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7 to less than 8 hours</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8 to less than 9 hours</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">9 to less than 10 hours</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">12</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Where does someone reporting exactly 7 hours belong?</strong></p>
+<aside class="notes">
+<p>Adapted from Yan slides 27-29. Seven hours belongs to 7 to less than 8. Nonoverlapping intervals prevent double counting. This is a grouped numerical variable, not a set of unrelated nominal categories. Save drawing its histogram for October 28. Ask whether these counts still add to 12.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-grouping-hides" class="slide level2">
+<h2>What Grouping Hides</h2>
+<p>The <strong>7 to less than 8 hours</strong> interval contains <strong>3 students</strong>.</p>
+<p>From that grouped table alone:</p>
+<ul>
+<li>We know there are three observations in the interval.</li>
+<li>We do <strong>not</strong> know how many are exactly 7 hours.</li>
+<li>We cannot recover the exact mean sleep duration.</li>
+</ul>
+<aside class="notes">
+<p>Ask for answers before revealing the explanation verbally. Zero, one, two, or three people could be exactly 7 based only on the grouped table. We happen to know there are two from the original data, but that information was lost when we grouped the values. This retains Yan’s grouped-frequency interpretation exercise and prepares students for the grouped-table question in Quiz 4 without copying its test wording.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-familiar-22-table" class="slide level2">
+<h2>A Familiar 2×2 Table</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Sleep duration</th>
+<th style="text-align: right;">High stress: yes</th>
+<th style="text-align: right;">High stress: no</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Less than 7 hours</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7 hours or more</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">12</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Which group has the larger percentage reporting high stress?</strong></p>
+<aside class="notes">
+<p>Categorical comparison block: 8 minutes through the second poll. Build from the 2×2 tables taught earlier in the course. First identify what each cell counts; then select each row total as its denominator. Within the shorter-sleep group, 4/6 = 66.7%; in the other group, 1/6 = 16.7%. These are descriptions of a fictional sample. The seven-hour boundary is illustrative and does not establish a health recommendation, a diagnosis, or a causal effect. No hypothesis test is needed today.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="poll-which-denominator" class="slide level2 quiz">
+<h2>Poll: Which Denominator?</h2>
+<!-- GENERATED FILE - DO NOT EDIT.
+     Source: /Users/bradcannell/Desktop/Git/Academia/Teaching/aphs20203/Lecture Slides/Module 08 - Statistics Overview and Descriptive Statistics/Statistical Thinking and Describing Data/quiz/quiz.yml
+     Rebuilt automatically during presentation rendering. -->
+<div class="quiz-prompt">
+<p>Of 12 fictional students, 6 report less than 7 hours of sleep. Of those 6, 4 report high stress. What percentage of the shorter-sleep group reports high stress?</p>
+</div>
+<div class="quiz-options">
+<p><strong>A.</strong> 4 / 12 = 33.3%</p>
+<p><strong>B.</strong> 6 / 12 = 50.0%</p>
+<p><strong>C.</strong> 4 / 6 = 66.7%</p>
+<p><strong>D.</strong> 6 / 4 = 150.0%</p>
+</div>
+<aside class="notes">
+<p>Answer: C. C. The question restricts the denominator to the 6 students in the shorter-sleep group. Four of those 6 report high stress. The fraction 4/12 answers a different question: what proportion of the whole sample is in both categories? Allow 4 minutes, including discussion. Reveal the answer: after_discussion. Show the distribution: no. Responses are anonymous. If polling fails: Write A, B, C, or D on paper, compare with a partner, then vote by raising fingers. Discuss the reason before revealing the answer.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="group-exercise-describe-this-sample" class="slide level2">
+<h2>Group Exercise: Describe This Sample</h2>
+<p>In groups of 3–4, use the data on the next slide.</p>
+<ol type="1">
+<li>Make a two-row frequency table for <strong>high stress: yes/no</strong>. Include counts and percentages.</li>
+<li>Calculate the percentage sleeping <strong>less than 7 hours within each stress group</strong>: high stress yes; high stress no.</li>
+<li>Write one sentence describing the comparison and one limitation.</li>
+</ol>
+<p><strong>Work for 7 minutes. Be ready to explain your denominators.</strong></p>
+<aside class="notes">
+<p>Group block: 15 minutes total: 1 minute instructions, 7 minutes work, 5 minutes debrief, and 2 minutes for the center/spread transition. Roles can be reader, calculator, and spokesperson; have a fourth person check the denominators. Students need only paper and optionally a calculator. No online system is required. Keep the data slide displayed while groups work. Assess the explanation, not speed of arithmetic.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="group-exercise-data" class="slide level2 compact">
+<h2>Group Exercise Data</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Student</th>
+<th style="text-align: right;">Sleep hours</th>
+<th style="text-align: left;">High stress?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">S01</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S02</td>
+<td style="text-align: right;">5.5</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">S03</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S04</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">S05</td>
+<td style="text-align: right;">6.5</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S06</td>
+<td style="text-align: right;">6.5</td>
+<td style="text-align: left;">No</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Student</th>
+<th style="text-align: right;">Sleep hours</th>
+<th style="text-align: left;">High stress?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">S07</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S08</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">S09</td>
+<td style="text-align: right;">7.5</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S10</td>
+<td style="text-align: right;">8.0</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">S11</td>
+<td style="text-align: right;">8.0</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S12</td>
+<td style="text-align: right;">9.0</td>
+<td style="text-align: left;">No</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<p><strong>Report:</strong> overall stress counts and percentages; shorter-sleep percentages within each stress group; one comparison and one limitation.</p>
+<aside class="notes">
+<p>Repeat the dataset intentionally so groups do not need to navigate backward or copy values from memory. These are fictional students, with complete data. Use a separate seven-minute timer. Low-tech fallback: leave this slide projected or use the printed deck and have groups work on paper. This reverses the conditional question used in the poll. Check whether groups use 5 and 7 as denominators rather than reuse the two sleep-group totals of 6.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="group-exercise-debrief" class="slide level2">
+<h2>Group Exercise Debrief</h2>
+<p>Overall: <strong>5 of 12 (41.7%)</strong> report high stress.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">High stress reported</th>
+<th style="text-align: left;">Less than 7 hours within the group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">4/5 = <strong>80.0%</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">2/7 = <strong>28.6%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>In this fictional sample, shorter sleep is more common among students reporting high stress.</p>
+<aside class="notes">
+<p>Full answer: yes = 5 (41.7%), no = 7 (58.3%). Valid limitations include the small fictional sample, no real sampling design, self-reported measures in the scenario, no information about time order, and other explanations for an association. We cannot generalize to TCU students or conclude that shorter sleep caused stress. The two stress-group denominators are 5 and 7: 4/5 = 80.0% and 2/7 = 28.6%. Ask why these differ from the poll’s 4/6. The grouping variable has changed, so these are column percentages of the earlier 2×2 table. Revisit which question each denominator answers if needed.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-would-we-summarize-sleep-hours" class="slide level2">
+<h2>How Would We Summarize Sleep Hours?</h2>
+<p>We have described categories using <strong>counts and percentages</strong>.</p>
+<p>For the numerical sleep measurements, ask:</p>
+<ul>
+<li>What is a typical value? <strong>Center</strong></li>
+<li>How different are the values? <strong>Spread</strong></li>
+<li>What does the distribution look like? <strong>Shape</strong></li>
+</ul>
+<aside class="notes">
+<p>Use the final 2 minutes of the group block to connect its categorical summaries to continuous summaries. This is only an introduction to center and spread; the next meeting develops these concepts and their spreadsheet procedures. Adapted from Yan slides 25, 37, and 40.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="mean-and-median-a-first-look" class="slide level2">
+<h2>Mean and Median: A First Look</h2>
+<p>Sorted sleep hours:</p>
+<p><strong>5, 5.5, 6, 6, 6.5, 6.5, 7, 7, 7.5, 8, 8, 9</strong></p>
+<p><strong>Mean:</strong> total hours ÷ number of students = <strong>6.83 hours</strong></p>
+<p><strong>Median:</strong> average of the two middle values = <strong>6.75 hours</strong></p>
+<aside class="notes">
+<p>Center/spread block: 8 minutes through “The Same Mean Can Hide Different Spread.” Have students locate the middle positions before discussing the answer: the 6th and 7th values are 6.5 and 7, giving 6.75. The total is 82 hours, so 82/12 = 6.8333. Do not require a long hand-calculation exercise. The mode is the most frequent value or category; this dataset has several tied modal values (6, 6.5, 7, and 8). Its tied modes are a useful reason not to force a single mode or infer skew from a mean/median/mode ordering.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-same-mean-can-hide-different-spread" class="slide level2">
+<h2>The Same Mean Can Hide Different Spread</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Fictional group</th>
+<th style="text-align: left;">Sleep hours</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">Range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">6, 7, 8</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">4, 7, 10</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Would “both groups average 7 hours” tell the whole story?</strong></p>
+<aside class="notes">
+<p>Both means are 7, but group B varies more. Range is maximum minus minimum. Introduce SD as a measure of spread around the mean and IQR as the spread of the middle half of values; defer calculation and detailed interpretation to Wednesday. Ask students to explain the difference in words. This is a small conceptual check with a verbal-response fallback. Do not infer distribution shape from only three observations.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="connection-to-prep-3" class="slide level2">
+<h2>Connection to Prep 3</h2>
+<p>For your assigned dataset, you will:</p>
+<ul>
+<li>Identify your variables and their types.</li>
+<li>Summarize your continuous outcome with <strong>n, mean, SD, minimum, and maximum</strong>.</li>
+<li>Describe a histogram and, after the correlation lesson, a scatterplot.</li>
+</ul>
+<p><strong>Wednesday:</strong> continuous summaries, graphs, and Excel practice.</p>
+<aside class="notes">
+<p>Closing block: 5 minutes across this and the exit check. Matches the current Group Presentation - Prep 3 assignment: StressScore or AnxietyScore is the continuous outcome; the assignment also requires a scatterplot and individual contribution statements. Today’s fictional dataset is for practice and does not replace a group’s assigned dataset. Do not add a graded categorical deliverable or a new deadline. The approved November 2 lesson introduces scatterplots and correlation; Prep 3 asks for descriptive scatterplot interpretation, not a correlation coefficient.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exit-check" class="slide level2">
+<h2>Exit Check</h2>
+<p>On paper, write:</p>
+<ol type="1">
+<li>One difference between a <strong>sample statistic</strong> and a <strong>population parameter</strong>.</li>
+<li>A suitable summary for a <strong>yes/no variable</strong>.</li>
+<li>What you must identify before calculating a <strong>percentage</strong>.</li>
+</ol>
+<aside class="notes">
+<p>Allow 2 minutes, then invite brief responses. Answers: sample versus population numerical summary; counts/percentages or a labeled bar graph; the group defining the denominator. Collect or glance at responses to decide whether Wednesday needs a short recap. This is a classroom check, not a new graded assignment. Low-tech fallback is the default: paper and discussion.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sources" class="slide level2 compact">
+<h2>Sources</h2>
+<ul>
+<li>Yan Zhang. <em>Statistics Overview and Descriptive Statistics</em>, APHS 20203, 50-slide PowerPoint supplied with the course materials. Selected concepts and activities adapted for this lesson.</li>
+<li><em>Friis’ Epidemiology 101</em>, third edition, Chapter 2: “Epidemiology and Data Presentation.”</li>
+<li>Course materials: approved October 20, 2026 outline and <em>Group Presentation – Prep 3</em>.</li>
+</ul>
+<p>All student examples in this lesson are <strong>fictional teaching examples</strong>.</p>
+<aside class="notes">
+<p>Source PowerPoint: APHS 20203 W9-Stats overview and Descriptive Statistics.pptx. The PDF version omits two later practice slides, so source slide references in these notes follow the 50-slide PowerPoint. Concepts and question styles are adapted rather than reproducing its full wording. No UTHealth random-error slides are imported; those remain reserved for the November estimation lesson.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../assets/tcu-logo-purple.svg" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="Statistical Thinking and Describing Data_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Statistical Thinking and Describing Data_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1244,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

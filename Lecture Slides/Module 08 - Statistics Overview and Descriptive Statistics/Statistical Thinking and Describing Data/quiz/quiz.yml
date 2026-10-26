@@ -1,0 +1,32 @@
+# Canonical questions for the October 26 lesson. Add participant links only
+# after matching online activities exist; paper voting works without them.
+session:
+  code: ""
+  fallback: "Write A, B, C, or D on paper, compare with a partner, then vote by raising fingers. Discuss the reason before revealing the answer."
+questions:
+  - id: october-26-statistic
+    type: multiple_choice
+    prompt: "The mean sleep duration among 150 surveyed TCU students is 6.2 hours. What is 6.2 hours?"
+    options:
+      - "A population parameter, because the students attend TCU."
+      - "A sample statistic, because it summarizes the surveyed students."
+      - "Both, because a sample always matches its population."
+      - "Neither, because sleep duration is a continuous variable."
+    correct: 2
+    explanation: "B. The mean summarizes the 150 respondents. The mean for all enrolled TCU students would be a population parameter. A statistic may estimate a parameter, but the two need not be equal. Allow 3 minutes, including discussion."
+    presentation_mode: anonymous
+    reveal_distribution: false
+    reveal_correct_answer: after_discussion
+  - id: october-26-denominator
+    type: multiple_choice
+    prompt: "Of 12 fictional students, 6 report less than 7 hours of sleep. Of those 6, 4 report high stress. What percentage of the shorter-sleep group reports high stress?"
+    options:
+      - "4 / 12 = 33.3%"
+      - "6 / 12 = 50.0%"
+      - "4 / 6 = 66.7%"
+      - "6 / 4 = 150.0%"
+    correct: 3
+    explanation: "C. The question restricts the denominator to the 6 students in the shorter-sleep group. Four of those 6 report high stress. The fraction 4/12 answers a different question: what proportion of the whole sample is in both categories? Allow 4 minutes, including discussion."
+    presentation_mode: anonymous
+    reveal_distribution: false
+    reveal_correct_answer: after_discussion
