@@ -1,6 +1,6 @@
 ---
 title: "Statistical Thinking and Describing Data"
-subtitle: "APHS 20203 · October 26, 2026"
+subtitle: "APHS 20203"
 format:
   revealjs:
     theme: [default, ../../_theme/tcu.scss]
@@ -21,6 +21,7 @@ execute:
   freeze: false
 ---
 
+
 ## Learning Objectives {data-visibility="hidden"}
 
 <!-- October 26 only. Adapted selectively from Yan Zhang's statistics overview
@@ -29,8 +30,7 @@ approved course outline governs scope. All numerical classroom examples below
 are fictional and do not describe actual students or a clinical threshold.
 Pacing (80 minutes): opening 8; population/sample and inference 12; variables 12;
 frequency tables 12; categorical comparison and denominator poll 8; group
-exercise and debrief 15; center/spread 8; project connection and exit check 5.
-Poll questions are authored only in quiz/quiz.yml. -->
+exercise and debrief 15; center/spread 8; project connection and exit check 5. -->
 
 ```{r}
 #| label: setup
@@ -71,17 +71,55 @@ long_high <- sum(!short_sleep & sleep_data$high_stress)
 - Interpret frequencies, percentages, and grouped data.
 - Describe why both center and spread matter.
 
-## How Much Are Students Sleeping?
 
-Imagine a student group wants to describe sleep and stress at TCU this semester.
+## How Much Are Students Sleeping? {.compact}
 
-They survey **150 students**. Respondents report an average of **6.2 hours of sleep per night**.
+**12 of the 150 responses** from a fictional TCU survey. Each row represents one student.
 
-**What can the group say from those data?**
+:::: {.columns}
+::: {.column width="50%"}
+| Respondent | Sleep hours per night |
+|:---|---:|
+| 001 | 5.0 |
+| 002 | 7.0 |
+| 003 | 6.5 |
+| 004 | 5.5 |
+| 005 | 8.0 |
+| 006 | 6.0 |
+:::
+::: {.column width="50%"}
+| Respondent | Sleep hours per night |
+|:---|---:|
+| 007 | 4.5 |
+| 008 | 7.5 |
+| 009 | 6.0 |
+| 010 | 5.0 |
+| 011 | 6.5 |
+| 012 | 7.0 |
+:::
+::::
 
 ::: {.notes}
-Opening block: 8 minutes across this and the next slide. This is a fictional scenario adapted from Yan's slides 8-9 and 11; it is not an actual TCU survey. Invite students to suggest a defensible sentence and a sentence that goes too far. Do not ask students to disclose their own sleep or stress. Ask how the respondents were recruited and what “per night” means. The later 12-person dataset is a separate, smaller practice example, not a subset of these 150 respondents.
+- Opening block: 8 minutes across this slide, “Average Sleep Duration,” and “What Statistics Adds.”
+- Data often isn't that informative to us in it's raw form. For example, what conclusions can you draw from this data right now?   
 :::
+
+
+## Average Sleep Duration
+
+Across **all 150 respondents** in the fictional TCU survey, the average is **6.2 hours per night**.
+
+::: {style="text-align: center;"}
+**What conclusions can the group draw from these data?**
+:::
+
+::: {.notes}
+- Statistics help us to summarize and make sense of raw data.   
+- The stated 6.2-hour mean describes all 150 fictional respondents, not just the 12 shown on the previous slide.
+- Invite students to suggest a defensible sentence and a sentence that goes too far.
+- Ask how the respondents were recruited and what “per night” means.
+:::
+
 
 ## What Statistics Adds
 
@@ -91,62 +129,136 @@ Opening block: 8 minutes across this and the next slide. This is a fictional sce
 | How much do observations differ? | Measures of spread |
 | What might this tell us about a population? | Sampling information and statistical inference |
 
-**Today: describe the data and be clear about whom they describe.**
-
 ::: {.notes}
-Compress Yan's slides 4-7 into this bridge. Connect to the familiar epidemiologic questions of occurrence, distribution, and association. Statistical methods organize and evaluate evidence; they do not guarantee accurate measurements or remove selection bias. Precision and hypothesis testing will receive dedicated lessons later.
+- Connect the individual sleep responses and their mean to the first row: statistics help us summarize raw data.
+- Connect to the familiar epidemiologic questions of occurrence, distribution, and association.
+- Statistical methods organize and evaluate evidence; they do not guarantee accurate measurements or remove selection bias.
+- Precision and hypothesis testing will receive dedicated lessons later.
 :::
 
-## Population and Sample
 
-**Population:** the full group we want to describe.
+## Target Population, Source Population, and Sample {.compact}
 
-All students enrolled at TCU in Fall 2026.
+Suppose the survey recruits students leaving the library one evening.
 
-**Sample:** the people we actually observe.
+| Group | Who belongs to it? | In our example |
+|:---|:---|:---|
+| **Target population** | People we want findings to apply to | All students enrolled at TCU in Fall 2026 |
+| **Source population** | People from whom we select participants | TCU students leaving that library that evening |
+| **Study sample** | People whose data we analyze | The 150 students who respond to the survey |
 
-The 150 students who respond to the survey.
+**How well might these respondents represent all TCU students?**
 
 ::: {.notes}
-Population/sample block: 12 minutes through the first poll. Adapted from Yan slides 8-9 and Friis Chapter 2, Terminology of Samples. Define the population by membership and time. Briefly ask whether a survey of students leaving one late-night study space would necessarily represent all enrolled students. Use the source/target population ideas from the existing course deck only to clarify this example; do not restart open/closed population or cohort terminology.
+- The library recruitment setting is a hypothetical addition to the fictional survey scenario.
+- Define the population by membership and time.
+- Ask which students this recruitment setting might miss and whether respondents could differ from students who decline to participate.
+- Distinguish the source population from the sample: not everyone leaving the library necessarily responds.
+- A larger sample from this source would not automatically make it representative of all TCU students.
 :::
 
-## Describing and Inferring
 
-**Description**
+## Descriptive and Inferential Statistics
+
+### Descriptive Statistics
+
+Describe the **sample we observed**.
+
+### Inferential Statistics
+
+Use sample data to make inferences about the **target population**.
+
+::: {.notes}
+- Connect to the preceding slide: we describe the 150 respondents, then ask what their data can tell us about all TCU students enrolled in Fall 2026.
+- Sampling error is chance variation: another random sample could have a different mean sleep duration even with sound sampling. It does not mean someone made a mistake.
+- Bias is systematic error. Recruiting only at one library, differences between respondents and nonrespondents, or inaccurate sleep reports could distort the estimate. A larger sample does not automatically remove these problems.
+- Confounding becomes relevant when we interpret the sleep–stress association, especially as a possible causal effect. For example, workload could influence both sleep and stress and help explain their association. Confounding is not the central concern when estimating mean sleep duration alone.
+- Inferential methods quantify uncertainty under assumptions about how the data were collected and analyzed. They do not automatically correct bias or confounding.
+:::
+
+
+## Question: Describing or Inferring?
+
+**Statement A**
 
 “The 150 respondents reported an average of 6.2 hours of sleep.”
 
-**Inference**
+**Statement B**
 
 “We estimate the average sleep duration of all TCU students from the sample.”
 
-**What would you need to know before trusting the second statement?**
+1. Which statement describes observed data? Which makes an inference?
+2. What would you need to know before trusting Statement B?
 
 ::: {.notes}
-Give pairs 2 minutes, then collect two responses. Expected issues: recruitment, nonresponse, whether different student groups were represented, the measurement question, and the period measured. Samples can vary even with a sound sampling process; a biased recruitment process is a separate concern. A descriptive summary can describe an entire observed population too. The defining distinction is whether we summarize observed data or generalize beyond them. Adapted from Yan slides 9 and 13-14. Low-tech fallback: pair discussion and verbal responses.
+- Give pairs 2 minutes, then collect two responses.
+- Statement A is descriptive: it summarizes the respondents. Statement B is inferential: it uses their data to estimate a characteristic of all TCU students.
+- Expected issues: recruitment, nonresponse, whether different student groups were represented, the measurement question, and the period measured.
+- Connect to the library example: students leaving one library on one evening may differ from the target population, and respondents may differ from nonrespondents.
+- Samples can vary even with a sound sampling process; a biased recruitment process is a separate concern.
+- Adapted from the think–pair–share activity on slide 9 of Yan Zhang's Statistics Overview and Descriptive Statistics PowerPoint. The TCU setting and 6.2-hour mean are fictional adaptations; the source uses percentages of students reporting poor sleep.
+- Low-tech fallback: pair discussion and verbal responses.
 :::
 
-## Parameter and Statistic
 
-| | Population | Sample |
+## Population and Sample Summaries
+
+We use the mean sleep duration in our **sample** to estimate the mean in our **target population**.
+
+**What do we call a numerical summary of a population? Of a sample?**
+
+::: {.fragment}
+| | Target population | Sample |
 |:---|:---|:---|
 | Numerical summary | **Parameter** | **Statistic** |
 | Example | Mean sleep for all TCU students | Mean sleep for 150 respondents |
 | Mean symbol | $\mu$ | $\bar{x}$ |
 
 A sample statistic can estimate a population parameter.
-
-::: {.notes}
-Adapted from Yan slides 15-16. Emphasize what group is summarized, rather than memorizing a Greek-versus-Roman rule. Not all parameter symbols are Greek. The population parameter is fixed for the defined population and measurement period; a statistic can vary from sample to sample.
 :::
 
-## Poll: Statistic or Parameter? {.quiz}
+::: {.notes}
+- Connect to Statement B on the previous slide: the sample mean is known, and we use it to estimate the unknown mean for the target population.
+- Ask the class to recall both terms before revealing the table. Expected answers: population parameter and sample statistic.
+- After revealing the table, connect the terms to the mean symbols: mu for the population mean and x-bar for the sample mean.
+- Adapted from Yan slides 15-16.
+- Emphasize what group is summarized, rather than memorizing a Greek-versus-Roman rule.
+- Not all parameter symbols are Greek.
+- The population parameter is fixed for the defined population and measurement period; a statistic can vary from sample to sample.
+:::
 
-{{< include quiz-slides/october-26-statistic.qmd >}}
+
+## Question: Statistic or Parameter? {.quiz}
+
+::: {.quiz-prompt}
+The mean sleep duration among 150 surveyed TCU students is 6.2 hours. What is 6.2 hours?
+:::
+
+::: {.quiz-options}
+**A.** A population parameter
+
+**B.** A sample statistic
+
+**C.** Both
+
+**D.** Neither
+:::
+
+::: {.notes}
+- Answer: B. The mean summarizes the 150 respondents.
+- The mean for all enrolled TCU students would be a population parameter.
+- A statistic may estimate a parameter, but the two need not be equal.
+- Allow 3 minutes, including discussion.
+- Have students write A, B, C, or D on paper, compare with a partner, then vote by raising fingers.
+- Discuss the reason before revealing the answer.
+:::
+
 
 ## What Is a Variable?
 
+**How would you define a variable? Give one example from a student health survey.**
+
+::: {.fragment}
 A **variable** is a characteristic that can take different values across observations.
 
 | One student | Values recorded |
@@ -155,29 +267,63 @@ A **variable** is a characteristic that can take different values across observa
 | High stress reported | Yes |
 | Stress rating | High |
 | Number of caffeinated drinks yesterday | 2 |
-
-::: {.notes}
-Variable block: 12 minutes through “Choose a Summary.” Each row here describes a different variable measured on the same fictional person, rather than four people. In a usual dataset, one student occupies one row and each variable has a column. The high-stress response is a binary self-report, not a diagnosis. Adapted from Yan slides 17-19 and Friis Chapter 2, Variables, Data, and Measurement Scales.
 :::
 
-## Categorical and Quantitative Variables
+::: {.notes}
+- Variable block: 12 minutes through “Choose a Summary.”
+- Ask the class for a definition and one or two examples before revealing the definition and table.
+- Listen for the distinction between a variable and its value: sleep duration is a variable; 6.5 hours is one recorded value.
+- Each row here describes a different variable measured on the same fictional person, rather than four people.
+- In a usual dataset, one student occupies one row and each variable has a column.
+- The high-stress response is a binary self-report, not a diagnosis.
+- Adapted from Yan slides 17-19 and Friis Chapter 2, Variables, Data, and Measurement Scales.
+:::
 
+
+## Review: Categorical Variables
+
+**What are the two types of categorical variables? How do they differ?**
+
+::: {.fragment}
 | Kind | Distinction | Example |
 |:---|:---|:---|
 | Nominal | Categories without a natural order | Major; yes/no response |
 | Ordinal | Categories with an order | Low/moderate/high stress |
-| Discrete quantitative | Countable numerical values | Number of drinks |
-| Continuous quantitative | Measurements along a continuum | Sleep duration |
 
 **A numerical code does not automatically make a category quantitative.**
+:::
 
 ::: {.notes}
-A binary variable has two categories. For example, 0 = no and 1 = yes remains a categorical response. Recorded sleep may be rounded to half-hours, but duration is the underlying continuous quantity. Do not classify counts as continuous. Interval and ratio describe another aspect of measurement: equal intervals and whether zero has a meaningful interpretation. If asked, temperature in Celsius is interval, while elapsed duration has a meaningful zero. Keep this distinction brief rather than adding another taxonomy lesson.
+- Ask students to call out the two types, explain the difference, and offer an example before revealing the table.
+- A binary variable has two categories.
+- For example, 0 = no and 1 = yes remains a categorical response.
 :::
+
+
+## Review: Quantitative Variables
+
+**What are the two types of quantitative variables? How do they differ?**
+
+::: {.fragment}
+| Kind | Distinction | Example |
+|:---|:---|:---|
+| Discrete quantitative | Countable numerical values | Number of drinks |
+| Continuous quantitative | Measurements along a continuum | Sleep duration |
+:::
+
+::: {.notes}
+- Ask students to call out the two types, explain the difference, and offer an example before revealing the table.
+- Recorded sleep may be rounded to half-hours, but duration is the underlying continuous quantity.
+- Do not classify counts as continuous.
+- Interval and ratio describe another aspect of measurement: equal intervals and whether zero has a meaningful interpretation.
+- If asked, temperature in Celsius is interval, while elapsed duration has a meaningful zero.
+- Keep this distinction brief rather than adding another taxonomy lesson.
+:::
+
 
 ## Classify the Recorded Values
 
-Work with a partner. Classify each variable and explain one choice.
+Classify each variable.
 
 1. Caffeine use: **yes / no**
 2. Sleep duration: **5.5 / 6.0 / 7.5 hours**
@@ -185,10 +331,17 @@ Work with a partner. Classify each variable and explain one choice.
 4. Number of nights studied past midnight: **0 / 1 / 2 / … / 7**
 
 ::: {.notes}
-Allow 3 minutes plus a brief debrief. Answers: nominal binary, continuous quantitative, ordinal, discrete quantitative. The wording and recorded values determine the classification. A numeric stress score is not the same variable as a low/moderate/high stress category; use the project's codebook when interpreting the actual score. Low-tech fallback: pairs write their answers and one justification on paper.
+- Allow about 3 minutes for whole-class discussion. Ask for a classification and a brief explanation for each variable.
+- Answers: nominal binary, continuous quantitative, ordinal, discrete quantitative.
+- The wording and recorded values determine the classification.
+- A numeric stress score is not the same variable as a low/moderate/high stress category; use the project's codebook when interpreting the actual score.
+- If responses differ, ask students to explain which recorded values support their classification before confirming the answer.
 :::
 
+
 ## Choose a Summary
+
+**Choose the summary from the variable and the question.**
 
 | Variable | Start with |
 |:---|:---|
@@ -196,11 +349,11 @@ Allow 3 minutes plus a brief debrief. Answers: nominal binary, continuous quanti
 | Low/moderate/high stress | Ordered counts and percentages |
 | Sleep hours | Distribution, center, and spread |
 
-**Choose the summary from the variable and the question.**
-
 ::: {.notes}
-Adapted from Yan slides 17, 25, and 34-36. A histogram will show numerical intervals on Wednesday; a bar graph compares categories today. Counting respondents in categories is useful even when a later analysis will use a continuous score. Avoid treating all numeric codes as suitable for averaging.
+- Counting respondents in categories is useful even when a later analysis will use a continuous score.
+- Avoid treating all numeric codes as suitable for averaging.
 :::
+
 
 ## A Small Practice Dataset {.compact}
 
@@ -230,8 +383,10 @@ Adapted from Yan slides 17, 25, and 34-36. A histogram will show numerical inter
 ::::
 
 ::: {.notes}
-Frequency-table block: 12 minutes through “What Grouping Hides.” This new fictional dataset is small enough to count directly and is separate from the opening 150-person scenario. No values are missing. Ask students to count yes responses before advancing. We will revisit this table for the group exercise. All classifications are for teaching, with no clinical interpretation.
+- This new fictional dataset is small enough to count directly and is separate from the opening 150-person scenario.
+- **Ask students to calculate the count and percentage of "yes" responses before advancing.**
 :::
+
 
 ## Counts and Percentages
 
@@ -241,11 +396,13 @@ Frequency-table block: 12 minutes through “What Grouping Hides.” This new fi
 | No | `r stress_counts$count[2]` | `r sprintf("%.1f", stress_counts$percent[2])`% |
 | Total | `r nrow(sleep_data)` | 100% |
 
-$$\text{Percentage} = \frac{\text{Count in the category}}{\text{Number in the group being described}} \times 100$$
-
 ::: {.notes}
-Ask “41.7 percent of whom?” before accepting the percentage. Here the denominator is all 12 fictional students because every student supplied a response. If responses were missing, we would need to specify whether the denominator included all students or only respondents. Counts and percentages communicate complementary information: a percentage alone hides sample size.
+- Ask “41.7 percent of whom?” before accepting the percentage.
+- Here the denominator is all 12 fictional students because every student supplied a response.
+- If responses were missing, we would need to specify whether the denominator included all students or only respondents.
+- Counts and percentages communicate complementary information: a percentage alone hides sample size.
 :::
+
 
 ## A Bar Graph of the Same Responses
 
@@ -268,9 +425,14 @@ ggplot(stress_counts, aes(x = response, y = count)) +
   theme(panel.grid.major.x = element_blank(), panel.grid.minor = element_blank())
 ```
 
-::: {.notes}
-Adapted conceptually from Yan slides 34-36. Ask students to identify the variable on the horizontal axis and the quantity on the vertical axis. Both a table and a graph summarize these same observations. The bars are separated because the horizontal positions are categories, not adjacent numerical intervals. Counts are used here, but a clearly labeled percentage axis would also be appropriate.
+::: {.notes} 
+- Ask students to identify the variable on the horizontal axis and the quantity on the vertical axis.
+- Both a table and a graph summarize these same observations.
+- The bars are separated because the horizontal positions are categories, not adjacent numerical intervals.
+- Counts are used here, but a clearly labeled percentage axis would also be appropriate.   
+- We would not use a line graph.  
 :::
+
 
 ## Grouped Frequency Tables
 
@@ -286,8 +448,14 @@ Adapted conceptually from Yan slides 34-36. Ask students to identify the variabl
 **Where does someone reporting exactly 7 hours belong?**
 
 ::: {.notes}
-Adapted from Yan slides 27-29. Seven hours belongs to 7 to less than 8. Nonoverlapping intervals prevent double counting. This is a grouped numerical variable, not a set of unrelated nominal categories. Save drawing its histogram for October 28. Ask whether these counts still add to 12.
+- Adapted from Yan slides 27-29.
+- Seven hours belongs to 7 to less than 8.
+- Nonoverlapping intervals prevent double counting.
+- This is a grouped numerical variable, not a set of unrelated nominal categories.
+- Save drawing its histogram for October 28.
+- Ask whether these counts still add to 12.
 :::
+
 
 ## What Grouping Hides
 
@@ -300,8 +468,12 @@ From that grouped table alone:
 - We cannot recover the exact mean sleep duration.
 
 ::: {.notes}
-Ask for answers before revealing the explanation verbally. Zero, one, two, or three people could be exactly 7 based only on the grouped table. We happen to know there are two from the original data, but that information was lost when we grouped the values. This retains Yan's grouped-frequency interpretation exercise and prepares students for the grouped-table question in Quiz 4 without copying its test wording.
+- Ask for answers before revealing the explanation verbally.
+- Zero, one, two, or three people could be exactly 7 based only on the grouped table.
+- We happen to know there are two from the original data, but that information was lost when we grouped the values.
+- This retains Yan's grouped-frequency interpretation exercise and prepares students for the grouped-table question in Quiz 4 without copying its test wording.
 :::
+
 
 ## A Familiar 2×2 Table
 
@@ -314,12 +486,41 @@ Ask for answers before revealing the explanation verbally. Zero, one, two, or th
 **Which group has the larger percentage reporting high stress?**
 
 ::: {.notes}
-Categorical comparison block: 8 minutes through the second poll. Build from the 2×2 tables taught earlier in the course. First identify what each cell counts; then select each row total as its denominator. Within the shorter-sleep group, 4/6 = 66.7%; in the other group, 1/6 = 16.7%. These are descriptions of a fictional sample. The seven-hour boundary is illustrative and does not establish a health recommendation, a diagnosis, or a causal effect. No hypothesis test is needed today.
+- Categorical comparison block: 8 minutes through the second poll.
+- Build from the 2×2 tables taught earlier in the course.
+- First identify what each cell counts; then select each row total as its denominator.
+- Within the shorter-sleep group, 4/6 = 66.7%; in the other group, 1/6 = 16.7%.
+- These are descriptions of a fictional sample.
+- The seven-hour boundary is illustrative and does not establish a health recommendation, a diagnosis, or a causal effect.
+- No hypothesis test is needed today.
 :::
 
-## Poll: Which Denominator? {.quiz}
 
-{{< include quiz-slides/october-26-denominator.qmd >}}
+## Question: Which Denominator? {.quiz}
+
+::: {.quiz-prompt}
+Of 12 fictional students, 6 report less than 7 hours of sleep. Of those 6, 4 report high stress. What percentage of the shorter-sleep group reports high stress?
+:::
+
+::: {.quiz-options}
+**A.** 4 / 12 = 33.3%
+
+**B.** 6 / 12 = 50.0%
+
+**C.** 4 / 6 = 66.7%
+
+**D.** 6 / 4 = 150.0%
+:::
+
+::: {.notes}
+- Answer: C. The question restricts the denominator to the 6 students in the shorter-sleep group.
+- Four of those 6 report high stress.
+- The fraction 4/12 answers a different question: what proportion of the whole sample is in both categories?
+- Allow 4 minutes, including discussion.
+- Have students write A, B, C, or D on paper, compare with a partner, then vote by raising fingers.
+- Discuss the reason before revealing the answer.
+:::
+
 
 ## Group Exercise: Describe This Sample
 
@@ -329,11 +530,19 @@ In groups of 3–4, use the data on the next slide.
 2. Calculate the percentage sleeping **less than 7 hours within each stress group**: high stress yes; high stress no.
 3. Write one sentence describing the comparison and one limitation.
 
-**Work for 7 minutes. Be ready to explain your denominators.**
+**Work for 5 minutes. Be ready to explain your denominators.**
+
+{{< countdown minutes=5 warn_when=30 start_immediately=false >}}
 
 ::: {.notes}
-Group block: 15 minutes total: 1 minute instructions, 7 minutes work, 5 minutes debrief, and 2 minutes for the center/spread transition. Roles can be reader, calculator, and spokesperson; have a fourth person check the denominators. Students need only paper and optionally a calculator. No online system is required. Keep the data slide displayed while groups work. Assess the explanation, not speed of arithmetic.
+- Group block: 15 minutes total: 1 minute instructions, 7 minutes work, 5 minutes debrief, and 2 minutes for the center/spread transition.
+- Roles can be reader, calculator, and spokesperson; have a fourth person check the denominators.
+- Students need only paper and optionally a calculator.
+- No online system is required.
+- Keep the data slide displayed while groups work.
+- Assess the explanation, not speed of arithmetic.
 :::
+
 
 ## Group Exercise Data {.compact}
 
@@ -363,8 +572,14 @@ Group block: 15 minutes total: 1 minute instructions, 7 minutes work, 5 minutes 
 **Report:** overall stress counts and percentages; shorter-sleep percentages within each stress group; one comparison and one limitation.
 
 ::: {.notes}
-Repeat the dataset intentionally so groups do not need to navigate backward or copy values from memory. These are fictional students, with complete data. Use a separate seven-minute timer. Low-tech fallback: leave this slide projected or use the printed deck and have groups work on paper. This reverses the conditional question used in the poll. Check whether groups use 5 and 7 as denominators rather than reuse the two sleep-group totals of 6.
+- Repeat the dataset intentionally so groups do not need to navigate backward or copy values from memory.
+- These are fictional students, with complete data.
+- Use a separate seven-minute timer.
+- Low-tech fallback: leave this slide projected or use the printed deck and have groups work on paper.
+- This reverses the conditional question used in the poll.
+- Check whether groups use 5 and 7 as denominators rather than reuse the two sleep-group totals of 6.
 :::
+
 
 ## Group Exercise Debrief
 
@@ -378,36 +593,83 @@ Overall: **`r sum(sleep_data$high_stress)` of `r nrow(sleep_data)` (`r sprintf("
 In this fictional sample, shorter sleep is more common among students reporting high stress.
 
 ::: {.notes}
-Full answer: yes = 5 (41.7%), no = 7 (58.3%). Valid limitations include the small fictional sample, no real sampling design, self-reported measures in the scenario, no information about time order, and other explanations for an association. We cannot generalize to TCU students or conclude that shorter sleep caused stress. The two stress-group denominators are 5 and 7: 4/5 = 80.0% and 2/7 = 28.6%. Ask why these differ from the poll's 4/6. The grouping variable has changed, so these are column percentages of the earlier 2×2 table. Revisit which question each denominator answers if needed.
+- Full answer: yes = 5 (41.7%), no = 7 (58.3%).
+- Valid limitations include the small fictional sample, no real sampling design, self-reported measures in the scenario, no information about time order, and other explanations for an association.
+- We cannot generalize to TCU students or conclude that shorter sleep caused stress.
+- The two stress-group denominators are 5 and 7: 4/5 = 80.0% and 2/7 = 28.6%.
+- Ask why these differ from the poll's 4/6.
+- The grouping variable has changed, so these are column percentages of the earlier 2×2 table.
+- Revisit which question each denominator answers if needed.
 :::
+
 
 ## How Would We Summarize Sleep Hours?
 
 We have described categories using **counts and percentages**.
 
-For the numerical sleep measurements, ask:
+**What should we ask about the continuous sleep measurements to summarize them?**
 
+::: {.fragment}
 - What is a typical value? **Center**
 - How different are the values? **Spread**
 - What does the distribution look like? **Shape**
-
-::: {.notes}
-Use the final 2 minutes of the group block to connect its categorical summaries to continuous summaries. This is only an introduction to center and spread; the next meeting develops these concepts and their spreadsheet procedures. Adapted from Yan slides 25, 37, and 40.
 :::
 
-## Mean and Median: A First Look
+::: {.notes}
+- Ask the class for the questions we should ask about continuous data before revealing the bullets. Accept everyday language, then connect their responses to center, spread, and shape.
+- Use the final 2 minutes of the group block to connect its categorical summaries to continuous summaries.
+- This is only an introduction to center and spread; the next meeting develops these concepts and their spreadsheet procedures.
+- Adapted from Yan slides 25, 37, and 40.
+:::
+
+
+## Review: Mean, Median, and Mode
 
 Sorted sleep hours:
 
-**5, 5.5, 6, 6, 6.5, 6.5, 7, 7, 7.5, 8, 8, 9**
+5, 5.5, 6, 6, 6.5, 6.5, 7, 7, 7.5, 8, 8, 9
 
+Calculate the mean, median, and mode.
+
+::: {.fragment}
 **Mean:** total hours ÷ number of students = **`r sprintf("%.2f", mean(sleep_data$sleep_hours))` hours**
 
 **Median:** average of the two middle values = **`r sprintf("%.2f", median(sleep_data$sleep_hours))` hours**
 
-::: {.notes}
-Center/spread block: 8 minutes through “The Same Mean Can Hide Different Spread.” Have students locate the middle positions before discussing the answer: the 6th and 7th values are 6.5 and 7, giving 6.75. The total is 82 hours, so 82/12 = 6.8333. Do not require a long hand-calculation exercise. The mode is the most frequent value or category; this dataset has several tied modal values (6, 6.5, 7, and 8). Its tied modes are a useful reason not to force a single mode or infer skew from a mean/median/mode ordering.
+**Modes:** **6, 6.5, 7, and 8 hours** — each appears twice.
 :::
+
+::: {.notes}
+- Center/spread block: 8 minutes through “The Same Mean Can Hide Different Spread.”
+- Give students about 2 minutes to calculate all three summaries; calculators are welcome. Ask for their answers and reasoning before revealing the solutions.
+- Have students locate the middle positions before discussing the answer: the 6th and 7th values are 6.5 and 7, giving 6.75.
+- The total is 82 hours, so 82/12 = 6.8333.
+- Do not require a long hand-calculation exercise.
+- The mode is the most frequent value or category; this dataset has several tied modal values (6, 6.5, 7, and 8).
+- Its tied modes are a useful reason not to force a single mode or infer skew from a mean/median/mode ordering.
+:::
+
+
+## The Same Mean Can Hide Different Spread
+
+| Fictional group | Sleep hours | Mean | Range |
+|:---|:---|---:|---:|
+| A | 6, 7, 8 | 7 |  |
+| B | 4, 7, 10 | 7 |  |
+
+**Calculate the range for each group. Which group has more spread?**
+
+::: {.notes}
+- Ask students to calculate both ranges and explain which group varies more before revealing the table.
+- Group A: 8 − 6 = 2 hours. Group B: 10 − 4 = 6 hours.
+- Both means are 7, but group B varies more.
+- Range is maximum minus minimum.
+- Introduce SD as a measure of spread around the mean and IQR as the spread of the middle half of values; defer calculation and detailed interpretation to Wednesday.
+- Ask students to explain the difference in words.
+- This is a small conceptual check with a verbal-response fallback.
+- Do not infer distribution shape from only three observations.
+:::
+
 
 ## The Same Mean Can Hide Different Spread
 
@@ -419,8 +681,16 @@ Center/spread block: 8 minutes through “The Same Mean Can Hide Different Sprea
 **Would “both groups average 7 hours” tell the whole story?**
 
 ::: {.notes}
-Both means are 7, but group B varies more. Range is maximum minus minimum. Introduce SD as a measure of spread around the mean and IQR as the spread of the middle half of values; defer calculation and detailed interpretation to Wednesday. Ask students to explain the difference in words. This is a small conceptual check with a verbal-response fallback. Do not infer distribution shape from only three observations.
+- Ask students to calculate both ranges and explain which group varies more before revealing the table.
+- Group A: 8 − 6 = 2 hours. Group B: 10 − 4 = 6 hours.
+- Both means are 7, but group B varies more.
+- Range is maximum minus minimum.
+- Introduce SD as a measure of spread around the mean and IQR as the spread of the middle half of values; defer calculation and detailed interpretation to Wednesday.
+- Ask students to explain the difference in words.
+- This is a small conceptual check with a verbal-response fallback.
+- Do not infer distribution shape from only three observations.
 :::
+
 
 ## Connection to Prep 3
 
@@ -430,23 +700,31 @@ For your assigned dataset, you will:
 - Summarize your continuous outcome with **n, mean, SD, minimum, and maximum**.
 - Describe a histogram and, after the correlation lesson, a scatterplot.
 
-**Wednesday:** continuous summaries, graphs, and Excel practice.
+**Next time:** continuous summaries, graphs, and Excel practice.
 
 ::: {.notes}
-Closing block: 5 minutes across this and the exit check. Matches the current Group Presentation - Prep 3 assignment: StressScore or AnxietyScore is the continuous outcome; the assignment also requires a scatterplot and individual contribution statements. Today's fictional dataset is for practice and does not replace a group's assigned dataset. Do not add a graded categorical deliverable or a new deadline. The approved November 2 lesson introduces scatterplots and correlation; Prep 3 asks for descriptive scatterplot interpretation, not a correlation coefficient.
+- Closing block: 5 minutes across this and the exit check.
+- Matches the current Group Presentation - Prep 3 assignment: StressScore or AnxietyScore is the continuous outcome; the assignment also requires a scatterplot and individual contribution statements.
+- Today's fictional dataset is for practice and does not replace a group's assigned dataset.
+- Do not add a graded categorical deliverable or a new deadline.
+- The approved November 2 lesson introduces scatterplots and correlation; Prep 3 asks for descriptive scatterplot interpretation, not a correlation coefficient.
 :::
 
-## Exit Check
 
-On paper, write:
+## Exit Check
 
 1. One difference between a **sample statistic** and a **population parameter**.
 2. A suitable summary for a **yes/no variable**.
 3. What you must identify before calculating a **percentage**.
 
 ::: {.notes}
-Allow 2 minutes, then invite brief responses. Answers: sample versus population numerical summary; counts/percentages or a labeled bar graph; the group defining the denominator. Collect or glance at responses to decide whether Wednesday needs a short recap. This is a classroom check, not a new graded assignment. Low-tech fallback is the default: paper and discussion.
+- Allow 2 minutes, then invite brief responses.
+- Answers: sample versus population numerical summary; counts/percentages or a labeled bar graph; the group defining the denominator.
+- Collect or glance at responses to decide whether Wednesday needs a short recap.
+- This is a classroom check, not a new graded assignment.
+- Low-tech fallback is the default: paper and discussion.
 :::
+
 
 ## Sources {.compact}
 
@@ -457,5 +735,8 @@ Allow 2 minutes, then invite brief responses. Answers: sample versus population 
 All student examples in this lesson are **fictional teaching examples**.
 
 ::: {.notes}
-Source PowerPoint: APHS 20203 W9-Stats overview and Descriptive Statistics.pptx. The PDF version omits two later practice slides, so source slide references in these notes follow the 50-slide PowerPoint. Concepts and question styles are adapted rather than reproducing its full wording. No UTHealth random-error slides are imported; those remain reserved for the November estimation lesson.
+- Source PowerPoint: APHS 20203 W9-Stats overview and Descriptive Statistics.pptx.
+- The PDF version omits two later practice slides, so source slide references in these notes follow the 50-slide PowerPoint.
+- Concepts and question styles are adapted rather than reproducing its full wording.
+- No UTHealth random-error slides are imported; those remain reserved for the November estimation lesson.
 :::

@@ -54,3 +54,8 @@ Interactive slide decks for APHS 20203.
 
 - [View interactive slides](Module 06-07 - Analytic Epidemiology/Ecologic Studies and Confounding/Ecologic Studies and Confounding.qmd)
 - [Download PDF](Module 06-07 - Analytic Epidemiology/Ecologic Studies and Confounding/Ecologic Studies and Confounding.pdf)
+
+## Module 8: Statistics Overview and Descriptive Statistics
+
+- [View interactive slides](Module 08 - Statistics Overview and Descriptive Statistics/Statistical Thinking and Describing Data/Statistical Thinking and Describing Data.qmd)
+- [Download PDF](Module 08 - Statistics Overview and Descriptive Statistics/Statistical Thinking and Describing Data/Statistical Thinking and Describing Data.pdf)
