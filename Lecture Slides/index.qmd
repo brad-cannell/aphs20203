@@ -57,5 +57,12 @@ Interactive slide decks for APHS 20203.
 
 ## Module 8: Statistics Overview and Descriptive Statistics
 
+### Statistical Thinking and Describing Data
+
 - [View interactive slides](Module 08 - Statistics Overview and Descriptive Statistics/Statistical Thinking and Describing Data/Statistical Thinking and Describing Data.qmd)
 - [Download PDF](Module 08 - Statistics Overview and Descriptive Statistics/Statistical Thinking and Describing Data/Statistical Thinking and Describing Data.pdf)
+
+### Continuous Data Summaries and Graphs
+
+- [View interactive slides](Module 08 - Statistics Overview and Descriptive Statistics/Continuous Data Summaries and Graphs/Continuous Data Summaries and Graphs.qmd)
+- [Download PDF](Module 08 - Statistics Overview and Descriptive Statistics/Continuous Data Summaries and Graphs/Continuous Data Summaries and Graphs.pdf)

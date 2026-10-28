@@ -19,6 +19,7 @@ project:
     - "Module 06-07 - Analytic Epidemiology/Case-Control Studies/Case-Control Studies.qmd"
     - "Module 06-07 - Analytic Epidemiology/Ecologic Studies and Confounding/Ecologic Studies and Confounding.qmd"
     - "Module 08 - Statistics Overview and Descriptive Statistics/Statistical Thinking and Describing Data/Statistical Thinking and Describing Data.qmd"
+    - "Module 08 - Statistics Overview and Descriptive Statistics/Continuous Data Summaries and Graphs/Continuous Data Summaries and Graphs.qmd"
   resources:
     - "assets/tcu-logo.svg"
     - "assets/tcu-logo-purple.svg"

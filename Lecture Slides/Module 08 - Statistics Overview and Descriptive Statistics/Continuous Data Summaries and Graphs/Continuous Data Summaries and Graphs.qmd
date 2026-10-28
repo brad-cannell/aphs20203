@@ -1,0 +1,1253 @@
+---
+title: "Continuous Data Summaries and Graphs"
+subtitle: "APHS 20203"
+format:
+  revealjs:
+    theme: [default, ../../_theme/tcu.scss, custom.scss]
+    html-math-method: mathml
+    slide-level: 2
+    slide-number: c/t
+    chalkboard: true
+    preview-links: auto
+    incremental: false
+    embed-resources: false
+    width: 1244
+    height: 700
+    logo: ../../assets/tcu-logo-purple.svg
+execute:
+  echo: false
+  warning: false
+  message: false
+  freeze: false
+---
+
+
+## Learning Objectives {data-visibility="hidden"}
+
+```{r}
+#| label: setup
+#| include: false
+
+library(tidyverse)
+
+# Read the same small fictional dataset students open in Excel so all displayed
+# results and the practice answer key remain consistent with their input file.
+practice <- readxl::read_excel("assets/sleep_and_stress.xlsx")
+sleep <- practice$sleep_hours
+stress <- practice$stress_score
+
+# Alter one observation only to isolate its effect on mean versus median.
+# This hypothetical value is not an observation from the original exercise.
+changed_sleep <- replace(sleep, which.max(sleep), 15)
+
+# Match QUARTILE.INC's interpolation when reporting quartiles. ggplot2 uses
+# these quartiles for the boxplots below; different software conventions can differ.
+sleep_q <- quantile(sleep, c(0.25, 0.5, 0.75), type = 7)
+stress_q <- quantile(stress, c(0.25, 0.5, 0.75), type = 7)
+
+# Adapt Brad's EWB height examples to three equally sized groups. Holding the
+# mean and (for B/C) range fixed reveals what those summaries fail to describe.
+heights <- tibble(
+  group = factor(rep(c("A", "B", "C"), each = 6), levels = c("A", "B", "C")),
+  height = c(rep(68, 6), seq(58, 78, by = 4), rep(c(58, 78), each = 3))
+) |>
+  group_by(group, height) |>
+  mutate(stack = (row_number() - (n() + 1) / 2) * 0.24) |>
+  ungroup() |>
+  mutate(plot_row = 4 - as.integer(group) + stack)
+height_summary <- heights |>
+  group_by(group) |>
+  summarise(mean = mean(height), range = max(height) - min(height), sd = sd(height))
+
+# Follow each of group C's observations from its signed deviation to its squared
+# deviation. Sum of squares and sample variance remain distinct quantities.
+height_steps <- heights |>
+  filter(group == "C") |>
+  mutate(row = rep(3:1, 2), deviation = height - mean(height),
+         squared_deviation = deviation^2, midpoint = (height + mean(height)) / 2)
+height_n <- nrow(height_steps)
+height_ss <- sum(height_steps$squared_deviation)
+height_variance <- height_ss / (height_n - 1)
+height_sd <- sqrt(height_variance)
+
+# A workload example explains why the mean can remain useful when a legitimate
+# long observation pulls it above the median; neither summary is always best.
+visit_minutes <- c(10, 10, 40)
+
+# Construct teaching distributions with visible tails rather than asking students
+# to infer a population distribution from just twelve observations.
+shape_data <- tibble(
+  shape = rep(c("Symmetric", "Right-skewed", "Left-skewed"), each = 9),
+  value = rep(1:9, 3),
+  count = c(1, 2, 4, 6, 8, 6, 4, 2, 1,
+            8, 7, 5, 3, 2, 1, 1, 1, 1,
+            1, 1, 1, 1, 2, 3, 5, 7, 8)
+) |>
+  mutate(shape = factor(shape, levels = c("Symmetric", "Right-skewed", "Left-skewed")))
+
+# Group A is the practice outcome; group B is an additional fictional comparison
+# chosen to have a higher median and larger IQR without a flagged outlier.
+box_data <- tibble(
+  group = rep(c("A", "B"), each = 12),
+  score = c(stress, seq(12, 34, by = 2))
+)
+box_summary <- box_data |>
+  group_by(group) |>
+  summarise(median = median(score), iqr = IQR(score, type = 7))
+
+# Use the shared course purple and a readable plotting style. Every graph keeps
+# explicit axis labels so meaning does not depend on color or surrounding prose.
+theme_set(theme_minimal(base_size = 23) +
+  theme(panel.grid.minor = element_blank(), plot.margin = margin(8, 16, 8, 8)))
+```
+
+- Describe a continuous distribution using shape, center, and spread.
+- Interpret SD, IQR, boxplots, and z-scores.
+- Calculate sample summaries and create a histogram in Excel.
+- Write descriptive interpretations supported by the data.
+
+::: {.notes}
+- This lesson continues the October 26 deck and follows the approved course outline.
+- Preserve Quiz 4 coverage and Prep 3's existing requirements.
+- All data in this lesson are fictional; stress_score is an illustrative score, not a clinical instrument or diagnostic threshold.
+- Source selections: Yan Zhang's Statistics Overview and Descriptive Statistics PowerPoint, slides 30-33 and 36-49; Brad Cannell's Measures of Central Tendency and Measures of Dispersion.
+- Pacing: retrieval 0-5; histograms 5-17; center 17-25; dispersion 25-37; IQR/boxplots 37-47; z-scores 47-53; Excel 53-65; group practice 65-77; closing 77-80.
+:::
+
+
+## Descriptive Analysis
+
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '20px', 'fontFamily': 'Arial'}, 'flowchart': {'nodeSpacing': 16, 'rankSpacing': 45}}}%%
+flowchart TB
+    analysis[Descriptive Analysis] --> numeric[Numerical]
+    analysis --> categorical[Categorical]
+    numeric --> continuous[Continuous]
+    numeric --> discrete[Discrete]
+    categorical --> ordinal[Ordinal]
+    categorical --> nominal[Nominal]
+    continuous --> cn[Numerical]
+    continuous --> cg[Graphical]
+    discrete --> dn[Numerical]
+    discrete --> dg[Graphical]
+    ordinal --> on[Numerical]
+    ordinal --> og[Graphical]
+    nominal --> nn[Numerical]
+    nominal --> ng[Graphical]
+
+    classDef emphasized fill:#4D1979,color:#ffffff,stroke:#4D1979,stroke-width:2px;
+    classDef muted fill:#eee8f3,color:#75677f,stroke:#d2c5df,stroke-width:1px;
+    class analysis,numeric,categorical emphasized;
+    class continuous,discrete,ordinal,nominal,cn,cg,dn,dg,on,og,nn,ng muted;
+    linkStyle default stroke:#b9a8c9,stroke-width:2px;
+```
+
+::: {.notes}
+- In epidemiology, we often want to describe the “typical” person in a population or subpopulation.   
+- When we analyze data to do so, we call it "descriptive analysis".    
+- When conducting descriptive analysis, the method we choose will depend on the type of data we're analyzing.   
+- At the most basic level, variables can be described as numerical (quantitative) or categorical (qaulitative).   
+- We reviewed this distinction last time.  
+- Our focus today will be on numerical variables.   
+
+<!-- Delete these notes if you don't use them. -->
+- Both numerical and graphical summaries are available. Here, “numerical data” names a variable type, while “numerical summaries” names a way of describing data.
+- Today we focus on continuous data: examine shape with histograms, describe center and spread, connect these summaries to boxplots, and interpret z-scores. Then calculate summaries and create a graph in Excel before practicing interpretation.
+:::
+
+
+## Numerical Data
+
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '20px', 'fontFamily': 'Arial'}, 'flowchart': {'nodeSpacing': 16, 'rankSpacing': 45}}}%%
+flowchart TB
+    analysis[Descriptive Analysis] --> numeric[Numerical]
+    analysis --> categorical[Categorical]
+    numeric --> continuous[Continuous]
+    numeric --> discrete[Discrete]
+    categorical --> ordinal[Ordinal]
+    categorical --> nominal[Nominal]
+    continuous --> cn[Numerical]
+    continuous --> cg[Graphical]
+    discrete --> dn[Numerical]
+    discrete --> dg[Graphical]
+    ordinal --> on[Numerical]
+    ordinal --> og[Graphical]
+    nominal --> nn[Numerical]
+    nominal --> ng[Graphical]
+
+    classDef emphasized fill:#4D1979,color:#ffffff,stroke:#4D1979,stroke-width:2px;
+    classDef muted fill:#eee8f3,color:#75677f,stroke:#d2c5df,stroke-width:1px;
+    class analysis,numeric,continuous,discrete emphasized;
+    class categorical,ordinal,nominal,cn,cg,dn,dg,on,og,nn,ng muted;
+    linkStyle default stroke:#b9a8c9,stroke-width:2px;
+```
+
+::: {.notes}
+- Numerical variables can then be further divided into continuous and discrete.   
+
+**Question**: What is the difference between continuous and discrete numerical variables?    
+- The distinction being whether the variable can take on a continuum of values, or only set of certain values. 
+
+**Question**: Can you think of some examples?   
+- Continuous examples: Height, weight, and sleep duration.   
+- Discrete examples: Number of drinks, number of household members, numbrer of clinic visits.   
+
+- For all types, and subtypes, of variables there are both numerical and graphical methods we can use for descriptive analysis.   
+
+<!-- Delete these notes if you don't use them. -->
+- Our focus today is continuous data. We will describe the shape, center, and spread of a distribution.
+- Return to the sleep-hours example after this overview so students can connect the map to familiar observations.
+:::
+
+
+## Numerical Summaries
+
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '20px', 'fontFamily': 'Arial'}, 'flowchart': {'nodeSpacing': 16, 'rankSpacing': 45}}}%%
+flowchart TB
+    analysis[Descriptive Analysis] --> numeric[Numerical]
+    analysis --> categorical[Categorical]
+    numeric --> continuous[Continuous]
+    numeric --> discrete[Discrete]
+    categorical --> ordinal[Ordinal]
+    categorical --> nominal[Nominal]
+    continuous --> cn[Numerical]
+    continuous --> cg[Graphical]
+    discrete --> dn[Numerical]
+    discrete --> dg[Graphical]
+    ordinal --> on[Numerical]
+    ordinal --> og[Graphical]
+    nominal --> nn[Numerical]
+    nominal --> ng[Graphical]
+
+    classDef emphasized fill:#4D1979,color:#ffffff,stroke:#4D1979,stroke-width:2px;
+    classDef muted fill:#eee8f3,color:#75677f,stroke:#d2c5df,stroke-width:1px;
+    class analysis,numeric,continuous,discrete,cn,dn emphasized;
+    class categorical,ordinal,nominal,cg,dg,on,og,nn,ng muted;
+    linkStyle default stroke:#b9a8c9,stroke-width:2px;
+```
+
+::: {.notes}
+- Numerical summaries condense many values into a few summary values, called statistics.   
+<!-- Which version of the sentence below should we keep? -->
+- Those statistics can be grouped by type of information it gives us about the values.   
+- Those statistics can be grouped by the characteristic of the values they describe.   
+
+
+<!-- Delete these notes if you don't use them. -->
+For continuous data, we will review the mean and median, then examine the range, variance, standard deviation, quartiles, and IQR.
+- We will also use z-scores to describe how far an individual value lies from the mean in standard deviation units.
+- The word numerical at this lower level describes the summary method. It does not introduce another variable type.
+:::
+
+
+## Review: 3 Important Characteristics of Numerical Variables
+
+::: {.incremental}
+1. Center   
+2. Spread   
+3. Shape    
+:::
+
+::: {.notes}
+**Question**: Do you remember the three important characteristics of numerical variables we discussed last time?
+:::
+
+
+## Review: 3 Measures of Central Tendency
+
+::: {.incremental}
+1. Mean   
+2. Median   
+3. Mode    
+:::
+
+::: {.notes}
+- When we describe the center  of numerical variables, we do so with measures of central tendency.    
+
+**Question**: Do you remember the three measures of central tendency we discussed last time?
+:::
+
+
+## Numerical Summaries
+
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '20px', 'fontFamily': 'Arial'}, 'flowchart': {'nodeSpacing': 16, 'rankSpacing': 45}}}%%
+flowchart TB
+    analysis[Descriptive Analysis] --> numeric[Numerical]
+    analysis --> categorical[Categorical]
+    numeric --> continuous[Continuous]
+    numeric --> discrete[Discrete]
+    categorical --> ordinal[Ordinal]
+    categorical --> nominal[Nominal]
+    continuous --> cn[Numerical]
+    continuous --> cg[Graphical]
+    discrete --> dn[Numerical]
+    discrete --> dg[Graphical]
+    ordinal --> on[Numerical]
+    ordinal --> og[Graphical]
+    nominal --> nn[Numerical]
+    nominal --> ng[Graphical]
+
+    classDef emphasized fill:#4D1979,color:#ffffff,stroke:#4D1979,stroke-width:2px;
+    classDef muted fill:#eee8f3,color:#75677f,stroke:#d2c5df,stroke-width:1px;
+    class analysis,numeric,continuous,discrete,cn,dn emphasized;
+    class categorical,ordinal,nominal,cg,dg,on,og,nn,ng muted;
+    linkStyle default stroke:#b9a8c9,stroke-width:2px;
+```
+
+::: {.notes}
+- Today, we will briefly review those measures of central tendency and then discuss **measures of dispersion** -- statistics that describe the spread of numerical values.   
+:::
+
+
+## Graphical Summaries
+
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '20px', 'fontFamily': 'Arial'}, 'flowchart': {'nodeSpacing': 16, 'rankSpacing': 45}}}%%
+flowchart TB
+    analysis[Descriptive Analysis] --> numeric[Numerical]
+    analysis --> categorical[Categorical]
+    numeric --> continuous[Continuous]
+    numeric --> discrete[Discrete]
+    categorical --> ordinal[Ordinal]
+    categorical --> nominal[Nominal]
+    continuous --> cn[Numerical]
+    continuous --> cg[Graphical]
+    discrete --> dn[Numerical]
+    discrete --> dg[Graphical]
+    ordinal --> on[Numerical]
+    ordinal --> og[Graphical]
+    nominal --> nn[Numerical]
+    nominal --> ng[Graphical]
+
+    classDef emphasized fill:#4D1979,color:#ffffff,stroke:#4D1979,stroke-width:2px;
+    classDef muted fill:#eee8f3,color:#75677f,stroke:#d2c5df,stroke-width:1px;
+    class analysis,numeric,continuous,discrete,cg,dg emphasized;
+    class categorical,ordinal,nominal,cn,dn,on,og,nn,ng muted;
+    linkStyle default stroke:#b9a8c9,stroke-width:2px;
+```
+
+::: {.notes}
+- Graphical summaries are visual representations of our data.   
+- Often, they lack the detail and precision of numerical summaries, but they are generally better for quickly getting a "feel" for the center, spread, and shape of our data.   
+- Additionally, graphical summaries tend to be better for making quick, general comparisons. For example, comparing two groups.      
+
+<!-- Delete these notes if you don't use them. -->
+- We will then bring the numerical and graphical summaries together in Excel and practice writing interpretations supported by the data.
+:::
+
+
+## Review: Sleep Hours
+
+Previous practice data: **12 fictional students' sleep hours**.
+
+::: {style="text-align: center; border: 5px solid black;"}
+5,  5.5,  6,  6,  6.5,  6.5,  7,  7,  7.5,  8,  8,  9
+:::
+
+::: {.incremental}
+- Why don't we stop at viewing/presenting raw data?   
+- What type of data is this?    
+- What three characteristics of this type of data should we typically summarize?   
+- What are the two **high level methods** we can use to summarize this data?   
+:::
+
+::: {.notes}
+- Here's the sleep data we looked at last time.  
+
+**Answers**:   
+- We don't we stop at viewing/presenting raw data because it isn't easy for humans to make sense of it. It's **data**, but not **information**.   
+- This is continuous quantitative (numeric) data.   
+- Typically, we should summarize the center, spread, and shape of continuous quantitative data.   
+- The two high level methods we can use to present our summaries are tables and charts/graphs.   
+:::
+
+
+## Calculate the Mean in Excel
+
+1. Download **sleep_and_stress.xlsx**.   
+2. Open **sleep_and_stress.xlsx**. Sleep hours are in **B2:B13**.    
+3. Type **`Mean:`** in cell **E2**.   
+4. Type **`=AVERAGE(B2:B13)`** in cell **F2**.   
+
+::: {.notes}
+- We discussed the mean last time, today we'll practice calculating the mean using Excel.   
+
+**Demonstration**
+- Follow the instructions above. Ask students to follow along at the same time.   
+- Excel formulas start with `=`.   
+- The cells of a sheet are laid out in a grid.   
+- `B2:B13` selects cells B2 through B13, excluding the header.   
+- Display two decimal places if desired, but retain the full value for calculations.   
+:::
+
+
+## Calculate Measures of Central Tendency in Excel
+
+::: {.full-width-table}
+
+| Slide  | Excel formula        | Result                 |
+|--------|----------------------|------------------------|
+| Mean   | `=AVERAGE(B2:B13)`   | 6.83 hours             |
+| Median | `=MEDIAN(B2:B13)`    |              |
+| Mode   |  |  |
+
+:::
+
+::: {.notes}
+- We also discussed the median last time.   
+- Type **`Median:`** in cell **E3**.   
+- Type **`=MEDIAN(B2:B13)`** in cell **F3**.   
+- Excel calculates the median without requiring us to sort the worksheet first.   
+
+**Demonstration**
+- Quickly demonstrate why we say it's more resistent to outlying values.   
+:::
+
+
+## Calculate Measures of Central Tendency in Excel
+
+::: {.full-width-table}
+
+| Slide  | Excel formula        | Result                 |
+|--------|----------------------|------------------------|
+| Mean   | `=AVERAGE(B2:B13)`   | 6.83 hours             |
+| Median | `=MEDIAN(B2:B13)`    | 6.75 hours             |
+| Mode   | `=MODE.MULT(B2:B13)` |  |
+
+:::
+
+::: {.notes}
+- The mode deserves a brief caution: these data have four modes. `MODE.SNGL()` would return only one; `MODE.MULT()` returns multiple modes. Leave empty cells below that formula for its results.   
+
+- Type **`Mode:`** in cell **E4**.   
+- Type **`=MODE.MULT(B2:B13)`** in cell **F4**.   
+
+- Microsoft `MODE.MULT` documentation: https://support.microsoft.com/en-us/excel/functions/mode-mult-function
+:::
+
+
+## Calculate Measures of Central Tendency in Excel
+
+::: {.full-width-table}
+
+| Slide  | Excel formula        | Result                 |
+|--------|----------------------|------------------------|
+| Mean   | `=AVERAGE(B2:B13)`   | 6.83 hours             |
+| Median | `=MEDIAN(B2:B13)`    | 6.75 hours             |
+| Mode   | `=MODE.MULT(B2:B13)` | 6, 6.5, 7, and 8 hours |
+
+:::
+
+::: {.notes}
+Great! Now we know how to calculate the mean, median, and mode using Excel.
+:::
+
+
+## Characteristics of Mean, Median, and Mode
+
+| Characteristic          | Mean            | Median          | Mode           |
+|-------------------------|:---------------:|:---------------:|:--------------:|
+| Simple                  | Yes             | Yes             | Yes            |
+| Only one                | Yes             | Yes             | No             |
+| Susceptible to Extremes | Yes             | No              | No             |
+| Observed in Data        | Not necessarily | Not necessarily | Yes, if exists |
+
+::: {.notes}
+- Before moving on, let's quickly review the characteristics of the mean, median, and mode.   
+
+**Why Not Always Use the Median? Because the mean...**    
+- **Uses All Data Information:** The mean incorporates every single number in the dataset. The median only looks at the middle rank, meaning it completely ignores how large or small the outer values are.   
+- **Mathematical and Algebraic Convenience:** The mean behaves well in equations, calculus, and further statistical tests (such as variance, standard deviation, and regression analysis). The median is harder to work with mathematically because it relies on ordering rather than a linear formula.   
+- **Higher Statistical Efficiency:** For symmetric or normal distributions, the mean has lower variability from sample to sample (higher statistical efficiency). The median requires a larger sample size to achieve the same level of precision.   
+- **When Extremes Matter:** If you are measuring total resource needs (like total weight, total income for tax revenue, or total water consumption), you want those large outliers. Using a median would hide the true sum of the data. 
+:::
+
+
+# Measures of Dispersion {.section}
+
+::: {.notes}
+- In epidemiology, we often want to describe the “typical” person in a population or subpopulation.   
+- Measures of central tendency can help us do that.   
+- But it can be equally import to ask "how much like the typical person is everyone else?"   
+:::
+
+
+## How Much Like the Average Is Everyone Else?
+
+::: {style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; text-align: center; font-size: 2em;"}
+Mean Height = 68.4 Inches
+:::
+
+::: {.notes}
+- To make differences in spread easier to see, we’ll briefly use height as a simplified example. Then we’ll apply the same ideas to sleep duration.
+- Suppose the mean height in a class is **68.4 inches**.    
+:::
+
+
+## How Much Like the Average Is Everyone Else?
+
+![](assets/dispersion_01_people.png){.r-stretch fig-align="center" fig-alt="Three fictional students who are each 68.4 inches tall."}
+
+::: {.notes}
+- Is everyone in the class 68.4 inches tall?   
+:::
+
+
+## How Much Like the Average Is Everyone Else?
+
+![](assets/dispersion_02_people.png){.r-stretch fig-align="center" fig-alt="Three fictional students who are 71, 68.4, and 64 inches tall."}
+
+::: {.notes}
+- Or do individual heights differ, with the mean near the middle?   
+- The measures used to answer this question are called measures of dispersion, which we can say is the amount of difference between people in the class, or more generally, the amount of variability in the data.   
+:::
+
+
+## Measures of Dispersion
+
+![](assets/dispersion_03_overview.png){.r-stretch fig-align="center" fig-alt="Measures of dispersion include the range, variance, and standard deviation."}
+
+::: {.notes}
+- Three common measures of dispersion used are the:   
+:::
+
+
+## Range
+
+![](assets/dispersion_01_people.png){.r-stretch fig-align="center" fig-alt="Three fictional students who are each 68.4 inches tall."}
+
+::: {.notes}
+- The range is simply the difference between the maximum and minimum value in the data.   
+
+**Question**: What is the range in this case?    
+- In this case, it's zero.   
+:::
+
+
+## Range
+
+![](assets/dispersion_02_people.png){.r-stretch fig-align="center" fig-alt="Three fictional students who are 71, 68.4, and 64 inches tall."}
+
+::: {.notes}
+**Question**: What is the range in this case?    
+- It's 71 - 64 = 7 inches.   
+:::
+
+
+## Calculate Measures of Dispersion in Excel
+
+::: {.full-width-table}
+
+| Slide                | Excel formula              | Result     |
+|----------------------|----------------------------|------------|
+| Min                  | `=MIN(B2:B13)`             | 5 hours    |
+| Max                  | `=MAX(B2:B13)`             | 9 hours    |
+| Range                | `=MAX(B2:B13)-MIN(B2:B13)` | 4 hours    |
+| Variance             | `=VAR.S(B2:B13)`           | 1.33       |
+| Standard Deviation   | `=STDEV.S(B2:B13)`         | 1.15 hours |
+
+:::
+
+::: {.notes}
+**Demonstation:**   
+- Type **`Min:`** in cell **E8**.   
+- Type **`=MIN(B2:B13)`** in cell **F8**.   
+- Type **`Max:`** in cell **E9**.   
+- Type **`=MAX(B2:B13)`** in cell **F9**.   
+- Type **`Range:`** in cell **E10**.   
+- Type **`=F9-F8`** in cell **F10**.   
+- Type **`=MAX(B2:B13)-MIN(B2:B13)`** in cell **G10**.   
+:::
+
+
+
+
+<!-- Left off here... -->
+<!-- Continue recreating R4Epi: https://www.r4epi.com/chapters/dispersion/dispersion -->
+
+
+
+
+
+## How Much Like the Average Is Everyone Else?
+
+**B: Evenly spaced**
+
+![](assets/dispersion_05_even.png){.r-stretch fig-align="center" fig-alt="Six fictional students evenly spaced from 58 to 78 inches, with mean 68 inches."}
+
+::: {.notes}
+- Orient students to the graph.
+- Each picture shows six people. Horizontal position represents height; vertical stacking separates people with the same height.
+:::
+
+
+## How Much Like the Average Is Everyone Else?
+
+**C: At the extremes**
+
+![](assets/dispersion_04_edges.png){.r-stretch fig-align="center" fig-alt="Six fictional students: three at 58 inches and three at 78 inches, with mean 68 inches."}
+
+**Both means are 68 inches. Do B and C also have the same range? The same spread around the mean?**
+
+::: {.fragment}
+Same **20-inch range**; C's observations lie **farther from the mean**.
+:::
+
+::: {.notes}
+- Retrieve range = maximum minus minimum.
+  - B and C both have range 20.
+- Even the mean and range together can hide differences in distances from the mean. <!-- What does this mean? -->
+- In the final check, introduce group A with all six heights equal to 68: no variation should correspond to SD = 0.
+:::
+
+
+## Distances from the Mean
+
+<!-- We need to create a better transition into this slide.  -->
+<!-- Make this image full screen. -->
+<!-- If we need the text, add it to a follow-up slide. -->
+
+::: {.columns}
+::: {.column width="70%"}
+![](assets/dispersion_07_variance.png){width=100% fig-align="center" fig-alt="Three heights at 58 inches and three at 78, with a red mean line at 68. The three left deviations are minus 10 inches; the three right deviations are plus 10 inches."}
+:::
+::: {.column width="30%"}
+
+**The signed differences sum to zero. Does that mean there is no variation?**
+
+::: {.fragment}
+**No.** Positive and negative differences cancel.
+:::
+
+:::
+:::
+
+::: {.notes}
+- Read each deviation as observation minus mean: 58 - 68 = -10; 78 - 68 = +10.
+- Three deviations are -10 and three are +10. Their sum is zero despite visible variation.
+- Ask students to suggest a way to avoid cancellation, then move to squared differences.
+:::
+
+
+## From Squared Distances to Variance
+
+<!-- Make the image full screen. -->
+<!-- If we need the text, add it to a follow-up slide. -->
+
+::: {.columns}
+::: {.column width="70%"}
+![](assets/dispersion_09_variance.png){width=100% fig-align="center" fig-alt="Six squared deviations of 100 sum to 600 square inches. The banner correctly labels this as the sum of squared deviations."}
+:::
+::: {.column width="30%"}
+
+**Is 600 the sample variance?**
+
+::: {.fragment}
+No. $s^2 = \dfrac{`r height_ss`}{`r height_n`-1} = `r height_variance`$ **square inches**.
+:::
+
+:::
+:::
+
+::: {.notes}
+- Minutes 30-32: two minutes to square, sum, and divide.
+- Both (-10)^2 and (+10)^2 equal 100 square inches, so six squared deviations sum to 600.
+- The corrected image labels 600 as the sum of squared deviations. Its units are square inches.
+- For sample variance, divide by n - 1 = 5; the result is 120 square inches.
+- The n-minus-one adjustment is used for sample variance; defer its formal derivation.
+- Avoid a long hand calculation; the purpose is understanding what the computer calculates.
+:::
+
+
+## Standard Deviation Returns to the Original Units
+
+<!-- Make the image full screen. -->
+<!-- If we need the text, add it to a follow-up slide. -->
+
+::: {.columns}
+::: {.column width="70%"}
+![](assets/dispersion_11_sd.png){width=100% fig-align="center" fig-alt="Standard deviation s equals the square root of sample variance s squared, which equals the square root of 120, approximately 10.95 inches."}
+:::
+::: {.column width="30%"}
+Our sample variance is **`r height_variance` square inches**.
+
+**Why is SD easier to interpret than variance here?**
+
+::: {.fragment}
+SD uses **inches**, the same units as the heights.
+
+It describes spread around the mean. Excel calculates sample SD with **`STDEV.S`**.
+:::
+
+:::
+:::
+
+::: {.notes}
+- Minutes 32-34: two minutes to connect the square root to units and interpretation.
+- The corrected image takes the square root of 120. The answer is approximately 10.95 inches.
+- SD describes variation among observations; it is not uncertainty in the estimated mean.
+- Typical distance is an intuition, not the arithmetic mean of absolute distances.
+- If asked why SD is not exactly 10: the sample formula divides the sum of squares by 5 rather than 6. The corresponding population SD for these six values would be 10.
+- This two-cluster example is not normal. Do not attach 68/95/99.7 percentages to it; those require an approximately normal distribution.
+:::
+
+
+## Check: Which Group Has the Largest SD?
+
+| Group | Six fictional heights (inches) | Mean | Range |
+|:---|:---|---:|---:|
+| A | 68, 68, 68, 68, 68, 68 | 68 | 0 |
+| B | 58, 62, 66, 70, 74, 78 | 68 | 20 |
+| C | 58, 58, 58, 78, 78, 78 | 68 | 20 |
+
+**Rank the SDs from smallest to largest. Explain why B and C differ.**
+
+::: {.fragment}
+**A < B < C:** `r sprintf("%.2f", height_summary$sd[1])`, `r sprintf("%.2f", height_summary$sd[2])`, and `r sprintf("%.2f", height_summary$sd[3])` inches.
+
+A has no variation. C places every observation at an extreme.
+:::
+
+::: {.notes}
+- Minutes 34-37: three minutes for individual prediction, partner explanation, and reveal.
+- Adapted from Brad Cannell's Comparing Distributions section and its draft check-on-learning question; display all candidate groups and explain the mechanism.
+- All sample sizes and means are equal. B and C also share a range, but C's squared deviations are larger in total.
+- Ask why SD = 0 is sensible for A: everyone is at the mean.
+- Use a show of hands or paper. No separate quiz infrastructure is needed.
+- This completes the 12-minute dispersion block; start quartiles at minute 37 to protect Excel and group-practice time.
+:::
+
+
+
+
+
+
+
+
+
+
+# Graphical Summaries {.section}
+<!-- Decide what language to use and then be consistent. We variously say graphical summaries and graphical descriptions. -->
+
+## Choose a Graph
+
+Which graph would you use for each variable?
+
+| Variable | Graph Type |
+|:---|:---|
+| High stress reported: yes/no | Bar graph or histogram? |
+| Sleep duration in hours | Bar graph or histogram? |
+
+::: {.fragment}
+- **Bar graph:** compare categories.    
+- **Histogram:** count observations in numerical intervals.
+:::
+
+::: {.notes}
+- Take a moment to think about your answers to each.   
+- Answers: bar graph for yes/no; histogram for continuous sleep duration.
+:::
+
+
+## From a Frequency Table to a Histogram
+
+<!-- I don't think we should teach them to plot categorical data with a histogram. While it may be possible, it is not common practice in my experience. -->
+
+```{r}
+#| label: sleep-histogram
+#| fig-width: 10
+#| fig-height: 3.6
+#| out-width: "85%"
+#| fig-alt: "Histogram of twelve fictional sleep durations. Counts in intervals 5 to under 6, 6 to under 7, 7 to under 8, 8 to under 9, and 9 to under 10 hours are 2, 4, 3, 2, and 1."
+
+# Match yesterday's left-closed grouped table so students can trace each count
+# from the table to a bar; the empty space above a bin is not an observation.
+ggplot(practice, aes(sleep_hours)) +
+  geom_histogram(breaks = 5:10, closed = "left", fill = "#4D1979", color = "white") +
+  scale_x_continuous(breaks = 5:10) +
+  scale_y_continuous(breaks = 0:4) +
+  labs(x = "Sleep duration (hours)", y = "Number of students")
+```
+
+**Where does a student reporting exactly 7 hours belong?**
+
+::: {.fragment}
+In **7 to less than 8 hours**, using these interval boundaries.
+:::
+
+::: {.notes}
+- Identify the measured variable on the x-axis and the count on the y-axis.
+- Adjacent intervals share boundaries; an empty bin can still leave a gap.
+- These bins include the lower endpoint and exclude the upper endpoint. Read interval labels because software may use different conventions.
+:::
+
+
+## Reading Distribution Shape
+
+<!-- This is good information, but it seems to come out of nowhere. We haven't event introduced histograms yet. -->
+
+```{r}
+#| label: distribution-shapes
+#| fig-width: 12
+#| fig-height: 3.4
+#| out-width: "95%"
+#| fig-alt: "Three constructed distributions. The symmetric distribution peaks in the middle; the right-skewed distribution clusters at low values with a long right tail; the left-skewed distribution clusters at high values with a long left tail."
+
+# Predefined interval frequencies make tail direction visible and reproducible.
+ggplot(shape_data, aes(value, count)) +
+  geom_col(width = 1, fill = "#4D1979", color = "white") +
+  facet_wrap(~shape, nrow = 1) +
+  scale_x_continuous(breaks = c(1, 5, 9)) +
+  labs(x = "Value", y = "Count")
+```
+
+**Name skew by the direction of the longer tail.**
+
+::: {.notes}
+- Ask students to point to the tail of each skewed distribution.
+- Symmetric does not necessarily mean normal; a distribution can also have multiple peaks.
+- Do not promise a stable distribution shape from a very small sample.
+:::
+
+
+## Check: Which Direction Is the Skew?
+
+<!-- Let's show what this would look like as a histogram. -->
+
+Most clinic visits last **15-25 minutes**, but a few last **60-90 minutes**.
+
+**A.** Left-skewed
+
+**B.** Right-skewed
+
+**C.** The long visits make the distribution symmetric
+
+::: {.fragment}
+**B. Right-skewed.** The long visits extend the tail toward larger values.
+:::
+
+::: {.notes}
+- Give students 30 seconds to choose, then have them explain to a neighbor before voting.
+- Use raised fingers or written letters; no polling service is required.
+- The scenario is fictional and concerns visit duration, not a clinical recommendation.
+- Distinguish where most observations lie from the direction the tail extends.
+:::
+
+
+## Bin Width Changes the Picture
+
+```{r}
+#| label: bin-widths
+#| fig-width: 11
+#| fig-height: 3.4
+#| out-width: "90%"
+#| fig-alt: "Two histograms of the same twelve sleep durations use half-hour and two-hour bins. Narrow bins show detail; wide bins combine observations and hide detail."
+
+# Calculate both versions explicitly so only the grouping changes, not the data.
+half_bins <- hist(sleep, breaks = seq(5, 10, 0.5), right = FALSE, plot = FALSE)
+wide_bins <- hist(sleep, breaks = c(4, 6, 8, 10), right = FALSE, plot = FALSE)
+bins <- bind_rows(
+  tibble(left = head(half_bins$breaks, -1), right = tail(half_bins$breaks, -1),
+         count = half_bins$counts, width = "0.5-hour bins"),
+  tibble(left = head(wide_bins$breaks, -1), right = tail(wide_bins$breaks, -1),
+         count = wide_bins$counts, width = "2-hour bins")
+)
+ggplot(bins) +
+  geom_rect(aes(xmin = left, xmax = right, ymin = 0, ymax = count),
+            fill = "#4D1979", color = "white") +
+  facet_wrap(~width) +
+  labs(x = "Sleep duration (hours)", y = "Number of students")
+```
+
+**Did the students' sleep change, or only how we grouped it?**
+
+::: {.fragment}
+Only the grouping changed. Inspect more than one sensible bin width.
+:::
+
+::: {.notes}
+- Both panels contain exactly the same twelve values and use common axis scales.
+- Wide bins hide detail; very narrow bins can make a small sample appear irregular.
+- Look for clusters, gaps, and possible outliers without declaring every irregularity meaningful.
+:::
+
+
+
+
+
+
+
+
+
+
+## Quartiles and the Middle Half
+
+<!-- Let's create a slide that shows this with data. -->
+
+Quartiles mark positions in the ordered observations.
+
+| Position | Meaning | Sleep hours |
+|:---|:---|---:|
+| Q1 | 25th percentile | `r sprintf("%.2f", sleep_q[1])` |
+| Q2 | Median; 50th percentile | `r sprintf("%.2f", sleep_q[2])` |
+| Q3 | 75th percentile | `r sprintf("%.3f", sleep_q[3])` |
+
+**IQR = Q3 − Q1 = `r sprintf("%.3f", sleep_q[3] - sleep_q[1])` hours.**
+
+::: {.notes}
+- Minutes 37-47: quartiles, boxplot anatomy, and comparison.
+- IQR describes the width of the middle half of a distribution.
+- With small samples, interpolation conventions can produce slightly different quartiles; these use Excel QUARTILE.INC's convention.
+- We interpret quartiles today rather than requiring students to memorize a hand-calculation convention.
+- Adapted from Yan slide 42.
+:::
+
+
+## Reading a Boxplot
+
+```{r}
+#| label: sleep-boxplot
+#| fig-width: 10
+#| fig-height: 2.8
+#| out-width: "85%"
+#| fig-alt: "Horizontal boxplot of the twelve sleep values: Q1 is 6, median is 6.75, Q3 is 7.625 hours, and whiskers reach 5 and 9 hours. No observations fall beyond the 1.5-IQR fences."
+
+# Use geom_boxplot's interpolated quartiles, consistent with the table above.
+ggplot(practice, aes(x = sleep_hours, y = "Sleep")) +
+  geom_boxplot(width = 0.4, fill = "#E8DDF1", color = "#4D1979", linewidth = 1) +
+  scale_x_continuous(breaks = 5:9) +
+  labs(x = "Sleep duration (hours)", y = NULL)
+```
+
+- Line inside the box: **median**.
+- Box edges: **Q1 and Q3**. Box width: **IQR**.
+- Whiskers and separate points show values beyond the middle half.
+
+::: {.notes}
+- Ask students to locate the three quartiles from the previous slide.
+- Horizontal boxes use width; vertical boxes use height to show IQR.
+- A boxplot summarizes the distribution but can hide multiple peaks; inspect the histogram too.
+- Adapted from Yan slide 43.
+:::
+
+
+## Whiskers and Potential Outliers
+
+For the boxplots in this lesson:
+
+- Fences are **Q1 − 1.5 × IQR** and **Q3 + 1.5 × IQR**.
+- Whiskers reach the most extreme observed values **within the fences**.
+- Values beyond the fences appear as separate points.
+
+**Should we automatically delete a point beyond a whisker?**
+
+::: {.fragment}
+**No.** Check its accuracy and context before deciding what to do.
+:::
+
+::: {.notes}
+- Whiskers do not necessarily reach the minimum and maximum of the whole dataset.
+- The fences are calculated cutoffs; the whisker endpoints are actual observations.
+- A flagged point may be a valid observation. It is not automatically an error or proof of a different population.
+- Other boxplot conventions exist; this is the convention used in the displayed plots.
+:::
+
+
+## Check: Compare These Boxplots
+
+```{r}
+#| label: compare-boxplots
+#| fig-width: 10
+#| fig-height: 3.1
+#| out-width: "85%"
+#| fig-alt: "Horizontal boxplots of fictional stress scores. Group A has median 17.5, IQR 5.5, and a flagged point at 35. Group B has median 23 and IQR 11 with no flagged points."
+
+# Both groups share a score axis so box widths can be compared directly.
+ggplot(box_data, aes(score, group)) +
+  geom_boxplot(width = 0.45, fill = "#E8DDF1", color = "#4D1979",
+               linewidth = 1, outlier.size = 4) +
+  labs(x = "Fictional stress score (points)", y = "Group")
+```
+
+**Which group has the higher median? Larger IQR? A flagged outlier?**
+
+::: {.fragment}
+**B:** higher median and larger IQR. **A:** a flagged point at 35.
+:::
+
+::: {.notes}
+- Give students one minute to answer all three questions before revealing the response.
+- Group A is the workbook's stress_score variable; group B is an additional fictional comparison.
+- Group A median = 17.5 and IQR = 5.5; group B median = 23 and IQR = 11.
+- Group A's upper fence is 28.75, so 35 is flagged; the upper whisker ends at 25.
+- Adapted from Yan slide 44. This checks the boxplot skill required by Quiz 4 with a different example.
+:::
+
+
+## Z-Scores: Distance in SD Units
+
+<!-- Why would we calculate Z-scores? We need a transition here. -->
+
+$$z = \frac{\text{value} - \text{mean}}{\text{standard deviation}}$$
+
+| Z-score | Interpretation |
+|:---|:---|
+| 0 | At the mean |
+| Positive | Above the mean |
+| Negative | Below the mean |
+
+The magnitude tells us **how many SDs** the value is from the mean.
+
+::: {.notes}
+- Minutes 47-53: one worked example and a brief retrieval question.
+- When standardizing within our sample, use its mean and sample SD; a population reference uses the corresponding population quantities.
+- Z-scores require a nonzero SD but do not require a normal distribution simply to calculate and interpret distance.
+- Do not translate a z-score into a percentile or probability without distributional assumptions.
+- Adapted from Yan slides 47-49.
+:::
+
+
+## Check: Calculate and Interpret a Z-Score
+
+A fictional score distribution has **mean 30** and **SD 5**.
+
+**What is the z-score for a value of 20?**
+
+::: {.fragment}
+$$z = \frac{20-30}{5} = -2$$
+
+The value is **2 standard deviations below the mean**.
+:::
+
+::: {.notes}
+- Allow one minute for calculation and a written interpretation.
+- Ask why the answer is negative; a negative z-score is not a negative raw score.
+- Follow up verbally: a value of 35 has z = 1; a value of 30 has z = 0.
+- Do not equate a large absolute z-score with a clinical diagnosis or an automatic deletion rule.
+:::
+
+
+## Excel: Open the Practice Data
+
+<!-- Do we actually have practice data? -->
+
+[Open the fictional practice Excel workbook](assets/sleep_and_stress.xlsx){download="sleep_and_stress.xlsx" target="_blank"}
+
+| Column | Contents |
+|:---|:---|
+| A: student | Fictional IDs S01-S12 |
+| B: sleep_hours | Yesterday's 12 sleep values |
+| C: stress_score | New fictional scores for practice |
+
+**Row 1 contains headers. Rows 2-13 contain data.**
+
+::: {.notes}
+- Minutes 53-65: open the workbook, calculate summaries, create a histogram, and interpret it.
+- Open the workbook in Excel. If it opens in a browser, save it and open the saved file in Excel.
+- Demonstrate with sleep_hours; groups will apply the same steps to stress_score.
+- This file is a teaching example and does not replace students' assigned project datasets.
+- The student IDs are text labels, not an outcome to summarize.
+:::
+
+
+## Excel: Numerical Summaries {.compact}
+
+Enter formulas in empty cells **outside columns A-C**.
+
+| Summary | Formula for sleep_hours | Expected result |
+|:---|:---|---:|
+| n | `=COUNT(B2:B13)` | `r length(sleep)` |
+| Mean | `=AVERAGE(B2:B13)` | `r sprintf("%.2f", mean(sleep))` |
+| Sample SD | `=STDEV.S(B2:B13)` | `r sprintf("%.2f", sd(sleep))` |
+| Minimum | `=MIN(B2:B13)` | `r min(sleep)` |
+| Maximum | `=MAX(B2:B13)` | `r max(sleep)` |
+
+**What would you check if COUNT returned 11?**
+
+::: {.fragment}
+Check the selected range, blank cells, and numbers stored as text.
+:::
+
+::: {.notes}
+- Ask students to identify which output is a count and which outputs are measured in hours.
+- COUNT counts numeric observations in the selected variable, not necessarily all rows in a dataset.
+- Keep full precision in calculations; use two decimal places for displayed mean and SD.
+- Microsoft STDEV.S documentation: https://support.microsoft.com/en-us/excel/functions/stdev-s-function
+:::
+
+
+## Excel: Create a Histogram
+
+1. Select **B1:B13**, including the sleep_hours header.
+2. Choose **Insert → Statistic Chart → Histogram**.
+3. Add a clear title and axis titles: **Sleep duration (hours)** and **Number of students**.
+4. Inspect the bins. Try a **1-hour bin width** and compare with the automatic grouping.
+
+**Do the plotted counts add up to 12?**
+
+::: {.notes}
+- On some versions, use Insert → Recommended Charts → All Charts → Histogram.
+- Use Chart Design → Add Chart Element for axis titles where available.
+- Windows bin controls are generally under Format Axis → Axis Options. Mac controls may appear under Format Data Series; interface wording depends on the version.
+- Read the displayed interval labels. Excel's treatment of boundary values may differ from the left-closed bins in the teaching graph, even with the same bin width.
+- Avoid a Pareto chart, which orders bars by frequency rather than numerical position.
+- Microsoft histogram instructions: https://support.microsoft.com/en-us/excel/create-a-histogram
+:::
+
+
+## Describe What You Can See
+
+A useful histogram description addresses:
+
+- **Shape:** where values cluster and which direction any tail extends.
+- **Spread:** the observed values and units.
+- **Possible outliers:** observations that stand apart and warrant checking.
+
+**What should you avoid claiming from this histogram alone?**
+
+::: {.fragment}
+A cause, a diagnosis, or a conclusion about all TCU students.
+:::
+
+::: {.notes}
+- Demonstrate by describing the displayed Excel histogram, using its actual bin boundaries.
+- For the sleep sample, values span 5-9 hours and most observations fall between 6 and 8 hours; avoid insisting it has a precise population distribution shape.
+- A histogram supports descriptive statements; it does not establish causal effects or representativeness.
+- Connect this wording directly to Prep 3's requested histogram observations.
+:::
+
+
+## Group Exercise: Describe Stress Scores
+
+Use **stress_score in C2:C13** from the same practice file.
+
+1. Calculate **n, mean, sample SD, minimum, and maximum**.
+2. Create a histogram with a title and labeled axes.
+3. Write three observations about **shape, spread, and possible outliers**.
+4. Be ready to explain one number and one feature of your graph.
+
+**Work for 8 minutes. We will use 4 minutes to compare answers.**
+
+::: {.notes}
+- Minutes 65-77: eight minutes of work plus four minutes of debrief.
+- Work in groups of three or four; assign an Excel operator, a range/formula checker, and an interpreter.
+- Change B2:B13 to C2:C13; do not include the output summary cells in the input range.
+- If Excel access fails, use the following data and displayed graph to write interpretations; use a calculator for the mean and range.
+- These fictional practice scores do not establish any health threshold.
+:::
+
+
+## Practice Data and Graph {.compact}
+
+:::: {.columns}
+::: {.column width="35%"}
+Stress scores, sorted:
+
+**12, 14, 15, 15, 16, 17, 18, 19, 20, 22, 25, 35**
+
+**Describe the distribution in your own words.**
+:::
+::: {.column width="65%"}
+```{r}
+#| label: stress-practice-histogram
+#| fig-width: 7
+#| fig-height: 4.2
+#| out-width: "100%"
+#| fig-alt: "Histogram of twelve fictional stress scores. Counts in five-point bins from 10 to under 40 are 2, 6, 2, 1, 0, and 1. Most scores are 12-25; one score is 35."
+
+# Provide the same practice input graphically for students without Excel access.
+ggplot(practice, aes(stress_score)) +
+  geom_histogram(breaks = seq(10, 40, 5), closed = "left",
+                 fill = "#4D1979", color = "white") +
+  scale_x_continuous(breaks = seq(10, 40, 5)) +
+  scale_y_continuous(breaks = seq(0, 6, 2)) +
+  labs(x = "Fictional stress score (points)", y = "Number of students")
+```
+:::
+::::
+
+::: {.notes}
+- Leave this slide visible during group work; keep the debrief answers on the next slide.
+- Use an ordinary classroom timer for the eight minutes; no additional interactive infrastructure is needed.
+- These bins include their lower boundary and exclude their upper boundary; Excel bins can group boundary observations differently.
+- Students can describe the broad pattern even when bin boundaries differ.
+:::
+
+
+## Group Exercise: Compare Your Results
+
+| Summary | stress_score |
+|:---|---:|
+| n | `r length(stress)` |
+| Mean | `r sprintf("%.2f", mean(stress))` points |
+| Sample SD | `r sprintf("%.2f", sd(stress))` points |
+| Minimum; maximum | `r min(stress)`; `r max(stress)` points |
+
+- Most scores lie between **12 and 25**, with a tail toward higher scores.
+- Observed scores span **`r max(stress) - min(stress)` points**.
+- **35** stands apart and warrants checking; it is not automatically an error.
+
+::: {.notes}
+- Ask groups for their values before advancing to this slide.
+- Ask one group to explain its SD in terms of variability among the twelve scores, not uncertainty in the mean.
+- Accept descriptions that match their histogram rather than requiring identical phrasing.
+- The 35-point observation is also the flagged point in the earlier group A boxplot.
+- If values differ, first check the selected column, selected rows, and use of STDEV.S.
+:::
+
+
+## Connection to Prep 3
+
+For your **assigned outcome**, report:
+
+- **n, mean, SD, minimum, and maximum**.
+- A labeled histogram and observations about its shape, spread, and possible outliers.
+
+**Use your assigned project dataset, not today's practice file.**
+
+Scatterplots come in the next lesson. Prep 3 also requires variable classifications and individual contribution statements.
+
+::: {.notes}
+- Minutes 77-80: this connection and the exit check.
+- Preserve the existing assignment: mean and SD remain required even for skewed data.
+- Today's median, IQR, and boxplot work supports interpretation and Quiz 4; it does not add a new graded deliverable.
+- Do not announce a new deadline here; use the confirmed course deadline.
+:::
+
+
+## Exit Check
+
+1. Which direction is the skew if the longer tail extends toward **larger values**?
+2. Does SD describe variation among **observations** or uncertainty in the **mean**?
+3. What part of a boxplot represents the **IQR**?
+
+::: {.fragment}
+**Right-skewed. Variation among observations. The box from Q1 to Q3.**
+:::
+
+::: {.notes}
+- Allow one minute for individual responses before revealing the answers.
+- Collect or scan responses to identify anything needing a brief recap next class.
+- This is an ungraded classroom check; students may respond on paper.
+:::
+
+
+## Sources {.compact}
+
+- Brad Cannell. *Measures of Central Tendency* and *Measures of Dispersion*, Introduction to Univariate Descriptive Analysis in R. Adapted explanations and height examples.
+- Yan Zhang. *Statistics Overview and Descriptive Statistics*, APHS 20203. Selected concepts adapted from slides 30-33 and 36-49 of the supplied PowerPoint.
+- APHS 20203: *Statistical Thinking and Describing Data*, the approved course outline, and *Group Presentation - Prep 3*.
+- Microsoft Support: [Create a histogram](https://support.microsoft.com/en-us/excel/create-a-histogram) and [STDEV.S](https://support.microsoft.com/en-us/excel/functions/stdev-s-function).
+
+All numerical examples are **fictional teaching examples**.
+
+::: {.notes}
+- EWB source folder: Introduction to Univariate Descriptive Analysis in R / 03 Descriptive Analysis of Continuous Variables.
+- Height illustrations are redrawn from the source examples using reproducible R plots and the TCU palette; the original EWB files remain unchanged.
+- Source PowerPoint: APHS 20203 W9-Stats overview and Descriptive Statistics.pptx.
+- Adapt the source concepts to the approved lesson sequence rather than reproducing the entire source deck.
+- Microsoft documentation checked on October 27, 2026; menu labels can differ by Excel version.
+:::
