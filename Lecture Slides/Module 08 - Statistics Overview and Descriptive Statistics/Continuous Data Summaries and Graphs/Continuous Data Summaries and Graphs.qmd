@@ -32,7 +32,10 @@ library(tidyverse)
 
 # Read the same small fictional dataset students open in Excel so all displayed
 # results and the practice answer key remain consistent with their input file.
-practice <- readxl::read_excel("assets/sleep_and_stress.xlsx")
+practice <- readxl::read_excel(
+  "assets/practice_data.xlsx",
+  sheet = "sleep_and_stress"
+)
 sleep <- practice$sleep_hours
 stress <- practice$stress_score
 
@@ -84,6 +87,15 @@ shape_data <- tibble(
             1, 1, 1, 1, 2, 3, 5, 7, 8)
 ) |>
   mutate(shape = factor(shape, levels = c("Symmetric", "Right-skewed", "Left-skewed")))
+
+# Construct fictional resting heart-rate data with two clear clusters. Repeated
+# values keep both peaks visible so students can recognize bimodality at a glance.
+bimodal_heart_rate <- tibble(
+  resting_heart_rate = rep(
+    seq(50, 90, by = 4),
+    times = c(1, 4, 8, 5, 1, 1, 1, 5, 8, 4, 2)
+  )
+)
 
 # Group A is the practice outcome; group B is an additional fictional comparison
 # chosen to have a higher median and larger IQR without a flagged outlier.
@@ -146,13 +158,9 @@ flowchart TB
 - In epidemiology, we often want to describe the “typical” person in a population or subpopulation.   
 - When we analyze data to do so, we call it "descriptive analysis".    
 - When conducting descriptive analysis, the method we choose will depend on the type of data we're analyzing.   
-- At the most basic level, variables can be described as numerical (quantitative) or categorical (qaulitative).   
+- At the most basic level, variables can be described as numerical (quantitative) or categorical (qualitative).   
 - We reviewed this distinction last time.  
 - Our focus today will be on numerical variables.   
-
-<!-- Delete these notes if you don't use them. -->
-- Both numerical and graphical summaries are available. Here, “numerical data” names a variable type, while “numerical summaries” names a way of describing data.
-- Today we focus on continuous data: examine shape with histograms, describe center and spread, connect these summaries to boxplots, and interpret z-scores. Then calculate summaries and create a graph in Excel before practicing interpretation.
 :::
 
 
@@ -187,17 +195,13 @@ flowchart TB
 - Numerical variables can then be further divided into continuous and discrete.   
 
 **Question**: What is the difference between continuous and discrete numerical variables?    
-- The distinction being whether the variable can take on a continuum of values, or only set of certain values. 
+- The distinction is whether the variable can take on a continuum of values or only a certain set of values. 
 
 **Question**: Can you think of some examples?   
 - Continuous examples: Height, weight, and sleep duration.   
-- Discrete examples: Number of drinks, number of household members, numbrer of clinic visits.   
+- Discrete examples: Number of drinks, number of household members, number of clinic visits.   
 
-- For all types, and subtypes, of variables there are both numerical and graphical methods we can use for descriptive analysis.   
-
-<!-- Delete these notes if you don't use them. -->
-- Our focus today is continuous data. We will describe the shape, center, and spread of a distribution.
-- Return to the sleep-hours example after this overview so students can connect the map to familiar observations.
+- For all types and subtypes of variables, there are both numerical and graphical methods we can use for descriptive analysis.   
 :::
 
 
@@ -231,19 +235,13 @@ flowchart TB
 ::: {.notes}
 - Numerical summaries condense many values into a few summary values, called statistics.   
 <!-- Which version of the sentence below should we keep? -->
-- Those statistics can be grouped by type of information it gives us about the values.   
+- Those statistics can be grouped by the type of information they give us about the values.   
 - Those statistics can be grouped by the characteristic of the values they describe.   
-
-
-<!-- Delete these notes if you don't use them. -->
-For continuous data, we will review the mean and median, then examine the range, variance, standard deviation, quartiles, and IQR.
-- We will also use z-scores to describe how far an individual value lies from the mean in standard deviation units.
-- The word numerical at this lower level describes the summary method. It does not introduce another variable type.
 :::
 
 
 ## Review: 3 Important Characteristics of Numerical Variables
-
+<!-- Make the bulleted text larger. -->
 ::: {.incremental}
 1. Center   
 2. Spread   
@@ -256,7 +254,7 @@ For continuous data, we will review the mean and median, then examine the range,
 
 
 ## Review: 3 Measures of Central Tendency
-
+<!-- Make the bulleted text larger. -->
 ::: {.incremental}
 1. Mean   
 2. Median   
@@ -264,7 +262,7 @@ For continuous data, we will review the mean and median, then examine the range,
 :::
 
 ::: {.notes}
-- When we describe the center  of numerical variables, we do so with measures of central tendency.    
+- When we describe the center of numerical variables, we do so with measures of central tendency.    
 
 **Question**: Do you remember the three measures of central tendency we discussed last time?
 :::
@@ -330,12 +328,11 @@ flowchart TB
 ```
 
 ::: {.notes}
-- Graphical summaries are visual representations of our data.   
+- We'll also discuss some additional graphical summaries of our data today.   
+- Graphical summaries are just visual representations of our data.   
 - Often, they lack the detail and precision of numerical summaries, but they are generally better for quickly getting a "feel" for the center, spread, and shape of our data.   
 - Additionally, graphical summaries tend to be better for making quick, general comparisons. For example, comparing two groups.      
-
-<!-- Delete these notes if you don't use them. -->
-- We will then bring the numerical and graphical summaries together in Excel and practice writing interpretations supported by the data.
+- We will then bring the numerical and graphical summaries together in Excel and practice writing interpretations supported by the data.   
 :::
 
 
@@ -351,29 +348,29 @@ Previous practice data: **12 fictional students' sleep hours**.
 - Why don't we stop at viewing/presenting raw data?   
 - What type of data is this?    
 - What three characteristics of this type of data should we typically summarize?   
-- What are the two **high level methods** we can use to summarize this data?   
+- What are the two **high-level methods** we can use to summarize this data?   
 :::
 
 ::: {.notes}
 - Here's the sleep data we looked at last time.  
 
 **Answers**:   
-- We don't we stop at viewing/presenting raw data because it isn't easy for humans to make sense of it. It's **data**, but not **information**.   
-- This is continuous quantitative (numeric) data.   
+- We don't stop at viewing/presenting raw data because it isn't easy for humans to make sense of it. It's **data**, but not **information**.   
+- This is continuous quantitative (numerical) data.   
 - Typically, we should summarize the center, spread, and shape of continuous quantitative data.   
-- The two high level methods we can use to present our summaries are tables and charts/graphs.   
+- The two high-level methods we can use to present our summaries are tables and charts/graphs.   
 :::
 
 
 ## Calculate the Mean in Excel
-
-1. Download **sleep_and_stress.xlsx**.   
-2. Open **sleep_and_stress.xlsx**. Sleep hours are in **B2:B13**.    
-3. Type **`Mean:`** in cell **E2**.   
-4. Type **`=AVERAGE(B2:B13)`** in cell **F2**.   
+<!-- Make the bulleted text larger. -->
+1. Download **practice_data.xlsx**.   
+2. Open **practice_data.xlsx**. Sleep hours are in **B2:B13**.    
+3. Type `Mean:` in cell **E2**.   
+4. Type `=AVERAGE(B2:B13)` in cell **F2**.   
 
 ::: {.notes}
-- We discussed the mean last time, today we'll practice calculating the mean using Excel.   
+- We discussed the mean last time. Today, we'll practice calculating the mean using Excel.   
 
 **Demonstration**
 - Follow the instructions above. Ask students to follow along at the same time.   
@@ -388,7 +385,7 @@ Previous practice data: **12 fictional students' sleep hours**.
 
 ::: {.full-width-table}
 
-| Slide  | Excel formula        | Result                 |
+| Statistic | Excel formula        | Result                 |
 |--------|----------------------|------------------------|
 | Mean   | `=AVERAGE(B2:B13)`   | 6.83 hours             |
 | Median | `=MEDIAN(B2:B13)`    |              |
@@ -398,12 +395,12 @@ Previous practice data: **12 fictional students' sleep hours**.
 
 ::: {.notes}
 - We also discussed the median last time.   
-- Type **`Median:`** in cell **E3**.   
-- Type **`=MEDIAN(B2:B13)`** in cell **F3**.   
+- Type `Median:` in cell **E3**.   
+- Type `=MEDIAN(B2:B13)` in cell **F3**.   
 - Excel calculates the median without requiring us to sort the worksheet first.   
 
 **Demonstration**
-- Quickly demonstrate why we say it's more resistent to outlying values.   
+- Quickly demonstrate why we say it's more resistant to outlying values.   
 :::
 
 
@@ -411,7 +408,7 @@ Previous practice data: **12 fictional students' sleep hours**.
 
 ::: {.full-width-table}
 
-| Slide  | Excel formula        | Result                 |
+| Statistic | Excel formula        | Result                 |
 |--------|----------------------|------------------------|
 | Mean   | `=AVERAGE(B2:B13)`   | 6.83 hours             |
 | Median | `=MEDIAN(B2:B13)`    | 6.75 hours             |
@@ -422,8 +419,8 @@ Previous practice data: **12 fictional students' sleep hours**.
 ::: {.notes}
 - The mode deserves a brief caution: these data have four modes. `MODE.SNGL()` would return only one; `MODE.MULT()` returns multiple modes. Leave empty cells below that formula for its results.   
 
-- Type **`Mode:`** in cell **E4**.   
-- Type **`=MODE.MULT(B2:B13)`** in cell **F4**.   
+- Type `Mode:` in cell **E4**.   
+- Type `=MODE.MULT(B2:B13)` in cell **F4**.   
 
 - Microsoft `MODE.MULT` documentation: https://support.microsoft.com/en-us/excel/functions/mode-mult-function
 :::
@@ -433,7 +430,7 @@ Previous practice data: **12 fictional students' sleep hours**.
 
 ::: {.full-width-table}
 
-| Slide  | Excel formula        | Result                 |
+| Statistic | Excel formula        | Result                 |
 |--------|----------------------|------------------------|
 | Mean   | `=AVERAGE(B2:B13)`   | 6.83 hours             |
 | Median | `=MEDIAN(B2:B13)`    | 6.75 hours             |
@@ -471,7 +468,7 @@ Great! Now we know how to calculate the mean, median, and mode using Excel.
 ::: {.notes}
 - In epidemiology, we often want to describe the “typical” person in a population or subpopulation.   
 - Measures of central tendency can help us do that.   
-- But it can be equally import to ask "how much like the typical person is everyone else?"   
+- But it can be equally important to ask "how much like the typical person is everyone else?"   
 :::
 
 
@@ -482,8 +479,9 @@ Mean Height = 68.4 Inches
 :::
 
 ::: {.notes}
-- To make differences in spread easier to see, we’ll briefly use height as a simplified example. Then we’ll apply the same ideas to sleep duration.
+- To make differences in spread easier to see, we’ll briefly use height as a simplified example. Then we’ll apply the same ideas to sleep duration.   
 - Suppose the mean height in a class is **68.4 inches**.    
+- To see the raw data and mean in Excel, please switch to the `height_and_weight` worksheet.   
 :::
 
 
@@ -511,7 +509,7 @@ Mean Height = 68.4 Inches
 ![](assets/dispersion_03_overview.png){.r-stretch fig-align="center" fig-alt="Measures of dispersion include the range, variance, and standard deviation."}
 
 ::: {.notes}
-- Three common measures of dispersion used are the:   
+- Three common measures of dispersion are:   
 :::
 
 
@@ -541,253 +539,503 @@ Mean Height = 68.4 Inches
 
 ::: {.full-width-table}
 
-| Slide                | Excel formula              | Result     |
-|----------------------|----------------------------|------------|
-| Min                  | `=MIN(B2:B13)`             | 5 hours    |
-| Max                  | `=MAX(B2:B13)`             | 9 hours    |
-| Range                | `=MAX(B2:B13)-MIN(B2:B13)` | 4 hours    |
-| Variance             | `=VAR.S(B2:B13)`           | 1.33       |
-| Standard Deviation   | `=STDEV.S(B2:B13)`         | 1.15 hours |
+| Statistic            | Excel formula              | Result      |
+|----------------------|----------------------------|-------------|
+| Min                  | `=MIN(C2:C21)`             |    |
+| Max                  | `=MAX(C2:C21)`             |    |
+| Range                | `=MAX(C2:C21)-MIN(C2:C21)` |    |
+| Variance             |           |        |
+| Standard Deviation   |        |  |
+
 
 :::
 
 ::: {.notes}
-**Demonstation:**   
-- Type **`Min:`** in cell **E8**.   
-- Type **`=MIN(B2:B13)`** in cell **F8**.   
-- Type **`Max:`** in cell **E9**.   
-- Type **`=MAX(B2:B13)`** in cell **F9**.   
-- Type **`Range:`** in cell **E10**.   
-- Type **`=F9-F8`** in cell **F10**.   
-- Type **`=MAX(B2:B13)-MIN(B2:B13)`** in cell **G10**.   
+- Now, let's learn how to calculate the range using Excel.   
+
+**Demonstration:**   
+- Type `Min:` in cell **F6**.   
+- Type `=MIN(C2:C21)` in cell **G6**.   
+- Type `Max:` in cell **F7**.   
+- Type `=MAX(C2:C21)` in cell **G7**.   
+- Type `Range:` in cell **F8**.   
+- Type `=F9-F8` in cell **G8**.   
+- Type `=MAX(C2:C21)-MIN(C2:C21)` in cell **H8**.   
 :::
 
 
+## Calculate Measures of Dispersion in Excel
 
+::: {.full-width-table}
 
-<!-- Left off here... -->
-<!-- Continue recreating R4Epi: https://www.r4epi.com/chapters/dispersion/dispersion -->
+| Statistic            | Excel formula              | Result      |
+|----------------------|----------------------------|-------------|
+| Min                  | `=MIN(C2:C21)`             | 64 inches   |
+| Max                  | `=MAX(C2:C21)`             | 75 inches   |
+| Range                | `=MAX(C2:C21)-MIN(C2:C21)` | 11 inches   |
+| Variance             |            |        |
+| Standard Deviation   |          |  |
 
+:::
 
-
+::: {.notes}
+- In this case, the range is 11.   
+- The range can be useful because it tells us how much difference there is between the tallest person in the class and the shortest person in the class – 11 inches.   
+- However, it doesn’t tell us how close to 68.4 inches “most” people in the class are.   
+:::
 
 
 ## How Much Like the Average Is Everyone Else?
 
-**B: Evenly spaced**
+![](assets/dispersion_04_edges.png){.r-stretch fig-align="center" fig-alt="Six fictional students: three at 58 inches and three at 78 inches, with mean 68 inches."}
+
+::: {.notes}
+- In other words, are most people in the class out at the edges of the range of values in the data?    
+:::
+
+
+## How Much Like the Average Is Everyone Else?
 
 ![](assets/dispersion_05_even.png){.r-stretch fig-align="center" fig-alt="Six fictional students evenly spaced from 58 to 78 inches, with mean 68 inches."}
 
 ::: {.notes}
-- Orient students to the graph.
-- Each picture shows six people. Horizontal position represents height; vertical stacking separates people with the same height.
+- Or are people “evenly distributed” across the range of heights for the class?   
+- Or something else entirely?   
+- In both cases, the mean is 68 inches.   
+
+**Question**   
+1. Is the range the same in both scenarios?   
+  - Yes! The range is 20 inches in both scenarios.   
+
+2. In which scenario does it make sense to say that the typical person is **farther from the mean**?   
+  - The first scenario.   
 :::
 
 
-## How Much Like the Average Is Everyone Else?
-
-**C: At the extremes**
+## Variance
 
 ![](assets/dispersion_04_edges.png){.r-stretch fig-align="center" fig-alt="Six fictional students: three at 58 inches and three at 78 inches, with mean 68 inches."}
 
-**Both means are 68 inches. Do B and C also have the same range? The same spread around the mean?**
-
-::: {.fragment}
-Same **20-inch range**; C's observations lie **farther from the mean**.
+::: {.notes}
+- The **variance** is a measure of dispersion that is slightly more complicated to calculate, but it gives us a number we can use to quantify the dispersion of heights around the mean.   
+- To do this, let’s work through a simple example that only includes six observations: 3 people who are 58 inches tall and 3 people who are 78 inches tall.   
+- In this sample of six people from our population, the average height is 68 inches.   
 :::
 
+
+## Variance
+
+![](assets/dispersion_06_variance.png){.r-stretch fig-align="center" fig-alt="Six fictional students: three at 58 inches and three at 78 inches, with mean 68 inches. There is a red vertical line extending upward from the x-axis at 68 inches."}
+
 ::: {.notes}
-- Retrieve range = maximum minus minimum.
-  - B and C both have range 20.
-- Even the mean and range together can hide differences in distances from the mean. <!-- What does this mean? -->
-- In the final check, introduce group A with all six heights equal to 68: no variation should correspond to SD = 0.
+Next, let’s draw an imaginary line straight up from the mean.  
 :::
 
 
 ## Distances from the Mean
 
-<!-- We need to create a better transition into this slide.  -->
-<!-- Make this image full screen. -->
-<!-- If we need the text, add it to a follow-up slide. -->
-
-::: {.columns}
-::: {.column width="70%"}
 ![](assets/dispersion_07_variance.png){width=100% fig-align="center" fig-alt="Three heights at 58 inches and three at 78, with a red mean line at 68. The three left deviations are minus 10 inches; the three right deviations are plus 10 inches."}
-:::
-::: {.column width="30%"}
-
-**The signed differences sum to zero. Does that mean there is no variation?**
-
-::: {.fragment}
-**No.** Positive and negative differences cancel.
-:::
-
-:::
-:::
 
 ::: {.notes}
-- Read each deviation as observation minus mean: 58 - 68 = -10; 78 - 68 = +10.
-- Three deviations are -10 and three are +10. Their sum is zero despite visible variation.
-- Ask students to suggest a way to avoid cancellation, then move to squared differences.
+- Then, let’s measure the difference, or distance, between each person’s height and the mean height.   
+- Read each deviation as observation minus mean: 58 - 68 = -10; 78 - 68 = +10.   
+- Three deviations are -10 and three are +10. Their sum is zero despite visible variation.   
+
+**Question**
+1. Remember, our goal is to measure how much distance there is, on average, between the mean height and individual heights. If we stop here, we get zero. Does that mean there is no variation in heights?    
+  - No, there is clearly variation in the heights.   
+
+2. Why do we get zero?   
+  - Because the positive and negative differences cancel each other out.   
+
+3. Can you think of a way we could avoid cancellation?   
+  - Don't give the answer. Move to the next slide.   
+:::
+
+
+## Square the Differences
+
+![](assets/dispersion_08_variance.png){width=100% fig-align="center" fig-alt="Three heights at 58 inches and three at 78, with a red mean line at 68. The three left squared deviations are 100 inches; the three right squared deviations are 100 inches."}
+
+::: {.notes}
+- Let's square the differences.   
 :::
 
 
 ## From Squared Distances to Variance
 
-<!-- Make the image full screen. -->
-<!-- If we need the text, add it to a follow-up slide. -->
-
-::: {.columns}
-::: {.column width="70%"}
 ![](assets/dispersion_09_variance.png){width=100% fig-align="center" fig-alt="Six squared deviations of 100 sum to 600 square inches. The banner correctly labels this as the sum of squared deviations."}
-:::
-::: {.column width="30%"}
 
-**Is 600 the sample variance?**
-
-::: {.fragment}
-No. $s^2 = \dfrac{`r height_ss`}{`r height_n`-1} = `r height_variance`$ **square inches**.
+::: {.notes}
+- Then we add up all the squared differences.   
+- Is 600 square inches the sample variance?   
+  - No! 
 :::
 
+
+## Variance
+
+<!-- Center the formula horizontally and vertically on the slide. Make the font size larger. -->
+
+$s^2 = \dfrac{`r height_ss`}{`r height_n`-1} = `r height_variance`$ **square inches**.
+
+::: {.notes}
+- We divide by n, the number of non-missing observations, minus 1. In this case n equals six, so `n-1` equals five.   
+- The result is 120 square inches.   
+- The n-minus-one adjustment is used for sample variance.   
 :::
+
+
+## Calculate Measures of Dispersion in Excel
+
+::: {.full-width-table}
+
+| Statistic            | Excel formula              | Result      |
+|----------------------|----------------------------|-------------|
+| Min                  | `=MIN(C2:C21)`             | 64 inches   |
+| Max                  | `=MAX(C2:C21)`             | 75 inches   |
+| Range                | `=MAX(C2:C21)-MIN(C2:C21)` | 11 inches   |
+| Variance             | `=VAR.S(C2:C21)`           |        |
+| Standard Deviation   |          |  |
+
 :::
 
 ::: {.notes}
-- Minutes 30-32: two minutes to square, sum, and divide.
-- Both (-10)^2 and (+10)^2 equal 100 square inches, so six squared deviations sum to 600.
-- The corrected image labels 600 as the sum of squared deviations. Its units are square inches.
-- For sample variance, divide by n - 1 = 5; the result is 120 square inches.
-- The n-minus-one adjustment is used for sample variance; defer its formal derivation.
-- Avoid a long hand calculation; the purpose is understanding what the computer calculates.
+- Now, let's calculate the variance of the student heights using Excel.   
+
+**Demonstration:**   
+- Type `Variance:` in cell **F9**.   
+- Type `=VAR.S(C2:C21)` in cell **G9**.   
+
+**Different variance formulas in Excel**
+<!-- Be prepared to discuss the various variance formulas available in Excel. -->
+:::
+
+
+## Calculate Measures of Dispersion in Excel
+
+::: {.full-width-table}
+
+| Statistic            | Excel formula              | Result              |
+|----------------------|----------------------------|---------------------|
+| Min                  | `=MIN(C2:C21)`             | 64 inches           |
+| Max                  | `=MAX(C2:C21)`             | 75 inches           |
+| Range                | `=MAX(C2:C21)-MIN(C2:C21)` | 11 inches           |
+| Variance             | `=VAR.S(C2:C21)`           | 10.04 square inches |
+| Standard Deviation   |          |  |
+
+:::
+
+::: {.notes}
+- So, the sample variance in this case is 10.04 square inches. However, because the variance is expressed in squared units, instead of the original units, it isn’t necessarily intuitive to interpret.   
 :::
 
 
 ## Standard Deviation Returns to the Original Units
 
-<!-- Make the image full screen. -->
-<!-- If we need the text, add it to a follow-up slide. -->
-
-::: {.columns}
-::: {.column width="70%"}
 ![](assets/dispersion_11_sd.png){width=100% fig-align="center" fig-alt="Standard deviation s equals the square root of sample variance s squared, which equals the square root of 120, approximately 10.95 inches."}
-:::
-::: {.column width="30%"}
-Our sample variance is **`r height_variance` square inches**.
 
-**Why is SD easier to interpret than variance here?**
+::: {.notes}
+- If we take the square root of the variance, we get the standard deviation.   
+- When our data are approximately normally distributed, which they aren't in this case, 68/95/99.7 percent of values fall within 1, 2, and 3 standard deviations.   
 
-::: {.fragment}
-SD uses **inches**, the same units as the heights.
-
-It describes spread around the mean. Excel calculates sample SD with **`STDEV.S`**.
+- If asked why SD is not exactly 10: the sample formula divides the sum of squares by 5 rather than 6. The corresponding population SD for these six values would be 10.   
 :::
 
-:::
+
+## Calculate Measures of Dispersion in Excel
+
+::: {.full-width-table}
+
+| Statistic            | Excel formula              | Result              |
+|----------------------|----------------------------|---------------------|
+| Min                  | `=MIN(C2:C21)`             | 64 inches           |
+| Max                  | `=MAX(C2:C21)`             | 75 inches           |
+| Range                | `=MAX(C2:C21)-MIN(C2:C21)` | 11 inches           |
+| Variance             | `=VAR.S(C2:C21)`           | 10.04 square inches |
+| Standard Deviation   | `=STDEV.S(C2:C21)`         |  |
+
 :::
 
 ::: {.notes}
-- Minutes 32-34: two minutes to connect the square root to units and interpretation.
-- The corrected image takes the square root of 120. The answer is approximately 10.95 inches.
-- SD describes variation among observations; it is not uncertainty in the estimated mean.
-- Typical distance is an intuition, not the arithmetic mean of absolute distances.
-- If asked why SD is not exactly 10: the sample formula divides the sum of squares by 5 rather than 6. The corresponding population SD for these six values would be 10.
-- This two-cluster example is not normal. Do not attach 68/95/99.7 percentages to it; those require an approximately normal distribution.
+- Now, let's calculate the standard deviation of the student heights using Excel.   
+
+**Demonstration:**   
+- Type `SD:` in cell **F10**.   
+- Type `=STDEV.S(C2:C21)` in cell **G10**.   
+
+**Different variance formulas in Excel**
+<!-- Be prepared to discuss the various standard deviation formulas available in Excel. -->
 :::
 
 
-## Check: Which Group Has the Largest SD?
+## Calculate Measures of Dispersion in Excel
 
-| Group | Six fictional heights (inches) | Mean | Range |
-|:---|:---|---:|---:|
-| A | 68, 68, 68, 68, 68, 68 | 68 | 0 |
-| B | 58, 62, 66, 70, 74, 78 | 68 | 20 |
-| C | 58, 58, 58, 78, 78, 78 | 68 | 20 |
+::: {.full-width-table}
 
-**Rank the SDs from smallest to largest. Explain why B and C differ.**
+| Statistic            | Excel formula              | Result              |
+|----------------------|----------------------------|---------------------|
+| Min                  | `=MIN(C2:C21)`             | 64 inches           |
+| Max                  | `=MAX(C2:C21)`             | 75 inches           |
+| Range                | `=MAX(C2:C21)-MIN(C2:C21)` | 11 inches           |
+| Variance             | `=VAR.S(C2:C21)`           | 10.04 square inches |
+| Standard Deviation   | `=STDEV.S(C2:C21)`         | 3.17 inches         |
 
-::: {.fragment}
-**A < B < C:** `r sprintf("%.2f", height_summary$sd[1])`, `r sprintf("%.2f", height_summary$sd[2])`, and `r sprintf("%.2f", height_summary$sd[3])` inches.
-
-A has no variation. C places every observation at an extreme.
 :::
 
 ::: {.notes}
-- Minutes 34-37: three minutes for individual prediction, partner explanation, and reveal.
-- Adapted from Brad Cannell's Comparing Distributions section and its draft check-on-learning question; display all candidate groups and explain the mechanism.
-- All sample sizes and means are equal. B and C also share a range, but C's squared deviations are larger in total.
-- Ask why SD = 0 is sensible for A: everyone is at the mean.
-- Use a show of hands or paper. No separate quiz infrastructure is needed.
-- This completes the 12-minute dispersion block; start quartiles at minute 37 to protect Excel and group-practice time.
+- So, this tells us something about how far away from the "typical" person most people are.   
+- But if you are like most people, this still isn't super intuitive.   
+- Next, we'll complete an exercise to help us build an intuition.    
 :::
 
 
+## Exercise: Comparing Distributions
+
+<!-- Make the bulleted text larger. -->
+1. Open **practice_data.xlsx**.   
+2. Select the **comparing_distributions** sheet.   
+3. Complete the **Comparisons** table.      
+
+::: {.notes}
+- For all the columns, the mean is 68 inches.   
+- For the column “all_68” the variance and standard deviation are both zero.   
+- When comparing the rest of the columns notice that all of them have a non-zero variance. This is because not all people have the same value in that column – they vary.  
+- Additionally, we can see very clearly that variance (and standard deviation) are affected by at least two things:   
+  1. The second property of the data that is clearly influencing variance is the **width of the range of values** included in the distribution. For example, even_48_88 has a larger variance and standard deviation than even_58_78, even though both are evenly distributed across the range of possible values. The reason is because the range of possible values is larger, and therefore the range of distances from the mean is larger too.   
+  2. First is the **distribution of values across the range of possible values.** For example, half_58_78 and half_48_88 have a larger variance than even_58_78 and even_48_88 because all the values are clustered at the min and max - far away from the mean.   
+:::
 
 
+## Z-Scores: Distance in SD Units
+
+::: {style="font-size: 1.35em; margin-top: 1em;"}
+$$z = \frac{\text{value} - \text{mean}}{\text{standard deviation}}$$
+:::
+
+::: {.full-width-table .fragment style="margin-top: 2em;"}
+
+| Z-score  | Interpretation |
+|:--------:|:--------------:|
+| Positive | Above the mean |
+| 0        | At the mean    |
+| Negative | Below the mean |
+
+:::
+
+::: {.notes}
+- Standard deviation describes the spread of a distribution. A z-score uses that spread to describe where one value is located relative to the mean.   
+- The magnitude tells us **how many SDs** the value is from the mean.   
+:::
 
 
+## Check: Calculate and Interpret a Z-Score
+
+A fictional score distribution has **mean 30** and **SD 5**.
+
+**What is the z-score for a value of 20?**
+
+::: {.fragment}
+$$z = \frac{20-30}{5} = -2$$
+
+The value is **2 standard deviations below the mean**.
+:::
+
+::: {.notes}
+- Ask why the answer is negative; a negative z-score is not a negative raw score.  
+- Follow up verbally: a value of 35 has z = 1; a value of 30 has z = 0.   
+- But why would we want to do this?    
+:::
 
 
+## Z-Scores: Why?
+
+::: {.full-width-table}
+
+| Health assessment    | Maria's score | Reference mean |  SD | Z-score |
+|:---------------------|--------------:|---------------:|----:|--------:|
+| Physical functioning |            85 |             75 |   5 |      +2 |
+| Emotional well-being |            90 |             80 |  10 |      +1 |
+
+:::
+
+::: {.notes}
+- Both health assessments are scored from 0 to 100, with higher scores indicating better health.
+- Maria's emotional well-being score is higher in absolute terms: 90 compared with 85 for physical functioning.
+- For physical functioning, z = (85 - 75) / 5 = +2.
+- For emotional well-being, z = (90 - 80) / 10 = +1.
+- Maria's physical functioning score is therefore stronger relative to its reference population, even though its raw score is lower.
+- The z-scores describe relative standing. They do not tell us which health domain is more important or whether either score is clinically meaningful.
+:::
+
+
+## Quartiles and the Middle Half
+
+::: {.full-width-table}
+
+| Position | Meaning                  | Sleep hours                                        |
+|:--------:|:------------------------:|:--------------------------------------------------:|
+| Q1       | 25th percentile          | `r sprintf("%.2f", sleep_q[1])` hours              |
+| Q2       | 50th percentile (Median) | `r sprintf("%.3f", sleep_q[2])` hours              |
+| Q3       | 75th percentile          | `r sprintf("%.3f", sleep_q[3])` hours              |
+| IQR      | Q3 − Q1                  | `r sprintf("%.3f", sleep_q[3] - sleep_q[1])` hours |
+
+:::
+
+::: {.notes}
+- The final numerical summary we'll discuss today is quartiles.    
+- Quartiles mark positions in the ordered observations.    
+ - Q1 is the value at or below which approximately 25% of the observations fall.   
+ - Q2 is the value at or below which approximately 50% of the observations fall. It is also the median.   
+ - Q3 is the value at or below which approximately 75% of the observations fall.   
+- The IQR describes the width of the middle half of a distribution.   
+- With small samples, interpolation conventions can produce slightly different quartiles; these use Excel `QUARTILE.INC`'s convention.   
+:::
+
+
+## Calculate Quartiles in Excel
+
+::: {.full-width-table}
+
+| Position | Excel formula                                      | Result       |
+|:--------:|:---------------------------------------------------|:------------:|
+| Q1       | `=QUARTILE.INC(C2:C21,1)`                          |  |
+| Q2       | `=QUARTILE.INC(C2:C21,2)`                          |   |
+| Q3       | `=QUARTILE.INC(C2:C21,3)`                          |     |
+| IQR      | `=G13-G11` or                                      |   |
+| IQR      | `=QUARTILE.INC(C2:C21,3) - QUARTILE.INC(C2:C21,1)` |   |
+
+:::
+
+::: {.notes}
+- Now, let's calculate quartiles using Excel.   
+
+**Demonstration:**   
+- Open the `height_and_weight` sheet in Excel.   
+- Type `Q1:` in cell **F11**.   
+- Type `=QUARTILE.INC(C2:C21,1)` in cell **G11**.   
+- Type `Q2:` in cell **F12**.   
+- Type `=QUARTILE.INC(C2:C21,2)` in cell **G12**.   
+- Type `Q3:` in cell **F13**.   
+- Type `=QUARTILE.INC(C2:C21,3)` in cell **G13**.   
+- Type `IQR:` in cell **F14**.   
+- Type `=G13-G11` or `=QUARTILE.INC(C2:C21,3) - QUARTILE.INC(C2:C21,1)` in cell **G12**.   
+
+**Additional information**   
+- With small samples, interpolation conventions can produce slightly different quartiles; these use Excel `QUARTILE.INC`'s convention.   
+- A quartile does not have to equal an observed value.   
+:::
+
+
+## Calculate Quartiles in Excel
+
+::: {.full-width-table}
+
+| Position | Excel formula                                      | Result       |
+|:--------:|:---------------------------------------------------|:------------:|
+| Q1       | `=QUARTILE.INC(C2:C21,1)`                          | 65.75 inches |
+| Q2       | `=QUARTILE.INC(C2:C21,2)`                          | 68.5 inches  |
+| Q3       | `=QUARTILE.INC(C2:C21,3)`                          | 71 inches    |
+| IQR      | `=G13-G11` or                                      | 5.25 inches  |
+| IQR      | `=QUARTILE.INC(C2:C21,3) - QUARTILE.INC(C2:C21,1)` | 5.25 inches  |
+
+:::
+
+::: {.notes}
+- This should be our final result.      
+:::
+
+
+## Excel: Numerical Summaries {.compact}
+
+| Summary | Formula for sleep_hours | Expected result |
+|:---|:---|---:|
+| n | `=COUNT(B2:B13)` | `r length(sleep)` |
+| Mean | `=AVERAGE(B2:B13)` | `r sprintf("%.2f", mean(sleep))` |
+| Median | `=MEDIAN(B2:B13)` | `r sprintf("%.2f", median(sleep))` |
+| Mode | `=MODE.MULT(B2:B13)` | 6, 6.5, 7, and 8 |
+| Minimum | `=MIN(B2:B13)` | `r min(sleep)` |
+| Maximum | `=MAX(B2:B13)` | `r max(sleep)` |
+| Range | `=MAX(B2:B13)-MIN(B2:B13)` | `r max(sleep) - min(sleep)` |
+| Sample variance | `=VAR.S(B2:B13)` | `r sprintf("%.2f", var(sleep))` |
+| Sample SD | `=STDEV.S(B2:B13)` | `r sprintf("%.2f", sd(sleep))` |
+| Q1 | `=QUARTILE.INC(B2:B13,1)` | `r sprintf("%.2f", sleep_q[1])` |
+| Q2 | `=QUARTILE.INC(B2:B13,2)` | `r sprintf("%.2f", sleep_q[2])` |
+| Q3 | `=QUARTILE.INC(B2:B13,3)` | `r sprintf("%.2f", sleep_q[3])` |
+| IQR | `=QUARTILE.INC(B2:B13,3)-QUARTILE.INC(B2:B13,1)` | `r sprintf("%.2f", sleep_q[3] - sleep_q[1])` |
 
 
 # Graphical Summaries {.section}
 <!-- Decide what language to use and then be consistent. We variously say graphical summaries and graphical descriptions. -->
 
-## Choose a Graph
+::: {.notes}
+- Now, let's shift from numerical summaries to graphical summaries.   
+:::
 
-Which graph would you use for each variable?
 
-| Variable | Graph Type |
-|:---|:---|
-| High stress reported: yes/no | Bar graph or histogram? |
-| Sleep duration in hours | Bar graph or histogram? |
+## Choosing a Chart/Graph for One Variable
 
-::: {.fragment}
-- **Bar graph:** compare categories.    
-- **Histogram:** count observations in numerical intervals.
+::: {.full-width-table}
+
+| Variable Type        | Usually Appropriate                  |
+|:---------------------|:-------------------------------------|
+| Categorical          | Bar chart<br>Pie chart               |
+| Continuous Numerical | Histogram<br>Boxplot<br>Density plot |
+| Discrete Numerical   | Bar chart<br>Histogram<br>Dot plot   |
+
 :::
 
 ::: {.notes}
-- Take a moment to think about your answers to each.   
-- Answers: bar graph for yes/no; histogram for continuous sleep duration.
+- In the same way that the variable type will determine the numerical summaries we can use, it will also determine the graphical summaries we can use.   
+- This table doesn't represent the entire universe of chart/graph types. It presents only some common ones that we will discuss.   
 :::
 
 
-## From a Frequency Table to a Histogram
+## Histograms
 
-<!-- I don't think we should teach them to plot categorical data with a histogram. While it may be possible, it is not common practice in my experience. -->
-
+::::: {.columns}
+:::: {.column width="58%"}
 ```{r}
-#| label: sleep-histogram
-#| fig-width: 10
-#| fig-height: 3.6
-#| out-width: "85%"
-#| fig-alt: "Histogram of twelve fictional sleep durations. Counts in intervals 5 to under 6, 6 to under 7, 7 to under 8, 8 to under 9, and 9 to under 10 hours are 2, 4, 3, 2, and 1."
+#| label: histogram-overview
+#| fig-width: 7
+#| fig-height: 4.2
+#| out-width: "100%"
+#| fig-alt: "Histogram of sleep duration for twelve fictional students. Each touching bar counts students whose sleep duration falls within a one-hour interval from 5 to 10 hours."
 
-# Match yesterday's left-closed grouped table so students can trace each count
-# from the table to a bar; the empty space above a bin is not an observation.
-ggplot(practice, aes(sleep_hours)) +
-  geom_histogram(breaks = 5:10, closed = "left", fill = "#4D1979", color = "white") +
-  scale_x_continuous(breaks = 5:10) +
-  scale_y_continuous(breaks = 0:4) +
+# Use one-hour bins to make the connection between intervals and bar heights
+# easy to see before students examine distribution shape in the next slides.
+ggplot(tibble(sleep_hours = sleep), aes(sleep_hours)) +
+  geom_histogram(
+    binwidth = 1,
+    boundary = 5,
+    closed = "left",
+    fill = "#4D1979",
+    color = "white"
+  ) +
+  scale_x_continuous(breaks = 5:10, limits = c(5, 10), expand = c(0, 0)) +
   labs(x = "Sleep duration (hours)", y = "Number of students")
 ```
+::::
 
-**Where does a student reporting exactly 7 hours belong?**
+:::: {.column width="42%"}
+A histogram groups numerical values into intervals called **bins**.
 
-::: {.fragment}
-In **7 to less than 8 hours**, using these interval boundaries.
-:::
+- The horizontal axis shows the values and their units.
+- The height of each bar shows how many observations fall in that bin.
+- The bars touch because the bins cover adjacent intervals.
+
+Use the pattern of bars to examine the distribution's shape and spread.
+::::
+:::::
 
 ::: {.notes}
-- Identify the measured variable on the x-axis and the count on the y-axis.
-- Adjacent intervals share boundaries; an empty bin can still leave a gap.
-- These bins include the lower endpoint and exclude the upper endpoint. Read interval labels because software may use different conventions.
+- Contrast a histogram with a bar chart: histogram bins represent ordered numerical intervals, not separate categories.
+- Ask students what the tallest bar means in the context of sleep duration.
+- Counts across all bins should add up to the sample size, 12 students here.
 :::
 
 
-## Reading Distribution Shape
-
-<!-- This is good information, but it seems to come out of nowhere. We haven't event introduced histograms yet. -->
+## Reading Distribution Shape in a Histogram
 
 ```{r}
 #| label: distribution-shapes
@@ -810,6 +1058,36 @@ ggplot(shape_data, aes(value, count)) +
 - Ask students to point to the tail of each skewed distribution.
 - Symmetric does not necessarily mean normal; a distribution can also have multiple peaks.
 - Do not promise a stable distribution shape from a very small sample.
+:::
+
+
+## A Bimodal Distribution Has Two Peaks
+
+```{r}
+#| label: bimodal-resting-heart-rate
+#| fig-width: 9
+#| fig-height: 3.8
+#| out-width: "82%"
+#| fig-alt: "Histogram of fictional resting heart rates with one peak near 58 beats per minute and a second peak near 82 beats per minute."
+
+# Four-beat-per-minute bins preserve the two clusters built into this example.
+ggplot(bimodal_heart_rate, aes(resting_heart_rate)) +
+  geom_histogram(
+    binwidth = 4,
+    boundary = 48,
+    fill = "#4D1979",
+    color = "white"
+  ) +
+  scale_x_continuous(breaks = seq(50, 90, by = 8)) +
+  labs(x = "Resting heart rate (beats per minute)", y = "Number of adults")
+```
+
+**Bimodal** means that the distribution has two distinct peaks.
+
+::: {.notes}
+- The data are fictional and were constructed to make the two peaks easy to see.
+- Ask students to identify each peak before introducing the term bimodal.
+- Two peaks can suggest that the data combine subgroups, but the histogram alone cannot identify the subgroups or explain the pattern.
 :::
 
 
@@ -837,7 +1115,7 @@ Most clinic visits last **15-25 minutes**, but a few last **60-90 minutes**.
 :::
 
 
-## Bin Width Changes the Picture
+## Histogram: Bin Width Changes the Picture
 
 ```{r}
 #| label: bin-widths
@@ -875,211 +1153,7 @@ Only the grouping changed. Inspect more than one sensible bin width.
 :::
 
 
-
-
-
-
-
-
-
-
-## Quartiles and the Middle Half
-
-<!-- Let's create a slide that shows this with data. -->
-
-Quartiles mark positions in the ordered observations.
-
-| Position | Meaning | Sleep hours |
-|:---|:---|---:|
-| Q1 | 25th percentile | `r sprintf("%.2f", sleep_q[1])` |
-| Q2 | Median; 50th percentile | `r sprintf("%.2f", sleep_q[2])` |
-| Q3 | 75th percentile | `r sprintf("%.3f", sleep_q[3])` |
-
-**IQR = Q3 − Q1 = `r sprintf("%.3f", sleep_q[3] - sleep_q[1])` hours.**
-
-::: {.notes}
-- Minutes 37-47: quartiles, boxplot anatomy, and comparison.
-- IQR describes the width of the middle half of a distribution.
-- With small samples, interpolation conventions can produce slightly different quartiles; these use Excel QUARTILE.INC's convention.
-- We interpret quartiles today rather than requiring students to memorize a hand-calculation convention.
-- Adapted from Yan slide 42.
-:::
-
-
-## Reading a Boxplot
-
-```{r}
-#| label: sleep-boxplot
-#| fig-width: 10
-#| fig-height: 2.8
-#| out-width: "85%"
-#| fig-alt: "Horizontal boxplot of the twelve sleep values: Q1 is 6, median is 6.75, Q3 is 7.625 hours, and whiskers reach 5 and 9 hours. No observations fall beyond the 1.5-IQR fences."
-
-# Use geom_boxplot's interpolated quartiles, consistent with the table above.
-ggplot(practice, aes(x = sleep_hours, y = "Sleep")) +
-  geom_boxplot(width = 0.4, fill = "#E8DDF1", color = "#4D1979", linewidth = 1) +
-  scale_x_continuous(breaks = 5:9) +
-  labs(x = "Sleep duration (hours)", y = NULL)
-```
-
-- Line inside the box: **median**.
-- Box edges: **Q1 and Q3**. Box width: **IQR**.
-- Whiskers and separate points show values beyond the middle half.
-
-::: {.notes}
-- Ask students to locate the three quartiles from the previous slide.
-- Horizontal boxes use width; vertical boxes use height to show IQR.
-- A boxplot summarizes the distribution but can hide multiple peaks; inspect the histogram too.
-- Adapted from Yan slide 43.
-:::
-
-
-## Whiskers and Potential Outliers
-
-For the boxplots in this lesson:
-
-- Fences are **Q1 − 1.5 × IQR** and **Q3 + 1.5 × IQR**.
-- Whiskers reach the most extreme observed values **within the fences**.
-- Values beyond the fences appear as separate points.
-
-**Should we automatically delete a point beyond a whisker?**
-
-::: {.fragment}
-**No.** Check its accuracy and context before deciding what to do.
-:::
-
-::: {.notes}
-- Whiskers do not necessarily reach the minimum and maximum of the whole dataset.
-- The fences are calculated cutoffs; the whisker endpoints are actual observations.
-- A flagged point may be a valid observation. It is not automatically an error or proof of a different population.
-- Other boxplot conventions exist; this is the convention used in the displayed plots.
-:::
-
-
-## Check: Compare These Boxplots
-
-```{r}
-#| label: compare-boxplots
-#| fig-width: 10
-#| fig-height: 3.1
-#| out-width: "85%"
-#| fig-alt: "Horizontal boxplots of fictional stress scores. Group A has median 17.5, IQR 5.5, and a flagged point at 35. Group B has median 23 and IQR 11 with no flagged points."
-
-# Both groups share a score axis so box widths can be compared directly.
-ggplot(box_data, aes(score, group)) +
-  geom_boxplot(width = 0.45, fill = "#E8DDF1", color = "#4D1979",
-               linewidth = 1, outlier.size = 4) +
-  labs(x = "Fictional stress score (points)", y = "Group")
-```
-
-**Which group has the higher median? Larger IQR? A flagged outlier?**
-
-::: {.fragment}
-**B:** higher median and larger IQR. **A:** a flagged point at 35.
-:::
-
-::: {.notes}
-- Give students one minute to answer all three questions before revealing the response.
-- Group A is the workbook's stress_score variable; group B is an additional fictional comparison.
-- Group A median = 17.5 and IQR = 5.5; group B median = 23 and IQR = 11.
-- Group A's upper fence is 28.75, so 35 is flagged; the upper whisker ends at 25.
-- Adapted from Yan slide 44. This checks the boxplot skill required by Quiz 4 with a different example.
-:::
-
-
-## Z-Scores: Distance in SD Units
-
-<!-- Why would we calculate Z-scores? We need a transition here. -->
-
-$$z = \frac{\text{value} - \text{mean}}{\text{standard deviation}}$$
-
-| Z-score | Interpretation |
-|:---|:---|
-| 0 | At the mean |
-| Positive | Above the mean |
-| Negative | Below the mean |
-
-The magnitude tells us **how many SDs** the value is from the mean.
-
-::: {.notes}
-- Minutes 47-53: one worked example and a brief retrieval question.
-- When standardizing within our sample, use its mean and sample SD; a population reference uses the corresponding population quantities.
-- Z-scores require a nonzero SD but do not require a normal distribution simply to calculate and interpret distance.
-- Do not translate a z-score into a percentile or probability without distributional assumptions.
-- Adapted from Yan slides 47-49.
-:::
-
-
-## Check: Calculate and Interpret a Z-Score
-
-A fictional score distribution has **mean 30** and **SD 5**.
-
-**What is the z-score for a value of 20?**
-
-::: {.fragment}
-$$z = \frac{20-30}{5} = -2$$
-
-The value is **2 standard deviations below the mean**.
-:::
-
-::: {.notes}
-- Allow one minute for calculation and a written interpretation.
-- Ask why the answer is negative; a negative z-score is not a negative raw score.
-- Follow up verbally: a value of 35 has z = 1; a value of 30 has z = 0.
-- Do not equate a large absolute z-score with a clinical diagnosis or an automatic deletion rule.
-:::
-
-
-## Excel: Open the Practice Data
-
-<!-- Do we actually have practice data? -->
-
-[Open the fictional practice Excel workbook](assets/sleep_and_stress.xlsx){download="sleep_and_stress.xlsx" target="_blank"}
-
-| Column | Contents |
-|:---|:---|
-| A: student | Fictional IDs S01-S12 |
-| B: sleep_hours | Yesterday's 12 sleep values |
-| C: stress_score | New fictional scores for practice |
-
-**Row 1 contains headers. Rows 2-13 contain data.**
-
-::: {.notes}
-- Minutes 53-65: open the workbook, calculate summaries, create a histogram, and interpret it.
-- Open the workbook in Excel. If it opens in a browser, save it and open the saved file in Excel.
-- Demonstrate with sleep_hours; groups will apply the same steps to stress_score.
-- This file is a teaching example and does not replace students' assigned project datasets.
-- The student IDs are text labels, not an outcome to summarize.
-:::
-
-
-## Excel: Numerical Summaries {.compact}
-
-Enter formulas in empty cells **outside columns A-C**.
-
-| Summary | Formula for sleep_hours | Expected result |
-|:---|:---|---:|
-| n | `=COUNT(B2:B13)` | `r length(sleep)` |
-| Mean | `=AVERAGE(B2:B13)` | `r sprintf("%.2f", mean(sleep))` |
-| Sample SD | `=STDEV.S(B2:B13)` | `r sprintf("%.2f", sd(sleep))` |
-| Minimum | `=MIN(B2:B13)` | `r min(sleep)` |
-| Maximum | `=MAX(B2:B13)` | `r max(sleep)` |
-
-**What would you check if COUNT returned 11?**
-
-::: {.fragment}
-Check the selected range, blank cells, and numbers stored as text.
-:::
-
-::: {.notes}
-- Ask students to identify which output is a count and which outputs are measured in hours.
-- COUNT counts numeric observations in the selected variable, not necessarily all rows in a dataset.
-- Keep full precision in calculations; use two decimal places for displayed mean and SD.
-- Microsoft STDEV.S documentation: https://support.microsoft.com/en-us/excel/functions/stdev-s-function
-:::
-
-
-## Excel: Create a Histogram
+## Create a Histogram in Excel
 
 1. Select **B1:B13**, including the sleep_hours header.
 2. Choose **Insert → Statistic Chart → Histogram**.
@@ -1106,17 +1180,269 @@ A useful histogram description addresses:
 - **Spread:** the observed values and units.
 - **Possible outliers:** observations that stand apart and warrant checking.
 
-**What should you avoid claiming from this histogram alone?**
-
-::: {.fragment}
-A cause, a diagnosis, or a conclusion about all TCU students.
-:::
-
 ::: {.notes}
 - Demonstrate by describing the displayed Excel histogram, using its actual bin boundaries.
 - For the sleep sample, values span 5-9 hours and most observations fall between 6 and 8 hours; avoid insisting it has a precise population distribution shape.
 - A histogram supports descriptive statements; it does not establish causal effects or representativeness.
 - Connect this wording directly to Prep 3's requested histogram observations.
+:::
+
+
+## Boxplots
+
+::::: {.columns}
+:::: {.column width="58%"}
+```{r}
+#| label: boxplot-overview
+#| fig-width: 7
+#| fig-height: 4.2
+#| out-width: "100%"
+#| fig-alt: "Vertical boxplot of sleep duration for twelve fictional students with each observation shown as a dot. The boxplot summarizes the same values displayed by the dots."
+
+# Show the raw observations with the boxplot so students can see that the
+# compact summary represents the same twelve sleep-duration values.
+ggplot(practice, aes(x = "Sleep", y = sleep_hours)) +
+  geom_boxplot(
+    width = 0.4,
+    fill = "#E8DDF1",
+    color = "#4D1979",
+    linewidth = 1,
+    outlier.shape = NA
+  ) +
+  geom_jitter(width = 0.08, height = 0, size = 3.2, alpha = 0.75,
+              color = "#4D1979") +
+  scale_y_continuous(breaks = 5:9) +
+  labs(x = NULL, y = "Sleep duration (hours)")
+```
+::::
+
+:::: {.column width="42%"}
+A boxplot gives a compact summary of a numerical distribution.
+
+- It shows the distribution's center and spread.
+- Its compact form makes groups easy to compare on the same scale.
+- It can flag observations that fall far from the middle of the data.
+
+A boxplot can hide peaks, gaps, and sample size. Inspect the raw data or a histogram too.
+::::
+:::::
+
+::: {.notes}
+- Each dot represents one fictional student's sleep duration. The boxplot summarizes those same twelve values.
+- Read values along the vertical axis. The horizontal position only separates overlapping dots.
+- Use the next slide to identify the median, quartiles, IQR, and whiskers.
+- A boxplot does not require the distribution to be symmetric or normal.
+:::
+
+
+
+
+
+## Reading a Boxplot
+
+```{r}
+#| label: sleep-boxplot
+#| fig-width: 6
+#| fig-height: 3.2
+#| out-width: "60%"
+#| fig-alt: "Vertical boxplot of the twelve sleep values: Q1 is 6, median is 6.75, Q3 is 7.625 hours, and whiskers reach 5 and 9 hours. No observations fall beyond the 1.5-IQR fences."
+
+# Use geom_boxplot's interpolated quartiles, consistent with the table above.
+ggplot(practice, aes(x = "Sleep", y = sleep_hours)) +
+  geom_boxplot(width = 0.4, fill = "#E8DDF1", color = "#4D1979", linewidth = 1) +
+  scale_y_continuous(breaks = 5:9) +
+  labs(x = NULL, y = "Sleep duration (hours)") +
+  theme(axis.title.y = element_text(size = 9))
+```
+
+- Line inside the box: **median**.
+- Lower and upper box edges: **Q1 and Q3**. Box height: **IQR**.
+- Whiskers and separate points show values beyond the middle half.
+
+::: {.notes}
+- Ask students to locate the three quartiles from the previous slide.
+- The height of the box shows the IQR because the numerical values run vertically.
+- A boxplot summarizes the distribution but can hide multiple peaks; inspect the histogram too.
+- Adapted from Yan slide 43.
+:::
+
+
+## Whiskers and Potential Outliers
+
+For the boxplots in this lesson:
+
+- Fences are **Q1 − 1.5 × IQR** and **Q3 + 1.5 × IQR**.
+- Whiskers reach the most extreme observed values **within the fences**.
+- Values beyond the fences appear as separate points.
+
+::: {.notes}
+- Whiskers do not necessarily reach the minimum and maximum of the whole dataset.
+- The fences are calculated cutoffs; the whisker endpoints are actual observations.
+- A flagged point may be a valid observation. It is not automatically an error or proof of a different population.
+- Other boxplot conventions exist; this is the convention used in the displayed plots.
+:::
+
+
+## Check: Compare These Boxplots
+
+```{r}
+#| label: compare-boxplots
+#| fig-width: 10
+#| fig-height: 3.1
+#| out-width: "85%"
+#| fig-alt: "Vertical boxplots of fictional stress scores. Group A has median 17.5, IQR 5.5, and a flagged point at 35. Group B has median 23 and IQR 11 with no flagged points."
+
+# Both groups share a score axis so box heights can be compared directly.
+ggplot(box_data, aes(group, score)) +
+  geom_boxplot(width = 0.45, fill = "#E8DDF1", color = "#4D1979",
+               linewidth = 1, outlier.size = 4) +
+  labs(x = "Group", y = "Fictional stress score (points)") +
+  theme(axis.title.y = element_text(size = 9))
+```
+
+**Which group has the higher median? Larger IQR? A flagged outlier?**
+
+::: {.fragment}
+**B:** higher median and larger IQR. **A:** a flagged point at 35.
+:::
+
+::: {.notes}
+- Give students one minute to answer all three questions before revealing the response.
+- Group A is the workbook's stress_score variable; group B is an additional fictional comparison.
+- Group A median = 17.5 and IQR = 5.5; group B median = 23 and IQR = 11.
+- Group A's upper fence is 28.75, so 35 is flagged; the upper whisker ends at 25.
+- Adapted from Yan slide 44. This checks the boxplot skill required by Quiz 4 with a different example.
+:::
+
+
+## Creating a Boxplot in Excel
+
+1. Select **B1:B13**, including the sleep_hours header.
+2. Choose **Insert → Statistic Chart → Box & Whisker**.
+3. Change the chart title to **Sleep Duration** and add the vertical axis title **Hours**.
+4. Right-click the box and choose **Format Data Series**. Select **Show inner points** to display each student's value.
+
+**Find the median and IQR. Does Excel flag any potential outliers?**
+
+::: {.fragment}
+Median = **6.75 hours**; IQR = **1.625 hours**. Excel flags **no potential outliers**.
+:::
+
+::: {.notes}
+- On some versions, use Insert → Recommended Charts → All Charts → Box & Whisker.
+- Ask students to create the chart before revealing the answer.
+- The lower and upper edges of the box are Q1 = 6 and Q3 = 7.625 hours, so IQR = 7.625 − 6 = 1.625 hours.
+- Excel's default quartile setting may differ by version. If needed, open Format Data Series and choose Inclusive Median to match QUARTILE.INC and the values used in this lesson.
+:::
+
+
+## Bar Chart
+
+1. Open the **height_and_weight** sheet and select **A1:B21**, including the headers.
+2. Choose **Insert → PivotTable**. Place the PivotTable in a new worksheet.
+3. Drag **sex** to **Rows** and **id** to **Values**. Confirm that Values displays **Count of id**.
+4. Select the PivotTable and choose **Insert → Bar Chart → 2-D Clustered Bar**.
+5. Title the chart **Students by Sex**. Label the horizontal axis **Number of students**.
+
+::: {.notes}
+- Ask students to create the PivotTable and chart before revealing the answer.
+- If Excel summarizes id as Sum of id, open Value Field Settings and select Count.
+- The PivotTable should show Female = 12, Male = 6, and (blank) = 2.
+- Keep the blank category visible. Removing it would hide two records with missing sex values.
+- A bar chart uses separate bars for categories. The bars do not touch because the categories are distinct rather than adjacent numerical intervals.
+:::
+
+
+## Density Plot
+
+::::: {.columns}
+:::: {.column width="64%"}
+```{r}
+#| label: sleep-density-plot
+#| fig-width: 7.5
+#| fig-height: 4.2
+#| out-width: "100%"
+#| fig-alt: "Density plot of sleep duration for twelve fictional students. The smooth curve has one broad peak near 6.5 to 7 hours and tapers toward 5 and 9 hours."
+
+# A density plot replaces histogram bins with a smooth curve. The shaded area
+# emphasizes the distribution's overall shape rather than individual students.
+ggplot(practice, aes(x = sleep_hours)) +
+  geom_density(
+    adjust = 1,
+    fill = "#4D1979",
+    color = "#4D1979",
+    alpha = 0.35,
+    linewidth = 1.2
+  ) +
+  scale_x_continuous(breaks = 5:9, limits = c(4.5, 9.5)) +
+  labs(x = "Sleep duration (hours)", y = "Density")
+```
+::::
+
+:::: {.column width="36%"}
+A density plot shows a **smoothed estimate** of a distribution's shape.
+
+- Higher parts of the curve indicate where observations are more concentrated.
+- The total area under the curve equals 1.
+- The amount of smoothing affects the curve.
+
+With only 12 observations, use this plot as a rough summary.
+::::
+:::::
+
+::: {.notes}
+- This graph uses the same twelve fictional sleep values as the histogram and boxplot.
+- A density plot does not show counts. Its vertical scale represents density, and the total area under the curve equals 1.
+- The curve extends slightly beyond the observed minimum and maximum because the smoothing method places a small amount of density around each observation.
+- With such a small sample, avoid treating bumps in the curve as stable features of a larger population.
+:::
+
+
+## Dot Plot
+
+::::: {.columns}
+:::: {.column width="64%"}
+```{r}
+#| label: sleep-dot-plot
+#| fig-width: 7.5
+#| fig-height: 4.2
+#| out-width: "100%"
+#| fig-alt: "Dot plot of sleep duration for twelve fictional students. Dots are stacked at repeated values: one at 5, one at 5.5, two each at 6, 6.5, 7, and 8, one at 7.5, and one at 9 hours."
+
+# Stack repeated half-hour values so each dot remains visible and represents
+# one student. A half-hour bin matches the precision of the recorded data.
+ggplot(practice, aes(x = sleep_hours)) +
+  geom_dotplot(
+    binwidth = 0.5,
+    method = "histodot",
+    stackdir = "up",
+    stackratio = 1.1,
+    dotsize = 0.9,
+    fill = "#4D1979",
+    color = "white"
+  ) +
+  scale_x_continuous(breaks = 5:9, limits = c(4.5, 9.5)) +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "Sleep duration (hours)")
+```
+::::
+
+:::: {.column width="36%"}
+A dot plot displays the **individual observations**.
+
+- Each dot represents one student.
+- Dots stack when students report the same value.
+- Gaps and repeated values remain visible.
+
+Dot plots work especially well for small datasets.
+::::
+:::::
+
+::: {.notes}
+- Ask students to confirm that the graph contains twelve dots.
+- The tallest stacks occur at 6, 6.5, 7, and 8 hours, with two students at each value.
+- Unlike a density plot, this graph preserves every observed value and directly shows the small sample size.
+- The vertical position only separates repeated observations; it does not represent a separate measured variable.
 :::
 
 
@@ -1215,23 +1541,6 @@ Scatterplots come in the next lesson. Prep 3 also requires variable classificati
 - Preserve the existing assignment: mean and SD remain required even for skewed data.
 - Today's median, IQR, and boxplot work supports interpretation and Quiz 4; it does not add a new graded deliverable.
 - Do not announce a new deadline here; use the confirmed course deadline.
-:::
-
-
-## Exit Check
-
-1. Which direction is the skew if the longer tail extends toward **larger values**?
-2. Does SD describe variation among **observations** or uncertainty in the **mean**?
-3. What part of a boxplot represents the **IQR**?
-
-::: {.fragment}
-**Right-skewed. Variation among observations. The box from Q1 to Q3.**
-:::
-
-::: {.notes}
-- Allow one minute for individual responses before revealing the answers.
-- Collect or scan responses to identify anything needing a brief recap next class.
-- This is an ungraded classroom check; students may respond on paper.
 :::
 
 
