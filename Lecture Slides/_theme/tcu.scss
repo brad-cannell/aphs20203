@@ -151,6 +151,12 @@ $code-block-color: $tcu-white;
   box-shadow: none;
 }
 
+// Fill the available slide width by default, matching the existing
+// full-width-table examples. Tables in intentional columns fill their column.
+.reveal .slides table {
+  width: 100%;
+}
+
 .reveal table th,
 .reveal table td {
   border-bottom-color: $tcu-grey;

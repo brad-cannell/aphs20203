@@ -20,6 +20,10 @@ format:
 
 The relative path depends on the deck's nesting depth, so verify that it resolves to `Lecture Slides/_theme/tcu.scss`. Do not copy `theme.scss` or a TCU logo into every presentation folder. Put course-wide changes in the shared theme or shared `assets/`; keep genuinely deck-specific rules in the deck's `custom.scss`.
 
+### Question headings and tables
+
+Use `## Question: Topic` for multiple-choice and select-all-that-apply slides. Markdown tables fill the available slide content width by default through the shared theme. Tables in intentional column layouts fill their column. New tables need no `full-width-table` wrapper; existing wrappers remain compatible.
+
 ### CSS class names
 
 Prefer native Quarto and Reveal.js classes. Name reusable custom classes for their visual behavior rather than the slide topic—for example, `.grid-2`, `.align-center`, or `.text-small`. Compose small utilities when a slide needs more than one effect. Reserve content-specific names for bespoke components whose structure and styling are inseparable, such as a unique transition diagram.
