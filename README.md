@@ -24,6 +24,8 @@ The relative path depends on the deck's nesting depth, so verify that it resolve
 
 Use `## Question: Topic` for multiple-choice and select-all-that-apply slides. Markdown tables fill the available slide content width by default through the shared theme. Tables in intentional column layouts fill their column. New tables need no `full-width-table` wrapper; existing wrappers remain compatible.
 
+Pad Markdown table cells with spaces so the column-separating pipes line up vertically in the `.qmd` source. Size each column to its longest cell and extend separator dashes to match, preserving alignment colons, inline code, and inline R expressions. For new Reveal.js decks, set `tbl-colwidths: false` under `format: revealjs:` so source padding does not determine rendered column widths.
+
 ### CSS class names
 
 Prefer native Quarto and Reveal.js classes. Name reusable custom classes for their visual behavior rather than the slide topic—for example, `.grid-2`, `.align-center`, or `.text-small`. Compose small utilities when a slide needs more than one effect. Reserve content-specific names for bespoke components whose structure and styling are inseparable, such as a unique transition diagram.
