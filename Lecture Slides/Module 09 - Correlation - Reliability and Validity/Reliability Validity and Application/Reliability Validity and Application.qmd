@@ -1,0 +1,459 @@
+---
+title: "Reliability and Validity"
+subtitle: "APHS 20203 · November 4, 2026"
+format:
+  revealjs:
+    theme: [default, ../../_theme/tcu.scss]
+    html-math-method: mathml
+    slide-level: 2
+    slide-number: c/t
+    tbl-colwidths: false
+    incremental: false
+    embed-resources: false
+    width: 1244
+    height: 700
+    logo: ../../assets/tcu-logo-purple.svg
+resources:
+  - assets/reliability_validity_practice.xlsx
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+
+## Independent Study for November 4
+
+We will not meet in person on November 4. Work through these slides on your own.
+
+- Read the explanations, then try each question before moving to its answer.
+- Download the [Excel practice workbook](assets/reliability_validity_practice.xlsx). Complete **Practice**, then compare with **Answer Key**.
+- Use the final checklist to review your group's Prep 3 work.
+
+Allow about **60–80 minutes**, including practice and your Prep 3 review.
+
+::: {.notes}
+- Suggested allocation: concepts and questions, 30 minutes; calibration workbook, 10 minutes; categorical refresher, 15 minutes; Prep 3 review, 15–25 minutes.
+- All explanations needed for independent study are visible on the slides. Notes contain optional teaching cues only.
+:::
+
+
+## Learning Objectives
+
+By the end of this lesson, you should be able to:
+
+- Distinguish reliability from validity using a measurement example.
+- Identify five types of reliability.
+- Distinguish measurement validity, internal validity, and external validity.
+- Reconstruct a 2×2 table, choose denominators, and interpret association measures.
+- Check that your Prep 3 materials answer the assigned descriptive questions.
+
+
+## A Scale That Always Reads High
+
+A wellness team checks a scale with a **known 60 kg calibration mass**.
+
+| Reading 1 | Reading 2 | Reading 3 |
+| --------- | --------- | --------- |
+| 65 kg     | 65 kg     | 65 kg     |
+
+The readings agree with one another. Each is **5 kg above the reference**.
+
+**Would repeating this measurement many more times solve the problem?**
+
+
+## Consistency and Accuracy
+
+**Reliability** concerns consistency under comparable conditions when what we measure has not changed.
+
+**Measurement validity** concerns whether a measure supports the intended interpretation: does it measure what we want it to measure?
+
+The scale is repeatable but inaccurate. Repeating it does not remove the 5 kg bias. It needs calibration or correction before use.
+
+**Reliable measurements can still be wrong.**
+
+::: {.notes}
+- For a physical calibration mass, accuracy is easy to assess against a reference. For constructs such as stress, validity requires several kinds of evidence.
+:::
+
+
+## Why Measurements Differ
+
+| Explanation      | Example                                                 | What to Check                   |
+| ---------------- | ------------------------------------------------------- | ------------------------------- |
+| True change      | The mass on the scale actually changes                  | Whether the object changed      |
+| Systematic error | The scale reads 5 kg high each time                     | Calibration against a reference |
+| Random error     | Readings fluctuate under otherwise identical conditions | Repeatability and procedures    |
+
+A change in a score does not, by itself, show that a program worked.
+
+::: {.notes}
+- Random error reduces consistency. Systematic error can preserve consistency while undermining accuracy.
+:::
+
+
+## Reliability Over Time
+
+**Test–retest reliability:** the same people take the same instrument on separate occasions, during a period when the underlying characteristic should be stable.
+
+**Intra-rater reliability:** the same rater scores the same material again. For example, one instructor scores the same recorded presentation twice.
+
+The key distinction is whether we are studying the **instrument across occasions** or the **repeatability of one person's judgments**.
+
+
+## Reliability Across Raters and Forms
+
+**Inter-rater reliability:** different raters independently score the same material using the same criteria.
+
+Example: two instructors score the same recorded presentation.
+
+**Parallel-forms reliability:** people complete two versions designed to measure the same construct with equivalent content and difficulty.
+
+Example: two equivalent forms of a vocabulary test. Merely using two different tests does not make them equivalent.
+
+
+## Internal Consistency
+
+Internal consistency asks whether items intended to measure the **same construct** are related to one another.
+
+A stress scale might ask about feeling overwhelmed and difficulty relaxing. These items should have a meaningful relationship if they reflect the same construct.
+
+Internal consistency alone does not establish that the scale measures stress accurately or covers all important aspects of stress.
+
+::: {.notes}
+- No calculation of alpha or other internal-consistency coefficients is required for this lesson.
+:::
+
+
+## Question: Types of Reliability
+
+Match each situation to a reliability type.
+
+1. Two observers independently score the same video.
+2. One observer scores that video again a week later.
+3. Students repeat the same stable-attribute questionnaire after a week.
+4. Students complete equivalent versions A and B of a test.
+5. Researchers examine relationships among items on a stress scale.
+
+Choices: **inter-rater, intra-rater, test–retest, parallel-forms, internal consistency**.
+
+
+## Answers: Types of Reliability
+
+| Situation                    | Reliability Type     |
+| ---------------------------- | -------------------- |
+| Two observers                | Inter-rater          |
+| One observer scoring again   | Intra-rater          |
+| Same questionnaire over time | Test–retest          |
+| Equivalent test versions     | Parallel-forms       |
+| Related items within a scale | Internal consistency |
+
+For repeated measurements, consider actual change, memory, and practice effects before interpreting differences as measurement error.
+
+
+## Improving Measurement Consistency
+
+- Use clear instructions and the same measurement conditions.
+- Train raters with a shared scoring rubric and practice examples.
+- Check equipment against known references.
+- Review ambiguous items and scoring rules.
+
+A reliability coefficient summarizes a particular kind of consistency. Its interpretation depends on the method, population, and intended use. There is no single cutoff that makes every measure acceptable.
+
+::: {.notes}
+- Retain the introductory idea that higher reliability usually means more consistency, without teaching a universal 0.70 acceptance rule.
+:::
+
+
+## Question: A Consistent Error
+
+A scale gives almost identical readings each time, but all readings are 5 kg too high. Which statement is best supported?
+
+A. It is reliable and accurate for measuring mass.
+
+B. It is repeatable, but the readings have a systematic error.
+
+C. It is accurate because repeated readings agree.
+
+D. More repetitions will necessarily remove the error.
+
+
+## Answer: A Consistent Error
+
+**B. The readings are repeatable but systematically too high.**
+
+Reliability is necessary, but not sufficient, for valid measurement. A measure that changes unpredictably cannot support dependable interpretations.
+
+Consistency alone does not show that the measure captures the intended quantity or construct. One correct reading by chance does not establish validity either.
+
+
+## Three Questions About Validity
+
+| Concept              | Main Question                                                   |
+| -------------------- | --------------------------------------------------------------- |
+| Measurement validity | Does the measure capture the intended quantity or construct?    |
+| Internal validity    | Is the study's conclusion credible, given bias and confounding? |
+| External validity    | Do the findings apply to other people, settings, or times?      |
+
+For a causal claim, internal validity includes whether alternative explanations have been adequately addressed.
+
+
+## Evidence for Measurement Validity
+
+**Content validity:** does the instrument cover the relevant parts of the construct?
+
+**Criterion validity:** do scores agree with an appropriate reference or predict a relevant criterion? The quality of the reference matters.
+
+**Construct validity:** do scores behave as theory predicts, including relationships with related and different constructs?
+
+Validity concerns a particular interpretation and use of scores. Evidence from one population may not establish validity for another.
+
+
+## Example: A Student Stress Questionnaire
+
+| Evidence                                              | Main Validity Concept |
+| ----------------------------------------------------- | --------------------- |
+| Experts check coverage of relevant sources of stress  | Content validity      |
+| Scores agree with an appropriate reference assessment | Criterion validity    |
+| Scores relate to overwhelm as theory predicts         | Construct validity    |
+
+Stress has no simple known reference like a calibration mass. One correlation with another questionnaire is only part of the evidence.
+
+
+## Generalizability
+
+A study recruits volunteers from one university's competitive athletics program.
+
+Its measurements could be consistent and accurate, yet its findings may not apply to all college students or to older adults.
+
+Consider who participated, who did not, the setting, and the conditions of measurement.
+
+**A larger sample from the same narrow group does not automatically make the findings broadly generalizable.**
+
+
+## Question: Which Validity Concern?
+
+A researcher asks whether a finding from university athletes applies to adults living in rural communities. Which concern is this?
+
+A. Internal consistency
+
+B. Intra-rater reliability
+
+C. External validity
+
+D. Parallel-forms reliability
+
+
+## Answer: External Validity
+
+**C. External validity concerns generalizability.**
+
+The question asks whether findings apply beyond the study's participants and setting.
+
+Good measurement helps, but it does not resolve differences in age, health, activity, or environment between these populations.
+
+
+## Excel Practice A: Calibration Readings
+
+Open **Practice** in the [workbook](assets/reliability_validity_practice.xlsx).
+
+Six fictional calibration masses have known reference values and two scale readings each.
+
+1. Calculate differences between readings and between each reading and its reference in **G6:I11**.
+2. Average each difference column in **G12:I12**.
+3. Calculate the correlation between the reference and Reading 1 in **G13**.
+4. Write your interpretation before opening **Answer Key**.
+
+::: {.notes}
+- Allow about 10 minutes. Students can calculate the differences by hand if Excel is unavailable.
+:::
+
+
+## Excel Formulas for Practice A
+
+| Cell | Formula                    | Meaning                       |
+| ---- | -------------------------- | ----------------------------- |
+| G6   | `=D2-C2`                   | Reading 2 minus Reading 1     |
+| H6   | `=C2-B2`                   | Reading 1 minus reference     |
+| I6   | `=D2-B2`                   | Reading 2 minus reference     |
+| G12  | `=AVERAGE(G6:G11)`         | Mean difference               |
+| G13  | `=CORREL(B2:B7,C2:C7)`     | Reference–reading correlation |
+
+Fill G6:I6 down through row 11. Copy G12 across through I12. Keep the original data in A2:D7 unchanged.
+
+
+## Practice A: What the Results Mean
+
+- Mean difference between repeated readings: **0 kg**.
+- Mean difference from the reference, for either reading: **+5 kg**.
+- Correlation between reference and Reading 1: **r = 1.000**.
+
+The repeated readings agree perfectly, but the scale is consistently 5 kg high.
+
+**Correlation measures linear association. It does not establish agreement or accuracy.** The paired differences reveal the systematic error.
+
+
+## Categorical Refresher: A One-Week Cohort
+
+Now use a separate set of **20 fictional students**. All begin without fatigue and complete one week of follow-up.
+
+- **Short sleep:** usual sleep below 7 hours per night.
+- **Not short:** usual sleep of at least 7 hours per night.
+- **Outcome:** a reported new fatigue episode during follow-up.
+
+This teaching example uses a defined follow-up period so we can calculate risks. It makes no claim about real students or a clinical sleep threshold.
+
+::: {.notes}
+- Budget about 15 minutes for the categorical refresher, including Excel Practice B and the following answer slides.
+:::
+
+
+## Excel Practice B: A 2×2 Table
+
+Use rows **13–32** on **Practice**. Complete the table in **G23:I25**.
+
+| Sleep Group | New Fatigue: Yes | New Fatigue: No | Total |
+| ----------- | ---------------- | --------------- | ----- |
+| Short       | ?                | ?               | ?     |
+| Not short   | ?                | ?               | ?     |
+| Total       | ?                | ?               | 20    |
+
+Count each student once. The four interior cells should add to 20.
+
+If Excel is unavailable, tally the categories by hand and use a calculator.
+
+
+## Excel Counts and Totals
+
+In **G23**, enter:
+
+```excel
+=COUNTIFS($B$13:$B$32,$F23,$C$13:$C$32,G$22)
+```
+
+This counts rows where the sleep group matches F23 and the outcome matches G22.
+
+- Copy across to H23, then down through row 24.
+- In I23, enter `=SUM(G23:H23)` and copy to I24.
+- In G25, enter `=SUM(G23:G24)` and copy across to I25.
+
+The `$` signs keep the data ranges and appropriate labels fixed as you copy.
+
+
+## Question: Choosing a Denominator
+
+| Sleep Group | New Fatigue: Yes | New Fatigue: No | Total |
+| ----------- | ---------------- | --------------- | ----- |
+| Short       | 6                | 4               | 10    |
+| Not short   | 2                | 8               | 10    |
+| Total       | 8                | 12              | 20    |
+
+**Before calculating:** which denominator answers “What proportion of short sleepers developed fatigue?”
+
+A. 6 &emsp; B. 8 &emsp; C. 10 &emsp; D. 20
+
+
+## The Denominator Defines the Question
+
+**C. Use the 10 short sleepers as the denominator.**
+
+| Question                                | Calculation | Result |
+| --------------------------------------- | ----------- | ------ |
+| Risk among short sleepers               | 6 / 10      | 60%    |
+| Risk among students without short sleep | 2 / 10      | 20%    |
+| Short sleepers among those with fatigue | 6 / 8       | 75%    |
+
+The last row describes the exposure distribution **among cases**. It is not the risk among short sleepers.
+
+
+## Risk Ratio and Risk Difference
+
+Complete **G27:G30** in the workbook.
+
+| Measure          | Excel Formula | Answer               |
+| ---------------- | ------------- | -------------------- |
+| Short-sleep risk | `=G23/I23`    | 60%                  |
+| Other-group risk | `=G24/I24`    | 20%                  |
+| Risk ratio       | `=G27/G28`    | 3.00                 |
+| Risk difference  | `=G27-G28`    | 40 percentage points |
+
+The one-week risk was **3 times as high**, or **40 percentage points higher**, among short sleepers in this fictional sample.
+
+::: {.notes}
+- In Excel, format the two risks and their difference as Percent. The difference displays as 40.0%; interpret it as 40 percentage points, not a 40% relative increase.
+:::
+
+
+## Odds Ratio Refresher
+
+Odds compare those with the outcome with those without it.
+
+- Short-sleep odds: **6 / 4 = 1.5**.
+- Other-group odds: **2 / 8 = 0.25**.
+- Odds ratio: **1.5 / 0.25 = 6.00**.
+
+In **G31**, use `=(G23*H24)/(H23*G24)`.
+
+Here, **OR = 6** and **RR = 3**. Report the measure you calculated. “Six times the odds” does not mean “six times the risk.”
+
+::: {.notes}
+- A conventional case-control sample usually supports an odds ratio; its sample proportions do not directly estimate population risks. This exercise is a cohort with complete follow-up.
+:::
+
+
+## Interpretation and Measurement Limits
+
+The sample shows an association between short sleep and subsequent fatigue. It does not establish causation.
+
+- **Measurement:** did everyone interpret “fatigue” in the same way?
+- **Internal validity:** could other differences between the groups explain the association?
+- **External validity:** would this volunteer sample represent other students or adults?
+
+This exercise is descriptive. We will address inference later. Do not interpret these calculations as a test of statistical significance.
+
+
+## Prep 3 Application
+
+Return to your group's assigned project dataset and variables.
+
+1. Check the required continuous-variable summaries.
+2. Inspect the histogram's labels and description of shape and unusual observations.
+3. Inspect the scatterplot's axes, pairing, and description of direction, strength, and form.
+4. Include the required interpretations and individual contributions.
+
+**Today's categorical calculations are lesson practice. They add no graded deliverable to Prep 3.**
+
+
+## Prep 3 Procedures and Deadline
+
+- Use the **Continuous Data Summaries and Graphs** lesson for summary and histogram procedures.
+- Use the **Scatterplots and Correlation** lesson for the Excel scatterplot procedure.
+- Follow your assigned variables and the current Prep 3 instructions in D2L. Prep 3 remains descriptive; r and r² are not added requirements.
+
+**Prep 3 is due November 4 at 11:30 p.m. Central.** The canceled class meeting does not change that deadline.
+
+::: {.notes}
+- The preparation task records verification of the live D2L deadline on 2026-10-30.
+:::
+
+
+## Final Check Before Quiz 4
+
+Without looking back, explain:
+
+- How a measurement can be reliable but invalid.
+- How inter-rater, intra-rater, and test–retest reliability differ.
+- What internal consistency and parallel-forms reliability assess.
+- How measurement validity differs from internal and external validity.
+
+Also review the earlier lessons on descriptive statistics, z-scores, scatterplots, correlation matrices, r², and association versus causation for **Quiz 4 on November 9**.
+
+
+## Sources and Further Reading {.compact}
+
+- Course lecture materials: *Correlations and Reliability/Validity*, reliability and validity section. Huck, Chapter 4, is optional supporting reading.
+- [COSMIN definitions of measurement properties](https://www.cosmin.nl/wp-content/uploads/COSMIN-manual-V2_final.pdf), Table 1.1. Supports the reliability and measurement-validity distinctions.
+- [ETS: Test Reliability, Basic Concepts](https://www.ets.org/research/policy_research_reports/publications/report/2018/jysw.html). Additional explanations of reliability types.
+- [CDC Field Epidemiology Manual: Analyzing and Interpreting Data](https://www.cdc.gov/field-epi-manual/php/chapters/analyze-interpret-data.html). Reference for 2×2 tables and association measures.
+
+All calibration and cohort observations in this lesson and its workbook are fictional teaching data.
