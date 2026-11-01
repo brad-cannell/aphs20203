@@ -20,6 +20,7 @@ project:
     - "Module 06-07 - Analytic Epidemiology/Ecologic Studies and Confounding/Ecologic Studies and Confounding.qmd"
     - "Module 08 - Statistics Overview and Descriptive Statistics/Statistical Thinking and Describing Data/Statistical Thinking and Describing Data.qmd"
     - "Module 08 - Statistics Overview and Descriptive Statistics/Continuous Data Summaries and Graphs/Continuous Data Summaries and Graphs.qmd"
+    - "Module 09 - Correlation - Reliability and Validity/Scatterplots and Correlation/Scatterplots and Correlation.qmd"
   resources:
     - "assets/tcu-logo.svg"
     - "assets/tcu-logo-purple.svg"
