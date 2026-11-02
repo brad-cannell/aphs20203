@@ -66,3 +66,10 @@ Interactive slide decks for APHS 20203.
 
 - [View interactive slides](Module 08 - Statistics Overview and Descriptive Statistics/Continuous Data Summaries and Graphs/Continuous Data Summaries and Graphs.qmd)
 - [Download PDF](Module 08 - Statistics Overview and Descriptive Statistics/Continuous Data Summaries and Graphs/Continuous Data Summaries and Graphs.pdf)
+
+## Module 9: Correlation — Reliability and Validity
+
+### Scatterplots and Correlation
+
+- [View interactive slides](Module 09 - Correlation - Reliability and Validity/Scatterplots and Correlation/Scatterplots and Correlation.qmd)
+- [Download PDF](Module 09 - Correlation - Reliability and Validity/Scatterplots and Correlation/Scatterplots and Correlation.pdf)

@@ -263,6 +263,46 @@ $code-block-color: $tcu-white;
   align-items: center;
 }
 
+// Opt in to outlined text boxes with {.columns .text-columns}. An explicit
+// class keeps the layout predictable without inferring a slide's content type.
+.reveal .columns.text-columns {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75em;
+
+  > .column {
+    // Shrink the authored widths to accommodate the gap, retaining their ratio.
+    flex: 0 1 auto;
+    align-self: stretch;
+    min-width: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 2px solid $tcu-purple;
+    padding: 0.65em;
+
+    // The box padding supplies spacing; Quarto's wrapper margins would inset
+    // an animated header and keep its border from meeting the box outline.
+    > :is(.incremental, .fragment):first-child {
+      margin: 0;
+    }
+
+    // Treat an opening heading or bold paragraph as the box title. Recognize
+    // incremental/fragment wrappers too, so animation does not change styling.
+    > :is(h3, h4, h5, h6, p:has(> strong:only-child)):first-child,
+    > :is(.incremental, .fragment):first-child > :is(h3, h4, h5, h6, p:has(> strong:only-child)):first-child {
+      // Overlap the outer outline to avoid doubling the header's border.
+      margin: calc(-0.65em - 2px) calc(-0.65em - 2px) 0.65em;
+      border: 2px solid $tcu-purple;
+      padding: 0.35em 0.65em;
+      background-color: #eee6f4;
+      color: $tcu-black;
+      font-size: 1em;
+      font-weight: bold;
+      line-height: inherit;
+    }
+  }
+}
+
 .reveal .panel {
   padding: 0.7em 0.8em;
   border-top: 0.16em solid $tcu-purple;

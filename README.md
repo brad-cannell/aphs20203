@@ -30,6 +30,25 @@ Pad Markdown table cells with spaces so the column-separating pipes line up vert
 
 Prefer native Quarto and Reveal.js classes. Name reusable custom classes for their visual behavior rather than the slide topic—for example, `.grid-2`, `.align-center`, or `.text-small`. Compose small utilities when a slide needs more than one effect. Reserve content-specific names for bespoke components whose structure and styling are inseparable, such as a unique transition diagram.
 
+For text-only, two-column slides using the TCU theme, use `.text-columns` by default on the columns container:
+
+```markdown
+:::: {.columns .text-columns}
+::: {.column width="50%"}
+**First Heading**
+
+First column text.
+:::
+::: {.column width="50%"}
+**Second Heading**
+
+Second column text.
+:::
+::::
+```
+
+The class supplies equal-height boxes, a gap, purple outlines, and light purple headers with bold black text. Start each column with a heading or a bold paragraph; incremental and fragment wrappers are supported. This is an authoring default, applied explicitly with the class. Use plain `.columns` for slides containing plots, images, tables, or other layouts that should keep their existing styling.
+
 ### Python setup
 
 This repository owns the course's Python environment, dependency versions, and operating instructions. KWB continues to own the reusable scripts in `/Users/bradcannell/Desktop/Git/knowledge-workbench/_presentations/scripts/` and the general presentation guides. Those scripts remain an external dependency; this change separates the Python environments, not the script repositories.

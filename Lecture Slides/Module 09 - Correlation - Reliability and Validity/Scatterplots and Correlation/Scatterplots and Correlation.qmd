@@ -23,8 +23,6 @@ execute:
   warning: false
   message: false
   freeze: false
-
-# Should we also work a little bit of regression into this lesson? See '/Users/bradcannell/Library/CloudStorage/Dropbox/Teaching/Courses - Old/Epidemiology III - UTHealth/Modules/05 Introduction to Regression/Archive/introduction_to_regression.pptx'
 ---
 
 
@@ -44,6 +42,16 @@ practice <- readxl::read_excel(
 r_sleep <- cor(practice$sleep_hours, practice$stress_score)
 matrix_values <- cor(select(practice, sleep_hours, stress_score, screen_hours))
 
+# Compare the mean-only prediction with a simple least-squares line, including
+# an intercept, to explain r² using the same observations as the Excel practice.
+# This follows the mean-versus-line comparison in the earlier regression lesson.
+sleep_model <- lm(stress_score ~ sleep_hours, data = practice)
+stress_mean <- mean(practice$stress_score)
+regression_data <- practice |>
+  mutate(predicted_stress = predict(sleep_model, newdata = practice))
+ss_mean <- sum((practice$stress_score - stress_mean)^2)
+ss_line <- sum((regression_data$stress_score - regression_data$predicted_stress)^2)
+
 # One consistent, explicitly fictional example carries the lecture. Additional
 # teaching panels isolate direction, curvature, and an influential observation.
 direction_data <- tibble(
@@ -55,6 +63,22 @@ direction_data <- tibble(
                    levels = c("Positive", "Negative", "Little Linear Pattern"))
 )
 curve_data <- tibble(x = seq(-3, 3, by = 0.5), y = x^2)
+
+# Strength panels share one underlying line (slope 0.8) and one standardized
+# noise vector; only the noise scale changes. Strength therefore differs while
+# the slope stays fixed, supporting the note that steepness is not strength.
+# The seed fixes the points so the slide is identical on every render
+# (r is about 0.98, 0.83, and 0.50; not displayed because r comes later).
+set.seed(20203)
+strength_x <- seq(1, 12, length.out = 30)
+strength_z <- as.numeric(scale(rnorm(30)))
+strength_data <- tibble(
+  x = rep(strength_x, 3),
+  noise_sd = rep(c(0.6, 2, 6.5), each = 30),
+  pattern = factor(rep(c("Strong", "Moderate", "Weak"), each = 30),
+                   levels = c("Strong", "Moderate", "Weak"))
+) |>
+  mutate(y = 2 + 0.8 * x + noise_sd * rep(strength_z, 3))
 
 # Add one hypothetical observation without changing the original workbook.
 # Holding the original points fixed makes its influence directly observable.
@@ -104,81 +128,139 @@ sleep_plot <- function(data = practice) {
 
 :::
 
-<!-- Maybe start by reviewing the definition of association. Correlation is one way we can measure the degree of association between continuous variables. -->
-
-
 ## Does More Sleep Go With Less Stress?
 
-Imagine a campus wellness team asks **20 students** about sleep and stress during the same week.
+:::: {.columns .text-columns}
+::: {.column width="60%"}
+**Research Question**
 
-The team wants to know whether students who report more sleep also report less stress.
-
-::: {.fragment}
-<!-- I think this is too vague. Students are likely to just stare at me blankly. We need to ask a more direct question here. -->
-**What would you want to see before answering?**
+- Imagine a campus wellness team asks 20 students about sleep and stress during the same week.   
+- **Research Question:** Do students who report more sleep also report less stress?
 :::
 
-::: {.notes}
-<!-- What do I say to introduce this slide? -->
+::: {.column .fragment width="40%"}
+**Consider**
 
-- Minutes 0-4: invite two or three responses before naming the scatterplot.
-- This is a fictional cross-sectional example. We have measured both variables, not assigned a sleep intervention.
-- Connect to last week: a mean or histogram summarizes one variable. Today we examine two variables together.
-- Possible student suggestions include the data, a graph, how stress was measured, other causes of stress, and how students were selected.
+- What data would we want to begin to address this research question?
+:::
+::::
+
+::: {.notes}
+- **Read the research question**.   
 :::
 
 
 ## One Row, One Student
 
+:::: {.columns .text-columns}
+::: {.column width="60%"}
+
 | Student | Sleep (hours/night) | Stress (points) |
-|:--------|--------------------:|----------------:|
+|:-------:|:-------------------:|:---------------:|
 | S01     | 5.0                 | 28              |
 | S02     | 7.0                 | 22              |
 | S03     | 6.0                 | 26              |
 | S04     | 8.0                 | 18              |
 
-Each student's sleep value must stay paired with **that student's stress score**.
-
-::: {.notes}
-- Minutes 4-7: identify both variables as quantitative and explain the units.
-- These are the first four records in the workbook. S01 is the point at x = 5 and y = 28.
-- An identifier labels a record; it is not a variable to correlate with stress.
-- Sorting just one column breaks the pairs and creates a different dataset. If sorting is needed, sort whole rows together.
 :::
 
-<!-- Resume making notes here after an initial read through. -->
+::: {.column width="40%"}
+
+**Questions to Consider**
+
+- What numerical or graphical summaries could we use to investigate whether sleep and stress are associated?
+- What would we expect to see if sleep and stress are associated?
+
+:::
+
+::::
+
+::: {.notes}
+**Questions**   
+- What numerical or graphical summaries could we use to investigate whether sleep and stress are associated?   
+  - Possible student suggestions include a scatterplot or a correlation coefficient. They might also suggest stratified means. Students do not need to know Pearson's r yet.   
+- What would we expect to see if sleep and stress are associated?   
+  - As the value of one goes up, the other goes up or vice versa.   
+:::
 
 
-## Read the Scatterplot
+# Graphical Summaries of Two Numerical Variables: Scatterplots {.section}
 
-<!-- Move the words off the slides and into the notes. -->
+::: {.notes}
+- **Connect to last week:** a mean or histogram summarizes one variable. Today we examine two variables together.    
+- Scatterplots aren't the only option, but they are a popular choice and tend to be a great place to start.   
+:::
+
+
+## Summarize with a Scatterplot
 
 :::: {.columns}
 ::: {.column width="64%"}
 ```{r}
-#| label: sleep-scatter-intro
+#| label: sleep-scatter-intro-02
 #| fig-width: 7.4
 #| fig-height: 4.4
 #| out-width: "100%"
 #| fig-alt: "Scatterplot of 20 fictional students. Sleep ranges from 5 to 9 hours, and stress scores range from 14 to 30 points. The overall pattern slopes downward."
 
+# Letter five points so students can name one aloud ("Point C") when asked to
+# locate S01 and S02 in class. S07 sits near S01, and S11 shares S02's sleep
+# value, so students must read both coordinates; S06 spreads labels across the
+# plot. Letters follow plot position (left to right, then bottom to top), not
+# student ID.
+sleep_labels <- practice |>
+  filter(student %in% c("S01", "S02", "S06", "S07", "S11")) |>
+  arrange(sleep_hours, stress_score) |>
+  mutate(point_label = LETTERS[row_number()])
+
 # Plot the paired observations, not sorted marginal lists of each variable.
-sleep_plot()
+# Labels sit up and to the right of each point; the upward nudge keeps "A"
+# visibly attached to S01 (28 points) rather than S12 directly below (27).
+sleep_plot() +
+  geom_text(
+    aes(label = point_label), data = sleep_labels,
+    nudge_x = 0.1, nudge_y = 0.6, hjust = 0, size = 5.5, fontface = "bold",
+    color = "#4D1979"
+  )
 ```
 :::
 ::: {.column width="36%"}
 Each point is **one student**.
 
-- Horizontal axis: sleep.
-- Vertical axis: stress.
-- Read the overall pattern, then inspect unusual points.
+- [**Student S01:**]{style="color: #4d1979;"}\ 
+  - Sleep = 5.0\ 
+  - Stress = 28\
+- [**Student S02:**]{style="color: #4d1979;"}\ 
+  - Sleep = 7.0\ 
+  - Stress = 22   
 :::
 ::::
 
 ::: {.notes}
-- Minutes 7-10: ask a student to locate S01 and explain what the point represents.
-- Ask what tends to happen to stress as we move right along the sleep axis.
-- The graph describes differences between students. It does not show how one student's stress changes over time.
+- Let's start by orienting ourselves to the scatterplot.   
+  - X-axis: Sleep.   
+  - Y-axis: Stress score.   
+
+**Questions**
+- Ask a student to locate S01 and S02 and explain what each point represents.\
+  - `S01` = A\
+  - `S02` = C\
+
+- What tends to happen to stress as we move left to right along the sleep axis?\
+  - The values of stress tend to become lower.
+:::
+
+
+## Four Things to Look For
+
+1. **Direction:** upward, downward, or neither?
+2. **Strength:** how closely do points follow a pattern?
+3. **Form:** approximately straight or curved?
+4. **Unusual observations:** does a point stand apart?
+
+::: {.notes}
+- Now that we are oriented to scatterplots, there are at least four characteristics of scatterplots that deserve our attention. Let's talk about each of them in turn.   
+- We'll start with **direction**.   
 :::
 
 
@@ -208,8 +290,141 @@ ggplot(direction_data, aes(x, y)) +
 ::::
 
 ::: {.notes}
-- Minutes 10-12: positive and negative describe direction, not whether a relationship is good or bad.
+- Review: positive and negative describe direction, not whether a relationship is good or bad.
 - No clear linear pattern does not rule out other kinds of relationships.
+:::
+
+
+## Four Things to Look For
+
+1. **Direction:** upward, downward, or neither?
+2. **Strength:** how closely do points follow a pattern?
+
+::: {.notes}  
+- The second is **strength**: how closely do the points follow a pattern?    
+- More specifically, for a linear relationship, how closely do the points follow a straight-line pattern?         
+- Imagine drawing a straight line through each cloud of points. Strength concerns how closely the points follow that line. The line’s slope describes its direction and steepness.   
+:::
+
+
+## Strength of the Relationship
+
+```{r}
+#| label: correlation-strength
+#| fig-width: 11.5
+#| fig-height: 3.5
+#| out-width: "98%"
+#| fig-alt: "Three upward-sloping scatterplots on matching axes, labeled strong, moderate, and weak. In the strong panel the points lie close to a straight line; in the moderate panel they scatter somewhat around it; in the weak panel they scatter widely, and the upward trend is hard to see."
+
+# Shared axes keep the underlying slope identical, so only the scatter differs.
+ggplot(strength_data, aes(x, y)) +
+  geom_point(color = "#4D1979", size = 3.5) +
+  facet_wrap(~pattern, nrow = 1) +
+  scale_x_continuous(breaks = c(3, 6, 9, 12)) +
+  labs(x = "Variable X", y = "Variable Y")
+```
+
+All three have the **same underlying slope**. They differ in how tightly the points cluster around it.
+
+::: {.notes}
+- A steep slope is not the same as a strong relationship. Strength concerns how tightly points follow the pattern, not the axis units or steepness.   
+:::
+
+## Question: Which Relationship Is Stronger?
+
+:::: {.columns}
+::: {.column width="65%"}
+```{r}
+#| label: strength-versus-slope-question
+#| fig-width: 7.4
+#| fig-height: 4.5
+#| out-width: "100%"
+#| fig-alt: "Two scatterplots with identical axes and the same X values. In Plot A, all points lie on a gently rising straight line. In Plot B, points scatter above and below a steeply rising straight-line pattern."
+
+# Construct fictional examples with the same X values and fixed axis ranges so
+# students compare strength without differences in scaling. Plot A is exactly
+# linear; Plot B has a steeper trend but deliberately scattered observations.
+# Fixed, symmetric deviations keep Plot B reproducible without changing the
+# random-number state used elsewhere in the deck.
+strength_question <- tibble(
+  x = rep(1:12, 2),
+  y = c(
+    4 + 0.2 * (1:12),
+    4 + 1.1 * (1:12) + 2 * c(-2, 2, -1, 1, 2, -2, -2, 2, 1, -1, 2, -2)
+  ),
+  plot = factor(rep(c("Plot A", "Plot B"), each = 12),
+                levels = c("Plot A", "Plot B"))
+)
+
+# Show only observations so students infer each pattern rather than choosing
+# from fitted-line annotations or displayed correlation coefficients.
+ggplot(strength_question, aes(x, y)) +
+  geom_point(color = "#4D1979", size = 3.5) +
+  facet_wrap(~plot, nrow = 1) +
+  scale_x_continuous(breaks = c(3, 6, 9, 12), limits = c(0, 13)) +
+  scale_y_continuous(breaks = seq(0, 20, 5), limits = c(0, 22)) +
+  labs(x = "Variable X", y = "Variable Y")
+```
+:::
+::: {.column width="35%"}
+Which shows a **stronger linear relationship**?
+
+A. Plot A  
+B. Plot B  
+C. Both are equally strong  
+D. Cannot tell from the plots
+
+**Choose one and explain why.**
+:::
+::::
+
+::: {.notes}
+- Answer: A. All of its points lie on a straight line, even though the line rises gently.
+- Plot B has a steeper upward pattern, but its points scatter around that pattern.
+- Both plots use the same X values and identical axis scales. Steepness describes the slope; strength describes how closely the points follow a straight-line pattern.
+- Ask students who choose B to explain what they noticed, then distinguish steepness from strength. No calculation is needed to identify the perfect linear relationship in Plot A.
+:::
+
+
+## Four Things to Look For
+
+1. **Direction:** upward, downward, or neither?
+2. **Strength:** how closely do points follow a pattern?
+3. **Form:** approximately straight or curved?
+
+::: {.notes}
+- The third is **form**. Is the cloud of points approximately straight or curved?   
+:::
+
+
+## A Relationship Can Be Nonlinear
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| label: curved-relationship
+#| fig-width: 7
+#| fig-height: 4
+#| out-width: "100%"
+#| fig-alt: "A symmetric U-shaped relationship. As X increases from minus 3 to zero, Y decreases from 9 to zero; as X increases from zero to 3, Y increases to 9."
+
+# A symmetric quadratic pattern illustrates a clear relationship that curves,
+# keeping the focus on form before introducing numerical summaries.
+ggplot(curve_data, aes(x, y)) +
+  geom_point(color = "#4D1979", size = 4) +
+  labs(x = "Variable X", y = "Variable Y")
+```
+:::
+::: {.column width="40%"}
+
+**This U-shaped pattern is one example of a nonlinear relationship.** Other patterns may rise and then fall, or level off.
+
+:::
+::::
+
+::: {.notes}
+- The pattern is clear, but it does not follow a straight line.   
+- As X increases, Y first decreases and then increases. Look at the whole pattern: a relationship can be clear without following a straight line.
 :::
 
 
@@ -220,44 +435,62 @@ ggplot(direction_data, aes(x, y)) +
 3. **Form:** approximately straight or curved?
 4. **Unusual observations:** does a point stand apart?
 
-**Describe the graph before calculating a summary.**
-
 ::: {.notes}
-- Minutes 12-14: ask students to apply these four questions to the opening graph from memory.
-- A steep slope is not the same as a strong relationship. Strength concerns how tightly points follow the pattern, not the axis units or steepness.
-- Prep 3 asks for direction, apparent strength, and possible influential outliers. Checking form makes those descriptions more defensible.
+- The fourth is **unusual observations**. Do any values stand out as unusual or possible errors?   
 :::
 
 
-## A Relationship Can Be Curved
-
-<!-- We refer to Pearson's R before introducing it. -->
+## Unusual Observations
 
 :::: {.columns}
-::: {.column width="60%"}
+::: {.column width="65%"}
 ```{r}
-#| label: curved-relationship
-#| fig-width: 7
-#| fig-height: 4
+#| label: unusual-observation-intro
+#| fig-width: 7.4
+#| fig-height: 4.5
 #| out-width: "100%"
-#| fig-alt: "A symmetric U-shaped relationship. Y increases as X moves away from zero in either direction, even though Pearson's r is zero."
+#| fig-alt: "Scatterplot of 21 fictional students, all shown as matching purple circles. Most points follow a downward sleep-stress pattern between 5 and 9 hours of sleep. One point at 12 hours and 38 stress points sits apart in the upper right."
 
-# A symmetric quadratic pattern isolates the limitation of a linear summary.
-ggplot(curve_data, aes(x, y)) +
-  geom_point(color = "#4D1979", size = 4) +
-  labs(x = "Variable X", y = "Variable Y")
+# Reuse the hypothetical student from the later influence comparison so the
+# visual example prepares students for that discussion without introducing r.
+# Matching circles let students identify the unusual point from its position.
+# The expanded axes match the later comparison and include every observation.
+ggplot(with_extra, aes(sleep_hours, stress_score)) +
+  geom_point(color = "#4D1979", size = 3.8) +
+  scale_x_continuous(breaks = seq(4, 12, 2), limits = c(4, 13)) +
+  scale_y_continuous(breaks = seq(10, 40, 10), limits = c(10, 40)) +
+  labs(x = "Sleep duration (hours/night)", y = "Stress score (points)")
 ```
 :::
-::: {.column width="40%"}
-The pattern is clear, but it does not follow a straight line.
-
-**Pearson's r summarizes a linear relationship.**
+::: {.column width="35%"}
+- Which observation stands apart from the overall pattern?
+- What would you want to check?
 :::
 ::::
 
 ::: {.notes}
-- Minutes 14-16: the constructed U has r = 0. This does not mean X and Y are unrelated.
-- Students do not need to calculate a nonlinear model. The lesson is to inspect the plot before interpreting r.
+- Check whether the values were recorded correctly, how sleep and stress were measured, and whether the student's circumstances could plausibly explain the observation. We cannot identify an error from the plot alone.   
+- **An unusual observation is worth investigating. It is not automatically an error.**   
+- Do not automatically remove a legitimate observation because it stands apart. We will return to this example when discussing how an observation can affect a correlation.
+:::
+
+
+## Four Things to Look For
+
+1. **Direction:** upward, downward, or neither?
+2. **Strength:** how closely do points follow a pattern?
+3. **Form:** approximately straight or curved?
+4. **Unusual observations:** does a point stand apart?
+
+::: {.notes}
+- Prep 3 asks for direction, apparent strength, and possible influential outliers. Checking form makes those descriptions more defensible.
+:::
+
+
+# Numerical Summaries of Two Numerical Variables {.section}
+
+::: {.notes}
+- Wouldn't it be nice if we could quantify what we see in the scatterplot?
 :::
 
 
@@ -273,10 +506,37 @@ The pattern is clear, but it does not follow a straight line.
 | Near 0         | Little linear relationship           |
 
 ::: {.notes}
+- Pearson's Correlation Coefficient is one statistic we can use to do so.   
 - Minutes 16-19: r is unitless. It is not a change in stress points per hour of sleep.
 - An r of -0.8 is stronger in absolute magnitude than an r of +0.3.
 - Avoid universal weak/moderate/strong cutoffs. The context and scatterplot matter.
 - Pearson's r requires variation in both variables. A constant variable has no defined Pearson correlation.
+:::
+
+
+## Where Does r Come From? {visibility="hidden"}
+
+<!-- I want to give learners an intuition for what r is measuring, but this slide won't do it. -->
+
+- Compare each observation with the **mean of its variable**.
+- Pairs **above both means or below both means** contribute positively.
+- Pairs **above one mean and below the other** contribute negatively.
+- Standardizing by each variable's **standard deviation** makes r unitless.
+
+::: {.notes}
+- Each student supplies one paired observation: sleep duration and stress score. Subtract the mean sleep duration from that student's sleep duration, and the mean stress score from that student's stress score.
+- Divide each difference by its variable's sample standard deviation. These standardized values express how far each observation is above or below its mean in standard deviation units.
+- Multiply the two standardized values for each student. Two positive values or two negative values give a positive product; opposite signs give a negative product. A value exactly at either mean gives a zero product.
+- Add these products and divide by n minus 1 to obtain Pearson's r. Here, n is the number of complete pairs, and both variables must have a nonzero standard deviation.
+
+$$
+r = \frac{1}{n-1}\sum_{i=1}^{n}
+\left(\frac{x_i-\bar{x}}{s_x}\right)
+\left(\frac{y_i-\bar{y}}{s_y}\right)
+$$
+
+- In our sleep-stress example, students with above-average sleep tend to have below-average stress, and vice versa. Those opposite-sign pairs contribute to a negative correlation.
+- The sign reflects the balance of positive and negative products; the magnitude summarizes how consistently the standardized values follow a straight-line pattern. Students do not need to calculate r by hand.
 :::
 
 
@@ -289,13 +549,9 @@ B. r = −0.80
 C. r = +0.60  
 D. r = −0.10
 
-**Choose one and explain your reasoning.**
-
 ::: {.notes}
-- Minutes 19-21: ask students to show 1-4 fingers for A-D or write their letter on paper.
 - Answer: B. Its absolute value, 0.80, is closest to 1.
 - The negative sign describes direction. It does not make the relationship weaker.
-- Ask why C is tempting, then distinguish the largest signed number from the largest absolute value.
 :::
 
 
@@ -318,9 +574,9 @@ ggplot(anscombe_data, aes(x, y)) +
 Both have **r ≈ 0.816**. A single coefficient does not show the shape.
 
 ::: {.notes}
-- Minutes 21-23: these are datasets I and II of Anscombe's quartet, included with R.
-- Both values round to 0.816. The second plot has a pattern that the linear summary misses.
-- This replaces the inherited slide whose displayed correlations did not all match its title.
+- Which has a stronger relationship?   
+- Both values round to 0.816.   
+- Why do they have the same r value? Pearson's correlation coefficient only measures the strength of linear relationships.   
 :::
 
 
@@ -347,72 +603,16 @@ ggplot(influence_data, aes(sleep_hours, stress_score)) +
 Original r = **`r sprintf("%.3f", r_sleep)`**. With the added observation, r = **`r sprintf("%.3f", r_extra)`**.
 
 ::: {.notes}
-- Minutes 23-26: the triangle is an invented addition for this comparison, not a row in the practice workbook.
 - Unusual observations can strengthen, weaken, or reverse a correlation depending on their location.
 - Check recording, measurement, and context. Do not delete a legitimate observation merely to improve r.
 - A point is influential when it materially affects the result; being unusual and being influential are related but distinct ideas.
 :::
 
 
-## Correlation and Causation
-
-Students who sleep more might report less stress because:
-
-- Sleep affects stress.
-- Stress affects sleep.
-- Workload or another factor affects both.
-
-**This scatterplot alone cannot distinguish these explanations.**
-
-::: {.notes}
-- Minutes 26-29: reconnect to the earlier association and causality material.
-- Measuring sleep and stress during the same week does not establish their temporal ordering.
-- A large correlation does not remove confounding, selection concerns, or measurement error.
-- These are plausible explanations for the fictional scenario, not findings from a study.
-:::
-
-
-## Question: What Can We Conclude?
-
-In the fictional sample, students with more sleep tend to have lower stress scores.
-
-A. More sleep caused their stress to decrease.  
-B. Sleep and stress show a negative association.  
-C. Every student who sleeps more has less stress.  
-D. The relationship must hold for all TCU students.
-
-::: {.notes}
-- Minutes 29-31: use fingers or written letters, followed by a brief explanation.
-- Answer: B. A claims causation; C changes an overall tendency into a universal rule; D generalizes beyond the sampled observations without justification.
-- Do not introduce a p-value to decide this question. It is about what the design and observed pattern support.
-:::
-
-
-## From r to r²
-
-<!-- But what is r^2? We never introduce it. -->
-
-For a simple linear relationship, **square r** to obtain r².
-
-If r = −0.80:
-
-$$r^2 = (-0.80)^2 = 0.64 = 64\%$$
-
-About **64% of the variation in the outcome is accounted for by its linear relationship with the predictor**.
-
-::: {.notes}
-- Minutes 31-34: r² has no sign. Keep r to describe direction.
-- Here r² corresponds to the coefficient of determination from simple least-squares regression with an intercept. No regression fitting procedure is required in this lesson.
-- Explained variation is statistical, not proof of causation. It is not 64% of people, 64% accuracy, or a 64% reduction in stress.
-- The remainder is variation not accounted for by this linear relationship; it is not proof that specific other causes have been identified.
-- Reference: https://online.stat.psu.edu/stat501/Lesson01
-:::
-
-
 ## Read a Correlation Matrix
 
 ```{r}
-#| label: correlation-matrix
+#| label: correlation-matrix-01
 #| results: asis
 
 # Derive every cell from the same fictional workbook rather than inserting
@@ -428,7 +628,7 @@ knitr::kable(matrix_print, digits = 2, align = "r")
 - Values repeat across the diagonal.
 
 ::: {.notes}
-- Minutes 34-37: screen time is an additional fictional quantitative variable in column D of the workbook.
+- When we view many pairwise correlations, they will sometimes be presented as a matrix like this one.    
 - Read the sleep-stress cell first, then the stress-screen-time cell.
 - The diagonal is 1 because each nonconstant variable correlates perfectly with itself.
 - The matrix is symmetric because swapping X and Y does not change r.
@@ -437,29 +637,243 @@ knitr::kable(matrix_print, digits = 2, align = "r")
 
 ## Compare the Correlations
 
-<!-- Turn this into a multiple choic question. -->
+```{r}
+#| label: correlation-matrix-02
+#| results: asis
 
-| Pair                   | r                                                                  |
-|:-----------------------|-------------------------------------------------------------------:|
-| Sleep and stress       | `r sprintf("%.2f", matrix_values["sleep_hours", "stress_score"])`  |
-| Screen time and stress | `r sprintf("%.2f", matrix_values["screen_hours", "stress_score"])` |
+# Derive every cell from the same fictional workbook rather than inserting
+# plausible coefficients that may not describe a coherent dataset.
+matrix_print <- matrix_values
+dimnames(matrix_print) <- list(c("Sleep", "Stress", "Screen Time"),
+                              c("Sleep", "Stress", "Screen Time"))
+knitr::kable(matrix_print, digits = 2, align = "r")
+```
 
-Compare the **absolute values**, then describe the direction of each relationship.
+**In these data, which pair has the strongest linear relationship, and in what direction?**
 
 ::: {.notes}
-- Minutes 37-40: screen time has the slightly stronger linear relationship with stress in these teaching data, because 0.86 is larger in absolute value than 0.83.
-- Sleep and stress are negatively correlated; screen time and stress are positively correlated.
-- Each cell describes a pairwise association. This matrix does not adjust for other variables or establish their causal roles.
+- **Answer:** Screen time and stress (0.86). Positive correlation.   
+:::
+
+
+# Interpreting and Applying Correlation {.section}
+
+::: {.notes}
+- 
+:::
+
+## Correlation and Causation
+
+:::: {.columns}
+::: {.column width="64%"}
+```{r}
+#| label: sleep-scatter-causation
+#| fig-width: 7.4
+#| fig-height: 4.4
+#| out-width: "100%"
+#| fig-alt: "Scatterplot of 20 fictional students. Sleep ranges from 5 to 9 hours, and stress scores range from 14 to 30 points. The overall pattern slopes downward."
+
+# Plot the paired observations, not sorted marginal lists of each variable.
+sleep_plot() 
+```
+:::
+::: {.column width="36%"}
+Students who sleep more might report less stress because:
+
+- Sleep affects stress.
+- Stress affects sleep.
+- Workload or another factor affects both.
+:::
+::::
+
+::: {.notes}
+- We might be tempted to conclude that there is a causal relationship between stress and sleep. And there may be.    
+- However, **this scatterplot alone cannot distinguish these explanations.**
+- Measuring sleep and stress during the same week does not establish their temporal ordering.
+- A large correlation does not remove confounding, selection concerns, or measurement error.
+:::
+
+
+## Predicting Stress
+
+:::: {.columns}
+::: {.column width="64%"}
+```{r}
+#| label: stress-prediction
+#| fig-width: 7.4
+#| fig-height: 4.4
+#| out-width: "100%"
+#| fig-alt: "Sleep and stress for 20 fictional students. A dashed horizontal line at the mean stress score, 21.65, predicts the same score for everyone. Vertical segments connect each observed score to this prediction."
+
+# Keep the familiar scatterplot axes. Vertical distances show the prediction
+# errors when sleep is ignored, establishing the baseline for the next slide.
+sleep_plot()
+```
+:::
+::: {.column width="36%"}
+
+Now, suppose we want to predict a student's stress score.   
+
+Without knowledge of their sleep duration, what is our best prediction?
+
+:::
+::::
+
+
+## Predicting Stress With the Mean
+
+:::: {.columns}
+::: {.column width="64%"}
+```{r}
+#| label: stress-mean-prediction
+#| fig-width: 7.4
+#| fig-height: 4.4
+#| out-width: "100%"
+#| fig-alt: "Sleep and stress for 20 fictional students. A dashed horizontal line at the mean stress score, 21.65, predicts the same score for everyone. Vertical segments connect each observed score to this prediction."
+
+# Keep the familiar scatterplot axes. Vertical distances show the prediction
+# errors when sleep is ignored, establishing the baseline for the next slide.
+sleep_plot() +
+  geom_segment(
+    aes(xend = sleep_hours, yend = stress_mean),
+    color = "#666666", linewidth = 0.6
+  ) +
+  geom_hline(yintercept = stress_mean, linetype = "dashed", linewidth = 0.8) +
+  geom_point(color = "#4D1979", size = 3.6)
+```
+:::
+::: {.column width="36%"}
+::: {.fragment}
+Without using sleep, our best prediction is the **mean stress score** for everyone:
+:::
+
+::: {.fragment}
+**`r sprintf("%.2f", stress_mean)` points**.
+:::
+
+::: {.fragment}
+Each vertical segment shows an observed score's distance from that prediction.
+:::
+:::
+::::
+
+::: {.notes}
+- Now, suppose we want to predict a student's stress score, but we do not use their sleep duration. We could use the average stress score for all 20 students. Everyone would get the same prediction.
+- The horizontal dashed line is that mean. Point to S01 at 5 hours and 28 points. Its observed score is above the prediction, so its prediction error is positive. Scores below the line have negative errors.
+- Ask: Would knowing how much each student sleeps help us make better predictions for these students?
+- To summarize the errors, square each vertical distance and add them. Squaring prevents positive and negative errors from canceling. Their sum is the total variation in stress around the mean.
+- Reference: https://online.stat.psu.edu/stat501/Lesson01
+:::
+
+
+## Predicting Stress With Sleep
+
+:::: {.columns}
+::: {.column width="64%"}
+```{r}
+#| label: stress-regression-prediction
+#| fig-width: 7.4
+#| fig-height: 4.4
+#| out-width: "100%"
+#| fig-alt: "The same sleep-stress observations and axes, with a solid downward-sloping regression line and the dashed mean line. Vertical segments now connect observations to the regression line. The sum of squared vertical distances is smaller than for the mean-only prediction."
+
+# Preserve the mean as a dashed reference while moving the error segments to
+# the fitted line. Reuse the fitted model so the graphic and r² calculation agree.
+sleep_plot(regression_data) +
+  geom_hline(
+    yintercept = stress_mean, linetype = "dashed",
+    color = "#666666", linewidth = 0.8
+  ) +
+  geom_segment(
+    aes(xend = sleep_hours, yend = predicted_stress),
+    color = "#666666", linewidth = 0.6
+  ) +
+  geom_line(aes(y = predicted_stress), color = "#4D1979", linewidth = 1) +
+  geom_point(color = "#4D1979", size = 3.6)
+```
+:::
+::: {.column width="36%"}
+The **regression line** predicts stress using sleep duration.
+
+The vertical segments now show errors relative to the line.
+:::
+::::
+
+::: {.notes}
+- But we already know that sleep and stress are associated. And what does it mean when two variables are associated?   
+- A simple linear regression uses a straight line to describe the predicted mean outcome at each value of one predictor. Here stress is the outcome and sleep is the predictor.   
+- The least-squares line is chosen to minimize the sum of squared vertical errors. Students do not need to fit the line or calculate its slope in this lesson.   
+- The dashed horizontal line is the previous mean-only prediction. The solid purple line uses sleep. The sum of squared errors gets smaller, although an individual student's error can get larger.
+- Reference: https://online.stat.psu.edu/stat501/Lesson01
+:::
+
+
+## From r to r²
+
+**r², the coefficient of determination**, measures the proportion of variation accounted for by the regression line.
+
+| Prediction      | Sum of Squared Errors        |
+|:----------------|-----------------------------:|
+| Mean only       | `r sprintf("%.2f", ss_mean)` |
+| Regression line | `r sprintf("%.2f", ss_line)` |
+
+$$r^2 = 1 - \frac{`r sprintf("%.2f", ss_line)`}{`r sprintf("%.2f", ss_mean)`} \approx `r sprintf("%.3f", r_sleep^2)`$$
+
+Using sleep reduces the sum of squared errors by **`r sprintf("%.1f", 100 * r_sleep^2)`%** compared with using the mean alone.
+
+For simple linear regression with an intercept, this also equals **Pearson's r squared**.
+
+::: {.notes}
+- The mean-only prediction gives us about `r sprintf('%.2f', ss_mean)` squared points of error. Using sleep lowers that to about `r sprintf('%.2f', ss_line)`. The fraction left is about `r sprintf('%.1f', 100 * ss_line / ss_mean)`%. Subtract that from 100%, and we find that the line accounts for about `r sprintf('%.1f', 100 * r_sleep^2)`% of the original variation.
+- The sums use squared stress-score points. Their ratio is unitless. Values displayed here are rounded, but all calculations use full precision.
+- Squaring the full-precision Pearson correlation gives the same result: r ≈ `r sprintf('%.3f', r_sleep)`, and r² ≈ `r sprintf('%.3f', r_sleep^2)`. This equality applies to simple least-squares regression with an intercept.
+- r² has no sign. Keep r to describe direction.
+- Explained variation is statistical, not proof of causation. It is not a percentage of people, prediction accuracy, or a reduction in stress scores.
+- The remainder is variation not accounted for by this linear relationship; it is not proof that specific other causes have been identified.
+- Reference: https://online.stat.psu.edu/stat501/Lesson01
+:::
+
+
+## Why We Can Square r
+
+For **ordinary least-squares regression**:
+
+- **Simple** means one predictor: sleep duration.
+- **With an intercept** means the line can shift up or down instead of being forced through (0, 0).
+
+Under these conditions, both calculations give the same r²:
+
+:::: {.columns}
+::: {.column width="50%"}
+**Square the correlation**
+
+$$(`r sprintf("%.6f", r_sleep)`)^2 \approx `r sprintf("%.3f", r_sleep^2)`$$
+:::
+::: {.column width="50%"}
+**Compare squared errors**
+
+$$1 - \frac{`r sprintf("%.2f", ss_line)`}{`r sprintf("%.2f", ss_mean)`} \approx `r sprintf("%.3f", r_sleep^2)`$$
+:::
+::::
+
+**r** retains direction. **r²** describes the proportion of variation accounted for by the line.
+
+::: {.notes}
+- For the straight-line model we're using here, squaring the correlation gives us exactly the same proportion we calculated by comparing prediction errors. That's why we can calculate r² in Excel simply by squaring r.
+- This agreement is a mathematical property of ordinary least-squares regression with one predictor and an intercept, not a coincidence in these data. Both calculations use the same paired observations and full-precision values. The displayed numbers are rounded.
+- Write the model if useful: $\widehat{\text{Stress}} = b_0 + b_1(\text{Sleep})$. The hat means predicted stress. The slope, $b_1$, describes how predicted stress changes with sleep duration.
+- The intercept, $b_0$, lets the line move up or down. It is the predicted stress at zero hours of sleep, but zero is outside our observed range, so we should not give that prediction a substantive interpretation here.
+- With an intercept, the least-squares line passes through the point defined by the sample mean of sleep and the sample mean of stress. This property supports the connection between correlation and the reduction in squared errors.
+- r describes the direction and strength of the linear relationship. Squaring removes its sign: r = −0.80 and r = +0.80 both give r² = 0.64. Their directions differ, but the proportion of variation accounted for is the same.
+- If we force the line through the origin by removing the intercept, this equality generally does not hold. With multiple predictors, the model's R² generally differs from the squared correlation between the outcome and any single predictor.
+- The proportion describes variation accounted for in the data used to fit the line. It does not establish causation or guarantee prediction accuracy for new students.
+- Reference: https://online.stat.psu.edu/stat501/Lesson01
 :::
 
 
 ## Open the Practice Workbook
 
-<!-- Should we calculate Pearson's r, r squared, and the number of paired observations first? -->
-
 Download [correlation_practice.xlsx](assets/correlation_practice.xlsx) and open **Practice**.
-
-<!-- Make this table full width. -->
 
 | Column | Contents                       |
 |:-------|:-------------------------------|
@@ -488,6 +902,7 @@ Use **B and C** today. Data occupy **rows 2–21**.
 
 ::: {.notes}
 - Minutes 42-44: demonstrate by selecting the range in Excel.
+- Confirm that each of the 20 student rows contains both a numeric sleep value and a numeric stress score.
 - Choosing adjacent X and Y columns is the simplest way to get the intended chart.
 - If project variables are not adjacent, copy the two complete columns into a new working area together, preserving row order. Keep the source dataset intact.
 - If either value is missing, do not invent zero or independently compress the columns. Identify incomplete pairs and ask for help before analysis.
@@ -496,16 +911,15 @@ Use **B and C** today. Data occupy **rows 2–21**.
 
 ## Insert an XY Scatterplot
 
-<!-- When I follow these directions, the scale of the X axis is 0-10. -->
-
 1. Choose **Insert → Scatter (X, Y)**.
 2. Select **markers only**, with no connecting lines.
 3. Move the chart into the open space below the instructions.
 
-The horizontal axis should show **sleep hours**, approximately 5–9, rather than student numbers.
+The horizontal axis should represent **sleep duration**. The observed values range from **5 to 9 hours**, but Excel may display a wider axis range, such as **0–10**.
 
 ::: {.notes}
 - Minutes 44-46: menu wording varies across Mac, Windows, and web versions. Look for the scatter icon or XY Scatter chart type.
+- A 0–10 axis is acceptable. Check that X values come from B2:B21; students do not need to match the lecture graph's exact axis limits.
 - A line chart can treat the horizontal values as equally spaced categories. Choose the scatter chart to preserve numeric spacing.
 - If the axes are wrong, open Chart Design → Select Data, edit the series, and set X values to B2:B21 and Y values to C2:C21.
 - Source: https://support.microsoft.com/en-us/excel/present-your-data-in-a-scatter-chart-or-a-line-chart
@@ -624,8 +1038,6 @@ More sleep accompanies lower stress in this sample, with a fairly strong **negat
 
 ## Calculate r² and Check n
 
-<!-- Should we explain why it explains 69.6% of the variation? I think my regression slides could be useful here. -->
-
 | Cell | Formula          | Result                         |
 |:-----|:-----------------|-------------------------------:|
 | G4   | `=G3^2`          | `r sprintf("%.3f", r_sleep^2)` |
@@ -635,6 +1047,7 @@ About **`r sprintf("%.1f", 100 * r_sleep^2)`%** of the variation in stress score
 
 ::: {.notes}
 - Minutes 68-70: calculate r² from the full-precision cell rather than squaring a rounded display value.
+- Connect this result to the mean-versus-line comparison: the fitted line reduced the sum of squared errors from `r sprintf('%.2f', ss_mean)` to `r sprintf('%.2f', ss_line)`, a reduction of about `r sprintf('%.1f', 100 * r_sleep^2)`%. Squaring r in Excel gives that same proportion.
 - COUNT(B2:B21) gives the pair count here because both columns are complete and numeric. It is not a general check for paired missingness.
 - The percentage describes variation in this sample. It does not say sleep caused that percentage of stress or explain that percentage of individual students.
 :::
