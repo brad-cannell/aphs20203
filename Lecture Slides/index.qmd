@@ -78,3 +78,10 @@ Interactive slide decks for APHS 20203.
 
 - [View interactive slides](Module 09 - Correlation - Reliability and Validity/Reliability Validity and Application/Reliability Validity and Application.qmd)
 - [Download PDF](Module 09 - Correlation - Reliability and Validity/Reliability Validity and Application/Reliability Validity and Application.pdf)
+
+## Module 10: Inferential Statistics — Estimation
+
+### Random Error and Confidence Intervals
+
+- [View interactive slides](Module 10 - Inferential Statistics—Estimation/Random Error and Confidence Intervals/Random Error and Confidence Intervals.qmd)
+- [Download PDF](Module 10 - Inferential Statistics—Estimation/Random Error and Confidence Intervals/Random Error and Confidence Intervals.pdf)
