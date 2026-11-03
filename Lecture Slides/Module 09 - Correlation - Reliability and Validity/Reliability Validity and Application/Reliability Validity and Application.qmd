@@ -1,6 +1,6 @@
 ---
 title: "Reliability and Validity"
-subtitle: "APHS 20203 · November 4, 2026"
+subtitle: "APHS 20203"
 format:
   revealjs:
     theme: [default, ../../_theme/tcu.scss]
@@ -257,7 +257,7 @@ Good measurement helps, but it does not resolve differences in age, health, acti
 
 Open **Practice** in the [workbook](assets/reliability_validity_practice.xlsx).
 
-Six fictional calibration masses have known reference values and two scale readings each.
+Six fictional calibration masses have known reference values and two scale readings each (**A1:D7**).
 
 1. Calculate differences between readings and between each reading and its reference in **G6:I11**.
 2. Average each difference column in **G12:I12**.
@@ -392,7 +392,7 @@ Odds compare those with the outcome with those without it.
 - Other-group odds: **2 / 8 = 0.25**.
 - Odds ratio: **1.5 / 0.25 = 6.00**.
 
-In **G31**, use `=(G23*H24)/(H23*G24)`.
+In **G31**, use `=(G23/H23)/(G24/H24)`.
 
 Here, **OR = 6** and **RR = 3**. Report the measure you calculated. “Six times the odds” does not mean “six times the risk.”
 
