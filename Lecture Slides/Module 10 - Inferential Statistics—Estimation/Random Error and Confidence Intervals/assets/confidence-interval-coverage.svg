@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="300" viewBox="0 0 1100 300" role="img" aria-labelledby="title desc">
+  <title id="title">Confidence intervals from three illustrative samples</title>
+  <desc id="desc">The true mean is 21. Sample A, 18.69 to 23.31, and sample B, 16.69 to 21.31, include 21. Sample C, 21.69 to 26.31, misses it. Points mark means of 21, 19, and 24.</desc>
+  <!-- The horizontal scale maps StressScore 16–27 to x=180–950 (70 pixels per point).
+       These are the existing deck's illustrative intervals, not simulated coverage results. -->
+  <rect width="1100" height="300" fill="white"/>
+  <g font-family="Arial, sans-serif" font-size="24" fill="#1f2328">
+    <text x="530" y="27" text-anchor="middle" fill="#4d1979">True mean = 21</text>
+    <path d="M530 40V220" stroke="#4d1979" stroke-width="3" stroke-dasharray="7 6"/>
+    <text x="20" y="76">Sample A</text>
+    <text x="20" y="136">Sample B</text>
+    <text x="20" y="196">Sample C</text>
+    <g stroke="#4d1979" stroke-width="5" fill="#4d1979">
+      <path d="M368.3 68H691.7 M368.3 60V76 M691.7 60V76"/>
+      <circle cx="530" cy="68" r="7"/>
+      <path d="M228.3 128H551.7 M228.3 120V136 M551.7 120V136"/>
+      <circle cx="390" cy="128" r="7"/>
+    </g>
+    <!-- A dashed interval and explicit label distinguish the miss without relying on color. -->
+    <g stroke="#1f2328" stroke-width="5" fill="#1f2328">
+      <path d="M578.3 188H901.7" stroke-dasharray="10 6"/>
+      <path d="M578.3 180V196 M901.7 180V196"/>
+      <circle cx="740" cy="188" r="7"/>
+    </g>
+    <text x="970" y="76">Captures</text>
+    <text x="970" y="136">Captures</text>
+    <text x="970" y="196">Misses</text>
+    <path d="M180 225H950 M180 225V232 M320 225V232 M460 225V232 M600 225V232 M740 225V232 M880 225V232" stroke="#1f2328" stroke-width="2"/>
+    <g text-anchor="middle">
+      <text x="180" y="257">16</text>
+      <text x="320" y="257">18</text>
+      <text x="460" y="257">20</text>
+      <text x="600" y="257">22</text>
+      <text x="740" y="257">24</text>
+      <text x="880" y="257">26</text>
+      <text x="565" y="291">Mean StressScore (points)</text>
+    </g>
+  </g>
+</svg>

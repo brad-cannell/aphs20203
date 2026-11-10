@@ -1,6 +1,6 @@
 ---
 title: "Random Error and Confidence Intervals"
-subtitle: "APHS 20203 | November 11, 2026"
+subtitle: "APHS 20203"
 format:
   revealjs:
     theme: [default, ../../_theme/tcu.scss]
@@ -15,57 +15,191 @@ format:
     logo: ../../assets/tcu-logo-purple.svg
 resources:
   - assets/prep-4-mean-confidence-interval.xlsx
+  - assets/prepared-excel-sampling-demonstration.xlsx
 ---
 
 
-## Learning Objectives
+## Learning Objectives {visibility="hidden"}
 
 - Explain why estimates vary across random samples from the same population.
+- Distinguish random sampling error from systematic error (bias).
 - Distinguish standard deviation from standard error and explain what affects precision.
 - Calculate and interpret a 95% confidence interval for a mean in Excel.
 - Explain what 95% confidence means over repeated samples.
 
 ::: {.notes}
-- 0–10 min (slides 2–4). Introduce the campus wellness story and have students name the population, parameter, and statistic.
+- Objectives remain hidden, matching the current presentation. The 24 visible slides include the title and follow the approved 80-minute sequence.
 :::
 
 
 ## How Stressed Are Students?
 
-A campus wellness team wants to estimate the **mean StressScore among all undergraduates this semester**. It randomly samples 12 students and calculates a mean of **21 points**.
+A campus wellness team wants to estimate the **mean StressScore among all undergraduates this semester**.
 
 - **Population:** All undergraduates this semester.
-- **Parameter:** The mean StressScore of all those students.
-- **Sample statistic:** The mean of 21 points from the 12 sampled students.
+- **Parameter:** Their population mean StressScore.
+- **Sample:** 12 randomly selected students.
 
-**What might happen if the team randomly samples another 12 students?**
+<!-- I like the idea, but we may want to edit the question below. Something like, "Is the result from 12 students the same result we would have gotten from all of the students?" -->
+
+**Would another sample of 12 students give the same mean?**
 
 ::: {.notes}
-- Use the workbook's simulated data throughout. Ask why a new sample can give a different mean even if the population is the same.
-- Adapted from Random Error, slides 21–23.
+- Introduce the question and ask students to predict whether sample means will agree.   
+- We've already discussed bias and confounding. Today, we will discuss sampling variability.   
 :::
 
 
-## One Population, Different Sample Means
 
-For this illustration, suppose the true population mean is **21 points**.
+## One Population, One Sample
 
-| Sample       | Sample Mean | Sampling Error |
-| ------------ | ----------: | -------------: |
-| A (workbook) | 21          | 0              |
-| B            | 19          | −2             |
-| C            | 24          | +3             |
+<!-- Show this in Excel before showing this slide? -->
+<!-- Don't call it a "teaching population". Call it a "simulated" popluation instead. Explain what that means. Show them in Excel. -->
 
-**Sampling error** is the sample estimate minus the population value. Across repeated random samples, an unbiased estimator is centered on the true value. The three errors in this table happen to sum to +1.
+For this teaching population, we know all **10,000 scores**. Sample 1 contains **12 students**.
+
+![](assets/sampling-population-1.svg){width=100% height=350 fig-alt="The teaching population mean StressScore is 20.99 points. Sample 1 has a mean of 21.98 points, above the population mean. A dashed reference line marks the population mean."}
+
+**The sample mean is an estimate of the population mean.**
 
 ::: {.notes}
-- Ask students to explain the signs. Sample B underestimates the mean by 2 points.
-- In real studies the population mean is usually unknown, so we generally cannot calculate the realized sampling error. We can estimate how much sample means tend to vary.
-- Adapted from Random Error, slides 14–18 and 21–23.
+- The population mean is 20.987924, displayed as 20.99.   
+- Sample 1's mean is 21.9766667, displayed as 21.98.   
+- Explain that the population value is known only because we constructed the teaching population. Use the Population tab if students want to see the complete data.   
 :::
+
+
+
+## The Same Population, Another Sample
+
+<!-- Should we show them in Excel? -->
+
+Sample 2 contains **another random selection of 12 students** from the same population.
+
+![](assets/sampling-population-2.svg){width=100% height=350 fig-alt="The population mean remains 20.99. Sample 1 has a mean of 21.98, above the population mean. Sample 2 has a mean of 20.16, below the population mean."}
+
+**The population stays the same. The sample estimate changes.**
+
+::: {.notes}
+- Ask which estimate is above the population mean and which is below it.   
+- Each sample contains 12 distinct students. A student can appear in more than one of the independently selected samples.   
+:::
+
+
+## In a Real Study, the Population Mean Is Unknown
+
+:::: {.columns .text-columns}
+::: {.column width="50%"}
+**What We Observe**
+
+Sample 1's mean StressScore:
+
+**21.98 points**
+:::
+::: {.column width="50%"}
+**What We Want to Know**
+
+The mean among all undergraduates:
+
+**?**
+:::
+::::
+
+How much might an estimate vary just because we sampled different students?
+
+::: {.notes}
+- We usually sample because measuring the entire population is impractical. Knowing the sample mean does not reveal its exact distance from the unknown population mean.   
+<!-- What does the note below mean? -->
+- Transition from the unobservable error in one real study to quantifying the variability of estimates across repeated samples.  
+:::
+
+
+
+## Sampling Error
+
+<!-- Make this more visual like slides 9-12. -->
+
+$$
+\text{Sampling error} = \text{Sample mean} - \text{Population mean}
+$$
+
+| Sample | Sample Mean | Population Mean | Sampling Error |
+| ------ | ----------: | --------------: | -------------: |
+| 1      | 21.98       | 20.99           | +0.99          |
+| 2      | 20.16       | 20.99           | −0.83          |
+
+A positive error is an **overestimate**. A negative error is an **underestimate**.
+
+::: {.notes}
+- 7–10 min across slides 6–7. Values are displayed to two decimals. Calculate the errors using full precision in the workbook.
+- Here, error means the difference between an estimate and the population value. It need not mean that someone made a mistake.
+- Adapted from random_error.pptx, slides 9–12 and 21–23.
+:::
+
+<!-- Left of reviewing and adding comments here. -->
+
+## Random Error and Bias
+
+:::: {.columns .text-columns}
+::: {.column width="50%"}
+**Random Sampling Error**
+
+Different random samples give different mean StressScores.
+
+Larger random samples generally reduce this variation.
+:::
+::: {.column width="50%"}
+**Systematic Error (Bias)**
+
+Suppose students with high stress are consistently less likely to respond. The mean may be too low.
+
+More responses alone do not correct this bias.
+:::
+::::
+
+**A narrow confidence interval can accompany a biased estimate.**
+
+::: {.notes}
+- Ask whether surveying 1,000 students solves the problem if high-stress students are still less likely to respond.
+- Random sampling error is one source of random error. Here we focus on the variation in sample means from repeated sampling.
+- The usual mean confidence interval describes sampling uncertainty under its assumptions. It does not account for systematic nonresponse or measurement bias.
+- Adapted from random_error.pptx, slides 9–12, 18–23, and 52, and Lab warm-up - Random Error.pdf, questions 3 and 7.
+:::
+
+
+## Repeated Samples, Different Means
+
+These are the **first 10 samples** in the [Excel sampling demonstration](assets/prepared-excel-sampling-demonstration.xlsx). Each has **12 students**.
+
+![](assets/sampling-repeated-means.svg){width=100% height=350 fig-alt="The means of the first ten prepared samples vary above and below the fixed population mean of 20.99 points. Each sample contains 12 students."}
+
+The dashed line marks the **population mean of 20.99**.
+
+::: {.notes}
+- 10–18 min across slides 8–9. Open the Samples tab and compare the Mean column with the plotted points. Ask students to identify an overestimate and an underestimate.
+- The complete workbook has 100 prepared samples. Excel recalculation updates formulas but does not draw new samples.
+- Adapted from random_error.pptx, slides 14 and 17, and lab_warm_up_random_error.qmd, Confidence intervals section.
+:::
+
+
+
+## The Same Samples, Shown as Errors
+
+![](assets/sampling-errors.svg){width=100% height=375 fig-alt="Signed sampling errors for the same ten samples, calculated as each sample mean minus 20.987924. Some errors are positive and others negative. The dashed zero line marks an estimate equal to the population mean."}
+
+An unbiased estimator has **zero expected error**. The errors in a particular set of samples need not sum to zero.
+
+::: {.notes}
+- Ask students to connect a point here to the same sample in the previous plot. Only the vertical scale changed.
+- Random sampling makes some estimates too high and others too low. Over many independent repetitions, the average sample mean tends toward the population mean.
+- Adapted from random_error.pptx, slides 15–18. Replace the source's exact-zero-sum illustration with the actual prepared samples so a finite batch is not mistaken for a guarantee.
+:::
+
 
 
 ## Standard Deviation and Standard Error
+
+For the **separate Prep 4 worked sample** of 12 students:
 
 | Measure               | What Varies?                          | StressScore Example |
 | --------------------- | ------------------------------------- | ------------------: |
@@ -75,7 +209,7 @@ For this illustration, suppose the true population mean is **21 points**.
 For a sample mean, estimate the standard error as **sample SD ÷ √n**.
 
 ::: {.notes}
-- 10–25 min (slides 5–7). Give students time to explain the difference to a neighbor before the poll.
+- 18–28 min across slides 10–12. Compare SD and SE, then discuss sample size and precision. These numbers come from the Prep 4 workbook, not Sample 1 of the sampling demonstration.
 - The sample SD describes the spread of individual scores. The SE estimates the SD of the sampling distribution of the mean.
 - Here, 3.64 ÷ √12 is about 1.05. Use full precision when calculating interval endpoints.
 :::
@@ -123,29 +257,51 @@ $$
 - A 95% interval leaves 5% across the two tails of the reference distribution.
 
 ::: {.notes}
-- 25–40 min (slides 8–11). Build the formula from the sample mean and the idea of extending an equal distance in both directions.
+- 28–31 min. Build the formula from the sample mean and a margin of error. Both Excel workbooks use a two-sided t critical value with n−1 degrees of freedom.
 - For this small-sample illustration, assume independent observations from an approximately normal population. Explain that the procedure depends on the study design and its assumptions.
 :::
 
 
-## Which Intervals Capture the True Mean?
+## Excel Demo: Repeated Confidence Intervals
 
-Suppose the true mean is **21 points**. These illustrative samples have the same standard error and use the same method.
+Open the [prepared Excel sampling demonstration](assets/prepared-excel-sampling-demonstration.xlsx).
 
-| Sample | Sample Mean | 95% Confidence Interval  | Captures 21? |
-| ------ | ----------: | -----------------------: | ------------ |
-| A      | 21          | 18.69 to 23.31           | Yes          |
-| B      | 19          | 16.69 to 21.31           | Yes          |
-| C      | 24          | 21.69 to 26.31           | No           |
+1. On **Samples**, trace one row from its 12 scores to its mean, SE, and interval.
+2. Check whether its interval contains the **population mean of 20.99**.
+3. On **Coverage**, compare the intervals from all **100 samples**.
 
-When the method's assumptions hold, **about 95%** of the intervals would capture the true mean over many repetitions.
+**Will every interval capture the mean? Must exactly 95 of 100 capture it?**
 
 ::: {.notes}
-- Ask students to decide whether each interval covers 21 before reading the last column aloud.
-- These three intervals illustrate capture and miss. They are too few to estimate long-run coverage.
-- The illustrated true mean of 21 is separate from the hypothetical comparison norm of 20 in Prep 4.
-- Adapted from Random Error, slides 49–52.
+- 31–40 min across slides 14–15. Allow about four minutes to trace one row and five minutes to interpret the plot and coverage count.
+- Begin on Samples so students predict before seeing the Coverage summary. Row 8 is Sample 1. Its mean is 21.98, SD 5.39, SE 1.56, and 95% CI 18.55 to 25.40.
+- Columns O:Z hold the 12 linked scores. Columns B:J show n, mean, SD, SE, df, critical value, margin, and limits. Column K identifies capture or miss using the full-precision population mean.
+- The source population is approximately normal. Samples are independent draws; within each sample, selection is without replacement. With only 12 of 10,000 students, the finite-population correction is negligible. Coverage is approximate, not an exact guarantee for this finite population.
+- If Excel is unavailable, use the next slide's plot and the example values in these notes.
+- Adapted from lab_warm_up_random_error.qmd, Confidence intervals section. Its original samples had 10 people; the approved adaptation uses 12.
 :::
+
+
+
+## Which Intervals Capture the Population Mean?
+
+Dots show sample means. Vertical lines show **95% confidence intervals**.
+
+![](assets/sampling-ci-coverage.svg){width=100% height=355 fig-alt="Confidence intervals for all 100 prepared samples. The dashed line marks the fixed population mean of 20.987924. Ninety-eight intervals cross it. Samples 13 and 63 miss it and are identified with orange lines and triangular markers."}
+
+::: {.fragment}
+**98 of 100 capture the mean.** Samples **13 and 63** miss it.
+:::
+
+::: {.notes}
+- Ask students to find the two intervals that miss before revealing the count. The orange triangles and lines mark those samples; color is not the only cue.
+- The workbook compares full-precision endpoints with 20.987924. Labels are rounded for teaching.
+- Over many repetitions, the method captures the fixed mean about 95% of the time when its assumptions hold. This particular batch captures it 98% of the time. Another batch can have a different percentage.
+- Each completed interval either contains the population mean or does not. The 95% describes the method's long-run coverage, not a probability assigned to this fixed parameter after observing one interval.
+- In a real study we do not know the population mean and cannot directly check capture. The simulation makes that otherwise hidden fact visible.
+- Adapted from random_error.pptx, slides 45 and 49–52, and lab_warm_up_random_error.qmd. This plot uses the approved workbook's fixed samples.
+:::
+
 
 
 ## Question: What Does 95% Confidence Mean?
@@ -158,32 +314,32 @@ C. The probability that the true mean is inside this particular interval.
 D. The percentage of future sample means that fall inside this interval.
 
 ::: {.notes}
-- Poll by show of fingers, one through four. Answer B, assuming the sampling and model conditions hold.
+- 40–45 min across slides 16–17. Poll by show of fingers, one through four. Answer B, assuming the sampling and model conditions hold.
 - With repeated sampling, the interval changes while the population mean stays fixed. For any one computed interval, the true mean is either inside or outside.
 - Adapted from Random Error, slides 45 and 49–52.
 :::
 
 
-## Estimating a Proportion
+## Question: Confidence Level and Interval Width
 
-The wellness team also surveys **120 randomly sampled students** about whether they used campus wellness services this semester.
+The team uses the **same 12 scores** and the **same method** to calculate three confidence intervals. Which interval is widest?
 
-- **48 of 120** said yes. The sample proportion is **40%**.
-- An approximate **95% confidence interval is 31% to 49%**.
-- The interval estimates the **percentage of all undergraduates** who used the services this semester.
-
-**What would the team recalculate if it drew a new sample?**
+A. The 90% confidence interval.\
+B. The 95% confidence interval.\
+C. The 99% confidence interval.\
+D. They all have the same width.
 
 ::: {.notes}
-- Both the sample percentage and the interval can change. The population percentage remains fixed.
-- This is a simulated example. The approximate interval is supplied to practice interpretation. The Excel demonstration uses the procedure for a mean.
-- Adapted from the repeated incidence-proportion example in Random Error, slides 14–18.
+- Answer C. On Samples, change M5 from 95% to 99%, then return to Coverage. The intervals widen and this batch captures the mean in 99 of 100 samples. Restore M5 to 95% afterward. Sample means, SDs, and SEs stay fixed.
+- Higher confidence requires a larger critical value and a wider interval when the data and method stay the same.
+- Ask students what they give up to obtain higher confidence: a narrower range of estimates. The SD and SE remain unchanged.
+- Adapted from Random Error quiz.docx, question 3. Corrected the source feedback, which reverses the relationship between confidence level and interval width. Higher alpha gives a narrower interval, all else equal.
 :::
 
 
 ## Excel Demo: Sample Mean and Standard Error
 
-Open the [Prep 4 worked Excel example](assets/prep-4-mean-confidence-interval.xlsx). Column A contains the 12 simulated StressScores.
+Switch to the **separate** [Prep 4 worked Excel example](assets/prep-4-mean-confidence-interval.xlsx). Column A contains the 12 simulated StressScores.
 
 | Calculation    | Excel Formula                | Result |
 | -------------- | ---------------------------- | -----: |
@@ -193,7 +349,7 @@ Open the [Prep 4 worked Excel example](assets/prep-4-mean-confidence-interval.xl
 | Standard error | `=D13/SQRT(D11)`             | 1.05   |
 
 ::: {.notes}
-- 40–60 min (slides 12–14). Open the workbook and click each formula cell while students follow along.
+- 45–55 min across slides 18–19. This workbook has a different set of 12 simulated StressScores. Its mean is 21.00. It is the calculation template students will use for Prep 4.
 - The example formulas allow room for additional scores. Point out that COUNT counts numeric cells and STDEV.S calculates sample SD.
 - If Excel is unavailable in class, walk through the values on this slide and the next one.
 :::
@@ -225,24 +381,28 @@ Report the **95% CI for the population mean StressScore as 18.69 to 23.31 points
 | StressScore      | 20                           |
 | AnxietyScore     | 10                           |
 
-For the example, the **StressScore norm of 20** is inside **18.69 to 23.31**. Using this interval, we **fail to reject** a population mean of 20 at the two-sided 0.05 level.
+The estimated mean is **21 points**, with a **95% CI of 18.69 to 23.31**. The interval includes the **norm of 20**, along with values below and above it.
+
+The data are compatible with a population mean of 20 under the method's assumptions. **This does not establish that the true mean is 20.**
 
 ::: {.notes}
-- Ask whether the result proves the mean is 20. The interval includes 20 along with other values compatible with the data and assumptions.
+- 55–60 min. The hypothetical comparison norm of 20 is separate from the sampling demonstration’s population mean of 20.99. Ask whether the result proves the mean is 20. The interval includes 20 along with other values compatible with the data and assumptions.
 - For Prep 4, students use the norm for their assigned outcome and explain their decision from the interval.
+- For the corresponding two-sided t test at the 0.05 level, we fail to reject a population mean of 20. Keep that decision distinct from proving the norm is correct or deciding whether a difference matters in practice.
+- Adapted from random_error.pptx, slides 31, 52–53, and Resources/Confidence Intervals.docx. Emphasize the estimate and full interval rather than only the test decision.
 :::
 
 
 ## Group Exercise: One Score Changes
 
-In a copy of the workbook, change the last score from **27 to 31**.
+In a copy of the **Prep 4 worked workbook**, change the last score from **27 to 31**.
 
 1. Predict what will happen to the mean and to the interval width.
 2. Record the new mean, sample SD, and 95% confidence interval.
 3. Compare the new interval with the original. Is the estimate more or less precise? Does your decision about the norm of 20 change?
 
 ::: {.notes}
-- 60–75 min (slides 15–16). Allow about 8 minutes for group work and 7 minutes for comparison and discussion.
+- 60–72 min across slides 21–22. Allow about 8 minutes for group work and 4 minutes for comparison and discussion.
 - If Excel is unavailable, give groups the new mean (21.33), SE (1.26), and t critical value (2.20). Have them approximate the endpoints and explain the result.
 :::
 
@@ -263,13 +423,33 @@ The interval is **wider** because the scores vary more and the sample size is un
 :::
 
 
+## Estimating a Proportion
+
+The wellness team also surveys **120 randomly sampled students** about whether they used campus wellness services this semester.
+
+- **48 of 120** said yes. The sample proportion is **40%**.
+- An approximate **95% confidence interval is 31% to 49%**.
+- The interval estimates the **percentage of all undergraduates** who used the services this semester.
+
+**What would the team recalculate if it drew a new sample?**
+
+::: {.notes}
+- 72–76 min. Both the sample percentage and the interval can change. The population percentage remains fixed.
+- This is a simulated example. The approximate interval is supplied to practice interpretation. The Excel demonstration uses the procedure for a mean.
+- Adapted from the repeated incidence-proportion example in Random Error, slides 14–18.
+:::
+
+
 ## What to Report for Prep 4
 
 - Report the sample size, sample mean, sample SD, and 95% confidence interval for your assigned outcome.
 - Explain what the interval estimates and what its width says about precision.
 - Compare the interval with the assigned hypothetical norm and explain your decision.
 
+**Exit question:** What happens to CI width if n increases while SD and confidence level stay the same?
+
 ::: {.notes}
-- 75–80 min. Exit prompt: Ask students to explain in one sentence what would happen to interval width if n increased while the sample SD and confidence level stayed the same.
+- 76–80 min. Exit prompt: Ask students to explain in one sentence what would happen to interval width if n increased while the sample SD and confidence level stayed the same.
+- The population-hypothesis and formal reject/fail-to-reject portions of Prep 4 follow in the November 16 lesson.
 - Remind students to copy the workbook, replace the simulated data with their assigned scores, and set the matching norm.
 :::
