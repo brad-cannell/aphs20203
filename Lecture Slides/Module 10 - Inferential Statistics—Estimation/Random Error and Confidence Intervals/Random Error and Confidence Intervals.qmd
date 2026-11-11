@@ -424,43 +424,64 @@ For a sample mean, estimate the standard error as **sample SD ÷ √n**.
 :::
 
 
+## What Is a Confidence Interval?
 
-<!-- Left off here. When you pick back up, ask Codex to help you clear the comments. -->
+Our sample mean is **21 points**. It estimates the population mean, but another sample would give us a different estimate.
 
+A **confidence interval** gives a range of plausible values for the population mean, based on our sample and the method’s assumptions.
 
-## What Makes an Estimate More Precise?
-
-<!-- I think this slide comes too early. We haven't introduced confidence level or confidence interval yet. -->
-
-A smaller **standard error** means the sample estimate tends to vary less across repeated samples.
-
-- With the same sample SD and confidence level, a larger sample gives a **narrower** mean confidence interval.
-- With the same sample size and confidence level, a larger sample SD gives a **wider** interval.
-- For the same data, a higher confidence level gives a **wider** interval.
+- It expresses uncertainty due to random sampling.
+- Its width tells us about the estimate’s **precision**: a narrower interval gives a more precise estimate.
+- A **95% confidence level** means that, over many repeated samples, about 95% of intervals constructed using this method would contain the true population mean.
 
 ::: {.notes}
-- Compare 12 versus 48 students using the same SD. Mention that sample size also changes the t critical value through degrees of freedom.
-- Ask which condition is held fixed in each comparison. A narrow interval can still be centered on a biased estimate.
+- In our demonstration, we knew the population mean. In a real study, we don’t. We use the sample to construct an interval, but we cannot check whether that particular interval captures the truth.
+- The 21-point sample mean comes from the separate Prep 4 worked sample of 12 students introduced on the previous slide.
 :::
 
 
-## A 95% Confidence Interval for a Mean
+## What Is the Margin of Error?
 
-<!-- We missed a step. We show the calculation for confidence intervals without discussing what they are conceptually and what purpose the serve. Additionally, we discuss the margin of error without ever introducing it. Oh, and we discuss the t critical value without introducing it. -->
+For a population mean, we will construct a confidence interval by adding and subtracting a margin of error from the sample mean.
 
-Start with the sample mean, then subtract and add a **margin of error**.
+$$
+\text{Sample mean} \pm \text{Margin of error}
+$$
+
+The **margin of error** is the distance from the sample mean to either endpoint.
+
+For our worked example:
+
+$$
+21.00 \pm 2.31 = 18.69 \text{ to } 23.31
+$$
+
+A larger margin of error produces a wider confidence interval.
+
+::: {.notes}
+- The margin of error is not the actual distance between our sample mean and the population mean. We still don’t know that distance.
+- Adding and subtracting the same margin gives us a symmetric interval in this example. Not all confidence intervals are symmetric around their estimates.
+:::
+
+
+## Calculating a Confidence Interval for a Population Mean
+
+The margin of error is the **standard error multiplied by a critical value**. The critical value determines how many standard errors we extend on either side of the sample mean.
 
 $$
 \text{Sample mean} \ \pm \ \underbrace{t^* \times \frac{s}{\sqrt{n}}}_{\text{Margin of error}}
 $$
 
-- $s$ is the sample SD. We use it to estimate the standard error.
-- $t^*$ is the **two-sided t critical value** with **$n-1$ degrees of freedom**.
-- A 95% interval leaves 5% across the two tails of the reference distribution.
+- $s/\sqrt{n}$ estimates the **standard error**, using the sample SD and sample size.
+- Because we estimate the population SD using the sample SD, we use a critical value, $t^*$, from the **t distribution**.
+- The critical value depends on the confidence level and sample size. For **12 students** and **95% confidence**, $t^* \approx 2.20$.
 
 ::: {.notes}
-- 28–31 min. Build the formula from the sample mean and a margin of error. Both Excel workbooks use a two-sided t critical value with n−1 degrees of freedom.
-- For this small-sample illustration, assume independent observations from an approximately normal population. Explain that the procedure depends on the study design and its assumptions.
+- Before walking through the formula: The general idea is the same whether we’re estimating a mean, a proportion, or a risk ratio: we use sample data to construct an interval that expresses uncertainty about a population parameter. The calculation depends on what we’re estimating, how the data were collected, and the assumptions we can make. Here, we’re estimating a population mean from a small sample with an unknown population standard deviation, so we’ll use a t-based confidence interval. For this example, we assume independent observations from an approximately normal population.
+- The t method also applies to larger samples when the population SD is unknown; it is not exclusively a small-sample method.
+- Build the formula from the sample mean and a margin of error. Both Excel workbooks use a two-sided t critical value with n−1 degrees of freedom. Here, n−1 = 11. Degrees of freedom account for estimating the mean from the same data and determine which t distribution we use.
+- A 95% interval uses a critical value that leaves 5% across the two tails of the t distribution, or 2.5% in each tail.
+- Using the displayed rounded values, the margin of error is approximately 2.20 × 1.05 = 2.31 points. Excel uses full precision to calculate the interval endpoints.
 :::
 
 
@@ -538,6 +559,20 @@ D. They all have the same width.
 - Higher confidence requires a larger critical value and a wider interval when the data and method stay the same.
 - Ask students what they give up to obtain higher confidence: a narrower range of estimates. The SD and SE remain unchanged.
 - Adapted from Random Error quiz.docx, question 3. Corrected the source feedback, which reverses the relationship between confidence level and interval width. Higher alpha gives a narrower interval, all else equal.
+:::
+
+
+## What Makes an Estimate More Precise?
+
+A smaller **standard error** means the sample estimate tends to vary less across repeated samples.
+
+- With the same sample SD and confidence level, a larger sample gives a **narrower** mean confidence interval.
+- With the same sample size and confidence level, a larger sample SD gives a **wider** interval.
+- For the same data, a higher confidence level gives a **wider** interval.
+
+::: {.notes}
+- Compare 12 versus 48 students using the same SD. Mention that sample size also changes the t critical value through degrees of freedom.
+- Ask which condition is held fixed in each comparison. A narrow interval can still be centered on a biased estimate.
 :::
 
 
