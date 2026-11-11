@@ -28,51 +28,244 @@ resources:
 - Explain what 95% confidence means over repeated samples.
 
 ::: {.notes}
-- Objectives remain hidden, matching the current presentation. The 24 visible slides include the title and follow the approved 80-minute sequence.
+- Objectives remain hidden, matching the current presentation. The 26 visible slides include the title and follow the approved 80-minute sequence.
+:::
+
+
+## Question: What is Error?
+
+When we talk about error in epidemiology, we are generally talking about the difference between the true underlying population value of interest and our measure (or estimate) of that value.
+
+A. True\
+B. False
+
+::: {.fragment}
+**True.** Error is simply the difference between the truth and our estimate of the truth.
+:::
+
+
+## The Big Picture: What is Truth?
+
+![](assets/random-error-source-slide-07.png){style="width: 100%; height: 430px; object-fit: contain;" fig-alt="Truth equals measure minus error."}
+
+::: {.notes}
+- Another way to say this is that the truth is equal to our measure of the truth minus the error in our measure.
+:::
+
+
+## The Big Picture: Truth by Another Name
+
+![](assets/random-error-source-slide-08.png){style="width: 100%; height: 430px; object-fit: contain;" fig-alt="Truth equals measure minus error. Truth is labeled Estimand, and Measure is labeled Estimate."}
+
+::: {.notes}
+- Another term that we will use to refer to the true quantity we aspire to measure in our target population is estimand. Likewise, another term that we will use to refer to the quantity that actually resulted from our data collection and analysis is estimate.
+:::
+
+
+## The Big Picture: Truth from Another Perspective
+
+![](assets/random-error-source-slide-09.png){style="width: 100%; height: 430px; object-fit: contain;" fig-alt="Arrows from Truth (Estimand) and Error converge on Estimate, showing that an estimate reflects both the truth and error."}
+
+::: {.notes}
+- Graphically, that might look something like this. When we conduct a study in epidemiology, we end up with estimates. Those estimates are a result of the true underlying population value – the truth – and the error in our measures.
+- In this sense, error can simply be taken to mean the literal difference between our estimate of the truth and the actual truth. It doesn’t have to be any more complicated than that. Later, our description of errors will get more detailed, and our discussion of the effects of errors will get more specific, but we will still be having a more detailed and specific discussion about this basic idea – the difference between our estimate and the truth.
+:::
+
+
+## Quick Terminology Review {.compact}
+
+Match each term to its definition.
+
+:::: {.columns .text-columns}
+::: {.column width="28%"}
+**Terms**
+
+1. Estimand
+2. Estimator
+3. Estimate
+4. Error
+:::
+::: {.column width="72%"}
+**Definitions**
+
+A. The quantity that actually resulted from our data collection and analysis.
+
+B. The difference between the estimate and the estimand.
+
+C. The true quantity we aspire to measure in our target population.
+
+D. The analysis technique or algorithm used to produce the estimate from our data.
+:::
+::::
+
+::: {.notes}
+- Answers: 1–C (estimand); 2–D (estimator); 3–A (estimate); 4–B (error).
+:::
+
+
+## The Big Picture: Accuracy
+
+![](assets/random-error-source-slide-10.png){style="width: 100%; height: 430px; object-fit: contain;" fig-alt="Two pairs of Truth (Estimand) and Estimate boxes. The lower pair is closer together, illustrating greater accuracy when an estimate is closer to the truth."}
+
+::: {.notes}
+- And the accuracy of our estimate is a measure of how close it is to the truth.   
+- Or how much error we have.   
+:::
+
+
+## The Big Picture: Estimate without Error
+
+![](assets/random-error-source-slide-11.png){style="width: 100%; height: 430px; object-fit: contain;" fig-alt="Truth points to Estimate. The Error box is crossed out, illustrating an estimate without error."}
+
+::: {.notes}
+- Why does this matter? It matters because our goal is to know the truth or at least to know something “close enough” to the truth for our purposes. In theory, if we can eliminate error or at least quantify and correct for it, then we can know the truth.
+- At this point, you may be thinking to yourself, “easier said than done,” and we would tend to agree. Completely removing, or even perfectly quantifying, the error in our estimates is typically difficult work, and often accompanied by our old friend uncertainty. However, and we will keep coming back to this, we can often do a “good enough” job for our results to be useful for our purposes.
+- As a next step in thinking about how to eliminate and/or quantify error, it can be useful to learn more about the various ways we get error in our measurements in the first place.
+:::
+
+
+## Quick Review: Types of Error
+
+The two highest-level (most general) categories of error are typically considered to be...
+
+A. Bias and confounding
+
+B. Random and systematic
+
+C. Differential and non-differential
+
+D. Ignorable and non-ignorable
+
+::: {.notes}
+- Correct answer: B. Random and systematic.
+:::
+
+
+## The Big Picture: Types of Error
+
+![](assets/random-error-source-slide-12.png){style="width: 100%; height: 430px; object-fit: contain;" fig-alt="Truth and Error contribute to Estimate. Error branches into Random and Systematic categories."}
+
+::: {.notes}
+- Traditionally, error is first categorized as random or systematic.   
+- We've already talked a lot about systematic error. What was another name we used for systematic error?   
+:::
+
+
+## {#what-is-random-error .center data-menu-title="What is random error?"}
+
+```{=html}
+<style>
+/* This title-free prompt matches the source PowerPoint's centered layout. */
+.reveal .slides section#what-is-random-error { border-top: 0; padding-top: 0; }
+.reveal .slides section#what-is-random-error > h2 { display: none; }
+</style>
+```
+
+::: {style="display: flex; align-items: center; justify-content: center; height: 600px; font-size: 1.6em; text-align: center;"}
+What is random error?
+:::
+
+::: {.notes}
+- Well, we already know what error is, but what is random error? You might say that it is error that occurs at random, but what does that mean? What does it mean when we say that something is random?
+- When we use random in everyday speech, we typically mean that something happens for no reason – there is an effect without a cause.
+:::
+
+
+## Thought Experiment: Chance and Predictions
+
+If we just had enough information about causes and effects, then we could perfectly predict every outcome.
+
+A. True
+
+B. False
+
+C. Not sure
+
+::: {.notes}
+- Modern Epidemiology, chapter 15, discusses the competing views about randomness.
+- One school of thought is that chance (lack of a cause?) plays a central role in virtually all processes.
+- The other is that chance is just an umbrella term for causes we don't fully understand. In other words, there is a reason for everything that happens whether we know it or not.    
+- Luckily, in epidemiology, random error (chance) can be defined a little bit more precisely. That's what we will discuss next.   
 :::
 
 
 ## How Stressed Are Students?
 
-A campus wellness team wants to estimate the **mean StressScore among all undergraduates this semester**.
+A campus wellness team wants to estimate the **mean stress score among all undergraduates this semester**.
 
 - **Population:** All undergraduates this semester.
 - **Parameter:** Their population mean StressScore.
 - **Sample:** 12 randomly selected students.
 
-<!-- I like the idea, but we may want to edit the question below. Something like, "Is the result from 12 students the same result we would have gotten from all of the students?" -->
-
-**Would another sample of 12 students give the same mean?**
+**Should we expect the mean stress score from these 12 students to be the same as the mean for all undergraduates?**
 
 ::: {.notes}
-- Introduce the question and ask students to predict whether sample means will agree.   
+- Ask students whether they expect the sample mean to equal the population mean, and have them explain their predictions.
 - We've already discussed bias and confounding. Today, we will discuss sampling variability.   
+:::
+
+
+## Explore the Population in Excel
+
+Open the [Excel sampling demonstration](assets/prepared-excel-sampling-demonstration.xlsx) and select the **Population** worksheet.
+
+- Each row represents one student in a **simulated population** of 10,000 students.
+- These are computer-generated example StressScores, not actual student records.
+- Calculate the mean of all 10,000 scores: `=AVERAGE(B7:B10006)`.
+
+::: {.fragment}
+**Population mean: 20.99 points.**
+:::
+
+::: {.notes}
+**Instructions**
+
+- Orient students to the Population Sheet.
+- Select `E3` and type `=AVERAGE(B10:B10009)` in the formula bar.    
+- Explain that averaging all 10,000 scores gives the population mean: **20.99 points**.    
+- We only know this value because we created the entire simulated population. In most real world scenarios we won't have this information.   
+:::
+
+
+## Explore One Sample in Excel
+
+Select the **Samples** worksheet and locate **Sample 1**.
+
+- This random sample contains **12 students** from the simulated population.
+- Find their student IDs and StressScores.
+- Calculate the mean of their 12 scores.
+
+::: {.fragment}
+**Sample mean: 21.98 points.**
+:::
+
+::: {.notes}
+**Instructions**
+
+- Switch to **Samples**. Explain that each row represents a different prepared random sample.   
+- For Sample 1 in row 8, show the 12 student IDs in `AB8:AM8` and their scores in `O8:Z8`. These students were selected from the population just shown.   
+- Select `C8` and show `=AVERAGE(O8:Z8)` in the formula bar. This averages only the 12 scores in Sample 1, giving a sample mean of **21.98 points**. 
+
+**Ask**: "Is this the same as 20.99? Is our sample mean above or below the population mean?"  
+
+- In most real world scenarios, we will only have information from our sample.
 :::
 
 
 
 ## One Population, One Sample
 
-<!-- Show this in Excel before showing this slide? -->
-<!-- Don't call it a "teaching population". Call it a "simulated" popluation instead. Explain what that means. Show them in Excel. -->
-
-For this teaching population, we know all **10,000 scores**. Sample 1 contains **12 students**.
+**The sample mean is an estimate of the population mean.**
 
 ![](assets/sampling-population-1.svg){width=100% height=350 fig-alt="The teaching population mean StressScore is 20.99 points. Sample 1 has a mean of 21.98 points, above the population mean. A dashed reference line marks the population mean."}
 
-**The sample mean is an estimate of the population mean.**
-
 ::: {.notes}
-- The population mean is 20.987924, displayed as 20.99.   
-- Sample 1's mean is 21.9766667, displayed as 21.98.   
-- Explain that the population value is known only because we constructed the teaching population. Use the Population tab if students want to see the complete data.   
+- Here, we plotted our population mean (20.987924) and our sample mean (21.9766667).   
 :::
 
 
 
 ## The Same Population, Another Sample
-
-<!-- Should we show them in Excel? -->
 
 Sample 2 contains **another random selection of 12 students** from the same population.
 
@@ -81,8 +274,9 @@ Sample 2 contains **another random selection of 12 students** from the same popu
 **The population stays the same. The sample estimate changes.**
 
 ::: {.notes}
-- Ask which estimate is above the population mean and which is below it.   
-- Each sample contains 12 distinct students. A student can appear in more than one of the independently selected samples.   
+- And we could do the same thing with sample 2.   
+- Notice that the mean of sample 2 is once again different from the populatiion mean, but it is also different from the mean of sample 1.   
+- The population mean hasn't changed, but our sample, and therefore our estimate of the population mean, has changed.    
 :::
 
 
@@ -108,16 +302,15 @@ The mean among all undergraduates:
 How much might an estimate vary just because we sampled different students?
 
 ::: {.notes}
-- We usually sample because measuring the entire population is impractical. Knowing the sample mean does not reveal its exact distance from the unknown population mean.   
-<!-- What does the note below mean? -->
-- Transition from the unobservable error in one real study to quantifying the variability of estimates across repeated samples.  
+- So, to drive this point home:   
+- We usually sample because measuring the entire population is impractical.    
+- Knowing the sample mean does not reveal its exact distance from the unknown population mean.   
+- But that's exactly what we want to know. The distance (the error) so that we can eliminate it and know the truth.  
+- Unfortunately, we can rarely assertain that answer for one sample, but we can quantify the the variability of estimates across repeated samples.  
 :::
 
 
-
 ## Sampling Error
-
-<!-- Make this more visual like slides 9-12. -->
 
 $$
 \text{Sampling error} = \text{Sample mean} - \text{Population mean}
@@ -131,39 +324,8 @@ $$
 A positive error is an **overestimate**. A negative error is an **underestimate**.
 
 ::: {.notes}
-- 7–10 min across slides 6–7. Values are displayed to two decimals. Calculate the errors using full precision in the workbook.
-- Here, error means the difference between an estimate and the population value. It need not mean that someone made a mistake.
-- Adapted from random_error.pptx, slides 9–12 and 21–23.
-:::
-
-<!-- Left of reviewing and adding comments here. -->
-
-## Random Error and Bias
-
-:::: {.columns .text-columns}
-::: {.column width="50%"}
-**Random Sampling Error**
-
-Different random samples give different mean StressScores.
-
-Larger random samples generally reduce this variation.
-:::
-::: {.column width="50%"}
-**Systematic Error (Bias)**
-
-Suppose students with high stress are consistently less likely to respond. The mean may be too low.
-
-More responses alone do not correct this bias.
-:::
-::::
-
-**A narrow confidence interval can accompany a biased estimate.**
-
-::: {.notes}
-- Ask whether surveying 1,000 students solves the problem if high-stress students are still less likely to respond.
-- Random sampling error is one source of random error. Here we focus on the variation in sample means from repeated sampling.
-- The usual mean confidence interval describes sampling uncertainty under its assumptions. It does not account for systematic nonresponse or measurement bias.
-- Adapted from random_error.pptx, slides 9–12, 18–23, and 52, and Lab warm-up - Random Error.pdf, questions 3 and 7.
+- Here, error means the difference between an estimate and the population value.   
+- Tie this to measurement error and standard deviations.   
 :::
 
 
@@ -176,9 +338,10 @@ These are the **first 10 samples** in the [Excel sampling demonstration](assets/
 The dashed line marks the **population mean of 20.99**.
 
 ::: {.notes}
-- 10–18 min across slides 8–9. Open the Samples tab and compare the Mean column with the plotted points. Ask students to identify an overestimate and an underestimate.
-- The complete workbook has 100 prepared samples. Excel recalculation updates formulas but does not draw new samples.
-- Adapted from random_error.pptx, slides 14 and 17, and lab_warm_up_random_error.qmd, Confidence intervals section.
+- For example, our true estimand of interest is the mean stress score.   
+- We do 10 studies, each of which produces an estimate of the mean stress score.   
+- In this hypothetical scenario, we know that the true mean stress score is 20.99. However, we can see here that none of the estimates produced by our 10 studies were exactly equal to 20.99. Therefore, there is error in each of the studies.   
+- How much?   
 :::
 
 
@@ -187,14 +350,60 @@ The dashed line marks the **population mean of 20.99**.
 
 ![](assets/sampling-errors.svg){width=100% height=375 fig-alt="Signed sampling errors for the same ten samples, calculated as each sample mean minus 20.987924. Some errors are positive and others negative. The dashed zero line marks an estimate equal to the population mean."}
 
-An unbiased estimator has **zero expected error**. The errors in a particular set of samples need not sum to zero.
+Subtract the **population mean** from each sample mean. The dashed line now marks **zero error**.
 
 ::: {.notes}
-- Ask students to connect a point here to the same sample in the previous plot. Only the vertical scale changed.
-- Random sampling makes some estimates too high and others too low. Over many independent repetitions, the average sample mean tends toward the population mean.
-- Adapted from random_error.pptx, slides 15–18. Replace the source's exact-zero-sum illustration with the actual prepared samples so a finite batch is not mistaken for a guarantee.
+- Well, if we change the y-axis from the mean stress score to the error in the estimate of the true true mean stress score (sampling error), we can see the amount of error in each estimate.    
+- For example, study number one overestimates the population mean by about one point. 21.98 − 20.99 = +0.99 points.  
+- **Ask** What about study 2?   
 :::
 
+
+## Do the Errors Cancel Out?
+
+![](assets/sampling-errors.svg){width=100% height=350 fig-alt="The same ten signed sampling errors appear above and below zero. Their sum is approximately positive 1.06 points, so they do not cancel exactly."}
+
+For these 10 samples: **sum of errors ≈ +1.06 points**; **average error ≈ +0.106 points**.
+
+The errors in a particular set of samples **need not sum to zero**.
+
+::: {.notes}
+- And if we average the errors across repeated samples, they average toward zero _in the long run_.
+- Positive and negative errors offset one another, but this batch still has a small positive average error. A nonzero average in ten samples does not establish that the estimator is biased.    
+:::
+
+
+## Average of the Sample Means
+
+![](assets/sampling-repeated-means.svg){width=100% height=350 fig-alt="The same ten sample means on the original StressScore scale. Their average is 21.09 points, compared with the fixed population mean of 20.99 points."}
+
+**Average of the 10 sample means ≈ 21.09 points.** Population mean ≈ **20.99 points**.
+
+An unbiased estimator has **zero expected error** across repeated samples.
+
+::: {.notes}
+- And if we change the y-axis back to the original scale we can see that the average of the estimates is 21.09.    
+- The average sample mean is about 0.106 points above the population mean, matching the average error on the previous slide.
+- Under simple random sampling, the sample mean is an unbiased estimator of the population mean. Across all possible samples of the same size, its expected value equals the population mean.   
+- Over many independent repetitions, the average sample mean tends toward the population mean, and the average error tends toward zero. This does not mean each additional sample brings the average closer or that any finite batch must match exactly.   
+:::
+
+
+## How Much Might Our Estimate Vary?
+
+In our demonstration, we knew the population mean, so we could calculate each sample’s error.
+
+In a real study, we usually have **one sample** and an **unknown population mean**.
+
+We cannot calculate our sample’s exact error, but we can estimate how much sample means would vary across repeated samples.
+
+- The **standard error** summarizes that variability.
+- A **confidence interval** uses it to express uncertainty around our estimate.
+
+::: {.notes}
+- So far, we’ve been able to compare every sample mean with the truth. In a real study, we usually don’t have that luxury. We have our sample, but we don’t know the population mean—that’s what we’re trying to estimate.
+- We can’t tell exactly how far off our estimate is. But we can use the variation in our sample to estimate how much sample means would vary if we repeated the sampling process. That brings us to standard errors and confidence intervals.
+:::
 
 
 ## Standard Deviation and Standard Error
@@ -209,28 +418,19 @@ For the **separate Prep 4 worked sample** of 12 students:
 For a sample mean, estimate the standard error as **sample SD ÷ √n**.
 
 ::: {.notes}
-- 18–28 min across slides 10–12. Compare SD and SE, then discuss sample size and precision. These numbers come from the Prep 4 workbook, not Sample 1 of the sampling demonstration.
+- Compare SD and SE, then discuss sample size and precision. These numbers come from the Prep 4 workbook, not Sample 1 of the sampling demonstration.
 - The sample SD describes the spread of individual scores. The SE estimates the SD of the sampling distribution of the mean.
 - Here, 3.64 ÷ √12 is about 1.05. Use full precision when calculating interval endpoints.
 :::
 
 
-## Question: Standard Error and Sample Size
 
-Suppose the wellness team samples **48** students instead of **12**. Assume the sample SD is the same. What happens to the estimated standard error?
-
-A. It doubles.  
-B. It stays the same.  
-C. It is cut in half.  
-D. It drops to one-quarter of its original value.
-
-::: {.notes}
-- Poll by show of fingers, one through four. Ask a student to explain the square root before revealing C.
-- Sample size quadruples, so its square root doubles. The SE drops from about 1.05 to 0.53 points.
-:::
+<!-- Left off here. When you pick back up, ask Codex to help you clear the comments. -->
 
 
 ## What Makes an Estimate More Precise?
+
+<!-- I think this slide comes too early. We haven't introduced confidence level or confidence interval yet. -->
 
 A smaller **standard error** means the sample estimate tends to vary less across repeated samples.
 
@@ -245,6 +445,8 @@ A smaller **standard error** means the sample estimate tends to vary less across
 
 
 ## A 95% Confidence Interval for a Mean
+
+<!-- We missed a step. We show the calculation for confidence intervals without discussing what they are conceptually and what purpose the serve. Additionally, we discuss the margin of error without ever introducing it. Oh, and we discuss the t critical value without introducing it. -->
 
 Start with the sample mean, then subtract and add a **margin of error**.
 
@@ -284,6 +486,8 @@ Open the [prepared Excel sampling demonstration](assets/prepared-excel-sampling-
 
 
 ## Which Intervals Capture the Population Mean?
+
+<!-- Do we need this slide if we just showed the same concept in Excel on the previous slide? -->
 
 Dots show sample means. Vertical lines show **95% confidence intervals**.
 
@@ -339,6 +543,8 @@ D. They all have the same width.
 
 ## Excel Demo: Sample Mean and Standard Error
 
+<!-- Should we make this a group exercise? -->
+
 Switch to the **separate** [Prep 4 worked Excel example](assets/prep-4-mean-confidence-interval.xlsx). Column A contains the 12 simulated StressScores.
 
 | Calculation    | Excel Formula                | Result |
@@ -356,6 +562,8 @@ Switch to the **separate** [Prep 4 worked Excel example](assets/prep-4-mean-conf
 
 
 ## Excel Demo: Critical Value and Limits
+
+<!-- We discuss degrees of freedom without every introducing what they are or why we need them. -->
 
 | Calculation        | Excel Formula           | Result |
 | ------------------ | ----------------------- | -----: |
@@ -376,6 +584,8 @@ Report the **95% CI for the population mean StressScore as 18.69 to 23.31 points
 
 ## Comparing the Interval With the Prep 4 Norm
 
+<!-- I'm not sure what this slide is doing. -->
+
 | Assigned Outcome | Hypothetical Population Norm |
 | ---------------- | ---------------------------: |
 | StressScore      | 20                           |
@@ -394,6 +604,8 @@ The data are compatible with a population mean of 20 under the method's assumpti
 
 
 ## Group Exercise: One Score Changes
+
+<!-- Where is the Prep 4 worked workbook? -->
 
 In a copy of the **Prep 4 worked workbook**, change the last score from **27 to 31**.
 
@@ -425,6 +637,8 @@ The interval is **wider** because the scores vary more and the sample size is un
 
 ## Estimating a Proportion
 
+<!-- We don't give any information about how to calculate this interval. We also don't give enough information about how to interpret it. -->
+
 The wellness team also surveys **120 randomly sampled students** about whether they used campus wellness services this semester.
 
 - **48 of 120** said yes. The sample proportion is **40%**.
@@ -441,6 +655,8 @@ The wellness team also surveys **120 randomly sampled students** about whether t
 
 
 ## What to Report for Prep 4
+
+<!-- Instead of an exit question, let's work through some examples. -->
 
 - Report the sample size, sample mean, sample SD, and 95% confidence interval for your assigned outcome.
 - Explain what the interval estimates and what its width says about precision.
