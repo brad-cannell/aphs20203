@@ -1,6 +1,6 @@
 ---
 title: "Hypothesis Testing"
-subtitle: "APHS 20203 | November 16, 2026"
+subtitle: "APHS 20203"
 format:
   revealjs:
     theme: [default, ../../_theme/tcu.scss]
@@ -16,95 +16,127 @@ format:
 shortcodes:
   - ../../_extensions/gadenbuie/countdown/countdown.lua
 resources:
-  - "../Activity 2 - Repeated Studies.xlsx"
-  - "../../Module 10 - Inferential Statistics—Estimation/Random Error and Confidence Intervals/assets/prep-4-mean-confidence-interval.xlsx"
+  - "assets/Hypothesis Testing.xlsx"
+  - "assets/prep-4-mean-confidence-interval.xlsx"
+  - "assets/correlation_practice.xlsx"
 ---
 
 
 ## Suppose We Knew the Population Mean
 
-Imagine the average BMI of all adults in Texas is **28**. We draw a simple random sample and get **30**.
-
-![](assets/bmi-sampling-21.png){style="width: 100%; height: 320px; object-fit: contain;" fig-alt="A sample with mean BMI 30 drawn from a population with mean BMI 28. The estimate is two units above the truth."}
+![](assets/bmi-population-mean-28-sample-mean-30.png){style="width: 100%; height: 320px; object-fit: contain;" fig-alt="A sample with mean BMI 30 drawn from a population with mean BMI 28. The estimate is two units above the truth."}
 
 ::: {.notes}
-- 0–2 min. Opening adapted from Brad Cannell’s Epidemiology III Random Error, slides 21–27. The first three diagrams are the originals.
-- Suppose we could measure every adult in Texas. In this hypothetical world we know the answer. How far is our estimate from the truth? In which direction?
+- Last week, we saw examples of random error in our measurements. The most prominant source of random error in our studies, and the source that we will focus on for the rest of today, is sampling error – or sampling variability.
+
+- For example, the average BMI of adults living in Texas may be 28. If we go measure the BMI of a simple random sample of adult Texans, we may find that the average BMI in our sample is 30. 
+
+- Of course, in this hypothetical world we know that 30 is 2 units higher than the truth, and the reason for that 2-unit difference is just the luck of the draw. 
 :::
 
 
 ## Draw Another Sample
 
-Same population. Same sample size. This time we get **26**.
-
-![](assets/bmi-sampling-22.png){style="width: 100%; height: 345px; object-fit: contain;" fig-alt="Two samples from a population with mean BMI 28. Their means, 30 and 26, lie two units above and below the population mean."}
+![](assets/bmi-population-mean-28-sample-means-30-and-26.png){style="width: 100%; height: 345px; object-fit: contain;" fig-alt="Two samples from a population with mean BMI 28. Their means, 30 and 26, lie two units above and below the population mean."}
 
 ::: {.notes}
-- 2–3 min. Both estimates missed by two units. Ask whether changing who happened to be sampled could account for both results.
-- Connect to the different sample means students saw in last week’s Excel demonstration.
+- If we draw another simple random sample, then the average in that sample may be 2-units lower than the truth. With random error, our estimates differs from the truth, but tend to lie all around the truth, seemingly at random.
+
+- In this case, we could more explicitly say that random error is due to the fact that we collect measurements of whatever exposure or outcome we are interested in from a sample of people from our target population instead of collecting measures from everyone in our target population. 
+
+- And in this context, what does the word “random” mean?
 :::
 
 
 ## How Far Are We From the Truth?
 
-![](assets/bmi-sampling-23.png){style="width: 100%; height: 345px; object-fit: contain;" fig-alt="Only the sample mean of 30 is known. Question marks replace the population mean and the sampling error."}
-
-We observed **30**. What would we need to know to work out the sampling error?
+![](assets/bmi-sample-mean-30-unknown-population-mean.png){style="width: 100%; height: 345px; object-fit: contain;" fig-alt="Only the sample mean of 30 is known. Question marks replace the population mean and the sampling error."}
 
 ::: {.notes}
-- 3–5 min. Pause. Someone will usually say we need the population mean. Ask how we would get it.
-- That is the problem we started with. We drew a sample because measuring everyone was impractical. How might we get around that?
+- This begs the question, “When we draw a sample and calculate a value of interest, how different is the result we got from the result we would have gotten if we were basing our calculation on measures taken from the entire population instead?” Without having some idea of how close these values are, it makes us feel ill-equipped to draw conclusions and make policy decisions.
+
+- **Why can’t we answer this question directly?**
+
+- Unfortunately, we can’t typically answer that question directly, because that would require knowing the answer we would have gotten if we collected measures from the entire population. And if we collected measures from the entire population, then there would be no need to also collect measures from a sample of the population. 
+
+- So, it seems like we are kind of stuck in a vicious cycle. We draw a sample because we can’t measure the entire population. Then, we want to know how accurate our sample estimate is, but we can’t know for sure because we can’t measure the entire population. 
+
+- **How might we try to get around this problem?**
 :::
 
 
 ## Suppose the Population Looked Like This
 
-Imagine BMI in the population follows a normal distribution with **mean 30** and **SD 4**.
-
-![](assets/bmi-model-1.svg){width=95% fig-alt="Bell-shaped distribution of individual adult BMIs, centered at 30 with a standard deviation of 4."}
-
-What sample means would you expect if you drew **25 adults at random**, over and over?
+![](assets/bmi-normal-population-mean-30.png){style="width: 100%; height: 390px; object-fit: contain;" fig-alt="Bell-shaped BMI distribution centered at 30. The original graph labels 26 and 34 as 1 SE with 68%, 22 and 38 as 2 SE with 95%, and 18 and 42 as 3 SE with 99%."}
 
 ::: {.notes}
-- 5–7 min. Original slide 24 turns the question around. We can assume a population and ask what kinds of samples it would produce.
-- The curve describes individuals. Ask where the means of samples of 25 would center and whether they would vary as much as individuals.
+- So, we typically can’t answer the question that we really want to answer – "how much does our estimate calculated from a sample of people differ from the true population value. 
+
+- However, we can sort of do the opposite. If we make some assumptions about the distribution of our quantity of interest in the target population – for example, that it is normally distributed -- then statistics gives us many tools we can use to estimate how compatible our data is with that assumed population distribution. 
+
+**NOTE**: We are not saying that this is how the population looks.
 :::
 
 
 ## Would a Sample Mean of 30 Surprise You?
 
-![](assets/bmi-model-2.svg){width=95% fig-alt="Sampling distribution of mean BMI for samples of 25. The observed mean of 30 is at its center."}
-
-Here each draw gives us a **mean of 25 adults**. Under our assumptions, the means center on 30 and their standard error is **4/√25 = 0.8**.
+![](assets/bmi-population-mean-30-sample-mean-30.png){style="width: 100%; height: 390px; object-fit: contain;" fig-alt="Population BMI curve centered at 30, beside 25 circles labeled Sample = 30. A left-pointing arrow labeled Probability? connects the sample to the population curve. The original curve includes 1, 2, and 3 SE labels."}
 
 ::: {.notes}
-- 7–8 min. Keep sample size fixed from here on. The horizontal scale is the same as on the previous slide.
-- A sample mean near 30 fits this model easily. Could another population also have produced a sample mean near 30? Invite an example.
+- For example, let’s once again say that we drew a sample of people from our target population and found that the mean BMI for those people was 30. If we assume that our sample came from a population where the mean BMI is 30 with a standard deviation of 4, then it wouldn’t be surprising at all for our sample to have a mean of 30. 
+
+- Further, it wouldn’t seem odd at all to draw this sample from the hypothetical population distribution, which lends some credit to the idea that our assumed population distribution is close to being accurate. 
+
+**Question**
+- But, what are some other possible reasons for the lack of discrepancy?   
+  - Luck of the draw – we just happened to draw a sample of people whose BMI averaged to a value that is compatible with this assumed population distribution even though the actual distribution in our target population is very different from the assumed distribution.   
+  - We incorrectly made assumptions about our population – the real mean is 38.   
+  - We incorrectly calculated our sample mean. Just happened to be compatible with our assumed distribution.   
+  - There were errors in our BMI measures.   
+
 :::
 
 
 ## What if the Sample Mean Were 50?
 
-![](assets/bmi-model-3.svg){width=95% fig-alt="The same sampling distribution centered at 30, with an observed sample mean of 50 marked far to the right."}
-
-How surprising would this result be? What might you check before drawing a conclusion about the population?
+![](assets/bmi-population-mean-30-sample-mean-50.png){style="width: 100%; height: 390px; object-fit: contain;" fig-alt="Population BMI curve centered at 30, beside 25 circles labeled Sample = 50. A left-pointing arrow labeled Probability? connects the sample to the population curve. The original curve includes 1, 2, and 3 SE labels."}
 
 ::: {.notes}
-- 8–10 min. Hold the assumed population and sample size fixed. Ask what changed between the last two slides.
-- Elicit the assumptions about the population, the sampling procedure, and possible measurement or calculation errors. Chance is also possible. A 20-unit discrepancy here is 25 standard errors.
+**Questions**   
+- If we instead found that our sample distribution was 50, would it feel more or less likely that our sample was drawn from this hypothetical population distribution? 
+
+- And would it make us more or less skeptical about how closely our assumed population distribution matches the actual population distribution?
+
+- But, what are some other possible reasons for the discrepancy?   
+  - Luck of the draw – we just happened to draw a sample of people whose BMI averaged to a value that is compatible with this assumed population distribution even though the actual distribution in our target population is very different from the assumed distribution.   
+  - We incorrectly made assumptions about our population – the real mean is 38.   
+  - We incorrectly calculated our sample mean. Just happened to be compatible with our assumed distribution.   
+  - There were errors in our BMI measures.   
+
+In practice, most epidemiologists don’t typically graph out the assumed distribution and make comparisons to it in the way we just did (although, maybe we should). 
 :::
 
 
 ## Statistical Hypothesis Testing
 
-1. State a claim about the population and what would count as a departure from it.
-2. Choose a significance level, α, before looking at the results.
-3. Use a statistical model to work out which results we would expect if the claim were true.
-4. Compare our result with that expectation using a **test statistic** and a **p-value**.
+1. Assume that our value of interest has a specific size   
+    - Typically, that size corresponds to no association or no effect – the null   
+    - Null Hypothesis Significance Testing (NHST)   
+
+2. Select an alpha level – somewhat arbitrary   
+    - Type I error – rejecting the null when it is correct   
+    - Fit our data to a statistical model and all of that model’s assumptions   
+
+3. Calculate a test statistic
+
+4. Use the test statistic to calculate a p-value
 
 ::: {.notes}
-- 10–12 min. Name what students just did. The claim we use to generate the expected results is the null hypothesis. Often it specifies zero difference or zero association.
-- For the BMI example, the claim was a specific population mean. A different mean in either direction counts as a departure.
+- Traditionally, this has been done with statistical hypothesis testing. Specifically, null hypothesis significance testing. 
+
+- These are roughly the steps.
+
+- We will walk through an example and talk more about each step next.
 :::
 
 
@@ -114,11 +146,100 @@ How surprising would this result be? What might you check before drawing a concl
 
 **Alternative hypothesis, H₁:** The population mean StressScore differs from 20.
 
-Before seeing the data, set **α = .05**. A two-sided test treats departures above and below 20 as evidence against H₀.
+A **two-sided test** treats departures above and below 20 as evidence against H₀.
+
+Here, 20 is a hypothetical population norm. H₀ gives us the reference value to compare with our sample mean.
 
 ::: {.notes}
-- 12–14 min. These are claims about the population. Ask which claim supplies the reference value for the test.
-- Under a true null and the assumptions of this continuous test, choosing α = .05 gives a 5% long-run chance of rejecting. We will see how that works in Excel.
+- Step 1 was to assume that our value of interest has a specific size.   
+
+- In this case, what is the our value of interest and what is its size?   
+
+- The value of interest is difference in between the population mean stress score and 20.
+
+- The size is 0. Typically, that size corresponds to no association or no effect – the null. 
+:::
+
+
+## Statistical Hypothesis Testing
+
+1. Assume that our value of interest has a specific size   
+    - Typically, that size corresponds to no association or no effect – the null   
+    - Null Hypothesis Significance Testing (NHST)   
+
+2. Select an alpha level – somewhat arbitrary   
+    - Type I error – rejecting the null when it is correct   
+    - Fit our data to a statistical model and all of that model’s assumptions   
+
+3. Calculate a test statistic
+
+4. Use the test statistic to calculate a p-value
+
+::: {.notes}
+- Reminder.
+:::
+
+
+## Alpha and Our Decision Rule
+
+Before seeing the data, we choose alpha (α), the cutoff we will compare our p-value with. **If p < α, we reject H₀**. Otherwise, we fail to reject H₀.
+
+Convention: **α = .05**
+
+- **p < .05: Reject H₀.** The data provide evidence that the population mean differs from 20.
+- **p ≥ .05: Fail to reject H₀.** The data do not provide enough evidence that the population mean differs from 20. This does not prove that it equals 20.
+
+A **Type I error** occurs when we reject a true H₀. With α = .05, a valid test makes this error in about 5% of repeated studies when H₀ is true.
+
+::: {.notes}
+- Step 2: Select an alpha level.
+
+- Alpha is the cutoff we choose for deciding when to reject the null hypothesis. Choosing α = .05 means accepting a 5% chance of rejecting the null hypothesis when it is actually true. 
+
+- If the null hypothesis were true and we repeated this study many times, our testing procedure would incorrectly reject it about 5% of the time.
+
+- The conventional .05 cutoff is not a natural dividing line between truth and falsehood. It has just become a convention.
+
+- We will calculate a p-value shortly. For now, establish the meanings of the two possible decisions.
+
+- A 5% long-run error rate does not mean a 5% probability that this particular decision is wrong.
+:::
+
+
+## Statistical Hypothesis Testing
+
+1. Assume that our value of interest has a specific size   
+    - Typically, that size corresponds to no association or no effect – the null   
+    - Null Hypothesis Significance Testing (NHST)   
+
+2. Select an alpha level – somewhat arbitrary   
+    - Type I error – rejecting the null when it is correct   
+    - Fit our data to a statistical model and all of that model’s assumptions   
+
+3. Calculate a test statistic
+
+4. Use the test statistic to calculate a p-value
+
+::: {.notes}
+- Reminder.
+:::
+
+
+## A Model for Our StressScore Example
+
+We will use a **one-sample t test** to compare a sample mean with 20.
+
+For this example, assume:
+
+- We take a simple random sample of students, with independent observations.
+- StressScore follows a normal distribution in the population.
+
+We estimate the standard error using the **sample SD**. If H₀ is true, the test statistic follows a *t* distribution with **n − 1 degrees of freedom**.
+
+::: {.notes}
+- These assumptions make the reference distribution valid for this example. They do not become true merely because we choose a t test.
+- The repeated-studies workbook generates independent observations from a normal distribution. For actual data, we would need to assess the sampling process and distribution.
+- Degrees of freedom identify which t distribution to use. For a one-sample t test, we lose one degree of freedom when estimating the mean.
 :::
 
 
@@ -130,12 +251,107 @@ $$
 
 A sample mean **two standard errors above 20** gives *t* = +2. A mean **two standard errors below 20** gives *t* = −2.
 
-Under H₀, how often would a random sample give a *t* statistic **at least this far from zero** in either direction?
+**The two-sided p-value answers this question:** If H₀ and the model assumptions hold, how often would a random sample give a t statistic at least this far from zero in either direction?
 
 ::: {.notes}
-- 14–17 min. That last question defines the two-sided p-value. Interpret distance as the absolute value of t.
-- In Activity 2, observations are independent normal draws. We estimate SE from the sample SD. With 20 observations, compare t to a t distribution with 19 degrees of freedom.
-- At our chosen α, reject H₀ if p < .05. Otherwise, fail to reject it. Use the unrounded p-value.
+- Now, we calculate the test statistic. In this case, it's a t value.
+
+- The t value is used to calculate the p-value.
+:::
+
+
+## A Concrete Calculation
+
+Suppose **25 students** have a mean StressScore of **22** and a sample SD of **5**. We are testing **H₀: μ = 20**.
+
+$$
+SE = \frac{s}{\sqrt{n}} = \frac{5}{\sqrt{25}} = 1
+$$
+
+$$
+t = \frac{\bar{x} - \mu_0}{SE} = \frac{22 - 20}{1} = 2
+$$
+
+Our sample mean is **2 standard errors above** the mean specified by H₀.
+
+::: {.notes}
+- These are hypothetical summary values chosen to make the arithmetic easy. They are separate from Sample 1 in the workbook.
+- Ask students to identify the observed mean, the null value, and the standard error before substituting numbers.
+- If the sample mean were 18 with the same SE, t would be −2.
+:::
+
+
+## Statistical Hypothesis Testing
+
+1. Assume that our value of interest has a specific size   
+    - Typically, that size corresponds to no association or no effect – the null   
+    - Null Hypothesis Significance Testing (NHST)   
+
+2. Select an alpha level – somewhat arbitrary   
+    - Type I error – rejecting the null when it is correct   
+    - Fit our data to a statistical model and all of that model’s assumptions   
+
+3. Calculate a test statistic
+
+4. Use the test statistic to calculate a p-value
+
+::: {.notes}
+- Step 4: Use the test statistic to calculate a p-value
+:::
+
+
+## From the t Statistic to a p-Value
+
+For **t = 2** with **25 − 1 = 24 degrees of freedom**, Excel gives:
+
+`=T.DIST.2T(ABS(2), 24)` → **p ≈ .057**
+
+If H₀ and the model assumptions hold, about **5.7%** of repeated samples would give **t ≤ −2 or t ≥ 2**.
+
+Because **.057 > .05**, we **fail to reject H₀**. We do not have enough evidence that the population mean StressScore differs from 20.
+
+::: {.notes}
+- The two-sided p-value includes both tails: values at least as far from zero as the observed statistic.
+- ABS takes the absolute value, so a t statistic of −2 gives the same two-sided p-value.
+- This is a probability calculated under H₀ and the model assumptions. It is not the probability that H₀ is true.
+- Use the unrounded p-value for the decision. Here, p = .05693985.
+:::
+
+
+## What Our p-Value Means
+
+For our StressScore example, **t = 2** and **p ≈ .057**.
+
+**Assuming H₀ and the model assumptions hold**, about 5.7% of repeated samples would give a *t* statistic **as far from zero as 2, or farther**, in either direction.
+
+This does **not** mean:
+
+- There is a 5.7% probability that H₀ is true.
+- There is a 5.7% probability that chance alone explains our result.
+
+The probability includes **equally extreme and more extreme results**, not just the result we observed.
+
+::: {.notes}
+- Keep the conditioning explicit: we assume a population mean StressScore of 20 and the model assumptions, then ask about possible sample results.
+- In this example, the relevant results are t ≤ −2 or t ≥ 2. We are not calculating the probability that the population mean equals 20.
+- Adapted from Random Error, slides 28–29 and 36. Source: Greenland S, Senn SJ, Rothman KJ, et al. Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. Eur J Epidemiol. 2016;31:337–350. doi:10.1007/s10654-016-0149-3.
+:::
+
+
+## What Our Test Decision Means
+
+At **α = .05**:
+
+- **Reject H₀:** The data provide evidence against H₀ under the model assumptions. This does not prove that H₀ is false.
+- **Fail to reject H₀:** The data do not provide enough evidence against H₀. This does not prove that H₀ is true or that there is no effect.
+
+Our sample mean was **22**, compared with the null value of **20**. With **p ≈ .057**, we fail to reject H₀, even though we observed a **2-point difference**.
+
+::: {.notes}
+- A test decision follows the chosen rule; it does not establish a hypothesis with certainty. Even when assumptions hold, random sampling can lead to an incorrect decision.
+- A small p-value can also reflect a violation of another model assumption. Rejecting H₀ is not a way to verify those assumptions.
+- A large p-value can occur when the data are too imprecise to distinguish the null from meaningful alternatives. Failing to reject does not establish equality.
+- Adapted from Random Error, slides 30–33. Source: Greenland et al. (2016), doi:10.1007/s10654-016-0149-3.
 :::
 
 
@@ -154,9 +370,9 @@ C. About 3% of individual students have a StressScore this far from 20.
 :::
 
 
-## Activity 2: Can a Study Reject a True Null?
+## Hypothesis Testing: Can We Reject a True Null?
 
-Open [Activity 2: Repeated Studies](../Activity%202%20-%20Repeated%20Studies.xlsx) on the **Activity** tab. Start with **B7 = 0.05**.
+Open the [Hypothesis Testing workbook](assets/Hypothesis%20Testing.xlsx) on the **Activity** tab. Start with **B7 = 0.05**.
 
 The workbook contains **100 simulated studies of 20 students each**. We generated the scores from a normal population with mean **20** and SD **4**. Each study tests H₀: μ = 20.
 
@@ -214,68 +430,21 @@ Change **B7** each time. Record the number of intervals containing 20 and the nu
 :::
 
 
-## Suppose the True Mean Were 22
+## What the 5% Error Rate Means
 
-We still test **H₀: μ = 20**, but imagine drawing our samples from a population with mean **22**.
+In our simulation, **H₀ is true in every study**. Every rejection is therefore a Type I error.
 
-| Our decision      | What happened in this population? |
-| ----------------- | --------------------------------- |
-| Reject H₀         | We detected the difference.       |
-| Fail to reject H₀ | We made a Type II error.          |
+With **α = .05**, the testing procedure would reject H₀ in about **5% of studies over many repetitions**, assuming the model assumptions hold.
 
-**Power** is the probability of detecting this specified difference across repeated studies. If the probability of a Type II error is β, power is **1 − β**.
+This does **not** mean that a particular significant result has a 5% chance of being wrong.
 
-::: {.notes}
-- 39–44 min. Keep this as a thought experiment. Changing alpha in Activity 2 cannot create a population with a true mean of 22.
-- Ask students to complete each row aloud before defining power. A failure to reject with a true mean of 20 was the correct decision. With a true mean of 22, the same decision misses a real difference.
-:::
-
-
-## Question: Which Study Has More Power?
-
-Both studies test μ = 20 at α = .05. The true mean is 22, and the population SD is 4 in both.
-
-A. The study that samples **20** students.  
-B. The study that samples **80** students.  
-C. Both studies have the same power.
-
-What happens to the standard error when the sample size quadruples?
+Changing alpha changes the **p-value cutoff for rejection**. It does **not** change the calculated p-values.
 
 ::: {.notes}
-- 44–49 min. Vote by raising one, two, or three fingers. B. Quadrupling n halves the standard error. The same two-point departure is larger in standard-error units.
-- Ask what happens if the true mean is farther from 20, with n and variability fixed. Power rises. Changing the true effect alone does not narrow the interval.
-- Holding the effect, sample size, and variability fixed, raising α makes rejection easier. Power rises and so does the risk of a Type I error when H₀ is true.
-:::
-
-
-## Back to Sleep and Stress
-
-For the **20 students** in our November 2 practice workbook, we found **r = −.834** and **r² = .696**.
-
-A two-sided Pearson test of **H₀: ρ = 0** gives **p < .001**.
-
-What does *r* tell us about sleep and stress? What question does the p-value answer?
-
-::: {.notes}
-- 49–54 min. The alternative says the population linear correlation differs from zero. Have a pair report the direction, strength, decision at .05, and interpretation.
-- More sleep accompanies lower stress scores in this sample. The paired data provide evidence of a population linear association under the test assumptions. The study design does not establish causation.
-- Calculated from the 20 original sleep_hours and stress_score pairs: r = −.8342532, t = −6.4192, df = 18, two-sided p ≈ .00000483. CORREL alone returns r.
-:::
-
-
-## How Much Does a Significant Difference Matter?
-
-On a 100-point scale, Group A scored **0.4 points higher** on average than Group B.
-
-The **95% CI for the population mean difference (A − B) is 0.1 to 0.7 points**.
-
-1. What value would represent equal population means? What decision would the corresponding two-sided test give at α = .05?
-2. What would you need to know to decide whether the difference matters to students?
-
-::: {.notes}
-- 54–59 min. Zero is outside the interval. The difference is statistically significant. Ask which group scored higher and what sizes of difference are compatible with the data.
-- Practical importance depends on what a point means on this scale and how large a difference would affect a decision. A p-value alone gives neither size nor importance.
-- Begin the Prep 4 group work at minute 59.
+- Connect the long-run rate to the workbook: this batch has 2 rejections in 100 studies at α = .05. Another batch could have a different count.
+- Here we know every rejection is wrong because we generated every study under H₀. In actual research, we generally do not know whether H₀ is true.
+- At α = .10, reject when p < .10. At α = .05, reject when p < .05. We choose alpha before examining the results; changing it here is a teaching demonstration.
+- Adapted from Random Error, slide 37. Source: Greenland et al. (2016), doi:10.1007/s10654-016-0149-3.
 :::
 
 
@@ -289,69 +458,73 @@ The **95% CI for the population mean difference (A − B) is 0.1 to 0.7 points**
 Work with your project group. Groups **1–2** use dataset **A**, groups **3–4** use **B**, and group **5** uses **C**.
 
 ::: {.notes}
-- 59–60 min. Ask one person in each group to pull up the Prep 4 instructions and another to record the hypotheses. These are the current five groups.
+- 49–50 min. Ask one person in each group to pull up the Prep 4 instructions and another to record the hypotheses. These are the current five groups.
 :::
 
 
-## Write Three Pairs of Population Hypotheses
+## Hypotheses for a Correlation
 
-Use your group's variable names in each **H₀** and **H₁**.
+For your group's two continuous variables, describe their **linear association in the population**.
 
-1. **Correlation:** What would zero population correlation mean for your two continuous variables?
-2. **Mean comparison:** What does H₀ say about the population means across all three levels of your grouping variable? What would be enough for H₁?
-3. **Categorical association:** What would independence mean for your two categorical variables?
+**H₀:** The population correlation between **[variable 1]** and **[variable 2]** equals zero.
 
-{{< countdown minutes=6 warn_when=30 start_immediately=false bottom="70px" right="20px" >}}
+**H₁:** The population correlation between **[variable 1]** and **[variable 2]** differs from zero.
+
+For groups **1, 3, and 5**, fill the blanks with **SleepHours** and **StressScore**. Groups **2 and 4** use **ScreenTimeHours** and **AnxietyScore**.
 
 ::: {.notes}
-- 60–66 min. Circulate and ask whether each statement describes a population. Have partners check that each alternative includes every departure covered by the two-sided or overall test.
+- Model the first pair aloud. H₀ says that the population correlation between SleepHours and StressScore equals zero. H₁ says that it differs from zero.
+- Zero correlation means no linear association. It does not rule out a curved relationship.
+- The alternative includes positive and negative correlations. Students do not need to calculate r to state these hypotheses.
+:::
+
+
+## Hypotheses for Comparing Means
+
+Compare the **population mean outcome across all three categories** of your grouping variable.
+
+**H₀:** Mean **[outcome]** is equal across all **[grouping variable]** categories in the population.
+
+**H₁:** At least one population mean **[outcome]** differs across **[grouping variable]** categories.
+
+Use **StressScore by ActivityLevel** or **AnxietyScore by SocialSupport**, according to your group's assignment.
+
+::: {.notes}
+- Example: Mean StressScore is equal across all ActivityLevel categories in the population, versus at least one population mean StressScore differs across those categories.
+- The alternative does not require every group to differ from every other group and does not specify which group has the highest mean.
+- This compares group means. It is a different question from comparing one population mean with the norm of 20.
+:::
+
+
+## Hypotheses for Categorical Variables
+
+Ask whether the **distribution of outcome categories differs across groups** in the population.
+
+**H₀:** **[Outcome category variable]** and **[grouping variable]** are independent in the population.
+
+**H₁:** **[Outcome category variable]** and **[grouping variable]** are associated in the population.
+
+For **StressCat and CaffeineUse**, H₀ means that the proportions in each stress category are the same across caffeine-use groups.
+
+::: {.notes}
+- Groups 1, 3, and 5 use StressCat and CaffeineUse. Groups 2 and 4 use AnxietyCat and MindfulnessPractice.
+- For groups 2 and 4, H₀ means that the proportions in each anxiety category are the same across mindfulness-practice groups.
+- An association means at least one of those category proportions differs across groups. It does not imply that one variable causes the other.
+:::
+
+
+## Write Your Group's Six Hypothesis Statements
+
+Work with your project group. Have one person record your answers in your Prep 4 notes.
+
+1. Copy each of the three **H₀/H₁ pairs** from the preceding slides.
+2. Replace every bracketed placeholder with your group's assigned variable name.
+3. Read all **six statements** together. Each should describe the population and say what would be equal, independent, or different.
+
+::: {.notes}
+- 50–56 min. Circulate and ask whether each statement describes a population. Have partners check that each alternative includes every departure covered by the two-sided or overall test.
 - Example for groups 1, 3, 5: the population correlation between SleepHours and StressScore equals zero versus differs from zero.
 - Mean StressScore is equal across all ActivityLevel categories versus at least one population mean differs. StressCat and CaffeineUse are independent versus associated in the population.
 - For groups 2 and 4 use the corresponding anxiety variables. For categorical independence, students can describe the same outcome-category proportions across groups.
 :::
 
-
-## Use the Interval to Make a Decision
-
-Open the [Prep 4 worked example](../../Module%2010%20-%20Inferential%20Statistics%E2%80%94Estimation/Random%20Error%20and%20Confidence%20Intervals/assets/prep-4-mean-confidence-interval.xlsx) or use the values below.
-
-The 12 students had a mean StressScore of **21.00**. The **95% CI for the population mean is 18.69 to 23.31 points**.
-
-Use the interval alone to test **H₀: μ = 20** against **H₁: μ ≠ 20** at **α = .05**. Write your decision and one sentence explaining it in context.
-
-::: {.notes}
-- 66–72 min. Allow a couple of minutes to write, then compare sentences. Ask someone to identify the reference value and both limits aloud.
-- Example: We fail to reject H₀ because 20 falls inside the 95% interval. A population mean StressScore of 20 is compatible with these observations, as are other means in the interval.
-- An interval containing 20 does not establish that the population mean equals 20. The Prep 4 submission uses CI reasoning only.
-:::
-
-
-## Apply the Same Reasoning to Your Group
-
-| Assigned outcome | Hypothetical population norm |
-| ---------------- | ---------------------------: |
-| StressScore      |                           20 |
-| AnxietyScore     |                           10 |
-
-Name your outcome and norm. For your own data, report **n, mean, sample SD, and a two-sided 95% t interval**. Use its width to discuss precision and its limits to explain your decision.
-
-What would happen to precision with a larger sample if variability stayed the same?
-
-::: {.notes}
-- 72–76 min. Ask each group to identify its norm before interpreting its CI. Larger n generally narrows the interval, holding confidence and variability fixed. More variability widens it at fixed n and confidence.
-- Prep 4 also asks for three discussion points about n, variability, and why another dataset could lead to a different conclusion, plus each member’s contribution.
-:::
-
-
-## Exit Check: Which Value Belongs in Each Interval?
-
-1. The 95% CI for **mean StressScore** is **18.7 to 23.3**. We are comparing the mean with the Prep 4 stress norm.
-2. The 95% CI for the **difference in mean StressScore (A − B)** is **−2 to 6**. We are comparing two group means.
-
-For each interval, write the reference value and your decision at **α = .05**. Be ready to explain why the reference values differ.
-
-::: {.notes}
-- 76–80 min. Ask everyone to answer independently, then hear one explanation for each case.
-- First: 20 is inside the interval. Fail to reject μ = 20. Second: 0 is inside the interval. Fail to reject a population mean difference of zero. Neither result proves equality.
-- Close with Wednesday’s question: If we want to compare means, how does the way we sampled or paired the observations determine which test we use?
-:::

@@ -85,3 +85,10 @@ Interactive slide decks for APHS 20203.
 
 - [View interactive slides](Module 10 - Inferential Statistics—Estimation/Random Error and Confidence Intervals/Random Error and Confidence Intervals.qmd)
 - [Download PDF](Module 10 - Inferential Statistics—Estimation/Random Error and Confidence Intervals/Random Error and Confidence Intervals.pdf)
+
+## Module 11: Hypothesis Testing — Effect Size and Power
+
+### Hypothesis Testing
+
+- [View interactive slides](Module 11 - Hypothesis Testing - Effect Size and Power/Hypothesis Testing/Hypothesis Testing.qmd)
+- [Download PDF](Module 11 - Hypothesis Testing - Effect Size and Power/Hypothesis Testing/Hypothesis Testing.pdf)
