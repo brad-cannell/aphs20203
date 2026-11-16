@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.11.9">
+
+  <title>APHS 20203 Lecture Slides – Hypothesis Testing</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-9b059494f55431f1564a4be7b629eb17.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Hypothesis Testing</h1>
+  <p class="subtitle">APHS 20203</p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="suppose-we-knew-the-population-mean" class="slide level2">
+<h2>Suppose We Knew the Population Mean</h2>
+<p><img data-src="assets/bmi-population-mean-28-sample-mean-30.png" style="width: 100%; height: 320px; object-fit: contain;" alt="A sample with mean BMI 30 drawn from a population with mean BMI 28. The estimate is two units above the truth."></p>
+<aside class="notes">
+<ul>
+<li><p>Last week, we saw examples of random error in our measurements. The most prominant source of random error in our studies, and the source that we will focus on for the rest of today, is sampling error – or sampling variability.</p></li>
+<li><p>For example, the average BMI of adults living in Texas may be 28. If we go measure the BMI of a simple random sample of adult Texans, we may find that the average BMI in our sample is 30.</p></li>
+<li><p>Of course, in this hypothetical world we know that 30 is 2 units higher than the truth, and the reason for that 2-unit difference is just the luck of the draw.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="draw-another-sample" class="slide level2">
+<h2>Draw Another Sample</h2>
+<p><img data-src="assets/bmi-population-mean-28-sample-means-30-and-26.png" style="width: 100%; height: 345px; object-fit: contain;" alt="Two samples from a population with mean BMI 28. Their means, 30 and 26, lie two units above and below the population mean."></p>
+<aside class="notes">
+<ul>
+<li><p>If we draw another simple random sample, then the average in that sample may be 2-units lower than the truth. With random error, our estimates differs from the truth, but tend to lie all around the truth, seemingly at random.</p></li>
+<li><p>In this case, we could more explicitly say that random error is due to the fact that we collect measurements of whatever exposure or outcome we are interested in from a sample of people from our target population instead of collecting measures from everyone in our target population.</p></li>
+<li><p>And in this context, what does the word “random” mean?</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-far-are-we-from-the-truth" class="slide level2">
+<h2>How Far Are We From the Truth?</h2>
+<p><img data-src="assets/bmi-sample-mean-30-unknown-population-mean.png" style="width: 100%; height: 345px; object-fit: contain;" alt="Only the sample mean of 30 is known. Question marks replace the population mean and the sampling error."></p>
+<aside class="notes">
+<ul>
+<li><p>This begs the question, “When we draw a sample and calculate a value of interest, how different is the result we got from the result we would have gotten if we were basing our calculation on measures taken from the entire population instead?” Without having some idea of how close these values are, it makes us feel ill-equipped to draw conclusions and make policy decisions.</p></li>
+<li><p><strong>Why can’t we answer this question directly?</strong></p></li>
+<li><p>Unfortunately, we can’t typically answer that question directly, because that would require knowing the answer we would have gotten if we collected measures from the entire population. And if we collected measures from the entire population, then there would be no need to also collect measures from a sample of the population.</p></li>
+<li><p>So, it seems like we are kind of stuck in a vicious cycle. We draw a sample because we can’t measure the entire population. Then, we want to know how accurate our sample estimate is, but we can’t know for sure because we can’t measure the entire population.</p></li>
+<li><p><strong>How might we try to get around this problem?</strong></p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="suppose-the-population-looked-like-this" class="slide level2">
+<h2>Suppose the Population Looked Like This</h2>
+<p><img data-src="assets/bmi-normal-population-mean-30.png" style="width: 100%; height: 390px; object-fit: contain;" alt="Bell-shaped BMI distribution centered at 30. The original graph labels 26 and 34 as 1 SE with 68%, 22 and 38 as 2 SE with 95%, and 18 and 42 as 3 SE with 99%."></p>
+<aside class="notes">
+<ul>
+<li><p>So, we typically can’t answer the question that we really want to answer – “how much does our estimate calculated from a sample of people differ from the true population value.</p></li>
+<li><p>However, we can sort of do the opposite. If we make some assumptions about the distribution of our quantity of interest in the target population – for example, that it is normally distributed – then statistics gives us many tools we can use to estimate how compatible our data is with that assumed population distribution.</p></li>
+</ul>
+<p><strong>NOTE</strong>: We are not saying that this is how the population looks.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="would-a-sample-mean-of-30-surprise-you" class="slide level2">
+<h2>Would a Sample Mean of 30 Surprise You?</h2>
+<p><img data-src="assets/bmi-population-mean-30-sample-mean-30.png" style="width: 100%; height: 390px; object-fit: contain;" alt="Population BMI curve centered at 30, beside 25 circles labeled Sample = 30. A left-pointing arrow labeled Probability? connects the sample to the population curve. The original curve includes 1, 2, and 3 SE labels."></p>
+<aside class="notes">
+<ul>
+<li><p>For example, let’s once again say that we drew a sample of people from our target population and found that the mean BMI for those people was 30. If we assume that our sample came from a population where the mean BMI is 30 with a standard deviation of 4, then it wouldn’t be surprising at all for our sample to have a mean of 30.</p></li>
+<li><p>Further, it wouldn’t seem odd at all to draw this sample from the hypothetical population distribution, which lends some credit to the idea that our assumed population distribution is close to being accurate.</p></li>
+</ul>
+<p><strong>Question</strong> - But, what are some other possible reasons for the lack of discrepancy?<br>
+- Luck of the draw – we just happened to draw a sample of people whose BMI averaged to a value that is compatible with this assumed population distribution even though the actual distribution in our target population is very different from the assumed distribution.<br>
+- We incorrectly made assumptions about our population – the real mean is 38.<br>
+- We incorrectly calculated our sample mean. Just happened to be compatible with our assumed distribution.<br>
+- There were errors in our BMI measures.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-if-the-sample-mean-were-50" class="slide level2">
+<h2>What if the Sample Mean Were 50?</h2>
+<p><img data-src="assets/bmi-population-mean-30-sample-mean-50.png" style="width: 100%; height: 390px; object-fit: contain;" alt="Population BMI curve centered at 30, beside 25 circles labeled Sample = 50. A left-pointing arrow labeled Probability? connects the sample to the population curve. The original curve includes 1, 2, and 3 SE labels."></p>
+<aside class="notes">
+<p><strong>Questions</strong><br>
+- If we instead found that our sample distribution was 50, would it feel more or less likely that our sample was drawn from this hypothetical population distribution?</p>
+<ul>
+<li><p>And would it make us more or less skeptical about how closely our assumed population distribution matches the actual population distribution?</p></li>
+<li><p>But, what are some other possible reasons for the discrepancy?</p>
+<ul>
+<li>Luck of the draw – we just happened to draw a sample of people whose BMI averaged to a value that is compatible with this assumed population distribution even though the actual distribution in our target population is very different from the assumed distribution.<br>
+</li>
+<li>We incorrectly made assumptions about our population – the real mean is 38.<br>
+</li>
+<li>We incorrectly calculated our sample mean. Just happened to be compatible with our assumed distribution.<br>
+</li>
+<li>There were errors in our BMI measures.</li>
+</ul></li>
+</ul>
+<p>In practice, most epidemiologists don’t typically graph out the assumed distribution and make comparisons to it in the way we just did (although, maybe we should).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="statistical-hypothesis-testing" class="slide level2">
+<h2>Statistical Hypothesis Testing</h2>
+<ol type="1">
+<li><p>Assume that our value of interest has a specific size</p>
+<ul>
+<li>Typically, that size corresponds to no association or no effect – the null<br>
+</li>
+<li>Null Hypothesis Significance Testing (NHST)</li>
+</ul></li>
+<li><p>Select an alpha level – somewhat arbitrary</p>
+<ul>
+<li>Type I error – rejecting the null when it is correct<br>
+</li>
+<li>Fit our data to a statistical model and all of that model’s assumptions</li>
+</ul></li>
+<li><p>Calculate a test statistic</p></li>
+<li><p>Use the test statistic to calculate a p-value</p></li>
+</ol>
+<aside class="notes">
+<ul>
+<li><p>Traditionally, this has been done with statistical hypothesis testing. Specifically, null hypothesis significance testing.</p></li>
+<li><p>These are roughly the steps.</p></li>
+<li><p>We will walk through an example and talk more about each step next.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="does-mean-stressscore-differ-from-20" class="slide level2">
+<h2>Does Mean StressScore Differ From 20?</h2>
+<p><strong>Null hypothesis, H₀:</strong> The population mean StressScore equals 20.</p>
+<p><strong>Alternative hypothesis, H₁:</strong> The population mean StressScore differs from 20.</p>
+<p>A <strong>two-sided test</strong> treats departures above and below 20 as evidence against H₀.</p>
+<p>Here, 20 is a hypothetical population norm. H₀ gives us the reference value to compare with our sample mean.</p>
+<aside class="notes">
+<ul>
+<li><p>Step 1 was to assume that our value of interest has a specific size.</p></li>
+<li><p>In this case, what is the our value of interest and what is its size?</p></li>
+<li><p>The value of interest is difference in between the population mean stress score and 20.</p></li>
+<li><p>The size is 0. Typically, that size corresponds to no association or no effect – the null.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="statistical-hypothesis-testing-1" class="slide level2">
+<h2>Statistical Hypothesis Testing</h2>
+<ol type="1">
+<li><p>Assume that our value of interest has a specific size</p>
+<ul>
+<li>Typically, that size corresponds to no association or no effect – the null<br>
+</li>
+<li>Null Hypothesis Significance Testing (NHST)</li>
+</ul></li>
+<li><p>Select an alpha level – somewhat arbitrary</p>
+<ul>
+<li>Type I error – rejecting the null when it is correct<br>
+</li>
+<li>Fit our data to a statistical model and all of that model’s assumptions</li>
+</ul></li>
+<li><p>Calculate a test statistic</p></li>
+<li><p>Use the test statistic to calculate a p-value</p></li>
+</ol>
+<aside class="notes">
+<ul>
+<li>Reminder.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="alpha-and-our-decision-rule" class="slide level2">
+<h2>Alpha and Our Decision Rule</h2>
+<p>Before seeing the data, we choose alpha (α), the cutoff we will compare our p-value with. <strong>If p &lt; α, we reject H₀</strong>. Otherwise, we fail to reject H₀.</p>
+<p>Convention: <strong>α = .05</strong></p>
+<ul>
+<li><strong>p &lt; .05: Reject H₀.</strong> The data provide evidence that the population mean differs from 20.</li>
+<li><strong>p ≥ .05: Fail to reject H₀.</strong> The data do not provide enough evidence that the population mean differs from 20. This does not prove that it equals 20.</li>
+</ul>
+<p>A <strong>Type I error</strong> occurs when we reject a true H₀. With α = .05, a valid test makes this error in about 5% of repeated studies when H₀ is true.</p>
+<aside class="notes">
+<ul>
+<li><p>Step 2: Select an alpha level.</p></li>
+<li><p>Alpha is the cutoff we choose for deciding when to reject the null hypothesis. Choosing α = .05 means accepting a 5% chance of rejecting the null hypothesis when it is actually true.</p></li>
+<li><p>If the null hypothesis were true and we repeated this study many times, our testing procedure would incorrectly reject it about 5% of the time.</p></li>
+<li><p>The conventional .05 cutoff is not a natural dividing line between truth and falsehood. It has just become a convention.</p></li>
+<li><p>We will calculate a p-value shortly. For now, establish the meanings of the two possible decisions.</p></li>
+<li><p>A 5% long-run error rate does not mean a 5% probability that this particular decision is wrong.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="statistical-hypothesis-testing-2" class="slide level2">
+<h2>Statistical Hypothesis Testing</h2>
+<ol type="1">
+<li><p>Assume that our value of interest has a specific size</p>
+<ul>
+<li>Typically, that size corresponds to no association or no effect – the null<br>
+</li>
+<li>Null Hypothesis Significance Testing (NHST)</li>
+</ul></li>
+<li><p>Select an alpha level – somewhat arbitrary</p>
+<ul>
+<li>Type I error – rejecting the null when it is correct<br>
+</li>
+<li>Fit our data to a statistical model and all of that model’s assumptions</li>
+</ul></li>
+<li><p>Calculate a test statistic</p></li>
+<li><p>Use the test statistic to calculate a p-value</p></li>
+</ol>
+<aside class="notes">
+<ul>
+<li>Reminder.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-model-for-our-stressscore-example" class="slide level2">
+<h2>A Model for Our StressScore Example</h2>
+<p>We will use a <strong>one-sample t test</strong> to compare a sample mean with 20.</p>
+<p>For this example, assume:</p>
+<ul>
+<li>We take a simple random sample of students, with independent observations.</li>
+<li>StressScore follows a normal distribution in the population.</li>
+</ul>
+<p>We estimate the standard error using the <strong>sample SD</strong>. If H₀ is true, the test statistic follows a <em>t</em> distribution with <strong>n − 1 degrees of freedom</strong>.</p>
+<aside class="notes">
+<ul>
+<li>These assumptions make the reference distribution valid for this example. They do not become true merely because we choose a t test.</li>
+<li>The repeated-studies workbook generates independent observations from a normal distribution. For actual data, we would need to assess the sampling process and distribution.</li>
+<li>Degrees of freedom identify which t distribution to use. For a one-sample t test, we lose one degree of freedom when estimating the mean.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-far-is-our-estimate-from-20" class="slide level2">
+<h2>How Far Is Our Estimate From 20?</h2>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><mtext mathvariant="normal">sample mean</mtext><mo>−</mo><mn>20</mn></mrow><mtext mathvariant="normal">standard error of the mean</mtext></mfrac></mrow><annotation encoding="application/x-tex">
+t = \frac{\text{sample mean} - 20}{\text{standard error of the mean}}
+</annotation></semantics></math></p>
+<p>A sample mean <strong>two standard errors above 20</strong> gives <em>t</em> = +2. A mean <strong>two standard errors below 20</strong> gives <em>t</em> = −2.</p>
+<p><strong>The two-sided p-value answers this question:</strong> If H₀ and the model assumptions hold, how often would a random sample give a t statistic at least this far from zero in either direction?</p>
+<aside class="notes">
+<ul>
+<li><p>Now, we calculate the test statistic. In this case, it’s a t value.</p></li>
+<li><p>The t value is used to calculate the p-value.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-concrete-calculation" class="slide level2">
+<h2>A Concrete Calculation</h2>
+<p>Suppose <strong>25 students</strong> have a mean StressScore of <strong>22</strong> and a sample SD of <strong>5</strong>. We are testing <strong>H₀: μ = 20</strong>.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>E</mi><mo>=</mo><mfrac><mi>s</mi><msqrt><mi>n</mi></msqrt></mfrac><mo>=</mo><mfrac><mn>5</mn><msqrt><mn>25</mn></msqrt></mfrac><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">
+SE = \frac{s}{\sqrt{n}} = \frac{5}{\sqrt{25}} = 1
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo>−</mo><msub><mi>μ</mi><mn>0</mn></msub></mrow><mrow><mi>S</mi><mi>E</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>22</mn><mo>−</mo><mn>20</mn></mrow><mn>1</mn></mfrac><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">
+t = \frac{\bar{x} - \mu_0}{SE} = \frac{22 - 20}{1} = 2
+</annotation></semantics></math></p>
+<p>Our sample mean is <strong>2 standard errors above</strong> the mean specified by H₀.</p>
+<aside class="notes">
+<ul>
+<li>These are hypothetical summary values chosen to make the arithmetic easy. They are separate from Sample 1 in the workbook.</li>
+<li>Ask students to identify the observed mean, the null value, and the standard error before substituting numbers.</li>
+<li>If the sample mean were 18 with the same SE, t would be −2.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="statistical-hypothesis-testing-3" class="slide level2">
+<h2>Statistical Hypothesis Testing</h2>
+<ol type="1">
+<li><p>Assume that our value of interest has a specific size</p>
+<ul>
+<li>Typically, that size corresponds to no association or no effect – the null<br>
+</li>
+<li>Null Hypothesis Significance Testing (NHST)</li>
+</ul></li>
+<li><p>Select an alpha level – somewhat arbitrary</p>
+<ul>
+<li>Type I error – rejecting the null when it is correct<br>
+</li>
+<li>Fit our data to a statistical model and all of that model’s assumptions</li>
+</ul></li>
+<li><p>Calculate a test statistic</p></li>
+<li><p>Use the test statistic to calculate a p-value</p></li>
+</ol>
+<aside class="notes">
+<ul>
+<li>Step 4: Use the test statistic to calculate a p-value</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="from-the-t-statistic-to-a-p-value" class="slide level2">
+<h2>From the t Statistic to a p-Value</h2>
+<p>For <strong>t = 2</strong> with <strong>25 − 1 = 24 degrees of freedom</strong>, Excel gives:</p>
+<p><code>=T.DIST.2T(ABS(2), 24)</code> → <strong>p ≈ .057</strong></p>
+<p>If H₀ and the model assumptions hold, about <strong>5.7%</strong> of repeated samples would give <strong>t ≤ −2 or t ≥ 2</strong>.</p>
+<p>Because <strong>.057 &gt; .05</strong>, we <strong>fail to reject H₀</strong>. We do not have enough evidence that the population mean StressScore differs from 20.</p>
+<aside class="notes">
+<ul>
+<li>The two-sided p-value includes both tails: values at least as far from zero as the observed statistic.</li>
+<li>ABS takes the absolute value, so a t statistic of −2 gives the same two-sided p-value.</li>
+<li>This is a probability calculated under H₀ and the model assumptions. It is not the probability that H₀ is true.</li>
+<li>Use the unrounded p-value for the decision. Here, p = .05693985.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-our-p-value-means" class="slide level2">
+<h2>What Our p-Value Means</h2>
+<p>For our StressScore example, <strong>t = 2</strong> and <strong>p ≈ .057</strong>.</p>
+<p><strong>Assuming H₀ and the model assumptions hold</strong>, about 5.7% of repeated samples would give a <em>t</em> statistic <strong>as far from zero as 2, or farther</strong>, in either direction.</p>
+<p>This does <strong>not</strong> mean:</p>
+<ul>
+<li>There is a 5.7% probability that H₀ is true.</li>
+<li>There is a 5.7% probability that chance alone explains our result.</li>
+</ul>
+<p>The probability includes <strong>equally extreme and more extreme results</strong>, not just the result we observed.</p>
+<aside class="notes">
+<ul>
+<li>Keep the conditioning explicit: we assume a population mean StressScore of 20 and the model assumptions, then ask about possible sample results.</li>
+<li>In this example, the relevant results are t ≤ −2 or t ≥ 2. We are not calculating the probability that the population mean equals 20.</li>
+<li>Adapted from Random Error, slides 28–29 and 36. Source: Greenland S, Senn SJ, Rothman KJ, et al.&nbsp;Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. Eur J Epidemiol. 2016;31:337–350. doi:10.1007/s10654-016-0149-3.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-our-test-decision-means" class="slide level2">
+<h2>What Our Test Decision Means</h2>
+<p>At <strong>α = .05</strong>:</p>
+<ul>
+<li><strong>Reject H₀:</strong> The data provide evidence against H₀ under the model assumptions. This does not prove that H₀ is false.</li>
+<li><strong>Fail to reject H₀:</strong> The data do not provide enough evidence against H₀. This does not prove that H₀ is true or that there is no effect.</li>
+</ul>
+<p>Our sample mean was <strong>22</strong>, compared with the null value of <strong>20</strong>. With <strong>p ≈ .057</strong>, we fail to reject H₀, even though we observed a <strong>2-point difference</strong>.</p>
+<aside class="notes">
+<ul>
+<li>A test decision follows the chosen rule; it does not establish a hypothesis with certainty. Even when assumptions hold, random sampling can lead to an incorrect decision.</li>
+<li>A small p-value can also reflect a violation of another model assumption. Rejecting H₀ is not a way to verify those assumptions.</li>
+<li>A large p-value can occur when the data are too imprecise to distinguish the null from meaningful alternatives. Failing to reject does not establish equality.</li>
+<li>Adapted from Random Error, slides 30–33. Source: Greenland et al.&nbsp;(2016), doi:10.1007/s10654-016-0149-3.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="question-what-does-a-p-value-of-.03-mean" class="slide level2">
+<h2>Question: What Does a p-Value of .03 Mean?</h2>
+<p>A two-sided test of H₀: μ = 20 gives <strong>p = .03</strong>. Which interpretation fits?</p>
+<p>A. There is a 3% chance that the population mean equals 20.<br>
+B. If H₀ and the model assumptions hold, about 3% of repeated samples would give a test statistic this far from zero or farther.<br>
+C. About 3% of individual students have a StressScore this far from 20.</p>
+<aside class="notes">
+<ul>
+<li>17–20 min. Vote A, B, or C by a show of fingers. Ask a student to explain what we assumed before calculating p.</li>
+<li>B. The reference distribution assumes H₀. Its tails describe test statistics across repeated samples. Adapted from Random Error, slide 28.</li>
+<li>Ask for the decision at α = .05, then at .01. The evidence is the same. The chosen threshold changes the decision.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="hypothesis-testing-can-we-reject-a-true-null" class="slide level2">
+<h2>Hypothesis Testing: Can We Reject a True Null?</h2>
+<p>Open the <a href="assets/Hypothesis Testing.xlsx">Hypothesis Testing workbook</a> on the <strong>Activity</strong> tab. Start with <strong>B7 = 0.05</strong>.</p>
+<p>The workbook contains <strong>100 simulated studies of 20 students each</strong>. We generated the scores from a normal population with mean <strong>20</strong> and SD <strong>4</strong>. Each study tests H₀: μ = 20.</p>
+<p><strong>Predict with a partner:</strong> Will all 100 studies fail to reject H₀?</p>
+<aside class="notes">
+<ul>
+<li>20–21 min. This is a new simulation. Last week the finite teaching population had a mean of 20.99. In this workbook the generating mean is exactly 20.</li>
+<li>In an actual study we would generally lack this knowledge. Here it lets us tell when a decision is wrong.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="work-through-sample-1" class="slide level2">
+<h2>Work Through Sample 1</h2>
+<ol type="1">
+<li>Use the scores in <strong>B13:B32</strong>. Fill in the mean, sample SD, and SE in <strong>E14:E16</strong>.</li>
+<li>Use the supplied <em>t</em> critical value in <strong>E20</strong>. Enter the lower and upper CI limits in <strong>E21:E22</strong>.</li>
+<li>Compare your answers with <strong>row 37</strong>. Does the interval include 20? What decision does the two-sided p-value support?</li>
+</ol>
+<p>The workbook lists the five Excel formulas beside the data.</p>
+<aside class="notes">
+<ul>
+<li>21–26 min. Five minutes for formula entry, following the one-minute prediction. Pairs can share a screen.</li>
+<li>Key: E14 = AVERAGE(B13:B32), E15 = STDEV.S(B13:B32), E16 = E15/SQRT(E13), E21 = E14-E20<em>E16, E22 = E14+E20</em>E16.</li>
+<li>Sample 1 has mean 19.89, SE 0.73, 95% CI 18.35 to 21.42, and p = .877. Fail to reject H₀.</li>
+<li>If Excel is slow, project row 37 and proceed directly to the next exercise.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="find-two-studies-that-lead-to-different-decisions" class="slide level2">
+<h2>Find Two Studies That Lead to Different Decisions</h2>
+<p>At <strong>α = .05</strong>, use rows <strong>37–136</strong> on the Activity tab.</p>
+<ol type="1">
+<li>Find one interval that <strong>includes 20</strong> and one that <strong>misses 20</strong>.</li>
+<li>For each, record the sample number, CI, p-value, and decision.</li>
+<li>Explain to your partner why the CI and the test agree.</li>
+</ol>
+<aside class="notes">
+<ul>
+<li>26–33 min. Give pairs time to search before asking for a sample number. At .05, samples 64 and 70 reject. One mean is above 20 and one below.</li>
+<li>For a paper or projected version, give Sample 1 (CI 18.35 to 21.42, p = .877) and Sample 64 (CI 20.19 to 24.11, p = .0332). Ask for decisions.</li>
+<li>Both procedures use the same SE and two-sided t model. The 95% interval contains the reference means that would survive this test at α = .05.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="change-alpha-and-count-the-rejections" class="slide level2">
+<h2>Change Alpha and Count the Rejections</h2>
+<p>Record the counts at <strong>.05</strong>. Predict what will happen at <strong>.01</strong>, then at <strong>.10</strong>.</p>
+<p>Change <strong>B7</strong> each time. Record the number of intervals containing 20 and the number of rejections in <strong>J5:K7</strong>.</p>
+<p><strong>Which quantities changed? Which stayed the same? Why is every rejection in this workbook a Type I error?</strong></p>
+<aside class="notes">
+<ul>
+<li>33–39 min. Read counts from E4 and E6. In worksheet order (.05, .01, .10), the numbers containing 20 are 98, 100, 96. Rejections are 2, 0, 4.</li>
+<li>Scores, means, SEs, and p-values stay fixed. Lower α raises the confidence level, widens the interval, and makes rejection harder. Restore B7 to .05.</li>
+<li>A Type I error is rejecting a true null. The counts describe this batch. A 5% long-run error rate does not require exactly five rejections per 100 studies.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-the-5-error-rate-means" class="slide level2">
+<h2>What the 5% Error Rate Means</h2>
+<p>In our simulation, <strong>H₀ is true in every study</strong>. Every rejection is therefore a Type I error.</p>
+<p>With <strong>α = .05</strong>, the testing procedure would reject H₀ in about <strong>5% of studies over many repetitions</strong>, assuming the model assumptions hold.</p>
+<p>This does <strong>not</strong> mean that a particular significant result has a 5% chance of being wrong.</p>
+<p>Changing alpha changes the <strong>p-value cutoff for rejection</strong>. It does <strong>not</strong> change the calculated p-values.</p>
+<aside class="notes">
+<ul>
+<li>Connect the long-run rate to the workbook: this batch has 2 rejections in 100 studies at α = .05. Another batch could have a different count.</li>
+<li>Here we know every rejection is wrong because we generated every study under H₀. In actual research, we generally do not know whether H₀ is true.</li>
+<li>At α = .10, reject when p &lt; .10. At α = .05, reject when p &lt; .05. We choose alpha before examining the results; changing it here is a teaching demonstration.</li>
+<li>Adapted from Random Error, slide 37. Source: Greenland et al.&nbsp;(2016), doi:10.1007/s10654-016-0149-3.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="prep-4-find-your-assigned-variables" class="slide level2">
+<h2>Prep 4: Find Your Assigned Variables</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Groups</th>
+<th>Correlation</th>
+<th>Mean comparison</th>
+<th>Categorical comparison</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1, 3, 5</td>
+<td>SleepHours and StressScore</td>
+<td>StressScore by ActivityLevel</td>
+<td>StressCat and CaffeineUse</td>
+</tr>
+<tr class="even">
+<td>2, 4</td>
+<td>ScreenTimeHours and AnxietyScore</td>
+<td>AnxietyScore by SocialSupport</td>
+<td>AnxietyCat and MindfulnessPractice</td>
+</tr>
+</tbody>
+</table>
+<p>Work with your project group. Groups <strong>1–2</strong> use dataset <strong>A</strong>, groups <strong>3–4</strong> use <strong>B</strong>, and group <strong>5</strong> uses <strong>C</strong>.</p>
+<aside class="notes">
+<ul>
+<li>49–50 min. Ask one person in each group to pull up the Prep 4 instructions and another to record the hypotheses. These are the current five groups.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="hypotheses-for-a-correlation" class="slide level2">
+<h2>Hypotheses for a Correlation</h2>
+<p>For your group’s two continuous variables, describe their <strong>linear association in the population</strong>.</p>
+<p><strong>H₀:</strong> The population correlation between <strong>[variable 1]</strong> and <strong>[variable 2]</strong> equals zero.</p>
+<p><strong>H₁:</strong> The population correlation between <strong>[variable 1]</strong> and <strong>[variable 2]</strong> differs from zero.</p>
+<p>For groups <strong>1, 3, and 5</strong>, fill the blanks with <strong>SleepHours</strong> and <strong>StressScore</strong>. Groups <strong>2 and 4</strong> use <strong>ScreenTimeHours</strong> and <strong>AnxietyScore</strong>.</p>
+<aside class="notes">
+<ul>
+<li>Model the first pair aloud. H₀ says that the population correlation between SleepHours and StressScore equals zero. H₁ says that it differs from zero.</li>
+<li>Zero correlation means no linear association. It does not rule out a curved relationship.</li>
+<li>The alternative includes positive and negative correlations. Students do not need to calculate r to state these hypotheses.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="hypotheses-for-comparing-means" class="slide level2">
+<h2>Hypotheses for Comparing Means</h2>
+<p>Compare the <strong>population mean outcome across all three categories</strong> of your grouping variable.</p>
+<p><strong>H₀:</strong> Mean <strong>[outcome]</strong> is equal across all <strong>[grouping variable]</strong> categories in the population.</p>
+<p><strong>H₁:</strong> At least one population mean <strong>[outcome]</strong> differs across <strong>[grouping variable]</strong> categories.</p>
+<p>Use <strong>StressScore by ActivityLevel</strong> or <strong>AnxietyScore by SocialSupport</strong>, according to your group’s assignment.</p>
+<aside class="notes">
+<ul>
+<li>Example: Mean StressScore is equal across all ActivityLevel categories in the population, versus at least one population mean StressScore differs across those categories.</li>
+<li>The alternative does not require every group to differ from every other group and does not specify which group has the highest mean.</li>
+<li>This compares group means. It is a different question from comparing one population mean with the norm of 20.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="hypotheses-for-categorical-variables" class="slide level2">
+<h2>Hypotheses for Categorical Variables</h2>
+<p>Ask whether the <strong>distribution of outcome categories differs across groups</strong> in the population.</p>
+<p><strong>H₀:</strong> <strong>[Outcome category variable]</strong> and <strong>[grouping variable]</strong> are independent in the population.</p>
+<p><strong>H₁:</strong> <strong>[Outcome category variable]</strong> and <strong>[grouping variable]</strong> are associated in the population.</p>
+<p>For <strong>StressCat and CaffeineUse</strong>, H₀ means that the proportions in each stress category are the same across caffeine-use groups.</p>
+<aside class="notes">
+<ul>
+<li>Groups 1, 3, and 5 use StressCat and CaffeineUse. Groups 2 and 4 use AnxietyCat and MindfulnessPractice.</li>
+<li>For groups 2 and 4, H₀ means that the proportions in each anxiety category are the same across mindfulness-practice groups.</li>
+<li>An association means at least one of those category proportions differs across groups. It does not imply that one variable causes the other.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="write-your-groups-six-hypothesis-statements" class="slide level2">
+<h2>Write Your Group’s Six Hypothesis Statements</h2>
+<p>Work with your project group. Have one person record your answers in your Prep 4 notes.</p>
+<ol type="1">
+<li>Copy each of the three <strong>H₀/H₁ pairs</strong> from the preceding slides.</li>
+<li>Replace every bracketed placeholder with your group’s assigned variable name.</li>
+<li>Read all <strong>six statements</strong> together. Each should describe the population and say what would be equal, independent, or different.</li>
+</ol>
+<aside class="notes">
+<ul>
+<li>50–56 min. Circulate and ask whether each statement describes a population. Have partners check that each alternative includes every departure covered by the two-sided or overall test.</li>
+<li>Example for groups 1, 3, 5: the population correlation between SleepHours and StressScore equals zero versus differs from zero.</li>
+<li>Mean StressScore is equal across all ActivityLevel categories versus at least one population mean differs. StressCat and CaffeineUse are independent versus associated in the population.</li>
+<li>For groups 2 and 4 use the corresponding anxiety variables. For categorical independence, students can describe the same outcome-category proportions across groups.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../assets/tcu-logo-purple.svg" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"\u003ci class=\"fas fa-gear\">\u003c/i>","content":"\u003cul class=\"slide-menu-items\">\n\u003cli class=\"slide-tool-item active\" data-item=\"0\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\">\u003ckbd>f\u003c/kbd> Fullscreen\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"1\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\">\u003ckbd>s\u003c/kbd> Speaker View\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"2\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\">\u003ckbd>o\u003c/kbd> Slide Overview\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"3\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\">\u003ckbd>e\u003c/kbd> PDF Export Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"4\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\">\u003ckbd>r\u003c/kbd> Scroll View Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"5\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\">\u003ckbd>?\u003c/kbd> Keyboard Help\u003c/a>\u003c/li>\n\u003c/ul>"}],"openButton":true,"openButtonLabel":"Slide menu"},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1244,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/brad-cannell\.github\.io\/aphs20203\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+          window.quartoDecorateExternalLinks = function (root) {
+         var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+              if (!link.classList.contains('no-external-icon')) {
+              }
+            }
+          }
+          };
+          window.quartoDecorateExternalLinks(window.document);
+        // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+        // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+        const hideOnEscAndFocusOut = {
+          name: 'hideOnEscAndFocusOut',
+          defaultValue: true,
+          fn(instance) {
+            const dismiss = () => {
+              // A show scheduled by the trigger delay would otherwise reopen it
+              instance.clearDelayTimeouts();
+              instance.hide();
+            };
+            const onKeyDown = (event) => {
+              if (event.key !== 'Escape') {
+                return;
+              }
+              // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+              // except an open reveal.js slide menu, which Esc should close too.
+              // The menu handles keys only when its keyboard option is on.
+              const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+                window.Reveal.getConfig().menu?.keyboard !== false;
+              if (!menuHandlesEsc) {
+                event.stopPropagation();
+              }
+              if (instance.popper.contains(window.document.activeElement)) {
+                // Disabled while refocusing so the focus trigger does not reopen it
+                instance.disable();
+                instance.reference.focus();
+                instance.enable();
+              }
+              dismiss();
+            };
+            const onFocusOut = (event) => {
+              const target = event.relatedTarget;
+              if (target && !instance.reference.contains(target) &&
+                  !instance.popper.contains(target)) {
+                dismiss();
+              }
+            };
+            // On the trigger too: a click trigger (code-annotations: select) has no
+            // blur handling. Attached for the instance's lifetime so leaving the
+            // trigger also cancels a show still pending on the trigger delay.
+            instance.reference.addEventListener('focusout', onFocusOut);
+            return {
+              onShow() {
+                window.document.addEventListener('keydown', onKeyDown, true);
+                instance.popper.addEventListener('focusout', onFocusOut);
+              },
+              onHide() {
+                window.document.removeEventListener('keydown', onKeyDown, true);
+                instance.popper.removeEventListener('focusout', onFocusOut);
+              },
+              onDestroy() {
+                instance.reference.removeEventListener('focusout', onFocusOut);
+              },
+            };
+          },
+        };
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+            plugins: [hideOnEscAndFocusOut],
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
