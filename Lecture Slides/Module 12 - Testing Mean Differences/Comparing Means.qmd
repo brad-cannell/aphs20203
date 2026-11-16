@@ -1,0 +1,355 @@
+---
+title: "Comparing Means"
+subtitle: "APHS 20203 | November 18, 2026"
+format:
+  revealjs:
+    theme: [default, ../_theme/tcu.scss]
+    html-math-method: mathml
+    slide-level: 2
+    slide-number: c/t
+    tbl-colwidths: false
+    incremental: false
+    embed-resources: true
+    width: 1244
+    height: 700
+    logo: ../assets/tcu-logo-purple.svg
+---
+
+
+## One Researcher, Three Questions
+
+On Monday, our campus health researcher asked whether the mean StressScore differed from **20 points**. Now she can collect data in three ways:
+
+1. Measure one sample of students and compare its mean with 20.
+2. Recruit separate samples of students from two campuses and compare their means.
+3. Measure the **same students** before and after finals and compare the two occasions.
+
+**Turn to a partner.** What is being compared in each design? Who contributes a score to each side of the comparison?
+
+::: {.notes}
+- 0–4 min, including the title. Ask partners to sketch one row of each dataset. In the third design, a row should keep both scores for the same student together.
+- All three questions concern population means. By the end of class, students will choose a test from the design, interpret its output, and report their project's comparison of three means.
+:::
+
+
+## Question: Which T-Test Fits?
+
+Vote on each campus question. Use **one, two, or three fingers** to choose a test.
+
+| Vote | Test                | What goes into the analysis?                     |
+| ---- | ------------------- | ------------------------------------------------ |
+| 1    | One-sample          | One score per student and a fixed reference mean |
+| 2    | Independent samples | One score per student in two unrelated groups    |
+| 3    | Paired samples      | One difference per complete pair                 |
+
+Two classrooms each have 18 students. What else would you need to know before calling their scores paired?
+
+::: {.notes}
+- 4–8 min. Reread the three designs from the opening. Answers in order: one-sample, independent, paired. Use a poll or hands.
+- Equal group sizes alone do not create pairs. A meaningful link must connect the two observations, such as two measurements on each student or a deliberately matched pair.
+- Ask a student to name the unit counted by n in a paired analysis. It is the complete pair.
+:::
+
+
+## One Sample: Is the Mean Different From 20?
+
+Last week's sample of **12 students** had a mean StressScore of **21 points**.
+
+| Estimate                               | 95% CI                |
+| -------------------------------------- | --------------------- |
+| Population mean, estimated by 21.00    | 18.69 to 23.31 points |
+| Difference from 20, estimated by +1.00 | −1.31 to 3.31 points  |
+
+**Two-sided one-sample test:** *t*(11) = 0.95, *p* = .362.
+
+Find **20** in the first interval and **0** in the second. Why do they lead to the same decision?
+
+::: {.notes}
+- 8–13 min. Both endpoints shift down by 20 when we express the estimate as a difference. Positive values mean higher stress than the norm.
+- One-sample df = n − 1 = 11. A t statistic near 0.95 puts the sample mean just under one estimated standard error above 20.
+- At α = .05, fail to reject a population mean of 20. The CI allows modest differences in either direction. Use the same distinction for Prep 4.
+:::
+
+
+## Paired Samples: Did Scores Change After Finals?
+
+In a hypothetical follow-up, 18 students each report a score **before** and **after** finals. Define change as **after minus before**.
+
+| Mean change  | 95% CI for mean change | Paired t-test               |
+| ------------ | ---------------------- | --------------------------- |
+| −2.00 points | −3.49 to −0.51 points  | *t*(17) = −2.83, *p* = .012 |
+
+Explain the minus sign in everyday language. Why are there **17 degrees of freedom** when the spreadsheet contains **36 scores**?
+
+::: {.notes}
+- 13–18 min. Demonstrate one pair on the board: before 22, after 19, change −3. Then ask students to explain what −2 means for the sample as a whole.
+- The analysis is a one-sample test of the 18 change scores against zero. There are 18 complete pairs, so df = 17. Hypothetical sample SD of changes = 3 points.
+- Scores fell by an estimated 2 points on average. The matching CI excludes zero. Individuals can change in different directions, and the before/after design alone cannot establish the cause.
+:::
+
+
+## Independent Samples: Does Campus Matter?
+
+In a hypothetical comparison, each campus independently recruits **20 different students**. The means are **21** at Campus A and **19** at Campus B. Use **A minus B**.
+
+| Mean difference | 95% CI for the difference | Pooled t-test              |
+| --------------- | ------------------------- | -------------------------- |
+| +2.00 points    | −0.56 to 4.56 points      | *t*(38) = 1.58, *p* = .122 |
+
+With a partner, explain the result to a campus health director. Include the **direction**, one difference still compatible with the data, and the **decision at α = .05**.
+
+::: {.notes}
+- 18–25 min. Allow two minutes to write, one minute to compare answers, and time to hear two interpretations. Both hypothetical sample SDs are 4 points.
+- Model answer: Campus A averaged 2 points higher in our samples. The interval includes zero and ranges from A slightly lower to A over 4 points higher. We fail to reject equal population means.
+- Ask which endpoints would change sign if the report used B minus A. The interval would be −4.56 to 0.56 and the two-sided p-value would stay the same.
+:::
+
+
+## What Does the Number in Parentheses Tell Us?
+
+Someone reports a **pooled, equal-variance independent-samples t-test** as *t*(38) = 1.58.
+
+Each group estimates its own mean. The pooled variance has **(n₁ − 1) + (n₂ − 1)** degrees of freedom.
+
+1. How many students were included **in total**?
+2. Can you recover the size of each group from 38 alone?
+3. How would your answer change if the report said **paired t-test**?
+
+::: {.notes}
+- 25–30 min. Pooled df = total N − 2, so N = 40. Many splits give 38 df, even though our example used 20 per campus. For a paired t-test, 38 df means 39 complete pairs.
+- State the equal-variance assumption explicitly. Welch's independent-samples test uses a different df calculation, so the pooled shortcut does not apply.
+- Close the t-test block by asking which design would fit three independent activity levels. Start Group 1 at minute 30.
+:::
+
+
+## Group 1: Does Mean StressScore Vary by Activity Level?
+
+In the final project, Group 1 uses **Dataset A**. Each student belongs to one activity level.
+
+| ActivityLevel | Mean StressScore |
+| ------------- | ---------------: |
+| Low           | 20.36            |
+| Moderate      | 20.33            |
+| High          | 19.22            |
+
+The high-activity group has the lowest sample mean. **What information is missing** if we want to draw a conclusion about the population means?
+
+::: {.notes}
+- 30–35 min. Ask how compelling a 1-point gap would look if scores within each level varied by a tenth of a point, then if they varied by several points.
+- Students should ask about group sizes and within-group spread. Distinguish project Group 1, the student team, from the three activity levels it is comparing.
+:::
+
+
+## What Does a One-Way ANOVA Compare?
+
+**One factor:** activity level. **One outcome:** StressScore.
+
+| Population claim       | Meaning for the three activity levels             |
+| ---------------------- | ------------------------------------------------- |
+| Null hypothesis        | All three population mean StressScores are equal. |
+| Alternative hypothesis | At least one population mean differs.             |
+
+The **F statistic** compares variation **between** the group means with variation **within** the groups, accounting for degrees of freedom. Which pattern would give a large F?
+
+::: {.notes}
+- 35–40 min. A large F arises when the means are widely separated relative to the spread of scores within groups. The denominator estimates the variation we expect among individual scores within the same level.
+- The usual one-way F test assumes independent observations, comparable within-group variances, and approximately normal errors within levels. The guide uses the pooled within-group variance.
+- Ask whether “at least one differs” would allow two population means to be equal. Yes.
+:::
+
+
+## Group 1 Demo: Enter the Summary Data
+
+Open the final project's **Summary Data Workbook by Group**. On the **Group_1** tab, find **H2 One-Way ANOVA Summary Data**.
+
+| ActivityLevel | n   | Mean StressScore | Sample SD |
+| ------------- | --: | ---------------: | --------: |
+| Low           | 38  | 20.3605          | 5.0067    |
+| Moderate      | 40  | 20.3275          | 3.8875    |
+| High          | 42  | 19.2190          | 5.0439    |
+
+Enter one row per level, select **SD**, clear any unused sample rows, and choose **Compute**. [Open the summary-data ANOVA calculator](https://statpages.info/anova1sm.html)
+
+::: {.notes}
+- 40–46 min. Project the workbook and calculator. Point to the continuous outcome and three-level grouping variable. The table reproduces the needed inputs if the workbook is unavailable.
+- Copy the underlying workbook values where possible. Four decimals are shown here and give the same rounded F and p. Keep each mean beside its own n and SD. The calculator can also accept SEM, so verify the selector.
+- If the calculator is slow or unavailable, continue with the prepared output on the next slide.
+:::
+
+
+## Group 1 Demo: Read the ANOVA Table
+
+| Source                  | df  | Mean square | F    | p    |
+| ----------------------- | --: | ----------: | ---: | ---: |
+| Between activity levels | 2   | 17.27       | 0.79 | .457 |
+| Within activity levels  | 117 | 21.88       |      |      |
+| Total                   | 119 |             |      |      |
+
+Report **F(2, 117) = 0.79, p = .457**.
+
+Use the df to recover the **number of activity levels** and the **total number of students**. Check both answers against the workbook inputs.
+
+::: {.notes}
+- 46–52 min. Mean square is variation per degree of freedom. Divide 17.27 by 21.88 to recover F to rounding. The p-value is the upper-tail probability under the null model.
+- Between df = k − 1 → k = 3. Within df = N − k → N = 117 + 3 = 120. Total df = N − 1 = 119. The workbook counts also sum to 120.
+- Point out the order of the two df in the report. Ask a student to find the same values on the calculator.
+:::
+
+
+## Group 1: What Can We Report?
+
+**F(2, 117) = 0.79, p = .457.** Use α = .05.
+
+With a partner, write **one sentence** connecting this result to StressScore and activity level. Then check your wording:
+
+- Which population claim did you test?
+- What did the sample show?
+- Would it be justified to say the three population means are identical?
+
+::: {.notes}
+- 52–56 min. Example: In Dataset A, we found insufficient evidence that mean StressScore differs across activity levels, F(2, 117) = 0.79, p = .457.
+- The small differences among the observed sample means are descriptive. Failing to reject equality does not establish identical population means.
+- Under this project's follow-up rule, Group 1 stops after reporting the overall result. Any pairwise table automatically displayed by the calculator can be skipped here.
+:::
+
+
+## Question: What Would a Significant F Tell Us?
+
+Imagine an overall ANOVA returned **p = .004**. Which conclusion follows at α = .05?
+
+A. At least one population mean differs, and the overall result alone leaves the pair unidentified.
+
+B. Every pair of population means differs.
+
+C. The two groups with the most similar sample means must differ.
+
+::: {.notes}
+- 56–60 min. Poll A/B/C, or use one, two, or three fingers. Answer A. Ask a volunteer what additional output would let them name a pair.
+- This is a hypothetical poll. Group 1's actual p-value was .457. At minute 60, move to the separate practice study even if the calculator discussion could continue.
+:::
+
+
+## Practice Study: Three Activity Programs
+
+A **separate, hypothetical practice study** compares three activity programs. Each has **20 participants**, and the sample SD is **4 StressScore points** in each program.
+
+| Program           | Mean StressScore |
+| ----------------- | ---------------: |
+| Low activity      | 22               |
+| Moderate activity | 21               |
+| High activity     | 17               |
+
+The overall test gives **F(2, 57) = 8.75, p < .001**. Which comparisons would help you explain that result?
+
+::: {.notes}
+- 60–63 min. These are practice-study summaries; they do not belong to any assigned project team. The sample sizes sum to 60.
+- Three levels give three distinct pairs. Repeated unadjusted tests create more opportunities for a false positive somewhere among the three. Use the supplied Tukey comparisons to control familywise error.
+:::
+
+
+## Practice Study: Which Pairs Differ?
+
+The dot is the **first program's mean minus the second's**, in StressScore points. Each line is a **Tukey-adjusted 95% confidence interval**.
+
+```{r}
+#| echo: false
+#| fig-width: 10.5
+#| fig-height: 2.8
+#| out-width: "85%"
+#| fig-align: center
+#| fig-alt: "Low minus moderate: 1 point, interval −2.04 to 4.04. Low minus high: 5 points, interval 1.96 to 8.04. Moderate minus high: 4 points, interval 0.96 to 7.04. The dashed line marks zero."
+library(ggplot2)
+library(tibble)
+library(dplyr)
+
+# Use the practice study's equal sample sizes and pooled SD to calculate
+# simultaneous intervals for all three differences in their stated order.
+program_means <- c(Low = 22, Moderate = 21, High = 17)
+margin <- qtukey(0.95, nmeans = 3, df = 57) * 4 / sqrt(20)
+comparisons <- tibble(
+  first = c("Low", "Low", "Moderate"),
+  second = c("Moderate", "High", "High")
+) |>
+  mutate(
+    pair = paste(first, "minus", tolower(second)),
+    pair = factor(pair, levels = rev(pair)),
+    difference = unname(program_means[first] - program_means[second]),
+    lower = difference - margin,
+    upper = difference + margin
+  )
+
+# The zero reference line lets students decide which intervals include
+# equal population means without relying on color to convey the decision.
+ggplot(comparisons, aes(y = pair)) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray40") +
+  geom_segment(aes(x = lower, xend = upper, yend = pair),
+               linewidth = 1.6, color = "#4D1979") +
+  geom_point(aes(x = difference), size = 3.6, color = "#241632") +
+  scale_x_continuous(breaks = seq(-2, 8, 2), limits = c(-2.5, 8.5)) +
+  labs(x = "Difference in mean StressScore (points)", y = NULL) +
+  theme_minimal(base_size = 16) +
+  theme(panel.grid.major.y = element_blank(),
+        panel.grid.minor = element_blank())
+```
+
+With a partner, identify the pairs whose intervals exclude zero. For each, **which program averaged higher?**
+
+::: {.notes}
+- 63–68 min. Give pairs time to read the figure before showing the numerical answers. First ask what a dot to the right of zero means, then ask what to do with an interval that crosses zero.
+- The comparison is first minus second throughout. A positive difference means the first program had the higher sample mean.
+:::
+
+
+## Practice Study: Report the Follow-Up
+
+| First minus second  | Difference | Tukey-adjusted 95% CI |
+| ------------------- | ---------: | --------------------- |
+| Low minus moderate  | 1.00       | −2.04 to 4.04         |
+| Low minus high      | 5.00       | 1.96 to 8.04          |
+| Moderate minus high | 4.00       | 0.96 to 7.04          |
+
+The **low** and **moderate** programs each averaged higher StressScores than the **high** program. The low-versus-moderate interval includes zero.
+
+::: {.notes}
+- 68–70 min. Ask a student to read one difference in points and identify its interval. The two supported differences are low versus high and moderate versus high.
+- These intervals account for examining all three pairs together. The low-versus-moderate comparison is inconclusive. Finish the practice study here and return to the assigned datasets.
+:::
+
+
+## Your Project: Report the H2 Result
+
+Use your **own group tab** for the three means. Use the verified overall result below to draft your H2 presentation slide.
+
+| Team | Dataset | Outcome by grouping variable  | Overall test     | p    |
+| ---- | ------- | ----------------------------- | ---------------- | ---: |
+| 1    | A       | StressScore by ActivityLevel  | F(2, 117) = 0.79 | .457 |
+| 2    | A       | AnxietyScore by SocialSupport | F(2, 117) = 2.23 | .112 |
+| 3    | B       | StressScore by ActivityLevel  | F(2, 62) = 0.06  | .938 |
+| 4    | B       | AnxietyScore by SocialSupport | F(2, 62) = 0.09  | .915 |
+| 5    | C       | StressScore by ActivityLevel  | F(2, 117) = 1.99 | .141 |
+
+Include the three labeled means, F with df, p, your decision at .05, and **one sentence in context**. Have a teammate check the claim.
+
+{{< countdown minutes=7 warn_when=30 start_immediately=false top="4px" right="10px" >}}
+
+::: {.notes}
+- 70–77 min. Give teams all seven minutes. One student reads the workbook, another drafts, and a third checks the population claim. If devices are unavailable, give each team its means from the bullets below in low / middle / high order.
+- Team 1: 20.36, 20.33, 19.22. Team 2: 10.43, 10.32, 8.97. Team 3: 20.04, 19.77, 19.50. Team 4: 9.80, 9.39, 9.82. Team 5: 21.92, 18.07, 20.49. For ActivityLevel the middle label is Moderate; for SocialSupport it is Medium.
+- All five overall p-values exceed .05. Each team can report its observed means and explain that its evidence is insufficient to conclude that the population means differ. No team needs project pairwise results under the assigned follow-up rule.
+- Listen for causal claims and claims that all means are identical. Ask the speaker to revise either in the language of their outcome and grouping variable.
+:::
+
+
+## Exit Check
+
+A classmate says, “Our overall ANOVA is statistically significant, so all three groups differ from one another.”
+
+In **two sentences**, explain:
+
+1. What does the overall test establish at the chosen significance level?
+2. What evidence would let you name a particular pair and say which group averaged higher?
+
+::: {.notes}
+- 77–80 min. Ask everyone to write before taking a response. The significant F provides evidence that at least one population mean differs.
+- Accept a correctly labeled adjusted pairwise comparison with its direction. In today's example, a Tukey-adjusted CI entirely above zero supports a higher mean in the first named group.
+:::
