@@ -1,6 +1,6 @@
 ---
 title: "Comparing Means"
-subtitle: "APHS 20203 | November 18, 2026"
+subtitle: "APHS 20203"
 format:
   revealjs:
     theme: [default, ../_theme/tcu.scss]
@@ -15,40 +15,17 @@ format:
     logo: ../assets/tcu-logo-purple.svg
 ---
 
-
-## One Researcher, Three Questions
-
-On Monday, our campus health researcher asked whether the mean StressScore differed from **20 points**. Now she can collect data in three ways:
-
-1. Measure one sample of students and compare its mean with 20.
-2. Recruit separate samples of students from two campuses and compare their means.
-3. Measure the **same students** before and after finals and compare the two occasions.
-
-**Turn to a partner.** In each design, what is being compared with what? Which students supply the scores on each side?
-
-::: {.notes}
-- 0–3 min, including the title. Hand out the Comparing Means exercise. Announce that Quiz 5 on November 30 excludes formal power and Type II error. Quiz 6 on December 7 covers today’s mean comparisons and the December 2 chi-square lesson. Ask partners to sketch one row of each dataset. In the third design, a row should keep both scores for the same student together.
-- All three questions concern population means. By the end of class, students will choose a test from the design, interpret its output, and report their project's comparison of three means.
-:::
-
-
-## What Do the Three Designs Look Like?
-
-Each dot is one student's StressScore. In the third design, a line joins the two scores from the same student.
-
 ```{r}
-#| echo: false
-#| fig-width: 10.5
-#| fig-height: 3.9
-#| out-width: "92%"
-#| fig-align: center
-#| fig-alt: "Three panels of hypothetical StressScores. Panel 1, one sample versus 20: 12 students' scores scattered around a dashed reference line at 20. Panel 2, two separate groups: one column of 20 scores for Campus A and another column of 20 scores for Campus B, with nothing connecting them. Panel 3, same students twice: 18 students' scores before and after finals, with a line joining each student's two scores. Most lines slope downward."
+#| label: setup
+#| include: false
+# Shared setup for every figure in the deck. It lives in one hidden chunk ahead
+# of the first slide so figures keep working when slides are reordered.
 library(ggplot2)
 library(tibble)
 library(dplyr)
 
-# TCU purple and its darker companion, matching the slide theme. Later figures
-# in the t-test block reuse these so the deck reads as one system.
+# TCU purple and its darker companion, matching the slide theme, so the deck's
+# figures read as one system.
 tcu_purple <- "#4D1979"
 tcu_dark <- "#241632"
 
@@ -69,6 +46,428 @@ exact_scores <- function(n, mean, sd) {
   z <- as.numeric(scale(qnorm(ppoints(n))))
   mean + sd * z
 }
+
+# The campus population for the two "Example" slides: an 18 x 12 jittered grid
+# of small dots, 12 of which are flagged as the sampled students. Both slides
+# draw from this one table so the campus looks identical on each. The seed
+# fixes the jitter and which 12 students are sampled.
+set.seed(2026)
+campus <- tibble(col = rep(1:18, times = 12), row = rep(1:12, each = 18)) |>
+  mutate(
+    x = 0.4 + (col - 1) * 0.45 + runif(n(), -0.12, 0.12),
+    y = 1.3 + (row - 1) * 0.55 + runif(n(), -0.12, 0.12)
+  )
+campus$sampled <- seq_len(nrow(campus)) %in% sample(nrow(campus), 12)
+campus_mid <- mean(range(campus$x))
+
+#' Draw a thick right-pointing arrow between figure panels
+#'
+#' @param x,xend Start and end x positions.
+#' @param y Height of the arrow.
+#' @return A ggplot2 annotation layer.
+panel_arrow <- function(x, xend, y) {
+  annotate("segment", x = x, xend = xend, y = y, yend = y, linewidth = 2,
+           color = tcu_dark, arrow = arrow(length = unit(0.18, "in"), type = "closed"))
+}
+
+#' Draw a bold panel heading
+#'
+#' @param x,y Position of the heading's center.
+#' @param label Heading text.
+#' @return A ggplot2 annotation layer.
+panel_heading <- function(x, y, label) {
+  annotate("text", x = x, y = y, label = label, size = 6, fontface = "bold", color = tcu_dark)
+}
+```
+
+
+## Big Picture - What Do We Want to Know
+
+1. What is epidemiology? 
+
+2. In epidemiologic studies, what do we typically want to know?
+
+3. What is the statistical term for these quantities?
+
+4. Can we measure these quantities directly? Why or why not?
+
+
+::: {.notes}
+- Let's revisit the big picture.   
+
+**Question**
+
+1. What is epidemiology?
+
+    - The study of the distribution and determinants of health in populations.
+
+2. In epidemiologic studies, what do we typically want to measure?
+
+    - We want to measure the distribution of risk factors and health outcomes in the population. 
+  
+3. What is the statistical term for these quantities?
+
+    - Population parameters.
+
+4. Can we measure these quantities directly?
+
+    - Usually not. We can rarely collect data from everyone in the population.
+:::
+
+
+## Example: What Do We Want to Know?
+
+```{r}
+#| echo: false
+#| fig-width: 9
+#| fig-height: 3
+#| out-width: "92%"
+#| fig-align: center
+#| fig-alt: "Left, a field of about 200 small purple dots labeled 'All students on campus.' An arrow points right to a bell-shaped curve labeled 'Their StressScores, Mean = ?'. The curve is drawn as a dashed outline with a large question mark inside and no numbers on its StressScore axis, showing that the population distribution is unknown."
+# The population distribution is unknown, so it is drawn as a dashed outline
+# with no axis values and a question mark for the mean. Its shape is a generic
+# bell curve, not an estimate from data.
+pop_curve <- tibble(x = seq(13, 28, length.out = 400)) |>
+  mutate(y = 1.3 + 5.6 * exp(-0.5 * ((x - 20.5) / 2.4)^2))
+
+ggplot() +
+  geom_point(data = campus, aes(x, y), size = 2.6, color = alpha(tcu_purple, 0.45)) +
+  panel_heading(campus_mid, 8.4, "All students on campus") +
+  panel_arrow(8.6, 11.6, 4.3) +
+  geom_ribbon(data = pop_curve, aes(x, ymin = 1.3, ymax = y), fill = alpha(tcu_purple, 0.08)) +
+  geom_line(data = pop_curve, aes(x, y), linetype = "dashed", linewidth = 1, color = tcu_dark) +
+  annotate("segment", x = 13, xend = 28, y = 1.3, yend = 1.3, linewidth = 0.6) +
+  annotate("text", x = 20.5, y = 0.7, label = "StressScore", size = 5) +
+  annotate("text", x = 20.5, y = 3.7, label = "?", size = 22, fontface = "bold", color = tcu_purple) +
+  panel_heading(20.5, 8.4, "Their StressScores") +
+  annotate("text", x = 20.5, y = 7.6, label = "Mean = ?", size = 5.6, color = tcu_dark) +
+  coord_fixed(xlim = c(0, 28.5), ylim = c(0.3, 8.8)) +
+  theme_void()
+```
+
+**Research question:** What is the mean StressScore for all students on campus?
+
+::: {.notes}
+- For example...
+
+**Question**
+
+1. What is our research question? What information do we really want to know?
+
+    - We want to know what the distribution of StressScores for all students looks like. To get started, we will narrow the question to, "What is the mean StressScore for all students on campus?"
+
+2. Can we answer this question directly? Why or why not?
+
+    - No. We can't measure every student's StressScore.
+
+3. What can we do instead?
+
+    - Measure StressScores in a sample of students from the target population.
+:::
+
+
+## Example: What We Actually Measure
+
+```{r}
+#| echo: false
+#| fig-width: 9
+#| fig-height: 3
+#| out-width: "92%"
+#| fig-align: center
+#| fig-alt: "Three panels joined by arrows. Left, the same field of campus dots, with 12 dots darker than the rest, labeled 'All students on campus.' Center, those 12 students in a 4 by 3 grid labeled 'Our sample, 12 students.' Right, a dot plot labeled 'Their StressScores': 12 dots stacked over a StressScore axis from about 15 to 27, with an arrow marking 'Sample mean = 21.'"
+# Positions for the 12 sampled students, drawn as the same 4 x 3 grid used on
+# the "Why Do We Test Hypotheses?" slide so students recognize the sample.
+sample_grid <- tibble(col = rep(1:4, times = 3), row = rep(1:3, each = 4)) |>
+  mutate(x = 11.1 + (col - 1) * 0.95, y = 5.4 - (row - 1) * 0.95)
+
+# Same 12 scores as the deck's one-sample example (mean 21, SD 3.64), grouped
+# into 2-point bins centered on odd numbers (15, 17, ..., 27) and stacked so
+# each dot is one student. Whole-point bins left almost every dot alone in its
+# column, which hid the shape of the distribution. The label reports the exact
+# mean, 21; the binned dots are only for display.
+sample_scores <- tibble(score = round((exact_scores(12, mean = 21, sd = 3.64) - 1) / 2) * 2 + 1) |>
+  group_by(score) |>
+  mutate(stack = row_number()) |>
+  ungroup()
+
+# Map StressScores 14-28 onto the right-hand panel's x range.
+to_x <- function(s) 18.6 + (s - 14) * (9.4 / 14)
+sample_scores <- mutate(sample_scores, x = to_x(score), y = 1.75 + (stack - 1) * 0.6)
+
+ggplot() +
+  geom_point(data = filter(campus, !sampled), aes(x, y), size = 2.6, color = alpha(tcu_purple, 0.2)) +
+  geom_point(data = filter(campus, sampled), aes(x, y), size = 3.6, color = tcu_purple) +
+  panel_heading(campus_mid, 8.4, "All students on campus") +
+  panel_arrow(8.4, 10.3, 4.3) +
+  geom_point(data = sample_grid, aes(x, y), size = 7, shape = 21, fill = tcu_purple, color = tcu_dark) +
+  panel_heading(mean(range(sample_grid$x)), 8.4, "Our sample") +
+  annotate("text", x = mean(range(sample_grid$x)), y = 7.4, label = "12 students", size = 5.6, color = tcu_dark) +
+  panel_arrow(15.6, 17.5, 4.3) +
+  geom_point(data = sample_scores, aes(x, y), size = 5.2, color = tcu_purple) +
+  annotate("segment", x = to_x(14), xend = to_x(28), y = 1.3, yend = 1.3, linewidth = 0.6) +
+  annotate("text", x = to_x(c(15, 20, 25)), y = 0.95, label = c(15, 20, 25), size = 4, color = "gray25") +
+  annotate("text", x = to_x(21), y = 0.4, label = "StressScore", size = 5) +
+  # Mean pointer starts above the tallest stack so it never crosses a dot.
+  annotate("segment", x = to_x(21), xend = to_x(21), y = max(sample_scores$y) + 0.55, yend = 5.7,
+           linewidth = 1.1, color = tcu_dark, arrow = arrow(length = unit(0.12, "in"), ends = "first")) +
+  annotate("text", x = to_x(21), y = 6.2, label = "Sample mean = 21", size = 5.6, fontface = "bold", color = tcu_dark) +
+  panel_heading(to_x(21), 8.4, "Their StressScores") +
+  coord_fixed(xlim = c(0, 28.5), ylim = c(0.1, 8.8)) +
+  theme_void()
+```
+
+::: {.notes}
+- Now, we have data containing measures for each person in the sample.  
+
+**Question**
+
+1. What do we call a summary of the sample, like its mean?
+
+  - Sample statistics.
+
+2. What do we want to know about the distribution of StressScores in our sample?
+
+  - We want to know how similar the distribution of StressScores in our sample is to the distribution of StressScores in the population. For simplicity, we will once again narrow our question to asking how similar the sample mean StressScore is to the population mean StressScore.
+
+3. Can we answer this question directly? Why or why not?
+
+  - No. Because we don't know the population mean StressScore.
+
+4. Are there any useful questions we _can_ answer?
+
+  - Yes! We can hypothesize what the population parameters are (or aren't) and then test the compatibility of those hypotheses with our data under the model's assumptions.
+:::
+
+
+## Why Do We Test Hypotheses?
+
+```{r}
+#| echo: false
+#| fig-width: 9
+#| fig-height: 3.2
+#| out-width: "74%"
+#| fig-align: center
+#| fig-alt: "An illustrative bell curve of sample mean StressScores is centered at the hypothesized campus mean of 20. The observed mean of 21 is marked. Both tails are shaded, covering means of 19 or lower and 21 or higher. Each shaded value is at least 1 point from 20. An arrow connects the 12 sampled students to their mean of 21."
+# Packages and colors load in the hidden setup chunk at the top of the deck.
+
+# Sampling distribution of the mean if the campus mean were 20. The SE is
+# 3.64 / sqrt(12) = 1.05, the same standard error used on the one-sample slide
+# (t = 0.95), so the observed mean of 21 sits about 1 SE above 20. The figure
+# adapts the Module 11 Hypothesis Testing BMI "Probability?" image to this
+# example. A normal curve is used for the sketch; the test itself uses t(11).
+mu0 <- 20
+se <- 3.64 / sqrt(12)
+observed <- 21
+
+# Include both cutoffs in the plotting grid so each tail starts exactly one
+# observed difference from the hypothesized mean.
+distance <- abs(observed - mu0)
+cutoffs <- mu0 + c(-distance, distance)
+curve_df <- tibble(
+  x = sort(unique(c(seq(mu0 - 3.4 * se, mu0 + 3.4 * se, length.out = 600), cutoffs))),
+  y = dnorm(x, mu0, se)
+)
+
+# Draw the two tails as separate ribbons so the center stays unshaded.
+tails <- curve_df |>
+  filter(x <= cutoffs[1] | x >= cutoffs[2]) |>
+  mutate(left_tail = x < mu0)
+
+y_peak <- dnorm(mu0, mu0, se)
+y_obs <- dnorm(observed, mu0, se)
+
+# The 12 students in the sample, drawn as a 4 x 3 grid of dots to the right of
+# the curve. Their positions are decorative; only the count matters here.
+dots <- tibble(col = rep(1:4, times = 3), row = rep(1:3, each = 4)) |>
+  mutate(x = 25.6 + (col - 1) * 0.62, y = y_peak * (0.66 - (row - 1) * 0.17))
+
+# Whole-number ticks so the observed mean of 21 lands on a labeled tick.
+ticks <- tibble(x = 17:23)
+
+ggplot() +
+  geom_ribbon(data = tails, aes(x, ymin = 0, ymax = y, group = left_tail),
+              fill = tcu_purple, alpha = 0.45) +
+  geom_line(data = curve_df, aes(x, y), linewidth = 0.7, color = tcu_dark) +
+  # Hypothesized mean: dashed reference line at 20.
+  annotate("segment", x = mu0, xend = mu0, y = 0, yend = y_peak,
+           linetype = "dashed", color = "gray40", linewidth = 0.8) +
+  # Observed sample mean: solid marker at 21.
+  annotate("segment", x = observed, xend = observed, y = 0, yend = y_obs,
+           color = tcu_dark, linewidth = 1.3) +
+  annotate("point", x = observed, y = y_obs, size = 4.5, color = tcu_dark) +
+  # Label both tails in words so students can read the two-sided comparison.
+  annotate("text", x = c(17.65, 22.35), y = y_peak * 0.38,
+           label = c("19 or lower", "21 or higher"), size = 4.6) +
+  # Hand-drawn axis, so the axis stops under the curve instead of the dots.
+  annotate("segment", x = min(curve_df$x), xend = max(curve_df$x), y = 0, yend = 0,
+           linewidth = 0.6) +
+  geom_text(data = ticks, aes(x, -y_peak * 0.07, label = x), size = 4, color = "gray25") +
+  annotate("text", x = mu0, y = -y_peak * 0.17, label = "Sample mean StressScore (illustration)", size = 4.8) +
+  # Headings for the two halves of the picture.
+  annotate("text", x = mu0, y = y_peak * 1.13, label = "If the campus mean were 20...",
+           size = 7, fontface = "bold", color = tcu_dark) +
+  annotate("text", x = mean(range(dots$x)), y = y_peak * 0.88, label = "Our sample: 12 students",
+           size = 5.5, fontface = "bold", color = tcu_dark) +
+  geom_point(data = dots, aes(x, y), size = 9, shape = 21, fill = tcu_purple, color = tcu_dark) +
+  annotate("text", x = mean(range(dots$x)), y = y_peak * 0.12, label = "Mean = 21",
+           size = 6, fontface = "bold", color = tcu_dark) +
+  # Arrow from the sample back to its spot on the curve.
+  annotate("segment", x = 25.1, xend = observed + 0.35, y = y_obs, yend = y_obs,
+           linewidth = 2.2, color = tcu_dark,
+           arrow = arrow(length = unit(0.22, "in"), type = "closed")) +
+  annotate("text", x = 23.3, y = y_obs + y_peak * 0.09, label = "How unusual?", size = 5.6,
+           fontface = "bold", color = tcu_dark) +
+  coord_cartesian(xlim = c(16.3, 27.9), ylim = c(-y_peak * 0.2, y_peak * 1.2), clip = "off") +
+  theme_void()
+```
+
+> **Example question we *can* answer:** If the campus mean were 20 and the model assumptions hold, how often would a sample mean be at least 1 point from 20?
+
+::: {.notes}
+- The process of answering questions like these is called hypothesis testing. More specifically, null hypothesis significance testing.
+
+- Point to 21, then to 19. Each is one point from 20. The shaded tails include both of those means and all means farther away. 
+
+- The later one-sample example uses the t distribution to calculate the p-value.
+:::
+
+
+## Four Steps of Hypothesis Testing
+
+::: {.incremental}
+1. **Assume a model.** The model describes how we assume the data were generated. The null hypothesis (H₀) is one part of it.
+2. **Select an alpha level.** Choose the cutoff for rejecting H₀ before seeing the data.
+3. **Calculate a test statistic.** Measure how far our data are from what H₀ predicts.
+4. **Calculate a p-value.** Compare the test statistic with the distribution the model predicts if H₀ is true.
+:::
+
+::: {.fragment}
+Together, these steps make up a **statistical test**. The test is usually named after its statistic and reference distribution (*t* test, *F* test).
+:::
+
+::: {.notes}
+- Last time, we discussed a four-step process for hypothesis testing. One change: step 1 now names the whole model, not just the null hypothesis.
+
+**Question**
+
+- What are the four steps we need to answer a question like this one?
+
+- The model describes how we assume the data were generated. H₀ is one piece of it. Every p-value assumes the whole model, which is why we keep saying "if H₀ and the model assumptions hold."
+
+- Alpha doesn't depend on the model. Pick it before seeing the data.
+
+- A test's name can refer to several things at once. In a t test, the t statistic is the number we calculate in step 3, and the t distribution is the reference we compare it with in step 4. Anyone can calculate the statistic. The model is what justifies comparing it with that distribution.
+
+- When we change the study design, we change the model in step 1. That changes the test statistic and reference distribution in steps 3 and 4.
+:::
+
+
+## What Determines Which Statistical Test We Use?
+
+::: {.incremental}
+1. **What do we want to know about the population?** We might compare one group with a reference value, compare two or more groups, or look for a change over time.
+2. **What kind of data do we have?** Measurements (often summarized with means), counts, and yes-or-no outcomes (often summarized with proportions) can call for different models.
+3. **How did we collect the data?** Observations may come from separate individuals, matched pairs, or repeated measurements on the same individual.
+:::
+
+::: {.notes}
+- These answers guide our choice of **model and null hypothesis (step 1)**. The model tells us which **test statistic to calculate (step 3)** and how to judge whether its value is **unusual under the null (step 4)**.
+:::
+
+
+## Which Tests Can We Use to Compare Means?
+
+| What do we want to know?                                                     | Test                       | Statistic |
+| ---------------------------------------------------------------------------- | -------------------------- | --------- |
+| Does a population mean differ from a fixed reference value?                  | One-sample t-test          | *t*       |
+| Do the population means differ between two independent groups?               | Independent-samples t-test | *t*       |
+| When the same people are measured twice, is the population mean change zero? | Paired t-test              | *t*       |
+| Are the population means equal across three or more independent groups?      | One-way ANOVA              | *F*       |
+
+::: {.notes}
+- Today we will discuss statistical tests when our outcome of interest is measured continuously and summarized with means.
+
+**Question**
+
+- The first three tests all report a *t* statistic. Why do we need three different t-tests?
+
+- With one sample, we estimate a single mean and compare it with a fixed number. With independent groups, both sample means contribute uncertainty. With paired measurements, each person supplies one change, and the variation among those changes determines the standard error of the mean change.
+:::
+
+
+## Why Do We Need Different t-Tests? {.compact}
+
+All three tests measure how many **estimated standard errors** our estimate falls above or below the null value. The design determines how we calculate that standard error.
+
+:::: {.columns}
+::: {.column width="60%"}
+| Test                | What determines the standard error?                                              |
+| ------------------- | -------------------------------------------------------------------------------- |
+| One-sample          | The spread and number of independent observations. The reference value is fixed. |
+| Independent-samples | The spread and sample size in each group. Both means contribute uncertainty.     |
+| Paired              | The spread of the within-pair differences and the number of independent pairs.   |
+:::
+
+::: {.column width="37%"}
+```{r}
+#| label: t-reference-curve
+#| echo: false
+#| fig-width: 4.2
+#| fig-height: 2.1
+#| out-width: "100%"
+#| fig-alt: "A symmetric t distribution centered at zero, shown with 11 degrees of freedom as one example."
+# Use the degrees of freedom from the upcoming one-sample example to show
+# one member of the t family. The curve represents t under the null model.
+ggplot() +
+  stat_function(fun = dt, args = list(df = 11), xlim = c(-4, 4),
+                linewidth = 1.2, color = tcu_purple) +
+  scale_x_continuous(breaks = seq(-4, 4, 2)) +
+  labs(title = "Example with 11 df", x = "t statistic", y = NULL) +
+  theme_classic(base_size = 15) +
+  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(),
+        axis.line.y = element_blank())
+```
+
+All three use a *t* reference distribution. Its shape depends on the degrees of freedom.
+:::
+::::
+
+::: {.notes}
+
+:::
+
+
+## One Researcher, Three Questions
+
+Last time, our campus health researcher asked whether the mean StressScore differed from **20 points**. But there are other related research questions she could have asked:
+
+1. Measure one sample of students and compare its mean with 20.
+2. Recruit separate samples of students from two campuses and compare their means.
+3. Measure the **same students** before and after finals and compare the two occasions.
+
+**Think to yourself.** In each design, what is being compared with what? Which students supply the scores on each side?
+
+::: {.notes}
+**Instructions**
+- Download and open `Comparing Means - Exercise.xlsx`.
+
+- Answers are on the next slide.  
+:::
+
+
+## What Do the Three Designs Look Like?
+
+Each dot is one student's StressScore. In the third design, a line joins the two scores from the same student.
+
+```{r}
+#| echo: false
+#| fig-width: 10.5
+#| fig-height: 3.9
+#| out-width: "92%"
+#| fig-align: center
+#| fig-alt: "Three panels of hypothetical StressScores. Panel 1, one sample versus 20: 12 students' scores scattered around a dashed reference line at 20. Panel 2, two separate groups: one column of 20 scores for Campus A and another column of 20 scores for Campus B, with nothing connecting them. Panel 3, same students twice: 18 students' scores before and after finals, with a line joining each student's two scores. Most lines slope downward."
+# Packages, the tcu_purple / tcu_dark colors, and exact_scores() load in the
+# hidden setup chunk at the top of the deck.
 
 # One-sample example: 12 students with a mean of 21. The SD of 3.64 comes from
 # the Random Error and Confidence Intervals lesson, where it produced the
@@ -157,41 +556,69 @@ ggplot(design_data, aes(x = x, y = score)) +
         strip.text = element_text(face = "bold"))
 ```
 
+**In each panel, what does one student contribute to the analysis?**
+
 ::: {.notes}
-- 3–5 min. Use the figure to debrief the partner discussion. Design 1 compares one set of 12 scores with the fixed value 20, shown by the dashed line. Design 2 compares two sets of scores from different students. Design 3 compares two scores from each of the same 18 students.
-- The lines are the only difference between designs 2 and 3. Without a link between specific scores, there are no pairs.
-- The scores are hypothetical. They reproduce the summary statistics used in the three examples that follow.
+- In the first panel, each student contributes one score to the sample mean. The dashed line at 20 is a fixed reference value.
+
+- In the second panel, each student contributes one score to their own campus mean. Different students supply the two means.
+
+- In the third panel, each student contributes two scores. Follow one line from before to after finals. Subtracting before from after gives one change per student.
+
+**Question**
+
+- The lines show us which scores belong to the same student. What would you need to know about recruitment to judge whether different students’ observations are independent?
+
+- Find out how students were selected. For example, recruiting whole groups of roommates could give us students with shared experiences and correlated scores.
 :::
 
 
-## Question: Which T-Test Fits?
+## Exercise: Which T-Test Fits?
 
-For exercise 1, vote on each campus question. Use **one, two, or three fingers** to choose a test.
+1. Open the Comparing Means Excel file.   
+2. Match each study design (A–C) with a test (1–3). For each match, explain what one student contributes to the analysis.
 
-| Vote | Test                | What goes into the analysis?                     |
-| ---- | ------------------- | ------------------------------------------------ |
-| 1    | One-sample          | One score per student and a fixed reference mean |
-| 2    | Independent samples | One score per student in two unrelated groups    |
-| 3    | Paired samples      | One difference per complete pair                 |
-
-Two classrooms each have 18 students. What else would you need to know before calling their scores paired?
+| Study design                                                               | Test choices                      |
+| -------------------------------------------------------------------------- | --------------------------------- |
+| **A.** Compare one sample’s mean StressScore with 20 points.               | **1.** Paired t-test              |
+| **B.** Compare mean StressScores for different students at two campuses.   | **2.** One-sample t-test          |
+| **C.** Compare StressScores before and after finals for the same students. | **3.** Independent-samples t-test |
 
 ::: {.notes}
-- 5–8 min. Reread the three designs from the opening. Answers in order: one-sample, independent, paired. Use a poll or hands.
+**Question**
+
+- Which test goes with each design? 
+
+- A matches 2 (sample mean versus 20), B matches 3 (means from different students), and C matches 1 (mean within-student change versus zero).
+
+**Question**
+
+- If two classrooms each have 18 students, what would you need to know before treating their scores as paired?
+
 - Equal group sizes alone do not create pairs. A meaningful link must connect the two observations, such as two measurements on each student or a deliberately matched pair.
-- Ask a student to name the unit counted by n in a paired analysis. It is the complete pair.
+
+**Question**
+
+- What does *n* count in a paired analysis?
+
+- Each complete pair counts once.
 :::
 
 
-## One Sample: Is the Mean Different From 20?
+## One Sample: Is the Mean Different From 20? {.compact}
 
-Last week's sample of **12 students** had a mean StressScore of **21 points**.
+Open the **One Sample** tab. Our 12 students averaged **21 StressScore points** (sample SD 3.64).
+
+1. **Assume a model.** Under H₀, the campus mean is 20. Assume independent observations from an approximately normal population.
+2. **Select α.** Before seeing the results, we chose .05 for a two-sided test.
+3. **Calculate *t*.** With a standard error of 1.05 points, the sample mean is (21 − 20) ÷ 1.05 ≈ **0.95 standard errors above 20**.
+4. **Calculate and interpret *p*.** With 11 degrees of freedom, *p* = .362. At α = .05, we fail to reject H₀.
 
 ```{r}
 #| echo: false
 #| fig-width: 10.5
 #| fig-height: 2.3
-#| out-width: "92%"
+#| out-width: "78%"
 #| fig-align: center
 #| fig-alt: "Two 95% confidence intervals drawn side by side at the same width. Left, population mean StressScore: estimate 21.00, interval 18.69 to 23.31, with a dashed line at 20 inside the interval. Right, population mean minus 20: estimate 1.00, interval −1.31 to 3.31, with a dashed line at 0 inside the interval. The right picture is the left picture shifted down by 20."
 # The same estimate expressed two ways. Subtracting the null value of 20 from
@@ -243,14 +670,38 @@ ggplot(ci_shift, aes(y = 1)) +
         strip.text = element_text(face = "bold"))
 ```
 
-**Two-sided one-sample test:** *t*(11) = 0.95, *p* = .362. The **11** is the degrees of freedom, 12 − 1.
-
-Find **20** in the left interval and **0** in the right. Why do they lead to the same decision?
+Why does finding **20** in the first 95% interval give the same decision as finding **0** in the second?
 
 ::: {.notes}
-- 8–13 min. Both endpoints shift down by 20 when we express the estimate as a difference. Positive values mean higher stress than the norm.
-- The t statistic is (21 − 20) ÷ 1.05 = 0.95, using the standard error from the confidence-interval lesson. One-sample df = n − 1 = 11. A t statistic near 0.95 puts the sample mean just under one estimated standard error above 20.
-- At α = .05, fail to reject a population mean of 20. The CI allows modest differences in either direction. Use the same distinction for Prep 4.
+**Question**
+
+- What are we assuming about the campus mean under the null, and about the students whose scores we use to test it?
+
+- H₀ sets the campus mean to 20. We treat the 12 scores as independent draws from an approximately normal campus population.
+
+**Question**
+
+- Before looking at the result, what cutoff did we choose for rejecting H₀?
+
+- We chose α = .05.
+
+**Question**
+
+- Our estimate is 1 point above 20. If one standard error is about 1.05 points, how many standard errors above 20 is our estimate?
+
+- About 0.95. Excel uses the unrounded standard error, 3.64 divided by the square root of 12.
+
+**Question**
+
+- If the campus mean were 20 and the model assumptions held, how often would a sample of 12 give a t statistic at least this far from zero in either direction?
+
+- About 36.2% of the time. The two-sided p-value exceeds .05, so the sample gives insufficient evidence that the campus mean differs from 20.
+
+**Question**
+
+- We subtracted 20 from the estimate and both ends of the first interval. Where did the null value go?
+
+- It moved to zero. The interval for the campus mean includes 20, and the interval for the difference includes zero. Both intervals express the same uncertainty in StressScore points.
 :::
 
 
@@ -327,40 +778,53 @@ ggplot(paired_long, aes(x = x, y = value)) +
 The triangle is one student: 22 before, 19 after, a change of **−3**. The **paired t-test** asks whether the mean of the 18 changes differs from **0**.
 
 ::: {.notes}
-- 13–15 min. Trace the highlighted student from 22 to 19 in the left panel, then find the same student at −3 in the right panel. The right panel is the entire data set the paired t-test analyzes.
-- The scores are hypothetical. The 18 changes have a mean of −2 and an SD of 3 points, matching the results on the next slide. Point out that individual students changed in different directions.
+- Trace the highlighted student from 22 to 19 in the left panel, then find the same student at −3 in the right panel. The right panel is the entire data set the paired t-test analyzes.
+
+**Question**
+
+- We measured 18 students twice. What are the 18 values that go into our test?
+
+- Each value is one student’s after-minus-before change.
 :::
 
 
-## Paired Samples: What Did We Find?
+## Paired Samples: What Did We Find? {.compact}
 
-| Mean change  | 95% CI for mean change | Paired t-test               |
-| ------------ | ---------------------- | --------------------------- |
-| −2.00 points | −3.49 to −0.51 points  | *t*(17) = −2.83, *p* = .012 |
+Each of the 18 students contributes **one change** (after minus before). Use the **Paired Samples** tab in Excel.
 
-What does the minus sign tell us in everyday language?
+1. **Assume a model.** H₀ says the population mean change is zero. Assume changes are independent across students and approximately normally distributed.
+2. **Select α.** We chose .05 for a two-sided test.
+3. **Calculate the statistic.** Changes averaged −2 points (SD = 3). Their standard error is 3/√18 ≈ 0.71 points, giving *t*(17) = −2.83.
+4. **Interpret the p-value.** If the population mean change were zero and the assumptions held, about **1.2%** of such samples would give a *t* this far from zero or farther in either direction.
 
-Why are there **17 degrees of freedom** when the spreadsheet contains **36 scores**?
+At α = .05 we reject H₀. Students averaged **2 points lower after finals** (95% CI for mean change −3.49 to −0.51).
 
 ::: {.notes}
-- 15–18 min. Ask students to explain what −2 means for the sample as a whole.
-- The analysis is a one-sample test of the 18 change scores against zero. There are 18 complete pairs, so df = 17. Hypothetical sample SD of changes = 3 points.
-- Scores fell by an estimated 2 points on average. The matching CI excludes zero. Individuals can change in different directions, and the before/after design alone cannot establish the cause.
+**Question**
+
+- A classmate says, “There’s a 1.2% chance that the population mean change was zero.” How would you explain what the 1.2% measures?
+
+- The calculation assumes a zero mean change. The probability describes the test statistic across repeated samples under that assumption. The before-and-after comparison alone cannot tell us what caused the change.
 :::
 
 
-## Independent Samples: Does Campus Matter?
+## Independent Samples: Do the Campus Means Differ? {.compact}
 
-In a hypothetical comparison, two campuses each recruit **20 different students**. Mean StressScore is **21** at Campus A and **19** at Campus B. We report **A minus B**, so a positive difference means Campus A averaged higher.
+Campus A averaged **21 points** and Campus B averaged **19**. Each campus recruited 20 different students, with a sample SD of 4 points at each campus. Use the **Independent Samples** tab.
 
-| Mean difference | 95% CI for the difference | Pooled t-test              |
-| --------------- | ------------------------- | -------------------------- |
-| +2.00 points    | −0.56 to 4.56 points      | *t*(38) = 1.58, *p* = .122 |
+1. **Assume a model.** H₀ says the campus population means are equal. The pooled test assumes independent observations, approximately normal scores within each campus, and equal population variances.
+2. **Select α.** We chose .05 for a two-sided test.
+3. **Calculate the statistic.** A minus B is +2 points. Its standard error is 1.26 points, giving *t*(38) = 1.58.
+4. **Interpret the p-value.** Under H₀ and the model assumptions, about **12.2%** of such samples would give a *t* at least this far from zero in either direction.
 
-A **pooled** test combines both campuses' spread into one estimate. It assumes scores vary about equally at each campus.
+At α = .05 we fail to reject H₀. The data give insufficient evidence that the campus population means differ.
 
 ::: {.notes}
-- 18–20 min. Both hypothetical sample SDs are 4 points. Read the table aloud once, then move to the figure on the next slide for the interpretation task.
+**Question**
+
+- If we repeated this study many times under the equal-means model, what would happen about 12 times in every 100 studies?
+
+- The absolute t statistic would be at least as large as the observed value. A p-value above .05 leaves open both equality and differences compatible with the data.
 :::
 
 
@@ -399,12 +863,26 @@ ggplot(campus_ci, aes(y = 1)) +
         panel.grid.minor = element_blank())
 ```
 
-With a partner, explain the result to a campus health director. Include the **estimated difference** and the **range of differences** compatible with the data. What would you need to know to judge whether the difference matters? (Exercise 2.)
+Using the Excel file, explain the result to a campus health director. Include the **estimated difference** and the **range of differences** compatible with the data. What would you need to know to judge whether the difference matters? (Exercise 2.)
 
 ::: {.notes}
-- 20–25 min. Allow two minutes to write, one minute to compare answers, and time to hear two interpretations.
-- Model answer: Campus A averaged 2 points higher in our samples. The interval includes zero and ranges from A slightly lower to A over 4 points higher. Ask what size difference would matter to students or change a campus decision. The p-value alone supplies no such threshold.
-- Ask which endpoints would change sign if the report used B minus A. The interval would be −4.56 to 0.56 and the two-sided p-value would stay the same.
+**Instructions**
+
+- Allow two minutes to write, one minute to compare answers, and time to hear two interpretations.
+
+- Model answer: Campus A averaged 2 points higher in our samples. The interval includes zero and ranges from A slightly lower to A over 4 points higher.
+
+**Question**
+
+- What would you need to know about StressScore to decide whether a 2-point difference matters to students?
+
+- A practical benchmark might be the smallest difference that would change a campus decision. The p-value alone supplies no such threshold.
+
+**Question**
+
+- For A minus B, the interval runs from −0.56 to 4.56 points. If we reported B minus A instead, what would the new lower and upper limits be?
+
+- The interval would be −4.56 to 0.56 and the two-sided p-value would stay the same.
 :::
 
 
@@ -417,7 +895,11 @@ Someone reports a **pooled independent-samples t-test** as *t*(38) = 1.58. Each 
 3. How would your answer change if the report said **paired t-test**?
 
 ::: {.notes}
-- 25–28 min. Pooled df = total N − 2, so N = 40. Many splits give 38 df, even though our example used 20 per campus. For a paired t-test, 38 df means 39 complete pairs.
+- Pooled df = total N − 2, so N = 40. 
+- Both 20 + 20 and 15 + 25 give 40 students and 38 pooled degrees of freedom. The total alone does not identify either group size. 
+
+- For a paired t-test, 38 df means 39 complete pairs.
+
 - State the equal-variance assumption explicitly. Welch's independent-samples test uses a different df calculation, so the pooled shortcut does not apply.
 :::
 
@@ -491,47 +973,34 @@ ggplot() +
   theme(legend.position = "none")
 ```
 
-Group 1 compares **three** activity levels. Which branch is that?
+Suppose different people took part in each of **three programs**. Which branch would you follow?
 
 ::: {.notes}
-- 28–30 min. Trace today's three examples through the tree: 12 students against a norm of 20, 18 students measured twice, and 20 different students at each of two campuses. The degrees of freedom in each box are the ones students just worked out.
-- Close the t-test block by asking which design would fit three independent activity levels. The open box is the one-way ANOVA. Start Group 1 at minute 30.
+- Trace today's three examples through the tree: 12 students against a norm of 20, 18 students measured twice, and 20 different students at each of two campuses. The degrees of freedom in each box are the ones students just worked out.
+
+**Question**
+
+- If each student belongs to one of three activity levels, which branch of the diagram would you follow?
+
+- The “three or more” branch leads to the open box for one-way ANOVA. Introduce the overall F test next.
 :::
 
 
-## Group 1: Does Mean StressScore Vary by Activity Level?
+## What Does a One-Way ANOVA Compare? {.compact}
 
-In the final project, **Group 1** is the student team that analyzes **Dataset A**. Each student in the dataset belongs to one of three activity **levels** (categories).
+A **one-way analysis of variance (ANOVA)** compares population means across levels of one grouping variable.
 
-| ActivityLevel | Mean StressScore |
-| ------------- | ---------------: |
-| Low           | 20.36            |
-| Moderate      | 20.33            |
-| High          | 19.22            |
-
-Students at the high activity level have the lowest sample mean. **What information is missing** if we want to draw a conclusion about the population means?
+1. **Assume a model.** H₀ says all group means are equal. Assume independent observations, approximately normal outcomes within groups, and equal population variances.
+2. **Select α.** Choose the cutoff before examining the groups.
+3. **Calculate F.** Compare variation between the group means with variation among individuals within groups. Greater separation relative to the within-group spread gives a larger F.
+4. **Calculate the p-value.** The *t* statistic can be positive or negative. *F* is nonnegative. Under the null model, the p-value is the area **at or above the observed F** in its reference distribution.
 
 ::: {.notes}
-- 30–35 min. Ask how compelling a 1-point gap would look if scores within each level varied by a tenth of a point, then if they varied by several points.
-- Students should ask about group sizes and within-group spread. Distinguish project Group 1, the student team, from the three activity levels it is comparing.
-:::
+**Question**
 
+- If we reject the hypothesis that all three population means are equal, what do we know about which groups differ?
 
-## What Does a One-Way ANOVA Compare?
-
-**ANOVA** stands for **analysis of variance**. **One-way** means one grouping variable: here, activity level, with StressScore as the outcome.
-
-Three levels make three possible pairs. Rather than run three t-tests, we start with **one overall test**.
-
-| Population claim       | Meaning for the three activity levels             |
-| ---------------------- | ------------------------------------------------- |
-| Null hypothesis        | All three population mean StressScores are equal. |
-| Alternative hypothesis | At least one population mean differs.             |
-
-::: {.notes}
-- 35–37 min. Students wrote this pair of hypotheses for their own variables on Monday. The three pairs are low–moderate, low–high, and moderate–high. The overall test asks one question first; the practice study later shows how to follow up.
-- The usual one-way F test assumes independent observations, comparable within-group variances, and approximately normal errors within levels. The guide uses the pooled within-group variance.
-- Ask whether “at least one differs” would allow two population means to be equal. Yes.
+- We have evidence that at least one mean differs. Identifying particular pairs and estimating their differences requires follow-up comparisons. The F distribution uses between-group and within-group degrees of freedom.
 :::
 
 
@@ -605,366 +1074,60 @@ ggplot(f_demo, aes(x = level, y = score)) +
 F = variation **between** the level means ÷ variation **within** the levels. Which study gives the larger F, and why?
 
 ::: {.notes}
-- 37–40 min. Take a show of hands before explaining. Study A gives the larger F. Each bar is a level mean and each dot is one student.
+- Take a show of hands before explaining.
+
+**Question**
+
+- Which study would give the larger F statistic, and what do you see in the graph that makes you think so?
+
+- Study A gives the larger F. Each bar is a level mean and each dot is one student.
 - Both studies have 10 students per level and the same means, so the between-level mean square is 40 in each. The within-level SD is 1 point in Study A and 5 points in Study B, giving F(2, 27) = 40 and F(2, 27) = 1.6.
 - The same 2-point gaps look convincing when scores within a level cluster tightly and unconvincing when the levels overlap. The denominator estimates the variation we expect among individual scores within the same level. This is why a test about means is called analysis of variance.
 :::
 
 
-## Group 1 Demo: Enter the Summary Data
+## Practice: What Does the p-Value Mean?
 
-Open the final project's **Summary Data Workbook by Group**. On the **Group_1** tab, find **H2 One-Way ANOVA Summary Data**.
+In a hypothetical comparison of three programs, *F*(2, 57) = 8.75 and *p* < .001. Which statement could you report?
 
-| ActivityLevel | n   | Mean StressScore | Sample SD |
-| ------------- | --: | ---------------: | --------: |
-| Low           | 38  | 20.3605          | 5.0067    |
-| Moderate      | 40  | 20.3275          | 3.8875    |
-| High          | 42  | 19.2190          | 5.0439    |
+A. If the three population means were equal and the model assumptions held, fewer than 1 in 1,000 such studies would give an F of 8.75 or larger.
 
-Enter one row per level, select **SD**, clear any unused sample rows, and choose **Compute**. [Open the summary-data ANOVA calculator](https://statpages.info/anova1sm.html)
+B. There is less than a 1 in 1,000 chance that the three population means are equal.
+
+C. Every pair of programs differs by a meaningful amount.
 
 ::: {.notes}
-- 40–46 min. Project the workbook and calculator. Point to the continuous outcome and three-level grouping variable. The table reproduces the needed inputs if the workbook is unavailable.
-- Copy the underlying workbook values where possible. Four decimals are shown here and give the same rounded F and p. Keep each mean beside its own n and SD. The calculator can also accept SEM, so verify the selector.
-- If the calculator is slow or unavailable, continue with the prepared output on the next slide.
+**Question**
+
+- Which statement describes a probability we calculated, and what did we assume to calculate it?
+
+- A. We assumed equal population means and the rest of the model. The upper tail gives the probability of an F at least as large as the observed F. The overall test cannot identify individual pairs or establish practical importance.
 :::
 
 
-## Group 1 Demo: Read the ANOVA Table
+## Which Programs Differ?
 
-| Source                  | df  | Mean square | F    | p    |
-| ----------------------- | --: | ----------: | ---: | ---: |
-| Between activity levels | 2   | 17.27       | 0.79 | .457 |
-| Within activity levels  | 117 | 21.88       |      |      |
-| Total                   | 119 |             |      |      |
+The overall F test asks whether all the population means are equal. Use **Activity, exercises 3–5**, in Excel to interpret the hypothetical program study.
 
-A **mean square** is variation per degree of freedom. F is their ratio: 17.27 ÷ 21.88 = **0.79**. If the population means were equal, we would expect F near 1.
+- A **pairwise difference** gives the direction and size of a specific comparison. Read the group labels in subtraction order.
+- **Tukey-adjusted 95% intervals** account for examining all pairs together. Under the model, the procedure covers all the population differences simultaneously in 95% of repeated studies.
+- Compare the interval with **zero** to assess direction and with a **meaningful difference** to judge practical importance.
 
 ::: {.notes}
-- 46–49 min. Mean square is variation per degree of freedom. Divide 17.27 by 21.88 to recover F to rounding. The p-value is the upper-tail probability under the null model.
+**Question**
+
+- Why do we use adjusted intervals when we look at all three pairs?
+
+- Examining each pair separately at the usual cutoff creates more opportunities to declare a difference when that pair’s population means are equal. Tukey’s procedure controls that risk across the family of comparisons. The workbook supplies the intervals for interpretation.
 :::
 
 
-## Group 1 Demo: Read the Report
+## Key Points
 
-```{r}
-#| echo: false
-#| fig-width: 10.5
-#| fig-height: 3.3
-#| out-width: "92%"
-#| fig-alt: "The report F(2, 117) = 0.79, p = .457 with a label on each number. The 2 is labeled levels minus 1. The 117 is labeled students minus levels. The 0.79 is labeled between divided by within, 17.27 divided by 21.88. The .457 is labeled how often F would be this large or larger if the population means were equal."
-#| fig-align: center
-# A labeled breakdown of the one-way ANOVA report students must write for the
-# final project. Each piece of the report is placed by hand on a 14 x 6 canvas
-# so that the four numbers can sit in their own boxes with a label attached.
-
-# The four numbers that carry meaning, with the label for each. Labels
-# alternate above (label_y = 4.9) and below (label_y = 1.1) the report so
-# neighboring labels cannot collide.
-report_numbers <- tibble(
-  x = c(3, 4.6, 7.85, 11.2),
-  value = c("2", "117", "0.79", ".457"),
-  label = c(
-    "levels − 1",
-    "students − levels",
-    "between ÷ within\n17.27 ÷ 21.88",
-    "how often F would be this large or\nlarger if the population means were equal"
-  ),
-  label_y = c(1.1, 4.9, 1.1, 4.9),
-  # Each connector runs from the edge of the number box toward its label.
-  line_start = c(2.45, 3.55, 2.45, 3.55),
-  line_end = c(1.6, 4.4, 1.75, 4.25)
-)
-
-# The punctuation and symbols that sit between the boxed numbers.
-report_connectors <- tibble(
-  x = c(2.25, 3.55, 5.9, 9.5),
-  text = c("F(", ",", ") =", ", p =")
-)
-
-ggplot() +
-  geom_segment(data = report_numbers,
-               aes(x = x, xend = x, y = line_start, yend = line_end),
-               linewidth = 1, color = "#b9a8c9") +
-  geom_text(data = report_connectors, aes(x = x, y = 3, label = text),
-            size = 11, color = tcu_dark) +
-  geom_label(data = report_numbers, aes(x = x, y = 3, label = value),
-             size = 11, fill = "#eee8f3", color = tcu_dark,
-             label.padding = unit(0.3, "lines")) +
-  geom_text(data = report_numbers, aes(x = x, y = label_y, label = label),
-            size = 5.2, lineheight = 0.95, color = "gray15") +
-  coord_cartesian(xlim = c(0, 14), ylim = c(0.4, 5.6), expand = FALSE) +
-  theme_void()
-```
-
-Use the two df to recover the **number of activity levels** and the **total number of students**. Check both answers against the workbook inputs.
+- **Start with the design.** One sample contributes scores, paired measurements contribute changes, and independent groups contribute separate means.
+- **Interpret a p-value under the null model.** State the null in context, then describe the probability of a test statistic at least as extreme as the one observed. For a two-sided *t* test, count both tails. For ANOVA, count the upper F tail.
+- **Report the estimate and its uncertainty.** The sign gives direction, the interval gives a range of compatible differences, and a subject-matter benchmark helps judge importance.
 
 ::: {.notes}
-- 49–52 min. Read the report aloud from left to right, pausing on each label.
-- Between df = k − 1 → k = 3. Within df = N − k → N = 117 + 3 = 120. Total df = N − 1 = 119. The workbook counts also sum to 120.
-- Point out the order of the two df in the report. Ask a student to find the same values on the calculator.
-:::
-
-
-## Group 1: What Can We Report?
-
-**F(2, 117) = 0.79, p = .457.** Use the three activity-level means listed in exercise 3.
-
-The exercise mentions the **equal-means model**. That is the null hypothesis, all three population means are equal, together with the test's assumptions.
-
-Write a short interpretation with a partner. Check three things:
-
-- Which population claim did you test?
-- What did the sample show?
-- Would it be justified to say the three population means are identical?
-
-::: {.notes}
-- 52–56 min. Example: Mean StressScore was 20.36, 20.33, and 19.22 points at low, moderate, and high activity. If the population means were equal and the model assumptions held, an F statistic at least as large as ours would occur about 46% of the time.
-- The small differences among the observed sample means are descriptive. Failing to reject equality does not establish identical population means.
-- Under this project's follow-up rule, Group 1 stops after reporting the overall result. Any pairwise table automatically displayed by the calculator can be skipped here.
-:::
-
-
-## Question: What Can the Overall Test Tell Us?
-
-Imagine an overall ANOVA comparing three levels returned **p = .004**. Which interpretation is supported?
-
-A. If the three population means were equal, an F this large or larger would be rare. Pairwise comparisons can help locate the differences.
-
-B. The test shows that every pair of population means differs.
-
-C. There is only a 0.4% chance that the three population means are equal.
-
-::: {.notes}
-- 56–60 min. Poll A/B/C, or use one, two, or three fingers. Answer A. Ask a volunteer what additional output would let them name a pair.
-- B overreaches: “at least one differs” allows two of the three population means to be equal. C repeats Monday's misconception. The p-value is calculated assuming equal means, so it cannot be the probability that the means are equal.
-- This is a hypothetical poll. Group 1's actual p-value was .457. At minute 60, move to the separate practice study even if the calculator discussion could continue.
-:::
-
-
-## Practice Study: Three Activity Programs
-
-A **separate, hypothetical practice study** compares three activity programs. Each has **20 participants**, and the sample SD is **4 StressScore points** in each program.
-
-| Program           | Mean StressScore |
-| ----------------- | ---------------: |
-| Low activity      | 22               |
-| Moderate activity | 21               |
-| High activity     | 17               |
-
-The overall test gives **F(2, 57) = 8.75, p < .001**, but it does not say which programs differ or by how much. Which pair do you expect to differ most?
-
-::: {.notes}
-- 60–62 min. These are practice-study summaries; they do not belong to any assigned project team. The sample sizes sum to 60.
-- Students should predict low versus high, the pair with the largest gap in sample means (5 points).
-:::
-
-
-## Practice Study: Three Pairs, Three Chances
-
-```{r}
-#| echo: false
-#| fig-width: 10.5
-#| fig-height: 3.3
-#| out-width: "88%"
-#| fig-align: center
-#| fig-alt: "A triangle whose corners are the three programs: low activity with a mean of 22, moderate activity with a mean of 21, and high activity with a mean of 17. Each side of the triangle is one pairwise comparison. Low and moderate are 1 point apart, moderate and high are 4 points apart, and low and high are 5 points apart."
-# Three programs can be compared two at a time in exactly three ways. Drawing
-# the programs as corners of a triangle makes each side one comparison, which
-# is the count the Tukey adjustment has to account for.
-pair_nodes <- tibble(
-  x = c(4, 7, 10),
-  y = c(1.4, 4.8, 1.4),
-  label = c("Low activity\nmean 22", "Moderate activity\nmean 21", "High activity\nmean 17")
-)
-
-# One row per side of the triangle. Each label sits just outside its side so
-# it never overlaps a line: left of the left side, right of the right side,
-# and below the bottom side.
-pair_edges <- tibble(
-  x = c(4, 7, 4),
-  xend = c(7, 10, 10),
-  y = c(1.4, 4.8, 1.4),
-  yend = c(4.8, 1.4, 1.4),
-  label = c("1 point apart", "4 points apart", "5 points apart"),
-  label_x = c(5.15, 8.85, 7),
-  label_y = c(3.2, 3.2, 0.75),
-  hjust = c(1, 0, 0.5)
-)
-
-ggplot() +
-  geom_segment(data = pair_edges, aes(x = x, xend = xend, y = y, yend = yend),
-               linewidth = 1.6, color = tcu_purple) +
-  geom_text(data = pair_edges,
-            aes(x = label_x, y = label_y, label = label, hjust = hjust),
-            size = 5.2, color = "gray15") +
-  geom_label(data = pair_nodes, aes(x = x, y = y, label = label),
-             size = 5, lineheight = 0.95, fill = "#eee8f3", color = tcu_dark,
-             label.padding = unit(0.5, "lines")) +
-  coord_cartesian(xlim = c(0, 14), ylim = c(0.3, 5.7), expand = FALSE) +
-  theme_void()
-```
-
-Each comparison is one more chance for a false alarm. A **Tukey adjustment** widens each interval to keep 95% confidence across all three.
-
-::: {.notes}
-- 62–63 min. Count the sides of the triangle with the class: three programs give three pairs.
-- Repeated unadjusted tests create more opportunities for a false positive somewhere among the three. For three independent tests at .05, the chance of at least one false positive would be about 14%. Use the supplied Tukey comparisons to control familywise error.
-:::
-
-
-## Practice Study: How Large Are the Differences?
-
-Each dot is the **first program's mean minus the second's**. A dot right of zero means the first program averaged higher. Each line is a **Tukey-adjusted 95% confidence interval**.
-
-```{r}
-#| echo: false
-#| fig-width: 10.5
-#| fig-height: 2.8
-#| out-width: "85%"
-#| fig-align: center
-#| fig-alt: "Low minus moderate: 1 point, interval −2.04 to 4.04. Low minus high: 5 points, interval 1.96 to 8.04. Moderate minus high: 4 points, interval 0.96 to 7.04. The dashed line marks zero."
-library(ggplot2)
-library(tibble)
-library(dplyr)
-
-# Use the practice study's equal sample sizes and pooled SD to calculate
-# simultaneous intervals for all three differences in their stated order.
-program_means <- c(Low = 22, Moderate = 21, High = 17)
-margin <- qtukey(0.95, nmeans = 3, df = 57) * 4 / sqrt(20)
-comparisons <- tibble(
-  first = c("Low", "Low", "Moderate"),
-  second = c("Moderate", "High", "High")
-) |>
-  mutate(
-    pair = paste(first, "minus", tolower(second)),
-    pair = factor(pair, levels = rev(pair)),
-    difference = unname(program_means[first] - program_means[second]),
-    lower = difference - margin,
-    upper = difference + margin
-  )
-
-# The zero reference line lets students decide which intervals include
-# equal population means without relying on color to convey the decision.
-ggplot(comparisons, aes(y = pair)) +
-  geom_vline(xintercept = 0, linetype = "dashed", color = "gray40") +
-  geom_segment(aes(x = lower, xend = upper, yend = pair),
-               linewidth = 1.6, color = "#4D1979") +
-  geom_point(aes(x = difference), size = 3.6, color = "#241632") +
-  scale_x_continuous(breaks = seq(-2, 8, 2), limits = c(-2.5, 8.5)) +
-  labs(x = "Difference in mean StressScore (points)", y = NULL) +
-  theme_minimal(base_size = 16) +
-  theme(panel.grid.major.y = element_blank(),
-        panel.grid.minor = element_blank())
-```
-
-For exercise 4, interpret **low minus high** and **low minus moderate**. What do the estimates and intervals say about the direction and size of each difference?
-
-::: {.notes}
-- 63–68 min. Give pairs time to read the figure before showing the numerical answers. First ask what an interval entirely to the right of zero suggests, then ask what to do with an interval that crosses zero.
-- The comparison is first minus second throughout. A positive difference means the first program had the higher sample mean.
-:::
-
-
-## Practice Study: Report the Follow-Up
-
-| First minus second  | Difference | Tukey-adjusted 95% CI |
-| ------------------- | ---------: | --------------------- |
-| Low minus moderate  | 1.00       | −2.04 to 4.04         |
-| Low minus high      | 5.00       | 1.96 to 8.04          |
-| Moderate minus high | 4.00       | 0.96 to 7.04          |
-
-The low-activity program averaged **5 points higher** than the high-activity program, with compatible differences from about **2 to 8 points higher**. For low minus moderate, the estimate was **1 point**, with compatible differences from about **2 points lower to 4 points higher**.
-
-::: {.notes}
-- 68–69 min. Ask a student to read one difference in points and identify its interval. For moderate minus high, the estimate is 4 points higher and the adjusted interval runs from about 1 to 7 points higher.
-- These intervals account for examining all three pairs together. The low-versus-moderate comparison is inconclusive.
-:::
-
-
-## Practice Study: Does 5 Points Matter?
-
-The statistics cannot say. Suppose counselors treat **3 points** as a meaningful difference.
-
-```{r}
-#| echo: false
-#| fig-width: 10.5
-#| fig-height: 2.6
-#| out-width: "88%"
-#| fig-align: center
-#| fig-alt: "The Tukey-adjusted 95% confidence interval for low minus high, from 1.96 to 8.04 points with an estimate of 5.00. A dashed line marks 0 and a solid line marks the hypothetical benchmark of 3 points. The interval lies entirely above 0 and extends on both sides of the benchmark."
-# Reuse the low-minus-high interval calculated for the previous figure so the
-# two slides can never disagree.
-low_high <- filter(comparisons, pair == "Low minus high")
-
-# The 3-point benchmark is invented for this slide. It stands in for the kind
-# of outside judgment (what difference would change a decision?) that the
-# exit check asks students to name. It is not a property of StressScore.
-benchmark <- 3
-
-ggplot(low_high, aes(y = 1)) +
-  geom_vline(xintercept = 0, linetype = "dashed", color = "gray40") +
-  # A solid line and a text label set the benchmark apart from the dashed
-  # zero line without relying on color.
-  geom_vline(xintercept = benchmark, linewidth = 1, color = "gray20") +
-  annotate("text", x = benchmark, y = 1.9, label = "Benchmark: 3 points",
-           hjust = -0.05, size = 5, color = "gray15") +
-  geom_segment(aes(x = lower, xend = upper, yend = 1),
-               linewidth = 1.6, color = tcu_purple) +
-  geom_point(aes(x = difference), size = 3.6, color = tcu_dark) +
-  geom_text(aes(x = lower, label = label_points(lower)), vjust = -1.1, size = 5) +
-  geom_text(aes(x = difference, label = label_points(difference)), vjust = -1.1, size = 5) +
-  geom_text(aes(x = upper, label = label_points(upper)), vjust = -1.1, size = 5) +
-  scale_x_continuous(breaks = seq(0, 8, 2), limits = c(-1, 9)) +
-  scale_y_continuous(limits = c(0.7, 2.05)) +
-  labs(x = "Low minus high: difference in mean StressScore (points)", y = NULL) +
-  theme_minimal(base_size = 16) +
-  theme(axis.text.y = element_blank(),
-        panel.grid.major.y = element_blank(),
-        panel.grid.minor = element_blank())
-```
-
-The interval includes differences both **smaller** and **larger** than the benchmark.
-
-::: {.notes}
-- 69–70 min. The 3-point benchmark is hypothetical. It models the kind of outside information the exit check asks students to name.
-- Every value in the interval is above zero, yet the data cannot tell us whether the true difference clears the benchmark. Finish the practice study here and return to the assigned datasets.
-:::
-
-
-## Your Project: Report the H2 Result
-
-Use your **own group tab** for the three means. Use the verified overall result below to draft your H2 presentation slide.
-
-| Team | Dataset | Outcome by grouping variable  | Overall test     | p    |
-| ---- | ------- | ----------------------------- | ---------------- | ---: |
-| 1    | A       | StressScore by ActivityLevel  | F(2, 117) = 0.79 | .457 |
-| 2    | A       | AnxietyScore by SocialSupport | F(2, 117) = 2.23 | .112 |
-| 3    | B       | StressScore by ActivityLevel  | F(2, 62) = 0.06  | .938 |
-| 4    | B       | AnxietyScore by SocialSupport | F(2, 62) = 0.09  | .915 |
-| 5    | C       | StressScore by ActivityLevel  | F(2, 117) = 1.99 | .141 |
-
-For exercise 5, report the three labeled means, F with df, p, and the required decision at .05. **Explain the pattern in your outcome and what the overall test supports.**
-
-{{< countdown minutes=7 warn_when=30 start_immediately=false top="4px" right="10px" >}}
-
-::: {.notes}
-- 70–77 min. Give teams all seven minutes. One student reads the workbook, another drafts, and a third checks the population claim. Point teams to their exercise 3 answer for Group 1 as a model. If devices are unavailable, give each team its means from the bullets below in low / middle / high order.
-- Team 1: 20.36, 20.33, 19.22. Team 2: 10.43, 10.32, 8.97. Team 3: 20.04, 19.77, 19.50. Team 4: 9.80, 9.39, 9.82. Team 5: 21.92, 18.07, 20.49. For ActivityLevel the middle label is Moderate; for SocialSupport it is Medium.
-- All five overall p-values exceed .05. Each team can report its observed means and explain that its evidence is insufficient to conclude that the population means differ. No team needs project pairwise results under the assigned follow-up rule.
-- Listen for causal claims and claims that all means are identical. Ask the speaker to revise either in the language of their outcome and grouping variable.
-:::
-
-
-## Exit Check
-
-A report gives the **moderate-minus-high** mean StressScore difference as **4.00 points**, with a **Tukey-adjusted 95% CI of 0.96 to 7.04**.
-
-1. Explain the estimate and interval in words a campus health director could use.
-2. What else would help the director decide whether this difference matters?
-
-::: {.notes}
-- 77–80 min. Use the exit check on the exercise. Give students a minute to write independently.
-- The moderate program averaged 4 points higher. Under the model, the interval spans roughly 1 to 7 points higher for the population mean difference.
-- Ask what a point on this scale represents and what difference would affect a decision. The interval alone supplies no practical benchmark.
+- Bring the class back to the campus comparison. A difference of 2 points describes the sample. The p-value of .122 describes the tail probability under equal population means and the model assumptions. The confidence interval gives the director a range of differences in the original units.
 :::
