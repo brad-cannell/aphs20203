@@ -377,12 +377,12 @@ Together, these steps make up a **statistical test**. The test is usually named 
 
 ## Which Tests Can We Use to Compare Means?
 
-| What do we want to know?                                                     | Test                       | Statistic |
-| ---------------------------------------------------------------------------- | -------------------------- | --------- |
-| Does a population mean differ from a fixed reference value?                  | One-sample t-test          | *t*       |
-| Do the population means differ between two independent groups?               | Independent-samples t-test | *t*       |
-| When the same people are measured twice, is the population mean change zero? | Paired t-test              | *t*       |
-| Are the population means equal across three or more independent groups?      | One-way ANOVA              | *F*       |
+| What do we want to know?                                                                  | Test                       | Statistic |
+| ----------------------------------------------------------------------------------------- | -------------------------- | --------- |
+| Does a population mean differ from a fixed reference value?                               | One-sample t-test          | *t*       |
+| Do the population means differ between two independent groups?                            | Independent-samples t-test | *t*       |
+| Does the population mean change differ from zero when the same people are measured twice? | Paired t-test              | *t*       |
+| Do the population means differ across three or more independent groups?                   | One-way ANOVA              | *F*       |
 
 ::: {.notes}
 - Today we will discuss statistical tests when our outcome of interest is measured continuously and summarized with means.
@@ -432,16 +432,12 @@ All three use a *t* reference distribution. Its shape depends on the degrees of 
 :::
 ::::
 
-::: {.notes}
 
-:::
+## One Researcher, Three Designs
 
+Last time, our campus health researcher asked whether the mean StressScore differed from **20 points**. She could study campus stress with three different designs:
 
-## One Researcher, Three Questions
-
-Last time, our campus health researcher asked whether the mean StressScore differed from **20 points**. But there are other related research questions she could have asked:
-
-1. Measure one sample of students and compare its mean with 20.
+1. Measure one sample of students and compare its mean with 20. This was last time's design.
 2. Recruit separate samples of students from two campuses and compare their means.
 3. Measure the **same students** before and after finals and compare the two occasions.
 
@@ -839,7 +835,8 @@ At α = .05 we fail to reject H₀. The data give insufficient evidence that the
 #| fig-alt: "A 95% confidence interval for the Campus A mean minus the Campus B mean. The estimate is 2.00 points and the interval runs from −0.56 to 4.56, crossing a dashed line at 0. Values left of 0 mean Campus B averaged higher and values right of 0 mean Campus A averaged higher."
 # The campus comparison from the previous slide, drawn so students can see the
 # interval cross zero. The two direction labels restate what the sign of an
-# A-minus-B difference means, which is the first thing exercise 2 asks about.
+# A-minus-B difference means, which students need for the director explanation
+# on the Independent Samples tab.
 campus_ci <- tibble(estimate = 2, lower = -0.56, upper = 4.56)
 
 ggplot(campus_ci, aes(y = 1)) +
@@ -863,7 +860,7 @@ ggplot(campus_ci, aes(y = 1)) +
         panel.grid.minor = element_blank())
 ```
 
-Using the Excel file, explain the result to a campus health director. Include the **estimated difference** and the **range of differences** compatible with the data. What would you need to know to judge whether the difference matters? (Exercise 2.)
+On the **Independent Samples** tab, explain the result to a campus health director. Include the **estimated difference** and the **range of differences** compatible with the data. What would you need to know to judge whether the difference matters?
 
 ::: {.notes}
 **Instructions**
@@ -877,12 +874,6 @@ Using the Excel file, explain the result to a campus health director. Include th
 - What would you need to know about StressScore to decide whether a 2-point difference matters to students?
 
 - A practical benchmark might be the smallest difference that would change a campus decision. The p-value alone supplies no such threshold.
-
-**Question**
-
-- For A minus B, the interval runs from −0.56 to 4.56 points. If we reported B minus A instead, what would the new lower and upper limits be?
-
-- The interval would be −4.56 to 0.56 and the two-sided p-value would stay the same.
 :::
 
 
@@ -900,7 +891,7 @@ Someone reports a **pooled independent-samples t-test** as *t*(38) = 1.58. Each 
 
 - For a paired t-test, 38 df means 39 complete pairs.
 
-- State the equal-variance assumption explicitly. Welch's independent-samples test uses a different df calculation, so the pooled shortcut does not apply.
+- The df shortcut applies only to the pooled test, which assumes equal population variances (step 1 on the campus slide). Welch's independent-samples test drops that assumption and uses a different df calculation.
 :::
 
 
@@ -990,17 +981,17 @@ Suppose different people took part in each of **three programs**. Which branch w
 
 A **one-way analysis of variance (ANOVA)** compares population means across levels of one grouping variable.
 
-1. **Assume a model.** H₀ says all group means are equal. Assume independent observations, approximately normal outcomes within groups, and equal population variances.
-2. **Select α.** Choose the cutoff before examining the groups.
-3. **Calculate F.** Compare variation between the group means with variation among individuals within groups. Greater separation relative to the within-group spread gives a larger F.
+1. **Assume a model.** H₀ says the population means are equal at every level. Assume independent observations, approximately normal outcomes within each level, and equal population variances.
+2. **Select α.** Choose the cutoff before examining the data.
+3. **Calculate F.** Compare variation between the level means with variation among individuals within levels. Greater separation relative to the within-level spread gives a larger F.
 4. **Calculate the p-value.** The *t* statistic can be positive or negative. *F* is nonnegative. Under the null model, the p-value is the area **at or above the observed F** in its reference distribution.
 
 ::: {.notes}
 **Question**
 
-- If we reject the hypothesis that all three population means are equal, what do we know about which groups differ?
+- If we reject the hypothesis that all three population means are equal, what do we know about which levels differ?
 
-- We have evidence that at least one mean differs. Identifying particular pairs and estimating their differences requires follow-up comparisons. The F distribution uses between-group and within-group degrees of freedom.
+- We have evidence that at least one mean differs. Identifying particular pairs and estimating their differences requires follow-up comparisons. The F distribution uses between-level and within-level degrees of freedom.
 :::
 
 
@@ -1105,11 +1096,36 @@ C. Every pair of programs differs by a meaningful amount.
 :::
 
 
+## Try It: The ANOVA Calculator
+
+This is the calculator for your project's H2 analysis. Enter the hypothetical program study:
+
+| Program  | n  | Mean StressScore | SD |
+| -------- | -: | ---------------: | -: |
+| Low      | 20 | 22               | 4  |
+| Moderate | 20 | 21               | 4  |
+| High     | 20 | 17               | 4  |
+
+Select **SD**, leave unused rows blank, and choose **Compute**. [Open the summary-data ANOVA calculator](https://statpages.info/anova1sm.html)
+
+Check that you get *F*(2, 57) = 8.75, then complete **Activity, exercise 2**.
+
+::: {.notes}
+- The calculator and the project's Technical Help Guide call each level a "group." Here, a group is one program, not a project group.
+
+- The output has an ANOVA table and Tukey HSD comparisons with 95% intervals. Point to the ANOVA table now and the Tukey output on the next slide.
+
+- Project rule: report the post hoc comparisons only when the overall test is significant at .05. If p ≥ .05, stop after the overall test.
+
+- If the calculator is slow or unavailable, exercise 2 supplies the mean squares, so students can still calculate F.
+:::
+
+
 ## Which Programs Differ?
 
-The overall F test asks whether all the population means are equal. Use **Activity, exercises 3–5**, in Excel to interpret the hypothetical program study.
+The overall F test asks whether all the population means are equal. Use the calculator's Tukey output, or **Activity, exercises 3 and 4**, to interpret the program study.
 
-- A **pairwise difference** gives the direction and size of a specific comparison. Read the group labels in subtraction order.
+- A **pairwise difference** gives the direction and size of a specific comparison. Read the program labels in subtraction order.
 - **Tukey-adjusted 95% intervals** account for examining all pairs together. Under the model, the procedure covers all the population differences simultaneously in 95% of repeated studies.
 - Compare the interval with **zero** to assess direction and with a **meaningful difference** to judge practical importance.
 
@@ -1118,13 +1134,16 @@ The overall F test asks whether all the population means are equal. Use **Activi
 
 - Why do we use adjusted intervals when we look at all three pairs?
 
-- Examining each pair separately at the usual cutoff creates more opportunities to declare a difference when that pair’s population means are equal. Tukey’s procedure controls that risk across the family of comparisons. The workbook supplies the intervals for interpretation.
+- Each unadjusted comparison at α = .05 is another chance for a Type I error: declaring a difference when that pair's population means are equal. Tukey's procedure controls that risk across the family of comparisons. The workbook supplies the intervals for interpretation.
+
+- Exercise 5 is optional. It repeats the p-value interpretation from the paired-samples slide.
 :::
 
 
 ## Key Points
 
 - **Start with the design.** One sample contributes scores, paired measurements contribute changes, and independent groups contribute separate means.
+- **With three or more groups, start with the overall F test.** It tells you whether at least one population mean differs. Follow-up comparisons tell you which pairs differ and by how much.
 - **Interpret a p-value under the null model.** State the null in context, then describe the probability of a test statistic at least as extreme as the one observed. For a two-sided *t* test, count both tails. For ANOVA, count the upper F tail.
 - **Report the estimate and its uncertainty.** The sign gives direction, the interval gives a range of compatible differences, and a subject-matter benchmark helps judge importance.
 
